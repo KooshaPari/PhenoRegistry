@@ -1,0 +1,18 @@
+[package]
+name        = "phenotype-router"
+version     = "0.1.0-pointer"
+edition     = "2021"
+description = "POINTER: HexaKit's old phenotype-router v0.1.0 has been superseded by the standalone KooshaPari/phenotype-router v0.2.0. This is a re-export shim to keep Cargo workspace member list stable. See ../POINTER-README.md for migration."
+license     = "Apache-2.0"
+publish     = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+# Re-export from the canonical standalone repo
+phenotype-router-standalone = { git = "https://github.com/KooshaPari/phenotype-router", tag = "v0.2.0", package = "phenotype-router" }
+
+# Re-export everything so dependent code in HexaKit's other crates keeps working
+[features]
+default = []
