@@ -97,3 +97,6 @@ audits/wtree-sprawl-*.md
 docs/sessions/
 .grade-reports/
 grade.sh
+
+# Cargo build environment config (machine-specific)
+.cargo/config.toml

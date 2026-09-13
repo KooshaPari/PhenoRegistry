@@ -1,9 +1,10 @@
 use pyo3::prelude::*;
+use pyo3::types::PyDict;
 
 use phenotype_registry::ecosystem::{self, ParseError, RepoEntry};
 
 /// A single repository entry extracted from the ecosystem map.
-#[pyclass]
+#[pyclass(from_py_object)]
 #[derive(Debug, Clone)]
 struct RepoEntryPy {
     /// Repository name (e.g. `"phenotype-registry"`).
@@ -29,17 +30,15 @@ struct RepoEntryPy {
 #[pymethods]
 impl RepoEntryPy {
     /// Return a dictionary representation of the entry.
-    fn to_dict(&self) -> PyResult<PyObject> {
-        Python::with_gil(|py| {
-            let dict = pyo3::types::PyDict::new(py);
-            dict.set_item("name", &self.name)?;
-            dict.set_item("role", &self.role)?;
-            dict.set_item("language", &self.language)?;
-            dict.set_item("status", &self.status)?;
-            dict.set_item("notes", &self.notes)?;
-            dict.set_item("dependencies", &self.dependencies)?;
-            Ok(dict.into())
-        })
+    fn to_dict(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        let dict = PyDict::new(py);
+        dict.set_item("name", &self.name)?;
+        dict.set_item("role", &self.role)?;
+        dict.set_item("language", &self.language)?;
+        dict.set_item("status", &self.status)?;
+        dict.set_item("notes", &self.notes)?;
+        dict.set_item("dependencies", &self.dependencies)?;
+        Ok(dict.into_any().unbind())
     }
 
     fn __repr__(&self) -> String {
@@ -86,11 +85,11 @@ fn parse_ecosystem_map_py(input: &str) -> PyResult<Vec<RepoEntryPy>> {
         Err(ParseError::EmptyInput) => {
             Err(pyo3::exceptions::PyValueError::new_err("input is empty"))
         }
-        Err(ParseError::MalformedTable { line, detail }) => Err(
-            pyo3::exceptions::PyValueError::new_err(format!(
+        Err(ParseError::MalformedTable { line, detail }) => {
+            Err(pyo3::exceptions::PyValueError::new_err(format!(
                 "malformed table at line {line}: {detail}"
-            )),
-        ),
+            )))
+        }
     }
 }
 
@@ -99,6 +98,71 @@ fn parse_ecosystem_map_py(input: &str) -> PyResult<Vec<RepoEntryPy>> {
 fn pheno_registry_python(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add("__version__", env!("CARGO_PKG_VERSION"))?;
     m.add_class::<RepoEntryPy>()?;
-    m.add_wrapped(wrap_pyfunction!(parse_ecosystem_map_py))?;
+    m.add_function(wrap_pyfunction!(parse_ecosystem_map_py, m)?)?;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::collections::HashSet;
+
+    /// A minimal ecosystem map markdown snippet that exercises the parser.
+    const ECO_SAMPLE: &str = "\
+| Role | Count | Repos |
+|------|-------|-------|
+| shared-lib | 1 | foo-core |
+| SDK | 1 | bar-sdk |
+
+## Dependencies
+
+foo-core -> bar-sdk
+";
+
+    #[test]
+    fn parse_returns_nonempty_entries() {
+        let entries = ecosystem::parse_ecosystem_map(ECO_SAMPLE)
+            .expect("parse should succeed on sample input");
+        assert!(
+            !entries.is_empty(),
+            "sample ecosystem map should yield at least one entry"
+        );
+        let names: HashSet<_> = entries.iter().map(|e| e.name.as_str()).collect();
+        assert!(
+            names.contains("foo-core"),
+            "expected foo-core in parsed entries, got {names:?}"
+        );
+    }
+
+    #[test]
+    fn from_repo_entry_preserves_fields() {
+        let entries = ecosystem::parse_ecosystem_map(ECO_SAMPLE).expect("parse should succeed");
+        let first = entries.into_iter().next().unwrap();
+        let py_entry = RepoEntryPy::from(first.clone());
+        assert_eq!(py_entry.name, first.name);
+        assert_eq!(py_entry.role, first.role);
+        assert_eq!(py_entry.language, first.language);
+        assert_eq!(py_entry.status, first.status);
+        assert_eq!(py_entry.notes, first.notes);
+        assert_eq!(py_entry.dependencies, first.dependencies);
+    }
+
+    #[test]
+    fn roundtrip_representer_strings() {
+        let entry = RepoEntryPy {
+            name: "alpha".into(),
+            role: "tooling".into(),
+            language: Some("Rust".into()),
+            status: Some("Active".into()),
+            notes: Some("test note".into()),
+            dependencies: vec!["beta".into()],
+        };
+        let repr = entry.__repr__();
+        assert!(repr.contains("alpha"), "repr should contain name: {repr}");
+        assert!(repr.contains("tooling"), "repr should contain role: {repr}");
+
+        let s = entry.__str__();
+        assert!(s.contains("alpha"), "__str__ should contain name: {s}");
+        assert!(s.contains("tooling"), "__str__ should contain role: {s}");
+    }
 }
