@@ -168,7 +168,9 @@ fn looks_like_role_classification_header(line: &str) -> bool {
 /// "Proposed role".
 fn looks_like_triage_header(line: &str) -> bool {
     let lower = line.to_lowercase();
-    lower.contains("repo") && lower.contains("lang") && lower.contains("pushed")
+    lower.contains("repo")
+        && lower.contains("lang")
+        && lower.contains("pushed")
         && lower.contains("proposed role")
 }
 
@@ -177,8 +179,11 @@ fn looks_like_triage_header(line: &str) -> bool {
 /// role table) and not "Pushed" (which would be the triage table).
 fn looks_like_cluster_header(line: &str) -> bool {
     let lower = line.to_lowercase();
-    lower.contains("repo") && lower.contains("status") && lower.contains("verdict")
-        && !lower.contains("count") && !lower.contains("pushed")
+    lower.contains("repo")
+        && lower.contains("status")
+        && lower.contains("verdict")
+        && !lower.contains("count")
+        && !lower.contains("pushed")
 }
 
 /// A dependency edge line: starts with a non-empty identifier, followed by `->`.
@@ -230,14 +235,16 @@ fn parse_role_row(
         // Only insert if this is a plausible repo name (contains at least one
         // letter or hyphen).
         if clean_name.chars().any(|c| c.is_alphabetic()) {
-            let entry = repos.entry(clean_name.clone()).or_insert_with(|| RepoEntry {
-                name: clean_name,
-                role: role.clone(),
-                language: None,
-                status: None,
-                notes: None,
-                dependencies: Vec::new(),
-            });
+            let entry = repos
+                .entry(clean_name.clone())
+                .or_insert_with(|| RepoEntry {
+                    name: clean_name,
+                    role: role.clone(),
+                    language: None,
+                    status: None,
+                    notes: None,
+                    dependencies: Vec::new(),
+                });
             // If we already have an entry, just ensure the role is set.
             if entry.role.is_empty() {
                 entry.role = role.clone();
@@ -375,14 +382,8 @@ fn parse_dep_edge(line: &str, repos: &mut HashMap<String, RepoEntry>) {
     let rest_trimmed = rest.trim();
     let no_deps = rest_trimmed.starts_with('(')
         && rest_trimmed.contains(')')
-        && rest_trimmed
-            .chars()
-            .filter(|c| *c == '(')
-            .count()
-            <= rest_trimmed
-                .chars()
-                .filter(|c| *c == ')')
-                .count();
+        && rest_trimmed.chars().filter(|c| *c == '(').count()
+            <= rest_trimmed.chars().filter(|c| *c == ')').count();
     if no_deps {
         repos.entry(src.clone()).or_insert_with(|| RepoEntry {
             name: src,
@@ -535,7 +536,10 @@ mod tests {
     #[test]
     fn empty_input_returns_error() {
         assert_eq!(parse_ecosystem_map(""), Err(ParseError::EmptyInput));
-        assert_eq!(parse_ecosystem_map("  \n  \n  "), Err(ParseError::EmptyInput));
+        assert_eq!(
+            parse_ecosystem_map("  \n  \n  "),
+            Err(ParseError::EmptyInput)
+        );
     }
 
     #[test]
@@ -550,7 +554,8 @@ mod tests {
 
     #[test]
     fn role_row_with_bold_names() {
-        let md = "| Role | Count | Repos |\n|------|-------|-------|\n| **SDK** | 1 | **MyCrate** |\n";
+        let md =
+            "| Role | Count | Repos |\n|------|-------|-------|\n| **SDK** | 1 | **MyCrate** |\n";
         let entries = parse_ecosystem_map(md).unwrap();
         assert_eq!(entries.len(), 1);
         assert_eq!(entries[0].name, "MyCrate");
