@@ -100,14 +100,14 @@ jobs:
         continue-on-error: true
 
       - name: typos-cli
-        uses: crate-ci/typos@4d9c206a77c041268485162b8e2579ad7a5cb9a3 # v1
+        uses: crate-ci/typos@d43b6c087ac471e2ea7b8af622ff15f05c0c365b # v1
         with:
           files: ${{ matrix.repo.name }}
           config: .typos.toml
         continue-on-error: true
 
       - name: zizmor (workflow lint)
-        uses: zizmorcore/zizmor-action@3dc1ecc9bcb9e94e9b2c709687979e1298497054 # v0.6.2
+        uses: zizmorcore/zizmor-action@cc914d7f3750a2d13d75c7f184a1060aa0e9d482 # v0.6.4
         with:
           advanced-security: false
           inputs: |
