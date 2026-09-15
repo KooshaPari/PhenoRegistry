@@ -68,9 +68,15 @@ fn role_classification_multiple_rows() {
 ";
     let entries = parse_ecosystem_map(md).unwrap();
     assert_eq!(entries.len(), 6);
-    assert!(entries.iter().any(|e| e.name == "pheno" && e.role == "shared-lib"));
-    assert!(entries.iter().any(|e| e.name == "AuthKit" && e.role == "SDK"));
-    assert!(entries.iter().any(|e| e.name == "AgilePlus" && e.role == "tooling"));
+    assert!(entries
+        .iter()
+        .any(|e| e.name == "pheno" && e.role == "shared-lib"));
+    assert!(entries
+        .iter()
+        .any(|e| e.name == "AuthKit" && e.role == "SDK"));
+    assert!(entries
+        .iter()
+        .any(|e| e.name == "AgilePlus" && e.role == "tooling"));
 }
 
 #[test]
@@ -336,7 +342,10 @@ fn parse_error_display() {
         line: 5,
         detail: "expected 3 columns".to_string(),
     };
-    assert_eq!(format!("{err}"), "malformed table at line 5: expected 3 columns");
+    assert_eq!(
+        format!("{err}"),
+        "malformed table at line 5: expected 3 columns"
+    );
 
     let err = ParseError::EmptyInput;
     assert_eq!(format!("{err}"), "input is empty");

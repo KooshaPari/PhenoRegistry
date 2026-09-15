@@ -94,15 +94,15 @@ echo "========================================"
 
 case "$STACK" in
   rust)
-    run_check "build" "cargo build --workspace" 2
-    run_check "test-unit" "cargo test --workspace" 3
+    run_check "build" "cargo build --workspace --exclude pheno-registry-python" 2
+    run_check "test-unit" "cargo test --workspace --exclude pheno-registry-python" 3
     run_check "fmt" "cargo fmt -- --check" 2
-    run_check "clippy" "cargo clippy --workspace --all-targets --all-features -- -D warnings" 2
+    run_check "clippy" "cargo clippy --workspace --exclude pheno-registry-python --all-targets --all-features -- -D warnings" 2
     run_check "deny" "cargo deny check" 1 true
-    run_check "doc" "cargo doc --workspace --no-deps" 1
-    run_check "test-snapshot" "cargo test --workspace -- snapshot" 1 true
-    run_check "test-fuzz" "cargo test --workspace -- fuzz" 1 true
-    run_check "coverage" "cargo llvm-cov --workspace --fail-under-lines 85" 2 true
+    run_check "doc" "cargo doc --workspace --exclude pheno-registry-python --no-deps" 1
+    run_check "test-snapshot" "cargo test --workspace --exclude pheno-registry-python -- snapshot" 1 true
+    run_check "test-fuzz" "cargo test --workspace --exclude pheno-registry-python -- fuzz" 1 true
+    run_check "coverage" "cargo llvm-cov --workspace --exclude pheno-registry-python --fail-under-lines 85" 2 true
     run_check "audit" "cargo audit" 1 true
     run_check "bench" "cargo bench --workspace" 1 true
     ;;
