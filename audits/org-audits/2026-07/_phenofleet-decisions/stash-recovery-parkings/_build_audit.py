@@ -14,7 +14,11 @@ Strategy:
        - legacy/<repo>-stashes-snapshot-2026-07-15  (full-snapshot branches)
   3. For each capture branch, create a local wip/ alias at the same SHA,
      then push it. Try origin first (read-only on some mirrors), then
+<<<<<<< Updated upstream
      koosha-https (GH token-based HTTPS push to KooshaPari/<repo>).
+=======
+     koosha-https (GH token-based HTTPS push to <REDACTED>/<repo>).
+>>>>>>> Stashed changes
   4. The OmniRoute 3-way mirror cluster all share the same content — apply
      to OmniRoute-superroot-recovery and skip the other two (next fetch
      will sync).
@@ -36,7 +40,11 @@ from typing import Optional
 
 # ---- Configuration --------------------------------------------------------
 
+<<<<<<< Updated upstream
 REPOS_DIR = Path("/Users/kooshapari/CodeProjects/Phenotype/repos")
+=======
+REPOS_DIR = Path("/Users/<REDACTED>/CodeProjects/Phenotype/repos")
+>>>>>>> Stashed changes
 DATE_TAG = "2026-07-15"
 AUDIT_PATH = REPOS_DIR / f".airlock-stash-recovery-{DATE_TAG}.json"
 PARKINGS_DIR = REPOS_DIR / "_phenofleet-decisions" / "stash-recovery-parkings"
@@ -75,8 +83,13 @@ MIRROR_CLUSTERS = {
 # worktrees, mirrors). Keys are local repo names; values are the
 # github <owner>/<repo> we should push the wip/ branches to.
 KOOSHA_PUSH_TARGET_OVERRIDES = {
+<<<<<<< Updated upstream
     "omniroute-upstream-work": "KooshaPari/OmniRoute",
     "OmniRoute-frontend-svelte-2026-07-05": "KooshaPari/OmniRoute",
+=======
+    "omniroute-upstream-work": "<REDACTED>/OmniRoute",
+    "OmniRoute-frontend-svelte-2026-07-05": "<REDACTED>/OmniRoute",
+>>>>>>> Stashed changes
 }
 
 SKIP_REPOS = {"phenotype-monorepo-state-archive"}  # not part of 17-repo scope
@@ -303,7 +316,11 @@ def ensure_koosha_https_remote(repo_path: Path, repo_name: str) -> Optional[str]
     if not gh_token:
         return None
 
+<<<<<<< Updated upstream
     target_repo = KOOSHA_PUSH_TARGET_OVERRIDES.get(repo_name, f"KooshaPari/{repo_name}")
+=======
+    target_repo = KOOSHA_PUSH_TARGET_OVERRIDES.get(repo_name, f"<REDACTED>/{repo_name}")
+>>>>>>> Stashed changes
     auth_url = f"https://x-access-token:{gh_token}@github.com/{target_repo}.git"
     rc2, _, err = run(
         ["git", "-C", str(repo_path), "remote", "add", "koosha-https", auth_url],

@@ -8,10 +8,10 @@ and library research into one reference surface.
 
 | Registry | Purpose | Canonical Surface |
 | --- | --- | --- |
-| PhenoSpecs | Product specifications, ADRs, and API contracts | [`KooshaPari/PhenoSpecs`](https://github.com/KooshaPari/PhenoSpecs) |
-| PhenoHandbook | Patterns, anti-patterns, guidelines, and methodologies | [`KooshaPari/PhenoHandbook`](https://github.com/KooshaPari/PhenoHandbook) |
-| HexaKit | Template and scaffold registry | [`KooshaPari/HexaKit`](https://github.com/KooshaPari/HexaKit) |
-| Library Research | Wrap-vs-handroll evidence and dependency catalog | [`LIBRARY_RESEARCH_REGISTRY.md`](https://github.com/KooshaPari/phenotype-registry/blob/main/LIBRARY_RESEARCH_REGISTRY.md) |
+| PhenoSpecs | Product specifications, ADRs, and API contracts | [`<REDACTED>/PhenoSpecs`](https://github.com/<REDACTED>/PhenoSpecs) |
+| PhenoHandbook | Patterns, anti-patterns, guidelines, and methodologies | [`<REDACTED>/PhenoHandbook`](https://github.com/<REDACTED>/PhenoHandbook) |
+| HexaKit | Template and scaffold registry | [`<REDACTED>/HexaKit`](https://github.com/<REDACTED>/HexaKit) |
+| Library Research | Wrap-vs-handroll evidence and dependency catalog | [`LIBRARY_RESEARCH_REGISTRY.md`](https://github.com/<REDACTED>/phenotype-registry/blob/main/LIBRARY_RESEARCH_REGISTRY.md) |
 
 ## Quick Paths
 
@@ -41,7 +41,7 @@ and library research into one reference surface.
 | [ADR-004 Staging](./adr/ADR-004-absorption-staging-vs-canonical.md) | Absorption staging vs canonical |
 | [ADR-005 AgilePlus](./adr/ADR-005-agileplus-governance-boundary.md) | AgilePlus governance boundary |
 | [ADR-006 Zero-Loop](./adr/ADR-006-zero-loop-agent-session.md) | Zero-loop agent sessions |
-| [BOUNDARY_OWNERS](https://github.com/KooshaPari/phenotype-registry/blob/main/BOUNDARY_OWNERS.md) | Capability SSOT (repo root) |
+| [BOUNDARY_OWNERS](https://github.com/<REDACTED>/phenotype-registry/blob/main/BOUNDARY_OWNERS.md) | Capability SSOT (repo root) |
 
 ## Operating Contract
 

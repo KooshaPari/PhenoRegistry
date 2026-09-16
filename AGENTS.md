@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Master index and **boundary SSOT** for the KooshaPari polyrepo ecosystem. Connects specs, patterns, templates, and rationalization execution plans.
+Master index and **boundary SSOT** for the <REDACTED> polyrepo ecosystem. Connects specs, patterns, templates, and rationalization execution plans.
 
 ## Stack
 
@@ -34,4 +34,4 @@ Master index and **boundary SSOT** for the KooshaPari polyrepo ecosystem. Connec
 
 ## AgilePlus mandate
 
-All non-trivial work tracked in [AgilePlus](https://github.com/KooshaPari/AgilePlus). Link spec ID in PR descriptions.
+All non-trivial work tracked in [AgilePlus](https://github.com/<REDACTED>/AgilePlus). Link spec ID in PR descriptions.

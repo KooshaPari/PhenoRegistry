@@ -6,7 +6,7 @@ enforced_by:
 - .github/workflows/registry-validate.yml
 substrates:
 - id: agentapi-plusplus
-  repo: KooshaPari/agentapi-plusplus
+  repo: <REDACTED>/agentapi-plusplus
   name: agentapi-plusplus
   status: archived
   tier: federated-service
@@ -21,7 +21,7 @@ substrates:
 
     '
 - id: agentora
-  repo: KooshaPari/Agentora
+  repo: <REDACTED>/Agentora
   name: Agentora
   status: active
   tier: phenotype-framework
@@ -36,7 +36,7 @@ substrates:
 
     '
 - id: apisync
-  repo: KooshaPari/Apisync
+  repo: <REDACTED>/Apisync
   name: Apisync
   status: active
   tier: pheno-lib
@@ -50,7 +50,7 @@ substrates:
 
     '
 - id: argis-extensions
-  repo: KooshaPari/argis-extensions
+  repo: <REDACTED>/argis-extensions
   name: argis-extensions
   status: archived
   tier: pheno-lib
@@ -65,7 +65,7 @@ substrates:
 
     '
 - id: authkit
-  repo: KooshaPari/AuthKit
+  repo: <REDACTED>/AuthKit
   name: AuthKit
   status: active
   tier: phenotype-framework
@@ -79,7 +79,7 @@ substrates:
 
     '
 - id: authvault
-  repo: KooshaPari/Authvault
+  repo: <REDACTED>/Authvault
   name: Authvault
   status: active
   tier: phenotype-framework
@@ -94,7 +94,7 @@ substrates:
 
     '
 - id: benchora
-  repo: KooshaPari/Benchora
+  repo: <REDACTED>/Benchora
   name: Benchora
   status: archived
   tier: pheno-lib
@@ -108,7 +108,7 @@ substrates:
 
     '
 - id: bifrost
-  repo: KooshaPari/bifrost
+  repo: <REDACTED>/bifrost
   name: bifrost
   status: archived
   tier: federated-service
@@ -122,7 +122,7 @@ substrates:
 
     '
 - id: byteport
-  repo: KooshaPari/BytePort
+  repo: <REDACTED>/BytePort
   name: BytePort
   status: active
   tier: phenotype-framework
@@ -136,7 +136,7 @@ substrates:
 
     '
 - id: clap-ext
-  repo: KooshaPari/clap-ext
+  repo: <REDACTED>/clap-ext
   name: clap-ext
   status: active
   tier: pheno-lib
@@ -150,7 +150,7 @@ substrates:
 
     '
 - id: cliproxyapi-plusplus
-  repo: KooshaPari/cliproxyapi-plusplus
+  repo: <REDACTED>/cliproxyapi-plusplus
   name: cliproxyapi-plusplus
   status: archived
   tier: federated-service
@@ -165,7 +165,7 @@ substrates:
 
     '
 - id: configra
-  repo: KooshaPari/Configra
+  repo: <REDACTED>/Configra
   name: Configra
   status: active
   tier: pheno-lib
@@ -198,7 +198,7 @@ substrates:
     cold-compile. Per task failsafe "ARCHIVE_ONLY if conflicts", disposition pivoted;
     source repo
 
-    archived via `gh repo archive KooshaPari/Configra -y`. Boundary doc retained at
+    archived via `gh repo archive <REDACTED>/Configra -y`. Boundary doc retained at
 
     `phenotype-registry/docs/boundary/Configra.md` (status: archived in front-matter).
     Audit:
@@ -210,7 +210,7 @@ substrates:
 
     '
 - id: conft
-  repo: KooshaPari/Conft
+  repo: <REDACTED>/Conft
   name: Conft
   status: active
   tier: pheno-lib
@@ -224,7 +224,7 @@ substrates:
 
     '
 - id: context-mode
-  repo: KooshaPari/context-mode
+  repo: <REDACTED>/context-mode
   name: context-mode
   status: active
   tier: federated-service
@@ -238,7 +238,7 @@ substrates:
 
     '
 - id: context-mode-plusplus
-  repo: KooshaPari/context-mode-plusplus
+  repo: <REDACTED>/context-mode-plusplus
   name: context-mode-plusplus
   status: archived
   tier: federated-service
@@ -252,7 +252,7 @@ substrates:
 
     '
 - id: datakit
-  repo: KooshaPari/DataKit
+  repo: <REDACTED>/DataKit
   name: DataKit
   status: archived
   tier: phenotype-framework
@@ -266,7 +266,7 @@ substrates:
 
     '
 - id: eidolon
-  repo: KooshaPari/Eidolon
+  repo: <REDACTED>/Eidolon
   name: Eidolon
   status: active
   tier: phenotype-framework
@@ -280,7 +280,7 @@ substrates:
 
     '
 - id: eventra
-  repo: KooshaPari/Eventra
+  repo: <REDACTED>/Eventra
   name: Eventra
   status: archived
   tier: pheno-lib
@@ -298,7 +298,7 @@ substrates:
 
     '
 - id: focalpoint
-  repo: KooshaPari/FocalPoint
+  repo: <REDACTED>/FocalPoint
   name: FocalPoint
   status: active
   tier: phenotype-framework
@@ -316,7 +316,7 @@ substrates:
 
     target="HexaKit" + audits/absorption-justifications/FocalPoint-2026-07-17.md
 
-    Receiving repo="KooshaPari/HexaKit", path="docs/absorbed-from-FocalPoint/").
+    Receiving repo="<REDACTED>/HexaKit", path="docs/absorbed-from-FocalPoint/").
 
     Neither target was started (HexaKit/docs/absorbed-from-FocalPoint/ absent;
 
@@ -324,7 +324,7 @@ substrates:
 
     "ARCHIVE_ONLY if conflicts", disposition pivoted; source repo archived
 
-    via `gh repo archive KooshaPari/FocalPoint -y` on 2026-07-17. Boundary doc
+    via `gh repo archive <REDACTED>/FocalPoint -y` on 2026-07-17. Boundary doc
 
     retained at `phenotype-registry/docs/boundary/FocalPoint.md` (front-matter
 
@@ -346,7 +346,7 @@ substrates:
 
     '
 - id: forgecode
-  repo: KooshaPari/forgecode
+  repo: <REDACTED>/forgecode
   name: forgecode
   status: archived
   tier: federated-service
@@ -360,7 +360,7 @@ substrates:
 
     '
 - id: helios-cli
-  repo: KooshaPari/helios-cli
+  repo: <REDACTED>/helios-cli
   name: helios-cli
   status: active
   tier: federated-service
@@ -374,7 +374,7 @@ substrates:
 
     '
 - id: helioslab
-  repo: KooshaPari/HeliosLab
+  repo: <REDACTED>/HeliosLab
   name: HeliosLab
   status: active
   tier: federated-service
@@ -388,7 +388,7 @@ substrates:
 
     '
 - id: hexakit
-  repo: KooshaPari/HexaKit
+  repo: <REDACTED>/HexaKit
   name: HexaKit
   status: archived
   tier: phenotype-framework
@@ -404,7 +404,7 @@ substrates:
 
     '
 - id: httpora
-  repo: KooshaPari/Httpora
+  repo: <REDACTED>/Httpora
   name: Httpora
   status: archived
   tier: pheno-lib
@@ -418,7 +418,7 @@ substrates:
 
     '
 - id: hwledger
-  repo: KooshaPari/hwLedger
+  repo: <REDACTED>/hwLedger
   name: hwLedger
   status: active
   tier: pheno-lib
@@ -432,7 +432,7 @@ substrates:
 
     '
 - id: sessionledger
-  repo: KooshaPari/SessionLedger
+  repo: <REDACTED>/SessionLedger
   name: SessionLedger
   status: active
   tier: phenotype-framework
@@ -450,7 +450,7 @@ substrates:
 
     '
 - id: kdesktopvirt
-  repo: KooshaPari/KDesktopVirt
+  repo: <REDACTED>/KDesktopVirt
   name: KDesktopVirt
   status: archived
   tier: phenotype-framework
@@ -464,7 +464,7 @@ substrates:
 
     '
 - id: kmobile
-  repo: KooshaPari/kmobile
+  repo: <REDACTED>/kmobile
   name: kmobile
   status: archived
   tier: phenotype-framework
@@ -496,11 +496,11 @@ substrates:
     drop kmobile-api / kmobile-cli / kmobile-mcp / kmobile-overlay / mcp-server. Also
     fragile
 
-    single-tag git ref (KooshaPari/clap-ext@v0.1.0), heavy optional feature closure
+    single-tag git ref (<REDACTED>/clap-ext@v0.1.0), heavy optional feature closure
 
     (desktop = eframe/egui/cpal/rodio/winit/gilrs/...), AI-only / slop-expected maintainer
 
-    policy. Repo `KooshaPari/kmobile` archived on GitHub 2026-07-17T14:00:39Z; source
+    policy. Repo `<REDACTED>/kmobile` archived on GitHub 2026-07-17T14:00:39Z; source
 
     remains at `repos/kmobile/` for forensic retention. Boundary doc:
 
@@ -510,7 +510,7 @@ substrates:
 
     '
 - id: kodevibe
-  repo: KooshaPari/KodeVibe
+  repo: <REDACTED>/KodeVibe
   name: KodeVibe
   status: archived
   tier: phenotype-framework
@@ -524,7 +524,7 @@ substrates:
 
     '
 - id: localbase3
-  repo: KooshaPari/localbase3
+  repo: <REDACTED>/localbase3
   name: localbase3
   status: archived
   tier: pheno-lib
@@ -538,7 +538,7 @@ substrates:
 
     '
 - id: logify
-  repo: KooshaPari/Logify
+  repo: <REDACTED>/Logify
   name: Logify
   status: archived
   tier: pheno-lib
@@ -552,7 +552,7 @@ substrates:
 
     '
 - id: melosviz
-  repo: KooshaPari/Melosviz
+  repo: <REDACTED>/Melosviz
   name: Melosviz
   status: archived
   tier: pheno-lib
@@ -565,13 +565,13 @@ substrates:
     R3F web, Rust MIR/wgpu).
   notes: 'Visualization lib; depended-on (kept per program).
 
-    audit-v38 scorecard: https://github.com/KooshaPari/Melosviz/blob/main/audit/SCORECARD.md
+    audit-v38 scorecard: https://github.com/<REDACTED>/Melosviz/blob/main/audit/SCORECARD.md
 
     spine mirror: phenotype-org-audits/audit-v38/output/MelosViz/
 
     '
 - id: nanovms
-  repo: KooshaPari/nanovms
+  repo: <REDACTED>/nanovms
   name: nanovms
   status: active
   tier: federated-service
@@ -587,7 +587,7 @@ substrates:
 
     '
 - id: omniroute
-  repo: KooshaPari/OmniRoute
+  repo: <REDACTED>/OmniRoute
   name: OmniRoute
   status: archived
   tier: federated-service
@@ -602,7 +602,7 @@ substrates:
 
     '
 - id: pheno
-  repo: KooshaPari/pheno
+  repo: <REDACTED>/pheno
   name: pheno
   status: active
   tier: phenotype-framework
@@ -616,7 +616,7 @@ substrates:
 
     '
 - id: pheno-cdylib-bridge
-  repo: KooshaPari/pheno-cdylib-bridge
+  repo: <REDACTED>/pheno-cdylib-bridge
   name: pheno-cdylib-bridge
   status: active
   tier: pheno-lib
@@ -630,7 +630,7 @@ substrates:
 
     '
 - id: pheno-context
-  repo: KooshaPari/pheno-context
+  repo: <REDACTED>/pheno-context
   name: pheno-context
   status: archived
   tier: pheno-lib
@@ -644,7 +644,7 @@ substrates:
 
     '
 - id: pheno-forge-plugins
-  repo: KooshaPari/pheno-forge-plugins
+  repo: <REDACTED>/pheno-forge-plugins
   name: pheno-forge-plugins
   status: active
   tier: pheno-lib
@@ -658,7 +658,7 @@ substrates:
 
     '
 - id: pheno-forge-smoke
-  repo: KooshaPari/pheno-forge-smoke
+  repo: <REDACTED>/pheno-forge-smoke
   name: pheno-forge-smoke
   status: active
   tier: pheno-lib
@@ -672,7 +672,7 @@ substrates:
 
     '
 - id: pheno-runtime-config
-  repo: KooshaPari/pheno-runtime-config
+  repo: <REDACTED>/pheno-runtime-config
   name: pheno-runtime-config
   status: active
   tier: pheno-lib
@@ -686,7 +686,7 @@ substrates:
 
     '
 - id: pheno-tracing
-  repo: KooshaPari/pheno-tracing
+  repo: <REDACTED>/pheno-tracing
   name: pheno-tracing
   status: active
   tier: pheno-lib
@@ -701,7 +701,7 @@ substrates:
 
     '
 - id: phenoai
-  repo: KooshaPari/phenoAI
+  repo: <REDACTED>/phenoAI
   name: phenoAI
   status: active
   tier: phenotype-framework
@@ -715,7 +715,7 @@ substrates:
 
     '
 - id: phenocompose
-  repo: KooshaPari/PhenoCompose
+  repo: <REDACTED>/PhenoCompose
   name: PhenoCompose
   status: archived
   tier: federated-service
@@ -730,7 +730,7 @@ substrates:
 
     '
 - id: phenocontracts
-  repo: KooshaPari/PhenoContracts
+  repo: <REDACTED>/PhenoContracts
   name: PhenoContracts
   status: archived
   tier: pheno-lib
@@ -745,7 +745,7 @@ substrates:
 
     '
 - id: phenodag
-  repo: KooshaPari/phenodag
+  repo: <REDACTED>/phenodag
   name: phenodag
   status: archived
   tier: pheno-lib
@@ -759,7 +759,7 @@ substrates:
 
     '
 - id: phenodata
-  repo: KooshaPari/phenoData
+  repo: <REDACTED>/phenoData
   name: phenoData
   status: active
   tier: phenotype-framework
@@ -773,7 +773,7 @@ substrates:
 
     '
 - id: phenodesign
-  repo: KooshaPari/phenoDesign
+  repo: <REDACTED>/phenoDesign
   name: phenoDesign
   status: active
   tier: pheno-lib
@@ -787,7 +787,7 @@ substrates:
 
     '
 - id: phenodocs
-  repo: KooshaPari/phenodocs
+  repo: <REDACTED>/phenodocs
   name: phenodocs
   status: active
   tier: pheno-lib
@@ -801,7 +801,7 @@ substrates:
 
     '
 - id: phenoevents
-  repo: KooshaPari/phenoEvents
+  repo: <REDACTED>/phenoEvents
   name: phenoEvents
   status: active
   tier: pheno-lib
@@ -819,7 +819,7 @@ substrates:
 
     '
 - id: phenohandbook
-  repo: KooshaPari/PhenoHandbook
+  repo: <REDACTED>/PhenoHandbook
   name: PhenoHandbook
   status: active
   tier: pheno-lib
@@ -833,7 +833,7 @@ substrates:
 
     '
 - id: phenokits-commons
-  repo: KooshaPari/phenokits-commons
+  repo: <REDACTED>/phenokits-commons
   name: phenokits-commons
   status: active
   tier: pheno-lib
@@ -847,7 +847,7 @@ substrates:
 
     '
 - id: phenoobservability
-  repo: KooshaPari/PhenoObservability
+  repo: <REDACTED>/PhenoObservability
   name: PhenoObservability
   status: active
   tier: pheno-lib
@@ -862,7 +862,7 @@ substrates:
 
     '
 - id: phenoplugins
-  repo: KooshaPari/PhenoPlugins
+  repo: <REDACTED>/PhenoPlugins
   name: PhenoPlugins
   status: archived
   tier: pheno-lib
@@ -876,7 +876,7 @@ substrates:
 
     '
 - id: phenoresearchengine
-  repo: KooshaPari/phenoResearchEngine
+  repo: <REDACTED>/phenoResearchEngine
   name: phenoResearchEngine
   status: archived
   tier: phenotype-framework
@@ -890,7 +890,7 @@ substrates:
 
     '
 - id: phenoruntime
-  repo: KooshaPari/PhenoRuntime
+  repo: <REDACTED>/PhenoRuntime
   name: PhenoRuntime
   status: active
   tier: phenotype-framework
@@ -904,7 +904,7 @@ substrates:
 
     '
 - id: phenospecs
-  repo: KooshaPari/PhenoSpecs
+  repo: <REDACTED>/PhenoSpecs
   name: PhenoSpecs
   status: archived
   tier: pheno-lib
@@ -919,7 +919,7 @@ substrates:
 
     '
 - id: phenotype-apps
-  repo: KooshaPari/phenotype-apps
+  repo: <REDACTED>/phenotype-apps
   name: phenotype-apps
   status: archived
   tier: phenotype-framework
@@ -933,7 +933,7 @@ substrates:
 
     '
 - id: phenotype-contracts
-  repo: KooshaPari/phenotype-contracts
+  repo: <REDACTED>/phenotype-contracts
   name: phenotype-contracts
   status: archived
   tier: pheno-lib
@@ -948,7 +948,7 @@ substrates:
 
     '
 - id: phenotype-gfx
-  repo: KooshaPari/phenotype-gfx
+  repo: <REDACTED>/phenotype-gfx
   name: phenotype-gfx
   status: archived
   tier: pheno-lib
@@ -963,7 +963,7 @@ substrates:
 
     '
 - id: phenotype-go-sdk
-  repo: KooshaPari/phenotype-go-sdk
+  repo: <REDACTED>/phenotype-go-sdk
   name: phenotype-go-sdk
   status: archived
   tier: phenotype-sdk
@@ -978,7 +978,7 @@ substrates:
 
     '
 - id: phenotype-infra
-  repo: KooshaPari/phenotype-infra
+  repo: <REDACTED>/phenotype-infra
   name: phenotype-infra
   status: active
   tier: federated-service
@@ -994,7 +994,7 @@ substrates:
 
     '
 - id: phenotype-journeys
-  repo: KooshaPari/phenotype-journeys
+  repo: <REDACTED>/phenotype-journeys
   name: phenotype-journeys
   status: archived
   tier: pheno-lib
@@ -1008,7 +1008,7 @@ substrates:
 
     '
 - id: phenotype-landing
-  repo: KooshaPari/phenotype-landing
+  repo: <REDACTED>/phenotype-landing
   name: phenotype-landing
   status: archived
   tier: pheno-lib
@@ -1038,7 +1038,7 @@ substrates:
 
     conflicts exist"), disposition pivoted to ARCHIVE_ONLY. Source repo
 
-    archived on GitHub via `gh repo archive KooshaPari/phenotype-landing`.
+    archived on GitHub via `gh repo archive <REDACTED>/phenotype-landing`.
 
     Forward-pointer at `phenodocs/packages/landing/` (no code copied; pointer
 
@@ -1046,7 +1046,7 @@ substrates:
 
     '
 - id: phenotype-ops
-  repo: KooshaPari/phenotype-ops
+  repo: <REDACTED>/phenotype-ops
   name: phenotype-ops
   status: active
   tier: federated-service
@@ -1060,7 +1060,7 @@ substrates:
 
     '
 - id: phenotype-org-audits
-  repo: KooshaPari/phenotype-org-audits
+  repo: <REDACTED>/phenotype-org-audits
   name: phenotype-org-audits
   status: active
   tier: pheno-lib
@@ -1074,7 +1074,7 @@ substrates:
 
     '
 - id: phenotype-pm-core
-  repo: KooshaPari/phenotype-pm-core
+  repo: <REDACTED>/phenotype-pm-core
   name: phenotype-pm-core
   status: archived
   tier: pheno-lib
@@ -1088,7 +1088,7 @@ substrates:
 
     '
 - id: phenotype-python-sdk
-  repo: KooshaPari/phenotype-python-sdk
+  repo: <REDACTED>/phenotype-python-sdk
   name: phenotype-python-sdk
   status: active
   tier: phenotype-sdk
@@ -1104,7 +1104,7 @@ substrates:
 
     '
 - id: phenotype-registry
-  repo: KooshaPari/phenotype-registry
+  repo: <REDACTED>/phenotype-registry
   name: phenotype-registry
   status: active
   tier: pheno-lib
@@ -1119,7 +1119,7 @@ substrates:
 
     '
 - id: phenotype-router-spec
-  repo: KooshaPari/phenotype-router-spec
+  repo: <REDACTED>/phenotype-router-spec
   name: phenotype-router-spec
   status: archived
   tier: pheno-lib
@@ -1134,7 +1134,7 @@ substrates:
 
     '
 - id: phenotype-tooling
-  repo: KooshaPari/phenotype-tooling
+  repo: <REDACTED>/phenotype-tooling
   name: phenotype-tooling
   status: active
   tier: pheno-lib
@@ -1149,7 +1149,7 @@ substrates:
 
     '
 - id: phenoutils
-  repo: KooshaPari/phenoUtils
+  repo: <REDACTED>/phenoUtils
   name: phenoUtils
   status: active
   tier: pheno-lib
@@ -1163,7 +1163,7 @@ substrates:
 
     '
 - id: phenovcs
-  repo: KooshaPari/PhenoVCS
+  repo: <REDACTED>/PhenoVCS
   name: PhenoVCS
   status: archived
   tier: phenotype-framework
@@ -1197,7 +1197,7 @@ substrates:
 
     '
 - id: pine
-  repo: KooshaPari/Pine
+  repo: <REDACTED>/Pine
   name: Pine
   status: active
   tier: phenotype-framework
@@ -1211,7 +1211,7 @@ substrates:
 
     '
 - id: playcua
-  repo: KooshaPari/PlayCua
+  repo: <REDACTED>/PlayCua
   name: PlayCua
   status: archived
   tier: phenotype-framework
@@ -1225,7 +1225,7 @@ substrates:
 
     '
 - id: plusforges
-  repo: KooshaPari/PlusForges
+  repo: <REDACTED>/PlusForges
   name: PlusForges
   status: archived
   tier: pheno-lib
@@ -1240,7 +1240,7 @@ substrates:
 
     '
 - id: policystack
-  repo: KooshaPari/PolicyStack
+  repo: <REDACTED>/PolicyStack
   name: PolicyStack
   status: archived
   tier: phenotype-framework
@@ -1254,7 +1254,7 @@ substrates:
 
     '
 - id: portage
-  repo: KooshaPari/portage
+  repo: <REDACTED>/portage
   name: portage
   status: active
   tier: federated-service
@@ -1268,7 +1268,7 @@ substrates:
 
     '
 - id: quillr
-  repo: KooshaPari/Quillr
+  repo: <REDACTED>/Quillr
   name: Quillr
   status: archived
   tier: phenotype-framework
@@ -1282,7 +1282,7 @@ substrates:
 
     '
 - id: rich-cli-kit
-  repo: KooshaPari/rich-cli-kit
+  repo: <REDACTED>/rich-cli-kit
   name: rich-cli-kit
   status: archived
   tier: pheno-lib
@@ -1296,7 +1296,7 @@ substrates:
 
     '
 - id: sharecli
-  repo: KooshaPari/sharecli
+  repo: <REDACTED>/sharecli
   name: sharecli
   status: archived
   tier: pheno-lib
@@ -1310,7 +1310,7 @@ substrates:
 
     '
 - id: sidekick
-  repo: KooshaPari/Sidekick
+  repo: <REDACTED>/Sidekick
   name: Sidekick
   status: active
   tier: phenotype-framework
@@ -1324,7 +1324,7 @@ substrates:
 
     '
 - id: stashly
-  repo: KooshaPari/Stashly
+  repo: <REDACTED>/Stashly
   name: Stashly
   status: archived
   tier: pheno-lib
@@ -1346,7 +1346,7 @@ substrates:
     Source carries an inner `Stashly/src/phenotype-cache-adapter/Cargo.toml` scaffold
     that is NOT
 
-    declared in `lib.rs` and is therefore inert in the absorbed crate. Repo `KooshaPari/Stashly`
+    declared in `lib.rs` and is therefore inert in the absorbed crate. Repo `<REDACTED>/Stashly`
 
     archived on GitHub; source remains at `repos/Stashly/` for forensic retention.
     Disposition-index
@@ -1355,7 +1355,7 @@ substrates:
 
     '
 - id: substrate
-  repo: KooshaPari/substrate
+  repo: <REDACTED>/substrate
   name: substrate
   status: active
   tier: federated-service
@@ -1371,7 +1371,7 @@ substrates:
 
     '
 - id: substrate-adapters-bundle
-  repo: KooshaPari/substrate-adapters-bundle
+  repo: <REDACTED>/substrate-adapters-bundle
   name: substrate-adapters-bundle
   status: archived
   tier: pheno-lib
@@ -1385,7 +1385,7 @@ substrates:
 
     '
 - id: tasken
-  repo: KooshaPari/Tasken
+  repo: <REDACTED>/Tasken
   name: Tasken
   status: archived
   tier: phenotype-framework
@@ -1399,7 +1399,7 @@ substrates:
 
     '
 - id: testingkit
-  repo: KooshaPari/TestingKit
+  repo: <REDACTED>/TestingKit
   name: TestingKit
   status: active
   tier: phenotype-framework
@@ -1413,7 +1413,7 @@ substrates:
 
     '
 - id: thegent
-  repo: KooshaPari/thegent
+  repo: <REDACTED>/thegent
   name: thegent
   status: active
   tier: phenotype-framework
@@ -1427,7 +1427,7 @@ substrates:
 
     '
 - id: tokn
-  repo: KooshaPari/Tokn
+  repo: <REDACTED>/Tokn
   name: Tokn
   status: archived
   tier: pheno-lib
@@ -1441,7 +1441,7 @@ substrates:
 
     '
 - id: tracely
-  repo: KooshaPari/Tracely
+  repo: <REDACTED>/Tracely
   name: Tracely
   status: active
   tier: pheno-lib
@@ -1463,7 +1463,7 @@ substrates:
 
     audit artifact audits/absorption-justifications/Tracely-2026-07-17.md;
 
-    outer `gh repo archive KooshaPari/Tracely -y` confirmed same day;
+    outer `gh repo archive <REDACTED>/Tracely -y` confirmed same day;
 
     pre-archive tarball at repos/_archive/Tracely-2026-07-17/).
 

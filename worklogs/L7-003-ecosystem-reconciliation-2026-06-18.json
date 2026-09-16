@@ -91,7 +91,7 @@
         phenoObservability, vibeproxy-monitoring-unified, PhenoDesign (force-overwrite).
     pushed as commit 0034b391 on orphan; PhenoDesign case-fix as commits d1a8a032 + ..fcf30c3c.
     canon-not-bound: 24 -> 16 (8 closed by stubs).
-    on-disk stubs propagated to /Users/kooshapari/CodeProjects/Phenotype/repos/<repo>/docs/{intent,boundary}/<repo>.md.
+    on-disk stubs propagated to /Users/<REDACTED>/CodeProjects/Phenotype/repos/<repo>/docs/{intent,boundary}/<repo>.md.
     HTTP status on remote: 7x 200 + 1x of /proposed/ (lower&upper preserved, only PhenoDesign PascalCase canonical).
     registry main: commit 122d77f4 (worklog updates only) - NOT YET pushed.
     branch_target: orphan @ fcf30c3c LIVE; main LOCAL-COMMITTED, remote PUSH-PENDING."

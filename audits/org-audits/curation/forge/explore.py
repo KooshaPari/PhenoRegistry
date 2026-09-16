@@ -5,7 +5,11 @@ import json
 import re
 import sys
 
+<<<<<<< Updated upstream
 DB = "/Users/kooshapari/forge/.forge.db"
+=======
+DB = "/Users/<REDACTED>/forge/.forge.db"
+>>>>>>> Stashed changes
 
 TASK_RE = re.compile(r"<task>(.*?)</task>", re.DOTALL)
 SYS_DATE_RE = re.compile(r"<system_date>.*", re.DOTALL)

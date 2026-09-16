@@ -26,7 +26,11 @@
     <array>
         <string>/usr/bin/env</string>
         <string>python3</string>
+<<<<<<< Updated upstream
         <string>/Users/kooshapari/CodeProjects/Phenotype/repos/_phenofleet-decisions/airlock-v2/daemons/cleanup-daemon.py</string>
+=======
+        <string>/Users/<REDACTED>/CodeProjects/Phenotype/repos/_phenofleet-decisions/airlock-v2/daemons/cleanup-daemon.py</string>
+>>>>>>> Stashed changes
         <string>--loop</string>
     </array>
 
@@ -46,6 +50,7 @@
     <integer>10</integer>
 
     <key>StandardOutPath</key>
+<<<<<<< Updated upstream
     <string>/Users/kooshapari/.airlock-v2/logs/cleanup.stdout.log</string>
 
     <key>StandardErrorPath</key>
@@ -53,17 +58,34 @@
 
     <key>WorkingDirectory</key>
     <string>/Users/kooshapari</string>
+=======
+    <string>/Users/<REDACTED>/.airlock-v2/logs/cleanup.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/<REDACTED>/.airlock-v2/logs/cleanup.stderr.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/<REDACTED></string>
+>>>>>>> Stashed changes
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
         <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
         <key>HOME</key>
+<<<<<<< Updated upstream
         <string>/Users/kooshapari</string>
         <key>AIRLOCK_V2_ROOT</key>
         <string>/Users/kooshapari/CodeProjects/Phenotype/repos</string>
         <key>AIRLOCK_V2_LOG_DIR</key>
         <string>/Users/kooshapari/.airlock-v2/logs</string>
+=======
+        <string>/Users/<REDACTED></string>
+        <key>AIRLOCK_V2_ROOT</key>
+        <string>/Users/<REDACTED>/CodeProjects/Phenotype/repos</string>
+        <key>AIRLOCK_V2_LOG_DIR</key>
+        <string>/Users/<REDACTED>/.airlock-v2/logs</string>
+>>>>>>> Stashed changes
         <key>AIRLOCK_V2_LOCK_PATH</key>
         <string>/tmp/airlock-v2.cleanup.lock</string>
         <key>AIRLOCK_V2_STALE_DAYS</key>

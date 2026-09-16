@@ -27,7 +27,7 @@ tasks:
       - '{{.SCRIPT}} --help'
 
   validate:
-    desc: Validate all 13 canonical KooshaPari repos for GitHub reachability and meta-file presence
+    desc: Validate all 13 canonical <REDACTED> repos for GitHub reachability and meta-file presence
     cmds:
       - '{{.SCRIPT}}'
 

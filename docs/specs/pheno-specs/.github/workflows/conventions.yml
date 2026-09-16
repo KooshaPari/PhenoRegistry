@@ -15,4 +15,4 @@ concurrency:
   cancel-in-progress: true
 jobs:
   conventions:
-    uses: KooshaPari/phenotype-org-governance/.github/workflows/reusable-conventions-lint.yml@12778e6a13878f90010e03cd0b8f63730da294e0 # pinned from @main
+    uses: <REDACTED>/phenotype-org-governance/.github/workflows/reusable-conventions-lint.yml@12778e6a13878f90010e03cd0b8f63730da294e0 # pinned from @main

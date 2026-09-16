@@ -1,7 +1,7 @@
 phenotype-registry
 
 Phenotype Registry System: master index connecting specs, patterns, and templates.
-Part of the Phenotype-org fleet canonical substrate registry (see KooshaPari/phenotype-registry).
+Part of the Phenotype-org fleet canonical substrate registry (see <REDACTED>/phenotype-registry).
 
 ## Docs
 
@@ -20,10 +20,10 @@ Part of the Phenotype-org fleet canonical substrate registry (see KooshaPari/phe
 - Language/runtime: typescript
 - Tier: 0
 - Test coverage: 62%
-- Registry entry: KooshaPari/phenotype-registry/registry/components.lock
-- Maintained by: KooshaPari
+- Registry entry: <REDACTED>/phenotype-registry/registry/components.lock
+- Maintained by: <REDACTED>
 
-## Absorbed from KooshaPari/PhenoHandbook (2026-09-10)
+## Absorbed from <REDACTED>/PhenoHandbook (2026-09-10)
 
 ### PhenoHandbook
 

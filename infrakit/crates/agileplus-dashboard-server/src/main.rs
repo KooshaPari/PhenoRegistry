@@ -15,7 +15,11 @@ async fn main() -> anyhow::Result<()> {
         .unwrap_or(3001);
 
     let root = std::env::var("ROOT")
+<<<<<<< Updated upstream
         .unwrap_or_else(|_| "/Users/kooshapari/CodeProjects/Phenotype/repos".to_string());
+=======
+        .unwrap_or_else(|_| "/Users/<REDACTED>/CodeProjects/Phenotype/repos".to_string());
+>>>>>>> Stashed changes
 
     tracing::info!("Starting Health Dashboard on port {}", port);
     tracing::info!("Scanning projects in: {}", root);

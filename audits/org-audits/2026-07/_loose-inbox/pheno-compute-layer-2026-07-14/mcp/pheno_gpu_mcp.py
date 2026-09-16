@@ -48,7 +48,11 @@ except ImportError:
                 print(f"  - {t.__name__}")
 
 # Configuration
+<<<<<<< Updated upstream
 COMPUTE_HOST = "desk"  # or "kooshapari-desk.tail2b570.ts.net"
+=======
+COMPUTE_HOST = "desk"  # or "<REDACTED>-desk.tail2b570.ts.net"
+>>>>>>> Stashed changes
 COMPUTE_IP = "100.96.135.160"
 
 # Create MCP server
