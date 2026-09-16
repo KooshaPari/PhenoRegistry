@@ -2,12 +2,12 @@
 
 **All 4 previously-deferred repos have been promoted to L4 (14/14) and pushed to `main` (commit `a7447b9`).**
 
-| Repo | Audit File | Score | Status |
-|---|---|---|---|
-| `KooshaPari/Tracera` | `Tracera-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
-| `KooshaPari/AuthKit` | `AuthKit-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
+| Repo                    | Audit File                 | Score | Status                    |
+| ----------------------- | -------------------------- | ----- | ------------------------- |
+| `KooshaPari/Tracera`    | `Tracera-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
+| `KooshaPari/AuthKit`    | `AuthKit-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
 | `KooshaPari/PhenoSpecs` | `PhenoSpecs-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
-| `KooshaPari/Eidolon` | `Eidolon-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
+| `KooshaPari/Eidolon`    | `Eidolon-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
 
 ## Why these were deferred (historical)
 

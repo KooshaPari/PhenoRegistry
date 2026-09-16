@@ -1,20 +1,86 @@
-# phenotype-registry
+phenotype-registry
 
-> Phenotype Registry System: master index connecting specs, patterns, and templates. Part of the Phenotype-org fleet canonical substrate registry (see KooshaPari/phenotype-registry).
+Phenotype Registry System: master index connecting specs, patterns, and templates.
+Part of the Phenotype-org fleet canonical substrate registry (see KooshaPari/phenotype-registry).
 
 ## Docs
+
 - [README.md](README.md): entry point and project overview
 - [SPEC.md](SPEC.md): one-page spec (Problem / Solution / Architecture / API / Status)
 - [CHANGELOG.md](CHANGELOG.md): version history
 - [SECURITY.md](SECURITY.md): security policy and reporting
 
 ## Optional
+
 - [WORKLOG.md](WORKLOG.md): pheno-worklog-schema v2.1 (if present)
 - [docs/adr/](docs/adr/): architecture decision records (if present)
 
 ## Notes
+
 - Language/runtime: typescript
 - Tier: 0
 - Test coverage: 62%
 - Registry entry: KooshaPari/phenotype-registry/registry/components.lock
 - Maintained by: KooshaPari
+
+## Absorbed from KooshaPari/PhenoHandbook (2026-09-10)
+
+### PhenoHandbook
+
+Living documentation for design patterns, anti-patterns, guidelines, methodologies,
+and checklists across the Phenotype ecosystem. Doc-only MkDocs/VitePress site; no
+runtime code. Referenced from ~80% of fleet ADRs.
+
+#### Documentation
+
+- [handbook/README.md](handbook/README.md): overview, quick start, registry structure, pattern format
+- [handbook/AGENTS.md](handbook/AGENTS.md): project identity, conventions, what/when/when-not for AI agents
+- [handbook/CHARTER.md](handbook/CHARTER.md): mission, tenets, in/out of scope, target users, success criteria
+- [handbook/SPEC.md](handbook/SPEC.md): canonical specification (v1.0.0, 2026-04-04) -- content model, pattern format, governance
+- [handbook/ADR.md](handbook/ADR.md): top-level ADR index + cross-pattern decision log
+- [handbook/CHANGELOG.md](handbook/CHANGELOG.md): release notes (Keep a Changelog 1.1.0, SemVer 2.0.0)
+- [handbook/PLAN.md](handbook/PLAN.md): roadmap / publishing pipeline
+- [handbook/PRD.md](handbook/PRD.md): product requirements (long-form context for new contributors)
+- [handbook/INDEX.md](handbook/INDEX.md): governance index (happy-path checklist + pre-commit guard)
+- [handbook/VERSION](handbook/VERSION): current version (0.1.0)
+
+#### Patterns
+
+- [handbook/patterns/README.md](handbook/patterns/README.md): domain index (auth, caching, async, CI, observability, ...)
+- [handbook/patterns/spine-roles.md](handbook/patterns/spine-roles.md): 4-role model for cross-repo spine work
+- [handbook/patterns/feature-flagging.md](handbook/patterns/feature-flagging.md): feature flag patterns
+- [handbook/patterns/architecture/](handbook/patterns/architecture/): hexagonal, microservices, event-driven architecture patterns
+- [handbook/patterns/async/](handbook/patterns/async/): async, message-passing, queue patterns
+- [handbook/patterns/ci/](handbook/patterns/ci/): CI/CD, quality-gate, SBOM, SLSA patterns
+- [handbook/patterns/delegation/](handbook/patterns/delegation/): subagent dispatch, forge/codex patterns
+- [handbook/patterns/governance/](handbook/patterns/governance/): governance meta-patterns (ADR, decision log, FR traceability)
+- [handbook/patterns/methodology/](handbook/patterns/methodology/): TDD, BDD, DDD, xDD
+- [handbook/patterns/stack/](handbook/patterns/stack/): language/stack-specific conventions
+- [handbook/patterns/tooling/](handbook/patterns/tooling/): Justfile, Taskfile, pre-commit patterns
+- [handbook/patterns/traceability/](handbook/patterns/traceability/): journey evidence, FR traceability
+
+#### Anti-patterns
+
+- [handbook/anti-patterns/README.md](handbook/anti-patterns/README.md): retired patterns registry
+- [handbook/anti-patterns/language-bucket-sdk.md](handbook/anti-patterns/language-bucket-sdk.md): why `phenotype-{lang}-sdk` umbrella repos fail (ADR-017)
+- [handbook/anti-patterns/mirror-to-empty-repo.md](handbook/anti-patterns/mirror-to-empty-repo.md): bulk-mirror anti-pattern
+
+#### ADRs
+
+- [handbook/adrs/](handbook/adrs/): MADR-format Architecture Decision Records (001-hexagonal, 002-NATS, 003-storage, 004-api, 005-auth, 006-deploy, 007-monitoring, 008-security, ...)
+
+#### Optional
+
+- [handbook/LICENSE-MIT](handbook/LICENSE-MIT): MIT license text
+- [handbook/LICENSE-APACHE](handbook/LICENSE-APACHE): Apache 2.0 license text
+- [handbook/LICENSE](handbook/LICENSE): primary license pointer
+- [handbook/CONTRIBUTING.md](handbook/CONTRIBUTING.md): how to contribute a pattern or anti-pattern
+- [handbook/SECURITY.md](handbook/SECURITY.md): vulnerability reporting policy
+- [handbook/CODE_OF_CONDUCT.md](handbook/CODE_OF_CONDUCT.md): community standards
+- [handbook/FUNCTIONAL_REQUIREMENTS.md](handbook/FUNCTIONAL_REQUIREMENTS.md): feature tracking
+- [handbook/SOTA.md](handbook/SOTA.md): state-of-the-art survey (long-form, ~119k chars)
+- [handbook/worklog.md](handbook/worklog.md): running worklog (per-repo local)
+- [handbook/catalog-info.yaml](handbook/catalog-info.yaml): Backstage-style catalog metadata
+- [handbook/mkdocs.yml](handbook/mkdocs.yml): MkDocs site build config
+- [handbook/package.json](handbook/package.json): VitePress / tooling package manifest
+- [handbook/Taskfile.yml](handbook/Taskfile.yml): task runner config (lint, build, test, deploy)

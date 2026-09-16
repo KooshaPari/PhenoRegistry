@@ -2,17 +2,15 @@
 
 ## Boundaries
 
-ResearchLedger owns corpus-repair implementation and its candidate evidence. Benchora owns performance-harness and PR #107 remediation under `BOUNDARY_OWNERS.md` Performance / Benchmark Harness (status: active per `projects/Benchora.json` and `BOUNDARY_OWNERS.md`). phenotype-registry owns only routing links.
-
-**Benchora lane status:** Blocked until ownership records are reconciled. The Benchora lane for PR #107 remediation is not gated by this session's routing packet; exact-head revalidation and scorecard/Sonar/Infisical evidence belong to Benchora.
+ResearchLedger owns corpus-repair implementation and its candidate evidence. Benchora owns performance-harness and PR #107 remediation under `BOUNDARY_OWNERS.md` Performance / Benchmark Harness. phenotype-registry owns only routing links.
 
 ## Split targets
 
-| Target | Role | Evidence limit |
-| --- | --- | --- |
-| ResearchLedger | Sole implementation lane | PR #81 `5ada3d8` is published; `fbf2d0d` and active list-support tests are unpublished/local, not completion evidence. |
-| Benchora | Owner of #107 findings | The plan is local, committed on an unpublished temporary branch at the path in `00_SESSION_OVERVIEW.md`; do not represent it as hosted. |
-| phenotype-registry | Link/governance record | This packet does not replace either owner artifact. |
+| Target             | Role                     | Evidence limit                                                                                                                                                                                                                                            |
+| ------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ResearchLedger     | Sole implementation lane | PR #81 `5ada3d8` is published; `fbf2d0d` and active list-support tests are unpublished/local, not completion evidence.                                                                                                                                    |
+| Benchora           | Owner of #107 findings   | The verified hosted plan is pinned at [`65ccb502`](https://github.com/KooshaPari/Benchora/blob/65ccb50288e3ddfa0f537aef80c82c1a26553244/audits/ci-exceptions/2026-09-08-pr107-scorecard-repair-plan.md); prior temporary/unpublished state is historical. |
+| phenotype-registry | Link/governance record   | This packet does not replace either owner artifact.                                                                                                                                                                                                       |
 
 ## Prior state and deferrals
 

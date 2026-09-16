@@ -24,8 +24,12 @@ jobs:
 
       - name: Run 88-Pillar Scorecard Audit
         id: audit
+        env:
+          THRESHOLD: ${{ github.event.inputs.threshold || '35' }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
         run: |
-          THRESHOLD=${{ github.event.inputs.threshold || '35' }}
 
           # Run audit in JSON mode
           python scripts/scorecard_ci.py . --exclude-enterprise --output json --threshold "$THRESHOLD" --fail-on-drop > scorecard-report.json 2> scorecard-stderr.txt || EXIT_CODE=$?
@@ -66,13 +70,13 @@ jobs:
           echo "passed=$( [ "$SCORE" -ge "$THRESHOLD" ] && echo true || echo false )" >> "$GITHUB_OUTPUT"
 
           # Post PR comment if applicable
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
+          if [ "$EVENT_NAME" = "pull_request" ]; then
             COMMENT=$(cat scorecard-summary.md)
             # Use GitHub API to post comment
             if command -v gh &> /dev/null; then
-              gh pr comment "${{ github.event.pull_request.number }}" \
+              gh pr comment "$PR_NUMBER" \
                 --body "$COMMENT" \
-                --repo "${{ github.repository }}" || true
+                --repo "$REPO" || true
             fi
           fi
 

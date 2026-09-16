@@ -1,13 +1,23 @@
 # Cross-Project Sync
 
-| Field | Value |
-| --- | --- |
-| Primary implementation | ResearchLedger only; its program-audit document remains the corpus WBS authority. |
-| Benchora owner artifact | `audits/ci-exceptions/2026-09-08-pr107-scorecard-repair-plan.md` relative to Benchora root; presently only on a committed, unpublished temporary branch in `/tmp/benchora-107-prep.9U2QCl`. |
-| Benchora remote reference | #107 historical `668ceed`; no claim that the local artifact exists on the remote. |
-| ResearchLedger remote reference | #81 published `5ada3d8`; `fbf2d0d` and active list-support tests are unpublished evidence. |
-| Registry tracker | This session directory routes and links; it is not owner evidence. |
-| Merge order | None authorized. Obtain owner review and exact-head evidence first, then refresh registry links separately. |
-| AgilePlus | Read-only registry and live-MCP inspection found no project-scoped spec link; a future implementation PR needs a real ID or remains governance-blocked. |
+| Field                                  | Value                                                                                                                                                                                                                                                                                                       |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Primary implementation                 | ResearchLedger only; its program-audit document remains the corpus WBS authority.                                                                                                                                                                                                                           |
+| Benchora owner artifact                | Hosted, pinned owner plan: [`audits/ci-exceptions/2026-09-08-pr107-scorecard-repair-plan.md`](https://github.com/KooshaPari/Benchora/blob/65ccb50288e3ddfa0f537aef80c82c1a26553244/audits/ci-exceptions/2026-09-08-pr107-scorecard-repair-plan.md). The temporary/unpublished checkout state is historical. |
+| Benchora remote reference              | #107 historical `668ceed`; no claim that the local artifact exists on the remote.                                                                                                                                                                                                                           |
+| ResearchLedger remote reference        | #81 published `5ada3d8`; `fbf2d0d` and active list-support tests are unpublished evidence.                                                                                                                                                                                                                  |
+| ResearchLedger owner-routing inventory | Published, pinned source: [`FINDING-OWNER-ROUTING-2026-09-09.md`](https://github.com/KooshaPari/ResearchLedger/blob/8822aa14baef2a964288076645edcc493c338688/docs/corpora/emergent-garden/research/FINDING-OWNER-ROUTING-2026-09-09.md) at `8822aa14baef2a964288076645edcc493c338688`.                      |
+| Registry tracker                       | This session directory routes and links; it is not owner evidence.                                                                                                                                                                                                                                          |
+| Merge order                            | None authorized. Obtain owner review and exact-head evidence first, then refresh registry links separately.                                                                                                                                                                                                 |
+| AgilePlus                              | Project specification: `kitty-specs/researchledger-corpus-audit-routing/spec.md`. CLI specify succeeded (Created -> Specified, 2026-09-12T09:02:25Z); CLI list independently confirmed ID3 slug in `specified` state. No blind duplicate enqueue. MCP read timed out. Governance completion and MCP transport remain unverified open gates.                                                                                                               |
+
+The routing inventory's nine applicability surfaces are independent from the
+original 18 ResearchLedger work packages; they are not a completion fraction.
+`VERIFIED` ownership is limited to cited registry boundaries, while
+`HISTORICAL` and `UNKNOWN` entries remain unresolved and must not be
+auto-routed. A destination marked `MISSING` is unlinked in the inspected corpus,
+not demonstrated absent. The existing Benchora CI-owner plan above remains
+separate delivery evidence, rather than a substitute for a new applicability
+destination artifact.
 
 The registry carries no Benchora fixes, ResearchLedger code, hosted scanner disposition, or push/merge authorization.

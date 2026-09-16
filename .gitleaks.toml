@@ -7,28 +7,37 @@ title = "Phenotype fleet gitleaks config"
 useDefault = true
 
 [allowlist]
-paths = [
-  'target/',
-  'node_modules/',
-  '.venv/',
-  '__pycache__/',
-  'dist/',
-  'build/',
-  '.cargo/',
-  '.pytest_cache/',
-  '*.lock',
-  'Cargo.lock',
-  'package-lock.json',
-  'yarn.lock',
-  'pnpm-lock.yaml',
-  'poetry.lock',
-  'go.sum',
-]
-
-regexes = [
-  'test[_-]?fixture',
-  'mock[_-]?key',
-  'example[_-]?token',
-  'EXAMPLE_API_KEY',
-  'FAKE_TOKEN',
-]
+  description = "Global allowlist for build artifacts, lock files, and test fixtures."
+  paths = [
+    # Build outputs
+    '''(?i)(?:^|/)target/''',
+    '''(?i)(?:^|/)node_modules/''',
+    '''(?i)(?:^|/)\.venv/''',
+    '''(?i)(?:^|/)__pycache__/''',
+    '''(?i)(?:^|/)dist/''',
+    '''(?i)(?:^|/)build/''',
+    '''(?i)(?:^|/)\.cargo/''',
+    '''(?i)(?:^|/)\.pytest_cache/''',
+    # Lock files (never contain secrets)
+    '''(?i)(?:^|/)[^/]*\.lock$''',
+    '''(?i)(?:^|/)Cargo\.lock$''',
+    '''(?i)(?:^|/)package-lock\.json$''',
+    '''(?i)(?:^|/)yarn\.lock$''',
+    '''(?i)(?:^|/)pnpm-lock\.yaml$''',
+    '''(?i)(?:^|/)poetry\.lock$''',
+    '''(?i)(?:^|/)go\.sum$''',
+    # Minified JS
+    '''(?i)(?:^|/)[^/]*\.min\.js$''',
+    # Test fixtures (deliberately fake keys/tokens)
+    '''(?i)(?:^|/)(?:[^/]*/)?pytest/fixtures/''',
+    '''(?i)(?:^|/)(?:[^/]*/)?tests/fixtures/''',
+    '''(?i)(?:^|/)(?:[^/]*/)?testdata/''',
+    '''(?i)(?:^|/)(?:[^/]*/)?test_data/''',
+  ]
+  regexes = [
+    'test[_-]?fixture',
+    'mock[_-]?key',
+    'example[_-]?token',
+    'EXAMPLE_API_KEY',
+    'FAKE_TOKEN',
+  ]
