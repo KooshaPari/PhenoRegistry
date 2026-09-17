@@ -56,6 +56,11 @@ tasks:
     cmds:
       - python3 {{.REGEN_SCRIPT}} --diff
 
+  grade:
+    desc: "Fleet-wide project grading engine (delegates to canonical grade.sh)."
+    cmds:
+      - ./grade.sh
+
   coverage:
     desc: "Measure code coverage (SSOT: see grade.sh for the canonical command)."
     cmds:
