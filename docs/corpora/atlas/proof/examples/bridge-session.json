@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4",
+  "id": "SYN-BRIDGE",
+  "subject_id": "SYN-GAME",
+  "source_revision": "SYN-SOURCE",
+  "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "instance": {
+    "process_start_identity": "SYN-START",
+    "window_or_render_target": "SYN-WINDOW",
+    "world_or_workspace": "SYN-WORLD",
+    "nonce": "SYN-NONCE"
+  },
+  "access_class": "mixed",
+  "action_routes": [
+    "fixture-control",
+    "user-input",
+    "semantic-command"
+  ],
+  "observations": [
+    "semantic-state",
+    "pixels",
+    "metrics",
+    "saved-state"
+  ],
+  "scope_references": [
+    "SYN-SCOPE-NOT-A-GRANT"
+  ],
+  "limits": {
+    "wall_seconds": 120,
+    "cpu_slots": 2,
+    "gpu_lease": null
+  },
+  "status": "PLANNED_NOT_EXECUTED",
+  "evidence_ids": [],
+  "synthetic": true
+}

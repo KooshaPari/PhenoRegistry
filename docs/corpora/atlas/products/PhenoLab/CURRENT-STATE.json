@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1269695199",
+  "name": "PhenoLab",
+  "default_branch": "main",
+  "visibility": "private",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "47758a1010adb89629cdf8e2827c795b0158e0f0",
+  "sampled_commit_date_utc": "2026-09-12T06:14:58Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Latest sampled default history still records serving/configuration and evaluation integration work from Sep12.",
+  "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+  "role": "Evaluation research consumer and reproducibility lab",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Native model/service state and current local runs are not visible from this history.",
+    "A skipped required oracle cannot qualify a capability."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1269695199-A1",
+      "title": "Return the actual experiment/run identity",
+      "work": "Resolve branch, dataset/model/config/environment, execution location and saved outputs.",
+      "acceptance": "Exact native-run or explicit not-run status; no status inferred from suite inventory.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1269695199",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1269695199-A2",
+      "title": "Run positive and known-negative benchmark cases",
+      "work": "Use a small representative workload with real runner, tool/environment limits and independently specified expected behavior.",
+      "acceptance": "Bad candidate fails; infra failure remains separate; costs/logs/seeds/configuration preserved.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1269695199",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1269695199-A3",
+      "title": "Reconcile shared extraction and reproducibility",
+      "work": "Coordinate reused runner/library code with Portage and PhenoShared; retain lab-specific scenario ownership and real data provenance.",
+      "acceptance": "Another isolated environment can reproduce the bounded experiment without hidden workstation dependencies.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1269695199",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Do not duplicate a benchmark engine already supported by Portage or established tooling. Preserve experiment semantics and scorer validity.",
+  "parent_acceptance": "A useful independently interpretable benchmark bundle is reproducible; no fake desktop app is required.",
+  "sources": [
+    {
+      "id": "CUR-1269695199-S01",
+      "url": "https://github.com/KooshaPari/PhenoLab/commit/47758a1010adb89629cdf8e2827c795b0158e0f0",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

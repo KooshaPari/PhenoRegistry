@@ -1,0 +1,610 @@
+[
+  {
+    "id": "PROOF-13-01",
+    "group": "capability-composition",
+    "title": "Composition without mounted UI",
+    "statement": "Qualify composed behavior with no requirement to mount a peer UI.",
+    "acceptance": "A host command uses a real provider with zero UI mounts and retains a coherent result.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-02",
+    "group": "capability-composition",
+    "title": "Consumed and consumable",
+    "statement": "Assess both available providers and current/credible future consumers before significant implementation.",
+    "acceptance": "A proposed handroll without owned/external alternatives or consumer impact remains incomplete.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-03",
+    "group": "capability-composition",
+    "title": "Semantic preservation",
+    "statement": "Preserve accepted behavior, error/cancellation/state/resource and consumer contracts when replacing code.",
+    "acceptance": "A faster or shorter replacement that breaks a critical consumer is rejected.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-04",
+    "group": "capability-composition",
+    "title": "Correct lowering",
+    "statement": "Select compile-time, direct-call, IPC, network or UI adapters according to actual constraints.",
+    "acceptance": "A valid in-process provider is not forced through an unnecessary network layer.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-05",
+    "group": "capability-composition",
+    "title": "Boundary fitness",
+    "statement": "Enforce domain dependency direction and real adapter contracts.",
+    "acceptance": "A prohibited UI/transport dependency introduced into the domain fails the architecture check.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-06",
+    "group": "capability-composition",
+    "title": "Independent activation",
+    "statement": "Peer discovery, permissions, absence, replacement and detach are explicit.",
+    "acceptance": "Revoked authority or absent optional peer does not silently trigger privileged fallback.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-07",
+    "group": "capability-composition",
+    "title": "Stable authority",
+    "statement": "Composed UX does not silently merge data owners, identities or lifecycle obligations.",
+    "acceptance": "Two host perspectives reference one authoritative object and reject duplicate mutation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-08",
+    "group": "capability-composition",
+    "title": "DD proof paths",
+    "statement": "Use pure tests, real adapter tests and actual user journeys as distinct complementary layers.",
+    "acceptance": "Mocked provider success cannot satisfy a required live integration.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-01",
+    "group": "agent-bridge",
+    "title": "Access inventory",
+    "statement": "Declare owned, gray and black-box access per boundary and operation.",
+    "acceptance": "An unavailable proprietary-state API cannot be marked exercised.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-02",
+    "group": "agent-bridge",
+    "title": "Instance binding",
+    "statement": "Bind actions, observations and captures to the intended artifact/session/window/world.",
+    "acceptance": "A wrong process or stale nonce is rejected before input.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-03",
+    "group": "agent-bridge",
+    "title": "Separated action modes",
+    "statement": "Distinguish fixture control, semantic commands and actual user input.",
+    "acceptance": "Teleport/state mutation cannot satisfy a click-and-move user-path criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-04",
+    "group": "agent-bridge",
+    "title": "Observed completion",
+    "statement": "Correlate accepted command, domain result, pixels and persistence as applicable.",
+    "acceptance": "Acknowledgement without the required effect is non-accepting.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-05",
+    "group": "agent-bridge",
+    "title": "Clock and frame identity",
+    "statement": "Record monotonic/action, simulation, render and capture relationships.",
+    "acceptance": "A prior frame from the correct window cannot prove a new action.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-06",
+    "group": "agent-bridge",
+    "title": "Private isolation",
+    "statement": "Use approved private sessions, per-run writable state, limits and entitlements.",
+    "acceptance": "Cross-worker capture/data access or missing license cannot be bypassed to pass.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-07",
+    "group": "agent-bridge",
+    "title": "Native product path",
+    "statement": "Test actual installed output as well as embedded/headless diagnostic profiles.",
+    "acceptance": "A logic-only run is rejected for a required graphical claim.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-08",
+    "group": "agent-bridge",
+    "title": "Bridge fault semantics",
+    "statement": "Qualify lifecycle, cancellation, missing methods and uncertain outcomes.",
+    "acceptance": "Timeout is not successful completion and uncertain side effects are reconciled before retry.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-09",
+    "group": "agent-bridge",
+    "title": "Fine visual witnesses",
+    "statement": "Bind tiny visual features to reviewed regions, camera/scale and independent evidence.",
+    "acceptance": "A missing small required icon fails even if full-frame similarity is high.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-10",
+    "group": "agent-bridge",
+    "title": "Temporal witnesses",
+    "statement": "Capture enough frames to test flicker, stutter, LOD and animation behavior.",
+    "acceptance": "A lucky still frame cannot satisfy a temporal criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-11",
+    "group": "agent-bridge",
+    "title": "Shipping fidelity",
+    "statement": "Test controlled regression and representative shipping profiles separately.",
+    "acceptance": "Disabling the effect under test cannot produce shipping-quality approval.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-12",
+    "group": "agent-bridge",
+    "title": "Visual calibration",
+    "statement": "Use known-good/bad classes, holdouts, model/metric provenance and disagreement rules.",
+    "acceptance": "Known-bad subtle examples must be caught at the predeclared required rates.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-01",
+    "group": "design-traceability",
+    "title": "Editable design source",
+    "statement": "Persist inspectable design/mockup/flow sources with versioned previews.",
+    "acceptance": "A runtime screenshot cannot replace the missing editable design when required.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-02",
+    "group": "design-traceability",
+    "title": "Variant state coverage",
+    "statement": "Design relevant empty/loading/error/permission/recovery and support variants.",
+    "acceptance": "One happy-path frame cannot close an entire flow.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-03",
+    "group": "design-traceability",
+    "title": "Approval fidelity",
+    "statement": "Separate exploratory, proposed, reviewed and accepted design versions.",
+    "acceptance": "An agent-written approved field without actual decision evidence does not promote scope.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-04",
+    "group": "design-traceability",
+    "title": "Baseline separation",
+    "statement": "Distinguish intended design, regression baseline and actual implementation evidence.",
+    "acceptance": "Autoupdating a failed screenshot baseline without a decision cannot close the defect.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-05",
+    "group": "design-traceability",
+    "title": "Full artifact accountability",
+    "statement": "Classify meaningful code/config/assets/docs/tests/builds/research/runtime evidence and lineage.",
+    "acceptance": "Excluded code or generated files do not disappear from the inventory without producer/scope rationale.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-06",
+    "group": "design-traceability",
+    "title": "Bidirectional trace",
+    "statement": "Find unimplemented intent and undocumented/orphan implementation with typed relations.",
+    "acceptance": "A complete forward link set does not conceal an unowned public command.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-07",
+    "group": "design-traceability",
+    "title": "State and ownership",
+    "statement": "Retain authority-specific source/state and machine-readable reconciled projections.",
+    "acceptance": "A generated page does not fabricate an AgilePlus engine transition or authoritative data move.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-08",
+    "group": "design-traceability",
+    "title": "Scope evolution",
+    "statement": "Preserve full horizon and bounded CVP, with explicit requirement/scope version changes.",
+    "acceptance": "Dropping a hard requirement to improve the percentage is visible and needs authorization.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-01",
+    "group": "machine-grading",
+    "title": "Literal score",
+    "statement": "Compute a numerical score and letter grade against a versioned applicable rubric.",
+    "acceptance": "The output names scope/profile/revision and never presents the result as universal quality.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-02",
+    "group": "machine-grading",
+    "title": "Frozen weights",
+    "statement": "Fix category/criterion weights and eligible units before assessing the candidate.",
+    "acceptance": "Adding many easy tests or duplicate criteria cannot silently dilute a failed critical criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-03",
+    "group": "machine-grading",
+    "title": "Evidence admission",
+    "statement": "Bind earned units to exact candidate/profile/oracle identity, freshness and required channels.",
+    "acceptance": "Stale, wrong-build or no-pixel evidence earns no credit for a visible current feature.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-04",
+    "group": "machine-grading",
+    "title": "Unknown remains denominator",
+    "statement": "Missing, blocked, unrun and inadmissible obligations remain visible and earn zero.",
+    "acceptance": "Deleting missing outcomes from the evidence set cannot increase the grade.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-05",
+    "group": "machine-grading",
+    "title": "Noncompensatory gates",
+    "statement": "Keep critical invariants and required independent coverage gates outside averaging.",
+    "acceptance": "A high numeric grade with a failed critical invariant remains BLOCKED.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-06",
+    "group": "machine-grading",
+    "title": "Uncertainty truth",
+    "statement": "Distinguish assessed weight, unknown bound, stochastic intervals and evaluator class.",
+    "acceptance": "Model confidence is not accepted as a probability or proof.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-07",
+    "group": "machine-grading",
+    "title": "Scope-aware change",
+    "statement": "Publish same-scope progress and rubric/denominator changes separately.",
+    "acceptance": "A scope expansion is not misreported as a code regression or hidden to keep a score rising.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-08",
+    "group": "machine-grading",
+    "title": "Independent trust",
+    "statement": "Test graders and native adapters with adversarial controls and independent review.",
+    "acceptance": "A structurally valid invented receipt never claims authenticated product qualification.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-09",
+    "group": "machine-grading",
+    "title": "Role-specific profiles",
+    "statement": "Use appropriate GUI/game/library/CLI/infra and white/gray/black-box applicability.",
+    "acceptance": "Do not assert line coverage of inaccessible third-party engine internals.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-10",
+    "group": "machine-grading",
+    "title": "No rival scorecard",
+    "statement": "Integrate with existing accepted rubric/process; preserve unresolved SROC/CDP names.",
+    "acceptance": "No invented acronym or new registry becomes authority from this amendment.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  }
+]

@@ -1,0 +1,267 @@
+{
+  "observation_date": "2026-09-16",
+  "atomic": false,
+  "sources": [
+    "GitHub.search_repositories user:KooshaPari fork:true per_page=100 page=1",
+    "GitHub.list_repositories owner=KooshaPari page_size=100 page_offset=0"
+  ],
+  "serialization": "Manually transcribed selected fields; intentionally excludes tokens, email addresses, signed download URLs and private content.",
+  "listed_count": 42,
+  "non_zz_count": 24,
+  "filter": "not name.casefold().startswith(\"zz\")",
+  "repositories": [
+    {
+      "repository_id": "861430079",
+      "name": "BytePort",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "960016965",
+      "name": "zz-pause-inc-AgsLag",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "980996178",
+      "name": "zz-pause-Localbase",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "998124581",
+      "name": "zz-pause-ref-AtomsTech",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1048244869",
+      "name": "zz-pause-ref-Synthia",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1077977094",
+      "name": "zz-aa-dep-AgentApiPlusPlus",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1159182006",
+      "name": "zz-aa-dep-CliproxyApiPlusPlus",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1162254344",
+      "name": "Tracera",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1162255140",
+      "name": "zz-pause-unk-Thegent",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1164684442",
+      "name": "Civis",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1164684829",
+      "name": "zz-pause-inc-Parpoura",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1164703420",
+      "name": "zz-pause-inc-QuadSGM",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1165315873",
+      "name": "HeliosCLI",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1165351720",
+      "name": "Portage",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1167587447",
+      "name": "HeliosLab",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1169608854",
+      "name": "AgilePlus",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1169864396",
+      "name": "PhenoDesign",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1177712269",
+      "name": "Dino",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1185005735",
+      "name": "zz-aa-dep-UnityDoorstop",
+      "default_branch": "master",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1191459198",
+      "name": "ShareCLI",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1194326424",
+      "name": "zz-aa-dep-Planify",
+      "default_branch": "master",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1199812615",
+      "name": ".github",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1200273587",
+      "name": "PhenoShared",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1201113097",
+      "name": "PhenoRegistry",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1220449881",
+      "name": "zz-pause-inc-FocalPoint",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1226104769",
+      "name": "HeliosLite",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1226168548",
+      "name": "zz-aa-dep-Bifrost",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1226171396",
+      "name": "OmniRoute",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1241972761",
+      "name": "WorldSphereMod",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1262466303",
+      "name": "Melosviz",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1269695199",
+      "name": "PhenoLab",
+      "default_branch": "main",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1272990345",
+      "name": "PhenoApps",
+      "default_branch": "apps-extract",
+      "visibility": "private"
+    },
+    {
+      "repository_id": "1273002789",
+      "name": "zz-aa-dep-MobileCli",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1308570444",
+      "name": "CivicWarfare",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1315997929",
+      "name": "zz-aa-dep-TurboQuant",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1319179066",
+      "name": "zz-aa-dep-AirLock",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1322607630",
+      "name": "Khostty",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1328507619",
+      "name": "zz-aa-dep-PhenoUnslothStudio",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1330430083",
+      "name": "zz-aa-dep-CompoundSpheres3D",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1349458262",
+      "name": "KooshaPari",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1363521465",
+      "name": "PhenoFabric",
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    {
+      "repository_id": "1365855438",
+      "name": "KCode",
+      "default_branch": "master",
+      "visibility": "public"
+    }
+  ],
+  "missing_repository_semantics": "Absent from these listings is not proof of deletion, migration or safe preservation."
+}

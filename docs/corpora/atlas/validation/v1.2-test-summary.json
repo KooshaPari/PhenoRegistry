@@ -1,0 +1,8 @@
+{
+  "test_methods_passed": 203,
+  "elapsed_seconds": 29.463,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v",
+  "native_product_tests": false,
+  "new_product_coverage_measurement": false,
+  "initial_repair_note": "An initial test run identified two new dossiers lacking a shared-policy link. Links were added; tests were rerun without weakening them. Earlier package check found four missing support PILOT.json files; explicit planned role-specific pilot records were added."
+}

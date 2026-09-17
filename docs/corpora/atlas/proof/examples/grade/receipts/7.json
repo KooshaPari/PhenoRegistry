@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4",
+  "id": "SYN-RECEIPT-delivery_operations",
+  "criterion_id": "SYN-delivery_operations",
+  "scope_id": "SYN-SCOPE",
+  "subject_id": "SYN-SUBJECT",
+  "profile_id": "SYN-PROFILE",
+  "source_revision": "SYN-SHA-1",
+  "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "synthetic": true,
+  "run_id": "SYN-RUN-CORE",
+  "observed_at": "2026-09-16T10:00:00Z",
+  "status": "assessed",
+  "earned_units": 75,
+  "total_units": 100,
+  "actions": [
+    "read-only"
+  ],
+  "evaluator_kind": "deterministic",
+  "artifacts": [
+    {
+      "path": "artifacts/delivery_operations.json",
+      "sha256": "2eaab4d0bf87596a67456726e33f96985261535d668605c0ed9cbe29791dfb4e",
+      "modality": "test-report",
+      "media_type": "application/json"
+    }
+  ]
+}

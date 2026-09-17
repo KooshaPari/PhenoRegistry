@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1200273587",
+  "name": "PhenoShared",
+  "default_branch": "main",
+  "visibility": "private",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "345c602d789649a008c003fd19d0773c7cd8f846",
+  "sampled_commit_date_utc": "2026-09-16T10:17:42Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "The source diff adds two registry workspace members and makes phenotype-health a local dependency. Its handoff reports 81 members/310 crate directories, an excluded broken Python crate, and remaining external PhenoInfra references.",
+  "assessment": "SOURCE_CONFIRMED_INTEGRATION_GAPS",
+  "role": "Pooled reusable foundation and accepted package home",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "The 81-member cargo-check result is author-reported, not native verification here. Directory count and member count are not comparable completeness measures.",
+    "The handoff calls the excluded Python crate harmless and strikes off repair without consumer/contract evidence. Excluded from compilation is not accepted disposition.",
+    "Stable repository ID1200273587 came from Pheno/pheno, while the handoff says formerly PhenoAI; distinguish rename from absorbed-source lineage.",
+    "Some dependencies still reference donor Git sources even where local copies reportedly exist.",
+    "The handoff claims absorbed PhenoFabric, PhenoLab and PhenoRegistry content while those retain their own chats; decide library versus product ownership per capability."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1200273587-A1",
+      "title": "Reconcile source identity and package inventory",
+      "work": "Index all languages/build systems, members, excluded packages and recovered copies. Assign retained/integrated/fixture/archive/unsupported status and source lineage by repository ID.",
+      "acceptance": "No file-presence or compilation-only absorption verdict; each retained public capability has a real owner/consumer/profile.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1200273587",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1200273587-A2",
+      "title": "Close one donor-to-consumer dependency slice",
+      "work": "Select a registry or runtime capability, establish authoritative API/source, resolve equivalent local/upstream dependency identity, and test a clean real consumer.",
+      "acceptance": "Cache-isolated fetch/build plus semantic and failure tests; excluded Python contract explicitly restored, deprecated by approval or blocked.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1200273587",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1200273587-A3",
+      "title": "Establish package-level release and reuse discipline",
+      "work": "Build/publish only authorized independent packages with bounded dependency cones. Qualify actual consumers, updates and rollback; adapt trusted tools rather than copying weak implementations.",
+      "acceptance": "Current/future-consumer impact record, compatibility evidence, no lockstep all-workspace dependency, no unrelated repo mutation.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1200273587",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "One PhenoShared chat owns integration, not every product. Coordinate PhenoFabric/PhenoLab/Registry/ShareCLI owners for source/consumer contracts; keep app-specific behavior outside generic foundations.",
+  "parent_acceptance": "A bounded reusable capability can be installed and used by its actual consumers from a clean environment, with precise provenance and safe change semantics.",
+  "sources": [
+    {
+      "id": "CUR-1200273587-S01",
+      "url": "https://github.com/KooshaPari/PhenoShared/commit/345c602d789649a008c003fd19d0773c7cd8f846",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1200273587-S02",
+      "url": "https://github.com/KooshaPari/PhenoShared/blob/345c602d789649a008c003fd19d0773c7cd8f846/docs/dossiers/HANDOFF-PHENOSHARED.md",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

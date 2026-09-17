@@ -1,0 +1,39 @@
+{
+  "source_archive": "phenotype-atlas-assurance-program-v1.2.zip",
+  "sha256": "129d50eb6a64757fb03aef43d690e36c5d62dfa46884d3f7843a9864e1b4418d",
+  "inspection_date": "2026-09-16",
+  "review_type": "specific archived documentation contracts; not current repository implementation",
+  "reviewed_files": [
+    {
+      "path": "docs/architecture/APPLET-CONTRACT.md",
+      "size_bytes": 2806,
+      "sha256": "b602c4f8e79eada40f12ddc1e19a597dd16d30692fd8ae55229132a468a95e55"
+    },
+    {
+      "path": "docs/schemas/applet.schema.json",
+      "size_bytes": 3162,
+      "sha256": "f38dcdfdae5835a8d266148753345f2cc169c887d27c6c9dea22a4c7d24dd2c3"
+    },
+    {
+      "path": "docs/examples/applet.json",
+      "size_bytes": 698,
+      "sha256": "951dee59c2cef4acd25b4c8b0e0988ea1c3362809baa3c97ea302c65b3d0cf43"
+    },
+    {
+      "path": "docs/HLD.md",
+      "size_bytes": 4695,
+      "sha256": "79baae079e72c9c890217fbf495d979b44e4ab4b00e9565e6067c0e0a2314fee"
+    },
+    {
+      "path": "docs/ALD.md",
+      "size_bytes": 3981,
+      "sha256": "d9b1f3e5bad4cf00cf561fabcb33124b7fe5fa3d1033afe160514f8a6daef63c"
+    },
+    {
+      "path": "docs/LLD.md",
+      "size_bytes": 5513,
+      "sha256": "87af0b0c7977cd1014e8803f2b9b99e10fe180cf5eaf0ca93df8f3ac842a52e3"
+    }
+  ],
+  "finding": "Found conceptual recursion/lifecycle/locality but not complete co-install/host-relative/automatic native integration or App Center behavior."
+}

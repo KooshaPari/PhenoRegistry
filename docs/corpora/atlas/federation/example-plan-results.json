@@ -1,0 +1,18 @@
+{
+  "perspective-a": {
+    "status": "EXAMPLE_RECORDS_CONSISTENT",
+    "errors": [],
+    "activation_authorized": false,
+    "grant_authenticity_checked": false,
+    "product_behavior_verified": false,
+    "schema_scope": "synthetic-planning-examples-only"
+  },
+  "perspective-b": {
+    "status": "EXAMPLE_RECORDS_CONSISTENT",
+    "errors": [],
+    "activation_authorized": false,
+    "grant_authenticity_checked": false,
+    "product_behavior_verified": false,
+    "schema_scope": "synthetic-planning-examples-only"
+  }
+}

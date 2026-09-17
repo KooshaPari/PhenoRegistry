@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1177712269",
+  "name": "Dino",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "17119051e782b32615413049c1c3cd207f0b540e",
+  "sampled_commit_date_utc": "2026-09-12T10:07:56Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "The latest sampled default history contains dependency updates, not a newly evidenced in-game product qualification.",
+  "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+  "role": "DINOForge mod tooling and game integration",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "The worker may have game/desktop changes only locally.",
+    "A successful SDK or documentation build is not an installed pack demonstration."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1177712269-A1",
+      "title": "Bind the real integration target",
+      "work": "Return active worktree/task, supported game version, loader/bridge version and actual installable pack.",
+      "acceptance": "A current worker receipt and source-to-game artifact map.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1177712269",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1177712269-A2",
+      "title": "Complete one actual pack journey",
+      "work": "Create/load a useful pack, inspect real gameplay effects, handle conflict/reload/restart and disable/uninstall cleanly.",
+      "acceptance": "Recorded in-game behavior plus negative conflict and missing-asset tests.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1177712269",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1177712269-A3",
+      "title": "Compare authoring and reuse",
+      "work": "Implement the same small change using the ordinary supported modding path; reuse loader/asset/test facilities where they preserve behavior.",
+      "acceptance": "Measured authoring/debugging burden, compatibility and frame-time effects; no claims based on SDK line count.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1177712269",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Treat UnityDoorstop and other retained forks as pinned consumer dependencies, not disposable repos or locally copied code.",
+  "parent_acceptance": "A real pack is usable and safely maintainable in the supported game.",
+  "sources": [
+    {
+      "id": "CUR-1177712269-S01",
+      "url": "https://github.com/KooshaPari/Dino/commit/17119051e782b32615413049c1c3cd207f0b540e",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}
