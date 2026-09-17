@@ -1,0 +1,24 @@
+{
+  "kind": "decision",
+  "schema_version": "1.0.0",
+  "id": "DEC-NEXT",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "PATHJUDGE-SAME-SUBJECT",
+  "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+  "disposition": "REVISE_EVALUATOR",
+  "status": "PROPOSED",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "alternatives": [
+    "Keep the output filename requirement only if a real consumer depends on it",
+    "Correct the grader to validate the public behavior",
+    "Revise the public contract in a new epoch",
+    "Do not change the product"
+  ],
+  "rationale": "Preserve both epochs and classify the delta as evaluator correction, not implementation improvement.",
+  "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET",
+  "reversal_condition": "Stop repeated implementation retries when a valid witness falsifies the grader assumption.",
+  "execution_receipt_refs": []
+}

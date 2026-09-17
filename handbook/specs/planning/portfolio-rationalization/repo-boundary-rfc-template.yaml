@@ -1,0 +1,38 @@
+schema_version: '1.0'
+proposal:
+  repository_name: <name>
+  proposed_lifecycle: incubator
+  human_owner: <owner>
+  user: <target user>
+  job_to_be_done: <job>
+  primary_journey: <journey>
+  owned_contracts: []
+  non_goals: []
+  why_existing_repos_cannot_host_it: []
+  separate_repo_signals:
+    independent_release: false
+    distinct_security_boundary: false
+    distinct_runtime_failure_domain: false
+    multiple_independent_consumers: false
+    protocol_schema_authority: false
+    distinct_user_journey: false
+    independent_upstream_lineage: false
+    distinct_legal_license_boundary: false
+  expected_consumers: []
+  dependencies: []
+  security_deployment_release_boundary: <description>
+  upstream_and_provenance: []
+  hmvp:
+    journey: <smallest honest end-to-end slice>
+    verification: []
+    distribution: <install/release path>
+  promotion_target: <canonical role or target repo>
+  absorption_candidates: []
+  sunset_trigger: <falsifiable condition>
+  review_condition: <evidence/date/event>
+  expected_coordination_edges: []
+decision:
+  status: proposed
+  approved_by: null
+  approved_at: null
+  adr: null

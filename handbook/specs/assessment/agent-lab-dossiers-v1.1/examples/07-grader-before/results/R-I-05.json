@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-05",
+  "instance_id": "I-05",
+  "criterion_id": "PEP-06-02-09",
+  "assignment_id": "A-GRADER-BEFORE",
+  "epoch_id": "E-GRADER-BEFORE",
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c",
+  "assignment_digest": "sha256:632b79ea94d64025a0364e9c94d82f747747c22f163c5ac57b224bfc0b83664e",
+  "execution": "COMPLETED",
+  "verdict": "FAIL",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The evaluator scope silently adds a filename constraint absent from the consumer contract.",
+    "assertions_executed": null,
+    "modality": "DYNAMIC"
+  },
+  "supersedes": []
+}

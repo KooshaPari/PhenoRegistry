@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-12",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "PARCELKIT",
+  "instance_refs": [
+    "I-12"
+  ],
+  "class": "VERIFICATION_GAP",
+  "severity": "MEDIUM",
+  "claim": "In the fictional scenario: The only stated throughput number comes from a warm cache.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "TEST",
+  "status": "PROPOSED",
+  "wakeup_condition": "Collect a cold-cache run separately."
+}

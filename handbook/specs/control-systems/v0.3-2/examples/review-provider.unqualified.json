@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.3.0",
+  "provider_id": "example-provider",
+  "available": false,
+  "trigger_modes": [
+    "comment"
+  ],
+  "cash_spend_allowed": false,
+  "quota": {
+    "remaining": null,
+    "reset_at": null,
+    "confidence": "unknown"
+  },
+  "capabilities": [],
+  "credit_remaining": null,
+  "auto_refill": false
+}

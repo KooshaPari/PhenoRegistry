@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1226171396",
+  "name": "OmniRoute",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "863b427a0077fb6a8efe350412f510521389b833",
+  "sampled_commit_date_utc": "2026-09-16T08:34:53Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "PR745 is recorded as merged. The preceding refactor extracts 13 provider handlers from route.ts into handler modules; reported line reduction and lint success are not behavioral parity.",
+  "assessment": "RECENT_REFACTOR_CONSUMER_PARITY_OPEN",
+  "role": "Owned provider-routing fork",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Moving lines does not by itself reduce policy duplication or preserve provider edge cases.",
+    "Upstream submissions and own-fork qualification remain different queues."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1226171396-A1",
+      "title": "Verify handler dispatch parity",
+      "work": "Diff the extracted paths and run contract tests for all affected provider categories, auth modes, status codes, partial streams and cancellation.",
+      "acceptance": "Before/after behavior preserved on defined cases; no fallback converts errors into success.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1226171396",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1226171396-A2",
+      "title": "Run a realistic routing stress/fault workload",
+      "work": "Exercise quotas, credential scope, retries, timeouts and backpressure under actual concurrency with bounded provider usage.",
+      "acceptance": "Correct failover/accounting and tail-latency/resource results, with negative cases retained.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1226171396",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1226171396-A3",
+      "title": "Qualify actual deployed fork",
+      "work": "Identify the running source/build/config and update/rollback channel; reconcile upstream owned delta.",
+      "acceptance": "A real installation uses the tested handlers and honors consumer contract through deployment.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1226171396",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Coordinate provider policy and adapters with current shared packages and coding-client consumers; prevent new parallel provider catalogs.",
+  "parent_acceptance": "The owned router demonstrably handles the supported providers and failures through its actual deployed channel.",
+  "sources": [
+    {
+      "id": "CUR-1226171396-S01",
+      "url": "https://github.com/KooshaPari/OmniRoute/commit/863b427a0077fb6a8efe350412f510521389b833",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

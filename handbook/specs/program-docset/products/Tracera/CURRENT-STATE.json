@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1162254344",
+  "name": "Tracera",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "c5a6c52a3876aef6e561ca068a8c68546422f8b7",
+  "sampled_commit_date_utc": "2026-09-16T10:29:46Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent default history repairs invalid mixed uses/run workflow steps and revises the Vercel CLI invocation/pins.",
+  "assessment": "DELIVERY_REPAIR_PRODUCT_WITNESS_OPEN",
+  "role": "Persistent product/system model and dissatisfaction discovery",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "CI parsing and deployment tooling fixes are useful but are not the product-model witness.",
+    "The older ten-seat plan is now ten workstreams for this one owner, not ten mandatory chats.",
+    "ALM/delegation primitives do not replace the intended persistent explanatory product graph."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1162254344-A1",
+      "title": "Establish one current bounded product-model path",
+      "work": "Reuse the atlas/source records already available; identify actual import, entity/relationship persistence, bounded navigation and discrepancy paths.",
+      "acceptance": "A real repo/capability maps to source/requirements and a genuine discrepancy with correct evidence, not only sample JSON.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1162254344",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1162254344-A2",
+      "title": "Close durability and consistent interfaces",
+      "work": "Exercise update/reconcile, provenance, unsupported/unknown cases, restart and the same scoped model via UI/CLI/MCP/API.",
+      "acceptance": "State and identity survive restart; tool boundaries respect their actual owners; stale data is visible.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1162254344",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1162254344-A3",
+      "title": "Qualify real deployment and independent acceptance",
+      "work": "Repair current hosted errors within authorized scope, install/deploy the real frontend/backend, and compare the task with a competent manual/tool baseline.",
+      "acceptance": "Artifact/source/config/route evidence and independent negative oracles; no work-item dashboard substituted for the product.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1162254344",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Keep repo-local source and AgilePlus work authority explicit; ingest portable records, reuse graph/index infrastructure, improve consumers without forcing all projects to wait.",
+  "parent_acceptance": "An installed/hosted Tracera explains an actual product, finds a substantiated gap, and retains the model through change and restart.",
+  "sources": [
+    {
+      "id": "CUR-1162254344-S01",
+      "url": "https://github.com/KooshaPari/Tracera/commit/c5a6c52a3876aef6e561ca068a8c68546422f8b7",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

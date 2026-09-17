@@ -1,0 +1,2070 @@
+[
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1199812615",
+    "name": ".github",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "bcd1aac744881e1600573918973b7f9494de2153",
+    "sampled_commit_date_utc": "2026-09-16T08:51:20Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent history adds profile content, but the pinned root README still says long pause and ARCHIVED / RETIRED.",
+    "assessment": "SOURCE_CONFIRMED_INSTRUCTION_CONFLICT",
+    "role": "Account defaults and publication surface",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "A restored name is not permission to ignore the remaining paused source instruction.",
+      "The user account profile and an organization profile are different publication contexts; verify the effective destination."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1199812615-A1",
+        "title": "Resolve the live instruction contract",
+        "work": "Find the accepted restoration decision, map account-default files and profile destinations, and update only authorized contradictory pointers.",
+        "acceptance": "One role and allowed-action statement; actual user-profile/default-file consumers verified.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1199812615",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1199812615-A2",
+        "title": "Qualify reusable defaults",
+        "work": "Check links, issue templates, security contact, supported default files and inheritance on an unrelated subject without overwriting its own files.",
+        "acceptance": "Known-bad links/templates fail; intended consumers receive the expected defaults.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1199812615",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1199812615-A3",
+        "title": "Publish a truthful account surface",
+        "work": "Coordinate with KooshaPari and PhenoRegistry owners; retain a minimal publisher rather than another portfolio database.",
+        "acceptance": "Exact published source and links validated by the owning reviewer.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1199812615",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "KooshaPari owns its public profile/site; .github publishes appropriate reusable account defaults; PhenoRegistry supplies approved metadata.",
+    "parent_acceptance": "An actual consumer sees the intended defaults and the correct public profile, with no conflicting lifecycle instruction.",
+    "sources": [
+      {
+        "id": "CUR-1199812615-S01",
+        "url": "https://github.com/KooshaPari/.github/blob/bcd1aac744881e1600573918973b7f9494de2153/README.md",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1199812615-S02",
+        "url": "https://github.com/KooshaPari/.github/commit/bcd1aac744881e1600573918973b7f9494de2153",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1169608854",
+    "name": "AgilePlus",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "3cc0c145ae6e7290df26b3782c65521d5c2c8f0e",
+    "sampled_commit_date_utc": "2026-09-16T09:54:22Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent history adds handoffs, a REPL block-comment fix, v0.2.4 and cargo-dist build dependency/scoping changes. Pinned coverage workflow remains Python 85%, Rust 20%, Go report-only, with an echo-only aggregate claim.",
+    "assessment": "SOURCE_CONFIRMED_ASSURANCE_GAP",
+    "role": "Repository-scoped work/specification tooling",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Version bumps and precise CLI builds do not qualify desktop/MCP variants.",
+      "One owner chat now orchestrates all workstreams; a historical chat-split document is not a new allocation.",
+      "The workflow thresholds are configuration, not measured current code coverage."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1169608854-A1",
+        "title": "Repair the real assurance verdict",
+        "work": "Use separate supported-profile unit/integration/E2E reports, approved denominators, real artifact retrieval and explicit missing/below-floor failure. Reuse existing trusted coverage parsers rather than handrolling weak counters.",
+        "acceptance": "Injected missing, wrong-SHA and below-floor reports fail. Critical obligations are complete; accepted independent floors are actually enforced.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169608854",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1169608854-A2",
+        "title": "Qualify current command and state behavior",
+        "work": "Exercise REPL comments, interrupted commands, two unrelated subject repositories, state persistence, MCP transitions and materialized views with exact engine receipts.",
+        "acceptance": "CLI/MCP operate on the intended Git root; restart and negative authorization cases pass without cross-subject state.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169608854",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1169608854-A3",
+        "title": "Deliver the actual selected release",
+        "work": "Build/install the promised CLI and desktop profile outside the checkout; capture update/rollback and a useful work lifecycle.",
+        "acceptance": "Distributed artifact identity, clean install and actual end-to-end evidence; no unbuilt product surface certified by a CLI-only build.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169608854",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Use PhenoShared libraries and PhenoDocs rendering through explicit contracts. AgilePlus does not own portfolio-wide source data.",
+    "parent_acceptance": "A cleanly installed tool manages a real subject through an accepted work lifecycle, with trustworthy independent evidence.",
+    "sources": [
+      {
+        "id": "CUR-1169608854-S01",
+        "url": "https://github.com/KooshaPari/AgilePlus/blob/3cc0c145ae6e7290df26b3782c65521d5c2c8f0e/.github/workflows/coverage.yml",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1169608854-S02",
+        "url": "https://github.com/KooshaPari/AgilePlus/commit/920c7f31da11ca9d003bd0d8b3b0d75b215c6d1d",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1169608854-S03",
+        "url": "https://github.com/KooshaPari/AgilePlus/commit/310fd8983e18d44ecaccf5254b3a9ebb65c598dd",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "861430079",
+    "name": "BytePort",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "0b4a23b1196d1e25a1bcfb405d2a0f07e7c64fc7",
+    "sampled_commit_date_utc": "2026-09-16T00:35:18Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Two recent changes report removal of duplicate/conflicting global logger initialization in the Tauri application.",
+    "assessment": "RECENT_LAUNCH_REPAIR_UNQUALIFIED",
+    "role": "Git-to-service deployment product",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "A logger fix is useful but is not a measured clean launch or a deployment journey.",
+      "Trace/log semantics can change when one logging layer is removed."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-861430079-A1",
+        "title": "Verify native launch and logging",
+        "work": "Run the actual packaged app from a clean profile outside the repository in debug/release where supported; test single initialization and usable diagnostic output.",
+        "acceptance": "No initialization panic, no duplicated/missing required logs, no secret exposure.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "861430079",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-861430079-A2",
+        "title": "Close one deployment path",
+        "work": "Connect a real permitted repository, build, provision, observe health/logs, update and roll back on one supported target.",
+        "acceptance": "A real service responds; failed provisioning and failed updates leave known recoverable state.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "861430079",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-861430079-A3",
+        "title": "Exercise current shared dependencies",
+        "work": "Coordinate runtime/manifest packages with PhenoShared and test cache-isolated source resolution and actual consumer behavior.",
+        "acceptance": "No reliance on a deleted path, warm Cargo cache or adjacent developer checkout; contract-compatible migration evidence.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "861430079",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "BytePort owns the deployment experience, not a new copy of the runtime foundation. Runtime capabilities must be negotiated and verified.",
+    "parent_acceptance": "An installed client completes repository-to-service and recovery on a supported target.",
+    "sources": [
+      {
+        "id": "CUR-861430079-S01",
+        "url": "https://github.com/KooshaPari/BytePort/commit/0b4a23b1196d1e25a1bcfb405d2a0f07e7c64fc7",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-861430079-S02",
+        "url": "https://github.com/KooshaPari/BytePort/commit/c0aff200ef81b6d8914543b1e9f40ae9c001e8df",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1308570444",
+    "name": "CivicWarfare",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "f300fe92589995fe8a2a5cd984916cf59b7f94d4",
+    "sampled_commit_date_utc": "2026-09-12T07:46:39Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Sampled default history remains dependency updates in the CivicSurvival UI; no newer default-history product delivery was found in the bounded sample.",
+    "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+    "role": "Distributed game/mod product",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "No fresh default-branch source is not evidence that the open chat did nothing.",
+      "Intentionally private producer code is not automatically missing public source."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1308570444-A1",
+        "title": "Return actual work coordinates",
+        "work": "Report current branch/worktree, artifact, active task and any work outside this repository; reconcile public snapshot versus private producer responsibilities.",
+        "acceptance": "Exact worker receipt distinguishes local, published, integrated and installed state.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1308570444",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1308570444-A2",
+        "title": "Qualify the current distributed mod",
+        "work": "Install in the supported game and exercise onboarding, meaningful play, save/reload and disable/update behavior.",
+        "acceptance": "Actual game/version/profile evidence and retained failure recordings; no invented standalone app requirement.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1308570444",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1308570444-A3",
+        "title": "Verify release provenance and UX",
+        "work": "Connect producer/source identity to the downloadable package and capture honest player-facing visuals and instructions.",
+        "acceptance": "Public claims match the artifact; configuration and data ownership survive update/removal.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1308570444",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Share game-testing and media tooling through PhenoShared/PhenoDesign where appropriate; preserve game-specific semantics.",
+    "parent_acceptance": "A player can install, understand, play, preserve progress and remove/update the real mod.",
+    "sources": [
+      {
+        "id": "CUR-1308570444-S01",
+        "url": "https://github.com/KooshaPari/CivicWarfare/commit/f300fe92589995fe8a2a5cd984916cf59b7f94d4",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1164684442",
+    "name": "Civis",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "8650471500928f047370585d8fe5c43275b18aaf",
+    "sampled_commit_date_utc": "2026-09-16T09:35:26Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "New persistence changes cover riot/migrant accumulators, scenario taxation, era progression, emergence samples and significance. A new acceptance report for older 264359af explicitly records that the gameplay precheck failed before gameplay ran.",
+    "assessment": "SOURCE_CONFIRMED_BUILD_TARGET_GAP",
+    "role": "Persistent, game-first systemic sandbox",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Current game-e2e workflow selects --bin civ-standalone but later expects civ-server. Package selection does not select that second executable.",
+      "The report infers a cache race without establishing the artifact was emitted and recommends cargo clean --release after building. That would remove release outputs; do not follow it.",
+      "No captures plus passing library tests cannot justify near-100% visual polish.",
+      "Older evidence may remain useful, but changed persistence behavior needs a current impact-based rerun."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1164684442-A1",
+        "title": "Repair artifact selection, not by deleting artifacts",
+        "work": "Inspect cargo metadata, target/profile/environment configuration; explicitly build both required binaries and pass emitted paths from Cargo JSON or a validated artifact manifest into the harness. Do not clean between build and execution.",
+        "acceptance": "Both exact executables exist before launch; a missing target fails clearly; the actual harness advances past precheck. Native proof is still required.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1164684442",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1164684442-A2",
+        "title": "Run the real game witness",
+        "work": "Use the accepted required assets/audio/render profile; create a populated world, interact, save, quit, reopen and exercise restart/reconnect.",
+        "acceptance": "Authentic gameplay captures, assertions and failed attempts tied to current binaries; no missing-baseline or no-image success.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1164684442",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1164684442-A3",
+        "title": "Protect long-lived world semantics",
+        "work": "Check new populated fields and future state additions through save/reload and bounded unattended continuation; reconcile old global-determinism/product copy.",
+        "acceptance": "No silent state loss; selective reproducibility contracts retained; installed player and visual review qualify the same candidate.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1164684442",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Coordinate rendering/data contracts with PhenoShared and capture/asset owners without letting shared-library cleanup erase game semantics.",
+    "parent_acceptance": "A visually credible installed Civis game preserves and advances the same meaningful world through play, intervention and return.",
+    "sources": [
+      {
+        "id": "CUR-1164684442-S01",
+        "url": "https://github.com/KooshaPari/Civis/blob/8650471500928f047370585d8fe5c43275b18aaf/.github/workflows/game-e2e.yml",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1164684442-S02",
+        "url": "https://github.com/KooshaPari/Civis/blob/5d66e2bacd41e694591d0f8a8aea4a69518623e3/docs/reports/native-runtime-acceptance-264359af.md",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1164684442-S03",
+        "url": "https://github.com/KooshaPari/Civis/commit/8650471500928f047370585d8fe5c43275b18aaf",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1164684442-S04",
+        "url": "https://doc.rust-lang.org/cargo/commands/cargo-build.html",
+        "source_kind": "primary_reference",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1164684442-S05",
+        "url": "https://doc.rust-lang.org/cargo/commands/cargo-clean.html",
+        "source_kind": "primary_reference",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1177712269",
+    "name": "Dino",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "17119051e782b32615413049c1c3cd207f0b540e",
+    "sampled_commit_date_utc": "2026-09-12T10:07:56Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "The latest sampled default history contains dependency updates, not a newly evidenced in-game product qualification.",
+    "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+    "role": "DINOForge mod tooling and game integration",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "The worker may have game/desktop changes only locally.",
+      "A successful SDK or documentation build is not an installed pack demonstration."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1177712269-A1",
+        "title": "Bind the real integration target",
+        "work": "Return active worktree/task, supported game version, loader/bridge version and actual installable pack.",
+        "acceptance": "A current worker receipt and source-to-game artifact map.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1177712269",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1177712269-A2",
+        "title": "Complete one actual pack journey",
+        "work": "Create/load a useful pack, inspect real gameplay effects, handle conflict/reload/restart and disable/uninstall cleanly.",
+        "acceptance": "Recorded in-game behavior plus negative conflict and missing-asset tests.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1177712269",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1177712269-A3",
+        "title": "Compare authoring and reuse",
+        "work": "Implement the same small change using the ordinary supported modding path; reuse loader/asset/test facilities where they preserve behavior.",
+        "acceptance": "Measured authoring/debugging burden, compatibility and frame-time effects; no claims based on SDK line count.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1177712269",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Treat UnityDoorstop and other retained forks as pinned consumer dependencies, not disposable repos or locally copied code.",
+    "parent_acceptance": "A real pack is usable and safely maintainable in the supported game.",
+    "sources": [
+      {
+        "id": "CUR-1177712269-S01",
+        "url": "https://github.com/KooshaPari/Dino/commit/17119051e782b32615413049c1c3cd207f0b540e",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1165315873",
+    "name": "HeliosCLI",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "1615dcd44f76aea55fbd04912b27d20b3536319f",
+    "sampled_commit_date_utc": "2026-09-16T10:27:00Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent commits expand root Dependabot coverage and update a Mergify configuration field.",
+    "assessment": "RECENT_MAINTENANCE_PRODUCT_PROOF_OPEN",
+    "role": "Codex-derived coding client and harness",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "The inherited atlas flags a root workspace versus real vendored agent executable distinction. Revalidate rather than assuming fixed or broken."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1165315873-A1",
+        "title": "Identify the shipped binary",
+        "work": "Map real executable/build root and owned upstream delta; compare the installed version with the claimed candidate.",
+        "acceptance": "A clean install launches the intended fork, not a harness-only package or upstream binary.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165315873",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1165315873-A2",
+        "title": "Complete a controlled coding task",
+        "work": "Read permitted source, change one feature, run meaningful tests, deny prohibited writes, interrupt and resume.",
+        "acceptance": "Task outcome and side effects are correct; source/profile/artifact and failure receipts attached.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165315873",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1165315873-A3",
+        "title": "Close update and upstream contracts",
+        "work": "Update the fork from a supported installed version and test preserved sessions/settings and rollback; compare with upstream on the same task.",
+        "acceptance": "Upgrade does not overwrite unrelated data; owned value is separated from inherited features.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165315873",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Reuse core contracts and utilities from actual authoritative owners; do not duplicate provider/session policy across the coding-client family.",
+    "parent_acceptance": "A real installed coding agent completes and recovers a useful task through its owned distribution channel.",
+    "sources": [
+      {
+        "id": "CUR-1165315873-S01",
+        "url": "https://github.com/KooshaPari/HeliosCLI/commit/1615dcd44f76aea55fbd04912b27d20b3536319f",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1167587447",
+    "name": "HeliosLab",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "863830bc5ac49348b27f0ed9e1372223cb166356",
+    "sampled_commit_date_utc": "2026-09-16T10:17:51Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent TypeScript configuration changes report reducing diagnostics from 3187 to about 287 by explicit include/exclude and aliases. Earlier formatting used Biome unsafe fixes across many files.",
+    "assessment": "SCOPE_CHANGE_REQUIRES_QUALIFICATION",
+    "role": "Workbench/configuration composite with contract reconciliation",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Reported diagnostic counts are not measured by this audit.",
+      "Excluding irrelevant generated/vendor files can be correct; supported tests and application code need another real checker, not disappearance from the denominator.",
+      "Unsafe autofix semantics and actual product/build root require targeted regression checks."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1167587447-A1",
+        "title": "Inventory all effective compiler profiles",
+        "work": "Map each supported package, app, test and generated segment to the intended type/lint/build job; document precise exclusions.",
+        "acceptance": "No supported code disappears without another checker or an accepted reason; known bad inputs fail.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1167587447",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1167587447-A2",
+        "title": "Close scoped remaining errors and actual UX",
+        "work": "Reproduce the current diagnostics, fix real code defects without relaxing contracts, and exercise the accepted workbench/config workflow.",
+        "acceptance": "Clean selected build and a real persisted useful task; no percentage derived from excluded files.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1167587447",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1167587447-A3",
+        "title": "Qualify cross-product configuration contracts",
+        "work": "Compare local custom configuration and session facilities with existing owned or mature components; test secrets and updates.",
+        "acceptance": "Dependencies resolve from a clean environment, secrets stay private, consumers retain semantics and the install works.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1167587447",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Clarify the owning product boundary with HeliosCLI/HeliosLite/KCode and PhenoShared; one product name must not mask unrelated implementation.",
+    "parent_acceptance": "The accepted actual product builds, installs and performs its named user job with correct configuration/state handling.",
+    "sources": [
+      {
+        "id": "CUR-1167587447-S01",
+        "url": "https://github.com/KooshaPari/HeliosLab/commit/863830bc5ac49348b27f0ed9e1372223cb166356",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1226104769",
+    "name": "HeliosLite",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "6de2d161d8a44f0b65ef7fbd243f2a287257aecc",
+    "sampled_commit_date_utc": "2026-09-15T09:12:42Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Sampled head is unchanged from the prior baseline. Recent recorded work contains share/LSP shell E2E and author-reported local passes plus named inherited CI failures.",
+    "assessment": "NO_NEW_DEFAULT_HEAD_LOCAL_UNKNOWN",
+    "role": "Connection-stable coding-agent CLI fork",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "A quiet default branch does not prove the chat is idle.",
+      "Inherited repository blockers remain parent obligations, not a reason to end after a narrow PR."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1226104769-A1",
+        "title": "Reconcile current work and gate ownership",
+        "work": "Return active branch/artifact and classify actual current-head required failures; preserve already merged promotion work.",
+        "acceptance": "Exact blocker IDs, owners and wakeup conditions; no replay of completed work.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226104769",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1226104769-A2",
+        "title": "Prove resilient installed execution",
+        "work": "Run matched coding tasks with stream interruption, tool error, child failure, restart and session recovery.",
+        "acceptance": "No duplicate mutation, lost answer or incorrect workspace access; actual output and retry histories retained.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226104769",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1226104769-A3",
+        "title": "Deliver and compare the owned binary",
+        "work": "Verify Mac/Windows channels as applicable, update/rollback and upstream identity; compare current fork with KCode/upstream on the same failures.",
+        "acceptance": "Installed and tested artifact are identical; continuity advantage is measured rather than asserted.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226104769",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Align shared session/tool contracts with peer harness owners without copying their implementations into this fork.",
+    "parent_acceptance": "A trustworthy installed fork survives the supported long-running workflow and failure modes.",
+    "sources": [
+      {
+        "id": "CUR-1226104769-S01",
+        "url": "https://github.com/KooshaPari/HeliosLite/commit/6de2d161d8a44f0b65ef7fbd243f2a287257aecc",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1365855438",
+    "name": "KCode",
+    "default_branch": "master",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "88a996e030c203e776b31ca61720d09b362d787a",
+    "sampled_commit_date_utc": "2026-09-15T23:00:41Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Latest work adds HERDR idle debounce, retry-grace/error-hold and overrides; the preceding handoff reports 258/266 passing tests.",
+    "assessment": "REPORTED_PARTIAL_TEST_RESULT",
+    "role": "Rust coding harness fork",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "258/266 passing is not a passing mandatory suite; actual failed/skipped cases need classification.",
+      "A debounced dashboard state must not conceal failed or abandoned side effects."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1365855438-A1",
+        "title": "Reconcile reported failures and installed fork",
+        "work": "Locate actual failing cases, environment and source identity; distinguish reporting state from the real process/tool state.",
+        "acceptance": "All mandatory failures have reproduced repair or explicit approved exception; no percentage-based pass.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1365855438",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1365855438-A2",
+        "title": "Exercise restart and duplicate-event safety",
+        "work": "Force stream failures, child restarts, duplicate notifications and termination around sensitive tool calls.",
+        "acceptance": "State recovers honestly; side effects are not duplicated; destructive operations remain separately authorized.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1365855438",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1365855438-A3",
+        "title": "Qualify release and peer comparison",
+        "work": "Install owned binaries on actual target systems, test updates, memory use and a matched upstream/HeliosLite task.",
+        "acceptance": "Clean launch, recovery and measured resource claims on the distributed artifact, not only a source build.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1365855438",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Treat upstream patches and shared telemetry/session adapters as reusable contracts; preserve fork attribution and small owned delta.",
+    "parent_acceptance": "A safe current installed harness sustains useful execution and honest reporting through interruptions.",
+    "sources": [
+      {
+        "id": "CUR-1365855438-S01",
+        "url": "https://github.com/KooshaPari/KCode/commit/88a996e030c203e776b31ca61720d09b362d787a",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1322607630",
+    "name": "Khostty",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "79e27b63f96669b26f1346a1b9985c327311bd6e",
+    "sampled_commit_date_utc": "2026-09-15T04:39:50Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "The bounded latest default history is README/badge changes. No new terminal implementation is demonstrated by that sample.",
+    "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+    "role": "Native terminal fork or embedding dependency",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Retain current work instead of assuming the lack of a push means no activity."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1322607630-A1",
+        "title": "Identify owned delta and distribution",
+        "work": "Return exact worktree/source base, local patches, intended role (standalone/embedded) and installed build.",
+        "acceptance": "Clear upstream/owned feature and compatibility map.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1322607630",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1322607630-A2",
+        "title": "Run the terminal correctness corpus",
+        "work": "Exercise Unicode, input/IME, resize, alternate-screen, paste, shell integration and high-volume output using real native UI.",
+        "acceptance": "No regressions against upstream on mandatory terminal semantics; native captures and diagnostics.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1322607630",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1322607630-A3",
+        "title": "Prove the actual differentiated use",
+        "work": "Qualify the embedding/integration or workflow the fork exists for, including lifecycle and updates.",
+        "acceptance": "A useful owned outcome with reproducible performance and safe update behavior.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1322607630",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Keep terminal protocol semantics authoritative; use narrow integration adapters rather than duplicating native renderer/editor stacks.",
+    "parent_acceptance": "The intended terminal or embedded terminal is usable and maintains the required semantics of its upstream.",
+    "sources": [
+      {
+        "id": "CUR-1322607630-S01",
+        "url": "https://github.com/KooshaPari/Khostty/commit/79e27b63f96669b26f1346a1b9985c327311bd6e",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1349458262",
+    "name": "KooshaPari",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "9ac2bdb938453e67858e451867613224365ea85b",
+    "sampled_commit_date_utc": "2026-09-15T08:51:22Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Latest sampled commit absorbs an incubating site/project; no current production-domain verification was performed here.",
+    "assessment": "PUBLICATION_PROOF_OPEN",
+    "role": "Public portfolio and landing consumer",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "A merged website is not verified routing or accurate product readiness.",
+      "Do not expose private source captures or internal worker receipts on public pages."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1349458262-A1",
+        "title": "Reconcile site and profile ownership",
+        "work": "Map actual profile README, landing/build roots, public subjects and approved source records; coordinate .github/registry without duplicating authority.",
+        "acceptance": "One truthful publication inventory with private/public separation.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1349458262",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1349458262-A2",
+        "title": "Build and deploy the actual surface",
+        "work": "Verify the existing authorized Vercel/Pages/domain setup, relative paths, deep links, search and static assets for selected routes.",
+        "acceptance": "Current source-to-artifact-to-route receipt and rollback; no inferred DNS changes.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1349458262",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1349458262-A3",
+        "title": "Publish actual product proof",
+        "work": "Use authentic tested packages, screenshots/VHS and compatibility notes; label concepts/fixtures.",
+        "acceptance": "An unfamiliar user can discover, install and assess an actual product without misleading links or claims.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1349458262",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Use PhenoDocs as renderer and PhenoDesign sources as assets; neither stores portfolio state by hardcoding the tool.",
+    "parent_acceptance": "Public portfolio accurately exposes usable products and correctly scoped documentation/download destinations.",
+    "sources": [
+      {
+        "id": "CUR-1349458262-S01",
+        "url": "https://github.com/KooshaPari/KooshaPari/commit/9ac2bdb938453e67858e451867613224365ea85b",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1262466303",
+    "name": "Melosviz",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "edbbd40016680bc430d26fb0d4a2a73999cd8ba5",
+    "sampled_commit_date_utc": "2026-09-16T10:01:17Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "New director/storyboard tests accompany an offline pipeline that creates solid-colour placeholder MP4 clips via FFmpeg, then assembles/masters/ships them. The source explicitly labels the generation as placeholder.",
+    "assessment": "PIPELINE_REHEARSAL_NOT_PRODUCT_PROOF",
+    "role": "Music visualization and authored media product",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "The offline smoke is useful integration rehearsal, not proof of visual quality or a functioning live creative backend.",
+      "On placeholder generation failure the adapter can return workflow JSON; downstream contracts must distinguish metadata from playable media.",
+      "Reported 13/13 E2E results were not rerun here."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1262466303-A1",
+        "title": "Type and label backend outcomes",
+        "work": "Separate live render, placeholder, job-spec-only, unavailable and failed outputs; ensure release/product acceptance cannot silently consume fixture output as production.",
+        "acceptance": "Known absent backend, failed render and malformed/zero-duration media are rejected or explicitly blocked; rehearsal stays runnable.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1262466303",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1262466303-A2",
+        "title": "Run real creative output",
+        "work": "Import an actual licensed audio track, use the intended available renderer, edit the scene/preset, export and inspect audio/video synchronization and content.",
+        "acceptance": "Real output reviewed, not only a ZIP/nonempty file; actual run parameters and derivatives are traceable.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1262466303",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1262466303-A3",
+        "title": "Qualify installation and comparison",
+        "work": "Run outside the repo, reopen projects and recover interrupted rendering; compare time-to-useful-output with a suitable established workflow.",
+        "acceptance": "Repeatable actual creative result plus qualitative and resource measurements; no inflated completion from fixture success.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1262466303",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Reuse FFmpeg/Blender/available licensed tools and shared design/capture contracts; do not handroll codecs or copy fake-success adapters.",
+    "parent_acceptance": "The installed product produces and edits a real useful synchronized visualization, with honest backend modes.",
+    "sources": [
+      {
+        "id": "CUR-1262466303-S01",
+        "url": "https://github.com/KooshaPari/Melosviz/commit/31f19056f429718c6e8303e4fd0c64ca56e5374a",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1262466303-S02",
+        "url": "https://github.com/KooshaPari/Melosviz/commit/edbbd40016680bc430d26fb0d4a2a73999cd8ba5",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1226171396",
+    "name": "OmniRoute",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "863b427a0077fb6a8efe350412f510521389b833",
+    "sampled_commit_date_utc": "2026-09-16T08:34:53Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "PR745 is recorded as merged. The preceding refactor extracts 13 provider handlers from route.ts into handler modules; reported line reduction and lint success are not behavioral parity.",
+    "assessment": "RECENT_REFACTOR_CONSUMER_PARITY_OPEN",
+    "role": "Owned provider-routing fork",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Moving lines does not by itself reduce policy duplication or preserve provider edge cases.",
+      "Upstream submissions and own-fork qualification remain different queues."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1226171396-A1",
+        "title": "Verify handler dispatch parity",
+        "work": "Diff the extracted paths and run contract tests for all affected provider categories, auth modes, status codes, partial streams and cancellation.",
+        "acceptance": "Before/after behavior preserved on defined cases; no fallback converts errors into success.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226171396",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1226171396-A2",
+        "title": "Run a realistic routing stress/fault workload",
+        "work": "Exercise quotas, credential scope, retries, timeouts and backpressure under actual concurrency with bounded provider usage.",
+        "acceptance": "Correct failover/accounting and tail-latency/resource results, with negative cases retained.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226171396",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1226171396-A3",
+        "title": "Qualify actual deployed fork",
+        "work": "Identify the running source/build/config and update/rollback channel; reconcile upstream owned delta.",
+        "acceptance": "A real installation uses the tested handlers and honors consumer contract through deployment.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1226171396",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Coordinate provider policy and adapters with current shared packages and coding-client consumers; prevent new parallel provider catalogs.",
+    "parent_acceptance": "The owned router demonstrably handles the supported providers and failures through its actual deployed channel.",
+    "sources": [
+      {
+        "id": "CUR-1226171396-S01",
+        "url": "https://github.com/KooshaPari/OmniRoute/commit/863b427a0077fb6a8efe350412f510521389b833",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1272990345",
+    "name": "PhenoApps",
+    "default_branch": "apps-extract",
+    "visibility": "private",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "be4194594f35604782c8456de2057d98f3df66bb",
+    "sampled_commit_date_utc": "2026-09-15T23:07:09Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Default branch is apps-extract, not main. Recent sampled commits absorb NetWeave; collection-level capability and release completeness were not established.",
+    "assessment": "COLLECTION_INTEGRATION_OPEN",
+    "role": "Application collection with distinct product contracts",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Shared repository does not make Localbase, fitness, focus and other apps one runtime or one release.",
+      "Use current apps-extract source; do not audit an assumed main branch.",
+      "Future planned donors are not automatically authorized migrations."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1272990345-A1",
+        "title": "Build the per-application atlas",
+        "work": "Inventory each app entrypoint, domain, manifest, data/secret ownership, packaging and consumer; distinguish recovered snapshots from integrated runnable apps.",
+        "acceptance": "Every material app has a disposition, active source, missing-obligation record and exact owner; unknown is not discarded.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1272990345",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1272990345-A2",
+        "title": "Complete one runnable app without blocking the collection",
+        "work": "Select the nearest accepted useful application and qualify install/onboarding/state/recovery. Keep unrelated applications independently buildable.",
+        "acceptance": "Real role-specific CVP and clean isolated build; no collection-wide completeness claim.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1272990345",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1272990345-A3",
+        "title": "Refine shared boundaries with PhenoShared",
+        "work": "Move only approved stable shared capabilities through contract-tested adapters; preserve each application semantics and private data.",
+        "acceptance": "Consumer acceptance and provenance retained; no speculative framework or global version lockstep.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1272990345",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "PhenoApps owns app-specific jobs; PhenoShared owns only accepted reusable capabilities. Donor movement requires a separate accepted record.",
+    "parent_acceptance": "Each selected application becomes independently understandable, buildable and usable while collection custody remains intact.",
+    "sources": [
+      {
+        "id": "CUR-1272990345-S01",
+        "url": "https://github.com/KooshaPari/PhenoApps/commit/be4194594f35604782c8456de2057d98f3df66bb",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1169864396",
+    "name": "PhenoDesign",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "d11733b1525cb97e045dc7f8d67a05df5501f6c1",
+    "sampled_commit_date_utc": "2026-09-09T07:55:14Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Sampled default history remains workflow formatting/security fixes. Other products mention design-v3 guidance, but its actual editable asset/source location was not validated here.",
+    "assessment": "CURRENT_ASSET_SOURCE_UNRESOLVED",
+    "role": "Design system, editable assets and shared experience contracts",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "No source movement here does not imply no local creative work.",
+      "Do not regenerate the brand or replace superior existing source solely because this checkout appears stale."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1169864396-A1",
+        "title": "Locate actual source and consumers",
+        "work": "Reconcile local/branch asset work, tokens, components, design guidance and consumed package versions.",
+        "acceptance": "One source/export/consumer map with licenses, privacy and revision identity.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169864396",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1169864396-A2",
+        "title": "Qualify one real cross-product design change",
+        "work": "Apply a bounded shared token/component/asset improvement through actual exports to a native/web product and its docs/landing.",
+        "acceptance": "No accessibility, text contrast, performance or required theme regression; editable sources retained.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169864396",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1169864396-A3",
+        "title": "Produce honest product media",
+        "work": "Use real installed-app screenshots or VHS for proof; separately author 2D/2.5D/3D branding and motion with static/reduced-motion fallbacks.",
+        "acceptance": "Evidence and concept assets clearly separated; export recipe, alt text, source rights and resource budgets recorded.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1169864396",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Optimize shared visual consistency and adoption cost without forcing every app to import one heavyweight renderer or UI framework.",
+    "parent_acceptance": "Real products consume versioned editable design assets/components, with accessible, performant and truthful exports.",
+    "sources": [
+      {
+        "id": "CUR-1169864396-S01",
+        "url": "https://github.com/KooshaPari/PhenoDesign/commit/d11733b1525cb97e045dc7f8d67a05df5501f6c1",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1363521465",
+    "name": "PhenoFabric",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "3c052cc28d80b5dcc0170e56c7364311373390de",
+    "sampled_commit_date_utc": "2026-09-16T05:27:34Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent commits replace bespoke/demo login UI with hosted AuthKit integration and desktop authentication commands. Actual successful authentication and two-node I/O were not executed here.",
+    "assessment": "UI_AUTH_INTEGRATION_PRODUCT_PATH_OPEN",
+    "role": "Distributed compute/data/surface/I-O fabric",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Adopting hosted authentication is a reuse decision, not completion of local/LAN/WAN routing.",
+      "Preserve accepted offline/local trust behavior and supported native callback/token lifecycle.",
+      "Do not copy credential values into shared handoffs."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1363521465-A1",
+        "title": "Qualify the actual authentication contract",
+        "work": "Test success, denial, cancellation, expired session, unavailable network and native callback; compare expected local/offline behavior with accepted policy.",
+        "acceptance": "No demo success, credential leak or irrecoverable login loop; actual scoped user state.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1363521465",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1363521465-A2",
+        "title": "Prove one real two-node path",
+        "work": "Use genuine producer/consumer endpoints and negotiated capabilities with cancellation, disconnect/reconnect and correct focus/input/output ownership.",
+        "acceptance": "End-to-end transport and effects observed; no graph-only fixture stands in for working devices.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1363521465",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1363521465-A3",
+        "title": "Demonstrate locality and contention behavior",
+        "work": "Choose shared-memory/local transport where supported and qualified network adapters otherwise; measure tail latency, quality and foreground impact.",
+        "acceptance": "No hidden copies/queues or unsupported capability passes; actual Mac/PC workflow proof and dependency contracts.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1363521465",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "PhenoShared can host reusable libraries; PhenoFabric remains responsible for the full product behavior. Shared-source changes require consumer tests on both sides.",
+    "parent_acceptance": "The installed fabric completes a real multi-device workflow with safe state, recovery and measured performance.",
+    "sources": [
+      {
+        "id": "CUR-1363521465-S01",
+        "url": "https://github.com/KooshaPari/PhenoFabric/commit/3c052cc28d80b5dcc0170e56c7364311373390de",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1269695199",
+    "name": "PhenoLab",
+    "default_branch": "main",
+    "visibility": "private",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "47758a1010adb89629cdf8e2827c795b0158e0f0",
+    "sampled_commit_date_utc": "2026-09-12T06:14:58Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Latest sampled default history still records serving/configuration and evaluation integration work from Sep12.",
+    "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+    "role": "Evaluation research consumer and reproducibility lab",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Native model/service state and current local runs are not visible from this history.",
+      "A skipped required oracle cannot qualify a capability."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1269695199-A1",
+        "title": "Return the actual experiment/run identity",
+        "work": "Resolve branch, dataset/model/config/environment, execution location and saved outputs.",
+        "acceptance": "Exact native-run or explicit not-run status; no status inferred from suite inventory.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1269695199",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1269695199-A2",
+        "title": "Run positive and known-negative benchmark cases",
+        "work": "Use a small representative workload with real runner, tool/environment limits and independently specified expected behavior.",
+        "acceptance": "Bad candidate fails; infra failure remains separate; costs/logs/seeds/configuration preserved.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1269695199",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1269695199-A3",
+        "title": "Reconcile shared extraction and reproducibility",
+        "work": "Coordinate reused runner/library code with Portage and PhenoShared; retain lab-specific scenario ownership and real data provenance.",
+        "acceptance": "Another isolated environment can reproduce the bounded experiment without hidden workstation dependencies.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1269695199",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Do not duplicate a benchmark engine already supported by Portage or established tooling. Preserve experiment semantics and scorer validity.",
+    "parent_acceptance": "A useful independently interpretable benchmark bundle is reproducible; no fake desktop app is required.",
+    "sources": [
+      {
+        "id": "CUR-1269695199-S01",
+        "url": "https://github.com/KooshaPari/PhenoLab/commit/47758a1010adb89629cdf8e2827c795b0158e0f0",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1201113097",
+    "name": "PhenoRegistry",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "8502db07c1692fba78dd221154322938532f5bd0",
+    "sampled_commit_date_utc": "2026-09-15T20:04:40Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "The current default history contains a handbook absorption. New PhenoShared work integrates registry implementation crates while this repository remains listed and owned.",
+    "assessment": "AUTHORITY_AND_IMPLEMENTATION_SPLIT_OPEN",
+    "role": "Curated identity, role and portfolio projections",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Implementation crates moving does not automatically move accepted policy, source intent or all durable state.",
+      "A long squash message includes historical changes; do not count them all as fresh delivery."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1201113097-A1",
+        "title": "Resolve field-level authority",
+        "work": "Map live GitHub facts, accepted identities/roles, source docs, mutable work and generated views. Record what PhenoShared moved and what stays authoritative here.",
+        "acceptance": "One writer/owner per governed field; no duplicate registry inferred from package names.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1201113097",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1201113097-A2",
+        "title": "Refresh the actual non-zz dispatch map",
+        "work": "Bind stable repository IDs, current names/default branches and one user-reported owner chat; record missing/unavailable separately from deleted.",
+        "acceptance": "Every current subject maps to one current folder and receipt; a rename preserves identity.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1201113097",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1201113097-A3",
+        "title": "Make projections truthful and reproducible",
+        "work": "Generate topical views and public metadata from approved records; detect source contradictions and validate links/private-data boundaries.",
+        "acceptance": "Known stale/conflicting records are surfaced; no invented approval or completion percentage.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1201113097",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Coordinate with .github and KooshaPari publication and PhenoShared runtime libraries; do not absorb tool-specific state into a universal database.",
+    "parent_acceptance": "The portfolio map is current, noncontradictory and evidence-qualified while each underlying authority remains explicit.",
+    "sources": [
+      {
+        "id": "CUR-1201113097-S01",
+        "url": "https://github.com/KooshaPari/PhenoRegistry/commit/8502db07c1692fba78dd221154322938532f5bd0",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1200273587",
+    "name": "PhenoShared",
+    "default_branch": "main",
+    "visibility": "private",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "345c602d789649a008c003fd19d0773c7cd8f846",
+    "sampled_commit_date_utc": "2026-09-16T10:17:42Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "The source diff adds two registry workspace members and makes phenotype-health a local dependency. Its handoff reports 81 members/310 crate directories, an excluded broken Python crate, and remaining external PhenoInfra references.",
+    "assessment": "SOURCE_CONFIRMED_INTEGRATION_GAPS",
+    "role": "Pooled reusable foundation and accepted package home",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "The 81-member cargo-check result is author-reported, not native verification here. Directory count and member count are not comparable completeness measures.",
+      "The handoff calls the excluded Python crate harmless and strikes off repair without consumer/contract evidence. Excluded from compilation is not accepted disposition.",
+      "Stable repository ID1200273587 came from Pheno/pheno, while the handoff says formerly PhenoAI; distinguish rename from absorbed-source lineage.",
+      "Some dependencies still reference donor Git sources even where local copies reportedly exist.",
+      "The handoff claims absorbed PhenoFabric, PhenoLab and PhenoRegistry content while those retain their own chats; decide library versus product ownership per capability."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1200273587-A1",
+        "title": "Reconcile source identity and package inventory",
+        "work": "Index all languages/build systems, members, excluded packages and recovered copies. Assign retained/integrated/fixture/archive/unsupported status and source lineage by repository ID.",
+        "acceptance": "No file-presence or compilation-only absorption verdict; each retained public capability has a real owner/consumer/profile.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1200273587",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1200273587-A2",
+        "title": "Close one donor-to-consumer dependency slice",
+        "work": "Select a registry or runtime capability, establish authoritative API/source, resolve equivalent local/upstream dependency identity, and test a clean real consumer.",
+        "acceptance": "Cache-isolated fetch/build plus semantic and failure tests; excluded Python contract explicitly restored, deprecated by approval or blocked.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1200273587",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1200273587-A3",
+        "title": "Establish package-level release and reuse discipline",
+        "work": "Build/publish only authorized independent packages with bounded dependency cones. Qualify actual consumers, updates and rollback; adapt trusted tools rather than copying weak implementations.",
+        "acceptance": "Current/future-consumer impact record, compatibility evidence, no lockstep all-workspace dependency, no unrelated repo mutation.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1200273587",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "One PhenoShared chat owns integration, not every product. Coordinate PhenoFabric/PhenoLab/Registry/ShareCLI owners for source/consumer contracts; keep app-specific behavior outside generic foundations.",
+    "parent_acceptance": "A bounded reusable capability can be installed and used by its actual consumers from a clean environment, with precise provenance and safe change semantics.",
+    "sources": [
+      {
+        "id": "CUR-1200273587-S01",
+        "url": "https://github.com/KooshaPari/PhenoShared/commit/345c602d789649a008c003fd19d0773c7cd8f846",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1200273587-S02",
+        "url": "https://github.com/KooshaPari/PhenoShared/blob/345c602d789649a008c003fd19d0773c7cd8f846/docs/dossiers/HANDOFF-PHENOSHARED.md",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1165351720",
+    "name": "Portage",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "7204235dbbe81317c61ae5d2b994d671a63523f4",
+    "sampled_commit_date_utc": "2026-09-16T08:13:39Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent history merges an upstream-sync branch and commits upstream-synced evaluation result timestamps.",
+    "assessment": "UPSTREAM_SYNC_NOT_NEW_EVALUATION_PROOF",
+    "role": "Evaluation runner fork",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Imported or updated timestamps are not receipts of newly executed owned evaluations.",
+      "A successful merge does not establish fork-specific adapter and scorer behavior."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1165351720-A1",
+        "title": "Reconcile exact owned upstream delta",
+        "work": "Record upstream source/revision, local patches, imported results and current build.",
+        "acceptance": "Each result has producer/source provenance; imported evidence is not represented as a new local run.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165351720",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1165351720-A2",
+        "title": "Run matched positive/negative tasks",
+        "work": "Use identical real tasks on the owned fork and upstream; inject timeout, missing tool, incorrect answer and cleanup interruption.",
+        "acceptance": "Trustworthy result classification and retained artifacts; no required oracle silently skipped.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165351720",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1165351720-A3",
+        "title": "Qualify install and shared consumers",
+        "work": "Install the fork cleanly; exercise PhenoLab/current consumer interfaces, cancellation, storage/cleanup and resource limits.",
+        "acceptance": "Consumer contract remains compatible after upstream sync with measured benefit or justified patch value.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1165351720",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Portage owns runner behavior, PhenoLab owns experiments, shared adapters belong only in the accepted authoritative package home.",
+    "parent_acceptance": "The actual fork executes, scores and preserves a bounded evaluation faithfully and reproducibly.",
+    "sources": [
+      {
+        "id": "CUR-1165351720-S01",
+        "url": "https://github.com/KooshaPari/Portage/commit/7204235dbbe81317c61ae5d2b994d671a63523f4",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1191459198",
+    "name": "ShareCLI",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "19cdb88da5e79f0b06953499d51444016c07e8d2",
+    "sampled_commit_date_utc": "2026-09-16T10:03:02Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "PR858 is merged: API metadata reports 141 changed files, 15 additions and 29,625 deletions. Commit prose describes unrelated/unused module removal and removal of a util command. The PR description has older smaller counts.",
+    "assessment": "MERGED_COMPRESSION_PARITY_NOT_ESTABLISHED",
+    "role": "Process/resource supervision and workload orchestration",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "Compilation plus absent internal references does not prove public library/CLI consumers never used a removed surface.",
+      "Do not undo useful cleanup wholesale; classify accepted current, explicitly future, duplicate, public, fixture and obsolete semantics.",
+      "Latest dependencies move to a newer Substrate revision; current source availability and new canonical owners require verification."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1191459198-A1",
+        "title": "Qualify removed public and internal surfaces",
+        "work": "Use the exact final PR diff and before/after exported API/CLI inventory; identify consumer references and approved retirement/compatibility decisions.",
+        "acceptance": "No required behavior silently removed; replaced/moved capability has qualified successor and migration evidence.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1191459198",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1191459198-A2",
+        "title": "Prove the real supervisor under contention",
+        "work": "Run dissimilar/similar tasks, cancellation, retries, crash cleanup and credential/cache isolation while protecting foreground audio/game use.",
+        "acceptance": "Semantic equivalence and relevant latency/resource benefits survive cleanup; honest independent assurance reports.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1191459198",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1191459198-A3",
+        "title": "Resolve reusable ownership and ship",
+        "work": "Coordinate mirrored/copied packages and Substrate dependencies with PhenoShared, then install/update the current CLI/tray outside source.",
+        "acceptance": "One authoritative writer or explicit sync contract; real consumer tests and distributed-artifact identity.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1191459198",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Prefer a shared improvement or mature dependency over reintroducing utility modules. Do not improve local LOC by forcing every consumer to fork replacements.",
+    "parent_acceptance": "A leaner installed supervisor preserves necessary semantics and reduces actual ecosystem maintenance and contention.",
+    "sources": [
+      {
+        "id": "CUR-1191459198-S01",
+        "url": "https://github.com/KooshaPari/ShareCLI/pull/858",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      },
+      {
+        "id": "CUR-1191459198-S02",
+        "url": "https://github.com/KooshaPari/ShareCLI/commit/19cdb88da5e79f0b06953499d51444016c07e8d2",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1162254344",
+    "name": "Tracera",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "c5a6c52a3876aef6e561ca068a8c68546422f8b7",
+    "sampled_commit_date_utc": "2026-09-16T10:29:46Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Recent default history repairs invalid mixed uses/run workflow steps and revises the Vercel CLI invocation/pins.",
+    "assessment": "DELIVERY_REPAIR_PRODUCT_WITNESS_OPEN",
+    "role": "Persistent product/system model and dissatisfaction discovery",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "CI parsing and deployment tooling fixes are useful but are not the product-model witness.",
+      "The older ten-seat plan is now ten workstreams for this one owner, not ten mandatory chats.",
+      "ALM/delegation primitives do not replace the intended persistent explanatory product graph."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1162254344-A1",
+        "title": "Establish one current bounded product-model path",
+        "work": "Reuse the atlas/source records already available; identify actual import, entity/relationship persistence, bounded navigation and discrepancy paths.",
+        "acceptance": "A real repo/capability maps to source/requirements and a genuine discrepancy with correct evidence, not only sample JSON.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1162254344",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1162254344-A2",
+        "title": "Close durability and consistent interfaces",
+        "work": "Exercise update/reconcile, provenance, unsupported/unknown cases, restart and the same scoped model via UI/CLI/MCP/API.",
+        "acceptance": "State and identity survive restart; tool boundaries respect their actual owners; stale data is visible.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1162254344",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1162254344-A3",
+        "title": "Qualify real deployment and independent acceptance",
+        "work": "Repair current hosted errors within authorized scope, install/deploy the real frontend/backend, and compare the task with a competent manual/tool baseline.",
+        "acceptance": "Artifact/source/config/route evidence and independent negative oracles; no work-item dashboard substituted for the product.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1162254344",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Keep repo-local source and AgilePlus work authority explicit; ingest portable records, reuse graph/index infrastructure, improve consumers without forcing all projects to wait.",
+    "parent_acceptance": "An installed/hosted Tracera explains an actual product, finds a substantiated gap, and retains the model through change and restart.",
+    "sources": [
+      {
+        "id": "CUR-1162254344-S01",
+        "url": "https://github.com/KooshaPari/Tracera/commit/c5a6c52a3876aef6e561ca068a8c68546422f8b7",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  },
+  {
+    "schema_version": "1.2.0",
+    "repository_id": "1241972761",
+    "name": "WorldSphereMod",
+    "default_branch": "main",
+    "visibility": "public",
+    "observation_date": "2026-09-16",
+    "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+    "sampled_commit": "515779751856e0eee63a2d92d8ef87139e1a6952",
+    "sampled_commit_date_utc": "2026-09-05T06:13:10Z",
+    "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+    "movement": "Sampled default head remains the Sep5 terrain color fix. Earlier user reports said work shifted toward storage and multi-game testing; current local destination is unknown.",
+    "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+    "role": "Actual in-game rendering and world-shape mod",
+    "owner_chat_count": 1,
+    "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+    "owner_chat_id": null,
+    "local_worktree": null,
+    "doc_adoption": "NOT_OBSERVED",
+    "native_tests_run_by_this_audit": false,
+    "hosted_checks_exhaustively_reviewed": false,
+    "installed_product_qualified": false,
+    "new_authority_granted": false,
+    "repository_completion": "NOT_CERTIFIED",
+    "concerns": [
+      "A stale default branch is not evidence of inactivity; changed session scope must be surfaced.",
+      "Product qualification needs the exact game/branch/asset profile actually used."
+    ],
+    "next_actions": [
+      {
+        "id": "CUR-1241972761-A1",
+        "title": "Return the actual owner work receipt",
+        "work": "Identify this chat's current repo/worktree, whether it still owns this product, and any delegated all-game infrastructure tasks.",
+        "acceptance": "No work falsely attributed here; linked infrastructure ownership and next product action are clear.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1241972761",
+        "priority_order": 1,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1241972761-A2",
+        "title": "Qualify the true rendering candidate",
+        "work": "Install the supported game/mod combination and required assets; test terrain, actors, shape/LOD/camera behavior and save/reload.",
+        "acceptance": "Native captures and measured frame pacing/memory plus real negative cases; no disabled feature described as delivered.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1241972761",
+        "priority_order": 2,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      },
+      {
+        "id": "CUR-1241972761-A3",
+        "title": "Compare and preserve upstream semantics",
+        "work": "Use matched populated scenes against upstream/baseline and test coexistence, update, disable and recovery.",
+        "acceptance": "Measured visual value and explicit trade-offs without broken game state or unsafe dependency replacement.",
+        "status": "PROPOSED_NOT_EXECUTED",
+        "owner_repository_id": "1241972761",
+        "priority_order": 3,
+        "hard_dependencies": [],
+        "cross_repo_writes_authorized": false
+      }
+    ],
+    "ecosystem_contract": "Reuse game bridge/capture and graphics contracts where qualified; distinguish shared infrastructure from this product's actual rendering obligations.",
+    "parent_acceptance": "A player can use the intended real 3D/world-shape behavior in the installed supported game with continuity and recovery.",
+    "sources": [
+      {
+        "id": "CUR-1241972761-S01",
+        "url": "https://github.com/KooshaPari/WorldSphereMod/commit/515779751856e0eee63a2d92d8ef87139e1a6952",
+        "source_kind": "github_source_or_metadata",
+        "retrieved_in_current_turn": true
+      }
+    ],
+    "scope_missing": [
+      "local branches and dirty/untracked state",
+      "actual chat receipts and read acknowledgement",
+      "full history",
+      "native product suites/coverage",
+      "all hosted required checks/reviews",
+      "installed/deployed artifact qualification",
+      "executed comparative pilot"
+    ]
+  }
+]

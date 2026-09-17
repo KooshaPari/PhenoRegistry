@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/intent.schema.json",
+  "title": "intent",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "intent"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "parent_intent_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "mandate_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorship": {
+      "enum": [
+        "HUMAN",
+        "AGENT_DERIVED",
+        "AGENT_ORIGINATED",
+        "INHERITED",
+        "MIXED"
+      ]
+    },
+    "beneficiary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome_hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "enum": [
+        "UNKNOWN",
+        "HYPOTHESIS",
+        "SUPPORTED",
+        "CONTRADICTED"
+      ]
+    },
+    "commitment": {
+      "enum": [
+        "PROPOSED",
+        "EXPERIMENT",
+        "IMPLEMENTATION",
+        "DEFERRED",
+        "REJECTED",
+        "SUPERSEDED"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "refutation_condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "parent_intent_refs",
+    "mandate_ref",
+    "authorship",
+    "beneficiary",
+    "outcome_hypothesis",
+    "epistemic_status",
+    "commitment",
+    "evidence_refs",
+    "alternatives",
+    "refutation_condition",
+    "non_goals"
+  ],
+  "additionalProperties": false
+}

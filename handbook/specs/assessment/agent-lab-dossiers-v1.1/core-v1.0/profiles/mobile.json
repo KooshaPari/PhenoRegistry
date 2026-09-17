@@ -1,0 +1,26 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "mobile",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D05",
+    "D06",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Lifecycle suspension, touch alternatives, permissions, battery, offline and device-specific distribution; add missing native criteria as discovered.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

@@ -1,0 +1,936 @@
+{
+  "schema_version": "0.3.0",
+  "sources": [
+    {
+      "id": "S001",
+      "title": "Attached terminal excerpt",
+      "kind": "user_supplied_artifact",
+      "locator": "evidence/source-excerpt.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Direct user constraint at original lines 2096\u20132097: GitHub Free/student; Podman / WSLC unless Docker Engine is provably better.",
+        "Prior assistant synthesis at original lines 2080\u20132090; these are claims, not accepted implementation facts.",
+        "Follow-up agents launched at lines 2112\u20132113; the excerpt ends without their results.",
+        "Filtered, escaped, interleaved routing-log views and a directory listing."
+      ],
+      "limitations": "Partial transcript. Opening record is truncated. Named audit reports are not embedded. Source is not globally time-ordered. Original bytes and line numbering are preserved."
+    },
+    {
+      "id": "S002",
+      "title": "BytePort README",
+      "kind": "connected_repository_document",
+      "locator": "https://api.github.com/repos/KooshaPari/BytePort/contents/README.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Declares deployment-platform intent and existing Go/Svelte/GitHub/AWS surfaces.",
+        "Explicitly labels complete manifest-driven delivery and isolated microVM execution as planned.",
+        "References an existing charter, plan, spec, functional requirements, architecture and status docset."
+      ],
+      "limitations": "Mutable default-branch document, not pinned to an audited commit. No implementation, security, build, or end-to-end test claim was independently reproduced."
+    },
+    {
+      "id": "S003",
+      "title": "PhenoCompose README",
+      "kind": "connected_repository_document",
+      "locator": "https://api.github.com/repos/KooshaPari/PhenoCompose/contents/README.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Describes a Compose-facing container/microVM layer and a unified NVMS lineage.",
+        "Claims bindings migrated to thegent and nanovms while also advertising a unified PhenoCompose interface.",
+        "Contains conflicting MIT/Apache license headings and broad platform/performance claims requiring reconciliation."
+      ],
+      "limitations": "Declaration-level evidence only; the actual license, migration receipts, code paths and runtime support were not audited. Mutable default-branch read."
+    },
+    {
+      "id": "S004",
+      "title": "phenotype-infra README",
+      "kind": "connected_repository_document",
+      "locator": "https://api.github.com/repos/KooshaPari/phenotype-infra/contents/README.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Calls itself a consolidation target for nanovms, PhenoCompose and BytePort.",
+        "Labels its work state SCAFFOLD and describes a human-apply-only gate."
+      ],
+      "limitations": "Self-reported state; no build or apply was run. Mutable default-branch read. Repository ownership may have evolved beyond these declarations."
+    },
+    {
+      "id": "S005",
+      "title": "phenotype-registry README",
+      "kind": "connected_repository_document",
+      "locator": "https://api.github.com/repos/KooshaPari/phenotype-registry/contents/README.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Defines the INDEX / ADR-contract / convention / enforcement division across registry, PhenoSpecs, PhenoHandbook and phenotype-org-governance.",
+        "Says handbook absorption is by index link rather than duplicating its content."
+      ],
+      "limitations": "Role declarations reviewed, not independently enforced or proven current across every dependent repository."
+    },
+    {
+      "id": "S006",
+      "title": "Domain Roles \u2014 Canonical Repo Map",
+      "kind": "connected_repository_document",
+      "locator": "https://api.github.com/repos/KooshaPari/phenotype-registry/contents/docs/rationalization/DOMAIN_ROLES.md",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Assigns shared schemas to phenotype-types, testing to TestingKit, observability to PhenoObservability and secrets/auth to Authvault.",
+        "Distinguishes tehgent code review from thegent agent runtime; core/edge language changes require justification."
+      ],
+      "limitations": "Document dated 2026-06-16; current code ownership and later ADRs remain to be reconciled."
+    },
+    {
+      "id": "S007",
+      "title": "REVIEW-CONTROL.md \u2014 existing review/GitOps agent contract",
+      "kind": "retrieved_prior_user_file",
+      "locator": "ChatGPT Library file_00000000680081fd828cbe0dd0d6902b",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Requires integration with the existing review controller, not a competing implementation.",
+        "Requires exact-head checks, finding adjudication, real approval, and protection against replay and reviewer-trigger loops."
+      ],
+      "limitations": "Retrieved prior contract is related evidence, not proof of the exact CI trio intended in this terminal session. Only its relevant returned text was used; original bytes are not bundled."
+    },
+    {
+      "id": "S008",
+      "title": "GitHub manage environments",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Free supports environments for public repositories; private access requires the applicable paid owner plan.",
+        "On Free, Pro and Team, required environment reviewers and wait timers are public-repository features.",
+        "Listing several permitted reviewers does not require every listed person to approve."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S009",
+      "title": "GitHub Student Developer Pack",
+      "kind": "primary_external_document",
+      "locator": "https://education.github.com/pack",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Eligible students can receive GitHub Pro. Free/student is not a sufficiently precise entitlement snapshot."
+      ],
+      "limitations": "The user\u2019s activation, expiration and repository-owner entitlements were not visible or verified."
+    },
+    {
+      "id": "S010",
+      "title": "GitHub protected branches",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Public branch protection is available on Free; private branch protection requires Pro, Team or Enterprise as applicable."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S011",
+      "title": "GitHub Actions limits",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/actions/reference/limits",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Documents plan-specific included hosted minutes, storage and concurrency limits; these are not a workload benchmark."
+      ],
+      "limitations": "Limits are changeable. This review did not retrieve account usage or remaining allowances."
+    },
+    {
+      "id": "S012",
+      "title": "GitHub Actions secure use",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Self-hosted runners can retain compromise from untrusted workflow code; runner disposal alone does not sanitize reused host hardware."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S013",
+      "title": "Microsoft WSL containers / WSLC",
+      "kind": "primary_external_document",
+      "locator": "https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Documents wslc.exe as a distinct container implementation shipped with WSL.",
+        "The reviewed prerequisites specify WSL 2.9.3 or later prerelease, making installed-version qualification necessary."
+      ],
+      "limitations": "Not evidence that the user has this version or that its API satisfies Podman, Docker, Compose, Swarm or Quadlet consumers."
+    },
+    {
+      "id": "S014",
+      "title": "Microsoft systemd in WSL",
+      "kind": "primary_external_document",
+      "locator": "https://learn.microsoft.com/en-us/windows/wsl/systemd",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Modern WSL supports systemd natively.",
+        "Systemd services do not by themselves keep a WSL instance alive."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S015",
+      "title": "Podman Quadlet manual",
+      "kind": "primary_external_document",
+      "locator": "https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Quadlet is a systemd generator, requires cgroup v2, and has rootless unit search paths.",
+        "Generated units are configured through source Install sections rather than enabling generated services as persistent units."
+      ],
+      "limitations": "Latest documentation must be checked against the installed Podman version before applying any unit."
+    },
+    {
+      "id": "S016",
+      "title": "Podman system service manual",
+      "kind": "primary_external_document",
+      "locator": "https://docs.podman.io/en/latest/markdown/podman-system-service.1.html",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Exposes a Docker-compatible API and a native Libpod API.",
+        "Access to its socket permits arbitrary code execution with the service user\u2019s authority; it is not a per-operation authorization boundary."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S017",
+      "title": "Coolify self-hosted installation",
+      "kind": "primary_external_document",
+      "locator": "https://coolify.io/docs/start-with-self-hosted",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Reviewed installation path relies on Docker Engine; it does not qualify this rootless Podman/WSL stack."
+      ],
+      "limitations": "No claim that every possible Podman integration is impossible; a supported or tested compatible path was not established."
+    },
+    {
+      "id": "S018",
+      "title": "Dokploy installation",
+      "kind": "primary_external_document",
+      "locator": "https://docs.dokploy.com/docs/core/installation",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Reviewed installation uses Docker and Docker Swarm primitives."
+      ],
+      "limitations": "Podman Docker API compatibility is not proof of Docker Swarm orchestration semantics."
+    },
+    {
+      "id": "S019",
+      "title": "CapRover getting started",
+      "kind": "primary_external_document",
+      "locator": "https://caprover.com/docs/get-started.html",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Documents a Docker-based deployment path."
+      ],
+      "limitations": "Not qualified on the user\u2019s Podman/WSLC configuration; this is not an exhaustive product evaluation."
+    },
+    {
+      "id": "S020",
+      "title": "Portainer Podman environments",
+      "kind": "primary_external_document",
+      "locator": "https://docs.portainer.io/admin/environments/add/podman",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Podman integration uses the Docker-compatible API.",
+        "Reviewed official support is rootful Podman 5.x on CentOS 9; rootless is not officially supported there."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S021",
+      "title": "Cockpit applications",
+      "kind": "primary_external_document",
+      "locator": "https://cockpit-project.org/applications",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Lists cockpit-podman for container administration."
+      ],
+      "limitations": "Administration UI availability is not a managed deployment-platform contract or a verified Windows/WSL installation."
+    },
+    {
+      "id": "S022",
+      "title": "Tailscale Funnel",
+      "kind": "primary_external_document",
+      "locator": "https://tailscale.com/docs/features/tailscale-funnel",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Funnel exposes a service publicly, uses tailnet ts.net names, permits ports 443/8443/10000 and has non-configurable bandwidth limits.",
+        "The same port cannot simultaneously serve as private Serve and public Funnel."
+      ],
+      "limitations": "No throughput measurement, app-level authorization proof or service-level suitability verdict is inferred."
+    },
+    {
+      "id": "S023",
+      "title": "Cloudflare Quick Tunnels",
+      "kind": "primary_external_document",
+      "locator": "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Quick Tunnels are for development/testing, have an in-flight request limit of 200, and do not support SSE.",
+        "These restrictions are documented for Quick Tunnels, not automatically every Cloudflare Tunnel product."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S024",
+      "title": "Cloudflare Access self-hosted public applications",
+      "kind": "primary_external_document",
+      "locator": "https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/self-hosted-public-app/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Access is a separately configured application-access layer for a public hostname."
+      ],
+      "limitations": "No Access application, identity policy, DNS zone ownership, service token, or origin restriction was verified in the user\u2019s environment."
+    },
+    {
+      "id": "S025",
+      "title": "Pulumi Docker provider",
+      "kind": "primary_external_document",
+      "locator": "https://www.pulumi.com/registry/packages/docker/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Targets Docker API resources and Docker-compatible hosts, with a configurable host endpoint."
+      ],
+      "limitations": "Resource-by-resource Podman conformance and WSLC compatibility were not established. Python preference is not an existing language-policy override."
+    },
+    {
+      "id": "S026",
+      "title": "Pulumi Automation API",
+      "kind": "primary_external_document",
+      "locator": "https://www.pulumi.com/docs/iac/concepts/automation-api/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Provides programmatic access to Pulumi lifecycle operations."
+      ],
+      "limitations": "An orchestration SDK does not automatically supply cross-provider behavior, equivalent persistence or state migration."
+    },
+    {
+      "id": "S027",
+      "title": "Pulumi state and backends",
+      "kind": "primary_external_document",
+      "locator": "https://www.pulumi.com/docs/iac/concepts/state-and-backends/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "State backend selection is an explicit operational concern."
+      ],
+      "limitations": "No backend, state file, locks, secret provider or recovery procedure was inspected locally."
+    },
+    {
+      "id": "S028",
+      "title": "Render free services",
+      "kind": "primary_external_document",
+      "locator": "https://render.com/docs/free",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Free web services can idle after 15 minutes and do not provide a persistent disk; free Postgres expires after 30 days.",
+        "The page says free instances should not be used for production."
+      ],
+      "limitations": "No runtime verification was performed from this source."
+    },
+    {
+      "id": "S029",
+      "title": "Spin introduction",
+      "kind": "primary_external_document",
+      "locator": "https://spinframework.dev/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Spin builds and runs event-driven applications using WebAssembly components."
+      ],
+      "limitations": "No arbitrary native-process compatibility or migration-without-porting is established."
+    },
+    {
+      "id": "S030",
+      "title": "Firecracker official overview",
+      "kind": "primary_external_document",
+      "locator": "https://firecracker-microvm.github.io/",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Firecracker uses Linux KVM."
+      ],
+      "limitations": "No proof of KVM availability, nested virtualization, Windows/WSL performance or native macOS Firecracker support is provided."
+    },
+    {
+      "id": "S031",
+      "title": "BytePort repository metadata",
+      "kind": "connected_repository_metadata",
+      "locator": "https://github.com/KooshaPari/BytePort",
+      "review_date": "2026-09-11",
+      "claims_supported": [
+        "Connected repository search returned repository ID 861430079, public visibility and default branch main."
+      ],
+      "limitations": "Visibility and settings can change. This does not verify the plan, rules, permissions or visibility of every other repository."
+    },
+    {
+      "id": "S032",
+      "title": "Full stored Forge session export and indexed descendants",
+      "kind": "user_supplied_artifact",
+      "locator": "evidence/session/intake-manifest.json",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "81 decoded conversations, 4588 stored messages; original source hash and coverage in intake manifest.",
+        "E001\u2013E006 recover user scope; E007\u2013E016 separate tool observations from assertions.",
+        "The export explicitly cannot reconstruct pre-compaction history. All 81 actual section headers name .forge.writes.db."
+      ],
+      "limitations": "Entire export structurally indexed. Targeted semantic review, not every line or every repository. Compaction frames are not new human approvals. Raw export deliberately not redistributed."
+    },
+    {
+      "id": "S033",
+      "title": "Historical pilot caller, branch JSON, nightly workflow and Blueprint",
+      "kind": "stored_tool_output",
+      "locator": "evidence/session/evidence-index.json",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "E007: caller references a nested reusable path, passes only API key and /health.",
+        "E008: protection JSON names ci/lint and ci/test without spaces.",
+        "E009: full 205-line nightly workflow includes no rollback operation, no >1 count, and a successful exit for unknown health URL.",
+        "E010: Blueprint selects prebuilt latest image and /healthz; static auth value redacted.",
+        "E011: stored git status shows modified/untracked pilot files."
+      ],
+      "limitations": "September 11 stored local observations, not proof these bytes exist at current remote HEAD or were deployed. The production workflow body was not recovered by this targeted review."
+    },
+    {
+      "id": "S034",
+      "title": "Current connected Tracera CI aggregation code",
+      "kind": "connected_repository_file",
+      "locator": "https://github.com/KooshaPari/Tracera/blob/main/.github/workflows/ci.yml",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Connected fetch of lines 310\u2013410 returned job names ci / lint, ci / test, CI.",
+        "Returned blob SHA: 3685d56735d54e0d7dce5be62ea8a25fd0f822a9. This is a file blob hash, not a commit SHA.",
+        "Final ci job lists detect-changes, dependency-review and trunk-check in needs but omits their results from its shell result array."
+      ],
+      "limitations": "Narrow current file read, not a workflow run or settings read. Exact emitted check-run identity, producer and enforced branch/ruleset mapping remain unverified."
+    },
+    {
+      "id": "S035",
+      "title": "Connected lookup of the historical reusable nightly path",
+      "kind": "connected_lookup_result",
+      "locator": "https://github.com/KooshaPari/phenotype-tooling/blob/main/.github/workflows/reusable/nightly-dev-deploy.yml",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The exact connected fetch returned 404 Not Found during this review."
+      ],
+      "limitations": "Does not prove repository deletion, lack of access to all refs, or that the path never existed. Historical local evidence is retained rather than overwritten by this result."
+    },
+    {
+      "id": "S036",
+      "title": "GitHub reusable workflows: location, calls and secret passing",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Reusable workflows must be directly in .github/workflows, not nested subdirectories.",
+        "Named secrets are passed explicitly, or inherited through the documented mechanism.",
+        "A job environment in the called workflow can supply its own environment secrets; this is distinct from automatic forwarding of repository secrets."
+      ],
+      "limitations": "Platform semantics, not validation of local workflow syntax or actual account settings."
+    },
+    {
+      "id": "S037",
+      "title": "Render prebuilt image deployments",
+      "kind": "primary_external_document",
+      "locator": "https://render.com/docs/deploying-an-image",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Image-backed services differ from Git-backed services.",
+        "Deploys can select an image tag or digest; a rollback requires that image/digest to remain available."
+      ],
+      "limitations": "Does not establish which image is currently running in the user account."
+    },
+    {
+      "id": "S038",
+      "title": "Render trigger deploy API",
+      "kind": "primary_external_document",
+      "locator": "https://api-docs.render.com/reference/create-deploy",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "commitId selects a Git commit for a Git-backed service; imageUrl selects an image-backed service image.",
+        "A source commit parameter is not proof that a prebuilt mutable latest image matches the tested artifact."
+      ],
+      "limitations": "Adapters require recorded request/response fixtures against the selected service type; no provider operation executed."
+    },
+    {
+      "id": "S039",
+      "title": "Render rollback API and behavior",
+      "kind": "primary_external_document",
+      "locator": "https://api-docs.render.com/reference/rollback-deploy",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "POST /v1/services/{serviceId}/rollback uses a prior deployId.",
+        "Calling the rollback endpoint does not disable autodeploys."
+      ],
+      "limitations": "An API operation does not restore database state or prove a successful rollback."
+    },
+    {
+      "id": "S040",
+      "title": "Render free service budget, refreshed",
+      "kind": "primary_external_document",
+      "locator": "https://render.com/docs/free",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Free web service running hours share a 750-hour monthly workspace allowance.",
+        "The allowance is not the same assertion as only one free web service existing.",
+        "Free web services have ephemeral filesystems and cannot attach persistent disks."
+      ],
+      "limitations": "Actual workspace consumption and entitlement not read. Local-dev placement is preserved regardless of the corrected quota explanation."
+    },
+    {
+      "id": "S041",
+      "title": "Podman network backend and rootless networking",
+      "kind": "primary_external_document",
+      "locator": "https://docs.podman.io/en/latest/markdown/podman-network.1.html",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Podman documents Netavark network management and Aardvark DNS.",
+        "Pasta is documented as the default rootless networking tool."
+      ],
+      "limitations": "Version-sensitive documentation; not a benchmark, a WSL compatibility test or proof of the local runtime backend."
+    },
+    {
+      "id": "S042",
+      "title": "Microsoft WSLC prerequisite, refreshed",
+      "kind": "primary_external_document",
+      "locator": "https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The reviewed page describes wslc.exe and requires WSL 2.9.3 or higher, identified there as pre-release."
+      ],
+      "limitations": "Do not update the operator workstation to pre-release or infer installed versions from this documentation."
+    },
+    {
+      "id": "S043",
+      "title": "LocalStack March 2026 release and authenticated image transition",
+      "kind": "primary_external_document",
+      "locator": "https://blog.localstack.cloud/localstack-for-aws-release-2026-03-0/",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "March 23, 2026 release consolidated images and requires an auth token.",
+        "The product is not defunct; the old community distribution/access assumptions changed."
+      ],
+      "limitations": "Not an endorsement of licensing, cost or fit. Current commercial eligibility and usage terms require separate review; no purchase or auth action performed."
+    },
+    {
+      "id": "S044",
+      "title": "Moto server mode",
+      "kind": "primary_external_document",
+      "locator": "https://docs.getmoto.org/en/latest/docs/server_mode.html",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Moto can provide an HTTP server interface for non-Python SDK testing."
+      ],
+      "limitations": "An emulator/testing tool is not a durable production AWS replacement; action coverage must be tested."
+    },
+    {
+      "id": "S045",
+      "title": "Moto implemented services",
+      "kind": "primary_external_document",
+      "locator": "https://docs.getmoto.org/en/latest/docs/services/index.html",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Moto maintains a service-specific implementation catalog."
+      ],
+      "limitations": "A listed service is not proof of every API action or error semantic used by an application."
+    },
+    {
+      "id": "S046",
+      "title": "Supabase self-hosting",
+      "kind": "primary_external_document",
+      "locator": "https://supabase.com/docs/guides/self-hosting",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Supabase documents a self-hosting path."
+      ],
+      "limitations": "Self-hosting transfers operational duties; a local PostgreSQL process alone does not provide the complete Supabase product API."
+    },
+    {
+      "id": "S047",
+      "title": "Valkey compatibility and migration",
+      "kind": "primary_external_document",
+      "locator": "https://valkey.io/topics/migration/",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Valkey documents compatibility with Redis OSS 7.2 and earlier versions."
+      ],
+      "limitations": "Does not claim all newer Redis modules or Upstash HTTP APIs are interchangeable with a Valkey TCP endpoint."
+    },
+    {
+      "id": "S048",
+      "title": "GitHub environment plan/visibility matrix, refreshed",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/review-deployments",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Public repositories support environments across current plans.",
+        "Private environment/secrets/branch eligibility requires Pro, Team or Enterprise; reviewer/wait gates on Free/Pro/Team are public-only."
+      ],
+      "limitations": "Plan label is not proof of applied settings. User student benefit and repository owner entitlements remain unknown."
+    },
+    {
+      "id": "S049",
+      "title": "Tailscale custom-domain design using private DNS",
+      "kind": "primary_external_document",
+      "locator": "https://tailscale.com/kb/1620/kubernetes-operator-byod-gateway-api",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Documents custom domain TLS with private DNS and tailnet routing."
+      ],
+      "limitations": "This specific guide is Kubernetes-oriented; v0.2 uses the DNS/TLS separation as a design pattern, not a reason to install Kubernetes."
+    },
+    {
+      "id": "S050",
+      "title": "GitHub ruleset availability and configuration",
+      "kind": "primary_external_document",
+      "locator": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Rulesets must be configured/applied; plan and visibility affect availability."
+      ],
+      "limitations": "A repository JSON file is not a verified remote ruleset. No administration API or settings change performed."
+    },
+    {
+      "id": "S051",
+      "title": "Render deploy listing and pagination",
+      "kind": "primary_external_document",
+      "locator": "https://api-docs.render.com/reference/list-deploys",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Deploy listing is paginated; default page size 20 and cursor pagination are documented."
+      ],
+      "limitations": "The parsed page did not expose a full response schema. The historical flat response parser is unqualified, not declared definitively wrong without a captured fixture."
+    },
+    {
+      "id": "S052",
+      "title": "User consolidation note \u2014 local cloud, assessment, corpus and review control",
+      "kind": "user_supplied_artifact",
+      "locator": "chat://2026-09-12T15:27:00-07:00",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Local personal devices should be usable as compute nodes while preserving their foreground uses.",
+        "BytePort remains the application/GUI layer and lifecycle management is a core requirement.",
+        "Humans, agents and automations are first-class product users.",
+        "Assessment/scorecard work, Emergent Garden research and quota-aware review control must be consolidated.",
+        "No new review spend is desired and review quotas must be used frugally."
+      ],
+      "limitations": "Direct requirements and intent; not evidence that any implementation already exists."
+    },
+    {
+      "id": "S053",
+      "title": "Master Assessment Kit \u2014 contract 1.1",
+      "kind": "retrieved_prior_user_file",
+      "locator": "library://MASTER-ASSESSMENT-KIT.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The reusable persisted assessment object is an Assessment Dossier with generated human front doors.",
+        "Canonical dossier components separate subject, assignment, measurements, results, evidence, findings and decisions.",
+        "Applicability, execution, verdict, freshness and review disposition remain independent."
+      ],
+      "limitations": "Defines the assessment contract; it does not prove any repository has been assessed under it."
+    },
+    {
+      "id": "S054",
+      "title": "Master Assessment Kit agent entrypoint",
+      "kind": "retrieved_prior_user_file",
+      "locator": "library://START-HERE(1).md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The workflow requires real subject/owner/mandate resolution, instrument binding, canonical results and evidence, and generated machine/human views.",
+        "A completed dossier, not a new template, is the required operational return."
+      ],
+      "limitations": "Workflow guidance only; actual dossier execution remains repository-specific."
+    },
+    {
+      "id": "S055",
+      "title": "phenotype-infra ADR 0001 \u2014 hybrid compute mesh",
+      "kind": "connected_repository_document",
+      "locator": "github://KooshaPari/phenotype-infra/docs/adr/0001-hybrid-compute-mesh.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "An accepted older architecture already treats home hardware as part of a heterogeneous compute mesh.",
+        "The design rejects heavy orchestration for the small solo-operator topology and uses private overlay networking."
+      ],
+      "limitations": "Older CI-oriented architecture; does not by itself satisfy the broader local cloud-node requirement."
+    },
+    {
+      "id": "S056",
+      "title": "phenotype-infra ADR 0003 \u2014 home desktop heavy runner",
+      "kind": "connected_repository_document",
+      "locator": "github://KooshaPari/phenotype-infra/docs/adr/0003-home-desktop-as-heavy-runner.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Prior accepted design used a home machine for self-hosted heavy work with private connectivity and foreground-use protection."
+      ],
+      "limitations": "Single-runner precedent; too narrow for databases, containers, VMs and lifecycle-managed local cloud workloads."
+    },
+    {
+      "id": "S057",
+      "title": "phenotype-infra ADR 0008 \u2014 Parsec pause proposal",
+      "kind": "connected_repository_document",
+      "locator": "github://KooshaPari/phenotype-infra/docs/adr/0008-parsec-gaming-mode-pause.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "A prior proposal attempted to pause background compute during interactive use."
+      ],
+      "limitations": "Proposed stub and process-specific mechanism; insufficient as a general resource-reservation or QoS policy."
+    },
+    {
+      "id": "S058",
+      "title": "BytePort CloudProvider design",
+      "kind": "connected_repository_document",
+      "locator": "github://KooshaPari/phenotype-infra/tools/byteport/backend/lib/cloud/DESIGN.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "BytePort already defines a capability-based cloud-provider abstraction spanning compute, database, storage and networking concepts.",
+        "The design includes deployment lifecycle concepts such as build, provision, deploy, health, update and rollback."
+      ],
+      "limitations": "Repository design declaration; local-node provider behavior and operational receipts still require implementation evidence."
+    },
+    {
+      "id": "S059",
+      "title": "BytePort PR 10 \u2014 historical Oct-2025 rearchitecture capture",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/BytePort/pull/10",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The historical branch explicitly described Local nvms+vLLM, freemium managed providers and hyperscaler production tiers.",
+        "The historical work included multi-cloud and local-hypervisor scaffolding."
+      ],
+      "limitations": "PR is closed and unmerged; precedent only, not current default-branch authority."
+    },
+    {
+      "id": "S060",
+      "title": "BytePort PR 329 \u2014 historical compute-mesh desired-state capture",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/BytePort/pull/329",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "A later historical branch described owner-scoped compute-mesh workload intents, artifact metadata and placement/deployment handoff."
+      ],
+      "limitations": "PR is closed and unmerged; review-bot description is not proof of current implementation."
+    },
+    {
+      "id": "S061",
+      "title": "ResearchLedger PR 81 \u2014 Emergent Garden Wave 5",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/ResearchLedger/pull/81",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Wave 5 contains substantive corpus work, execution receipts, 70 rerun offline tests and 32 synthetic admission cases.",
+        "PR 81 is closed, draft and not merged.",
+        "Full transcripts, recursive source closure, audience review, lineage reconstruction, one comment discrepancy and live coordination experiment remain incomplete."
+      ],
+      "limitations": "PR body is a project-authored execution summary. Current main integration must be verified separately."
+    },
+    {
+      "id": "S062",
+      "title": "Emergent Garden Wave 5 research index at PR-81 head",
+      "kind": "connected_repository_file",
+      "locator": "github://KooshaPari/ResearchLedger@8822aa14baef2a964288076645edcc493c338688/docs/corpora/emergent-garden/research/README.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The campaign records 74 public uploads, 62 non-empty descriptions, 528 edges, 300 normalized targets and 93 domains.",
+        "The branch states campaign completion remains partial and ResearchLedger remains canonical."
+      ],
+      "limitations": "File exists at the historical PR head; it is not evidence that current main contains it."
+    },
+    {
+      "id": "S063",
+      "title": "ResearchLedger current main branch snapshot",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/ResearchLedger/branches/main@8f636cde8c7678515312bf806d744ff747d13e76",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Current main is ahead of the PR-81 base and the Emergent Garden research README path was not found at current main during this review."
+      ],
+      "limitations": "A path lookup is not an exhaustive semantic search for relocated content; salvage must first reconcile exact commits and tree paths."
+    },
+    {
+      "id": "S064",
+      "title": "phenotype-registry PR 550 \u2014 ResearchLedger routing projection",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/phenotype-registry/pull/550",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "The cross-project routing projection was merged on 2026-09-12 and points to the pinned ResearchLedger evidence head."
+      ],
+      "limitations": "A merged projection does not merge the source corpus into ResearchLedger main."
+    },
+    {
+      "id": "S065",
+      "title": "Existing review-control contract",
+      "kind": "retrieved_prior_user_file",
+      "locator": "library://REVIEW-CONTROL.md",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Review control is meant to integrate with the existing review/GitOps controller rather than create a competing system.",
+        "A prior ForgeCode PR had unresolved current threads across multiple semantic reviewers.",
+        "The desired pipeline already separates deterministic checks, selected semantic review, adjudication, repair, exact-head rerun and evidence."
+      ],
+      "limitations": "Design/control record; provider quotas and PR state change over time and require live refresh."
+    },
+    {
+      "id": "S066",
+      "title": "ForgeCode PR 277 current merge state",
+      "kind": "connected_repository_metadata",
+      "locator": "github://KooshaPari/forgecode/pull/277",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "PR 277 is now merged to main, making any remaining historical findings a post-merge reconciliation problem rather than an open-branch repair problem."
+      ],
+      "limitations": "Merge state alone does not say which old findings remain valid on current main."
+    },
+    {
+      "id": "S067",
+      "title": "ForgeCode PR 277 current reviewer activity snapshot",
+      "kind": "connected_lookup_result",
+      "locator": "github://KooshaPari/forgecode/pull/277/comments@2026-09-12",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "CodeAnt performed multiple incremental reviews on successive commits.",
+        "Copilot reported quota exhaustion.",
+        "CodeRabbit reported its included OSS review limit reached with a reset delay.",
+        "Automated scanners can independently hit their own limits."
+      ],
+      "limitations": "Point-in-time PR activity; quota availability and exact remaining balances are dynamic."
+    },
+    {
+      "id": "S068",
+      "title": "CodeRabbit plan and rate-limit documentation",
+      "kind": "primary_external_document",
+      "locator": "https://docs.coderabbit.ai/management/plans",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Current Free PR review limit is documented as 3 per developer per hour; OSS can vary from 1\u20138 per hour.",
+        "The provider exposes quota status and reset information."
+      ],
+      "limitations": "Account/repository effective quotas can differ by plan, OSS classification and fair-use state; the broker must observe live state."
+    },
+    {
+      "id": "S069",
+      "title": "CodeRabbit automatic review controls",
+      "kind": "primary_external_document",
+      "locator": "https://docs.coderabbit.ai/configuration/auto-review",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Automatic reviews can be disabled and selectively re-enabled by labels, description keyword or manual review command.",
+        "Incremental auto-review and auto-pause controls are configurable."
+      ],
+      "limitations": "Only governs CodeRabbit; configuration still has to be applied and verified per repository."
+    },
+    {
+      "id": "S070",
+      "title": "CodeAnt SCM/PR CLI integration",
+      "kind": "primary_external_document",
+      "locator": "https://docs.codeant.ai/cli/scm-integration",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "CodeAnt CLI can list/filter PR comments including unresolved CodeAnt comments and can resolve threads by SCM identifiers."
+      ],
+      "limitations": "CLI capability does not authorize automatic fixing or thread resolution without independent adjudication."
+    },
+    {
+      "id": "S071",
+      "title": "Macroscope usage pricing and controls",
+      "kind": "primary_external_document",
+      "locator": "https://docs.macroscope.com/pricing",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Code Review is $0.05 per KB with a 10KB minimum and Agent has 1,000 free credits monthly.",
+        "New workspaces are advertised with $100 free usage and spend controls exist."
+      ],
+      "limitations": "Finite credit is not zero-cost forever. Auto-refill must remain disabled under the user no-new-spend constraint."
+    },
+    {
+      "id": "S072",
+      "title": "Kilo free model and code review documentation",
+      "kind": "primary_external_document",
+      "locator": "https://kilo.ai/docs/getting-started/using-kilo-for-free",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Kilo Code Reviewer can be configured to use hosted models marked free.",
+        "Free model availability can change and upstream providers may rate-limit them."
+      ],
+      "limitations": "Free model availability and quality are dynamic; \"free\" is not a reliability SLA."
+    },
+    {
+      "id": "S073",
+      "title": "Kilo GitHub code review behavior",
+      "kind": "primary_external_document",
+      "locator": "https://kilo.ai/docs/automate/code-reviews/github",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Kilo GitHub reviews run automatically on PR open/update/ready when enabled."
+      ],
+      "limitations": "Automatic triggers can consume scarce model capacity unless repository/provider settings are deliberately controlled."
+    },
+    {
+      "id": "S074",
+      "title": "OpenAI Codex code review and plan access",
+      "kind": "primary_external_document",
+      "locator": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Codex is included with ChatGPT plans and can automate GitHub code review.",
+        "Usage limits vary by plan."
+      ],
+      "limitations": "The user treats Codex review as shared subscription usage, so it is a scarce shared allowance rather than a free unlimited reviewer."
+    },
+    {
+      "id": "S075",
+      "title": "OpenAI Codex GitHub review behavior",
+      "kind": "primary_external_document",
+      "locator": "https://openai.com/index/introducing-upgrades-to-codex/",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Codex can automatically review PRs after draft-to-ready and can be invoked with @codex review plus focused instructions."
+      ],
+      "limitations": "Repository trigger configuration and remaining quota must be verified live; automatic behavior is not evidence of broker control."
+    },
+    {
+      "id": "S076",
+      "title": "Incus REST API and resource model",
+      "kind": "primary_external_document",
+      "locator": "https://linuxcontainers.org/incus/docs/main/rest-api-spec/",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Incus exposes resource discovery, VM/container lifecycle, backups and remote API control."
+      ],
+      "limitations": "Reference implementation pattern only; v0.3 does not select Incus as the canonical local runtime."
+    },
+    {
+      "id": "S077",
+      "title": "Incus instance resource limits",
+      "kind": "primary_external_document",
+      "locator": "https://linuxcontainers.org/incus/docs/main/reference/instance_options/",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Incus demonstrates enforceable CPU, memory and IO resource-limit semantics useful as a reference for the local-node contract."
+      ],
+      "limitations": "Some controls are runtime/type-specific and do not solve foreground workload detection or GPU policy by themselves."
+    },
+    {
+      "id": "S078",
+      "title": "CodeRabbit manual review/resolve commands",
+      "kind": "primary_external_document",
+      "locator": "https://docs.coderabbit.ai/reference/review-commands",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "CodeRabbit supports manual incremental/full review, pause/resume and resolve commands."
+      ],
+      "limitations": "Bulk resolve commands must not be used as a substitute for finding-by-finding evidence reconciliation."
+    },
+    {
+      "id": "S079",
+      "title": "Macroscope spend-control reference",
+      "kind": "primary_external_document",
+      "locator": "https://macroscope.com/usage-based-code-review-for-teams",
+      "review_date": "2026-09-12",
+      "claims_supported": [
+        "Macroscope supports per-review, per-PR and monthly spend caps and selective review scope."
+      ],
+      "limitations": "Spend controls prevent overage only when explicitly configured; this package does not change account settings."
+    }
+  ]
+}

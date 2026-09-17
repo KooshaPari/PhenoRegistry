@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-01",
+  "instance_id": "I-01",
+  "criterion_id": "PEP-01-04-01",
+  "assignment_id": "A-PARCELKIT",
+  "epoch_id": "E-PARCELKIT",
+  "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a",
+  "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e",
+  "execution": "COMPLETED",
+  "verdict": "PASS",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Authorship is agent-originated; acceptance is a separate experiment decision.",
+    "assertions_executed": null,
+    "modality": "SEMANTIC"
+  },
+  "supersedes": []
+}

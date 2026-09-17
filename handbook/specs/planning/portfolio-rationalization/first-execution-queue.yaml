@@ -1,0 +1,476 @@
+schema_version: '1.0'
+generated_on: '2026-09-01'
+wip_policy:
+  canonical_completion: 1
+  consolidation: 1
+  forensic_identity: 1
+  external_blocker: 1
+tasks:
+- task_id: PORT-000
+  title: Make RepoLedger the machine portfolio authority
+  lane: canonical_completion
+  repositories:
+  - RepoLedger
+  prerequisites: []
+  evidence_target: E3
+  deliverables:
+  - schema for all 146 repositories
+  - GitHub reconciliation importer/check
+  - authority/predecessor/successor validation
+  - generated active/reference/archive queues
+  - drift-failing CI
+  acceptance:
+  - imports exactly 146 owner repositories
+  - reports 34 private, 29 archived, 117 not archived
+  - detects a deliberate archive-state mismatch
+  - detects a nonexistent successor
+  - detects duplicate exclusive authority
+  - binds output to commit SHA
+- task_id: PORT-001
+  title: Close DataKit lifecycle contradiction
+  lane: consolidation
+  repositories:
+  - DataKit
+  prerequisites:
+  - PORT-000
+  evidence_target: E2
+  deliverables:
+  - consumer scan
+  - migration map
+  - tombstone
+  - RepoLedger patch
+  acceptance:
+  - no live consumer remains unresolved
+  - declared archive and GitHub state reconcile
+  - unique history preserved
+- task_id: PORT-002
+  title: Close ResilienceKit lifecycle contradiction
+  lane: consolidation
+  repositories:
+  - ResilienceKit
+  prerequisites:
+  - PORT-001
+  evidence_target: E2
+  deliverables:
+  - consumer scan
+  - pattern migration map
+  - tombstone
+  - RepoLedger patch
+  acceptance:
+  - unique resilience contracts are preserved in named targets
+  - no live package dependency remains
+  - GitHub state reconciles
+- task_id: PORT-003
+  title: Close PolicyStack after fleet-ops parity
+  lane: consolidation
+  repositories:
+  - PolicyStack
+  - phenotype-fleet-ops
+  prerequisites:
+  - PORT-002
+  evidence_target: E3
+  deliverables:
+  - policy parity corpus
+  - consumer cutover
+  - deprecation/tombstone
+  acceptance:
+  - fleet-ops passes retained policy tests
+  - all consumers point to fleet-ops
+  - rollback documented
+- task_id: PORT-004
+  title: Close phenotype-traceability-spine after Tracera redirect verification
+  lane: consolidation
+  repositories:
+  - phenotype-traceability-spine
+  - Tracera
+  prerequisites:
+  - PORT-003
+  evidence_target: E2
+  deliverables:
+  - contract/consumer map
+  - redirect validation
+  - archive patch
+  acceptance:
+  - every retained traceability contract has an owner
+  - no active workflow depends on the spine
+  - GitHub state reconciles
+- task_id: PORT-005
+  title: Normalize phenoDesign archive
+  lane: consolidation
+  repositories:
+  - phenoDesign
+  prerequisites:
+  - PORT-004
+  evidence_target: E2
+  deliverables:
+  - unique asset inventory
+  - target pointers
+  - archive patch
+  acceptance:
+  - no unique design asset is lost
+  - successor paths resolve
+  - active queues exclude the repo
+- task_id: PORT-006
+  title: Normalize phenotype-go-sdk retirement
+  lane: consolidation
+  repositories:
+  - phenotype-go-sdk
+  - HexaKit
+  prerequisites:
+  - PORT-005
+  evidence_target: E2
+  deliverables:
+  - module inventory
+  - nonexistent-link repair
+  - genesis-template migration
+  - archive patch
+  acceptance:
+  - no domain logic remains stranded
+  - all successor links resolve
+  - retirement is machine-visible
+- task_id: PORT-007
+  title: Apply ZZ-AtomsBot strict freeze
+  lane: consolidation
+  repositories:
+  - ZZ-AtomsBot
+  prerequisites:
+  - PORT-006
+  evidence_target: E2
+  deliverables:
+  - secret/config review
+  - recovery instructions
+  - GitHub archive patch
+  acceptance:
+  - no secret/runtime state committed
+  - open PR disposition recorded
+  - strict pause matches GitHub state
+- task_id: PORT-008
+  title: Collapse duplicate VibeProxy monitoring scaffolds
+  lane: consolidation
+  repositories:
+  - vibe-monitor
+  - vibeproxy-monitoring
+  - vibeproxy-monitoring-unified
+  - PhenoObservability
+  prerequisites:
+  - PORT-007
+  evidence_target: E2
+  deliverables:
+  - semantic diff
+  - unique spec migration
+  - three tombstones
+  acceptance:
+  - unique monitoring requirements have one owner
+  - no deployable asset is lost
+  - all duplicate scaffolds retire
+- task_id: PORT-009
+  title: Close vibeproxy against real proxy successors
+  lane: consolidation
+  repositories:
+  - vibeproxy
+  - cliproxyapi-plusplus
+  - substrate
+  prerequisites:
+  - PORT-008
+  evidence_target: E3
+  deliverables:
+  - behavior/API parity corpus
+  - consumer cutover
+  - rollback
+  - tombstone
+  acceptance:
+  - retained behavior passes in successor
+  - all live consumers migrated
+  - source can be archived without ambiguity
+- task_id: PORT-010
+  title: Close phenotype-gateway mirror
+  lane: consolidation
+  repositories:
+  - phenotype-gateway
+  - substrate
+  - phenotype-router
+  prerequisites:
+  - PORT-009
+  evidence_target: E2
+  deliverables:
+  - charter/contract mapping
+  - successor verification
+  - archive patch
+  acceptance:
+  - all authority claims have one successor
+  - all redirects resolve
+  - source removed from active queues
+- task_id: PORT-011
+  title: Absorb Logify into PhenoObservability
+  lane: consolidation
+  repositories:
+  - Logify
+  - PhenoObservability
+  prerequisites:
+  - PORT-010
+  evidence_target: E3
+  deliverables:
+  - API parity tests
+  - history/provenance map
+  - consumer migration
+  - tombstone
+  acceptance:
+  - all Logify contracts pass in target
+  - package/import migration documented
+  - rollback proven
+- task_id: PORT-012
+  title: Resolve pheno-tracing versus PhenoObservability
+  lane: consolidation
+  repositories:
+  - pheno-tracing
+  - PhenoObservability
+  prerequisites:
+  - PORT-011
+  evidence_target: E3
+  deliverables:
+  - consumer/adoption evidence
+  - keep-or-absorb decision
+  - compatibility tests
+  acceptance:
+  - exactly one trace-library authority exists
+  - public API and semantics are covered
+  - decision is reversible until cutover
+- task_id: PORT-013
+  title: Absorb phenotypeActions into phenotype-fleet-ops
+  lane: consolidation
+  repositories:
+  - phenotypeActions
+  - phenotype-fleet-ops
+  prerequisites:
+  - PORT-012
+  evidence_target: E3
+  deliverables:
+  - workflow migration
+  - fixture repositories
+  - consumer cutover
+  - tombstone
+  acceptance:
+  - reusable workflows pass fixture repos
+  - callers use fleet-ops
+  - action SHAs and provenance preserved
+- task_id: PORT-014
+  title: Absorb agentapi-plusplus adapter into substrate
+  lane: consolidation
+  repositories:
+  - agentapi-plusplus
+  - substrate
+  prerequisites:
+  - PORT-013
+  evidence_target: E3
+  deliverables:
+  - adapter parity suite
+  - upstream provenance
+  - consumer migration
+  - archive patch
+  acceptance:
+  - all supported agent-process paths pass
+  - failure/cancellation semantics match
+  - no source consumer remains
+- task_id: PORT-015
+  title: Verify phenoForge absorption into Tasken
+  lane: consolidation
+  repositories:
+  - phenoForge
+  - Tasken
+  prerequisites:
+  - PORT-014
+  evidence_target: E3
+  deliverables:
+  - task/DAG/cache/plugin contract map
+  - parity benchmark
+  - consumer cutover
+  - tombstone
+  acceptance:
+  - every retained contract has a Tasken implementation or accepted rejection
+  - source fixtures pass target
+  - source can archive
+- task_id: PORT-100
+  title: Resolve FocalPoint and phenotype-apps identity collision
+  lane: forensic_identity
+  repositories:
+  - FocalPoint
+  - phenotype-apps
+  prerequisites:
+  - PORT-000
+  evidence_target: E2
+  deliverables:
+  - branch/tag/history graph
+  - product identity alternatives
+  - accepted role decision
+  - migration/rollback plan
+  acceptance:
+  - one canonical product identity selected
+  - unrelated histories mapped
+  - default branch and README agree
+  - loser has explicit disposition
+- task_id: PORT-101
+  title: Restore HeliosLab human-approved role
+  lane: forensic_identity
+  repositories:
+  - HeliosLab
+  - Agentora
+  - helios-cli
+  - forgecode
+  prerequisites:
+  - PORT-100
+  evidence_target: E3
+  deliverables:
+  - role decision
+  - correct charter/README
+  - first desktop coding-workbench journey
+  - dependency boundary
+  acceptance:
+  - HeliosLab no longer claims feature-flag workspace identity
+  - one end-to-end internal workbench journey passes
+  - SDK/CLI responsibilities are explicit
+- task_id: PORT-102
+  title: Resolve Eventra and missing phenoEvents successor
+  lane: forensic_identity
+  repositories:
+  - Eventra
+  prerequisites:
+  - PORT-101
+  evidence_target: E2
+  deliverables:
+  - successor search
+  - package/consumer map
+  - keep/rename/absorb decision
+  acceptance:
+  - no archive into nonexistent target
+  - one real event-bus authority selected
+  - migration and rollback are explicit
+- task_id: PORT-103
+  title: Resolve sandbox/runtime authority
+  lane: forensic_identity
+  repositories:
+  - nanovms
+  - PhenoCompose
+  - phenotype-infra
+  - Eidolon
+  - thegent
+  prerequisites:
+  - PORT-102
+  evidence_target: E2
+  deliverables:
+  - implementation/provenance graph
+  - runtime-tier corpus
+  - authority decision
+  - source-target map
+  acceptance:
+  - one isolation runtime authority exists
+  - product IaC and runtime code are separated
+  - no whole-product copy remains authoritative
+- task_id: PORT-104
+  title: Resolve Grapheon versus Tracera
+  lane: forensic_identity
+  repositories:
+  - Grapheon
+  - Tracera
+  prerequisites:
+  - PORT-103
+  evidence_target: E3
+  deliverables:
+  - domain/job comparison
+  - schema/API overlap map
+  - consumer evidence
+  - keep-or-absorb ADR
+  acceptance:
+  - generic claim graph has independent users/contracts or is absorbed
+  - no duplicate evidence authority remains
+- task_id: PORT-105
+  title: Resolve Planify versus Planify2
+  lane: forensic_identity
+  repositories:
+  - Planify
+  - Planify2
+  prerequisites:
+  - PORT-104
+  evidence_target: E3
+  deliverables:
+  - upstream/delta map
+  - clean-install comparison
+  - migration plan
+  - one canonical decision
+  acceptance:
+  - one active Plane-derived fork at most
+  - meaningful divergence is proven
+  - loser becomes reference or archive
+- task_id: PORT-200
+  title: Close Benchora HMVP as benchmark authority
+  lane: canonical_completion
+  repositories:
+  - Benchora
+  - Tracera
+  prerequisites:
+  - PORT-000
+  evidence_target: E4
+  deliverables:
+  - stable CLI/package install
+  - comparator schema
+  - immutable result bundle
+  - Tracera export
+  - one real comparative case study
+  acceptance:
+  - fresh install works
+  - baseline and candidate run on same corpus
+  - raw results reproduce
+  - claim and limitations are explicit
+- task_id: PORT-201
+  title: Close ResearchLedger HMVP
+  lane: canonical_completion
+  repositories:
+  - ResearchLedger
+  - Tracera
+  prerequisites:
+  - PORT-200
+  evidence_target: E3
+  deliverables:
+  - source/provenance schema
+  - claim graph export
+  - dated SOTA snapshot
+  - clean CLI journey
+  acceptance:
+  - sources and claims are queryable
+  - conflicting evidence can coexist
+  - export is consumed by Tracera
+- task_id: PORT-202
+  title: Close SessionLedger HMVP
+  lane: canonical_completion
+  repositories:
+  - SessionLedger
+  - Tracera
+  prerequisites:
+  - PORT-201
+  evidence_target: E3
+  deliverables:
+  - capture/replay format contract
+  - privacy threat model
+  - daemon/viewer journey
+  - Tracera export
+  acceptance:
+  - lossless replay fixture passes
+  - sensitive data controls are tested
+  - format migration and recovery work
+- task_id: PORT-203
+  title: Close phenotype-journeys hard-evidence HMVP
+  lane: canonical_completion
+  repositories:
+  - phenotype-journeys
+  - Tracera
+  prerequisites:
+  - PORT-202
+  evidence_target: E4
+  deliverables:
+  - non-LLM assertions
+  - signed evidence manifest
+  - consumer fixture
+  - comparison case study
+  acceptance:
+  - bad journey cannot pass via model hallucination
+  - clean install succeeds
+  - evidence imports into Tracera

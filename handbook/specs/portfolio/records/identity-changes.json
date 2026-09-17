@@ -1,0 +1,74 @@
+[
+  {
+    "repository_id": 960016965,
+    "opening_name": "zz-pause-AgsLag",
+    "closing_name": "zz-inc-AgsLag",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1017123874,
+    "opening_name": "zz-pause-RIPFitnessApp",
+    "closing_name": "zz-inc-RIPFitnessApp",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1020556829,
+    "opening_name": "zz-pause-VibeKanban",
+    "closing_name": "zz-inc-VibeKanban",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1164684829,
+    "opening_name": "zz-pause-Parpoura",
+    "closing_name": "zz-inc-Parpoura",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1164703420,
+    "opening_name": "zz-pause-QuadSGM",
+    "closing_name": "zz-inc-QuadSGM",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1273002818,
+    "opening_name": "zz-aa-dep-MobileMcp",
+    "closing_name": null,
+    "classification": "unresolved-absence",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1284536541,
+    "opening_name": "zz-pause-SessionLedger",
+    "closing_name": "zz-inc-SessionLedger",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1308558334,
+    "opening_name": "zz-pause-ResearchLedger",
+    "closing_name": "zz-inc-ResearchLedger",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  },
+  {
+    "repository_id": 1319179066,
+    "opening_name": "AirLock",
+    "closing_name": "zz-aa-dep-AirLock",
+    "classification": "identity-preserving-rename",
+    "authorization_verified": false,
+    "meaning": "Do not infer deletion, preservation parity, role approval or new work permission."
+  }
+]

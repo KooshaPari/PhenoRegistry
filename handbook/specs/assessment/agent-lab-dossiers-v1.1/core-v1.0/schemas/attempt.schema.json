@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/attempt.schema.json",
+  "title": "attempt",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "attempt"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assignment_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epoch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "enum": [
+        "INITIAL",
+        "REPLAY",
+        "RESTART",
+        "RESEED",
+        "REPLAN",
+        "CONTRACT_REVISION"
+      ]
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome": {
+      "enum": [
+        "SUCCESS",
+        "FAILURE",
+        "BLOCKED",
+        "CENSORED",
+        "LEARNING"
+      ]
+    },
+    "result_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "failure_fingerprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cost_units": {
+      "type": "number",
+      "minimum": 0
+    },
+    "elapsed_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "assignment_ref",
+    "epoch_id",
+    "actor_ref",
+    "operation",
+    "subject_digest",
+    "hypothesis",
+    "method",
+    "outcome",
+    "result_refs",
+    "failure_fingerprint",
+    "cost_units",
+    "elapsed_seconds",
+    "next_action"
+  ],
+  "additionalProperties": false
+}

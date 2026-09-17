@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1-proposal",
+  "status": "DRAFT - NOT AUTHORIZED",
+  "plan_id": null,
+  "plan_digest": null,
+  "created_at": null,
+  "expires_at": null,
+  "host_ids": [],
+  "volume_id_preconditions": [],
+  "file_fingerprint_preconditions": [],
+  "dependency_owners": [],
+  "required_metadata": [],
+  "destination_headroom_evidence": null,
+  "source_quiescence_evidence": null,
+  "recovery_evidence": [],
+  "actions": [],
+  "estimated_reclaim_bytes": null,
+  "rollback_plan": null,
+  "approval": null,
+  "permanent_purge_authorized": false
+}

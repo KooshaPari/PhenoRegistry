@@ -1,0 +1,461 @@
+{
+  "protocol": "Product Evaluation Protocol",
+  "version": "0.2.0-draft",
+  "status": "PROPOSED_DESIGN",
+  "prepared_on": "2026-09-10",
+  "artifact_kind": "machine_readable_design_contract",
+  "not": [
+    "JSON Schema",
+    "implemented evaluator",
+    "recovered canonical criterion catalog",
+    "authorization grant",
+    "assessment of any real repository"
+  ],
+  "defaults": {
+    "mode": "audit",
+    "product_mutation": false,
+    "network_execution": "requires accepted runner policy",
+    "registry_write": "requires destination authorization",
+    "publication": "private unless explicitly permitted",
+    "scoring_policy": "locked before grading",
+    "authority_migration": false,
+    "live_agileplus_required": false,
+    "live_tracera_required": false,
+    "human_authored_repo_intent_required": false,
+    "human_signoff_per_routine_action": false,
+    "authority_source": "actual standing mandate and platform permissions, never this template",
+    "registry_unavailable": "preserve pending/blocked outbox; continue unrelated authorized work"
+  },
+  "entities": {
+    "subject_snapshot": [
+      "id",
+      "product_id",
+      "repository_ids",
+      "source_revisions",
+      "tree_and_patch_digests",
+      "artifact_digests",
+      "dependency_manifest",
+      "environment_fingerprint",
+      "configuration_fingerprint",
+      "beneficiary_slice",
+      "journey_ids",
+      "scope_limits"
+    ],
+    "inventory_item": [
+      "id",
+      "subject_id",
+      "kind",
+      "declaration_or_observation",
+      "source_anchor",
+      "observed_at",
+      "content_digest"
+    ],
+    "criterion_definition": [
+      "id",
+      "revision",
+      "domain",
+      "pillar",
+      "outcome",
+      "scope",
+      "applicability_predicate",
+      "measurement",
+      "evidence_requirements",
+      "thresholds_or_anchors",
+      "severity",
+      "gate_membership",
+      "negative_controls",
+      "invalidators",
+      "freshness_policy",
+      "source_mappings"
+    ],
+    "criterion_instance": [
+      "id",
+      "criterion_id",
+      "criterion_revision",
+      "subject_id",
+      "scope_bindings",
+      "profile_id",
+      "weight_group"
+    ],
+    "evaluation_result": [
+      "id",
+      "instance_id",
+      "assessment_id",
+      "applicability",
+      "execution",
+      "verdict",
+      "evidence_state",
+      "observation",
+      "evidence_refs",
+      "evaluator_provenance",
+      "produced_at",
+      "supersedes"
+    ],
+    "finding": [
+      "id",
+      "assessment_id",
+      "kind",
+      "claim",
+      "affected_subjects",
+      "source_and_evidence_refs",
+      "severity",
+      "uncertainties",
+      "next_action_kind",
+      "owner",
+      "disposition",
+      "work_refs"
+    ],
+    "decision": [
+      "id",
+      "assessment_id",
+      "choice",
+      "authority_ref",
+      "policy_version",
+      "alternatives",
+      "supporting_evidence",
+      "contradicting_evidence",
+      "uncertainties",
+      "budget",
+      "stop_conditions",
+      "rollback_or_revival",
+      "expires_or_review_at"
+    ],
+    "assessment_manifest": [
+      "id",
+      "subject_ids",
+      "catalog_lock",
+      "profile_lock",
+      "policy_lock",
+      "runner_lock",
+      "inventory_refs",
+      "result_refs",
+      "finding_refs",
+      "decision_refs",
+      "coverage_statement",
+      "derived_report_refs",
+      "registration_state"
+    ],
+    "intent_node": [
+      "id",
+      "revision",
+      "authorship",
+      "parent_intent_refs",
+      "authority_ref",
+      "authority_status",
+      "beneficiary",
+      "outcome",
+      "derivation_rationale",
+      "epistemic_status",
+      "commitment",
+      "supporting_evidence",
+      "contradicting_evidence",
+      "alternatives",
+      "review_trigger"
+    ],
+    "assignment_capsule": [
+      "id",
+      "epoch",
+      "intent_revision",
+      "mandate_ref",
+      "subject_scope",
+      "outcome_requirements",
+      "non_goals",
+      "criterion_profile_lock",
+      "evaluator_lock",
+      "fixtures_environment",
+      "evidence_requirements",
+      "qualification_refs",
+      "resource_envelope",
+      "stop_conditions"
+    ],
+    "restart_packet": [
+      "assignment_epoch",
+      "mandate_ref",
+      "current_subject",
+      "accepted_baseline",
+      "candidate_refs",
+      "current_claim_and_lease",
+      "failure_fingerprints",
+      "rejected_hypotheses",
+      "reproduction_refs",
+      "next_discriminating_action",
+      "remaining_budget"
+    ],
+    "assignment_amendment": [
+      "id",
+      "old_epoch",
+      "new_epoch",
+      "rationale",
+      "authority_ref",
+      "alternatives",
+      "qualification_refs",
+      "affected_claims",
+      "product_delta",
+      "evidence_delta",
+      "scope_delta",
+      "evaluator_delta",
+      "policy_delta",
+      "bridge_assessment_refs"
+    ]
+  },
+  "relations": [
+    "declares",
+    "requires",
+    "implements",
+    "exercises",
+    "verifies",
+    "contradicts",
+    "depends_on",
+    "supersedes",
+    "invalidates",
+    "motivates",
+    "authorized_by",
+    "derived_from",
+    "qualifies",
+    "refutes",
+    "accepted_under",
+    "observed_by"
+  ],
+  "states": {
+    "applicability": [
+      "APPLICABLE",
+      "NOT_APPLICABLE",
+      "UNRESOLVED"
+    ],
+    "execution": [
+      "NOT_STARTED",
+      "RUNNING",
+      "COMPLETED",
+      "ERROR",
+      "BLOCKED"
+    ],
+    "verdict": [
+      "PASS",
+      "FAIL",
+      "UNKNOWN",
+      "CONTESTED"
+    ],
+    "evidence": [
+      "CURRENT",
+      "STALE",
+      "INVALID",
+      "MISSING"
+    ],
+    "registration": [
+      "NOT_REQUESTED",
+      "PENDING",
+      "RECORDED",
+      "BLOCKED",
+      "ERROR"
+    ],
+    "finding_kind": [
+      "IMPLEMENTATION_GAP",
+      "VERIFICATION_GAP",
+      "REQUIREMENT_GAP",
+      "RESEARCH_GAP",
+      "OPPORTUNITY",
+      "CONTRADICTORY_CLAIM",
+      "UNDECLARED_BEHAVIOR",
+      "OBSOLETE_CAPABILITY",
+      "MEASUREMENT_DEFECT"
+    ],
+    "next_action_kind": [
+      "IMPLEMENT",
+      "INSTRUMENT",
+      "TEST",
+      "CLARIFY_REQUIREMENT",
+      "RESEARCH",
+      "EXPERIMENT",
+      "REMOVE",
+      "NO_ACTION"
+    ],
+    "measurement_mode": [
+      "STRUCTURAL",
+      "EXECUTABLE",
+      "ANCHORED_SEMANTIC",
+      "OBSERVED_OUTCOME"
+    ],
+    "mode": [
+      "audit",
+      "plan",
+      "improve",
+      "operate",
+      "portfolio"
+    ],
+    "intent_authorship": [
+      "HUMAN_AUTHORED",
+      "AGENT_DERIVED",
+      "AGENT_ORIGINATED",
+      "INHERITED",
+      "MIXED"
+    ],
+    "intent_authority": [
+      "PROPOSED",
+      "DELEGATED",
+      "UNAUTHORIZED",
+      "UNRESOLVED"
+    ],
+    "intent_epistemic": [
+      "HYPOTHESIS",
+      "SUPPORTED",
+      "CONTRADICTED",
+      "UNKNOWN"
+    ],
+    "intent_commitment": [
+      "PROPOSED",
+      "ACCEPTED_FOR_EXPERIMENT",
+      "ACCEPTED_FOR_IMPLEMENTATION",
+      "DEFERRED",
+      "REJECTED",
+      "SUPERSEDED"
+    ],
+    "feedback_kind": [
+      "BINDING_INSTRUCTION",
+      "PREFERENCE",
+      "OBSERVATION",
+      "QUESTION",
+      "BRAINSTORM",
+      "OVERRIDE"
+    ],
+    "retry_kind": [
+      "REPLAY",
+      "RESTART",
+      "RESEED",
+      "REPLAN",
+      "CONTRACT_REVISION"
+    ]
+  },
+  "invariants": [
+    "Definitions and profiles are versioned independently of assessment results.",
+    "Inventory presence cannot satisfy a behavioral claim without its required evidence.",
+    "A result with missing, invalid or stale required evidence cannot count as a current verified pass or fail.",
+    "Runner ERROR and BLOCKED states remain unresolved outcomes; they are not automatically product failures.",
+    "NOT_APPLICABLE requires accepted scope rationale; unresolved applicability is never silently excluded.",
+    "Waivers and deferrals remain dispositions, not passing verification results.",
+    "A mandatory gate cannot pass with a required unresolved or failing obligation.",
+    "Speculative opportunities do not become release obligations without accepted requirement authority.",
+    "A low engineering score does not establish lack of product value; a high score does not establish demand.",
+    "Frozen input reducers are deterministic; semantic assessments may disagree and must preserve that disagreement.",
+    "Evaluator, policy and oracle changes require separate acceptance and cannot silently weaken a builder's gate.",
+    "Superseding results preserve original records and provenance.",
+    "A report commit must not claim to contain its own finalized commit hash.",
+    "Every external effect is covered by a separate standing mandate; the word grade is not a permission grant.",
+    "Agent authorship is not a criterion failure; authority, evidence, and decision commitment remain separate.",
+    "A trace link does not establish semantic justification; derived intent requires rationale and possible refutation.",
+    "No local workflow depends on a live AgilePlus, Tracera, or registry service; absent integration is reported honestly.",
+    "Assignment and evaluator changes are allowed under authority but establish a new qualified baseline.",
+    "Product progress, evidence acquisition, scope change, evaluator correction, and policy change remain distinct.",
+    "A fresh session does not reset the cumulative resource budget or expand permissions.",
+    "Accepted local evidence is not a registry receipt; integrations preserve identity and idempotency.",
+    "Positive controls and negative controls are both needed for grader qualification.",
+    "External or real consumer effects cannot be replaced by repeated internal declarations.",
+    "The protocol supplies a finite declared trust boundary, not an absolute self-verification proof.",
+    "No eventual-convergence guarantee follows from repeated prompts or cheap workers."
+  ],
+  "scoring": {
+    "scope": "frozen, applicable binary criterion instances with fixed positive weights",
+    "P": "weight of completed PASS with all required current valid evidence",
+    "F": "weight of completed FAIL with all required current valid evidence",
+    "U": "remaining applicable weight; includes unknown, contested, blocked, error, missing, invalid or stale evidence",
+    "metrics": {
+      "assessed_pass_rate": "P / (P + F)",
+      "assessment_coverage": "(P + F) / (P + F + U)",
+      "verified_satisfaction": "P / (P + F + U)",
+      "optimistic_bound": "(P + U) / (P + F + U)"
+    },
+    "zero_denominator": "null; never 100 percent",
+    "unresolved_applicability": "separate unresolved-scope count and weight; affected complete aggregate or maturity decisions remain blocked",
+    "interpretation": "reporting quantities and unresolved-outcome bounds, not probabilities or statistical confidence intervals",
+    "weight_integrity": "fixed domain/group budgets; no extra weight for synonyms, crosswalk mappings or cosmetic criterion splits",
+    "ordinal_ratings": "preserve native behavioral anchors; no automatic interval-scale averaging"
+  },
+  "profile_composition": [
+    "universal outcomes",
+    "product form",
+    "observed and accepted capabilities",
+    "risk obligations",
+    "platform and environment",
+    "beneficiary slice and journeys",
+    "target lifecycle stage"
+  ],
+  "readiness_axes": [
+    "DESIGN_READY",
+    "PIPELINE_VERIFIED",
+    "PRODUCT_VERIFIED",
+    "PUBLISHED_VERIFIED",
+    "OPERATED_VERIFIED",
+    "VALUE_EVIDENCE",
+    "AGENT_READINESS"
+  ],
+  "maturity_scope": [
+    "product",
+    "beneficiary_slice",
+    "journey",
+    "release_or_deployment",
+    "environment",
+    "target_profile"
+  ],
+  "maturity_labels": [
+    "CONCEPT",
+    "FEASIBILITY_PROTOTYPE",
+    "INTEGRATED_PROTOTYPE",
+    "SLICE_MVP",
+    "SUPPORTED_PRODUCT",
+    "VALIDATED_EXPANDING_PRODUCT"
+  ],
+  "value_evidence_labels": [
+    "UNTESTED",
+    "INTERNAL_DOGFOOD",
+    "EXTERNAL_PILOT",
+    "REPEATED_BENEFIT",
+    "SUSTAINED_USE"
+  ],
+  "ledger": {
+    "S": "actual evaluated subject revision and associated artifact/environment/dependency digests",
+    "R": "later owner-held report commit referencing S; resolved by publisher after commit creation",
+    "L": "later registry receipt referencing assessment identifier, S, R, and canonical bundle digest",
+    "timestamps": [
+      "observed_at",
+      "produced_at",
+      "recorded_at"
+    ],
+    "concurrency": "immutable per-run or per-producer events; idempotent reconciliation; compare-and-swap projections",
+    "publication_failure": "keep visible pending/blocked/error state; retry with idempotency key rather than regrade",
+    "integrity": "signed receipts or independently anchored digests where required; timestamps alone are not a trust guarantee",
+    "privacy": "redacted references by default; authorized raw evidence in owner-controlled stores with retention"
+  },
+  "evaluator_qualification_cases": [
+    "empty config files and rich README but nonexistent functionality",
+    "minimal useful CLI with no irrelevant cloud tooling",
+    "tests removed or skipped while runner reports success",
+    "integration only works against a mock",
+    "stale results or wrong source/artifact digest",
+    "internally inconsistent score totals",
+    "duplicated criteria or unauthorized applicability exclusions",
+    "malicious instructions in repository or tool output",
+    "critical failure buried under many easy passes",
+    "engineering excellence without beneficiary evidence"
+  ],
+  "acceptance_of_v0": "Derive a bounded assignment under actual authority; qualify its grader; measure/repair or learn; reverify actual effects; hand off durable state to a fresh session; preserve true local/registry status without requiring unfinished platforms.",
+  "revision_basis": "User clarification: agent-operated lab, derived intent and evaluator construction, tool-independent bootstrap.",
+  "bootstrap_files": [
+    "START-HERE-AGENT.md",
+    "bootstrap-assignment.template.yaml"
+  ],
+  "three_loops": [
+    "MISSION_AND_PORTFOLIO",
+    "ASSIGNMENT_AND_MEASUREMENT",
+    "EXECUTION"
+  ],
+  "qualified_progress_metrics": [
+    "elapsed_time_to_qualified_slice",
+    "net_gate_closure_within_epoch",
+    "reopen_rate",
+    "time_since_material_result_or_learning",
+    "repeated_failure_fingerprints",
+    "verification_resource_cost",
+    "grader_disagreement",
+    "blocked_dependency_path",
+    "total_resource_cost_per_accepted_outcome"
+  ]
+}

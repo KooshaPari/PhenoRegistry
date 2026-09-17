@@ -1,0 +1,14 @@
+{
+  "kind": "feedback",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "source_ref": "REPLACE_WITH_SOURCE_REF",
+  "source_text": "REPLACE_WITH_SOURCE_TEXT",
+  "classification": "INSTRUCTION",
+  "interpretation": "REPLACE_WITH_INTERPRETATION",
+  "affected_subjects": [],
+  "decision_ref": "REPLACE_WITH_DECISION_REF",
+  "authority_effect": "REPLACE_WITH_AUTHORITY_EFFECT"
+}

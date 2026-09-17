@@ -1,0 +1,27 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "game-mod",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D14",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Authorized local game builds, licensing/auth/session contention, save integrity, deterministic test fixtures, frame/audio and screenshot evidence. No DRM bypass or unauthorized account use.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/census-item.schema.json",
+  "title": "census-item",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "census-item"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "device_or_repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision_or_digest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "enum": [
+        "TEMPLATE",
+        "GENERATOR",
+        "CHECKER",
+        "RESULT",
+        "REPORT",
+        "DRAFT",
+        "OTHER"
+      ]
+    },
+    "lineage_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "coverage_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "disposition": {
+      "enum": [
+        "UNREVIEWED",
+        "ADOPT",
+        "SPLIT",
+        "MERGE",
+        "ADAPT",
+        "REJECT",
+        "HISTORICAL_ONLY"
+      ]
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "source_ref",
+    "device_or_repository",
+    "path",
+    "revision_or_digest",
+    "classification",
+    "lineage_refs",
+    "coverage_limitations",
+    "disposition",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

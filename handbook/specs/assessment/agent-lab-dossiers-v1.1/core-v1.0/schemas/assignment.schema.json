@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/assignment.schema.json",
+  "title": "assignment",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "assignment"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "epoch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "LOCKED",
+        "SUPERSEDED"
+      ]
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "mandate_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "catalog_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scope_review_status": {
+      "enum": [
+        "PENDING",
+        "ACCEPTED"
+      ]
+    },
+    "scope_review_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "criterion_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "criterion_revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "obligation_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE",
+              "UNRESOLVED"
+            ]
+          },
+          "applicability_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "applicability_decision_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "mandatory": {
+            "type": "boolean"
+          },
+          "measurement_binding_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "criterion_id",
+          "criterion_revision",
+          "obligation_key",
+          "scope",
+          "applicability",
+          "applicability_reason",
+          "applicability_decision_ref",
+          "weight",
+          "mandatory",
+          "measurement_binding_ref"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_instance_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "required_instance_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "epoch_id",
+    "status",
+    "subject_id",
+    "subject_digest",
+    "mandate_ref",
+    "intent_ref",
+    "catalog_digest",
+    "profile_id",
+    "coverage_statement",
+    "created_at",
+    "scope_review_status",
+    "scope_review_ref",
+    "instances",
+    "gates"
+  ],
+  "additionalProperties": false
+}

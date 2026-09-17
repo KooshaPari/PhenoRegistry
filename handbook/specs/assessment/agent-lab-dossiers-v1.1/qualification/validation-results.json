@@ -1,0 +1,95 @@
+{
+  "recorded_at": "2026-09-11T23:27:20.716325+00:00",
+  "new_tests": 35,
+  "core_tests": 68,
+  "independent_schema_records": 288,
+  "records_by_kind": {
+    "assignment": 9,
+    "dossier": 9,
+    "assessment": 9,
+    "evidence": 10,
+    "result": 101,
+    "measurement-binding": 102,
+    "finding": 37,
+    "decision": 8,
+    "qualification": 2,
+    "outbox": 1
+  },
+  "dossiers": [
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "RESTORE-BEFORE",
+      "example_class": "EXECUTED_FIXTURE",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "RESTORE-AFTER",
+      "example_class": "EXECUTED_FIXTURE",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "PARCELKIT",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "DRAFTBOARD",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "HARBORAPI",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "RELAYSUITE",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "GRADER-BEFORE",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    },
+    {
+      "status": "CONSISTENT",
+      "dossier_id": "GRADER-AFTER",
+      "example_class": "ILLUSTRATIVE_SCENARIO",
+      "outputs_checked": 6,
+      "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+    }
+  ],
+  "master": {
+    "status": "CONSISTENT",
+    "dossier_id": "REPLACE_WITH_ID",
+    "example_class": "TEMPLATE",
+    "outputs_checked": 6,
+    "claim_limit": "Record, local digest, and rendering consistency only; not independent authentication or real-product acceptance."
+  },
+  "core_manifest": {
+    "status": "PASS",
+    "files_verified": 183,
+    "meaning": "Integrity relative to this unsigned manifest; no independent authenticity claim."
+  },
+  "browser": {
+    "method": "Playwright set_content",
+    "version": "Chromium 144.0.7559.96",
+    "direct_file_navigation_tested": false,
+    "dashboard_mobile_document_overflow": false
+  },
+  "authenticity": "UNSIGNED"
+}

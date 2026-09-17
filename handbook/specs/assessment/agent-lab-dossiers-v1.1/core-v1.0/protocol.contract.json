@@ -1,0 +1,58 @@
+{
+  "name": "Agent Lab Evaluation System",
+  "version": "1.0.0",
+  "release_status": "FINAL_HANDOFF",
+  "schema_status": "VERSIONED_LOCAL_CONTRACTS",
+  "bootstrap": "OWNER_HELD_FILES_NO_CENTRAL_SERVICE_DEPENDENCY",
+  "loops": [
+    "MISSION_PORTFOLIO",
+    "ASSIGNMENT_MEASUREMENT",
+    "EXECUTION"
+  ],
+  "authorship": [
+    "HUMAN",
+    "AGENT_DERIVED",
+    "AGENT_ORIGINATED",
+    "INHERITED",
+    "MIXED"
+  ],
+  "invariants": [
+    "ACTUAL_AUTHORITY_NOT_SELF_GRANTED",
+    "AGENT_AUTHORSHIP_NOT_A_DEFECT",
+    "CANONICAL_RECORD_NOT_UNQUESTIONABLE_FACT",
+    "EPOCH_BASELINE_IMMUTABLE_FOR_ACCEPTANCE",
+    "PRODUCT_EVIDENCE_SCOPE_EVALUATOR_POLICY_DELTAS_SEPARATE",
+    "POSITIVE_AND_NEGATIVE_ORACLE_CONTROLS",
+    "UNKNOWN_IS_NOT_FAIL_OR_PASS",
+    "MANDATORY_GATES_NONCOMPENSATING",
+    "RESTART_RETAINS_NEGATIVE_KNOWLEDGE_AND_BUDGET",
+    "TOOLS_NOT_PORTFOLIO_REGISTRIES",
+    "INTEGRATION_BLOCKS_LOCALIZED",
+    "NO_CLAIM_FROM_ARTIFACT_PRESENCE_ALONE"
+  ],
+  "catalog": {
+    "domains": 18,
+    "pillars": 108,
+    "candidate_criteria": 1080,
+    "origin": "AUTHORED_FOR_THIS_RELEASE",
+    "executable_adapter_count_claim": null,
+    "historical_recovery_complete": false
+  },
+  "record_schemas": 25,
+  "profiles": 14,
+  "role_prompts": 12,
+  "runbooks": 8,
+  "adoption_work_items": 36,
+  "runtime": {
+    "path": "tools/pep.py",
+    "language": "Python",
+    "target": "3.10+",
+    "dependencies": "standard library only",
+    "role": "structure/binding/evidence-byte consistency and deterministic reduction",
+    "not_authority_or_truth_oracle": true
+  },
+  "limitations_ref": "docs/22-LIMITATIONS-AND-COMPLETION-MATRIX.md",
+  "qualification_ref": "qualification/VALIDATION-REPORT.md",
+  "entrypoint": "START-HERE-AGENT.md",
+  "specification": "docs/00-SPECIFICATION.md"
+}

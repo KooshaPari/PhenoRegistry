@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1363521465",
+  "name": "PhenoFabric",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "3c052cc28d80b5dcc0170e56c7364311373390de",
+  "sampled_commit_date_utc": "2026-09-16T05:27:34Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent commits replace bespoke/demo login UI with hosted AuthKit integration and desktop authentication commands. Actual successful authentication and two-node I/O were not executed here.",
+  "assessment": "UI_AUTH_INTEGRATION_PRODUCT_PATH_OPEN",
+  "role": "Distributed compute/data/surface/I-O fabric",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Adopting hosted authentication is a reuse decision, not completion of local/LAN/WAN routing.",
+    "Preserve accepted offline/local trust behavior and supported native callback/token lifecycle.",
+    "Do not copy credential values into shared handoffs."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1363521465-A1",
+      "title": "Qualify the actual authentication contract",
+      "work": "Test success, denial, cancellation, expired session, unavailable network and native callback; compare expected local/offline behavior with accepted policy.",
+      "acceptance": "No demo success, credential leak or irrecoverable login loop; actual scoped user state.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1363521465",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1363521465-A2",
+      "title": "Prove one real two-node path",
+      "work": "Use genuine producer/consumer endpoints and negotiated capabilities with cancellation, disconnect/reconnect and correct focus/input/output ownership.",
+      "acceptance": "End-to-end transport and effects observed; no graph-only fixture stands in for working devices.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1363521465",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1363521465-A3",
+      "title": "Demonstrate locality and contention behavior",
+      "work": "Choose shared-memory/local transport where supported and qualified network adapters otherwise; measure tail latency, quality and foreground impact.",
+      "acceptance": "No hidden copies/queues or unsupported capability passes; actual Mac/PC workflow proof and dependency contracts.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1363521465",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "PhenoShared can host reusable libraries; PhenoFabric remains responsible for the full product behavior. Shared-source changes require consumer tests on both sides.",
+  "parent_acceptance": "The installed fabric completes a real multi-device workflow with safe state, recovery and measured performance.",
+  "sources": [
+    {
+      "id": "CUR-1363521465-S01",
+      "url": "https://github.com/KooshaPari/PhenoFabric/commit/3c052cc28d80b5dcc0170e56c7364311373390de",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

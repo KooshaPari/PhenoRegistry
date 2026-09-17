@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/work-item.schema.json",
+  "title": "work-item",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "work-item"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assignment_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "finding_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acceptance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "owner_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "READY",
+        "CLAIMED",
+        "RUNNING",
+        "BLOCKED",
+        "VERIFICATION",
+        "ACCEPTED",
+        "REJECTED"
+      ]
+    },
+    "budget_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wakeup_condition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "assignment_ref",
+    "finding_refs",
+    "outcome",
+    "acceptance",
+    "dependencies",
+    "owner_ref",
+    "claim_ref",
+    "status",
+    "budget_ref",
+    "next_action",
+    "wakeup_condition"
+  ],
+  "additionalProperties": false
+}

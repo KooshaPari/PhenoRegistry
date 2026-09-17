@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.4",
+  "id": "SYN-RUBRIC",
+  "scope_id": "SYN-SCOPE",
+  "subject_id": "SYN-SUBJECT",
+  "revision": "1",
+  "profile_id": "SYN-PROFILE",
+  "source_revision": "SYN-SHA-1",
+  "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "approval_reference": "SYN-NOT-AN-APPROVAL",
+  "synthetic": true,
+  "categories": [
+    {
+      "id": "intent_design",
+      "title": "Intent Design",
+      "weight": 12
+    },
+    {
+      "id": "spec_architecture",
+      "title": "Spec Architecture",
+      "weight": 10
+    },
+    {
+      "id": "behavior",
+      "title": "Behavior",
+      "weight": 20
+    },
+    {
+      "id": "assurance",
+      "title": "Assurance",
+      "weight": 18
+    },
+    {
+      "id": "experience",
+      "title": "Experience",
+      "weight": 14
+    },
+    {
+      "id": "safety_recovery",
+      "title": "Safety Recovery",
+      "weight": 12
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "weight": 5
+    },
+    {
+      "id": "delivery_operations",
+      "title": "Delivery Operations",
+      "weight": 5
+    },
+    {
+      "id": "docs_research",
+      "title": "Docs Research",
+      "weight": 4
+    }
+  ],
+  "criteria": [
+    {
+      "id": "SYN-intent_design",
+      "category_id": "intent_design",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-spec_architecture",
+      "category_id": "spec_architecture",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-behavior",
+      "category_id": "behavior",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-assurance",
+      "category_id": "assurance",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": true,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-experience",
+      "category_id": "experience",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-safety_recovery",
+      "category_id": "safety_recovery",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 1,
+      "mandatory": true,
+      "critical": true,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-ecosystem",
+      "category_id": "ecosystem",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-delivery_operations",
+      "category_id": "delivery_operations",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    },
+    {
+      "id": "SYN-docs_research",
+      "category_id": "docs_research",
+      "weight": 1,
+      "max_units": 100,
+      "passing_fraction": 0.85,
+      "mandatory": false,
+      "critical": false,
+      "oracle_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "required_modalities": [
+        "test-report"
+      ],
+      "required_actions": [
+        "read-only"
+      ],
+      "max_age_hours": 24,
+      "allow_probabilistic": false,
+      "rationale": "Synthetic arithmetic demonstration only."
+    }
+  ]
+}

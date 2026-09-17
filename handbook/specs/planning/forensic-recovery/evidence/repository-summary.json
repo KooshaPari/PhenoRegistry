@@ -1,0 +1,22 @@
+[
+  {
+    "repo": "helios-cli",
+    "status": "unavailable",
+    "evidence_gap": "Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid."
+  },
+  {
+    "repo": "heliosLab",
+    "status": "unavailable",
+    "evidence_gap": "Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid."
+  },
+  {
+    "repo": "forgecode",
+    "status": "unavailable",
+    "evidence_gap": "Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid."
+  },
+  {
+    "repo": "Agentora",
+    "status": "unavailable",
+    "evidence_gap": "Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid."
+  }
+]

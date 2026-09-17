@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "rendered_chapters": 48,
+  "local_links_checked": 633,
+  "invalid_links": [],
+  "duplicate_ids": false,
+  "offline_external_assets": 0,
+  "scope": "Generated reader internal anchors and package-relative links; external source links are references, not availability checks."
+}

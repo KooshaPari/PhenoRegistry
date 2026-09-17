@@ -1,0 +1,31 @@
+{
+  "fixture_kind": "SYNTHETIC_TOY_ONLY",
+  "narrative": "restored successfully",
+  "expected": {
+    "records": [
+      {
+        "id": "alpha",
+        "value": 7
+      },
+      {
+        "id": "beta",
+        "value": "retained"
+      }
+    ]
+  },
+  "observed": {
+    "records": [
+      {
+        "id": "alpha",
+        "value": 7
+      },
+      {
+        "id": "beta",
+        "value": "retained"
+      }
+    ]
+  },
+  "restored_integrity": true,
+  "corrupt_backup_rejected": true,
+  "assertions_executed": 2
+}

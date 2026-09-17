@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1.0",
+  "example_only": true,
+  "production_eligible": false,
+  "subject_id": "example:wslc",
+  "subject_kind": "runtime_candidate",
+  "runtime_kind": "wslc",
+  "observed_version": null,
+  "capabilities": [
+    {
+      "name": "oci_lifecycle",
+      "scope": "runtime",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "docker_api_consumer",
+      "scope": "runtime",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "swarm_orchestration",
+      "scope": "runtime",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "quadlet_lifecycle",
+      "scope": "runtime",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "persistent_volume_ownership",
+      "scope": "runtime",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "cgroup_v2",
+      "scope": "host",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "kvm",
+      "scope": "host",
+      "result": "unqualified",
+      "evidence_refs": []
+    },
+    {
+      "name": "sse_full_chain",
+      "scope": "network_path",
+      "result": "unqualified",
+      "evidence_refs": []
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1191459198",
+  "name": "ShareCLI",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "19cdb88da5e79f0b06953499d51444016c07e8d2",
+  "sampled_commit_date_utc": "2026-09-16T10:03:02Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "PR858 is merged: API metadata reports 141 changed files, 15 additions and 29,625 deletions. Commit prose describes unrelated/unused module removal and removal of a util command. The PR description has older smaller counts.",
+  "assessment": "MERGED_COMPRESSION_PARITY_NOT_ESTABLISHED",
+  "role": "Process/resource supervision and workload orchestration",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Compilation plus absent internal references does not prove public library/CLI consumers never used a removed surface.",
+    "Do not undo useful cleanup wholesale; classify accepted current, explicitly future, duplicate, public, fixture and obsolete semantics.",
+    "Latest dependencies move to a newer Substrate revision; current source availability and new canonical owners require verification."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1191459198-A1",
+      "title": "Qualify removed public and internal surfaces",
+      "work": "Use the exact final PR diff and before/after exported API/CLI inventory; identify consumer references and approved retirement/compatibility decisions.",
+      "acceptance": "No required behavior silently removed; replaced/moved capability has qualified successor and migration evidence.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1191459198",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1191459198-A2",
+      "title": "Prove the real supervisor under contention",
+      "work": "Run dissimilar/similar tasks, cancellation, retries, crash cleanup and credential/cache isolation while protecting foreground audio/game use.",
+      "acceptance": "Semantic equivalence and relevant latency/resource benefits survive cleanup; honest independent assurance reports.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1191459198",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1191459198-A3",
+      "title": "Resolve reusable ownership and ship",
+      "work": "Coordinate mirrored/copied packages and Substrate dependencies with PhenoShared, then install/update the current CLI/tray outside source.",
+      "acceptance": "One authoritative writer or explicit sync contract; real consumer tests and distributed-artifact identity.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1191459198",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Prefer a shared improvement or mature dependency over reintroducing utility modules. Do not improve local LOC by forcing every consumer to fork replacements.",
+  "parent_acceptance": "A leaner installed supervisor preserves necessary semantics and reduces actual ecosystem maintenance and contention.",
+  "sources": [
+    {
+      "id": "CUR-1191459198-S01",
+      "url": "https://github.com/KooshaPari/ShareCLI/pull/858",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1191459198-S02",
+      "url": "https://github.com/KooshaPari/ShareCLI/commit/19cdb88da5e79f0b06953499d51444016c07e8d2",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

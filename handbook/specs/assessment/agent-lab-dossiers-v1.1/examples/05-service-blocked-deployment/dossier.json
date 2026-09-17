@@ -1,0 +1,215 @@
+{
+  "kind": "dossier",
+  "schema_version": "1.1.0",
+  "id": "HARBORAPI",
+  "record_status": "EXAMPLE",
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "title": "HarborAPI / local slice ready, hosted slice blocked",
+  "subtitle": "Unknown deployment evidence is not the same as a failed product test.",
+  "purpose": "Provide reliable authenticated local API behavior and later a separately verified hosted release.",
+  "boundary": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+  "beneficiary": "Local operator now; hosted clients only after the hosted acceptance gate.",
+  "authorship": "AGENT_ORIGINATED",
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment.",
+  "genesis_rationale": "This fictional repository was created by agents to isolate a consumer-facing capability. Its boundary is a hypothesis, not proof that a separate repository is necessary.",
+  "alternatives": [
+    "Implement the capability in an existing owner",
+    "Use a suitable existing dependency",
+    "Run a narrower experiment",
+    "Do not build"
+  ],
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example.",
+  "non_goals": [
+    "Claim real-repository completion",
+    "Require a human-authored repository idea",
+    "Wait for a central registry to become operational"
+  ],
+  "subject_identity": {
+    "source_revision": null,
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact.",
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  },
+  "inventory": [
+    {
+      "id": "INV-01",
+      "item": "Local API",
+      "declared": "Authenticated persistent behavior",
+      "observed_or_assumed": "Local path assumed passing",
+      "gap": "Only local fixture scope",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-02",
+      "item": "Hosted artifact",
+      "declared": "Same intended release",
+      "observed_or_assumed": "Not observable with available authority",
+      "gap": "Publication evidence blocked",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-03",
+      "item": "Hosted routing / TLS",
+      "declared": "Reachable protected endpoint",
+      "observed_or_assumed": "Not measured",
+      "gap": "Unknown",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-04",
+      "item": "Registry receipt",
+      "declared": "Assessment recorded centrally",
+      "observed_or_assumed": "No delivery receipt",
+      "gap": "Pending projection, not lab-wide blocker",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    }
+  ],
+  "maturity": {
+    "scenario_or_scoped_label": "Illustrative: local slice MVP; hosted release BLOCKED, not failed by inference.",
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding.",
+    "axes": [
+      {
+        "axis": "PRODUCT_VERIFIED",
+        "status": "ILLUSTRATIVE PASS — LOCAL ONLY",
+        "basis": "Local required behavior assumed passing."
+      },
+      {
+        "axis": "PUBLISHED_VERIFIED",
+        "status": "BLOCKED_AUTHORITY",
+        "basis": "Hosted target not verified."
+      },
+      {
+        "axis": "OPERATED_VERIFIED",
+        "status": "UNKNOWN",
+        "basis": "No hosted operating window."
+      },
+      {
+        "axis": "TENANCY_SCOPE",
+        "status": "UNRESOLVED",
+        "basis": "Deployment capability may add mandatory authorization obligations."
+      }
+    ],
+    "value_evidence": "The scenario provides local functional premises but no actual observed operational benefit or hosted adoption evidence."
+  },
+  "finding_ids": [
+    "F-I-07",
+    "F-I-08",
+    "F-I-09",
+    "F-I-10",
+    "F-I-14"
+  ],
+  "decision_ids": [
+    "DEC-NEXT"
+  ],
+  "semantic_reviews": [
+    {
+      "topic": "Does this assignment serve the parent outcome?",
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository.",
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome.",
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product.",
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions.",
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+    }
+  ],
+  "next_action": "Continue authorized local work and queue hosted verification. Resolve target tenancy before any release claim.",
+  "stop_condition": "Do not deploy, claim hosted readiness, or infer public authorization from local success.",
+  "restart_packet": {
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work.",
+    "failed_hypotheses": [
+      "A well-formed record is not proof the product behavior occurred."
+    ],
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations.",
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  },
+  "lineage": {
+    "previous_dossier_id": null,
+    "change_class": "ILLUSTRATIVE_BASELINE",
+    "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+  },
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit.",
+  "row_notes": [
+    {
+      "instance_id": "I-01",
+      "title": "The core operation produces the required result for a representative valid input",
+      "interpretation": "Local request completes the documented operation.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-02",
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+      "interpretation": "Malformed records are rejected without storage corruption.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-03",
+      "title": "Invalid credentials cannot create an authenticated session",
+      "interpretation": "Local invalid tokens cannot create authenticated sessions.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-04",
+      "title": "Required data survives the journey's supported restart boundary",
+      "interpretation": "Local records survive the supported restart boundary.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-05",
+      "title": "A known injected failure is visible through the selected observability path",
+      "interpretation": "An injected local failure is visible in the declared diagnostic path.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-06",
+      "title": "Missing credentials produce a scoped actionable blocker",
+      "interpretation": "Missing deployment credentials produce a scoped diagnostic.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-07",
+      "title": "The deployed artifact matches the intended release digest",
+      "interpretation": "No authority is available to inspect or change the hosted deployment.",
+      "next_action": "Wait for explicitly scoped hosted verification access."
+    },
+    {
+      "instance_id": "I-08",
+      "title": "Routing reaches the actual intended product surface",
+      "interpretation": "Routing to the actual hosted application is not verified.",
+      "next_action": "Verify the requested host through the authorized route."
+    },
+    {
+      "instance_id": "I-09",
+      "title": "TLS or equivalent transport expectations are verified where applicable",
+      "interpretation": "Required transport security is not measured on the hosted target.",
+      "next_action": "Obtain authorized hosted transport evidence."
+    },
+    {
+      "instance_id": "I-10",
+      "title": "Health and core-journey checks pass after deployment",
+      "interpretation": "The hosted post-deployment journey has not run.",
+      "next_action": "Run it only after the target and authority are resolved."
+    },
+    {
+      "instance_id": "I-11",
+      "title": "Missing deployment authority does not block unrelated local verification",
+      "interpretation": "Independent local verification continues despite blocked deployment.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-12",
+      "title": "The workflow supports the permitted native no-Docker path when required by the fleet",
+      "interpretation": "The local native no-Docker path remains supported.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-13",
+      "title": "A result from one environment is not silently promoted to another environment's guarantee",
+      "interpretation": "Local performance is not promoted to a hosted guarantee.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-14",
+      "title": "External and internal trust boundaries are distinguishable",
+      "interpretation": "Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+      "next_action": "Resolve hosted tenancy before releasing."
+    }
+  ]
+}

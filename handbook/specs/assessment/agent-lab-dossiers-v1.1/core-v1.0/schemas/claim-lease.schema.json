@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/claim-lease.schema.json",
+  "title": "claim-lease",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "claim-lease"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "work_item_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "token": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state": {
+      "enum": [
+        "PROPOSED",
+        "HELD",
+        "EXPIRED",
+        "RELEASED",
+        "REVOKED"
+      ]
+    },
+    "fencing_authority_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resource_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "work_item_ref",
+    "actor_ref",
+    "token",
+    "expires_at",
+    "state",
+    "fencing_authority_ref",
+    "resource_scope"
+  ],
+  "additionalProperties": false
+}

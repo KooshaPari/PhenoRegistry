@@ -1,0 +1,498 @@
+[
+  {
+    "id": 707502317,
+    "name": "zz-pause-ref-ProjectSpyn",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 861430079,
+    "name": "BytePort",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 960016965,
+    "name": "zz-pause-AgsLag",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 980996178,
+    "name": "zz-pause-Localbase",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 998124581,
+    "name": "zz-pause-ref-AtomsTech",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1009324469,
+    "name": "zz-pause-ref-AtomsBot",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1015249259,
+    "name": "zz-pause-ref-KaskMan",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1017123874,
+    "name": "zz-pause-RIPFitnessApp",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1020556829,
+    "name": "zz-pause-VibeKanban",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1048244869,
+    "name": "zz-pause-ref-Synthia",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1069864709,
+    "name": "zz-pause-ref-472P2FlameWar",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1077977094,
+    "name": "zz-aa-dep-AgentApiPlusPlus",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1159182006,
+    "name": "zz-aa-dep-CliproxyApiPlusPlus",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1162254344,
+    "name": "Tracera",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1162255140,
+    "name": "zz-pause-Thegent",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1164684442,
+    "name": "Civis",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1164684829,
+    "name": "zz-pause-Parpoura",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1164703420,
+    "name": "zz-pause-QuadSGM",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1165315873,
+    "name": "helios-cli",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1165351720,
+    "name": "portage",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1167587447,
+    "name": "HeliosLab",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1169608854,
+    "name": "AgilePlus",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1169864396,
+    "name": "PhenoDesign",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1177712269,
+    "name": "Dino",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1185005735,
+    "name": "zz-aa-dep-UnityDoorstop",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "master"
+  },
+  {
+    "id": 1191459198,
+    "name": "sharecli",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1194326424,
+    "name": "zz-aa-dep-Planify",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "master"
+  },
+  {
+    "id": 1199812615,
+    "name": "zz-pause-GitHub",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1200273587,
+    "name": "zz-tbd-Pheno",
+    "classification_by_name": "target-undecided",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1201113097,
+    "name": "PhenoRegistry",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1201987910,
+    "name": "PhenoAI",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1214745478,
+    "name": "PhenoMLX",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1220333985,
+    "name": "PhenoTooling",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1220334053,
+    "name": "PhenoInfra",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1220437668,
+    "name": "Eidolon",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1220449881,
+    "name": "zz-pause-FocalPoint",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1226104769,
+    "name": "forgecode",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1226168548,
+    "name": "zz-aa-dep-Bifrost",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1226171396,
+    "name": "OmniRoute",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1226264690,
+    "name": "zz-pause-ref-NetWeave",
+    "classification_by_name": "paused-reference",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1226547140,
+    "name": "Pine",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1241972761,
+    "name": "WorldSphereMod",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1262466303,
+    "name": "Melosviz",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1269596554,
+    "name": "substrate",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1269695199,
+    "name": "PhenoLab",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  {
+    "id": 1271708536,
+    "name": "PhenoGfx",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1271786703,
+    "name": "zz-aa-dep-PhenoMCPServers",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1272990345,
+    "name": "zz-tbd-PhenoApps",
+    "classification_by_name": "target-undecided",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "apps-extract"
+  },
+  {
+    "id": 1273002789,
+    "name": "zz-tbd-MobileCli",
+    "classification_by_name": "target-undecided",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1273002818,
+    "name": "zz-aa-dep-MobileMcp",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1284536541,
+    "name": "zz-pause-SessionLedger",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1308558334,
+    "name": "zz-pause-ResearchLedger",
+    "classification_by_name": "paused",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1308570444,
+    "name": "CivicSurvival-public",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1315997929,
+    "name": "zz-aa-dep-TurboQuant",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1319179066,
+    "name": "AirLock",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1322607630,
+    "name": "ghostty",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1328507619,
+    "name": "zz-aa-dep-PhenoUnslothStudio",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1330430083,
+    "name": "zz-aa-dep-CompoundSpheres3D",
+    "classification_by_name": "dependency",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1349458262,
+    "name": "KooshaPari",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1363521465,
+    "name": "PhenoFabric",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  {
+    "id": 1365855438,
+    "name": "jcode",
+    "classification_by_name": "active-named",
+    "archived": false,
+    "visibility": "public",
+    "default_branch": "master"
+  },
+  {
+    "id": 1369043600,
+    "name": "zz-tbd-PhenoSDKs",
+    "classification_by_name": "target-undecided",
+    "archived": false,
+    "visibility": "private",
+    "default_branch": "main"
+  }
+]

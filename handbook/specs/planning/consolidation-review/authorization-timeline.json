@@ -1,0 +1,87 @@
+{
+  "not_an_authorization_engine": true,
+  "coverage": "Selected pivotal instructions only; full entity authorization must resolve additional intervening messages",
+  "events": [
+    {
+      "id": "D01",
+      "message_index": "M0305",
+      "timestamp_utc": "2026-09-12T05:54:35.811245Z",
+      "action": "allow",
+      "scope": "delete named quartet immediately presented",
+      "evidence_id": "E01",
+      "interpretation": "Specific scoped approval, not global"
+    },
+    {
+      "id": "D02",
+      "message_index": "M0516",
+      "timestamp_utc": "2026-09-12T07:04:59.410075Z",
+      "action": "object-and-restore-report",
+      "scope": "broader deletion campaign",
+      "evidence_id": "E03",
+      "interpretation": "User reports unintended deletions/restores"
+    },
+    {
+      "id": "D03",
+      "message_index": "M0790",
+      "timestamp_utc": "2026-09-12T08:07:49.111046Z",
+      "action": "restrict",
+      "scope": "tombstone/full migration only; long-term RichCliKit/Conft deletion desire",
+      "evidence_id": "E03",
+      "interpretation": "Do not infer immediate delete permission"
+    },
+    {
+      "id": "D04",
+      "message_index": "M1033",
+      "timestamp_utc": "2026-09-12T08:56:51.622097Z",
+      "action": "restrict",
+      "scope": "no deletion without express user permission",
+      "evidence_id": "E04",
+      "interpretation": "Attempt has missing execution output"
+    },
+    {
+      "id": "D05",
+      "message_index": "M3565",
+      "timestamp_utc": "2026-09-15T06:02:47.799552Z",
+      "action": "deny-target",
+      "scope": "pheno as destination; do not touch paused",
+      "evidence_id": "E08",
+      "interpretation": "Specific future proposals must be reconciled"
+    },
+    {
+      "id": "D06",
+      "message_index": "M3613",
+      "timestamp_utc": "2026-09-15T06:45:13.399174Z",
+      "action": "select-MCQ",
+      "scope": "two tooling imports; nanovms into BytePort; landing/DevOps into pheno",
+      "evidence_id": "E08",
+      "interpretation": "Interpret only using M3610 options; not universal pheno authority"
+    },
+    {
+      "id": "D07",
+      "message_index": "M3710",
+      "timestamp_utc": "2026-09-15T07:59:59.302012Z",
+      "action": "skip",
+      "scope": "landing/nanovms/DevOps",
+      "evidence_id": "E08",
+      "interpretation": "Later skip supersedes active execution for named subjects"
+    },
+    {
+      "id": "D08",
+      "message_index": "M3711",
+      "timestamp_utc": "2026-09-15T08:00:04.991781Z",
+      "action": "skip",
+      "scope": "PlayCua/Eidolon",
+      "evidence_id": "E08",
+      "interpretation": "Timestamp below is normalized from exact source record at build time"
+    },
+    {
+      "id": "D09",
+      "message_index": "M4164",
+      "timestamp_utc": "2026-09-15T10:45:00.069670Z",
+      "action": "allow",
+      "scope": "PhenoProject/RichCliKit/PhenoRuntime/SubstrateAdaptersBundle deletion",
+      "evidence_id": "E12",
+      "interpretation": "Named exception including declared fork; preservation not independently proved"
+    }
+  ]
+}

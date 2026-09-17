@@ -1,0 +1,277 @@
+{
+  "review_date": "2026-09-07",
+  "status": "Recommended inventory; nothing installed or benchmarked on the user machines.",
+  "tools": [
+    {
+      "id": "windows-topology",
+      "name": "Native Windows Storage cmdlets + CIM",
+      "tier": "Core",
+      "platform": "Windows",
+      "agent_interface": "Structured PowerShell objects / JSON adapter",
+      "decision": "Map devices, partitions, volumes and mount paths before cleanup; reconcile provider coverage rather than trusting a drive letter.",
+      "sources": [
+        "S06"
+      ]
+    },
+    {
+      "id": "mac-topology",
+      "name": "diskutil + tmutil",
+      "tier": "Core on Mac",
+      "platform": "macOS",
+      "agent_interface": "Native command output; prefer supported machine-readable variants",
+      "decision": "Understand APFS container sharing and snapshots; keep capacity-pool accounting separate from per-volume logical size.",
+      "sources": [
+        "S07",
+        "S31"
+      ]
+    },
+    {
+      "id": "windows-space",
+      "name": "WizTree",
+      "tier": "Preferred Windows scan",
+      "platform": "Windows",
+      "agent_interface": "CLI CSV export",
+      "decision": "Fast local NTFS MFT scan. Elevate only the approved collector when necessary. Filename/size duplicate matches are candidates, not verified byte identity. Personal-only free licensing; commercial use needs suitable license.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ]
+    },
+    {
+      "id": "windows-index",
+      "name": "Everything + ES",
+      "tier": "Preferred Windows search",
+      "platform": "Windows",
+      "agent_interface": "Query CLI; structured exports",
+      "decision": "Use as the persistent name/metadata index; do not interpret an absent result as proof a file is absent outside index coverage.",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "id": "windows-reporting",
+      "name": "TreeSize Professional",
+      "tier": "Paid alternative",
+      "platform": "Windows",
+      "agent_interface": "CLI / saved reports / scheduled scans",
+      "decision": "Choose instead of the default space-reporting frontend when scheduled reporting and an established operator GUI matter. Scheduling is Professional-only.",
+      "sources": [
+        "S05"
+      ]
+    },
+    {
+      "id": "mac-space",
+      "name": "ncdu",
+      "tier": "Preferred Mac structured scan",
+      "platform": "macOS / Unix",
+      "agent_interface": "JSON export",
+      "decision": "Export the tree to a file and query offline. One-filesystem scans and output depth must not be confused with total-size accuracy. Interactive deletion is not an analysis permission.",
+      "sources": [
+        "S08"
+      ]
+    },
+    {
+      "id": "portable-space",
+      "name": "dua-cli",
+      "tier": "Optional portable analyzer",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "CLI aggregates / interactive UI",
+      "decision": "Useful compiled scanner. APFS clone deduplication is opt-in and not a complete reclaimable-block oracle.",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "duplicates",
+      "name": "czkawka_cli",
+      "tier": "Preferred cross-platform duplicate review",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "CLI reports",
+      "decision": "Select exact-content hash mode for duplicate review. Similar-media detection and same-name groups must remain separate. No automatic removal.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "id": "duplicates-json",
+      "name": "fclones",
+      "tier": "Optional structured alternative",
+      "platform": "Linux-first; validate Windows / macOS",
+      "agent_interface": "JSON / CSV groups and separate action commands",
+      "decision": "Attractive separation of detection from action, but upstream platform caveats prevent making it the default across both target hosts.",
+      "sources": [
+        "S11"
+      ]
+    },
+    {
+      "id": "health",
+      "name": "smartmontools smartctl",
+      "tier": "Core where hardware supports it",
+      "platform": "Cross-platform; device/controller-dependent",
+      "agent_interface": "JSON telemetry",
+      "decision": "Collect drive identity, health, wear and errors where exposed. Missing telemetry means unsupported/unknown, not healthy. No repair or destructive tests.",
+      "sources": [
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "id": "cross-host-copy",
+      "name": "rclone",
+      "tier": "Core when moving data between hosts",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "CLI; SFTP backend",
+      "decision": "Use controlled copies plus check/readback. SFTP hash capability depends on the remote backend/shell; it does not promise native metadata fidelity.",
+      "sources": [
+        "S14",
+        "S15"
+      ]
+    },
+    {
+      "id": "windows-copy",
+      "name": "Robocopy",
+      "tier": "Core Windows-native movement",
+      "platform": "Windows",
+      "agent_interface": "CLI / logs / exit codes",
+      "decision": "Useful when Windows metadata matters. Preview first. Do not make mirror/purge the default; those operations can delete destination data.",
+      "sources": [
+        "S16"
+      ]
+    },
+    {
+      "id": "backup",
+      "name": "restic",
+      "tier": "Core data backup",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "CLI / repository checks",
+      "decision": "Independent versioned backup. Windows VSS is supported with the documented option; application consistency still needs owner-aware handling. Verify repository data and actual restores.",
+      "sources": [
+        "S17",
+        "S18"
+      ]
+    },
+    {
+      "id": "sync",
+      "name": "Syncthing",
+      "tier": "Optional selected-folder sync",
+      "platform": "Host availability depends on build/distribution",
+      "agent_interface": "REST API",
+      "decision": "Not full-drive management or a backup substitute. Versioning primarily archives incoming remote changes, not every local edit.",
+      "sources": [
+        "S19",
+        "S20"
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "OpenSSH",
+      "tier": "Core cross-host control",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "SSH / SFTP",
+      "decision": "Each host executes native collectors. Restrict identities and supported commands; use independent approved credentials for both directions.",
+      "sources": [
+        "S21",
+        "S22"
+      ]
+    },
+    {
+      "id": "private-network",
+      "name": "Tailscale network layer",
+      "tier": "Optional reachability",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "Private network under normal OpenSSH",
+      "decision": "Use ordinary OpenSSH over the network for symmetry. Tailscale SSH server is not supported on Windows; its macOS server requires CLI tailscaled.",
+      "sources": [
+        "S23"
+      ]
+    },
+    {
+      "id": "catalog",
+      "name": "SQLite or DuckDB storage catalog",
+      "tier": "Recommended integration component",
+      "platform": "Per chosen implementation",
+      "agent_interface": "Bounded read queries / snapshot files",
+      "decision": "This is a proposed design, not a supplied service: share cached scans across agents, retain errors, scope and timestamps, and avoid flooding contexts with file trees.",
+      "sources": []
+    },
+    {
+      "id": "owner-cache",
+      "name": "Application-owned cleanup commands; uv as verified example",
+      "tier": "Core cleanup policy",
+      "platform": "Per application",
+      "agent_interface": "Native owner CLI",
+      "decision": "Use supported cleanup operations rather than deleting internal cache structure. uv placement across filesystems can lose hardlink benefits.",
+      "sources": [
+        "S30"
+      ]
+    },
+    {
+      "id": "mcp-search",
+      "name": "mamertofabian/mcp-everything-search",
+      "tier": "Optional adapter",
+      "platform": "Windows / macOS / Linux",
+      "agent_interface": "MCP",
+      "decision": "Windows Everything, macOS mdfind and Linux locate/plocate are distinct backends with different coverage. Search only; not a disk-accounting system.",
+      "sources": [
+        "S26"
+      ]
+    },
+    {
+      "id": "mcp-fs",
+      "name": "MCP filesystem reference server",
+      "tier": "Optional narrow file access",
+      "platform": "Host runtime-dependent",
+      "agent_interface": "MCP",
+      "decision": "Explicit roots plus OS permissions. This is a reference server, not proof of an audited read-only security boundary.",
+      "sources": [
+        "S25"
+      ]
+    },
+    {
+      "id": "mcp-info",
+      "name": "dknell/mcp-system-info",
+      "tier": "Optional convenience",
+      "platform": "Host/runtime-dependent",
+      "agent_interface": "MCP get_disk_info",
+      "decision": "Convenient usage and mount overview; does not replace disk topology, folder accounting or SMART telemetry.",
+      "sources": [
+        "S27"
+      ]
+    },
+    {
+      "id": "mcp-disk",
+      "name": "sandraschi/disk-usage-mcp",
+      "tier": "Evaluation only",
+      "platform": "Validate on target hosts",
+      "agent_interface": "MCP / reports / dashboard per README",
+      "decision": "Closest existing match to the baseline: wraps dua and czkawka. Its README is not evidence of production readiness; no runtime/source audit was completed. Validate install procedure instead of trusting the pasted uvx claim.",
+      "sources": [
+        "S24"
+      ]
+    },
+    {
+      "id": "mcp-terminal",
+      "name": "Desktop Commander",
+      "tier": "Optional supervised bridge",
+      "platform": "Windows / macOS",
+      "agent_interface": "MCP terminal and file tools",
+      "decision": "Useful if the agent lacks local shell access. Broad execution remains broad execution; do not treat settings alone as a security boundary.",
+      "sources": [
+        "S28"
+      ]
+    },
+    {
+      "id": "tree-context",
+      "name": "Smart Tree / Deep Directory Tree MCP",
+      "tier": "Optional navigation only",
+      "platform": "Per project",
+      "agent_interface": "MCP / compact directory context",
+      "decision": "Useful for selected paths, not the central authority for full-machine storage accounting.",
+      "sources": [
+        "S32",
+        "S33"
+      ]
+    }
+  ]
+}

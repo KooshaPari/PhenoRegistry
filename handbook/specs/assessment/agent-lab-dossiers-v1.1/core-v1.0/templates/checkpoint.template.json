@@ -1,0 +1,22 @@
+{
+  "kind": "checkpoint",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "assignment_ref": "REPLACE_WITH_ASSIGNMENT_REF",
+  "epoch_id": "REPLACE_WITH_EPOCH_ID",
+  "mandate_ref": "REPLACE_WITH_MANDATE_REF",
+  "subject_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "accepted_baseline_ref": "REPLACE_WITH_ACCEPTED_BASELINE_REF",
+  "candidate_refs": [],
+  "failure_fingerprints": [],
+  "rejected_hypothesis_refs": [],
+  "evidence_refs": [],
+  "claim_ref": "REPLACE_WITH_CLAIM_REF",
+  "remaining_budget_ref": "REPLACE_WITH_REMAINING_BUDGET_REF",
+  "next_action": "REPLACE_WITH_NEXT_ACTION",
+  "stop_conditions": [
+    "REPLACE_WITH_STOP_CONDITIONS"
+  ]
+}

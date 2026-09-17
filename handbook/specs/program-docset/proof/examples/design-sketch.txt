@@ -1,0 +1,2 @@
+SYNTHETIC FLOW: idle -> request -> processing -> result OR error -> retry
+Not an approved product mockup or an actual runtime capture.

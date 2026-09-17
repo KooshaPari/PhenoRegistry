@@ -1,0 +1,184 @@
+[
+  {
+    "id": "WP01",
+    "title": "Reconcile current ID and decision projection",
+    "owner_role": "PhenoRegistry + portfolio coordinator",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F01",
+      "F11"
+    ],
+    "scope": "Resolve the seven incubation transitions, AirLock role and MobileMcp access. Preserve original cohort. Do not create a new registry.",
+    "acceptance": "One ID-keyed current map with explicit unknowns, decision provenance and allowed actions; latest no-work restrictions cannot be overridden by a prefix.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP02",
+    "title": "Qualify the verification instruments",
+    "owner_role": "AgilePlus + PhenoTooling owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F02",
+      "F03"
+    ],
+    "scope": "Repair real coverage aggregate and docs-health checks in isolated branches; reuse existing native instruments.",
+    "acceptance": "Known missing/below-threshold/wrong-revision/empty-suite/broken-link fixtures fail locally and hosted. No blanket waivers or echo success.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP03",
+    "title": "Close source/dependency migration gaps",
+    "owner_role": "PhenoFabric + HeliosLab + PhenoInfra/package owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F04",
+      "F10"
+    ],
+    "scope": "Locate API-equivalent dependency sources, recorded pins and supported toolchains; verify clean resolution with no warm checkout.",
+    "acceptance": "All selected manifest/FFI/consumer builds succeed from an isolated fetch and the correct supported toolchain, or have exact owned blockers.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP04",
+    "title": "Resolve duplicate writer and release ownership",
+    "owner_role": "sharecli + Eidolon + PhenoTooling + PhenoAI leads",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F05",
+      "F12"
+    ],
+    "scope": "Declare per-package single writer, mirror/distribution policy, consumers and source history. Freeze conflicting writers, not useful independent work.",
+    "acceptance": "One known authority per live capability; integration strategy and parity tests before retiring copies.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP05",
+    "title": "Qualify installed Civis game candidate",
+    "owner_role": "Civis product/integration owner",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F07"
+    ],
+    "scope": "Use current accepted game-first horizon and required graphics/audio/assets. Preserve new persistence tests and run the player path outside the checkout.",
+    "acceptance": "Install/launch, meaningful play/intervention, save/quit/reopen and bounded continuation all pass; exact build/profile and honest visual review attached.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP06",
+    "title": "Qualify actual coding harness fork channels",
+    "owner_role": "forgecode + jcode + helios-cli owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F06",
+      "F08",
+      "F09"
+    ],
+    "scope": "Choose actual executable/build root, package it and verify current installed identity; preserve completed Forgecode promotion.",
+    "acceptance": "Clean supported-host install/update, session continuity, streaming recovery and negative scope tests pass on the distributed artifact.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP07",
+    "title": "Qualify reusable AgilePlus/PhenoDocs delivery",
+    "owner_role": "AgilePlus + accepted docs/landing consumer owners",
+    "hard_dependencies": [
+      "WP02"
+    ],
+    "finding_ids": [
+      "F02",
+      "F06",
+      "F14"
+    ],
+    "scope": "Prove repository-scoped work receipts and unrelated-project tooling use. Locate actual PhenoDocs renderer/publishing owner and qualify one site.",
+    "acceptance": "No hardcoded portfolio state; docs build with links/private-data checks; one real CLI/MCP/desktop work journey and correct published artifact.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP08",
+    "title": "Qualify Tracera as the intended product graph",
+    "owner_role": "Tracera owner",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F09"
+    ],
+    "scope": "Resolve identity, then execute persistent product import/navigation/gap discovery on the actual frontend/backend profile.",
+    "acceptance": "A real product model survives restart and exposes a genuine missing capability with evidence; supporting logs do not replace product identity.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP09",
+    "title": "Run a real routing/inference/evaluation chain",
+    "owner_role": "OmniRoute + substrate + PhenoMLX + portage + PhenoLab owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F09",
+      "F12",
+      "F13"
+    ],
+    "scope": "Use existing pinned providers/backends and selected workload; keep internal fork delivery distinct from upstream contribution.",
+    "acceptance": "Successful and known-negative task results, auth/cancel/fallback/budget behavior and measured resource/quality outcomes are retained.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP10",
+    "title": "Qualify native game/graphics/creative consumers",
+    "owner_role": "Dino + WorldSphereMod + PhenoGfx + Melosviz owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F13"
+    ],
+    "scope": "Use supported installed game/media targets and actual assets; qualify shared dependency boundaries without relabeling mocks as live.",
+    "acceptance": "Real consumer task, errors, persist/reopen and uninstall/export behavior are demonstrated. Copyright/licensing, hardware and source provenance explicit.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP11",
+    "title": "Close privacy, publication and brand truth",
+    "owner_role": "KooshaPari + accepted landing/design owners",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F06",
+      "F14"
+    ],
+    "scope": "Repair stale product/download identities from qualified records, preserve upstream attribution and inspect actual editable asset ownership.",
+    "acceptance": "Public pages route to intended products, no private captures escape, metrics have query provenance, and current art/screenshots match actual products.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  },
+  {
+    "id": "WP12",
+    "title": "Keep retained forks and paused/reference scope safe",
+    "owner_role": "Dependency maintainers + coordinator",
+    "hard_dependencies": [],
+    "finding_ids": [
+      "F01",
+      "F11"
+    ],
+    "scope": "Apply role-specific maintenance/custody, verify active consumers and resolve explicit no-work supersessions without mass operations.",
+    "acceptance": "No unapproved deletion/archive/branch rewrite; unknown custody remains unknown; meaningful retained interfaces work or are explicitly blocked.",
+    "effort_estimate": null,
+    "status": "PROPOSED_NOT_CLAIMED",
+    "write_authority": "requires existing scoped owner authorization; this audit grants none"
+  }
+]

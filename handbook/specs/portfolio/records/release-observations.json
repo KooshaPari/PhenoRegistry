@@ -1,0 +1,50 @@
+[
+  {
+    "repo": "Civis",
+    "tag": "v0.5.0",
+    "published_utc": "2026-09-05T11:37:26Z",
+    "assets": "Linux AMD64, macOS ARM64 and Windows AMD64 CLI archives",
+    "source": "S305",
+    "gap": "No current game-app acceptance established by these CLI assets."
+  },
+  {
+    "repo": "sharecli",
+    "tag": "v0.3.0",
+    "published_utc": "2026-07-05T02:45:13Z",
+    "assets": "macOS ARM64 and Linux AMD64 archives plus checksums (uploaded July 14)",
+    "source": "S306",
+    "gap": "Map the current source/UI changes to an actual candidate; old release is not current-source proof."
+  },
+  {
+    "repo": "AgilePlus",
+    "tag": "v2026.09.0",
+    "published_utc": "2026-08-22T04:44:13Z",
+    "assets": "None attached in returned release",
+    "source": "S309",
+    "gap": "Title promises installers; resolve actual artifact channel and clean installation."
+  },
+  {
+    "repo": "forgecode",
+    "tag": "v2.13.21-h.0.2.1",
+    "published_utc": "2026-09-15T09:19:49Z",
+    "assets": "None attached in returned release",
+    "source": "S311",
+    "gap": "Integration and tag exist; verified installable fork channel not established."
+  },
+  {
+    "repo": "jcode",
+    "tag": "v0.85.0-k1.0.0",
+    "published_utc": "2026-09-15T04:59:14Z",
+    "assets": "One FreeBSD x86_64 archive",
+    "source": "S308",
+    "gap": "Mac/Windows fork distribution and installed identity need actual receipts."
+  },
+  {
+    "repo": "Tracera",
+    "tag": "v0.49",
+    "published_utc": "2026-09-03T08:24:33Z",
+    "assets": "Windows archive and release manifest",
+    "source": "S310",
+    "gap": "Scorecard checkpoint is not qualified proof of current product-graph frontend/backend."
+  }
+]

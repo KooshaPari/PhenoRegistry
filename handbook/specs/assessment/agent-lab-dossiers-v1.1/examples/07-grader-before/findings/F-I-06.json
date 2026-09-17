@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-06",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "PATHJUDGE-SAME-SUBJECT",
+  "instance_refs": [
+    "I-06"
+  ],
+  "class": "MEASUREMENT_DEFECT",
+  "severity": "MEDIUM",
+  "claim": "In the fictional scenario: The corrected evaluator has not yet been versioned and qualified.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:measurement-owner",
+  "next_action_kind": "REVISE_ASSIGNMENT",
+  "status": "PROPOSED",
+  "wakeup_condition": "Collect the actual product evidence before accepting this claim."
+}

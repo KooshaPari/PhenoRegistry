@@ -1,0 +1,16 @@
+{
+  "kind": "claim-lease",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "work_item_ref": "REPLACE_WITH_WORK_ITEM_REF",
+  "actor_ref": "REPLACE_WITH_ACTOR_REF",
+  "token": "REPLACE_WITH_TOKEN",
+  "expires_at": "2026-09-10T23:00:00-07:00",
+  "state": "PROPOSED",
+  "fencing_authority_ref": "REPLACE_WITH_FENCING_AUTHORITY_REF",
+  "resource_scope": [
+    "REPLACE_WITH_RESOURCE_SCOPE"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "format": "DOSSIER_RENDER_RECEIPT_V1_1",
+  "renderer_version": "1.1.0",
+  "renderer_digest": "sha256:6504776ad4708c2799d3fbc50bbabc8d403a004ce42cb074e67b648a94f809ba",
+  "core_reducer_digest": "sha256:ac58230d111f1bb4542ad0818bd15e618b30067cc0f1c09d10355f6b21e48c52",
+  "schema_digest": "sha256:324acd4bc92509dd6b31f1d34ca06baba8fc4612d1987b967da26ac371f17a61",
+  "input_manifest_digest": "sha256:3e204d6e08963094fe707819ca7e6ec4314c1445f491e3f106c9ae5d0424178e",
+  "input_digest_profile": "PEP Python JSON digest profile; NOT RFC8785/JCS",
+  "inputs": [
+    {
+      "path": "assessment.json",
+      "bytes": 778,
+      "digest": "sha256:7932a41cb8b3799893d619ee565250929e72014db809a47f882eda34e21ec16a"
+    },
+    {
+      "path": "assignment.json",
+      "bytes": 5860,
+      "digest": "sha256:d144e5b1e5c635c8736ff6b35217e52ea311d54702318b8bebd69faebd9d6afb"
+    },
+    {
+      "path": "dossier.json",
+      "bytes": 4364,
+      "digest": "sha256:5002b8cf172c8e55e3c19df102c9448887fb54528e80234c75a7dfd4d8aa96fa"
+    },
+    {
+      "path": "subject.json",
+      "bytes": 122,
+      "digest": "sha256:700ebd7342bb41eae0df37c4175fc9f2a46f50810692533ddb429047611ed354"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "ASSESSMENT.html",
+      "digest": "sha256:5ab0fda6b5005b999df771e6493093e4ad85bcb588bd5434139cdd871e7103ea"
+    },
+    {
+      "path": "ASSESSMENT.md",
+      "digest": "sha256:5990781ff7a72bca2c67decb925066d45c8a596261c34fdecba73e0fa6c6d4e9"
+    },
+    {
+      "path": "views/assessment.json",
+      "digest": "sha256:2490fc33df54904021a2a6be5a350431adc96376760f1674a0d599b968953c74"
+    },
+    {
+      "path": "views/assessment.yaml",
+      "digest": "sha256:7b5a03df437c1ff6f3fa3271ca0e584f859e6815fc484cfec60143844eaef865"
+    },
+    {
+      "path": "views/records.jsonl",
+      "digest": "sha256:1c2ed5a5ee0af9334bc8af6d38ad393d21b604d7aebc48d94a8936dd221f6507"
+    }
+  ],
+  "generated_build_receipt_is_not_signed": true,
+  "source_revision": null,
+  "report_commit": null,
+  "registry_commit": null,
+  "registry_state": "NOT_REQUESTED"
+}

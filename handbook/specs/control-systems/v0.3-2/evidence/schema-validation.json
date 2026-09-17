@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "schema": "schemas/docset.schema.json",
+      "instance": "machine/docset.json",
+      "status": "passed"
+    },
+    {
+      "schema": "schemas/sources.schema.json",
+      "instance": "machine/sources.json",
+      "status": "passed"
+    },
+    {
+      "schema": "schemas/capability-example.schema.json",
+      "instance": "examples/podman_wsl2.unqualified.json",
+      "status": "passed"
+    },
+    {
+      "schema": "schemas/capability-example.schema.json",
+      "instance": "examples/wslc.unqualified.json",
+      "status": "passed"
+    },
+    {
+      "schema": "contracts/local-node-capability.schema.json",
+      "instance": "examples/local-node.unqualified.json",
+      "status": "passed"
+    },
+    {
+      "schema": "contracts/review-provider-state.schema.json",
+      "instance": "examples/review-provider.unqualified.json",
+      "status": "passed"
+    }
+  ]
+}

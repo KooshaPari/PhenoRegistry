@@ -1,0 +1,31 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-CORRUPT",
+  "instance_id": "I-CORRUPT",
+  "criterion_id": "PEP-13-03-03",
+  "assignment_id": "A-before",
+  "assignment_digest": "sha256:fd3f4f3243f9e6b52229d7761130988609453fa5b92c484ff8da78d77f7842ec",
+  "epoch_id": "E-TOY-1",
+  "subject_digest": "sha256:6d77fb232b7d0496ff96e887982239501ebd7f6a4a9075360564709d37cb6acc",
+  "execution": "COMPLETED",
+  "verdict": "FAIL",
+  "evidence_state": "CURRENT",
+  "review_status": "ACCEPTED",
+  "observed_at": "2026-09-11T23:19:57.152144+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-OBS"
+  ],
+  "qualification_ids": [
+    "Q-TOY"
+  ],
+  "evaluator_id": "toy-outcome-grader",
+  "evaluator_digest": "sha256:01f9fdab5fa5e8dcc42fc4d5a28d8c56cf44793be09287582bbcbab5c7d5d239",
+  "observation": {
+    "summary": "corrupt_backup_rejected observed as False on the actual bundled toy variant.",
+    "assertions_executed": 1,
+    "modality": "DYNAMIC"
+  },
+  "supersedes": []
+}

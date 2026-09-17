@@ -1,0 +1,161 @@
+{
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "product_execution_performed": false,
+  "notice": "All states are authored premises for explaining a filled audit. This is not a test transcript, consumer observation, or instrument qualification.",
+  "rows": [
+    {
+      "cid": "PEP-01-04-01",
+      "state": "PASS",
+      "note": "Authorship is agent-originated; acceptance is a separate experiment decision.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Intent authorship is recorded separately from intent acceptance",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-01-04-02",
+      "state": "PASS",
+      "note": "Parent capability is shared manifest parsing for two CLI consumers.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Derived intent links to its parent capability or mandate",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-01-04-04",
+      "state": "PASS",
+      "note": "The library owns parse/validate/normalize, not portfolio state.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "The repository boundary has an explicit consumer-facing responsibility",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-01-04-07",
+      "state": "PASS",
+      "note": "A module in the existing CLI and an upstream parser were compared before extraction.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "An existing-owner alternative was evaluated before creating duplicate authority",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-01-04-08",
+      "state": "UNKNOWN",
+      "note": "No absorption trigger was recorded.",
+      "action": "Set a review condition for one remaining consumer or lockstep releases.",
+      "mandatory": false,
+      "gate": null,
+      "title": "The repository has an absorption or reversal trigger",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-05-01-01",
+      "state": "PASS",
+      "note": "Consumer A parses a valid manifest into the specified fields.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-CONSUMER-SLICE",
+      "title": "The core operation produces the required result for a representative valid input",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-05-01-04",
+      "state": "PASS",
+      "note": "Malformed required fields fail with structured diagnostics.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-CONSUMER-SLICE",
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-01-02",
+      "state": "PASS",
+      "note": "A clean consumer installs the packaged artifact without the source checkout.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-CONSUMER-SLICE",
+      "title": "A clean consumer can install the selected artifact",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-07-01-02",
+      "state": "PASS",
+      "note": "Setup has no undeclared machine-specific paths.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Setup does not depend on an undocumented local path",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-08-01-02",
+      "state": "PASS",
+      "note": "Machine-readable successful results match a documented schema.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Machine-readable success outputs conform to a stable schema",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-02-09",
+      "state": "UNKNOWN",
+      "note": "The second consumer still uses the preceding package version.",
+      "action": "Run the actual older consumer against the proposed package.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A compatible older consumer is exercised when backward compatibility is promised",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-12-01-04",
+      "state": "UNKNOWN",
+      "note": "The only stated throughput number comes from a warm cache.",
+      "action": "Collect a cold-cache run separately.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Warm-cache and cold-cache conditions are distinguished",
+      "app": "APPLICABLE",
+      "fresh": "STALE"
+    },
+    {
+      "cid": "PEP-10-01-01",
+      "state": "UNKNOWN",
+      "note": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "All required interactive controls are reachable by keyboard",
+      "app": "NOT_APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-18-01-08",
+      "state": "UNKNOWN",
+      "note": "External value is unmeasured even though the local technical slice is assumed to work.",
+      "action": "Measure a real consumer outcome before expanding scope.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Value evidence is not inferred from engineering quality",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "valid_accepted": true,
+  "noop_rejected": true,
+  "good_observations": {
+    "fixture_kind": "SYNTHETIC_TOY_ONLY",
+    "narrative": "restored successfully",
+    "expected": {
+      "records": [
+        {
+          "id": "alpha",
+          "value": 7
+        },
+        {
+          "id": "beta",
+          "value": "retained"
+        }
+      ]
+    },
+    "observed": {
+      "records": [
+        {
+          "id": "alpha",
+          "value": 7
+        },
+        {
+          "id": "beta",
+          "value": "retained"
+        }
+      ]
+    },
+    "restored_integrity": true,
+    "corrupt_backup_rejected": true,
+    "assertions_executed": 2
+  },
+  "bad_observations": {
+    "fixture_kind": "SYNTHETIC_TOY_ONLY",
+    "narrative": "restored successfully",
+    "expected": {
+      "records": [
+        {
+          "id": "alpha",
+          "value": 7
+        },
+        {
+          "id": "beta",
+          "value": "retained"
+        }
+      ]
+    },
+    "observed": {
+      "records": []
+    },
+    "restored_integrity": false,
+    "corrupt_backup_rejected": false,
+    "assertions_executed": 2
+  },
+  "meaning": "Actual controlled example execution; not qualification of arbitrary product adapters."
+}

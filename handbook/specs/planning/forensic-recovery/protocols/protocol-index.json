@@ -1,0 +1,122 @@
+[
+  {
+    "name": "03-forensic-ssot-recovery(4).md",
+    "exists": true,
+    "sha256": "01dc6513f00ff3662377dcdcf45a18aa6209a0923e5ee48d8fe304f97846a31b",
+    "lines": 166,
+    "bytes": 17031,
+    "headings": [
+      {
+        "line": 1,
+        "level": 1,
+        "heading": "Forensic brownfield: recover intent, map regressions across Git history, and rebuild the SSOT"
+      },
+      {
+        "line": 9,
+        "level": 2,
+        "heading": "Operating contract"
+      },
+      {
+        "line": 19,
+        "level": 2,
+        "heading": "1. Preserve evidence before changing the observation surface"
+      },
+      {
+        "line": 33,
+        "level": 2,
+        "heading": "2. Build a historical index, not a last-N-commits summary"
+      },
+      {
+        "line": 47,
+        "level": 2,
+        "heading": "3. Reconstruct three independent baselines"
+      },
+      {
+        "line": 63,
+        "level": 2,
+        "heading": "4. Produce a branch-by-capability and revision-by-capability map"
+      },
+      {
+        "line": 82,
+        "level": 2,
+        "heading": "5. Establish regressions with reproducible evidence"
+      },
+      {
+        "line": 104,
+        "level": 2,
+        "heading": "6. Design a safe recovery frontier"
+      },
+      {
+        "line": 114,
+        "level": 2,
+        "heading": "7. Regenerate the canonical docs/ system"
+      },
+      {
+        "line": 145,
+        "level": 2,
+        "heading": "8. Make the package mechanically consistent"
+      },
+      {
+        "line": 156,
+        "level": 2,
+        "heading": "9. Deliver an honest, resumable result"
+      }
+    ],
+    "copied_to": "protocols/03-forensic-ssot-recovery(4).md"
+  },
+  {
+    "name": "01-brownfield(4).md",
+    "exists": true,
+    "sha256": "69f0cf09712e0933a0b0d9f6ec8fba741c01031b650bdb849554c11be93eaf45",
+    "lines": 103,
+    "bytes": 11748,
+    "headings": [
+      {
+        "line": 1,
+        "level": 1,
+        "heading": "Brownfield: evidence-grounded SSOT regeneration and modernization plan"
+      },
+      {
+        "line": 5,
+        "level": 2,
+        "heading": "Operating contract"
+      },
+      {
+        "line": 15,
+        "level": 2,
+        "heading": "1. Establish evidence and authority"
+      },
+      {
+        "line": 32,
+        "level": 2,
+        "heading": "2. Reconstruct the actual product"
+      },
+      {
+        "line": 44,
+        "level": 2,
+        "heading": "3. Reconcile without erasing intent"
+      },
+      {
+        "line": 52,
+        "level": 2,
+        "heading": "4. Research and choose an architecture"
+      },
+      {
+        "line": 62,
+        "level": 2,
+        "heading": "5. Produce the complete docs/ set"
+      },
+      {
+        "line": 80,
+        "level": 2,
+        "heading": "6. Make the plan executable"
+      },
+      {
+        "line": 93,
+        "level": 2,
+        "heading": "7. Validate and deliver"
+      }
+    ],
+    "copied_to": "protocols/01-brownfield(4).md"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "status": "passed_for_limited_checks",
+  "credential_signature_matches": [],
+  "limits": "Pattern-based package scan only; not exhaustive DLP or security certification. Historical evidence has its own preserved integrity receipts."
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "polyrepo",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "One product BOM and end-to-end consumer journey; component passes do not establish integration.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1169608854",
+  "name": "AgilePlus",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "3cc0c145ae6e7290df26b3782c65521d5c2c8f0e",
+  "sampled_commit_date_utc": "2026-09-16T09:54:22Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent history adds handoffs, a REPL block-comment fix, v0.2.4 and cargo-dist build dependency/scoping changes. Pinned coverage workflow remains Python 85%, Rust 20%, Go report-only, with an echo-only aggregate claim.",
+  "assessment": "SOURCE_CONFIRMED_ASSURANCE_GAP",
+  "role": "Repository-scoped work/specification tooling",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Version bumps and precise CLI builds do not qualify desktop/MCP variants.",
+    "One owner chat now orchestrates all workstreams; a historical chat-split document is not a new allocation.",
+    "The workflow thresholds are configuration, not measured current code coverage."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1169608854-A1",
+      "title": "Repair the real assurance verdict",
+      "work": "Use separate supported-profile unit/integration/E2E reports, approved denominators, real artifact retrieval and explicit missing/below-floor failure. Reuse existing trusted coverage parsers rather than handrolling weak counters.",
+      "acceptance": "Injected missing, wrong-SHA and below-floor reports fail. Critical obligations are complete; accepted independent floors are actually enforced.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169608854",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1169608854-A2",
+      "title": "Qualify current command and state behavior",
+      "work": "Exercise REPL comments, interrupted commands, two unrelated subject repositories, state persistence, MCP transitions and materialized views with exact engine receipts.",
+      "acceptance": "CLI/MCP operate on the intended Git root; restart and negative authorization cases pass without cross-subject state.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169608854",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1169608854-A3",
+      "title": "Deliver the actual selected release",
+      "work": "Build/install the promised CLI and desktop profile outside the checkout; capture update/rollback and a useful work lifecycle.",
+      "acceptance": "Distributed artifact identity, clean install and actual end-to-end evidence; no unbuilt product surface certified by a CLI-only build.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169608854",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Use PhenoShared libraries and PhenoDocs rendering through explicit contracts. AgilePlus does not own portfolio-wide source data.",
+  "parent_acceptance": "A cleanly installed tool manages a real subject through an accepted work lifecycle, with trustworthy independent evidence.",
+  "sources": [
+    {
+      "id": "CUR-1169608854-S01",
+      "url": "https://github.com/KooshaPari/AgilePlus/blob/3cc0c145ae6e7290df26b3782c65521d5c2c8f0e/.github/workflows/coverage.yml",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1169608854-S02",
+      "url": "https://github.com/KooshaPari/AgilePlus/commit/920c7f31da11ca9d003bd0d8b3b0d75b215c6d1d",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1169608854-S03",
+      "url": "https://github.com/KooshaPari/AgilePlus/commit/310fd8983e18d44ecaccf5254b3a9ebb65c598dd",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

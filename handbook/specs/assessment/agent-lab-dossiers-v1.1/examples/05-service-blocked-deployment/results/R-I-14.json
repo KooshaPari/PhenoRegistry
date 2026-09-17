@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-14",
+  "instance_id": "I-14",
+  "criterion_id": "PEP-14-01-02",
+  "assignment_id": "A-HARBORAPI",
+  "epoch_id": "E-HARBORAPI",
+  "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+  "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+  "execution": "BLOCKED",
+  "verdict": "UNKNOWN",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+    "assertions_executed": null,
+    "modality": "SEMANTIC"
+  },
+  "supersedes": []
+}

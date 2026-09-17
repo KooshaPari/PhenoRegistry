@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-10",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "HARBORAPI",
+  "instance_refs": [
+    "I-10"
+  ],
+  "class": "VERIFICATION_GAP",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: The hosted post-deployment journey has not run.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "TEST",
+  "status": "PROPOSED",
+  "wakeup_condition": "Run it only after the target and authority are resolved."
+}

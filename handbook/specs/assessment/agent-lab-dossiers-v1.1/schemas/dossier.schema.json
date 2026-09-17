@@ -1,0 +1,388 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Assessment Dossier context and rendering extension 1.1",
+  "description": "Narrative/context supplement. Core assignment, assessment, result and evidence records remain separately authoritative.",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "dossier"
+    },
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "example_class": {
+      "enum": [
+        "TEMPLATE",
+        "EXECUTED_FIXTURE",
+        "ILLUSTRATIVE_SCENARIO",
+        "REAL_ASSESSMENT"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "beneficiary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorship": {
+      "enum": [
+        "AGENT_ORIGINATED",
+        "AGENT_DERIVED",
+        "HUMAN_AUTHORED",
+        "MIXED"
+      ]
+    },
+    "intent_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "genesis_rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "authority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "subject_identity": {
+      "type": "object",
+      "properties": {
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "identity_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "source_revision",
+        "identity_method",
+        "limitation"
+      ],
+      "additionalProperties": false
+    },
+    "inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "item": {
+            "type": "string",
+            "minLength": 1
+          },
+          "declared": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_or_assumed": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "gap": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "item",
+          "declared",
+          "observed_or_assumed",
+          "evidence_basis",
+          "gap"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "maturity": {
+      "type": "object",
+      "properties": {
+        "scenario_or_scoped_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_limit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "axes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "axis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "axis",
+              "status",
+              "basis"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "value_evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "scenario_or_scoped_label",
+        "claim_limit",
+        "axes",
+        "value_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "finding_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "decision_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "semantic_reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assessment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "support": {
+            "type": "string",
+            "minLength": 1
+          },
+          "countercase": {
+            "type": "string",
+            "minLength": 1
+          },
+          "discriminator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence_basis": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "topic",
+          "assessment",
+          "support",
+          "countercase",
+          "discriminator",
+          "confidence_basis"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stop_condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "restart_packet": {
+      "type": "object",
+      "properties": {
+        "accepted_baseline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failed_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "next_reproduction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "budget_and_permissions": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "accepted_baseline",
+        "failed_hypotheses",
+        "next_reproduction",
+        "budget_and_permissions"
+      ],
+      "additionalProperties": false
+    },
+    "lineage": {
+      "type": "object",
+      "properties": {
+        "previous_dossier_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "change_class": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "previous_dossier_id",
+        "change_class",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "provenance_notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "row_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interpretation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "next_action": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "instance_id",
+          "title",
+          "interpretation",
+          "next_action"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "example_class",
+    "title",
+    "subtitle",
+    "purpose",
+    "boundary",
+    "beneficiary",
+    "authorship",
+    "intent_status",
+    "genesis_rationale",
+    "alternatives",
+    "authority",
+    "non_goals",
+    "subject_identity",
+    "inventory",
+    "maturity",
+    "finding_ids",
+    "decision_ids",
+    "semantic_reviews",
+    "next_action",
+    "stop_condition",
+    "restart_packet",
+    "lineage",
+    "provenance_notice",
+    "row_notes"
+  ],
+  "additionalProperties": false
+}

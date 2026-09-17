@@ -1,0 +1,15 @@
+{
+  "kind": "outbox",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "destination_label": "REPLACE_WITH_DESTINATION_LABEL",
+  "payload_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "idempotency_key": "REPLACE_WITH_IDEMPOTENCY_KEY",
+  "authority_ref": "REPLACE_WITH_AUTHORITY_REF",
+  "state": "PENDING",
+  "attempt_count": 0,
+  "receipt_ref": null,
+  "last_error": null
+}

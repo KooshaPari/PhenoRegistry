@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/repo-genesis.schema.json",
+  "title": "repo-genesis",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "repo-genesis"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "boundary_rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "history_status": {
+      "enum": [
+        "RECOVERED",
+        "PARTIAL",
+        "MISSING"
+      ]
+    },
+    "origin_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "absorption_trigger": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "subject_id",
+    "intent_ref",
+    "parent_capability",
+    "boundary_rationale",
+    "consumers",
+    "alternatives",
+    "history_status",
+    "origin_refs",
+    "absorption_trigger"
+  ],
+  "additionalProperties": false
+}

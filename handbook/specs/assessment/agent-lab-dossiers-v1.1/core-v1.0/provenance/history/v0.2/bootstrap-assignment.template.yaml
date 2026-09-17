@@ -1,0 +1,84 @@
+# Blank bootstrap template, not a real assessment or permission grant.
+# Resolve null required inputs before the relevant action; preserve unknowns honestly.
+# Map these logical fields into existing owner-held files rather than duplicate authority.
+protocol_version: 0.2.0-draft
+record_kind: assignment_template
+assignment_id: null
+epoch: null
+prepared_at: null
+mandate:
+  reference: null
+  actual_action_permissions: []
+  reserved_human_decisions: []
+  parent_intent_refs: []
+  remaining_resource_envelope: null
+intent:
+  authorship: null # HUMAN_AUTHORED / AGENT_DERIVED / AGENT_ORIGINATED / INHERITED / MIXED
+  authority_status: null # PROPOSED / DELEGATED / UNAUTHORIZED / UNRESOLVED
+  epistemic_status: UNKNOWN # HYPOTHESIS / SUPPORTED / CONTRADICTED / UNKNOWN
+  commitment: PROPOSED
+  beneficiary_or_consumer: null
+  intended_observable_outcome: null
+  derivation_rationale: null
+  supporting_evidence_refs: []
+  contradicting_evidence_refs: []
+  assumptions: []
+  alternatives_including_no_action: []
+  review_or_reversal_trigger: null
+repo_genesis:
+  origin_record_ref: null
+  separate_repo_rationale: null
+  alternatives_to_repo_creation: []
+  known_consumers: []
+  lineage_limitations: []
+subject:
+  repo_or_product_id: null
+  source_revision: null
+  tree_and_dirty_patch_digests: []
+  artifact_and_dependency_refs: []
+  environment_fingerprint: null
+  beneficiary_slice: null
+  journey: null
+assignment:
+  outcome_requirement_refs: []
+  non_goals: []
+  criterion_and_profile_lock: null
+  evaluator_lock: null
+  fixtures_and_evidence_requirements: []
+  stop_conditions: []
+qualification:
+  status: NOT_STARTED
+  good_witness_ref: null
+  bad_or_no_op_witness_ref: null
+  external_or_consumer_anchor_refs: []
+  material_contradictions: []
+  limitations: []
+assessment:
+  results_refs: []
+  findings_refs: []
+  unknowns: []
+  contested_claims: []
+  scoped_maturity: null
+  assurance_limitations: []
+change_attribution:
+  product: []
+  new_evidence: []
+  assignment_or_scope: []
+  evaluator: []
+  policy: []
+restart:
+  current_claim_and_lease: null
+  accepted_baseline_ref: null
+  useful_candidate_refs: []
+  repeated_failure_fingerprints: []
+  rejected_hypotheses_with_evidence: []
+  exact_reproduction_ref: null
+  next_discriminating_action: null
+  remaining_resource_envelope: null
+registration:
+  local_report_revision: null
+  destination: null
+  state: NOT_REQUESTED
+  idempotency_key: null
+  payload_digest: null
+  receipt_ref: null

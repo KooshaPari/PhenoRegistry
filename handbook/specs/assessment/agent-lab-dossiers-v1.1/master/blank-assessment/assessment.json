@@ -1,0 +1,19 @@
+{
+  "kind": "assessment",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ASSESSMENT_ID",
+  "record_status": "TEMPLATE",
+  "assignment_id": "REPLACE_WITH_ASSIGNMENT_ID",
+  "epoch_id": "REPLACE_WITH_EPOCH",
+  "subject_digest": "sha256:d161a2237577766d9b819dc3631345ad5cbba82c157a00761103ab0865388877",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "as_of": "2026-09-11T23:22:49.917121+00:00",
+  "result_ids": [],
+  "evidence_ids": [],
+  "qualification_ids": [],
+  "coverage_limitations": [
+    "No product observations collected. Template placeholders are not operational state."
+  ],
+  "registration_state": "NOT_REQUESTED",
+  "assignment_digest": "sha256:d144e5b1e5c635c8736ff6b35217e52ea311d54702318b8bebd69faebd9d6afb"
+}

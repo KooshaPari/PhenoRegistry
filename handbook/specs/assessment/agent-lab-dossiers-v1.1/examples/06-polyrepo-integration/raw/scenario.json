@@ -1,0 +1,139 @@
+{
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "product_execution_performed": false,
+  "notice": "All states are authored premises for explaining a filled audit. This is not a test transcript, consumer observation, or instrument qualification.",
+  "rows": [
+    {
+      "cid": "PEP-04-06-01",
+      "state": "PASS",
+      "note": "The scenario BOM identifies producer, queue, worker, and consumer versions.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "INTEGRATED-JOURNEY",
+      "title": "The integrated product identifies all required component revisions",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-02",
+      "state": "PASS",
+      "note": "Each artifact has a source mapping.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Build artifacts map back to the selected source revisions",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-02-01",
+      "state": "FAIL",
+      "note": "Producer uses deadline_ms while consumer interprets deadline as seconds.",
+      "action": "Resolve units in the canonical contract.",
+      "mandatory": true,
+      "gate": "INTEGRATED-JOURNEY",
+      "title": "Required interface fields have explicit meanings",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-02-02",
+      "state": "FAIL",
+      "note": "The producer emits the new schema while the installed consumer expects the old one.",
+      "action": "Exercise the actual two versions together.",
+      "mandatory": true,
+      "gate": "INTEGRATED-JOURNEY",
+      "title": "Producers emit data conforming to the selected contract version",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-02-05",
+      "state": "FAIL",
+      "note": "The consumer treats a rejected job as successful empty output.",
+      "action": "Preserve a structured failure across the interface.",
+      "mandatory": true,
+      "gate": "INTEGRATED-JOURNEY",
+      "title": "Error responses are distinguishable from successful empty results",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-04",
+      "state": "FAIL",
+      "note": "Independent suites miss the incompatible shared contract.",
+      "action": "Add a mismatched-version negative control.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A cross-repository contract mismatch is detected before promotion",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-05",
+      "state": "PASS",
+      "note": "The report keeps component passes separate from product acceptance.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Component-level passes do not substitute for an integrated journey pass",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-06",
+      "state": "UNKNOWN",
+      "note": "An undocumented second consumer was discovered during review.",
+      "action": "Find its contract version and owner before changing the schema.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Shared schema changes identify every affected consumer",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-07",
+      "state": "FAIL",
+      "note": "The integration job mocks transport and bypasses the real serializer.",
+      "action": "Use the selected queue and serialization boundary.",
+      "mandatory": true,
+      "gate": "INTEGRATED-JOURNEY",
+      "title": "Integration tests exercise the actual selected transport and storage paths",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-09",
+      "state": "UNKNOWN",
+      "note": "Only all-at-once upgrades were considered.",
+      "action": "Test permitted producer/consumer rollout orders.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Version skew behavior is tested for supported rollout orders",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-04-06-10",
+      "state": "PASS",
+      "note": "One integration owner is assigned to the pinned failing composition.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "An integration failure has a designated owner and reproducible baseline",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-01-04-06",
+      "state": "UNKNOWN",
+      "note": "Separate repositories have not demonstrated a benefit over a versioned package set.",
+      "action": "Compare coupling and release cadence before further decomposition.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Cross-boundary coupling costs are included in the decomposition decision",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    }
+  ]
+}

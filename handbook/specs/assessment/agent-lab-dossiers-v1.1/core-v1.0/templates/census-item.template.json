@@ -1,0 +1,16 @@
+{
+  "kind": "census-item",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "source_ref": "REPLACE_WITH_SOURCE_REF",
+  "device_or_repository": "REPLACE_WITH_DEVICE_OR_REPOSITORY",
+  "path": "REPLACE_WITH_PATH",
+  "revision_or_digest": "REPLACE_WITH_REVISION_OR_DIGEST",
+  "classification": "TEMPLATE",
+  "lineage_refs": [],
+  "coverage_limitations": [],
+  "disposition": "UNREVIEWED",
+  "rationale": "REPLACE_WITH_RATIONALE"
+}

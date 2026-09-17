@@ -1,0 +1,11 @@
+{
+  "id": "SPEC-15",
+  "name": "Canonical design and complete artifact traceability",
+  "state": "proposed",
+  "engine_receipt": null,
+  "human_approval": null,
+  "source_intent_ids": [
+    "INT-006"
+  ],
+  "format_profile": "Inherited provisional AgilePlus-shaped profile; verify installed engine contracts before mutation."
+}

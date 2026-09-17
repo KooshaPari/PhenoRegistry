@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:phenotype:review-provider-state:0.3.0",
+  "title": "Semantic review provider live state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "provider_id",
+    "available",
+    "trigger_modes",
+    "cash_spend_allowed",
+    "quota",
+    "capabilities"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.3.0"
+    },
+    "provider_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "trigger_modes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "automatic",
+          "label",
+          "comment",
+          "cli",
+          "api"
+        ]
+      }
+    },
+    "cash_spend_allowed": {
+      "const": false
+    },
+    "quota": {
+      "type": "object",
+      "required": [
+        "remaining",
+        "reset_at",
+        "confidence"
+      ],
+      "properties": {
+        "remaining": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reset_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "observed",
+            "declared",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "credit_remaining": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "auto_refill": {
+      "type": "boolean"
+    }
+  }
+}

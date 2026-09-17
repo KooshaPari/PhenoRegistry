@@ -1,0 +1,55 @@
+{
+  "kind": "assignment",
+  "schema_version": "1.0.0",
+  "id": "A-after",
+  "record_status": "EXAMPLE",
+  "epoch_id": "E-TOY-1",
+  "status": "LOCKED",
+  "subject_id": "synthetic-restoration-after",
+  "subject_digest": "sha256:1433edcb15661c3af159f06100a15bb8ba4b40ac35cf5a8d172ec44ac4237537",
+  "mandate_ref": "EXAMPLE-LOCAL-TOY-ONLY",
+  "intent_ref": "EXAMPLE-RESTORE-TWO-RECORDS",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "profile_id": "bootstrap",
+  "coverage_statement": "Two synthetic restoration obligations only. Not a product MVP or a real agent-run assessment.",
+  "created_at": "2026-09-11T23:19:57.185691+00:00",
+  "scope_review_status": "ACCEPTED",
+  "scope_review_ref": "EXAMPLE-FROZEN-TWO-OBLIGATIONS",
+  "instances": [
+    {
+      "id": "I-RESTORE",
+      "criterion_id": "PEP-13-03-05",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "restored_integrity",
+      "scope": "The bundled synthetic two-record JSON restoration fixture",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "This toy variant claims to restore integrity-checked records.",
+      "applicability_decision_ref": "EXAMPLE-SCOPE",
+      "weight": 1,
+      "mandatory": true,
+      "measurement_binding_ref": "measurement-bindings/MB-I-RESTORE.json"
+    },
+    {
+      "id": "I-CORRUPT",
+      "criterion_id": "PEP-13-03-03",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "corrupt_backup_rejected",
+      "scope": "The bundled synthetic two-record JSON restoration fixture",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "This toy variant claims to restore integrity-checked records.",
+      "applicability_decision_ref": "EXAMPLE-SCOPE",
+      "weight": 1,
+      "mandatory": true,
+      "measurement_binding_ref": "measurement-bindings/MB-I-CORRUPT.json"
+    }
+  ],
+  "gates": [
+    {
+      "id": "TOY-RESTORATION",
+      "required_instance_ids": [
+        "I-RESTORE",
+        "I-CORRUPT"
+      ]
+    }
+  ]
+}

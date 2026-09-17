@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/result.schema.json",
+  "title": "result",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "result"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "criterion_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assignment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epoch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "execution": {
+      "enum": [
+        "NOT_STARTED",
+        "RUNNING",
+        "COMPLETED",
+        "ERROR",
+        "BLOCKED"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN",
+        "CONTESTED"
+      ]
+    },
+    "evidence_state": {
+      "enum": [
+        "CURRENT",
+        "STALE",
+        "INVALID",
+        "MISSING"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "PROPOSED",
+        "ACCEPTED",
+        "WAIVED",
+        "CONTESTED"
+      ]
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "qualification_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "evaluator_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluator_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assertions_executed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "modality": {
+          "enum": [
+            "SEMANTIC",
+            "STRUCTURAL",
+            "DYNAMIC",
+            "OBSERVATIONAL"
+          ]
+        }
+      },
+      "required": [
+        "summary",
+        "assertions_executed",
+        "modality"
+      ],
+      "additionalProperties": false
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "assignment_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "instance_id",
+    "criterion_id",
+    "assignment_id",
+    "epoch_id",
+    "subject_digest",
+    "execution",
+    "verdict",
+    "evidence_state",
+    "review_status",
+    "observed_at",
+    "expires_at",
+    "evidence_ids",
+    "qualification_ids",
+    "evaluator_id",
+    "evaluator_digest",
+    "observation",
+    "supersedes",
+    "assignment_digest"
+  ],
+  "additionalProperties": false
+}

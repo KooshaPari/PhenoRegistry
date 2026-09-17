@@ -1,0 +1,176 @@
+{
+  "release": "1.0.0",
+  "sources": [
+    {
+      "id": "FACTORY-READINESS",
+      "title": "Factory Agent Readiness overview",
+      "uri": "https://docs.factory.ai/agent-readiness/overview",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Repository/application scope and agent-readiness navigation; not product value or a universal quality verdict.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "NASA-IVV",
+      "title": "NASA IV&V overview",
+      "uri": "https://www.nasa.gov/ivv-overview/",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Verification/validation distinction and independence dimensions; no claim of NASA qualification.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "ANTHROPIC-EVALS",
+      "title": "Demystifying evals for AI agents",
+      "uri": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Agent evaluation methods and distinction between attempt success and repeatable behavior; not a local performance forecast.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "W3C-EVALUATION",
+      "title": "WAI evaluating accessibility",
+      "uri": "https://www.w3.org/WAI/test-evaluate/",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Evaluation coverage and limits of automated conformance claims.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "ISO-25010",
+      "title": "ISO/IEC 25010:2023 public overview",
+      "uri": "https://www.iso.org/standard/78176.html",
+      "access_status": "PUBLIC_OVERVIEW_RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Quality-model coverage reference only. Licensed full standard not accessed or redistributed.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "SEI-ATAM",
+      "title": "Architecture Tradeoff Analysis Method collection",
+      "uri": "https://sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Architecture quality scenarios and tradeoff analysis; local adaptation is not formal accreditation.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "OSPS-BASELINE",
+      "title": "OpenSSF OSPS Baseline",
+      "uri": "https://baseline.openssf.org/",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Control/baseline structure and maturity context; no exact clause crosswalk claimed.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "SLSA-PROVENANCE",
+      "title": "SLSA v1.2 provenance overview",
+      "uri": "https://slsa.dev/spec/v1.2/provenance",
+      "access_status": "RETRIEVED_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Artifact provenance context; an audit predicate must accurately identify its actual claims.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "OWASP-ASVS",
+      "title": "OWASP ASVS project",
+      "uri": "https://owasp.org/www-project-application-security-verification-standard/",
+      "access_status": "INHERITED_REFERENCE_CURRENT_FETCH_FAILED",
+      "release_review_date": "2026-09-10",
+      "use": "Verification requirement reference retained from prior version. Current fetch returned an error; no new clause import.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "OWASP-SAMM",
+      "title": "OWASP SAMM model",
+      "uri": "https://owaspsamm.org/model/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Security development maturity context; distinct from verification results.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "OPENSSF-SCORECARD",
+      "title": "OpenSSF Scorecard",
+      "uri": "https://openssf.org/projects/scorecard/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Automated security heuristics; not universal product acceptance.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "DORA",
+      "title": "DORA software delivery performance metrics",
+      "uri": "https://dora.dev/guides/dora-metrics/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Outcome-based delivery context; do not substitute commit volume for value.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "HEART",
+      "title": "Measuring the User Experience on a Large Scale",
+      "uri": "https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Goal/signal/metric framing for user-centered outcomes.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "W3C-ACT",
+      "title": "WAI evaluation standards",
+      "uri": "https://www.w3.org/WAI/standards-guidelines/evaluation/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Test/evaluation representation context; not an imported conformance suite.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "DEEPMIND-SPEC-GAMING",
+      "title": "Specification gaming: the flip side of AI ingenuity",
+      "uri": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Proxy success need not achieve intended outcome; not an allegation about a local worker.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "ORACLE-PAPER",
+      "title": "Intramorphic Testing: A New Approach to the Test Oracle Problem",
+      "uri": "https://arxiv.org/abs/2210.11228",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Test-oracle approaches and assumptions; not a performance claim.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    },
+    {
+      "id": "NASA-OBJECTIVE-EVIDENCE",
+      "title": "Identifying Objective Evidence Improves Requirement Implementation",
+      "uri": "https://sma.nasa.gov/news/articles/newsitem/2026/03/25/identifying-objective-evidence-improves-requirement-implementation",
+      "access_status": "INHERITED_NOT_REREAD_THIS_RELEASE",
+      "release_review_date": "2026-09-10",
+      "use": "Objective evidence/traceability analogy; not regulatory status.",
+      "mapping_strength": "CONCEPTUAL_RELATED_READING_NOT_CLAUSE_EQUIVALENCE",
+      "rights": "Link and original paraphrase only. No standard catalog, page body or licensed text redistributed."
+    }
+  ],
+  "notes": "Retrieved means an official page was available to the preparation process; this is not a cryptographic capture or blanket endorsement. Prior-version dated claims remain historical unless explicitly reverified."
+}

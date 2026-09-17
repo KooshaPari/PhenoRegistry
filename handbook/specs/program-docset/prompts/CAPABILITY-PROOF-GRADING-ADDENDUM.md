@@ -1,0 +1,17 @@
+# Existing-owner addendum — capability composition and gradeable products
+
+This refines the current program, not a restart, new registry, new engine choice or additional write authority. One existing chat owns each assigned repository. Read your `PROOF-AND-GRADE.md` and reuse valid current work.
+
+**Federation is primarily capability and behavior composition.** Two applications can become one experience without mounting a second UI. Consume qualified existing features, operations, data contracts and services and express them naturally in the host. Embedded UI is optional. Keep authorities, permissions, lifecycle and independent-use behavior explicit.
+
+**Build by consuming and for consumption.** Evaluate existing owned work, external libraries, native platforms and research before fresh code. Improve shared authoritative capabilities for supported and credible future consumers. Keep hexagonal ports and domain boundaries meaningful; use direct calls when suitable and justify IPC/plugin/network machinery. Preserve semantics and total ecosystem cost, not merely fewer LOC.
+
+**Make graphical products observable and controllable.** Use owned state APIs, permitted game/mod hooks, native accessibility/user input, final pixel/video/audio capture and diagnostics. Distinguish fixture mutation, semantic API actions and real user-path actions. Bind the actual artifact, process/window/world, operation IDs, clocks and captures. A log/system-initialized result does not prove visible behavior. Use per-feature spatial and temporal witnesses, known-bad defects and representative shipping profiles. Reuse actual DINO/Civis/native/engine/browser mechanisms; do not clone per-repo bridges or bypass entitlements/security.
+
+**Canonicalize designs before and during implementation.** Keep editable mockups, flows, scenario data, modes and error states with versioned previews and review status. ASCII/SVG/prototypes/scenes are chosen by purpose. Preserve alternatives and creative freedom; do not label an agent proposal as accepted. Keep intended-design, regression-baseline and actual-product images distinct.
+
+**Grade the real assignment numerically.** Bind a versioned scope/rubric/support profile and fixed weights. Produce percentage + letter + category scores + evidence assessed/unknown + mandatory gate state. Missing/stale/unsupported evidence earns no credit; known critical failure blocks acceptance regardless of the headline score. Unit/integration/E2E and other required floors remain independent. Do not pad counts, auto-accept baselines, rename failing scope N/A or average away a required defect.
+
+Every material artifact connects through typed traceability from intent/design/spec to code/config/assets, checks, actual runs, packages, installation and outcome. Backward checks find orphan behavior and unsupported claims. Preserve the full horizon and current viable scope separately. SROC/CDP remain unresolved labels pending their real definitions.
+
+Start with one actual useful journey and one known-bad counterpart in your current product. Record the installed/native result, inspect pixels where the claim requires them, and grade only that declared scope. Publish the evidence gaps and next bounded action. Keep product implementation moving; do not wait for a universal Tracera/App Center or full perfect atlas. The bundled reference grader is untrusted arithmetic/integrity tooling until native adapters and independent trust are qualified; it cannot approve a release.

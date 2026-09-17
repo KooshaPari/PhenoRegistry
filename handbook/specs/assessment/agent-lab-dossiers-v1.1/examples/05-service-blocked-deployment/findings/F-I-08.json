@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-08",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "HARBORAPI",
+  "instance_refs": [
+    "I-08"
+  ],
+  "class": "VERIFICATION_GAP",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: Routing to the actual hosted application is not verified.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "TEST",
+  "status": "PROPOSED",
+  "wakeup_condition": "Verify the requested host through the authorized route."
+}

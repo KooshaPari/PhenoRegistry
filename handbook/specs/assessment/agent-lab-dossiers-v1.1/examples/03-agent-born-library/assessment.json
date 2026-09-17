@@ -1,0 +1,37 @@
+{
+  "kind": "assessment",
+  "schema_version": "1.0.0",
+  "id": "ASSESS-PARCELKIT",
+  "record_status": "EXAMPLE",
+  "assignment_id": "A-PARCELKIT",
+  "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e",
+  "epoch_id": "E-PARCELKIT",
+  "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "as_of": "2026-09-11T23:19:57.136661+00:00",
+  "result_ids": [
+    "R-I-01",
+    "R-I-02",
+    "R-I-03",
+    "R-I-04",
+    "R-I-05",
+    "R-I-06",
+    "R-I-07",
+    "R-I-08",
+    "R-I-09",
+    "R-I-10",
+    "R-I-11",
+    "R-I-12",
+    "R-I-14"
+  ],
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "coverage_limitations": [
+    "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected.",
+    "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked.",
+    "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  ],
+  "registration_state": "NOT_REQUESTED"
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/profile.schema.json",
+  "title": "profile",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "profile"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_domains": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "default_applicability": {
+      "const": "UNRESOLVED"
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "automatic_exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "mandatory_gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "status",
+    "candidate_domains",
+    "default_applicability",
+    "note",
+    "automatic_exclusions",
+    "mandatory_gates"
+  ],
+  "additionalProperties": false
+}

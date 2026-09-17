@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "files_compared_byte_for_byte": 11,
+  "paths": [
+    "provenance/history/v0.1/PRODUCT-EVALUATION-PROTOCOL-v0.1.md",
+    "provenance/history/v0.1/README.md",
+    "provenance/history/v0.1/criterion-examples.json",
+    "provenance/history/v0.1/protocol.contract.json",
+    "provenance/history/v0.2/MANIFEST.json",
+    "provenance/history/v0.2/PRODUCT-EVALUATION-PROTOCOL-v0.2.md",
+    "provenance/history/v0.2/README.md",
+    "provenance/history/v0.2/START-HERE-AGENT.md",
+    "provenance/history/v0.2/bootstrap-assignment.template.yaml",
+    "provenance/history/v0.2/criterion-examples-v0.1-retained.json",
+    "provenance/history/v0.2/protocol.contract.json"
+  ],
+  "meaning": "Retained prior archive file bytes match originals; no current factual revalidation implied."
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": "0.1.0",
+  "observation_date": "2026-09-01",
+  "status": "PROVISIONAL_ROUTING_ONLY",
+  "families": [
+    {
+      "id": "01-governance-docs-registry-identity",
+      "description": "Repository/catalog authority, specs, conventions, documentation federation, design/identity, public portfolio projections.",
+      "adjudication_question": "Resolve stale indexes, missing enforcement authority, central-vs-local spec ownership, and projection-versus-source distinctions.",
+      "repositories": [
+        ".github",
+        "KooshaPari",
+        "pheno",
+        "phenoDesign",
+        "phenodocs",
+        "PhenoHandbook",
+        "PhenoSpecs",
+        "phenotype-landing",
+        "phenotype-registry",
+        "phenotype-traceability-spine",
+        "resume-all",
+        "zz-agslag-docs",
+        "zz-archive-phenotype-org-audits",
+        "zz-archive-phenotype-org-governance"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "02-enterprise-control-evidence-ledgers",
+      "description": "Strategy, governed delivery, agent labor, evidence, operational memory, research, repository and hardware ledgers.",
+      "adjudication_question": "Recover AGSLAG authority, eliminate overlap among ledgers/Tracera, and preserve independent state ownership.",
+      "repositories": [
+        "AgilePlus",
+        "Grapheon",
+        "hwLedger",
+        "Parpoura",
+        "RepoLedger",
+        "ResearchLedger",
+        "SessionLedger",
+        "thegent",
+        "Tracely",
+        "Tracera",
+        "zz-agslag",
+        "zz-agslag-dash"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "03-agent-runtime-orchestration-supervision",
+      "description": "Agent frameworks, labor orchestration, task/DAG runtimes, process supervision, execution adapters, quality harnesses.",
+      "adjudication_question": "Separate SDK, labor control plane, OS-adjacent supervisor, provider adapter, and app-client responsibilities.",
+      "repositories": [
+        "agentapi-plusplus",
+        "Agentora",
+        "context-mode-plusplus",
+        "no-mistakes",
+        "pheno-harness",
+        "PhenoCompose",
+        "PhenoProc",
+        "sharecli",
+        "Sidekick",
+        "substrate",
+        "substrate-adapters-bundle",
+        "Tasken",
+        "thegent-pr2-v2-uncommitted-2026-07-14",
+        "thegent-workspace"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "04-coding-agent-clients-workbenches",
+      "description": "Desktop and terminal coding-agent clients, headless automation, terminal/workbench forks, orchestration frontends.",
+      "adjudication_question": "Validate distinct Helios roles, upstream lineage, and shared framework/runtime extraction.",
+      "repositories": [
+        "cockpit",
+        "forgecode",
+        "ghostty",
+        "helios-cli",
+        "HeliosLab",
+        "portage",
+        "vibe-kanban"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "05-provider-routing-proxies-gateways",
+      "description": "LLM/provider routing, gateways, compatibility proxies, provider forks, monitoring and distribution.",
+      "adjudication_question": "Determine one product authority, explicit fork/adapters, monitoring home, and protocol/performance differentiation.",
+      "repositories": [
+        "bifrost",
+        "cliproxyapi-plusplus",
+        "homebrew-omniroute",
+        "OmniRoute",
+        "omniroute-rust",
+        "phenoAI",
+        "phenotype-gateway",
+        "phenotype-router",
+        "vibe-monitor",
+        "vibeproxy",
+        "vibeproxy-monitoring",
+        "vibeproxy-monitoring-unified",
+        "zz-archive-phenoRouterMonitor"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "06-mcp-frameworks-servers-clients",
+      "description": "MCP frameworks, server collections, mobile adapters, tooling and runtime integration.",
+      "adjudication_question": "Separate framework, server implementations, routing/runtime, SDK, and app-specific adapter layers.",
+      "repositories": [
+        "MCPForge",
+        "mobile-mcp",
+        "PhenoFastMCP",
+        "PhenoMCPServers"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "07-foundations-sdks-libraries-plugins",
+      "description": "Reusable libraries, protocols, config, auth, data, events, observability, plugins, SDKs, templates and utility fragments.",
+      "adjudication_question": "Find real consumers, compress one-consumer fragments, avoid universal shared dumps, and preserve stable public contracts.",
+      "repositories": [
+        "Apisync",
+        "argis-extensions",
+        "AuthKit",
+        "clap-ext",
+        "Configra",
+        "Conft",
+        "DataKit",
+        "Eventra",
+        "HexaKit",
+        "Logify",
+        "pheno-tracing",
+        "PhenoContracts",
+        "phenokits-commons",
+        "PhenoObservability",
+        "PhenoPlugins",
+        "phenotype-gfx",
+        "phenotype-go-kit",
+        "phenotype-go-sdk",
+        "phenotype-python-sdk",
+        "phenoUtils",
+        "PhenoVCS",
+        "Pine",
+        "PolicyStack",
+        "Quillr",
+        "ResilienceKit",
+        "rich-cli-kit",
+        "Stashly",
+        "Tokn"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "08-devtools-ops-deployment-platform",
+      "description": "Build/evaluation tooling, delivery/deployment products, infra, CI/actions, journeys, team communication and PM frontend.",
+      "adjudication_question": "Separate user-facing products from internal ops, resolve Planify lineage, and consolidate reusable automation.",
+      "repositories": [
+        "Benchora",
+        "BytePort",
+        "local-ops",
+        "PhenoDevOps",
+        "phenotype-infra",
+        "phenotype-infrakit",
+        "phenotype-journeys",
+        "phenotype-teamcomm",
+        "phenotype-tooling",
+        "phenotypeActions",
+        "Planify",
+        "Planify2"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "09-compute-inference-fleet-virtualization",
+      "description": "Hardware capacity, inference, model training/studio, quantization, virtualization, fleet/network and remote capacity.",
+      "adjudication_question": "Define hwLedger/NVMS/fabric authority and distinguish product, runtime, fork, experiment and fleet operations.",
+      "repositories": [
+        "hfscope",
+        "localbase3",
+        "model-conductor-hub",
+        "nanovms",
+        "NetWeave",
+        "phenotype-fleet-ops",
+        "phenotype-omlx",
+        "phenotype-unsloth-studio",
+        "rust",
+        "turboquant"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "10-applied-civic",
+      "description": "Civic knowledge/simulation/survival products.",
+      "adjudication_question": "Clarify private/full versus public surfaces, shared domain core, independent product jobs and release boundaries.",
+      "repositories": [
+        "CivicSurvival-public",
+        "Civis"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "11-applied-focus-productivity-mobile",
+      "description": "Focus/productivity, device/mobile control and related historical products.",
+      "adjudication_question": "Resolve FocalPoint authority, extract product-specific mobile code from generic tooling, and validate real platform constraints.",
+      "repositories": [
+        "eyetracker",
+        "FocalPoint",
+        "kmobile",
+        "mobile-cli",
+        "phenotype-apps",
+        "PlayCua",
+        "zz-RIP-Fitness-App"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "12-applied-worlds-games-graphics",
+      "description": "Game/world simulation, modding, graphics, sphere/terrain and related forks.",
+      "adjudication_question": "Map common engines/assets, product/mod/plugin distinctions, licensing and independent user communities.",
+      "repositories": [
+        "Compound-Spheres-3D",
+        "Dino",
+        "DINOForge-UnityDoorstop",
+        "Project-Spyn",
+        "QuadSGM",
+        "WorldSphereMod",
+        "zz-GDK"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "13-applied-creative-media",
+      "description": "Music/media/creative and historical generative experiments.",
+      "adjudication_question": "Decide which are independent products, portfolio case studies, reusable engines, or archives.",
+      "repositories": [
+        "Diffuse",
+        "Eidolon",
+        "Frostify",
+        "Melosviz",
+        "Synthia"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    },
+    {
+      "id": "14-legacy-archive-or-unknown-discovery",
+      "description": "Archived historical systems, named experiments, recovery snapshots, unclear small repos and prior brand generations.",
+      "adjudication_question": "Recover intent and provenance, identify stranded capabilities, then tombstone, absorb, or retain as explicit labs/archives.",
+      "repositories": [
+        "phench",
+        "phenoForge",
+        "phenoResearchEngine",
+        "zz-472-P2-Flame-War",
+        "zz-archive-phenoData",
+        "zz-archive-PhenoProject",
+        "zz-archive-PhenoRuntime",
+        "zz-archive-services",
+        "zz-atoms.tech",
+        "ZZ-AtomsBot",
+        "zz-KaskMan"
+      ],
+      "status": "PROVISIONAL_ROUTING_ONLY"
+    }
+  ]
+}

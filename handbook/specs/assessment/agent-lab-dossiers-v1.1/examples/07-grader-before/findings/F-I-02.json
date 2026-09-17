@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-02",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "PATHJUDGE-SAME-SUBJECT",
+  "instance_refs": [
+    "I-02"
+  ],
+  "class": "MEASUREMENT_DEFECT",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: A valid implementation using a different output filename is rejected despite producing the right records.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:measurement-owner",
+  "next_action_kind": "REVISE_ASSIGNMENT",
+  "status": "PROPOSED",
+  "wakeup_condition": "Qualify filename-independent semantic equivalence against the accepted outcome."
+}

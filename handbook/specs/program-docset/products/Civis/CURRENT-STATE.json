@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1164684442",
+  "name": "Civis",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "8650471500928f047370585d8fe5c43275b18aaf",
+  "sampled_commit_date_utc": "2026-09-16T09:35:26Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "New persistence changes cover riot/migrant accumulators, scenario taxation, era progression, emergence samples and significance. A new acceptance report for older 264359af explicitly records that the gameplay precheck failed before gameplay ran.",
+  "assessment": "SOURCE_CONFIRMED_BUILD_TARGET_GAP",
+  "role": "Persistent, game-first systemic sandbox",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Current game-e2e workflow selects --bin civ-standalone but later expects civ-server. Package selection does not select that second executable.",
+    "The report infers a cache race without establishing the artifact was emitted and recommends cargo clean --release after building. That would remove release outputs; do not follow it.",
+    "No captures plus passing library tests cannot justify near-100% visual polish.",
+    "Older evidence may remain useful, but changed persistence behavior needs a current impact-based rerun."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1164684442-A1",
+      "title": "Repair artifact selection, not by deleting artifacts",
+      "work": "Inspect cargo metadata, target/profile/environment configuration; explicitly build both required binaries and pass emitted paths from Cargo JSON or a validated artifact manifest into the harness. Do not clean between build and execution.",
+      "acceptance": "Both exact executables exist before launch; a missing target fails clearly; the actual harness advances past precheck. Native proof is still required.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1164684442",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1164684442-A2",
+      "title": "Run the real game witness",
+      "work": "Use the accepted required assets/audio/render profile; create a populated world, interact, save, quit, reopen and exercise restart/reconnect.",
+      "acceptance": "Authentic gameplay captures, assertions and failed attempts tied to current binaries; no missing-baseline or no-image success.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1164684442",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1164684442-A3",
+      "title": "Protect long-lived world semantics",
+      "work": "Check new populated fields and future state additions through save/reload and bounded unattended continuation; reconcile old global-determinism/product copy.",
+      "acceptance": "No silent state loss; selective reproducibility contracts retained; installed player and visual review qualify the same candidate.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1164684442",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Coordinate rendering/data contracts with PhenoShared and capture/asset owners without letting shared-library cleanup erase game semantics.",
+  "parent_acceptance": "A visually credible installed Civis game preserves and advances the same meaningful world through play, intervention and return.",
+  "sources": [
+    {
+      "id": "CUR-1164684442-S01",
+      "url": "https://github.com/KooshaPari/Civis/blob/8650471500928f047370585d8fe5c43275b18aaf/.github/workflows/game-e2e.yml",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1164684442-S02",
+      "url": "https://github.com/KooshaPari/Civis/blob/5d66e2bacd41e694591d0f8a8aea4a69518623e3/docs/reports/native-runtime-acceptance-264359af.md",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1164684442-S03",
+      "url": "https://github.com/KooshaPari/Civis/commit/8650471500928f047370585d8fe5c43275b18aaf",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1164684442-S04",
+      "url": "https://doc.rust-lang.org/cargo/commands/cargo-build.html",
+      "source_kind": "primary_reference",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1164684442-S05",
+      "url": "https://doc.rust-lang.org/cargo/commands/cargo-clean.html",
+      "source_kind": "primary_reference",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

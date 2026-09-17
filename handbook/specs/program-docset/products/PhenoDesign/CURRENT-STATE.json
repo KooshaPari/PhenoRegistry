@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1169864396",
+  "name": "PhenoDesign",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "d11733b1525cb97e045dc7f8d67a05df5501f6c1",
+  "sampled_commit_date_utc": "2026-09-09T07:55:14Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Sampled default history remains workflow formatting/security fixes. Other products mention design-v3 guidance, but its actual editable asset/source location was not validated here.",
+  "assessment": "CURRENT_ASSET_SOURCE_UNRESOLVED",
+  "role": "Design system, editable assets and shared experience contracts",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "No source movement here does not imply no local creative work.",
+    "Do not regenerate the brand or replace superior existing source solely because this checkout appears stale."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1169864396-A1",
+      "title": "Locate actual source and consumers",
+      "work": "Reconcile local/branch asset work, tokens, components, design guidance and consumed package versions.",
+      "acceptance": "One source/export/consumer map with licenses, privacy and revision identity.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169864396",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1169864396-A2",
+      "title": "Qualify one real cross-product design change",
+      "work": "Apply a bounded shared token/component/asset improvement through actual exports to a native/web product and its docs/landing.",
+      "acceptance": "No accessibility, text contrast, performance or required theme regression; editable sources retained.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169864396",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1169864396-A3",
+      "title": "Produce honest product media",
+      "work": "Use real installed-app screenshots or VHS for proof; separately author 2D/2.5D/3D branding and motion with static/reduced-motion fallbacks.",
+      "acceptance": "Evidence and concept assets clearly separated; export recipe, alt text, source rights and resource budgets recorded.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1169864396",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Optimize shared visual consistency and adoption cost without forcing every app to import one heavyweight renderer or UI framework.",
+  "parent_acceptance": "Real products consume versioned editable design assets/components, with accessible, performant and truthful exports.",
+  "sources": [
+    {
+      "id": "CUR-1169864396-S01",
+      "url": "https://github.com/KooshaPari/PhenoDesign/commit/d11733b1525cb97e045dc7f8d67a05df5501f6c1",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

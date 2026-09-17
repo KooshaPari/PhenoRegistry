@@ -1,0 +1,96 @@
+{
+  "scope": "artifact consistency only; no product test, native installation, runtime coverage or approval authenticated",
+  "checks": [
+    {
+      "check": "all included JSON parses",
+      "passed": true
+    },
+    {
+      "check": "original snapshot cohort remains 62 unique stable IDs",
+      "passed": true
+    },
+    {
+      "check": "original active-named cohort remains 30",
+      "passed": true
+    },
+    {
+      "check": "closing snapshot has 61 IDs, not a fabricated replacement",
+      "passed": true
+    },
+    {
+      "check": "closing snapshot has 29 unprefixed candidates",
+      "passed": true
+    },
+    {
+      "check": "all 62 rows have substantive next-action and acceptance text",
+      "passed": true
+    },
+    {
+      "check": "source IDs unique",
+      "passed": true
+    },
+    {
+      "check": "repository citations resolve within source registry",
+      "passed": true
+    },
+    {
+      "check": "captured blob IDs have valid syntax",
+      "passed": true
+    },
+    {
+      "check": "findings unique and source-linked",
+      "passed": true
+    },
+    {
+      "check": "work packages unique, dependencies and findings resolve",
+      "passed": true
+    },
+    {
+      "check": "proposed hard-dependency graph is acyclic",
+      "passed": true
+    },
+    {
+      "check": "work is explicitly proposed and grants no new write authority",
+      "passed": true
+    },
+    {
+      "check": "nine identity/access changes preserved without inferred permission",
+      "passed": true
+    },
+    {
+      "check": "MobileMcp remains unresolved, not deleted",
+      "passed": true
+    },
+    {
+      "check": "CSV projects exactly the same 62 IDs",
+      "passed": true
+    },
+    {
+      "check": "audit limitations do not claim product execution or certification",
+      "passed": true
+    },
+    {
+      "check": "PDF contains every original repository and stable ID",
+      "passed": true
+    },
+    {
+      "check": "PDF has no text replacement glyphs",
+      "passed": true
+    },
+    {
+      "check": "PDF text bounds stay within page",
+      "passed": true
+    },
+    {
+      "check": "no distributed font files",
+      "passed": true
+    },
+    {
+      "check": "no HTML dashboard generated",
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "failed": 0,
+  "pdf_pages": 45
+}

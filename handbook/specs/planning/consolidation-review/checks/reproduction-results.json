@@ -1,0 +1,63 @@
+{
+  "status": "REPRODUCED",
+  "scope": "Four inert fixtures; observed erroneous behavior, NOT a validated replacement observer",
+  "jq_version": "jq-1.7",
+  "remote_actions": 0,
+  "cases": [
+    {
+      "id": "existing-unarchived",
+      "input": {
+        "id": 1,
+        "archived": false
+      },
+      "expression": ".archived // \"DELETED\"",
+      "exit_code": 0,
+      "output": "DELETED",
+      "expected_bug_behavior": "DELETED",
+      "reproduced": true
+    },
+    {
+      "id": "existing-archived",
+      "input": {
+        "id": 1,
+        "archived": true
+      },
+      "expression": ".archived // \"DELETED\"",
+      "exit_code": 0,
+      "output": true,
+      "expected_bug_behavior": true,
+      "reproduced": true
+    },
+    {
+      "id": "missing-field",
+      "input": {
+        "id": 1
+      },
+      "expression": ".archived // \"DELETED\"",
+      "exit_code": 0,
+      "output": "DELETED",
+      "expected_bug_behavior": "DELETED",
+      "reproduced": true
+    },
+    {
+      "id": "rest-fork-field",
+      "input": {
+        "fork": true,
+        "parent": {
+          "full_name": "upstream/example"
+        }
+      },
+      "expression": "{isFork,parent:.parent.full_name}",
+      "exit_code": 0,
+      "output": {
+        "isFork": null,
+        "parent": "upstream/example"
+      },
+      "expected_bug_behavior": {
+        "isFork": null,
+        "parent": "upstream/example"
+      },
+      "reproduced": true
+    }
+  ]
+}

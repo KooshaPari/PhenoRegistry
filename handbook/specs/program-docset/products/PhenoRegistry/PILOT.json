@@ -1,0 +1,24 @@
+{
+  "product_id": "SUP-PHENOREGISTRY",
+  "name": "PhenoRegistry",
+  "role": "Curated identity/catalog and governance projection",
+  "status": "PLANNED_NOT_EXECUTED",
+  "baseline": "Simplest correct current user workflow; final comparator versions to be resolved before running",
+  "scenario": "Compare current ID-based metadata and decision projection with a simple checked manifest/catalog on a real changing cohort.",
+  "negative_cases": [
+    "Known rename",
+    "Unavailable repository",
+    "Conflicting role records",
+    "Source record out of date"
+  ],
+  "measurements": [
+    "Correct useful outcome",
+    "Time and effort to first use",
+    "Failure detection and recovery",
+    "Maintenance and consumer burden",
+    "Relevant resource/profile effects"
+  ],
+  "results": null,
+  "winner": null,
+  "authorization": "Not granted by package"
+}

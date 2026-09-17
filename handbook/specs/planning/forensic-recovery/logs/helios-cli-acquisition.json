@@ -1,0 +1,18 @@
+{
+  "repo": "helios-cli",
+  "attempts": [
+    {
+      "method": "https",
+      "url": "https://github.com/KooshaPari/helios-cli.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/helios-cli.git'...\nfatal: unable to access 'https://github.com/KooshaPari/helios-cli.git/': Could not resolve host: github.com\n"
+    },
+    {
+      "method": "https",
+      "url": "https://github.com/kooshapari/helios-cli.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/helios-cli.git'...\nfatal: unable to access 'https://github.com/kooshapari/helios-cli.git/': Could not resolve host: github.com\n"
+    }
+  ],
+  "status": "unavailable"
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "decision",
+  "schema_version": "1.0.0",
+  "id": "DEC-NEXT",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "PARCELKIT",
+  "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+  "disposition": "EXPERIMENT",
+  "status": "PROPOSED",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "alternatives": [
+    "Keep parsing in the existing CLI module",
+    "Adopt a suitable upstream parser",
+    "Keep a separate package but not a separate repository",
+    "Do not generalize beyond one consumer"
+  ],
+  "rationale": "Run the second consumer against the package and define an absorption trigger before expanding the repository.",
+  "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET",
+  "reversal_condition": "Pause separate-repository investment if only one consumer remains and all releases must change in lockstep.",
+  "execution_receipt_refs": []
+}

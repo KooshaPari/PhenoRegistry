@@ -1,0 +1,22 @@
+{
+  "kind": "qualification",
+  "schema_version": "1.0.0",
+  "id": "Q-TOY",
+  "evaluator_id": "toy-outcome-grader",
+  "evaluator_digest": "sha256:01f9fdab5fa5e8dcc42fc4d5a28d8c56cf44793be09287582bbcbab5c7d5d239",
+  "status": "QUALIFIED",
+  "scope_instance_ids": [
+    "I-RESTORE",
+    "I-CORRUPT"
+  ],
+  "positive_control_passed": true,
+  "negative_control_passed": true,
+  "evidence_ids": [
+    "EV-QUAL"
+  ],
+  "observed_at": "2026-09-11T07:03:49.676153+00:00",
+  "limitations": [
+    "This qualification covers two synthetic fixture predicates only.",
+    "The reference reducer checks record consistency; it is not an external authentication service."
+  ]
+}

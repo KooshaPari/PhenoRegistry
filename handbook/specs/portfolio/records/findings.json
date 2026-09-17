@@ -1,0 +1,209 @@
+[
+  {
+    "id": "F01",
+    "title": "The live cohort changes while being evaluated",
+    "evidence_status": "REMOTE_METADATA",
+    "severity": "P0",
+    "detail": "Opening: 62 IDs/30 unprefixed names. Closing: 61 IDs/29 unprefixed, AirLock becomes a dependency and seven pause names become zz-inc. MobileMcp is not resolved. Refreshed VibeKanban, AgsLag and SessionLedger headers still say pause.",
+    "impact": "Names and mutable counts cannot be a stable work queue or permission source.",
+    "next_action": "Preserve the 62-ID cohort; reconcile explicit decisions for the nine observation changes. Publish separate active, dependency, incubation, paused/reference and unresolved sets.",
+    "source_ids": [
+      "OBS-OPEN",
+      "OBS-CLOSE",
+      "S266",
+      "S318",
+      "S319",
+      "S320",
+      "W01"
+    ]
+  },
+  {
+    "id": "F02",
+    "title": "AgilePlus does not enforce its advertised all-language 85% coverage",
+    "evidence_status": "SOURCE_CONFIRMED",
+    "severity": "P0",
+    "detail": "The inspected workflow enforces Rust line coverage at 20%, enforces Python at 85%, prints Go coverage without a fail floor, and echoes the aggregate claim. These are configured controls, not measured coverage results.",
+    "impact": "Successful workflow completion can overstate the accepted assurance contract. The inspected workflow also does not establish independent unit/integration/E2E metrics.",
+    "next_action": "Use approved denominator inventories, isolated suite measurements and real aggregate evaluation; seed below-threshold, missing and wrong-revision records and prove nonzero failure.",
+    "source_ids": [
+      "S239",
+      "S238"
+    ]
+  },
+  {
+    "id": "F03",
+    "title": "The documentation-health replacement is still a success-returning scaffold",
+    "evidence_status": "SOURCE_CONFIRMED",
+    "severity": "P0",
+    "detail": "docs-health counts Markdown files but leaves Vale, markdownlint and link detection TODO, emits empty findings and returns Ok. Its smoke test is empty.",
+    "impact": "A consolidated tool can preserve or reintroduce the original false-green behavior; wrappers must not certify unexecuted checks.",
+    "next_action": "Implement or adapt real native checks; fail on missing required tools, traversal errors and broken fixtures; prove hosted failure propagation.",
+    "source_ids": [
+      "S304"
+    ]
+  },
+  {
+    "id": "F04",
+    "title": "Consolidation left active consumers pointing at inaccessible source locations",
+    "evidence_status": "SOURCE_PLUS_ACCESS_LIMIT",
+    "severity": "P0",
+    "detail": "PhenoFabric fetches a manifest crate from KooshaPari/nanovms; that name and ID 1199379049 are unavailable here. HeliosLab depends on clap-ext, whose old URL also returns 404, plus an old observability location.",
+    "impact": "A cache-warm developer build may succeed while a clean checkout cannot resolve its dependencies. This audit has not executed a clean build or proved deletion.",
+    "next_action": "Verify source/API-equivalent successors and immutable dependency identity; perform cache-isolated fetch/build/consumer tests before retiring any old location.",
+    "source_ids": [
+      "S235",
+      "S315",
+      "OBS-404",
+      "W01",
+      "W04"
+    ]
+  },
+  {
+    "id": "F05",
+    "title": "Multiple repositories still expose overlapping source ownership",
+    "evidence_status": "SOURCE_CONFIRMED_WITH_POLICY_OPEN",
+    "severity": "P0",
+    "detail": "ShareCLI core lib.rs has identical Git blob cb35ab8d... in PhenoTooling and sharecli. PhenoTooling registers absorbed ShareCLI crates. PhenoAI registers Eidolon crates while Eidolon remains active.",
+    "impact": "A deliberate mirror is possible, but a missing single-writer/release policy permits divergent fixes and reintroduces the duplication consolidation was intended to remove.",
+    "next_action": "Decide source owner, distribution/mirror contract, consumer pins and integration lead per capability; do not delete a copy solely because one file matches.",
+    "source_ids": [
+      "S312",
+      "S313",
+      "S314",
+      "S316",
+      "S253"
+    ]
+  },
+  {
+    "id": "F06",
+    "title": "Published release metadata is ahead of actual downloadable product evidence",
+    "evidence_status": "REMOTE_RELEASE_METADATA",
+    "severity": "P0",
+    "detail": "AgilePlus latest release Installers + green tests has no attached assets. Forgecode latest September 15 release has no assets. Jcode fork latest release returns only a FreeBSD x86_64 archive.",
+    "impact": "Tags and release descriptions are not proof that the user can install the tested fork or desktop product on Mac/Windows. Other package channels were not exhaustively inspected.",
+    "next_action": "Resolve the actual distribution channel; bind source, build, signed artifact, install, update and run receipts. Qualify Mac/Windows channels actually used by the operator.",
+    "source_ids": [
+      "S309",
+      "S311",
+      "S308"
+    ]
+  },
+  {
+    "id": "F07",
+    "title": "Civis improved state persistence but the player build is still weakly specified",
+    "evidence_status": "SOURCE_AND_RELEASE_METADATA",
+    "severity": "P1",
+    "detail": "Commit 264359af adds populated archive round-trip cases and mirrors cultural/ideological/aggression/unrest state. The Mac script still builds a minimal Bevy feature set and permits absent assets. Latest stable is September 5 CLI archives.",
+    "impact": "Substantive world correctness work is real; it does not establish game-first presentation, continuity or a qualified installed .app.",
+    "next_action": "Define required presentation/assets, build the real player artifact, and run create/play/intervene/save/quit/reopen plus bounded unattended continuation. Preserve subsystem determinism tests without globalizing them.",
+    "source_ids": [
+      "S300",
+      "S301",
+      "S302",
+      "S305"
+    ]
+  },
+  {
+    "id": "F08",
+    "title": "Forgecode integration did advance",
+    "evidence_status": "REMOTE_PR_METADATA",
+    "severity": "P1",
+    "detail": "Promotion PR #277, previously open in the September 11 audit, merged into main September 12 at 10:02:14 UTC. Current release has a newer tag but no attached binaries.",
+    "impact": "This is verified integration progress, not evidence of a stalled worker. Installed artifact and current behavior remain separate questions.",
+    "next_action": "Test the actual current executable for session/search/readonly boundaries and streaming; publish and identify the same candidate, rather than reopening completed promotion work.",
+    "source_ids": [
+      "S307",
+      "S311",
+      "S254"
+    ]
+  },
+  {
+    "id": "F09",
+    "title": "Product identity still drifts away from the accepted intent",
+    "evidence_status": "ROOT_CONTRACT_CONFLICT",
+    "severity": "P1",
+    "detail": "Tracera is advertised as audit/observability rather than the canonical product graph. HeliosLab root/manifest describe mixed workbench/config identities. helios-cli excludes its vendored Codex implementation from the root workspace. Pine mixes 70% and 25%.",
+    "impact": "Agents can pass a build for the wrong product surface or write more documentation for a changed goal without a decision.",
+    "next_action": "Name one current target and its public entrypoint; bind the exact acceptance journey and build profile. Preserve future intent without claiming it is shipped.",
+    "source_ids": [
+      "S244",
+      "S249",
+      "S315",
+      "S248",
+      "S256"
+    ]
+  },
+  {
+    "id": "F10",
+    "title": "PhenoAI minimum-toolchain claim conflicts with its resolver",
+    "evidence_status": "SOURCE_PLUS_OFFICIAL_DOCS",
+    "severity": "P1",
+    "detail": "The workspace selects resolver 3 while advertising rust-version 1.75. Official Cargo documentation requires Rust 1.84 or newer for resolver 3.",
+    "impact": "The manifest cannot establish a coherent old-toolchain build promise. Native compatibility was not tested here.",
+    "next_action": "Choose and test the accepted minimum toolchain, member inheritance and lockfile behavior; fix the contract and implementation together.",
+    "source_ids": [
+      "S316",
+      "W03"
+    ]
+  },
+  {
+    "id": "F11",
+    "title": "Retained dependencies and paused repositories retain destructive or stale instructions",
+    "evidence_status": "ROOT_CONTRACT_CONFLICT",
+    "severity": "P0",
+    "detail": "AgentApiPlusPlus says both do not delete/merge and deprecated/will delete. Parpoura mixes pause, migration and deletion. Some current incubation-like names retain explicit no-work text.",
+    "impact": "Workers can select whichever paragraph supports an action. A header or rename is not an authenticated decision record.",
+    "next_action": "Record latest scoped human decisions and supersession pointers in existing authority; constrain credentials separately; do not resume mass deletions or mass unpausing.",
+    "source_ids": [
+      "S284",
+      "S275",
+      "S318",
+      "S319",
+      "S320"
+    ]
+  },
+  {
+    "id": "F12",
+    "title": "A smaller count is not yet a proven simpler dependency graph",
+    "evidence_status": "ANALYST_INFERENCE_FROM_SOURCE",
+    "severity": "P1",
+    "detail": "The current 62-ID portfolio has fewer repository homes, but PhenoTooling now bundles broad subsystems, PhenoAI absorbs device code, and old dependency locations persist.",
+    "impact": "Context width may have moved into wider workspaces and ambiguous package ownership instead of actually shrinking semantic change cost.",
+    "next_action": "Measure affected packages, duplicate implementations, dependency cycles, context/file footprint per change and clean consumer build time. Use package/applet boundaries before another repo-count target.",
+    "source_ids": [
+      "S312",
+      "S316",
+      "S235",
+      "S315"
+    ]
+  },
+  {
+    "id": "F13",
+    "title": "Some products have honest role-specific exceptions",
+    "evidence_status": "ROOT_CONTRACT_EVIDENCE",
+    "severity": "P1",
+    "detail": "CivicSurvival-public explicitly omits private generators/server and is not a third-party buildable snapshot. Eidolon distinguishes unsupported/default paths and an unshipped REST daemon. WorldSphereMod distinguishes CODE_LANDED and PROVEN.",
+    "impact": "These boundaries should be retained, not erased to force a universal green score or artificial .app deliverable.",
+    "next_action": "Qualify the actual distributed mod, native driver or selected game profile, and explicitly model inaccessible producer evidence.",
+    "source_ids": [
+      "S262",
+      "S253",
+      "S257"
+    ]
+  },
+  {
+    "id": "F14",
+    "title": "Documentation/landing/observability migration needs a consumer proof, not another registry",
+    "evidence_status": "SCOPE_GAP_AND_RECOMMENDATION",
+    "severity": "P1",
+    "detail": "The current roster and source references do not by themselves demonstrate where the former PhenoDocs renderer, landing publication, journey verifier and retired framework dependencies are actually built and used.",
+    "impact": "Renaming or copying a tooling package is not evidence of documentation deployment, private/public safety or preserved integration behavior.",
+    "next_action": "Identify existing canonical tool packages and content consumers, keep AgilePlus repo-scoped, and demonstrate one real docs/landing/app route with revision-linked product media. No new registry is required.",
+    "source_ids": [
+      "S232",
+      "S304",
+      "S264",
+      "S288"
+    ]
+  }
+]

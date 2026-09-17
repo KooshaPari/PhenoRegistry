@@ -1,0 +1,201 @@
+{
+  "kind": "dossier",
+  "schema_version": "1.1.0",
+  "id": "RELAYSUITE",
+  "record_status": "EXAMPLE",
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "title": "RelaySuite / green components, broken product",
+  "subtitle": "Cross-repository acceptance requires a consistent composition and a real consumer journey.",
+  "purpose": "Deliver a job from producer to consumer with correct deadlines and explicit failures.",
+  "boundary": "Pinned producer → queue → worker → consumer composition; four fictional components.",
+  "beneficiary": "Agents submitting jobs and consuming the final result.",
+  "authorship": "AGENT_ORIGINATED",
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment.",
+  "genesis_rationale": "This fictional repository was created by agents to isolate a consumer-facing capability. Its boundary is a hypothesis, not proof that a separate repository is necessary.",
+  "alternatives": [
+    "Repair the shared versioned contract",
+    "Ship a coordinated package set",
+    "Merge tightly coupled components into one repository",
+    "Narrow the promised rollout compatibility"
+  ],
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example.",
+  "non_goals": [
+    "Claim real-repository completion",
+    "Require a human-authored repository idea",
+    "Wait for a central registry to become operational"
+  ],
+  "subject_identity": {
+    "source_revision": null,
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact.",
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  },
+  "inventory": [
+    {
+      "id": "INV-01",
+      "item": "Producer suite",
+      "declared": "Local contract tests pass",
+      "observed_or_assumed": "New schema emitted",
+      "gap": "Old consumer incompatible",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-02",
+      "item": "Worker suite",
+      "declared": "Local behavior tests pass",
+      "observed_or_assumed": "Mock queue path only",
+      "gap": "Real transport unexercised",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-03",
+      "item": "Integrated job",
+      "declared": "Deadline respected, result delivered",
+      "observed_or_assumed": "Unit mismatch and success-looking rejection",
+      "gap": "Core journey fails",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-04",
+      "item": "Consumer inventory",
+      "declared": "All consumers known",
+      "observed_or_assumed": "Second consumer discovered",
+      "gap": "Scope gap must be resolved",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    }
+  ],
+  "maturity": {
+    "scenario_or_scoped_label": "Illustrative: component prototypes; integrated product gate FAIL.",
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding.",
+    "axes": [
+      {
+        "axis": "COMPONENT_READINESS",
+        "status": "ILLUSTRATIVE PASS — local suites",
+        "basis": "Local evidence cannot establish the composition."
+      },
+      {
+        "axis": "PRODUCT_VERIFIED",
+        "status": "ILLUSTRATIVE FAIL",
+        "basis": "Serializer and schema drift break the final effect."
+      },
+      {
+        "axis": "REPOSITORY_BOUNDARIES",
+        "status": "UNRESOLVED",
+        "basis": "Release separation has not demonstrated a benefit."
+      }
+    ],
+    "value_evidence": "No actual consumer value evidence is included. The case distinguishes a plausible intent from a validated benefit."
+  },
+  "finding_ids": [
+    "F-I-03",
+    "F-I-04",
+    "F-I-05",
+    "F-I-06",
+    "F-I-08",
+    "F-I-09",
+    "F-I-10",
+    "F-I-12"
+  ],
+  "decision_ids": [
+    "DEC-NEXT"
+  ],
+  "semantic_reviews": [
+    {
+      "topic": "Does this assignment serve the parent outcome?",
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository.",
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome.",
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product.",
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions.",
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+    }
+  ],
+  "next_action": "Repair the contract boundary under one integration owner, then re-run actual serialization and supported version-skew paths.",
+  "stop_condition": "Pause new component splitting until a passing integrated baseline and a coherent boundary justification exist.",
+  "restart_packet": {
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work.",
+    "failed_hypotheses": [
+      "A well-formed record is not proof the product behavior occurred."
+    ],
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations.",
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  },
+  "lineage": {
+    "previous_dossier_id": null,
+    "change_class": "ILLUSTRATIVE_BASELINE",
+    "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+  },
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit.",
+  "row_notes": [
+    {
+      "instance_id": "I-01",
+      "title": "The integrated product identifies all required component revisions",
+      "interpretation": "The scenario BOM identifies producer, queue, worker, and consumer versions.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-02",
+      "title": "Build artifacts map back to the selected source revisions",
+      "interpretation": "Each artifact has a source mapping.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-03",
+      "title": "Required interface fields have explicit meanings",
+      "interpretation": "Producer uses deadline_ms while consumer interprets deadline as seconds.",
+      "next_action": "Resolve units in the canonical contract."
+    },
+    {
+      "instance_id": "I-04",
+      "title": "Producers emit data conforming to the selected contract version",
+      "interpretation": "The producer emits the new schema while the installed consumer expects the old one.",
+      "next_action": "Exercise the actual two versions together."
+    },
+    {
+      "instance_id": "I-05",
+      "title": "Error responses are distinguishable from successful empty results",
+      "interpretation": "The consumer treats a rejected job as successful empty output.",
+      "next_action": "Preserve a structured failure across the interface."
+    },
+    {
+      "instance_id": "I-06",
+      "title": "A cross-repository contract mismatch is detected before promotion",
+      "interpretation": "Independent suites miss the incompatible shared contract.",
+      "next_action": "Add a mismatched-version negative control."
+    },
+    {
+      "instance_id": "I-07",
+      "title": "Component-level passes do not substitute for an integrated journey pass",
+      "interpretation": "The report keeps component passes separate from product acceptance.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-08",
+      "title": "Shared schema changes identify every affected consumer",
+      "interpretation": "An undocumented second consumer was discovered during review.",
+      "next_action": "Find its contract version and owner before changing the schema."
+    },
+    {
+      "instance_id": "I-09",
+      "title": "Integration tests exercise the actual selected transport and storage paths",
+      "interpretation": "The integration job mocks transport and bypasses the real serializer.",
+      "next_action": "Use the selected queue and serialization boundary."
+    },
+    {
+      "instance_id": "I-10",
+      "title": "Version skew behavior is tested for supported rollout orders",
+      "interpretation": "Only all-at-once upgrades were considered.",
+      "next_action": "Test permitted producer/consumer rollout orders."
+    },
+    {
+      "instance_id": "I-11",
+      "title": "An integration failure has a designated owner and reproducible baseline",
+      "interpretation": "One integration owner is assigned to the pinned failing composition.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-12",
+      "title": "Cross-boundary coupling costs are included in the decomposition decision",
+      "interpretation": "Separate repositories have not demonstrated a benefit over a versioned package set.",
+      "next_action": "Compare coupling and release cadence before further decomposition."
+    }
+  ]
+}

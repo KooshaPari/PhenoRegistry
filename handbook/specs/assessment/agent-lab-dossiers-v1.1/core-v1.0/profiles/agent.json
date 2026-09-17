@@ -1,0 +1,27 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "agent",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Evaluate model+harness+tools; distinguish best-of-attempt success, reliability and actual effects.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

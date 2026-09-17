@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/evidence.schema.json",
+  "title": "evidence",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "evidence"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sensitivity": {
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "PRIVATE",
+        "RESTRICTED"
+      ]
+    },
+    "role": {
+      "enum": [
+        "OBSERVATION",
+        "QUALIFICATION"
+      ]
+    },
+    "origin": {
+      "enum": [
+        "EXAMPLE_EXECUTION",
+        "LOCAL_OBSERVATION",
+        "EXTERNAL_REFERENCE"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "subject_digest",
+    "path",
+    "digest",
+    "observed_at",
+    "sensitivity",
+    "role",
+    "origin",
+    "summary"
+  ],
+  "additionalProperties": false
+}

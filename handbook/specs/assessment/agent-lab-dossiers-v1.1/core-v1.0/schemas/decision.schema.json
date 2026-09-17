@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/decision.schema.json",
+  "title": "decision",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "decision"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disposition": {
+      "enum": [
+        "IMPROVE",
+        "EXPERIMENT",
+        "RESEARCH",
+        "NARROW",
+        "MERGE",
+        "MAINTAIN",
+        "PAUSE",
+        "PIVOT",
+        "RETIRE",
+        "NO_ACTION",
+        "REVISE_EVALUATOR"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "ACCEPTED",
+        "REJECTED",
+        "SUPERSEDED"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resource_envelope_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reversal_condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_receipt_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "subject_ref",
+    "authority_ref",
+    "disposition",
+    "status",
+    "evidence_refs",
+    "alternatives",
+    "rationale",
+    "resource_envelope_ref",
+    "reversal_condition",
+    "execution_receipt_refs"
+  ],
+  "additionalProperties": false
+}

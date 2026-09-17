@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "method": "Bundled index_forge_export.py rerun against entire original export; exact comparison of conversation index",
+  "source_sha256": "95bbc70bce59d6771395b4500fe5586838a7d009b054c9ff0d079699f5ad3dcd",
+  "conversation_index_identical": true,
+  "conversations": 81,
+  "stored_messages": 4588,
+  "pre_release_corrections": [
+    "CRLF input initially rejected; normalization and a regression test added, then full-source rerun passed.",
+    "New operational tests initially omitted evidence_required; explicit evidence definitions added, source-kind schema updated, schema validation rerun."
+  ]
+}

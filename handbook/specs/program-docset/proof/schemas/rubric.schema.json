@@ -1,0 +1,188 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.4"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "approval_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "weight",
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "max_units": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "passing_fraction": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "mandatory": {
+            "type": "boolean"
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "oracle_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "required_modalities": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "source",
+                "design",
+                "semantic-state",
+                "pixels",
+                "video",
+                "audio",
+                "metrics",
+                "test-report",
+                "install",
+                "release",
+                "user-study"
+              ]
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "required_actions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "fixture-control",
+                "semantic-command",
+                "user-input",
+                "accessibility-action",
+                "browser-action",
+                "read-only",
+                "none"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "max_age_hours": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "allow_probabilistic": {
+            "type": "boolean"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "category_id",
+          "weight",
+          "max_units",
+          "passing_fraction",
+          "mandatory",
+          "critical",
+          "oracle_sha256",
+          "required_modalities",
+          "required_actions",
+          "max_age_hours",
+          "allow_probabilistic",
+          "rationale"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "scope_id",
+    "subject_id",
+    "revision",
+    "profile_id",
+    "source_revision",
+    "artifact_sha256",
+    "approval_reference",
+    "synthetic",
+    "categories",
+    "criteria"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

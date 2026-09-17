@@ -1,0 +1,11 @@
+{
+  "id": "SPEC-12",
+  "name": "Reciprocal host-relative application federation",
+  "state": "proposed",
+  "engine_receipt": null,
+  "human_approval": null,
+  "source_intent_ids": [
+    "INT-005"
+  ],
+  "format_profile": "Provisional compatible profile inherited from this docset; inspect actual installed AgilePlus before state mutations."
+}

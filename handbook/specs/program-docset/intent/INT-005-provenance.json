@@ -1,0 +1,11 @@
+{
+  "id": "INT-005",
+  "source": "Visible user message in current conversation",
+  "capture_date": "2026-09-16",
+  "original_message_timestamp": null,
+  "text_kind": "exact visible text; no trailing newline added",
+  "path": "INT-005-user-federation-exact.txt",
+  "sha256": "14a559cf24aa6721b121e8c21607676955d1545059fd9e41d89a65fcfaedc4ba",
+  "interpretation": "../federation/PRODUCT-CONTRACT.md",
+  "binding_scope": "Human intent; implementation mechanics below remain proposals, not executed capabilities or permission grants"
+}

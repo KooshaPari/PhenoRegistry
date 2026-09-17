@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.3.0",
+  "node_id": "example-desktop-unqualified",
+  "agent_version": "unknown",
+  "trust_state": "unqualified",
+  "host_mode": "unknown",
+  "resources": {
+    "cpu": 0,
+    "memory_bytes": 0,
+    "reserve": {},
+    "gpus": []
+  },
+  "runtimes": [],
+  "admission": {
+    "accepting_work": false,
+    "reason": "Example only; live node inventory not collected."
+  }
+}

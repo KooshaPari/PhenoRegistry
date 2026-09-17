@@ -1,0 +1,105 @@
+{
+  "observation_date": "2026-09-15",
+  "method": "Read-only authenticated GitHub connector",
+  "scope": "Selected subjects, not complete account census",
+  "records": [
+    {
+      "id": "R01",
+      "kind": "source-read",
+      "repository_id": 1221258698,
+      "resolved_name": "KooshaPari/zz-pause-Agentora",
+      "path": "Cargo.toml",
+      "blob_sha": "b661955e4d36808561e0c12f52d7f242a471f796",
+      "facts": [
+        "package agentkit",
+        "Rust src/lib.rs",
+        "Rust src/bin/main.rs",
+        "explicit workspace exclusions for stubs/duplicates"
+      ],
+      "limit": "Does not classify every mixed-language file"
+    },
+    {
+      "id": "R02",
+      "kind": "ref-read",
+      "repository_id": 1221258698,
+      "ref": "refs/heads/main",
+      "sha": "3f98ef7834aaba54729a2d46f96c9e1b5151e2be"
+    },
+    {
+      "id": "R03",
+      "kind": "pr-read",
+      "repository_id": 1220333985,
+      "resolved_name": "KooshaPari/PhenoTooling",
+      "number": 344,
+      "merged": true,
+      "merged_at": "2026-09-15T08:52:14Z",
+      "head_sha": "5aa7cd17888ee83edee55aadd7bed4d9a0b4729a",
+      "merge_commit_sha": "c4655fc206b2a0407987be72de582157f049a381",
+      "commits": 1,
+      "changed_files": 37,
+      "additions": 2451,
+      "deletions": 0,
+      "url": "https://github.com/KooshaPari/PhenoTooling/pull/344"
+    },
+    {
+      "id": "R04",
+      "kind": "pr-read",
+      "repository_id": 1220333985,
+      "resolved_name": "KooshaPari/PhenoTooling",
+      "number": 358,
+      "merged": true,
+      "merged_at": "2026-09-15T08:57:48Z",
+      "head_sha": "ca796fc83be15d348c399d6b2fe9093ed89ee3cd",
+      "merge_commit_sha": "3f1bc47f7250f6da82d84d8c65700047cbdc72e1",
+      "commits": 4,
+      "changed_files": 30,
+      "additions": 10939,
+      "deletions": 1,
+      "scope_note": "Rust CLI and crates only; Vue/Playwright/Remotion components explicitly deferred to separate PR",
+      "url": "https://github.com/KooshaPari/PhenoTooling/pull/358"
+    },
+    {
+      "id": "R05",
+      "kind": "ref-read",
+      "repository_id": 1220333985,
+      "resolved_name": "KooshaPari/PhenoTooling",
+      "ref": "refs/heads/main",
+      "sha": "0fa504228f499766b1eec2f5076520755f26fb16"
+    },
+    {
+      "id": "R06",
+      "kind": "source-read",
+      "repository_id": 1220333985,
+      "path": "Cargo.toml",
+      "ref": "0fa504228f499766b1eec2f5076520755f26fb16",
+      "blob_sha": "f016e8a1aef01b2b1282de863adb43884cc8d161",
+      "facts": [
+        "explicit member list lacks crates/datakit",
+        "both crates/logify and crates/logkit listed"
+      ],
+      "limit": "No cargo metadata/build run; no conclusion of orphaning/duplication from names alone"
+    },
+    {
+      "id": "R07",
+      "kind": "source-read",
+      "repository_id": 1220333985,
+      "path": "crates/datakit/Cargo.toml",
+      "ref": "0fa504228f499766b1eec2f5076520755f26fb16",
+      "blob_sha": "af2e2638717c857e46bef7010087867feaa1d7d8",
+      "facts": [
+        "package datakit version0.1.0",
+        "criterion and rand dev-dependencies",
+        "benchmark target"
+      ]
+    },
+    {
+      "id": "R08",
+      "kind": "stable-id-resolution",
+      "repository_id": 1200273587,
+      "resolved_name": "KooshaPari/zz-aa-dep-Pheno",
+      "archived": false,
+      "default_branch": "main",
+      "limit": "Name is not accepted architecture/lifecycle evidence"
+    }
+  ]
+}

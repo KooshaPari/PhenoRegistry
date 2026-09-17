@@ -1,0 +1,19 @@
+{
+  "status": "PASSED_WITH_EXPLICIT_SCOPE",
+  "date": "2026-09-15",
+  "json_files_parsed": 8,
+  "evidence_groups": 16,
+  "selected_excerpts": 45,
+  "findings": 7,
+  "excerpt_hash_failures": 0,
+  "unknown_finding_references": 0,
+  "jq_inert_fixtures_reproduced": 4,
+  "pdf_pages": 14,
+  "pdf_text_bbox_issues": [],
+  "visual_review": "All 14 pages contact-render inspected; detailed full-resolution table page inspected; no clipping or overlap observed.",
+  "limited_secret_pattern_alerts": [],
+  "source_repo_tests": "NOT_RUN",
+  "remote_mutations": 0,
+  "source_delete_restore_drills": "NOT_RUN",
+  "caveat": "Integrity/structure checks do not authenticate source claims, approvals or product correctness."
+}
