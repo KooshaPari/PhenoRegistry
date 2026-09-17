@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "scope": "Current set and packet consistency only",
+  "native_product_qualification": false,
+  "actual_sessions_observed": false
+}

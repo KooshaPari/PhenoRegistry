@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1167587447",
+  "name": "HeliosLab",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "863830bc5ac49348b27f0ed9e1372223cb166356",
+  "sampled_commit_date_utc": "2026-09-16T10:17:51Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent TypeScript configuration changes report reducing diagnostics from 3187 to about 287 by explicit include/exclude and aliases. Earlier formatting used Biome unsafe fixes across many files.",
+  "assessment": "SCOPE_CHANGE_REQUIRES_QUALIFICATION",
+  "role": "Workbench/configuration composite with contract reconciliation",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Reported diagnostic counts are not measured by this audit.",
+    "Excluding irrelevant generated/vendor files can be correct; supported tests and application code need another real checker, not disappearance from the denominator.",
+    "Unsafe autofix semantics and actual product/build root require targeted regression checks."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1167587447-A1",
+      "title": "Inventory all effective compiler profiles",
+      "work": "Map each supported package, app, test and generated segment to the intended type/lint/build job; document precise exclusions.",
+      "acceptance": "No supported code disappears without another checker or an accepted reason; known bad inputs fail.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1167587447",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1167587447-A2",
+      "title": "Close scoped remaining errors and actual UX",
+      "work": "Reproduce the current diagnostics, fix real code defects without relaxing contracts, and exercise the accepted workbench/config workflow.",
+      "acceptance": "Clean selected build and a real persisted useful task; no percentage derived from excluded files.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1167587447",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1167587447-A3",
+      "title": "Qualify cross-product configuration contracts",
+      "work": "Compare local custom configuration and session facilities with existing owned or mature components; test secrets and updates.",
+      "acceptance": "Dependencies resolve from a clean environment, secrets stay private, consumers retain semantics and the install works.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1167587447",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Clarify the owning product boundary with HeliosCLI/HeliosLite/KCode and PhenoShared; one product name must not mask unrelated implementation.",
+  "parent_acceptance": "The accepted actual product builds, installs and performs its named user job with correct configuration/state handling.",
+  "sources": [
+    {
+      "id": "CUR-1167587447-S01",
+      "url": "https://github.com/KooshaPari/HeliosLab/commit/863830bc5ac49348b27f0ed9e1372223cb166356",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

@@ -1,0 +1,350 @@
+[
+  {
+    "id": "WP-PROOF-13-1",
+    "title": "Capability-first composition: contract and first positive path",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [],
+    "kind": "contract",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "capability-composition in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Bind one host command to a real owned or external provider through the least-cost valid boundary, with no peer-UI mount. Record provider/consumer contracts, shared object identity and before/after behavior.",
+    "negative_acceptance": [
+      "A host command uses a real provider with zero UI mounts and retains a coherent result.",
+      "A proposed handroll without owned/external alternatives or consumer impact remains incomplete.",
+      "A faster or shorter replacement that breaks a critical consumer is rejected.",
+      "A valid in-process provider is not forced through an unnecessary network layer."
+    ],
+    "requirements": [
+      "PROOF-13-01",
+      "PROOF-13-02",
+      "PROOF-13-03",
+      "PROOF-13-04"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-13-2",
+    "title": "Capability-first composition: negative controls and qualified consumer",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [
+      "WP-PROOF-13-1"
+    ],
+    "kind": "verification",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "capability-composition in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Run the same contract with the provider absent, failed, revoked and replaced; add a second compatible consumer and prove one authoritative result with no duplicate mutation or data copy.",
+    "negative_acceptance": [
+      "A prohibited UI/transport dependency introduced into the domain fails the architecture check.",
+      "Revoked authority or absent optional peer does not silently trigger privileged fallback.",
+      "Two host perspectives reference one authoritative object and reject duplicate mutation.",
+      "Mocked provider success cannot satisfy a required live integration."
+    ],
+    "requirements": [
+      "PROOF-13-05",
+      "PROOF-13-06",
+      "PROOF-13-07",
+      "PROOF-13-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-14-1",
+    "title": "Agent bridge and graphical proof: contract and first positive path",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [],
+    "kind": "contract",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "agent-bridge in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Adapt one existing white-box or permitted gray-box bridge. Bind the actual candidate, process, window and nonce; correlate user action, application effect and final-frame capture without fixture shortcuts.",
+    "negative_acceptance": [
+      "An unavailable proprietary-state API cannot be marked exercised.",
+      "A wrong process or stale nonce is rejected before input.",
+      "Teleport/state mutation cannot satisfy a click-and-move user-path criterion.",
+      "Acknowledgement without the required effect is non-accepting.",
+      "A prior frame from the correct window cannot prove a new action.",
+      "Cross-worker capture/data access or missing license cannot be bypassed to pass."
+    ],
+    "requirements": [
+      "PROOF-14-01",
+      "PROOF-14-02",
+      "PROOF-14-03",
+      "PROOF-14-04",
+      "PROOF-14-05",
+      "PROOF-14-06"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-14-2",
+    "title": "Agent bridge and graphical proof: negative controls and qualified consumer",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [
+      "WP-PROOF-14-1"
+    ],
+    "kind": "verification",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "agent-bridge in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Exercise one owned-game witness and one permitted host-game witness with known-bad input/render controls, fine ROIs and temporal samples. Demonstrate stale-window/frame rejection and isolate foreground resources.",
+    "negative_acceptance": [
+      "A logic-only run is rejected for a required graphical claim.",
+      "Timeout is not successful completion and uncertain side effects are reconciled before retry.",
+      "A missing small required icon fails even if full-frame similarity is high.",
+      "A lucky still frame cannot satisfy a temporal criterion.",
+      "Disabling the effect under test cannot produce shipping-quality approval.",
+      "Known-bad subtle examples must be caught at the predeclared required rates."
+    ],
+    "requirements": [
+      "PROOF-14-07",
+      "PROOF-14-08",
+      "PROOF-14-09",
+      "PROOF-14-10",
+      "PROOF-14-11",
+      "PROOF-14-12"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-15-1",
+    "title": "Canonical design and complete artifact traceability: contract and first positive path",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [],
+    "kind": "contract",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "design-traceability in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Canonicalize one editable UI/flow or scene design with populated/empty/error/recovery states and fixture data. Keep proposals and approval evidence separate; link the actual implementation and capture.",
+    "negative_acceptance": [
+      "A runtime screenshot cannot replace the missing editable design when required.",
+      "One happy-path frame cannot close an entire flow.",
+      "An agent-written approved field without actual decision evidence does not promote scope.",
+      "Autoupdating a failed screenshot baseline without a decision cannot close the defect."
+    ],
+    "requirements": [
+      "PROOF-15-01",
+      "PROOF-15-02",
+      "PROOF-15-03",
+      "PROOF-15-04"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-15-2",
+    "title": "Canonical design and complete artifact traceability: negative controls and qualified consumer",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [
+      "WP-PROOF-15-1"
+    ],
+    "kind": "verification",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "design-traceability in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Run forward and reverse gap checks across intent, contracts, assets, code, configuration, tests, runs and installed artifact. Change one design/source element and prove affected evidence becomes stale without losing history.",
+    "negative_acceptance": [
+      "Excluded code or generated files do not disappear from the inventory without producer/scope rationale.",
+      "A complete forward link set does not conceal an unowned public command.",
+      "A generated page does not fabricate an AgilePlus engine transition or authoritative data move.",
+      "Dropping a hard requirement to improve the percentage is visible and needs authorization."
+    ],
+    "requirements": [
+      "PROOF-15-05",
+      "PROOF-15-06",
+      "PROOF-15-07",
+      "PROOF-15-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-16-1",
+    "title": "Evidence-bound numeric product grading: contract and first positive path",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [],
+    "kind": "contract",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "machine-grading in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Bind the existing rubric owner to one frozen scope/profile. Adapt native evidence into typed scored obligations, compute category weights and a literal percentage/letter, and display missing weight and mandatory gates.",
+    "negative_acceptance": [
+      "The output names scope/profile/revision and never presents the result as universal quality.",
+      "Adding many easy tests or duplicate criteria cannot silently dilute a failed critical criterion.",
+      "Stale, wrong-build or no-pixel evidence earns no credit for a visible current feature.",
+      "Deleting missing outcomes from the evidence set cannot increase the grade.",
+      "A high numeric grade with a failed critical invariant remains BLOCKED."
+    ],
+    "requirements": [
+      "PROOF-16-01",
+      "PROOF-16-02",
+      "PROOF-16-03",
+      "PROOF-16-04",
+      "PROOF-16-05"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  },
+  {
+    "id": "WP-PROOF-16-2",
+    "title": "Evidence-bound numeric product grading: negative controls and qualified consumer",
+    "owner_role": "Existing subject/shared owner; one integration lead",
+    "depends_on": [
+      "WP-PROOF-16-1"
+    ],
+    "kind": "verification",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "machine-grading in accepted owner repository; bind actual paths before mutation",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Adversarially test grade dilution, stale/wrong-build receipts, missing media, synthetic/live mismatch and failing critical checks. Compare the computed grade with independently inspected outcomes and qualify actual producer/oracle boundaries.",
+    "negative_acceptance": [
+      "Model confidence is not accepted as a probability or proof.",
+      "A scope expansion is not misreported as a code regression or hidden to keep a score rising.",
+      "A structurally valid invented receipt never claims authenticated product qualification.",
+      "Do not assert line coverage of inaccessible third-party engine internals.",
+      "No invented acronym or new registry becomes authority from this amendment."
+    ],
+    "requirements": [
+      "PROOF-16-06",
+      "PROOF-16-07",
+      "PROOF-16-08",
+      "PROOF-16-09",
+      "PROOF-16-10"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_ACTUAL_SCOPE",
+    "rollback": "Retain original source/design/evidence and use scoped rollback; no lifecycle or destructive authority granted.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted bounded subject scope",
+      "Actual owner and unique worktree/path lease",
+      "Consumer compatibility contract",
+      "Designated verifier and action permissions"
+    ]
+  }
+]

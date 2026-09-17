@@ -1,0 +1,24 @@
+{
+  "product_id": "SUP-KOOSHAPARI",
+  "name": "KooshaPari",
+  "role": "Truthful public portfolio discovery",
+  "status": "PLANNED_NOT_EXECUTED",
+  "baseline": "Simplest correct current user workflow; final comparator versions to be resolved before running",
+  "scenario": "Have an unfamiliar reader find and install a real product and recover from an unsupported-platform case using the actual published surface.",
+  "negative_cases": [
+    "Broken download",
+    "Private search content",
+    "Stale product state",
+    "Incorrect canonical/deep-link path"
+  ],
+  "measurements": [
+    "Correct useful outcome",
+    "Time and effort to first use",
+    "Failure detection and recovery",
+    "Maintenance and consumer burden",
+    "Relevant resource/profile effects"
+  ],
+  "results": null,
+  "winner": null,
+  "authorization": "Not granted by package"
+}

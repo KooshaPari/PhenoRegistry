@@ -1,0 +1,3266 @@
+[
+  {
+    "id": "REQ-01-01",
+    "group": "identity",
+    "title": "Stable subject identity",
+    "statement": "Bind each subject to immutable repository/product identity; names and counts are observations.",
+    "acceptance": "Renaming a fixture retains its subject relationships and source lineage.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-02",
+    "group": "identity",
+    "title": "Current scope binding",
+    "statement": "Resolve current accepted parent outcome, role and actual permissions before execution.",
+    "acceptance": "A task without scope approval remains unclaimable for mutation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-03",
+    "group": "identity",
+    "title": "Freshness boundary",
+    "statement": "Record source revision, tool/config identity, timestamp and partial acquisition coverage.",
+    "acceptance": "A stale observation cannot silently satisfy a current-revision query.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-04",
+    "group": "identity",
+    "title": "Local overlay identity",
+    "statement": "Represent dirty/untracked authorized state separately from its base commit.",
+    "acceptance": "Tests for the base commit cannot qualify changed overlay bytes.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-05",
+    "group": "identity",
+    "title": "Incremental invalidation",
+    "statement": "Invalidate affected derived claims from changed inputs without erasing old evidence.",
+    "acceptance": "A changed source invalidates dependent evidence and leaves unrelated valid evidence reusable.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-06",
+    "group": "identity",
+    "title": "Alias and lifecycle distinction",
+    "statement": "Do not infer activity, archive, deletion or permission solely from topics/prefixes/404.",
+    "acceptance": "Ambiguous access or conflicting role is explicit rather than classified as deleted.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-07",
+    "group": "identity",
+    "title": "Complete acquisition accounting",
+    "statement": "Enumerate discovered, processed, inaccessible, excluded and unresolved sources.",
+    "acceptance": "A partial source scan cannot be reported as a complete repository scan.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-01-08",
+    "group": "identity",
+    "title": "No duplicate authority",
+    "statement": "Reuse accepted source/work/evidence owners and generate projections.",
+    "acceptance": "A generated document edit does not mutate real engine state.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-01",
+    "owner_role": "Identity, scope and incremental observation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-01",
+    "group": "intent",
+    "title": "Exact visible source preservation",
+    "statement": "Preserve available exact human text separately from synthesis and raw-client claims.",
+    "acceptance": "Captured text and digest agree; missing original timestamps remain unknown.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-02",
+    "group": "intent",
+    "title": "Normalized derivative identity",
+    "statement": "Track normalization/redaction as derived records with source lineage.",
+    "acceptance": "A normalized text cannot be labelled original byte capture.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-03",
+    "group": "intent",
+    "title": "Scoped supersession",
+    "statement": "Link decisions to the exact scope and earlier decision they supersede.",
+    "acceptance": "A one-repo approval cannot authorize a different repo operation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-04",
+    "group": "intent",
+    "title": "Rationale distinction",
+    "statement": "Separate historical explanation, inference and proposed rationale.",
+    "acceptance": "Unsupported historical rationale is flagged rather than promoted as fact.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-05",
+    "group": "intent",
+    "title": "Conflicts visible",
+    "statement": "Expose contradictory behavior, identity and ownership requirements for adjudication.",
+    "acceptance": "Conflicting defaults appear as an unresolved decision, not last-write-wins prose.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-06",
+    "group": "intent",
+    "title": "Future horizon preserved",
+    "statement": "Retain accepted future/research work without advertising it as shipped.",
+    "acceptance": "Narrow CVP witness does not delete the larger accepted requirement set.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-07",
+    "group": "intent",
+    "title": "SROC/CDP unresolved",
+    "statement": "Retain literal unresolved labels and recover their actual schemas before claiming conformance.",
+    "acceptance": "No guessed expansion or implemented-state assertion appears in the package.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-02-08",
+    "group": "intent",
+    "title": "Private acquisition policy",
+    "statement": "Acquire authorized prompts/captures with access restrictions and public derivatives separated.",
+    "acceptance": "A public projection cannot include a private raw prompt or secret.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-02",
+    "owner_role": "Intent, provenance and supersession",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-01",
+    "group": "atlas",
+    "title": "All artifact classes",
+    "statement": "Inventory source, tests, configs, scripts, schemas, assets, docs and external build inputs.",
+    "acceptance": "Fixture includes a native shell/config asset outside root build and remains accounted for.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-02",
+    "group": "atlas",
+    "title": "Meaningful semantic units",
+    "statement": "Map purpose at the function/state/contract/asset-family level with source spans.",
+    "acceptance": "Generated boilerplate inherits producer rationale; critical spans keep direct obligations.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-03",
+    "group": "atlas",
+    "title": "Build and runtime reachability",
+    "statement": "Trace public behavior through actual supported build/runtime/profile paths.",
+    "acceptance": "Disabled/mock/test-only code cannot establish shipping capability.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-04",
+    "group": "atlas",
+    "title": "Dynamic uncertainty",
+    "statement": "Record unobserved reflection/plugin/FFI/external usage explicitly.",
+    "acceptance": "Static no-reference output alone cannot authorize deletion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-05",
+    "group": "atlas",
+    "title": "Source lineage",
+    "statement": "Carry logical IDs through moves, copies, extraction and version changes with evidence.",
+    "acceptance": "One capability moved across repositories retains links without falsely proving equivalence.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-06",
+    "group": "atlas",
+    "title": "Consumers and state owners",
+    "statement": "Map actual internal/external consumers and authoritative mutable state.",
+    "acceptance": "A consumer source-resolution gap is visible before donor retirement.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-07",
+    "group": "atlas",
+    "title": "Purpose and constraints",
+    "statement": "Every material unit has a sourced purpose or UNKNOWN plus preserved constraints.",
+    "acceptance": "A unit lacking rationale is searchable and not auto-justified by an LLM.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-08",
+    "group": "atlas",
+    "title": "Dissatisfaction model",
+    "statement": "Record evidence, affected job, impact, alternatives, acceptance and proposed action.",
+    "acceptance": "An analyzer warning is not a mandatory defect until interpreted under accepted policy.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-09",
+    "group": "atlas",
+    "title": "Bounded exploration",
+    "statement": "Support bounded graph expansion/search and source-linked explanation.",
+    "acceptance": "A large fixture cannot force unbounded context or UI expansion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-03-10",
+    "group": "atlas",
+    "title": "Query evaluation",
+    "statement": "Test explanations against adjudicated questions and false-positive/abstention cases.",
+    "acceptance": "Report correct/unsupported/unknown answers, not only token savings.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-03",
+    "owner_role": "Explanatory codebase atlas",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-01",
+    "group": "specification",
+    "title": "Native format reuse",
+    "statement": "Read actual AgilePlus/subject schemas and adapt richer existing records.",
+    "acceptance": "No generated schema claims official compatibility without a verified contract version.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-02",
+    "group": "specification",
+    "title": "Capability decomposition",
+    "statement": "Expand actors, state, inputs, errors, recovery, support and lifecycle systematically.",
+    "acceptance": "A broad requirement such as resume is decomposed into testable relevant behaviors.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-03",
+    "group": "specification",
+    "title": "Typed contracts",
+    "statement": "Represent data, API, UX, performance, security and delivery obligations distinctly.",
+    "acceptance": "Artifact count alone cannot satisfy a contract family.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-04",
+    "group": "specification",
+    "title": "Stable identifiers",
+    "statement": "Assign stable IDs and explicit relation types with provenance.",
+    "acceptance": "Duplicate or dangling IDs fail consistency validation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-05",
+    "group": "specification",
+    "title": "Bidirectional traceability",
+    "statement": "Link source intent through requirement/decision/work/test/run/artifact and reverse gaps.",
+    "acceptance": "An orphan implementation and an unimplemented requirement are both detected.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-06",
+    "group": "specification",
+    "title": "Critical invariants",
+    "statement": "Define non-negotiable behavior and ownership separately from optimization targets.",
+    "acceptance": "A throughput gain cannot compensate for a safety invariant failure.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-07",
+    "group": "specification",
+    "title": "Versioned public contracts",
+    "statement": "Track schema/API/config/save compatibility and actual support profiles.",
+    "acceptance": "A breaking change requires migration/support decision, not merely passing new tests.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-04-08",
+    "group": "specification",
+    "title": "No record padding",
+    "statement": "Let counts reflect the real product rather than fixed FR/ADR/entity quotas.",
+    "acceptance": "Generated templates are not counted as accepted product requirements.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-04",
+    "owner_role": "Granular contracts and traceability",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-01",
+    "group": "assurance",
+    "title": "Unit floor",
+    "statement": "Meet at least 85 percent independent required unit structural/behavioral coverage; preserve stronger floors.",
+    "acceptance": "A below-floor unit cell blocks even if integration/E2E are high.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-02",
+    "group": "assurance",
+    "title": "Integration floor",
+    "statement": "Measure actual integration boundaries independently against their required inventories.",
+    "acceptance": "A unit mock run relabelled integration is rejected.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-03",
+    "group": "assurance",
+    "title": "E2E floor",
+    "statement": "Measure the real public product/consumer E2E independently.",
+    "acceptance": "A root library smoke test cannot qualify a native product artifact.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-04",
+    "group": "assurance",
+    "title": "Metric independence",
+    "statement": "Keep line, branch/decision, function and behavioral metrics distinct where supported.",
+    "acceptance": "High line coverage cannot hide required low branch coverage.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-05",
+    "group": "assurance",
+    "title": "Denominator provenance",
+    "statement": "Inventory eligible zero-hit units and freeze reviewed denominator before interpreting results.",
+    "acceptance": "Unknown/duplicate units and covered items outside denominator fail.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-06",
+    "group": "assurance",
+    "title": "Critical completeness",
+    "statement": "Cover and satisfy every finite enumerated critical obligation.",
+    "acceptance": "Any missing critical item blocks regardless of percentage.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-07",
+    "group": "assurance",
+    "title": "All mandatory checks",
+    "statement": "Run and pass required checks; missing, failed, skipped, crashed and timeout are nonaccepting.",
+    "acceptance": "Empty selected checks or a skipped mandatory case cannot pass.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-08",
+    "group": "assurance",
+    "title": "Independent run selection",
+    "statement": "Do not combine accumulators or use one run identity as three independent suites.",
+    "acceptance": "A mixed-family or reused run is rejected by the reference admission checks.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-09",
+    "group": "assurance",
+    "title": "Unsupported measurements",
+    "statement": "Expose measurement limitations and require an alternative/authorized exception.",
+    "acceptance": "Unsupported or zero-denominator output is not 100 percent.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-10",
+    "group": "assurance",
+    "title": "Negative controls",
+    "statement": "Prove verifier failure on missing/malformed inputs and actual bad behavior.",
+    "acceptance": "A seeded broken docs link or known-bad task causes the final gate to reject.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-11",
+    "group": "assurance",
+    "title": "Trust boundary",
+    "statement": "Separate payload integrity, producer authenticity and domain truth.",
+    "acceptance": "A valid hash on a fabricated report never grants lifecycle approval.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-05-12",
+    "group": "assurance",
+    "title": "Other required families",
+    "statement": "Track security, fault, compatibility, performance, docs and delivery obligations independently.",
+    "acceptance": "A required family absent from the support profile cannot disappear from acceptance silently.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-05",
+    "owner_role": "Independent assurance and meaningful oracles",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-01",
+    "group": "simplification",
+    "title": "Preservation contract",
+    "statement": "State outputs, errors, side effects, ordering, cancellation and quality constraints before refactor.",
+    "acceptance": "Differential/contract tests identify an intentional behavior change separately from parity.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-02",
+    "group": "simplification",
+    "title": "Existing-solution assessment",
+    "statement": "Compare standard facilities and maintained dependencies before handrolling large subsystems.",
+    "acceptance": "Decision includes actual fit, limitations, measured cost and exit strategy.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-03",
+    "group": "simplification",
+    "title": "Wrapper restraint",
+    "statement": "Wrap actual policy/stability boundaries, not every dependency method.",
+    "acceptance": "A wrapper without useful contract difference is challenged as maintenance cost.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-04",
+    "group": "simplification",
+    "title": "Patch provenance",
+    "statement": "Track upstream revision, patch reason, tests, owner and removal condition.",
+    "acceptance": "Upgrade rehearsal detects obsolete/conflicting patches before release.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-05",
+    "group": "simplification",
+    "title": "Dead-code classification",
+    "statement": "Distinguish accepted inactive, future, superseded, duplicate, optional and unknown behavior.",
+    "acceptance": "No static candidate is deleted without support/consumer/intent review.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-06",
+    "group": "simplification",
+    "title": "Consumer parity",
+    "statement": "Verify affected consumers and clean dependencies before retiring a duplicate owner.",
+    "acceptance": "A filename match or clean patch application alone fails migration acceptance.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-07",
+    "group": "simplification",
+    "title": "Maintenance evidence",
+    "statement": "Measure custom concepts/glue/updates/cycles/release burden rather than LOC alone.",
+    "acceptance": "A smaller implementation with worse resource/error behavior does not qualify.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-08",
+    "group": "simplification",
+    "title": "Safe rollback",
+    "statement": "Keep tested state/source recovery appropriate to each change.",
+    "acceptance": "Git revert is not represented as a database restore.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Reuse and semantic compression",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-01",
+    "group": "composition",
+    "title": "Explicit applet manifest",
+    "statement": "Declare capabilities, state, ports, permissions, lifecycle, resources and children.",
+    "acceptance": "An unnamed shared mutable state fails boundary review.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-02",
+    "group": "composition",
+    "title": "Dependency direction",
+    "statement": "Keep domain rules independent of concrete UI/provider/storage implementations.",
+    "acceptance": "Architecture tests detect forbidden dependency direction.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-03",
+    "group": "composition",
+    "title": "Behavioral substitutability",
+    "statement": "Qualify adapters against errors, timing, data and cancellation contracts.",
+    "acceptance": "Type compatibility alone cannot certify an adapter.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-04",
+    "group": "composition",
+    "title": "Recursive composition",
+    "statement": "Allow composites to expose applet contracts without copying child authority.",
+    "acceptance": "Composed state ownership remains consistent across nesting.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-05",
+    "group": "composition",
+    "title": "Optional capability semantics",
+    "statement": "Differentiate disabled, unsupported, unavailable, forbidden and incompatible.",
+    "acceptance": "Required missing backend is non-ready rather than mock healthy.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-06",
+    "group": "composition",
+    "title": "Locality-aware lowering",
+    "statement": "Use direct/local paths unless isolation/placement cost justifies boundaries.",
+    "acceptance": "A proposed RPC/microservice split records overhead and benefit.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-07",
+    "group": "composition",
+    "title": "No forced repo split",
+    "statement": "Applet identity does not itself create a repository or release requirement.",
+    "acceptance": "New repo requires independent boundary/approval beyond a module name.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-07-08",
+    "group": "composition",
+    "title": "Lifecycle composition",
+    "statement": "Specify startup, readiness, quiescence, cancellation, unmount and recovery.",
+    "acceptance": "Parent shutdown does not leave unowned children or duplicate operations.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-07",
+    "owner_role": "Hexagonal applets and federation",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-01",
+    "group": "pilot",
+    "title": "Current primary sources",
+    "statement": "Pin versions and claim-specific sources before relying on external facts.",
+    "acceptance": "A seed URL or vendor claim cannot be tagged independently measured.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-02",
+    "group": "pilot",
+    "title": "Relevant research breadth",
+    "statement": "Build relevant candidate longlists and justified executable shortlists.",
+    "acceptance": "No duplicate/adjacent padding or unproved maximum claims.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-03",
+    "group": "pilot",
+    "title": "Fair baseline",
+    "statement": "Include competent direct/upstream/composed alternatives as appropriate.",
+    "acceptance": "Owned preprocessing/setup is accounted for equivalently.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-04",
+    "group": "pilot",
+    "title": "Modes separated",
+    "statement": "Distinguish controlled replay, matched live and idiomatic whole-stack trials.",
+    "acceptance": "Language/runtime differences are not attributed solely to framework design.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-05",
+    "group": "pilot",
+    "title": "Ergonomics study",
+    "statement": "Measure writing/testing/debugging/change/upgrade burden beyond LOC.",
+    "acceptance": "At least one post-version-one change request is evaluated.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-06",
+    "group": "pilot",
+    "title": "Safety and failure trials",
+    "statement": "Inject representative interruption, malformed output, permission and resource failures.",
+    "acceptance": "Success-only corpus cannot certify recovery/safety.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-07",
+    "group": "pilot",
+    "title": "Uncertainty and retention",
+    "statement": "Retain all outcomes and predeclare thresholds/stopping/analysis.",
+    "acceptance": "Retries and inconclusive results remain in the final record.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-08",
+    "group": "pilot",
+    "title": "Bounded claims",
+    "statement": "Require hard invariants plus declared margins and meaningful advantage/distinct job.",
+    "acceptance": "No universal winner or safety-compensating aggregate score is published.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-09",
+    "group": "pilot",
+    "title": "Case study",
+    "statement": "Demonstrate actual user setup/task/recovery/output separately from design comparison.",
+    "acceptance": "A mocked demo cannot be the installed-product case study.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-08-10",
+    "group": "pilot",
+    "title": "Negative-result usefulness",
+    "statement": "Allow dependency adoption, narrowing or retained-fork justification as outcomes.",
+    "acceptance": "Pilot failure is not concealed to preserve the owned brand.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-08",
+    "owner_role": "SOTA and comparative evidence",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-01",
+    "group": "execution",
+    "title": "Complementary product pair",
+    "statement": "Separate implementation ownership from active independent assurance/comparison.",
+    "acceptance": "One agent is not sole author of requirement, oracle, implementation and approval.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-02",
+    "group": "execution",
+    "title": "Ten Tracera seats",
+    "statement": "Assign bounded distinct streams with schema/integration ownership.",
+    "acceptance": "Ten independent incompatible graph engines do not satisfy the allocation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-03",
+    "group": "execution",
+    "title": "Product independence",
+    "statement": "Permit repo-local portable records before Tracera completion.",
+    "acceptance": "Unrelated product CVP is not blocked on every future graph integration.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-04",
+    "group": "execution",
+    "title": "Write leases",
+    "statement": "Bind unique worktrees and target path ownership, including shared manifests.",
+    "acceptance": "Concurrent overlapping destination writes are blocked/escalated.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-05",
+    "group": "execution",
+    "title": "Scoped permissions",
+    "statement": "Tie writes, publication and lifecycle actions to explicit real authorization.",
+    "acceptance": "Documentation approval cannot authorize admin merge or deletion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-06",
+    "group": "execution",
+    "title": "Restart reconciliation",
+    "statement": "Reconcile unknown operation outcome before retrying side effects.",
+    "acceptance": "Dropped connection is not treated as proof of mutation failure.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-07",
+    "group": "execution",
+    "title": "Parent outcome continuation",
+    "statement": "Continue useful authorized work beyond a narrow PR while preserving scope.",
+    "acceptance": "Inherited required defects remain assigned; child completion does not close parent.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-08",
+    "group": "execution",
+    "title": "Owned external blockers",
+    "statement": "Record owner, exact action, affected gates and wakeup condition.",
+    "acceptance": "Out-of-scope prose without ownership is not a terminal completion state.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-09",
+    "group": "execution",
+    "title": "Resource admission",
+    "statement": "Separate chat capacity from CPU/GPU/native/CI/review quotas.",
+    "acceptance": "Foreground-interference budgets are tested under real concurrent load.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-09-10",
+    "group": "execution",
+    "title": "No fake schedules",
+    "statement": "Calculate durations only from explicit estimates and capacity assumptions.",
+    "acceptance": "Missing estimates yield unknown schedule, not fabricated dates.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-09",
+    "owner_role": "Multi-agent and incremental execution",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-01",
+    "group": "delivery",
+    "title": "Artifact identity",
+    "statement": "Bind source, build profile, package digest and installed executable.",
+    "acceptance": "A tag or source archive cannot impersonate the tested binary.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-02",
+    "group": "delivery",
+    "title": "Clean consumer",
+    "statement": "Install/build without private warm caches or accidental sibling checkouts.",
+    "acceptance": "Missing dependency is a real blocker rather than a local workaround hidden from docs.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-03",
+    "group": "delivery",
+    "title": "Actual tooling adoption",
+    "statement": "Use real scoped AgilePlus/PhenoDocs contracts and receipts.",
+    "acceptance": "Generated docs do not count as an engine operation or working federation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-04",
+    "group": "delivery",
+    "title": "Real product capture",
+    "statement": "Capture qualified actual product behavior and negative cases.",
+    "acceptance": "Mock/stub screenshots or fixed live evaluator values cannot qualify a product.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-05",
+    "group": "delivery",
+    "title": "Authored asset distinction",
+    "statement": "Separate branding/concept art from product evidence; preserve source/rights.",
+    "acceptance": "No generated overlay falsifies implemented UI or performance evidence.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-06",
+    "group": "delivery",
+    "title": "Role-specific delivery",
+    "statement": "GUI, CLI, library, lab and historical targets have appropriate acceptance.",
+    "acceptance": "Reference repo is not forced into a fake app release.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-07",
+    "group": "delivery",
+    "title": "Public route qualification",
+    "statement": "Verify actual authorized docs/package/app distribution plus rollback.",
+    "acceptance": "Configured provider names alone cannot claim deployment completed.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-10-08",
+    "group": "delivery",
+    "title": "Private/public separation",
+    "statement": "Protect private content across docs/search/media and exports.",
+    "acceptance": "A public generated index must not contain private capture content.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": false,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-10",
+    "owner_role": "CVP, tooling adoption and publication",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-01",
+    "group": "security",
+    "title": "No automatic deletion",
+    "statement": "Keep destructive lifecycle actions outside this program default authority.",
+    "acceptance": "Repo count targets cannot trigger deletion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-02",
+    "group": "security",
+    "title": "Fork-network protection",
+    "statement": "Honor no-delete policy and scoped exceptional authority.",
+    "acceptance": "A fork remains protected regardless of a pause/topic rename.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-03",
+    "group": "security",
+    "title": "Full custody",
+    "statement": "Preserve required source/dirty/refs/releases/data and verify recovery when transitioning.",
+    "acceptance": "A Git bundle alone cannot be labelled a complete dirty-state backup.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-04",
+    "group": "security",
+    "title": "Untrusted content",
+    "statement": "Treat repo prompts and historic tool output as data, not controlling instructions.",
+    "acceptance": "Malicious source text cannot cause an unauthorized shell/tool action.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-05",
+    "group": "security",
+    "title": "Least-privilege tests",
+    "statement": "Use disposable scoped credentials and controlled isolation.",
+    "acceptance": "General QA never mounts the operator entire home or unrestricted vault.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-06",
+    "group": "security",
+    "title": "Evidence redaction",
+    "statement": "Track private raw and sanitized derivatives with separate IDs.",
+    "acceptance": "Blurring a screenshot does not satisfy log/index redaction.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-07",
+    "group": "security",
+    "title": "Credential segregation",
+    "statement": "Separate normal edit privileges from admin/delete/publication authority.",
+    "acceptance": "A worker cannot bypass gates by selecting an elevated credential.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-11-08",
+    "group": "security",
+    "title": "Update/retention boundaries",
+    "statement": "Preserve provenance and policy when changing tool/model/asset dependencies.",
+    "acceptance": "License/source obligations survive absorption and export.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-001"
+    ],
+    "critical": true,
+    "verification": "Contract/negative-control test plus independent source/runtime review as applicable; not executed product evidence.",
+    "spec_id": "SPEC-11",
+    "owner_role": "Preservation and safe boundaries",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-09",
+    "group": "simplification",
+    "title": "Owned work in the reuse search",
+    "statement": "Search existing owned capabilities as well as external facilities before duplicating a substantive mechanism.",
+    "acceptance": "Decision records a bounded owned/external search and compares extending the existing owner with a new implementation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-10",
+    "group": "simplification",
+    "title": "Aggregate ecosystem outcome",
+    "statement": "Assess changes by total ecosystem user value and maintenance burden under hard correctness, security, compatibility and performance constraints.",
+    "acceptance": "A smaller local diff with greater unaddressed downstream cost is not labelled an ecosystem improvement.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": true,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-11",
+    "group": "simplification",
+    "title": "Evidence-tiered consumers",
+    "statement": "Distinguish supported current, committed planned, plausible future and unknown/external consumers.",
+    "acceptance": "A speculative consumer is not used as evidence of adoption or an implemented support promise; unknown is not zero.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-12",
+    "group": "simplification",
+    "title": "Consumer-led extension seams",
+    "statement": "Design shared contracts for actual and committed needs while keeping future-facing seams economical and optional.",
+    "acceptance": "A proposed abstraction is challenged when it adds mandatory unrelated dependencies or speculative services.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-13",
+    "group": "simplification",
+    "title": "Canonical capability evolution",
+    "statement": "Improve the authoritative owned capability or a justified adapter instead of accumulating independent copies.",
+    "acceptance": "Source/release ownership and any intentional alternate implementation or temporary mirror are explicit.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-14",
+    "group": "simplification",
+    "title": "Cross-consumer preserved contract",
+    "statement": "State and verify affected consumer behavior, data, security, resource and compatibility constraints before shared changes are accepted.",
+    "acceptance": "Passing provider unit tests alone cannot qualify a changed required consumer contract.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": true,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-15",
+    "group": "simplification",
+    "title": "Bounded cross-owner coordination",
+    "statement": "Keep source, consumer, integration and verifier responsibilities explicit across isolated authorized worktrees.",
+    "acceptance": "A dependency on another owner becomes a linked owned task, not unauthorized writes or discarded parent work.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": true,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-16",
+    "group": "simplification",
+    "title": "Continuous scoped reassessment",
+    "statement": "Reassess reuse and consumer fit during meaningful development events without perpetual unrelated rewrites.",
+    "acceptance": "New consumer or repeated-workaround evidence creates a bounded decision/change; an urgent fix is not blocked by speculative refactoring.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-17",
+    "group": "simplification",
+    "title": "Proportional impact evidence",
+    "statement": "Attach consumer-impact and reuse decisions to existing task/PR/ADR records; keep local no-impact attestations lightweight.",
+    "acceptance": "A shared API change requires consumer detail; a supported internal spelling change does not require a whole-portfolio audit.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-18",
+    "group": "simplification",
+    "title": "Adoption and bridge retirement",
+    "statement": "Track consumer transition, compatibility bridges, duplicate ownership and rollback through the accepted parent outcome.",
+    "acceptance": "Local PR closure cannot imply completed migration; temporary shims have owner, tracking item and removal trigger.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": true,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-19",
+    "group": "simplification",
+    "title": "Own-versus-external neutrality",
+    "statement": "Do not privilege an owned implementation or external popularity over evidence of contract fit and total cost.",
+    "acceptance": "A qualified external replacement, owned extension, or deliberate separation can each win without manufactured novelty.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "REQ-06-20",
+    "group": "simplification",
+    "title": "Reuse beyond code",
+    "statement": "Apply consumer-aware evolution to test fixtures, schemas, prompts, docs, workflows, assets and operations as well as runtime code.",
+    "acceptance": "A common policy/check is reused with subject-specific inputs rather than independently weakened clones.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-003"
+    ],
+    "critical": false,
+    "verification": "Review actual source/consumer contracts and relevant negative/consumer/performance evidence; package schema tests alone do not verify the product.",
+    "spec_id": "SPEC-06",
+    "owner_role": "Capability owner + affected consumer owners + independent verifier",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-01",
+    "group": "identity",
+    "title": "Independent base usefulness",
+    "statement": "Each qualified application shall remain usable with its declared base dependencies when optional peers or App Center are absent.",
+    "acceptance": "Launch A without B and complete its base task; missing base dependency is explicit, not mocked.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-02",
+    "group": "identity",
+    "title": "Host-relative primary perspective",
+    "statement": "Opening an app deliberately shall choose that window/workspace perspective without changing authoritative records.",
+    "acceptance": "Open A and B concurrently on one subject; chrome differs but object IDs/state authorities agree.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-03",
+    "group": "identity",
+    "title": "Separate operation kinds",
+    "statement": "Source consolidation, installation, runtime composition, view composition and data migration shall be represented as different operations.",
+    "acceptance": "Installing an extension neither rewrites repositories nor migrates domain data.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-04",
+    "group": "identity",
+    "title": "Stable scoped identities",
+    "statement": "Packages, products, applets, processes, bindings, users, workspaces and surfaces shall have distinct stable scoped identifiers.",
+    "acceptance": "A rename or second host does not create a second logical task or broaden scope.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-05",
+    "group": "identity",
+    "title": "Bounded recursive exports",
+    "statement": "A composite shall declare exactly the capabilities and obligations it re-exports.",
+    "acceptance": "A nested consumer cannot call an unexported child operation or see child-only private settings.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-06",
+    "group": "identity",
+    "title": "Meaningful reciprocity",
+    "statement": "Supported integration directions shall be explicit; reciprocal support shall not be inferred from one embedded panel.",
+    "acceptance": "Exercise both declared host directions; unsupported directions are shown as unsupported.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-07",
+    "group": "identity",
+    "title": "Optional app-center UI",
+    "statement": "The visible App Center shall not be required to launch/use already-qualified independent apps and bindings.",
+    "acceptance": "Disable the Center UI; the selected local base and valid cached binding still work.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-08",
+    "group": "identity",
+    "title": "No silent default takeover",
+    "statement": "New installation or background activation shall not change a user-selected provider or primary perspective silently.",
+    "acceptance": "Install a competing provider while editing and verify pinned routes/focus remain unchanged.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-01",
+    "group": "discovery",
+    "title": "Typed capability manifests",
+    "statement": "Installed providers shall expose bounded validated metadata describing versions, interfaces, scopes and host support.",
+    "acceptance": "Reject oversized/malformed manifests and incompatible contract profiles before activating code.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-02",
+    "group": "discovery",
+    "title": "Source-backed artifact identity",
+    "statement": "Discovery shall bind metadata to an actual trusted package/artifact under explicit policy.",
+    "acceptance": "A copied display name or mismatched digest cannot activate a trusted binding.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-03",
+    "group": "discovery",
+    "title": "Install-order convergence",
+    "statement": "Given the same packages and policy, supported A-then-B and B-then-A installs shall converge to the same selected capabilities.",
+    "acceptance": "Run both clean install orders; compare resolved plans excluding permitted instance-local IDs.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-04",
+    "group": "discovery",
+    "title": "Lazy activation",
+    "statement": "Metadata discovery shall not launch every provider or its entire desktop UI.",
+    "acceptance": "Install multiple idle providers; measure zero unrequested heavy backend activations.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-05",
+    "group": "discovery",
+    "title": "Deterministic provider selection",
+    "statement": "The resolver shall honor valid user pins, compatible policy and deterministic ambiguity handling.",
+    "acceptance": "Provide two candidates; show why one is selected or require a choice rather than oscillating.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-06",
+    "group": "discovery",
+    "title": "Separate discovery and permission",
+    "statement": "Presence shall not imply permission; scopes must be sufficient for the exact binding and operation.",
+    "acceptance": "Co-install a provider requiring new private data; activation remains awaiting consent or denied.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-07",
+    "group": "discovery",
+    "title": "Inspectable adaptation",
+    "statement": "Learned suggestions and preferences shall be scoped, explainable, reversible and not executable authority.",
+    "acceptance": "Reject auto-execution of newly generated adapter code; reset a preference without deleting data.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-08",
+    "group": "discovery",
+    "title": "Incremental reconciliation",
+    "statement": "Changed package/policy observations shall invalidate affected bindings without rebuilding unrelated workspaces.",
+    "acceptance": "Update one provider; retain unrelated known-good bindings and distinguish incomplete inventory.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-01",
+    "group": "experience",
+    "title": "Contextual host contributions",
+    "statement": "Contributions shall use declared slots and context/enablement rules instead of nesting complete app chrome by default.",
+    "acceptance": "Mount a relevant panel and command; unrelated provider navigation does not invade the host.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-02",
+    "group": "experience",
+    "title": "Stable object handoff",
+    "statement": "Host transitions shall carry permitted object references and versions without manual ID/path copying.",
+    "acceptance": "Open the same task in both perspectives and preserve selection, source identity and permission.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-03",
+    "group": "experience",
+    "title": "Focus and shortcuts",
+    "statement": "One view shall own each input event, with documented host/platform shortcut precedence.",
+    "acceptance": "Test keyboard, IME, accessibility and conflicting shortcuts without duplicate invocation.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-04",
+    "group": "experience",
+    "title": "Semantic accessibility",
+    "statement": "Native/semantic integration claims shall include verified accessible structure and focus behavior.",
+    "acceptance": "Screen-reader and keyboard users complete the workflow; remoted pixels advertise their limits.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-05",
+    "group": "experience",
+    "title": "Consistent command semantics",
+    "statement": "Menus, palette, shortcuts, CLI and API entrypoints shall invoke the same authorized command contract.",
+    "acceptance": "An invisible or disabled menu does not bypass backend authorization through another entrypoint.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-06",
+    "group": "experience",
+    "title": "Explicit undo semantics",
+    "statement": "Commands shall declare local undo, compensation or irreversibility; multi-owner actions must report partial outcomes.",
+    "acceptance": "Abort a cross-owner operation and observe defined compensation rather than fictional global rollback.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-07",
+    "group": "experience",
+    "title": "Unified bounded status",
+    "statement": "Shared search, progress, notifications and settings views shall preserve owner namespaces and avoid duplicate signals.",
+    "acceptance": "One operation produces one appropriate notification per audience; denied search content never appears.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-08",
+    "group": "experience",
+    "title": "Richness with graceful reduction",
+    "statement": "Motion, materials and optional 3D content shall have usable low-resource, reduced-motion and contrast alternatives.",
+    "acceptance": "Run the complete task under reduced-motion/high-contrast and the accepted low-resource profile.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-01",
+    "group": "lifecycle",
+    "title": "Explicit binding state",
+    "statement": "Installed, resolved, authorized, active, degraded, quiescing and detached states shall be separately observable.",
+    "acceptance": "A process that starts but fails readiness cannot appear as an active required capability.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-02",
+    "group": "lifecycle",
+    "title": "Idempotent reconcile",
+    "statement": "Repeated package events and retries shall not duplicate services, commands, migrations or jobs.",
+    "acceptance": "Deliver the same event repeatedly and compare durable resulting bindings and side effects.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-03",
+    "group": "lifecycle",
+    "title": "Recover unknown outcomes",
+    "statement": "A lost acknowledgment shall trigger operation-ID reconciliation before a mutation is repeated.",
+    "acceptance": "Kill the host after provider acceptance; resume without executing a duplicate mutation.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-04",
+    "group": "lifecycle",
+    "title": "Versioned active plans",
+    "statement": "Updates shall not silently replace in-use contracts or a pinned provider.",
+    "acceptance": "Update B while A edits; the active version is stable until an approved safe transition.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-05",
+    "group": "lifecycle",
+    "title": "Safe quiescence",
+    "statement": "Removal or update shall drain/cancel/checkpoint work under a declared lifecycle and lease policy.",
+    "acceptance": "Attempt detach during a long operation; report its completion/cancellation and unresolved effects.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-06",
+    "group": "lifecycle",
+    "title": "Honest hot-unload support",
+    "statement": "Providers shall declare whether live replacement is supported or a restart is needed.",
+    "acceptance": "A native non-unloadable adapter requests restart rather than freeing active resources.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-07",
+    "group": "lifecycle",
+    "title": "Uninstall is not deletion",
+    "statement": "Uninstall or detach shall preserve authoritative user data unless separately authorized for deletion.",
+    "acceptance": "Uninstall and reinstall B; A base use survives and owned data remains recoverable.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-08",
+    "group": "lifecycle",
+    "title": "Reference-aware termination",
+    "statement": "Closing a view or removing one consumer shall not kill another valid consumer or orphan an unowned process.",
+    "acceptance": "Two hosts share a permitted instance; close one, then both, and inspect leases/background policy.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-01",
+    "group": "security",
+    "title": "Scoped delegated authority",
+    "statement": "Operations shall bind user/workspace/resource/audience/action/expiry and enforce revocation.",
+    "acceptance": "A valid token for workspace X or audience B fails against workspace Y or audience C.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-02",
+    "group": "security",
+    "title": "Provider-side enforcement",
+    "statement": "Each provider shall check request scope and object-version preconditions, independently of UI visibility.",
+    "acceptance": "Bypass the host menu and send a forbidden operation; the provider rejects it.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-03",
+    "group": "security",
+    "title": "No credential copying",
+    "statement": "Integration shall use scoped references/brokering rather than a universal shared credential configuration.",
+    "acceptance": "Inspect distributed artifacts, traces and configs for real secrets; another app cannot read owner tokens.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-04",
+    "group": "security",
+    "title": "Explicit data owners",
+    "statement": "Each state contract shall name its writer authority, read projections and consistency/migration semantics.",
+    "acceptance": "Edit from two hosts; detect conflicts and retain one defined authority rather than divergent copies.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-05",
+    "group": "security",
+    "title": "Trust-matched isolation",
+    "statement": "In-process, web, process, VM and network modes shall be selected by compatible trust and performance policy.",
+    "acceptance": "An untrusted extension cannot enter a high-trust native host merely because its interface matches.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-06",
+    "group": "security",
+    "title": "Safe external inputs",
+    "statement": "Manifests, routes, deep links, contexts and integration messages shall be bounded and validated as data.",
+    "acceptance": "Reject malicious schemes, traversal, context substitution and prompt-like policy overrides.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-07",
+    "group": "security",
+    "title": "Derived-data privacy",
+    "statement": "Caches, search, telemetry, screenshots and generated summaries shall inherit source sensitivity.",
+    "acceptance": "Revoke access; stale previews/counts/snippets cannot reveal restricted source content.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-08",
+    "group": "security",
+    "title": "Inspectable exit",
+    "statement": "Users shall be able to see providers/permissions/state owners and detach or export under documented contracts.",
+    "acceptance": "Complete a detach/export workflow without forced account sign-in or unrelated product install.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-01",
+    "group": "composition",
+    "title": "No recursive shell loop",
+    "statement": "Mount graphs and strict startup dependencies shall be acyclic for the initial supported profile.",
+    "acceptance": "Reject A-shell-in-B-shell-in-A-shell and a circular required startup plan.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-02",
+    "group": "composition",
+    "title": "Bounded cyclic event protocols",
+    "statement": "Permitted event cycles shall carry origin/correlation/deduplication and bounded feedback policies.",
+    "acceptance": "Create a reflected event; verify it does not become an unbounded command or notification loop.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-03",
+    "group": "composition",
+    "title": "Scope-safe service reuse",
+    "statement": "Shared instances shall require compatible principal, workspace, configuration, tenancy and isolation.",
+    "acceptance": "Requests from separate tenants are isolated despite identical command or provider names.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-04",
+    "group": "composition",
+    "title": "Locality-aware lowering",
+    "statement": "Same-process/host composition shall use an appropriate qualified local path where feasible, not compulsory network RPC.",
+    "acceptance": "Compare selected path and allocations against a native direct baseline at the accepted profile.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-05",
+    "group": "composition",
+    "title": "Resource admission",
+    "statement": "Discovery, providers and optional graphics shall obey admitted CPU/GPU/memory/network/background budgets.",
+    "acceptance": "Saturate builds/inference while using the host; retain the declared foreground latency/audio contract.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-06",
+    "group": "composition",
+    "title": "Failure-domain containment",
+    "statement": "A provider or broker failure shall have explicit effects and bounded recovery rather than an app-wide crash loop.",
+    "acceptance": "Crash one optional provider; independent base functions remain useful and diagnostics identify the cause.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-07",
+    "group": "composition",
+    "title": "Capability-oriented reuse",
+    "statement": "New hosts shall consume shared capabilities/SDK contracts instead of copying providers or adding arbitrary pairwise data hacks.",
+    "acceptance": "Add a second host and measure reused logic, adapter size and no competing state authority.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-08",
+    "group": "composition",
+    "title": "Platform-specific conformance",
+    "statement": "Each native/embedded/remote tier shall declare supported platform, packaging, permissions and degraded behaviors.",
+    "acceptance": "Install the real package on each required profile and verify its claimed integration tier.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-01",
+    "group": "assurance",
+    "title": "Separate structural and product proof",
+    "statement": "Schemas and local validator passes shall not be represented as live product correctness or authorization.",
+    "acceptance": "Every synthetic fixture and result is marked; missing native proof keeps graduation open.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-02",
+    "group": "assurance",
+    "title": "Independent suite coverage",
+    "statement": "Composed paths shall meet independent accepted unit/integration/E2E and other applicable floors without averaging.",
+    "acceptance": "Below-floor, missing, skipped and wrong-revision required reports each reject qualification.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-03",
+    "group": "assurance",
+    "title": "Complete critical evidence",
+    "statement": "All critical federation obligations shall have actual meaningful verification evidence for the selected profile.",
+    "acceptance": "A green aggregate cannot conceal a missing permission, preservation or recovery scenario.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-04",
+    "group": "assurance",
+    "title": "Two independent consumers",
+    "statement": "Shared contract graduation shall include two meaningfully different consumers and one recursive-composite witness.",
+    "acceptance": "Demonstrate reused contracts rather than duplicate bespoke adapters or mocked providers.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-05",
+    "group": "assurance",
+    "title": "Comparative product pilot",
+    "statement": "The same useful job shall be compared against standalone/manual, handoff and conventional integration baselines.",
+    "acceptance": "Retain successful and failed trials, setup effort, maintenance changes and performance distributions.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-06",
+    "group": "assurance",
+    "title": "Authentic media",
+    "statement": "Journey recordings and screenshots shall depict the tested actual profile; authored assets remain separately labelled.",
+    "acceptance": "Trace displayed claims to source/run/artifact; a mock UI cannot qualify an embedded product.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-07",
+    "group": "assurance",
+    "title": "Owner-coordinated rollout",
+    "statement": "Cross-repo provider/consumer changes shall have one integration lead, explicit leases and actual permissions.",
+    "acceptance": "No worker edits another owner checkout or marks consumer adoption from provider-only tests.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-08",
+    "group": "assurance",
+    "title": "Incremental adoption",
+    "statement": "First real bindings shall ship without requiring every product to join or an entirely new platform to exist.",
+    "acceptance": "Two apps remain individually installable and the rest of the estate can ignore federation.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-01",
+    "group": "capability-composition",
+    "title": "Composition without mounted UI",
+    "statement": "Qualify composed behavior with no requirement to mount a peer UI.",
+    "acceptance": "A host command uses a real provider with zero UI mounts and retains a coherent result.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-02",
+    "group": "capability-composition",
+    "title": "Consumed and consumable",
+    "statement": "Assess both available providers and current/credible future consumers before significant implementation.",
+    "acceptance": "A proposed handroll without owned/external alternatives or consumer impact remains incomplete.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-03",
+    "group": "capability-composition",
+    "title": "Semantic preservation",
+    "statement": "Preserve accepted behavior, error/cancellation/state/resource and consumer contracts when replacing code.",
+    "acceptance": "A faster or shorter replacement that breaks a critical consumer is rejected.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-04",
+    "group": "capability-composition",
+    "title": "Correct lowering",
+    "statement": "Select compile-time, direct-call, IPC, network or UI adapters according to actual constraints.",
+    "acceptance": "A valid in-process provider is not forced through an unnecessary network layer.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-05",
+    "group": "capability-composition",
+    "title": "Boundary fitness",
+    "statement": "Enforce domain dependency direction and real adapter contracts.",
+    "acceptance": "A prohibited UI/transport dependency introduced into the domain fails the architecture check.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-06",
+    "group": "capability-composition",
+    "title": "Independent activation",
+    "statement": "Peer discovery, permissions, absence, replacement and detach are explicit.",
+    "acceptance": "Revoked authority or absent optional peer does not silently trigger privileged fallback.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-07",
+    "group": "capability-composition",
+    "title": "Stable authority",
+    "statement": "Composed UX does not silently merge data owners, identities or lifecycle obligations.",
+    "acceptance": "Two host perspectives reference one authoritative object and reject duplicate mutation.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-13-08",
+    "group": "capability-composition",
+    "title": "DD proof paths",
+    "statement": "Use pure tests, real adapter tests and actual user journeys as distinct complementary layers.",
+    "acceptance": "Mocked provider success cannot satisfy a required live integration.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-13",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-01",
+    "group": "agent-bridge",
+    "title": "Access inventory",
+    "statement": "Declare owned, gray and black-box access per boundary and operation.",
+    "acceptance": "An unavailable proprietary-state API cannot be marked exercised.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-02",
+    "group": "agent-bridge",
+    "title": "Instance binding",
+    "statement": "Bind actions, observations and captures to the intended artifact/session/window/world.",
+    "acceptance": "A wrong process or stale nonce is rejected before input.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-03",
+    "group": "agent-bridge",
+    "title": "Separated action modes",
+    "statement": "Distinguish fixture control, semantic commands and actual user input.",
+    "acceptance": "Teleport/state mutation cannot satisfy a click-and-move user-path criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-04",
+    "group": "agent-bridge",
+    "title": "Observed completion",
+    "statement": "Correlate accepted command, domain result, pixels and persistence as applicable.",
+    "acceptance": "Acknowledgement without the required effect is non-accepting.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-05",
+    "group": "agent-bridge",
+    "title": "Clock and frame identity",
+    "statement": "Record monotonic/action, simulation, render and capture relationships.",
+    "acceptance": "A prior frame from the correct window cannot prove a new action.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-06",
+    "group": "agent-bridge",
+    "title": "Private isolation",
+    "statement": "Use approved private sessions, per-run writable state, limits and entitlements.",
+    "acceptance": "Cross-worker capture/data access or missing license cannot be bypassed to pass.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-07",
+    "group": "agent-bridge",
+    "title": "Native product path",
+    "statement": "Test actual installed output as well as embedded/headless diagnostic profiles.",
+    "acceptance": "A logic-only run is rejected for a required graphical claim.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-08",
+    "group": "agent-bridge",
+    "title": "Bridge fault semantics",
+    "statement": "Qualify lifecycle, cancellation, missing methods and uncertain outcomes.",
+    "acceptance": "Timeout is not successful completion and uncertain side effects are reconciled before retry.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-09",
+    "group": "agent-bridge",
+    "title": "Fine visual witnesses",
+    "statement": "Bind tiny visual features to reviewed regions, camera/scale and independent evidence.",
+    "acceptance": "A missing small required icon fails even if full-frame similarity is high.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-10",
+    "group": "agent-bridge",
+    "title": "Temporal witnesses",
+    "statement": "Capture enough frames to test flicker, stutter, LOD and animation behavior.",
+    "acceptance": "A lucky still frame cannot satisfy a temporal criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-11",
+    "group": "agent-bridge",
+    "title": "Shipping fidelity",
+    "statement": "Test controlled regression and representative shipping profiles separately.",
+    "acceptance": "Disabling the effect under test cannot produce shipping-quality approval.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-14-12",
+    "group": "agent-bridge",
+    "title": "Visual calibration",
+    "statement": "Use known-good/bad classes, holdouts, model/metric provenance and disagreement rules.",
+    "acceptance": "Known-bad subtle examples must be caught at the predeclared required rates.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-14",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-01",
+    "group": "design-traceability",
+    "title": "Editable design source",
+    "statement": "Persist inspectable design/mockup/flow sources with versioned previews.",
+    "acceptance": "A runtime screenshot cannot replace the missing editable design when required.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-02",
+    "group": "design-traceability",
+    "title": "Variant state coverage",
+    "statement": "Design relevant empty/loading/error/permission/recovery and support variants.",
+    "acceptance": "One happy-path frame cannot close an entire flow.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-03",
+    "group": "design-traceability",
+    "title": "Approval fidelity",
+    "statement": "Separate exploratory, proposed, reviewed and accepted design versions.",
+    "acceptance": "An agent-written approved field without actual decision evidence does not promote scope.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-04",
+    "group": "design-traceability",
+    "title": "Baseline separation",
+    "statement": "Distinguish intended design, regression baseline and actual implementation evidence.",
+    "acceptance": "Autoupdating a failed screenshot baseline without a decision cannot close the defect.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-05",
+    "group": "design-traceability",
+    "title": "Full artifact accountability",
+    "statement": "Classify meaningful code/config/assets/docs/tests/builds/research/runtime evidence and lineage.",
+    "acceptance": "Excluded code or generated files do not disappear from the inventory without producer/scope rationale.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-06",
+    "group": "design-traceability",
+    "title": "Bidirectional trace",
+    "statement": "Find unimplemented intent and undocumented/orphan implementation with typed relations.",
+    "acceptance": "A complete forward link set does not conceal an unowned public command.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-07",
+    "group": "design-traceability",
+    "title": "State and ownership",
+    "statement": "Retain authority-specific source/state and machine-readable reconciled projections.",
+    "acceptance": "A generated page does not fabricate an AgilePlus engine transition or authoritative data move.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-15-08",
+    "group": "design-traceability",
+    "title": "Scope evolution",
+    "statement": "Preserve full horizon and bounded CVP, with explicit requirement/scope version changes.",
+    "acceptance": "Dropping a hard requirement to improve the percentage is visible and needs authorization.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-15",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-01",
+    "group": "machine-grading",
+    "title": "Literal score",
+    "statement": "Compute a numerical score and letter grade against a versioned applicable rubric.",
+    "acceptance": "The output names scope/profile/revision and never presents the result as universal quality.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-02",
+    "group": "machine-grading",
+    "title": "Frozen weights",
+    "statement": "Fix category/criterion weights and eligible units before assessing the candidate.",
+    "acceptance": "Adding many easy tests or duplicate criteria cannot silently dilute a failed critical criterion.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-03",
+    "group": "machine-grading",
+    "title": "Evidence admission",
+    "statement": "Bind earned units to exact candidate/profile/oracle identity, freshness and required channels.",
+    "acceptance": "Stale, wrong-build or no-pixel evidence earns no credit for a visible current feature.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-04",
+    "group": "machine-grading",
+    "title": "Unknown remains denominator",
+    "statement": "Missing, blocked, unrun and inadmissible obligations remain visible and earn zero.",
+    "acceptance": "Deleting missing outcomes from the evidence set cannot increase the grade.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-05",
+    "group": "machine-grading",
+    "title": "Noncompensatory gates",
+    "statement": "Keep critical invariants and required independent coverage gates outside averaging.",
+    "acceptance": "A high numeric grade with a failed critical invariant remains BLOCKED.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": true,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-06",
+    "group": "machine-grading",
+    "title": "Uncertainty truth",
+    "statement": "Distinguish assessed weight, unknown bound, stochastic intervals and evaluator class.",
+    "acceptance": "Model confidence is not accepted as a probability or proof.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-07",
+    "group": "machine-grading",
+    "title": "Scope-aware change",
+    "statement": "Publish same-scope progress and rubric/denominator changes separately.",
+    "acceptance": "A scope expansion is not misreported as a code regression or hidden to keep a score rising.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-08",
+    "group": "machine-grading",
+    "title": "Independent trust",
+    "statement": "Test graders and native adapters with adversarial controls and independent review.",
+    "acceptance": "A structurally valid invented receipt never claims authenticated product qualification.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-09",
+    "group": "machine-grading",
+    "title": "Role-specific profiles",
+    "statement": "Use appropriate GUI/game/library/CLI/infra and white/gray/black-box applicability.",
+    "acceptance": "Do not assert line coverage of inaccessible third-party engine internals.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "PROOF-16-10",
+    "group": "machine-grading",
+    "title": "No rival scorecard",
+    "statement": "Integrate with existing accepted rubric/process; preserve unresolved SROC/CDP names.",
+    "acceptance": "No invented acronym or new registry becomes authority from this amendment.",
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "sources": [
+      "INT-006"
+    ],
+    "critical": false,
+    "verification": "Real native/consumer evidence plus independent negative controls; proposed, not executed product results.",
+    "spec_id": "SPEC-16",
+    "owner_role": "Existing subject/provider owner and designated independent reviewer",
+    "evidence_ids": []
+  }
+]

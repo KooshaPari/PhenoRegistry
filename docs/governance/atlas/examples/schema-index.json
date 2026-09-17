@@ -1,0 +1,104 @@
+[
+  {
+    "path": "examples/entity.json",
+    "schema": "schemas/entity.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/relation.json",
+    "schema": "schemas/relation.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/obligation.json",
+    "schema": "schemas/obligation.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/pilot-plan.json",
+    "schema": "schemas/pilot-plan.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/work-item.json",
+    "schema": "schemas/work-item.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/applet.json",
+    "schema": "schemas/applet.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/dissatisfaction.json",
+    "schema": "schemas/dissatisfaction.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/qa-cell.json",
+    "schema": "schemas/qa-cell.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/topic-proposal.json",
+    "schema": "schemas/topic-proposal.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "path": "examples/ecosystem-impact.json",
+    "schema": "schemas/ecosystem-impact.schema.json",
+    "status": "SYNTHETIC_STRUCTURE_EXAMPLE"
+  },
+  {
+    "schema": "proof/schemas/bridge-session.schema.json",
+    "path": "proof/examples/bridge-session.json"
+  },
+  {
+    "schema": "proof/schemas/design-record.schema.json",
+    "path": "proof/examples/design-record.json"
+  },
+  {
+    "schema": "proof/schemas/rubric.schema.json",
+    "path": "proof/examples/grade/rubric.json"
+  },
+  {
+    "schema": "proof/schemas/evidence-index.schema.json",
+    "path": "proof/examples/grade/index.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/0.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/1.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/2.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/3.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/4.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/5.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/6.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/7.json"
+  },
+  {
+    "schema": "proof/schemas/evaluator-receipt.schema.json",
+    "path": "proof/examples/grade/receipts/8.json"
+  }
+]

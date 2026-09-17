@@ -1,0 +1,46 @@
+{
+  "record_type": "TEMPLATE_NOT_A_RECEIVED_WORKER_REPORT",
+  "repository_id": "1162254344",
+  "name_at_dispatch": "Tracera",
+  "owner_chat_id": null,
+  "host_id": null,
+  "reported_at_utc": null,
+  "git_root": null,
+  "worktree_path": null,
+  "branch": null,
+  "source_sha": null,
+  "dirty_state_summary": null,
+  "accepted_parent_outcome": null,
+  "active_task_id": null,
+  "permissions_receipt": null,
+  "artifact": {
+    "path_or_uri": null,
+    "digest": null,
+    "source_sha": null,
+    "installed_identity": null
+  },
+  "last_meaningful_execution": {
+    "command_or_run": null,
+    "result": null,
+    "evidence_uri": null,
+    "source_sha": null,
+    "profile": null
+  },
+  "stages": {
+    "task": null,
+    "pr": null,
+    "integration": null,
+    "qualification": null,
+    "publication": null,
+    "adoption": null
+  },
+  "blockers": [],
+  "next_action": null,
+  "consumer_impacts": [],
+  "doc_adoption": {
+    "package_version": null,
+    "reconciled_instruction_ids": []
+  },
+  "independent_reviewer": null,
+  "note": "Populate only observed facts; private local paths should remain in the authorized private evidence channel. An empty template is not telemetry."
+}

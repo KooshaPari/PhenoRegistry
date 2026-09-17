@@ -1,0 +1,178 @@
+{
+  "status": "CALCULATED_UNATTESTED",
+  "scope_id": "SYN-SCOPE",
+  "subject_id": "SYN-SUBJECT",
+  "rubric_id": "SYN-RUBRIC",
+  "rubric_revision": "1",
+  "rubric_sha256": "cb4b3e6e888c287df0993612e6b6cd4ba595742d7bea76f7fa72c763334b1a4a",
+  "as_of": "2026-09-16T12:00:00Z",
+  "source_revision": "SYN-SHA-1",
+  "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "profile_id": "SYN-PROFILE",
+  "synthetic": true,
+  "score_percent": 84.11,
+  "letter_grade": "C",
+  "headline": "84.11% / C - BLOCKED",
+  "gate_state": "BLOCKED",
+  "failed_mandatory": [
+    "SYN-assurance",
+    "SYN-safety_recovery"
+  ],
+  "missing_mandatory": [],
+  "assessed_weight_percent": 100.0,
+  "unknown_weight_percent": 0.0,
+  "unknown_perfect_arithmetic_bound": [
+    84.11,
+    84.11
+  ],
+  "bound_is_confidence_interval": false,
+  "categories": [
+    {
+      "id": "intent_design",
+      "weight": 12,
+      "score_percent": 95.0
+    },
+    {
+      "id": "spec_architecture",
+      "weight": 10,
+      "score_percent": 90.0
+    },
+    {
+      "id": "behavior",
+      "weight": 20,
+      "score_percent": 85.0
+    },
+    {
+      "id": "assurance",
+      "weight": 18,
+      "score_percent": 82.0
+    },
+    {
+      "id": "experience",
+      "weight": 14,
+      "score_percent": 70.0
+    },
+    {
+      "id": "safety_recovery",
+      "weight": 12,
+      "score_percent": 90.0
+    },
+    {
+      "id": "ecosystem",
+      "weight": 5,
+      "score_percent": 80.0
+    },
+    {
+      "id": "delivery_operations",
+      "weight": 5,
+      "score_percent": 75.0
+    },
+    {
+      "id": "docs_research",
+      "weight": 4,
+      "score_percent": 90.0
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "SYN-intent_design",
+      "category_id": "intent_design",
+      "effective_weight": 12.0,
+      "earned_fraction": 0.95,
+      "contribution": 11.399999999999999,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "SATISFIED"
+    },
+    {
+      "criterion_id": "SYN-spec_architecture",
+      "category_id": "spec_architecture",
+      "effective_weight": 10.0,
+      "earned_fraction": 0.9,
+      "contribution": 9.0,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "SATISFIED"
+    },
+    {
+      "criterion_id": "SYN-behavior",
+      "category_id": "behavior",
+      "effective_weight": 20.0,
+      "earned_fraction": 0.85,
+      "contribution": 17.0,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "SATISFIED"
+    },
+    {
+      "criterion_id": "SYN-assurance",
+      "category_id": "assurance",
+      "effective_weight": 18.0,
+      "earned_fraction": 0.82,
+      "contribution": 14.76,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "BELOW_REQUIREMENT"
+    },
+    {
+      "criterion_id": "SYN-experience",
+      "category_id": "experience",
+      "effective_weight": 14.0,
+      "earned_fraction": 0.7,
+      "contribution": 9.799999999999999,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "BELOW_REQUIREMENT"
+    },
+    {
+      "criterion_id": "SYN-safety_recovery",
+      "category_id": "safety_recovery",
+      "effective_weight": 12.0,
+      "earned_fraction": 0.9,
+      "contribution": 10.8,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "BELOW_REQUIREMENT"
+    },
+    {
+      "criterion_id": "SYN-ecosystem",
+      "category_id": "ecosystem",
+      "effective_weight": 5.0,
+      "earned_fraction": 0.8,
+      "contribution": 4.0,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "BELOW_REQUIREMENT"
+    },
+    {
+      "criterion_id": "SYN-delivery_operations",
+      "category_id": "delivery_operations",
+      "effective_weight": 5.0,
+      "earned_fraction": 0.75,
+      "contribution": 3.75,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "BELOW_REQUIREMENT"
+    },
+    {
+      "criterion_id": "SYN-docs_research",
+      "category_id": "docs_research",
+      "effective_weight": 4.0,
+      "earned_fraction": 0.9,
+      "contribution": 3.6,
+      "evidence_admissible": true,
+      "issues": [],
+      "outcome": "SATISFIED"
+    }
+  ],
+  "product_qualified": false,
+  "producer_authenticity_verified": false,
+  "oracle_truth_verified": false,
+  "approval_authenticity_verified": false,
+  "release_authorized": false,
+  "limitations": [
+    "Arithmetic and local artifact integrity only; not native tests or image inspection.",
+    "Supplied outcomes/approvals are not authenticated by this program.",
+    "Concurrent hostile filesystem mutation is outside this reference-reader boundary."
+  ]
+}

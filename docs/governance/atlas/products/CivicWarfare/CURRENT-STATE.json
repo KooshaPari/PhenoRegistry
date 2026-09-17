@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1308570444",
+  "name": "CivicWarfare",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "f300fe92589995fe8a2a5cd984916cf59b7f94d4",
+  "sampled_commit_date_utc": "2026-09-12T07:46:39Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Sampled default history remains dependency updates in the CivicSurvival UI; no newer default-history product delivery was found in the bounded sample.",
+  "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+  "role": "Distributed game/mod product",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "No fresh default-branch source is not evidence that the open chat did nothing.",
+    "Intentionally private producer code is not automatically missing public source."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1308570444-A1",
+      "title": "Return actual work coordinates",
+      "work": "Report current branch/worktree, artifact, active task and any work outside this repository; reconcile public snapshot versus private producer responsibilities.",
+      "acceptance": "Exact worker receipt distinguishes local, published, integrated and installed state.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1308570444",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1308570444-A2",
+      "title": "Qualify the current distributed mod",
+      "work": "Install in the supported game and exercise onboarding, meaningful play, save/reload and disable/update behavior.",
+      "acceptance": "Actual game/version/profile evidence and retained failure recordings; no invented standalone app requirement.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1308570444",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1308570444-A3",
+      "title": "Verify release provenance and UX",
+      "work": "Connect producer/source identity to the downloadable package and capture honest player-facing visuals and instructions.",
+      "acceptance": "Public claims match the artifact; configuration and data ownership survive update/removal.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1308570444",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Share game-testing and media tooling through PhenoShared/PhenoDesign where appropriate; preserve game-specific semantics.",
+  "parent_acceptance": "A player can install, understand, play, preserve progress and remove/update the real mod.",
+  "sources": [
+    {
+      "id": "CUR-1308570444-S01",
+      "url": "https://github.com/KooshaPari/CivicWarfare/commit/f300fe92589995fe8a2a5cd984916cf59b7f94d4",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "INT-006",
+  "path": "INT-006-user-capability-proof-grading.txt",
+  "sha256": "71a1ba0c3b4cb04e37e424d69de83327f788d810dbc3582351ac6141f1e11929",
+  "source": "Visible user message in this conversation",
+  "original_timestamp": null,
+  "capture_boundary": "Visible text encoded as UTF-8 with one terminal LF. Not a byte-verbatim client database export.",
+  "aliases": {
+    "Civic Survival": "CivicSurvival / current CivicWarfare product lineage; verify stable identity",
+    "Worldscream mod": "WorldSphereMod, interpreted from conversation context"
+  },
+  "synthesis_separate": true
+}
