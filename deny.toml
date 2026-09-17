@@ -1,10 +1,8 @@
 # cargo-deny configuration for phenotype-registry
 # https://embarkstudios.github.io/cargo-deny/
 
-[dependencies]
-warn-on-unused = true
-
 [licenses]
+unused-allowed-license = "warn"
 allow = [
     "MIT",
     "Apache-2.0",
@@ -16,15 +14,13 @@ allow = [
     "Zlib",
     "0BSD",
 ]
-deny = []
-unlicensed = "deny"
 
 [licenses.private]
 ignore = true
 
 [bans]
 multiple-versions = "deny"
-wildcard-dependencies = "allow"
+wildcards = "allow"
 deny = []
 skip = []
 skip-tree = []
