@@ -81,7 +81,7 @@ restart() {
 # View logs
 logs() {
 <<<<<<< Updated upstream
-    $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "tail -f /home/kooshapari/llm-server/granite.log"'
+    $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "tail -f /home/<REDACTED>/llm-server/granite.log"'
 =======
     $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "tail -f /home/<REDACTED>/llm-server/granite.log"'
 >>>>>>> Stashed changes
@@ -104,7 +104,7 @@ download() {
 list_models() {
     log_info "Available models in WSL:"
 <<<<<<< Updated upstream
-    $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "ls -lh /home/kooshapari/llm-models/" 2>/dev/null'
+    $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "ls -lh /home/<REDACTED>/llm-models/" 2>/dev/null'
 =======
     $SSH_CMD 'cmd /c wsl -d Ubuntu-22.04 -e bash -c "ls -lh /home/<REDACTED>/llm-models/" 2>/dev/null'
 >>>>>>> Stashed changes

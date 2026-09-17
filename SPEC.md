@@ -79,9 +79,9 @@ The Phenotype Registry System is the unified entry point for all Phenotype regis
 
 | Registry | URL | Purpose | Key Files |
 |----------|-----|---------|-----------|
-| **PhenoSpecs** | [github.com/<REDACTED>/PhenoSpecs](https://github.com/<REDACTED>/PhenoSpecs) | Specifications & ADRs | `specs/`, `adrs/`, `openapi/`, `registry.yaml` |
-| **PhenoHandbook** | [github.com/<REDACTED>/PhenoHandbook](https://github.com/<REDACTED>/PhenoHandbook) | Patterns & guidelines | `patterns/`, `anti-patterns/`, `guidelines/`, `methodologies/` |
-| **HexaKit** | [github.com/<REDACTED>/HexaKit](https://github.com/<REDACTED>/HexaKit) | Templates & scaffolding | `by-language/`, `by-project/`, `registry.yaml` |
+| **PhenoSpecs** | [github.com/KooshaPari/PhenoSpecs](https://github.com/KooshaPari/PhenoSpecs) | Specifications & ADRs | `specs/`, `adrs/`, `openapi/`, `registry.yaml` |
+| **PhenoHandbook** | [github.com/KooshaPari/PhenoHandbook](https://github.com/KooshaPari/PhenoHandbook) | Patterns & guidelines | `patterns/`, `anti-patterns/`, `guidelines/`, `methodologies/` |
+| **HexaKit** | [github.com/KooshaPari/HexaKit](https://github.com/KooshaPari/HexaKit) | Templates & scaffolding | `by-language/`, `by-project/`, `registry.yaml` |
 
 ---
 
@@ -138,13 +138,13 @@ properties:
 
 | I want to... | Go to... |
 |--------------|----------|
-| Find a spec for a feature | [PhenoSpecs/specs/](https://github.com/<REDACTED>/PhenoSpecs/tree/main/specs) |
-| Learn a design pattern | [PhenoHandbook/patterns/](https://github.com/<REDACTED>/PhenoHandbook/tree/main/patterns) |
-| See what NOT to do | [PhenoHandbook/anti-patterns/](https://github.com/<REDACTED>/PhenoHandbook/tree/main/anti-patterns) |
-| Get coding standards | [PhenoHandbook/guidelines/](https://github.com/<REDACTED>/PhenoHandbook/tree/main/guidelines) |
-| Use a methodology (TDD/BDD/DDD) | [PhenoHandbook/methodologies/](https://github.com/<REDACTED>/PhenoHandbook/tree/main/methodologies) |
-| Find a code template | [HexaKit/by-language/](https://github.com/<REDACTED>/HexaKit/tree/main/by-language) |
-| Scaffold a new project | [HexaKit/by-project/](https://github.com/<REDACTED>/HexaKit/tree/main/by-project) |
+| Find a spec for a feature | [PhenoSpecs/specs/](https://github.com/KooshaPari/PhenoSpecs/tree/main/specs) |
+| Learn a design pattern | [PhenoHandbook/patterns/](https://github.com/KooshaPari/PhenoHandbook/tree/main/patterns) |
+| See what NOT to do | [PhenoHandbook/anti-patterns/](https://github.com/KooshaPari/PhenoHandbook/tree/main/anti-patterns) |
+| Get coding standards | [PhenoHandbook/guidelines/](https://github.com/KooshaPari/PhenoHandbook/tree/main/guidelines) |
+| Use a methodology (TDD/BDD/DDD) | [PhenoHandbook/methodologies/](https://github.com/KooshaPari/PhenoHandbook/tree/main/methodologies) |
+| Find a code template | [HexaKit/by-language/](https://github.com/KooshaPari/HexaKit/tree/main/by-language) |
+| Scaffold a new project | [HexaKit/by-project/](https://github.com/KooshaPari/HexaKit/tree/main/by-project) |
 
 ---
 
@@ -170,10 +170,10 @@ phenotype-registry/
 
 ## References
 
-1. [PhenoSpecs](https://github.com/<REDACTED>/PhenoSpecs) — Specifications
-2. [PhenoHandbook](https://github.com/<REDACTED>/PhenoHandbook) — Patterns
-3. [HexaKit](https://github.com/<REDACTED>/HexaKit) — Templates
-4. [AgilePlus](https://github.com/<REDACTED>/AgilePlus) — Spec-driven development
+1. [PhenoSpecs](https://github.com/KooshaPari/PhenoSpecs) — Specifications
+2. [PhenoHandbook](https://github.com/KooshaPari/PhenoHandbook) — Patterns
+3. [HexaKit](https://github.com/KooshaPari/HexaKit) — Templates
+4. [AgilePlus](https://github.com/KooshaPari/AgilePlus) — Spec-driven development
 
 ---
 

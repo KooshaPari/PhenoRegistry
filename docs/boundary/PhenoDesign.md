@@ -1,9 +1,9 @@
 # phenoDesign — Creativity / Design / UX Spine Boundary
 
 **Status**: `LIVE` / `DECLARE_SPINE` (2026-07-20)  
-**Source**: `github.com/<REDACTED>/phenoDesign`  
+**Source**: `github.com/KooshaPari/phenoDesign`  
 **Spine role**: `CREATIVITY_DESIGN_UX` (see `docs/spine/SPINE-DEFINITION.md`)  
-**Peer repo**: `github.com/<REDACTED>/asset-engine` (asset pipeline; formerly `engine/`)
+**Peer repo**: `github.com/KooshaPari/asset-engine` (asset pipeline; formerly `engine/`)
 
 ## Description
 

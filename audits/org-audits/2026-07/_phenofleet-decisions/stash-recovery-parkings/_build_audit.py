@@ -15,7 +15,7 @@ Strategy:
   3. For each capture branch, create a local wip/ alias at the same SHA,
      then push it. Try origin first (read-only on some mirrors), then
 <<<<<<< Updated upstream
-     koosha-https (GH token-based HTTPS push to KooshaPari/<repo>).
+     koosha-https (GH token-based HTTPS push to <REDACTED>/<repo>).
 =======
      koosha-https (GH token-based HTTPS push to <REDACTED>/<repo>).
 >>>>>>> Stashed changes
@@ -41,7 +41,7 @@ from typing import Optional
 # ---- Configuration --------------------------------------------------------
 
 <<<<<<< Updated upstream
-REPOS_DIR = Path("/Users/kooshapari/CodeProjects/Phenotype/repos")
+REPOS_DIR = Path("/Users/<REDACTED>/CodeProjects/Phenotype/repos")
 =======
 REPOS_DIR = Path("/Users/<REDACTED>/CodeProjects/Phenotype/repos")
 >>>>>>> Stashed changes
@@ -84,8 +84,8 @@ MIRROR_CLUSTERS = {
 # github <owner>/<repo> we should push the wip/ branches to.
 KOOSHA_PUSH_TARGET_OVERRIDES = {
 <<<<<<< Updated upstream
-    "omniroute-upstream-work": "KooshaPari/OmniRoute",
-    "OmniRoute-frontend-svelte-2026-07-05": "KooshaPari/OmniRoute",
+    "omniroute-upstream-work": "<REDACTED>/OmniRoute",
+    "OmniRoute-frontend-svelte-2026-07-05": "<REDACTED>/OmniRoute",
 =======
     "omniroute-upstream-work": "<REDACTED>/OmniRoute",
     "OmniRoute-frontend-svelte-2026-07-05": "<REDACTED>/OmniRoute",
@@ -317,7 +317,7 @@ def ensure_koosha_https_remote(repo_path: Path, repo_name: str) -> Optional[str]
         return None
 
 <<<<<<< Updated upstream
-    target_repo = KOOSHA_PUSH_TARGET_OVERRIDES.get(repo_name, f"KooshaPari/{repo_name}")
+    target_repo = KOOSHA_PUSH_TARGET_OVERRIDES.get(repo_name, f"<REDACTED>/{repo_name}")
 =======
     target_repo = KOOSHA_PUSH_TARGET_OVERRIDES.get(repo_name, f"<REDACTED>/{repo_name}")
 >>>>>>> Stashed changes

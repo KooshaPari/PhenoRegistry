@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # pheno argis - delegate to the v4 argis CLI.
 <<<<<<< Updated upstream
-# The argis CLI lives in /Users/kooshapari/CodeProjects/Phenotype/repos/OmniRoute-frontend-svelte-2026-07-05/bin/argis
+# The argis CLI lives in /Users/<REDACTED>/CodeProjects/Phenotype/repos/OmniRoute-frontend-svelte-2026-07-05/bin/argis
 =======
 # The argis CLI lives in /Users/<REDACTED>/CodeProjects/Phenotype/repos/OmniRoute-frontend-svelte-2026-07-05/bin/argis
 >>>>>>> Stashed changes

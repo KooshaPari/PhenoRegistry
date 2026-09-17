@@ -565,7 +565,7 @@ substrates:
     R3F web, Rust MIR/wgpu).
   notes: 'Visualization lib; depended-on (kept per program).
 
-    audit-v38 scorecard: https://github.com/<REDACTED>/Melosviz/blob/main/audit/SCORECARD.md
+    audit-v38 scorecard: https://github.com/KooshaPari/Melosviz/blob/main/audit/SCORECARD.md
 
     spine mirror: phenotype-org-audits/audit-v38/output/MelosViz/
 

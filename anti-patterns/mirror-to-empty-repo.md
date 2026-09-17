@@ -1,6 +1,6 @@
 # Anti-pattern: mirror-push to empty GitHub repo
 
-**Status:** retired · **Applies to:** bootstrapping any Phenotype MCP framework fork under `KooshaPari/`.
+**Status:** retired · **Applies to:** bootstrapping any Phenotype MCP framework fork under `<REDACTED>/`.
 
 ## Problem
 
@@ -29,7 +29,7 @@ gh repo fork <upstream>/<repo> --fork-name <PhenoName>
 Verify immediately:
 
 ```bash
-gh api repos/KooshaPari/<PhenoName> --jq '{fork, parent: .parent.full_name}'
+gh api repos/<REDACTED>/<PhenoName> --jq '{fork, parent: .parent.full_name}'
 ```
 
 Expected: `fork: true` and `parent` matching `catalog/registry.yaml` `fork_parent`.
@@ -39,10 +39,10 @@ Full procedure: [`github-fork-policy` skill](https://github.com/KooshaPari/Pheno
 ### Re-parent (rare, documented exception only)
 
 1. Document in ADR + target repo `FORK-NOTES.md`
-2. `gh repo delete KooshaPari/<Repo> --yes`
+2. `gh repo delete <REDACTED>/<Repo> --yes`
 3. `gh repo fork <new-upstream> --fork-name <Repo>`
 4. Update PhenoMCPServers catalog `fork_parent`
-5. Enable issues if needed: `gh api -X PATCH repos/KooshaPari/<Repo> -f has_issues=true`
+5. Enable issues if needed: `gh api -X PATCH repos/<REDACTED>/<Repo> -f has_issues=true`
 
 Never skip step 4 — agents read the catalog before the next session.
 

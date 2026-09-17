@@ -5,11 +5,11 @@
 
 #----------------------------------
 <<<<<<< Updated upstream
-# kooshapari-desk (3090 Ti)
+# <REDACTED>-desk (3090 Ti)
 #----------------------------------
-Host kooshapari-desk desk desk-tail
-    HostName kooshapari-desk.tail2b570.ts.net
-    User kooshapari
+Host <REDACTED>-desk desk desk-tail
+    HostName <REDACTED>-desk.tail2b570.ts.net
+    User <REDACTED>
 =======
 # <REDACTED>-desk (3090 Ti)
 #----------------------------------
@@ -41,8 +41,8 @@ Host koosh-desk desk-ip
 #----------------------------------
 Host desk-wsl desk-ts
 <<<<<<< Updated upstream
-    HostName kooshapari-desk.tail2b570.ts.net
-    User kooshapari
+    HostName <REDACTED>-desk.tail2b570.ts.net
+    User <REDACTED>
 =======
     HostName <REDACTED>-desk.tail2b570.ts.net
     User <REDACTED>
@@ -84,7 +84,7 @@ Host desk-wsl desk-ts
 #----------------------------------
 # export CODECLASSIFY_SSH_HOST=desk
 <<<<<<< Updated upstream
-# export COMPUTE_HOST=kooshapari-desk
+# export COMPUTE_HOST=<REDACTED>-desk
 =======
 # export COMPUTE_HOST=<REDACTED>-desk
 >>>>>>> Stashed changes

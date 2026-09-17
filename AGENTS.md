@@ -34,4 +34,4 @@ Master index and **boundary SSOT** for the <REDACTED> polyrepo ecosystem. Connec
 
 ## AgilePlus mandate
 
-All non-trivial work tracked in [AgilePlus](https://github.com/<REDACTED>/AgilePlus). Link spec ID in PR descriptions.
+All non-trivial work tracked in [AgilePlus](https://github.com/KooshaPari/AgilePlus). Link spec ID in PR descriptions.

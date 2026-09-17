@@ -49,7 +49,7 @@ except ImportError:
 
 # Configuration
 <<<<<<< Updated upstream
-COMPUTE_HOST = "desk"  # or "kooshapari-desk.tail2b570.ts.net"
+COMPUTE_HOST = "desk"  # or "<REDACTED>-desk.tail2b570.ts.net"
 =======
 COMPUTE_HOST = "desk"  # or "<REDACTED>-desk.tail2b570.ts.net"
 >>>>>>> Stashed changes

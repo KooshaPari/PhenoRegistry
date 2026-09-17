@@ -20,7 +20,7 @@ export default defineConfig({
       '/worklogs/': [{ items: [] }]
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/KooshaPari/phenotype-hub' }
+      { icon: 'github', link: 'https://github.com/<REDACTED>/phenotype-hub' }
     ]
   }
 })

@@ -4,7 +4,7 @@ Shared infrastructure crates extracted from the Phenotype ecosystem.
 
 This workspace contains generic infrastructure components that are shared across Phenotype services.
 
-**Absorbed into:** [`phenotype-registry`](https://github.com/<REDACTED>/phenotype-registry) (PR #554)
+**Absorbed into:** [`phenotype-registry`](https://github.com/KooshaPari/phenotype-registry) (PR #554)
 
 ## Crates
 

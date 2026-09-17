@@ -6,7 +6,7 @@ import re
 import sys
 
 <<<<<<< Updated upstream
-DB = "/Users/kooshapari/forge/.forge.db"
+DB = "/Users/<REDACTED>/forge/.forge.db"
 =======
 DB = "/Users/<REDACTED>/forge/.forge.db"
 >>>>>>> Stashed changes

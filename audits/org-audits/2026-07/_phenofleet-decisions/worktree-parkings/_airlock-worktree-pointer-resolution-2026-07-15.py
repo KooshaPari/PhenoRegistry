@@ -19,7 +19,7 @@ from datetime import datetime
 from pathlib import Path
 
 <<<<<<< Updated upstream
-REPO_ROOT = Path("/Users/kooshapari/CodeProjects/Phenotype/repos")
+REPO_ROOT = Path("/Users/<REDACTED>/CodeProjects/Phenotype/repos")
 =======
 REPO_ROOT = Path("/Users/<REDACTED>/CodeProjects/Phenotype/repos")
 >>>>>>> Stashed changes
@@ -123,10 +123,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-docs/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-docs",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-docs/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-docs",
         "note": "thegent-clean repo is absent from repos/; archived worktree on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-docs/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-docs",
@@ -138,10 +138,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-ruff/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-ruff",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-ruff/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-ruff",
         "note": "Same; archived worktree on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-ruff/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-ruff",
@@ -153,10 +153,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-policy/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-policy",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-policy/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-policy",
         "note": "Same; archived worktree on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-policy/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-policy",
@@ -168,10 +168,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-parallel/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-parallel",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-parallel/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-parallel",
         "note": "Same; archived worktree on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-parallel/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-parallel",
@@ -183,10 +183,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-idea/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-idea",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-idea/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-idea",
         "note": "Same; archived worktree on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/_archive/2026-06-08",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/_archive/2026-06-08/thegent-clean-wt-idea/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/thegent-clean/.git/worktrees/thegent-clean-wt-idea",
@@ -198,10 +198,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/persistent/.git",
-        "expected_target": "/Users/kooshapari/.airlock/repos/8711057fb661.git/worktrees/persistent",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/persistent/.git",
+        "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/persistent",
         "note": "Airlock bare mirror gone (post-prune); worktree dir still on disk",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/persistent/.git",
         "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/persistent",
@@ -214,10 +214,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e/.git",
-        "expected_target": "/Users/kooshapari/.airlock/repos/8711057fb661.git/worktrees/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e/.git",
+        "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e",
         "note": "Same",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e/.git",
         "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/5ffb5ebd-13d7-4e47-9aad-1e4d8f0daa9e",
@@ -230,10 +230,10 @@ OUTER_ORPHANS = [
     {
         "kind": "worktree_pointer_orphan",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/2a97c405-f982-4e17-972a-07c34f5c385c/.git",
-        "expected_target": "/Users/kooshapari/.airlock/repos/8711057fb661.git/worktrees/2a97c405-f982-4e17-972a-07c34f5c385c",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/2a97c405-f982-4e17-972a-07c34f5c385c/.git",
+        "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/2a97c405-f982-4e17-972a-07c34f5c385c",
         "note": "Same",
-        "parent_dir": "/Users/kooshapari/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
+        "parent_dir": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/recovery/home-audit-20260715/heliosApp/tree-archive-copy/8711057fb661/2a97c405-f982-4e17-972a-07c34f5c385c/.git",
         "expected_target": "/Users/<REDACTED>/.airlock/repos/8711057fb661.git/worktrees/2a97c405-f982-4e17-972a-07c34f5c385c",
@@ -250,7 +250,7 @@ SUPERPOWTERS = [
     {
         "kind": "superpowers_worktree",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/.config/superpowers/worktrees/forgecode/forge-eval-production/.git",
+        "path": "/Users/<REDACTED>/.config/superpowers/worktrees/forgecode/forge-eval-production/.git",
 =======
         "path": "/Users/<REDACTED>/.config/superpowers/worktrees/forgecode/forge-eval-production/.git",
 >>>>>>> Stashed changes
@@ -260,7 +260,7 @@ SUPERPOWTERS = [
     {
         "kind": "superpowers_worktree",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/.config/superpowers/worktrees/melosviz/feat-b10-conductor/.git",
+        "path": "/Users/<REDACTED>/.config/superpowers/worktrees/melosviz/feat-b10-conductor/.git",
 =======
         "path": "/Users/<REDACTED>/.config/superpowers/worktrees/melosviz/feat-b10-conductor/.git",
 >>>>>>> Stashed changes
@@ -270,8 +270,8 @@ SUPERPOWTERS = [
     {
         "kind": "superpowers_worktree",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/.config/superpowers/worktrees/Tracera/fix-tracera-docker-contract/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/Tracera/.git/worktrees/fix-tracera-docker-contract",
+        "path": "/Users/<REDACTED>/.config/superpowers/worktrees/Tracera/fix-tracera-docker-contract/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Tracera/.git/worktrees/fix-tracera-docker-contract",
 =======
         "path": "/Users/<REDACTED>/.config/superpowers/worktrees/Tracera/fix-tracera-docker-contract/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Tracera/.git/worktrees/fix-tracera-docker-contract",
@@ -281,7 +281,7 @@ SUPERPOWTERS = [
     {
         "kind": "superpowers_worktree",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/.config/superpowers/worktrees/Tracera-recovery-20260713/tracera-runtime-auth-wbs80-20260714/.git",
+        "path": "/Users/<REDACTED>/.config/superpowers/worktrees/Tracera-recovery-20260713/tracera-runtime-auth-wbs80-20260714/.git",
 =======
         "path": "/Users/<REDACTED>/.config/superpowers/worktrees/Tracera-recovery-20260713/tracera-runtime-auth-wbs80-20260714/.git",
 >>>>>>> Stashed changes
@@ -295,7 +295,7 @@ THEGENT_STUB = [
     {
         "kind": "thegent_worktree",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/.thegent/worktrees/1481461ff257",
+        "path": "/Users/<REDACTED>/.thegent/worktrees/1481461ff257",
 =======
         "path": "/Users/<REDACTED>/.thegent/worktrees/1481461ff257",
 >>>>>>> Stashed changes
@@ -309,8 +309,8 @@ VENV_IGNORE = [
     {
         "kind": "venv_cache_pointer",
 <<<<<<< Updated upstream
-        "path": "/Users/kooshapari/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/temporalio/bridge/sdk-core/.git",
-        "expected_target": "/Users/kooshapari/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/.git/modules/sdk-core",
+        "path": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/temporalio/bridge/sdk-core/.git",
+        "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/.git/modules/sdk-core",
 =======
         "path": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/temporalio/bridge/sdk-core/.git",
         "expected_target": "/Users/<REDACTED>/CodeProjects/Phenotype/repos/Grapheon/.venv/lib/python3.13/site-packages/.git/modules/sdk-core",

@@ -27,7 +27,7 @@ export default defineConfig({
       { text: "Anti-Patterns", link: "/anti-patterns/" },
       { text: "Guidelines", link: "/guidelines/" },
       { text: "Checklists", link: "/checklists/" },
-      { text: "Specs", link: "https://github.com/KooshaPari/PhenoSpecs" },
+      { text: "Specs", link: "https://github.com/<REDACTED>/PhenoSpecs" },
     ],
 
     sidebar: {
@@ -115,12 +115,12 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        "https://github.com/KooshaPari/PhenoHandbook/edit/main/docs/:path",
+        "https://github.com/<REDACTED>/PhenoHandbook/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/KooshaPari/PhenoHandbook" },
+      { icon: "github", link: "https://github.com/<REDACTED>/PhenoHandbook" },
     ],
 
     footer: {

@@ -106,7 +106,7 @@
     ],
     "steps": [
       "Step 1: Fresh shallow clone",
-      "  git clone --filter=blob:none --no-checkout --no-tags --depth=1 https://github.com/<REDACTED>/phenotype-registry.git /tmp/pheno-registry-push",
+      "  git clone --filter=blob:none --no-checkout --no-tags --depth=1 https://github.com/KooshaPari/phenotype-registry.git /tmp/pheno-registry-push",
       "Step 2: Fetch orphan branch from origin",
       "  cd /tmp/pheno-registry-push",
       "  git fetch --depth=1 origin refs/heads/chore/l7-001-contract-only-orphan-2026-06-17:refs/heads/chore/l7-001-contract-only-orphan-2026-06-17",
