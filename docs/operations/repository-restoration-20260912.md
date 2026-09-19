@@ -52,7 +52,7 @@ report supersedes them.
 
 ## Remaining Verification (out of scope here)
 
-1. Confirm each repository is reachable on the canonical owner
+1. Confirm each repository is reachable on the reported owner
    (`KooshaPari`) with the exact name listed.
 2. Re-validate imports, references, and CI integrations that depend on
    each repository.
@@ -63,7 +63,7 @@ report supersedes them.
 
 - **Reporter:** Koosha Pari (user-reported).
 - **Date of report:** 2026-09-12.
-- **Superseded local artifact:** ignored note
+- **Superseded local artifact:** ignored, untracked note
   `docs/sessions/20260908-researchledger-corpus-audit-routing/09_RESTORATION_CONSTRAINT.md`
-  (preserved unchanged on disk; tracked copy first introduced here).
+  (preserved unchanged on disk; this report records a reference to it only, not a tracked copy).
 - **Independent verification:** not performed.
