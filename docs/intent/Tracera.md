@@ -4,7 +4,7 @@ aliases: ["tracera-server", "tracera-edge", "tracera-events"]
 role: trace-and-observability-ledger
 status: active
 last_verified: 2026-09-20
-bound_prompts: 1
+bound_prompts: 2
 bound_plans: 0
 bound_responses: 1
 device: homelab-koosh + macbook
@@ -58,14 +58,14 @@ See: [`docs/boundary/Tracera.md`](../boundary/Tracera.md)
 
 Tracera sits in the **observability layer** of the Phenotype stack:
 
-```
+```text
    agents / runtimes  (AgentMCP, agentapi, thegent, Jcode)
         │
         ▼
    trace + session ingest  (Tracera)           ← this repo
         │
         ▼
-   memory + audit replay   (Tracera + phenodag queue)
+   memory + audit replay   (Tracera; phenodag queue is post-CVP / gated)
         │
         ▼
    cross-product dashboards (HeliosLab, PhenoObservability)
@@ -83,7 +83,9 @@ Tracera but aren't.
 
 - Memory distillation canonical strategy (pattern-based vs graph-input).
 - Cloudflare Tunnel Access policy for the public URL.
-- Whether the Electrobun desktop ships in the same CVP release as the CLI.
+- Whether the Electrobun desktop's first CVP release ships with packaging
+  polish (auto-update, code signing for distribution) or just the bare
+  desktop binary.
 
 ## Change Log
 

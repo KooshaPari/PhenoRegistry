@@ -35,8 +35,11 @@ the user can**:
    a real answer derived from the local trace-link graph.
 4. Distill the last N sessions into a stable long-term memory entry the
    next session can load as context.
-5. Run it all locally with no external API dependency, then optionally
-   publish the workspace to a shared URL behind Cloudflare Access.
+5. Run it all locally on a single user's machine with no third-party API
+   dependency, then optionally publish the workspace to a shared URL
+   behind Cloudflare Access. (Cloudflare Edge Worker + Tunnel are used
+   only as infrastructure for fleet discovery and public sharing — they
+   are not application APIs.)
 
 Everything else (multi-tenant auth, billing, graph analytics, OnCall
 integrations, ML inference pipelines, etc.) is post-CVP.
@@ -63,7 +66,9 @@ integrations, ML inference pipelines, etc.) is post-CVP.
   post-CVP.
 - **Electrobun desktop viewer** (`crates/tracera-tauri/` + `desktop/`).
   Bundles the local server + UI as a single downloadable artifact for
-  users who don't want to run the Rust server manually.
+  users who don't want to run the Rust server manually. **In-scope**
+  for the CVP release — desktop is the primary install surface for
+  non-developer users.
 
 ## Post-CVP (defer until CVP is live)
 
@@ -97,8 +102,8 @@ they actually live:
 
 As of 2026-09-20:
 
-- **Frontend**: live on Vercel, all CI checks green.
-  (`Deploy Tracera to Vercel` workflow → `tracera-j9n7ramax-koosha-paridehpours-projects.vercel.app`.)
+- **Frontend**: live on Vercel.
+  (`Deploy Tracera to Vercel` workflow → `tracera-j9n7ramax-koosha-paridehpours-projects.vercel.app` — that workflow's CI checks are green.)
 - **API tier**: Vercel same-origin catch-all router (`api/[...path].ts`)
   serving 41 stub endpoints. Acts as the proxy target until the live
   Rust-backed path comes online.
@@ -141,8 +146,6 @@ critical path when it does.
 - **Cloudflare Tunnel auth**: Access policy for the public tunnel URL.
   Bypass for self? Auth required for shared workspaces? Decide before
   the first non-developer test.
-- **Electrobun packaging**: do we ship the desktop app in the same CVP
-  release, or split it?
 
 ## Change Log
 
