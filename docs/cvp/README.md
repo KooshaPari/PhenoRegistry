@@ -82,6 +82,7 @@ owner: "<primary maintainer / agent>"
 | Repo | Status | CVP doc |
 | ---- | ------ | ------- |
 | Tracera | active (build-deploy pending) | [Tracera.md](./Tracera.md) |
+| BytePort | active (shipping) | [BytePort.md](./BytePort.md) |
 
 ## See also
 
