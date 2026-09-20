@@ -25,12 +25,12 @@ out_of_scope:
 > alignment. The pre-existing 2026-06-23 audit data (47/60 scorecard,
 > BP-001 dead-code removal) is preserved below for review traceability.
 >
-> Note: the registry ECOSYSTEM_MAP.md `superseded/archived` row for
-> BytePort is **incorrect** — the live repo (this one) is actively
-> maintained, ships 13 GitHub Actions workflows, and is the canonical
-> desktop app for the Phenotype compute mesh. The registry row is
-> pending a rationalization update (tracked in the open questions of
-> `phenotype-infra/worklog/2026-06-23-71-pillar-scorecard.md`).
+> BytePort is correctly listed in [`ECOSYSTEM_MAP.md`](../../ECOSYSTEM_MAP.md)
+> as active — under **product / app** (row 49) and **compute / infra
+> subtree** (row 58). The earlier 2026-06-17 sweep output that listed
+> it as superseded/archived was reclassified to active in
+> [`ADR-ECO-022`](../../docs/adrs/ADR-ECO-022-compute-infra-subtree-registry-correction.md)
+> on 2026-06-23; that reclassification is now reflected in the map.
 
 ## In Scope (2026-09-20 CVP-aligned)
 
