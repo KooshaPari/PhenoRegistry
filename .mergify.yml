@@ -61,7 +61,7 @@ pull_request_rules:
     actions:
       request_reviews:
         users:
-          - <REDACTED>
+          - KooshaPari
 
   # Label PRs based on changed files
   - name: Label Python changes
