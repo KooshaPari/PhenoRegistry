@@ -136,7 +136,7 @@ done in parallel during the same build-deploy window:
    placeholder with the actual in-scope / out-of-scope and
    boundary-crossings table.
 4. **71-pillar scorecard refresh** tracked for the next boundary review
-   cycle (2026-07-23 review window).
+   cycle (2026-10-20 review window).
 
 These moves do not require BytePort CI to land and shrink the critical
 path for any future rationalization work.

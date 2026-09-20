@@ -88,4 +88,4 @@ owner: "<primary maintainer / agent>"
 
 - [`docs/intent/`](../intent/) — long-form product intent.
 - [`docs/boundary/`](../boundary/) — what each repo owns vs delegates.
-- [`docs/SPEC.md`](../SPEC.md) — Phenotype Registry system spec.
+- [`/SPEC.md`](https://github.com/KooshaPari/PhenoRegistry/blob/main/SPEC.md) — Phenotype Registry system spec (repo root).

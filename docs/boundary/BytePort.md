@@ -51,9 +51,6 @@ out_of_scope:
    This is the canonical Go module; `backend/bytebridge/` is unused.
 5. **Astro docs** — marketing site at `apps/` (or similar root-level
    subdir).
-6. **`tauri.conf.json`** — strict CSP, COOP/COEP/CORP, HSTS, X-Frame-
-   Options, X-Content-Type-Options, Referrer-Policy, Permissions-
-   Policy.
 
 ## Out of Scope
 

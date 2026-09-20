@@ -1,6 +1,6 @@
 ---
-repo: "byteport"
-aliases: []
+repo: "BytePort"
+aliases: ["byteport"]
 role: product
 status: active
 last_verified: 2026-09-20

@@ -1,5 +1,6 @@
 ---
 repo: "Tracera"
+aliases: ["tracera-server", "tracera-edge", "tracera-events"]
 role: trace-and-observability-ledger
 status: active
 last_boundary_review: 2026-09-20
