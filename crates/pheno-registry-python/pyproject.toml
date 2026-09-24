@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "phenotype-registry"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Python SDK for phenotype-registry — parse ecosystem maps, inspect DAG structures, and query the phenotype registry from Python."
 readme = "README.md"
 license = { text = "MIT" }
@@ -35,7 +35,6 @@ Issues = "https://github.com/KooshaPari/phenotype-registry/issues"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
-python-source = "python"
 
 [tool.pytest.ini_options]
 testpaths = ["python/tests"]

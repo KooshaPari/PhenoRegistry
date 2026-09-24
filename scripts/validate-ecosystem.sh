@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # validate-ecosystem.sh — Phenotype ecosystem health check
 #
-# For each of the 13 canonical <REDACTED> repos, this script:
+# For each of the 13 canonical ecosystem repos, this script:
 #   (a) prints the repo name
 #   (b) checks that it is reachable on GitHub via `gh repo view`
 #   (c) checks that the standard meta files exist on the default branch:
@@ -72,7 +72,11 @@ fi
 #   + phenotype-registry itself
 #                                Total: 5 + 5 + 2 + 1 = 13
 
-ORG="<REDACTED>"
+ORG="$(gh repo view --json owner --jq '.owner.login' 2>/dev/null)"
+if [ -z "$ORG" ]; then
+  echo "ERROR: cannot determine repository owner (run inside a clone with gh auth)" >&2
+  exit 2
+fi
 
 # Format: "DisplayName|repo-slug|role"
 REPOS=(
