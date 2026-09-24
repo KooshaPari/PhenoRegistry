@@ -38,12 +38,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
-      - name: npm audit (skip if no package.json)
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d1 # v2
+      - name: bun audit (skip if no bun.lock)
         run: |
-          if [ -f "package.json" ]; then
-            npm audit --audit-level=high
+          if [ -f "bun.lock" ] || [ -f "bun.lockb" ]; then
+            bun install --frozen-lockfile
+            bun audit --audit-level=high
           else
-            echo "No package.json found — skipping npm audit"
+            echo "No bun.lock found — skipping bun audit"
           fi
 
   gitleaks:

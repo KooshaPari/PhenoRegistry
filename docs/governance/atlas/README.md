@@ -15,7 +15,7 @@ The current graph contains **204 proposed program requirements and 140 planned w
 
 ## Primary navigation
 
-- [Current owner index](portfolio/CURRENT-REPO-INDEX.md) and each products/<name>/START-HERE.md.
+- [Current owner index](portfolio/CURRENT-REPO-INDEX.md) and each products/&lt;name&gt;/START-HERE.md.
 - [Program specification](SPECIFICATION.md), [HLD](HLD.md), [ALD](ALD.md), [LLD](LLD.md), [authority](SSOT_AUTHORITY.md) and [traceability](TRACEABILITY.md).
 - [Ecosystem-first evolution](architecture/ECOSYSTEM-FIRST-EVOLUTION.md) and [applet contract](architecture/APPLET-CONTRACT.md).
 - [Federation product](federation/PRODUCT-CONTRACT.md), [experience](federation/EXPERIENCE-CONTRACT.md), [runtime](federation/RUNTIME-ARCHITECTURE.md), [security/data](federation/SECURITY-AND-DATA.md), [lifecycle](federation/LIFECYCLE-AND-RECOVERY.md), [platform reuse](federation/PLATFORM-LOWERING.md), [comparative proof](federation/RESEARCH-AND-PILOT.md).

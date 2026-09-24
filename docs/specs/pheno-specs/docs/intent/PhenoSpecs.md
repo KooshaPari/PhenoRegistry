@@ -1,5 +1,5 @@
 <!--
-propagated-from: <REDACTED>/phenotype-registry @ chore/l7-001-curation-snapshot
+propagated-from: &lt;REDACTED&gt;/phenotype-registry @ chore/l7-001-curation-snapshot
 date: 2026-06-17
 source-commit: a1aa44660
 do-not-edit-locally: regenerate via scripts/propagate-intent-to-repos.py
@@ -21,7 +21,7 @@ device: macbook
 
 ## Intent Statement
 
-<To be filled in by hand from the most recent binding prompt. This repo is bound to 5 prompts, 0 plans, and 0 agent responses captured between 2025-08 and 2026-06-17.>
+&lt;To be filled in by hand from the most recent binding prompt. This repo is bound to 5 prompts, 0 plans, and 0 agent responses captured between 2025-08 and 2026-06-17.&gt;
 
 ## Bound Prompts
 
@@ -49,11 +49,11 @@ See: [`docs/boundary/PhenoSpecs.md`](../boundary/PhenoSpecs.md)
 
 ## Ecosystem Role
 
-<See `ECOSYSTEM_MAP.md` for the canonical ecosystem role.>
+&lt;See                    for the canonical ecosystem role.&gt;
 
 ## Open Questions
 
-- <To be filled from the latest prompt on this repo.>
+- &lt;To be filled from the latest prompt on this repo.&gt;
 
 ## Change Log
 

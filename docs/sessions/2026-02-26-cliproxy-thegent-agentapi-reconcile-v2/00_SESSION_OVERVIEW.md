@@ -133,10 +133,10 @@ Notes:
 - `git -C /Users/<REDACTED>/CodeProjects/Phenotype/repos/cliproxyapi-plusplus
   worktree list`
 
-- `for n in $(gh pr list --repo <REDACTED>/cliproxyapi-plusplus --state open
+- `for n in $(gh pr list --repo &lt;REDACTED&gt;/cliproxyapi-plusplus --state open
 
   --json number --jq '.[].number' --limit 60); do gh pr checks $n --repo
-  <REDACTED>/cliproxyapi-plusplus --json name,state; done` (chunked)
+  &lt;REDACTED&gt;/cliproxyapi-plusplus --json name,state; done` (chunked)
 
 - `gh pr checks <PR> --repo <REDACTED>/agentapi-plusplus --json name,state`
 

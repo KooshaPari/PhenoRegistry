@@ -197,7 +197,7 @@ pub struct AgentDispatchInput {
     pub task_id: String,
     pub agent_type: String,
     pub prompt: String,
-    pub context: HashMap<String, serde_json::Value>,
+    pub context: HashMap&lt;String, serde_json::Value&gt;,
     pub timeout_seconds: u32,
 }
 
@@ -207,7 +207,7 @@ pub struct AgentDispatchWorkflow;
 
 #[async_trait]
 impl Workflow for AgentDispatchWorkflow {
-    async fn execute(&self, ctx: &mut Context, input: AgentDispatchInput) -> Result<WorkflowResult, WorkflowError> {
+    async fn execute(&self, ctx: &mut Context, input: AgentDispatchInput) -> Result&lt;WorkflowResult, WorkflowError&gt; {
         // Workflow logic here
     }
 }

@@ -398,7 +398,7 @@ When you receive a new input from the user, classify it and route as follows:
 If the input is clearly a small self-contained change (rename, single-line fix, config tweak), you may use:
 
 ```
-agileplus escape quick-fix "<description>"
+agileplus escape quick-fix "&lt;description&gt;"
 ```
 
 This bypasses the triage flow and creates a minimal WP directly in the active feature.
@@ -466,11 +466,11 @@ Write to `{output_dir}/CLAUDE.md`. Return the written path. If the file already 
 Each significant agent action should be logged to the WP prompt file's `history` block using the format:
 
 ```yaml
-- timestamp: '<ISO8601>'
-  lane: <current_lane>
-  agent: <agent_id>
-  shell_pid: '<pid>'
-  action: <description>
+- timestamp: '&lt;ISO8601&gt;'
+  lane: &lt;current_lane&gt;
+  agent: &lt;agent_id&gt;
+  shell_pid: '&lt;pid&gt;'
+  action: &lt;description&gt;
 ```
 ```
 

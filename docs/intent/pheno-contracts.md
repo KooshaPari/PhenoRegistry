@@ -90,7 +90,7 @@ See: [`docs/boundary/pheno-contracts.md`](../boundary/pheno-contracts.md)
 
 ## Ecosystem Role
 
-<See `ECOSYSTEM_MAP.md` for the canonical ecosystem role.>
+&lt;See                    for the canonical ecosystem role.&gt;
 
 ## Open Questions
 

@@ -155,7 +155,7 @@ In short: **hwLedger is itself the canonical home** — the canonical home for "
 
 ### 2026-07-17 — Absorption Attempt Rejected (today, follow-up to same-day AFFIRM)
 
-**Trigger:** incoming task "Absorb <REDACTED>/hwLedger → phenotype-infra" received on the same day the AFFIRM verdict was set (`verified_at: 2026-07-17T12:50:00Z`). Task brief claimed 542MB local repo with `src/` + `tests/` + `Cargo.toml` and pre-authorised a failsafe of `ARCHIVE_ONLY + boundary doc if conflicts`.
+**Trigger:** incoming task "Absorb &lt;REDACTED&gt;/hwLedger → phenotype-infra" received on the same day the AFFIRM verdict was set (`verified_at: 2026-07-17T12:50:00Z`). Task brief claimed 542MB local repo with `src/` + `tests/` + `Cargo.toml` and pre-authorised a failsafe of `ARCHIVE_ONLY + boundary doc if conflicts`.
 
 **Audit findings (forensic diff vs task assumptions):**
 

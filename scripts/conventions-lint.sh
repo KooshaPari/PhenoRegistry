@@ -91,7 +91,8 @@ done
 
 # --- 7. YAML syntax validation ---
 # Validates every .yml/.yaml file (skipping node_modules) using Python's
-# yaml.safe_load. This catches syntax errors before they hit CI.
+# yaml.compose (parse-only: skips safe_load's false positives on MkDocs
+# `!!python/name:` tags). This catches syntax errors before they hit CI.
 yaml_errors=0
 if command -v python3 >/dev/null 2>&1; then
   yaml_output=$(python3 -c '
@@ -106,7 +107,7 @@ for root, dirs, files in os.walk("."):
         path = os.path.join(root, f)
         try:
             with open(path) as fp:
-                yaml.safe_load(fp)
+                yaml.compose(fp)
         except yaml.YAMLError as e:
             mark = getattr(e, "problem_mark", None)
             line = mark.line + 1 if mark else 0
