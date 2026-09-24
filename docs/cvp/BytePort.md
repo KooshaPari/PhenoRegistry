@@ -22,8 +22,8 @@ does is **own the desktop deployment surface end-to-end** for Phenotype
 users — a single downloadable artifact bundles the local Go backend, the
 asset transport, and the native UI. Closest neighbors: Server Compass
 (proprietary, $29) and Coolify (web-based, requires a separate server).
-BytePort's identity is *"open-source, local-first, embedded in the
-Phenotype toolchain"* — those three together is what the user loses if
+BytePort's identity is _"open-source, local-first, embedded in the
+Phenotype toolchain"_ — those three together is what the user loses if
 you swap it out.
 
 ## Closest Viable Product
@@ -90,14 +90,14 @@ These are explicitly out of the CVP slice:
 Things that look like they belong in the BytePort CVP but don't, and
 where they actually live:
 
-| Looks like BytePort CVP | Actually lives in | Why |
-| ----------------------- | ------------------ | --- |
-| Multi-cloud S3-compatible transport | `pheno-transport` | BytePort only ships S3 presign; multi-cloud is a shared SDK concern. |
-| Remote MCP control of BytePort | `PhenoMCPServers` | MCP is a separate runtime; BytePort is local-first. |
-| Cross-platform process isolation | `nanovms` | Native sandboxing is a kernel-level concern outside BytePort's scope. |
-| Agent-specific desktop shells | `thegent/desktop` (per agent) | Each agent gets its own native shell; BytePort is the **deploy** app, not an agent shell. |
-| Cloud-hosted multi-user BytePort | post-CVP | CVP is single-user local; cloud hosting needs auth/billing first. |
-| Generic web-based deploy UI | `Coolify` (external) | BytePort's identity is desktop, not web — a web UI defeats the local-first point. |
+| Looks like BytePort CVP             | Actually lives in             | Why                                                                                       |
+| ----------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------- |
+| Multi-cloud S3-compatible transport | `pheno-transport`             | BytePort only ships S3 presign; multi-cloud is a shared SDK concern.                      |
+| Remote MCP control of BytePort      | `PhenoMCPServers`             | MCP is a separate runtime; BytePort is local-first.                                       |
+| Cross-platform process isolation    | `nanovms`                     | Native sandboxing is a kernel-level concern outside BytePort's scope.                     |
+| Agent-specific desktop shells       | `thegent/desktop` (per agent) | Each agent gets its own native shell; BytePort is the **deploy** app, not an agent shell. |
+| Cloud-hosted multi-user BytePort    | post-CVP                      | CVP is single-user local; cloud hosting needs auth/billing first.                         |
+| Generic web-based deploy UI         | `Coolify` (external)          | BytePort's identity is desktop, not web — a web UI defeats the local-first point.         |
 
 ## Build-deploy status
 
@@ -158,6 +158,6 @@ path for any future rationalization work.
 
 ## Change Log
 
-| Date | Change | Worklog |
-| ---- | ------ | ------- |
+| Date       | Change                                  | Worklog   |
+| ---------- | --------------------------------------- | --------- |
 | 2026-09-20 | Initial CVP, status = active (shipping) | this file |

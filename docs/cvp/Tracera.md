@@ -20,7 +20,7 @@ this spec, what breaks across the last 30 agent runs that touched it?"
 
 If you swapped Tracera for a generic log aggregator or APM tool, the user
 loses the cross-run dependency view and the memory distillation. Those two
-capabilities *are* Tracera.
+capabilities _are_ Tracera.
 
 ## Closest Viable Product
 
@@ -90,13 +90,13 @@ These are explicitly out of the CVP slice:
 Things that look like they belong in the Tracera CVP but don't, and where
 they actually live:
 
-| Looks like Tracera CVP | Actually lives in | Why |
-| ---------------------- | ------------------ | --- |
-| Cross-team sprint planning | `AgilePlus` | Tracera observes *what was done*; it does not plan *what to do*. |
-| Code-search over source | `HeliosLab` | Tracera indexes traces, not source files. |
-| Generic agent runtime | `agentmcp` / `AgentMCP` | Tracera is a *trace store*, not a runtime. |
-| Audit log streaming | `PhenotypeApps` | Tracera's audit is per-workspace, not per-org. |
-| MCP server host | `tracera-mcp` (post-CVP) | The CVP exposes tools via local IPC; the MCP server is a remote interface post-CVP. |
+| Looks like Tracera CVP     | Actually lives in        | Why                                                                                 |
+| -------------------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| Cross-team sprint planning | `AgilePlus`              | Tracera observes _what was done_; it does not plan _what to do_.                    |
+| Code-search over source    | `HeliosLab`              | Tracera indexes traces, not source files.                                           |
+| Generic agent runtime      | `agentmcp` / `AgentMCP`  | Tracera is a _trace store_, not a runtime.                                          |
+| Audit log streaming        | `PhenotypeApps`          | Tracera's audit is per-workspace, not per-org.                                      |
+| MCP server host            | `tracera-mcp` (post-CVP) | The CVP exposes tools via local IPC; the MCP server is a remote interface post-CVP. |
 
 ## Build-deploy status
 
@@ -149,6 +149,6 @@ critical path when it does.
 
 ## Change Log
 
-| Date | Change | Worklog |
-| ---- | ------ | ------- |
+| Date       | Change                                              | Worklog   |
+| ---------- | --------------------------------------------------- | --------- |
 | 2026-09-20 | Initial CVP, status = active (build-deploy pending) | this file |
