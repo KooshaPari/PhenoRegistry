@@ -86,10 +86,10 @@ owner: "<primary maintainer / agent>"
 
 ## CVP status
 
-| Repo     | Status                        | CVP doc                      |
-| -------- | ----------------------------- | ---------------------------- |
-| Tracera  | active (build-deploy pending) | [Tracera.md](./Tracera.md)   |
-| BytePort | active (shipping)             | [BytePort.md](./BytePort.md) |
+| Repo     | Status                                                                            | CVP doc                      |
+| -------- | --------------------------------------------------------------------------------- | ---------------------------- |
+| Tracera  | active (build-deploy pending)                                                     | [Tracera.md](./Tracera.md)   |
+| BytePort | active — canonical, CVP shipping (atlas qualification: NOT_CERTIFIED, 2026-09-16) | [BytePort.md](./BytePort.md) |
 
 ## See also
 

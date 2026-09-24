@@ -47,6 +47,12 @@ Those identities live elsewhere.
 
 ## Bound Prompts
 
+> **Provenance note:** the `docs/curated-prompts/` files referenced below
+> come from the L7-001/L7-002 prompt sweep; the corpus has not been
+> materialized in this repository yet (no such tree exists in git history —
+> see [`prompts-to-intent.crosswalk.md`](../prompts-to-intent.crosswalk.md)).
+> Rows are retained as provenance records; they do not currently resolve.
+
 | Date       | Source      | File                                                           | Tag            |
 | ---------- | ----------- | -------------------------------------------------------------- | -------------- |
 | 2025-10-09 | claude-code | `docs/curated-prompts/claude-code/2025-10/69393c8600a9c906.md` | implementation |
