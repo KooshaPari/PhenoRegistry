@@ -39,7 +39,7 @@ out_of_scope:
    `tauri.conf.json` (CSP, COOP/COEP/CORP, HSTS, X-Frame-Options,
    X-Content-Type-Options, Referrer-Policy, Permissions-Policy).
    Asset protocol scope is `["$APPDATA/uploads", "$APPDATA/cache",
-   "$APPLOCALDATA/uploads", "$APPLOCALDATA/cache"]` only (not `["**"]`).
+"$APPLOCALDATA/uploads", "$APPLOCALDATA/cache"]` only (not `["**"]`).
 2. **`frontend/web/`** — SvelteKit 5 / Svelte 5 frontend. Renders inside
    the Tauri shell only; not served as a standalone web app.
 3. **`crates/byteport-transport/`** — pure-Rust S3 presigner (no AWS
@@ -54,26 +54,26 @@ out_of_scope:
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| MCP server | `PhenoMCPServers` | MCP is a separate runtime |
-| Native sandboxing | `nanovms` | Process isolation is a nanovms concern |
-| thegent desktop shell | `thegent/desktop` | Each agent gets its own shell |
-| Multi-cloud transport | `pheno-transport` | SOTA transport is in the SDK |
-| Cloud-hosted multi-tenant BytePort | post-CVP | CVP is single-user local; cloud needs auth/billing |
-| Mobile (iOS / Android) | post-CVP | No local Podman daemon on mobile; transport story changes |
-| Fleet orchestration | post-CVP | CVP is one user, one machine |
+| Not here                           | Lives in          | Reason                                                    |
+| ---------------------------------- | ----------------- | --------------------------------------------------------- |
+| MCP server                         | `PhenoMCPServers` | MCP is a separate runtime                                 |
+| Native sandboxing                  | `nanovms`         | Process isolation is a nanovms concern                    |
+| thegent desktop shell              | `thegent/desktop` | Each agent gets its own shell                             |
+| Multi-cloud transport              | `pheno-transport` | SOTA transport is in the SDK                              |
+| Cloud-hosted multi-tenant BytePort | post-CVP          | CVP is single-user local; cloud needs auth/billing        |
+| Mobile (iOS / Android)             | post-CVP          | No local Podman daemon on mobile; transport story changes |
+| Fleet orchestration                | post-CVP          | CVP is one user, one machine                              |
 
 ## Boundary Crossings
 
-| Crossing | Direction | Surface | Status |
-| -------- | --------- | ------- | ------ |
-| Tauri IPC → backend | this→other | JSON-RPC over HTTP (port 8081) | green |
-| Tauri → S3 presigner | internal | `byteport_transport::S3UploadTransport` | green |
-| Backend → S3 | this→cloud | AWS SDK / pure HTTP | green |
-| Frontend → backend | this→other | fetch | green |
-| Desktop → local FS | this→system | Tauri asset protocol (scoped) | green |
-| Desktop → Podman / Docker | this→system | CLI invocation via Go backend | green |
+| Crossing                  | Direction   | Surface                                 | Status |
+| ------------------------- | ----------- | --------------------------------------- | ------ |
+| Tauri IPC → backend       | this→other  | JSON-RPC over HTTP (port 8081)          | green  |
+| Tauri → S3 presigner      | internal    | `byteport_transport::S3UploadTransport` | green  |
+| Backend → S3              | this→cloud  | AWS SDK / pure HTTP                     | green  |
+| Frontend → backend        | this→other  | fetch                                   | green  |
+| Desktop → local FS        | this→system | Tauri asset protocol (scoped)           | green  |
+| Desktop → Podman / Docker | this→system | CLI invocation via Go backend           | green  |
 
 ## 71-Pillar Scorecard (2026-06-23, preserved)
 
@@ -87,6 +87,7 @@ dead code; hardened `tauri.conf.json`).
 then this CVP/intent/boundary pass.
 **Worklog / finding:** `phenotype-infra/worklog/2026-06-23-71-pillar-scorecard.md`
 **Decisions:**
+
 - BP-001 (dead code removal + tauri.conf.json hardening) MERGED (commit `ceb703df`)
   - Deleted: `src/ipc.rs`, `src/network.rs`, `src/adapters/`, `src/ports/`
   - Pruned: `aws-sdk-s3`, `tokio`, `tracing`, `async-trait`, `thiserror`,

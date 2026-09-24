@@ -44,38 +44,39 @@ For the canonical CVP definition, see [`docs/cvp/Tracera.md`](../cvp/Tracera.md)
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| Multi-tenant WorkOS auth (WorkOS integration code is present) | `crates/tracera-workos` (gated) | CVP is single-user local; shared workspaces are post-CVP |
-| ML inference / Neo4j / RAG | `crates/tracera-ml`, `crates/tracera-neo4j`, `crates/tracera-rag` | CVP runs on SQLite + heuristic distillation only |
-| Multi-node fleet orchestration | `crates/tracera-cli`, `crates/tracera-go-cli` | CVP enrolls one node; fleet-of-fleets is post-CVP |
-| GitHub/Jira/AgilePlus ingest | `crates/tracera-server/src/ingest/` | CVP captures sessions manually or from local agents; remote-platform ingest is post-CVP |
-| phenodag queue absorption | `crates/tracera-server` (feature flag) | Opt-in until HTTP/service wiring is complete |
-| Custom-domain Tracera hosting | `deploy/selfhost/`, `cloudflared config` | CVP runs locally; CF Tunnel publish exists but isn't branded |
-| Agent execution | `AgentMCP`, `agentapi`, `thegent`, `Jcode` | Tracera observes, doesn't execute |
-| Code search | `HeliosLab` | Different indexing domain (source vs traces) |
-| Sprint planning | `AgilePlus` | Tracera captures *what happened*, not *what to do* |
-| Cross-product analytics dashboards | `HeliosLab`, `PhenoObservability` | Tracera's audit is per-workspace, not cross-org |
+| Not here                                                      | Lives in                                                          | Reason                                                                                  |
+| ------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Multi-tenant WorkOS auth (WorkOS integration code is present) | `crates/tracera-workos` (gated)                                   | CVP is single-user local; shared workspaces are post-CVP                                |
+| ML inference / Neo4j / RAG                                    | `crates/tracera-ml`, `crates/tracera-neo4j`, `crates/tracera-rag` | CVP runs on SQLite + heuristic distillation only                                        |
+| Multi-node fleet orchestration                                | `crates/tracera-cli`, `crates/tracera-go-cli`                     | CVP enrolls one node; fleet-of-fleets is post-CVP                                       |
+| GitHub/Jira/AgilePlus ingest                                  | `crates/tracera-server/src/ingest/`                               | CVP captures sessions manually or from local agents; remote-platform ingest is post-CVP |
+| phenodag queue absorption                                     | `crates/tracera-server` (feature flag)                            | Opt-in until HTTP/service wiring is complete                                            |
+| Custom-domain Tracera hosting                                 | `deploy/selfhost/`, `cloudflared config`                          | CVP runs locally; CF Tunnel publish exists but isn't branded                            |
+| Agent execution                                               | `AgentMCP`, `agentapi`, `thegent`, `Jcode`                        | Tracera observes, doesn't execute                                                       |
+| Code search                                                   | `HeliosLab`                                                       | Different indexing domain (source vs traces)                                            |
+| Sprint planning                                               | `AgilePlus`                                                       | Tracera captures _what happened_, not _what to do_                                      |
+| Cross-product analytics dashboards                            | `HeliosLab`, `PhenoObservability`                                 | Tracera's audit is per-workspace, not cross-org                                         |
 
 ## Boundary Crossings
 
-| Crossing | Direction | Surface | Status |
-| -------- | --------- | ------- | ------ |
-| Trace-link capture ingest | agent → Tracera | HTTP POST `/api/v1/trace` | green (Rust server) |
-| Cross-run queries | UI → Tracera | HTTP POST `/api/v1/{impact,confidence,blast-radius}` | green (Rust server) |
-| Memory distillation | in-process | internal API | green (Rust server, pattern strategy) |
-| Fleet enrollment | local node → edge | HTTP POST `/fleet/enroll` | green (Cloudflare Worker + sidecar) |
-| Fleet status report | local node → edge | HTTP POST `/fleet/heartbeat` | green |
-| Live API path (production) | Vercel frontend → CF Tunnel → local server | HTTP `https://tracera.pheno.studio/api/*` | red (proxy mode lands once Rust server is reachable through the tunnel) |
-| Edge cache reads | CF Worker → KV | internal | amber (KV not yet populated) |
-| WebSocket realtime sync | UI → server | `ws(s)://.../ws` | amber (server impl exists; UI wiring TBD) |
-| MCP server interface | external → Tracera | MCP stdio/HTTP | red (post-CVP; `crates/tracera-mcp/` scaffolded) |
+| Crossing                   | Direction                                  | Surface                                              | Status                                                                  |
+| -------------------------- | ------------------------------------------ | ---------------------------------------------------- | ----------------------------------------------------------------------- |
+| Trace-link capture ingest  | agent → Tracera                            | HTTP POST `/api/v1/trace`                            | green (Rust server)                                                     |
+| Cross-run queries          | UI → Tracera                               | HTTP POST `/api/v1/{impact,confidence,blast-radius}` | green (Rust server)                                                     |
+| Memory distillation        | in-process                                 | internal API                                         | green (Rust server, pattern strategy)                                   |
+| Fleet enrollment           | local node → edge                          | HTTP POST `/fleet/enroll`                            | green (Cloudflare Worker + sidecar)                                     |
+| Fleet status report        | local node → edge                          | HTTP POST `/fleet/heartbeat`                         | green                                                                   |
+| Live API path (production) | Vercel frontend → CF Tunnel → local server | HTTP `https://tracera.pheno.studio/api/*`            | red (proxy mode lands once Rust server is reachable through the tunnel) |
+| Edge cache reads           | CF Worker → KV                             | internal                                             | amber (KV not yet populated)                                            |
+| WebSocket realtime sync    | UI → server                                | `ws(s)://.../ws`                                     | amber (server impl exists; UI wiring TBD)                               |
+| MCP server interface       | external → Tracera                         | MCP stdio/HTTP                                       | red (post-CVP; `crates/tracera-mcp/` scaffolded)                        |
 
 ## Last Boundary Review
 
 **Date:** 2026-09-20
 **Reviewer:** jcode (this session)
 **Decisions:**
+
 - Drew the boundary around the trace-link graph + memory distillation
   pipeline. These are the two things that distinguish Tracera from
   generic observability.

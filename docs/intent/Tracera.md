@@ -34,10 +34,10 @@ See [`docs/cvp/Tracera.md`](../cvp/Tracera.md) for the CVP definition
 
 ## Bound Prompts
 
-| Date | Source | File | Tag |
-| ---- | ------ | ---- | --- |
-| 2026-04-23 | codex | `docs/curated-prompts/codex/2026-04/bb782500e06bf5d3.md` | bugfix |
-| 2026-09-19 | user | this session | infra-cutover (Render → Vercel + Cloudflare Tunnel + fleet) |
+| Date       | Source | File                                                     | Tag                                                         |
+| ---------- | ------ | -------------------------------------------------------- | ----------------------------------------------------------- |
+| 2026-04-23 | codex  | `docs/curated-prompts/codex/2026-04/bb782500e06bf5d3.md` | bugfix                                                      |
+| 2026-09-19 | user   | this session                                             | infra-cutover (Render → Vercel + Cloudflare Tunnel + fleet) |
 
 ## Bound Plans
 
@@ -46,9 +46,9 @@ See [`docs/cvp/Tracera.md`](../cvp/Tracera.md) for the CVP definition
 
 ## Bound Responses (specs, ideas, plans from agents)
 
-| Date | Source | File | Kind |
-| ---- | ------ | ---- | ---- |
-| ? | ? | `e4047b4c9e4816f6.md` | ? |
+| Date | Source | File                  | Kind |
+| ---- | ------ | --------------------- | ---- |
+| ?    | ?      | `e4047b4c9e4816f6.md` | ?    |
 
 ## Boundary
 
@@ -71,7 +71,7 @@ Tracera sits in the **observability layer** of the Phenotype stack:
    cross-product dashboards (HeliosLab, PhenoObservability)
 ```
 
-Tracera owns the *trace-link graph* and *memory distillation*. It does
+Tracera owns the _trace-link graph_ and _memory distillation_. It does
 not own agent execution, code search, sprint planning, or product
 analytics — those live in their respective repos.
 
@@ -89,7 +89,7 @@ Tracera but aren't.
 
 ## Change Log
 
-| Date | Change | Worklog |
-| ---- | ------ | ------- |
-| 2026-06-17 | Initial binding (L7-001 sweep) | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
-| 2026-09-20 | Filled intent statement + ecosystem role; added Render → Vercel cutover prompt | this doc |
+| Date       | Change                                                                         | Worklog                                                    |
+| ---------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| 2026-06-17 | Initial binding (L7-001 sweep)                                                 | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
+| 2026-09-20 | Filled intent statement + ecosystem role; added Render → Vercel cutover prompt | this doc                                                   |
