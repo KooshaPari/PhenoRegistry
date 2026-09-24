@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1-proposal",
+  "status": "EXAMPLE CONTRACT ONLY - requires a runtime adapter and OS enforcement",
+  "default_allow": false,
+  "configured_hosts": [],
+  "read_roots": [],
+  "report_and_index_write_roots": [],
+  "mutation_roots": [],
+  "approved_remote_hosts": [],
+  "allow_source_mutation": false,
+  "allow_content_upload": false,
+  "allow_elevated_execution": false,
+  "allow_arbitrary_shell": false,
+  "allow_permanent_delete": false,
+  "allow_snapshot_retention_changes": false,
+  "allow_partition_or_filesystem_changes": false,
+  "require_pinned_host_keys": true,
+  "require_plan_bound_approval": true,
+  "require_preflight_revalidation": true,
+  "require_supported_metadata_contract": true,
+  "require_backup_restore_evidence_before_irreversible_change": true,
+  "follow_symlinks_or_junctions": false,
+  "cross_mount_boundaries": false,
+  "hydrate_cloud_placeholders_for_analysis": false,
+  "initial_concurrency_policy": {
+    "heavy_jobs_per_physical_disk": 1,
+    "mutation_executors_per_host": 1
+  },
+  "proposed_response_limits": {
+    "rows": 50,
+    "bytes": 65536
+  },
+  "quarantine": {
+    "enabled": false,
+    "retention_days": null,
+    "purge_requires_separate_approval": true
+  },
+  "notes": [
+    "Empty allowlists intentionally authorize nothing.",
+    "Read-only refers to source data; report/index destinations must be separately authorized.",
+    "Inventory of a broad volume is not permission to expose every filename or read every file.",
+    "A skill or this JSON is not an enforcement boundary."
+  ]
+}

@@ -14,7 +14,7 @@
     },
     "repo": {
       "type": "string",
-      "pattern": "^KooshaPari/[A-Za-z0-9_.-]+$",
+      "pattern": "^<REDACTED>/[A-Za-z0-9_.-]+$",
       "description": "GitHub owner/repo path."
     },
     "name": {

@@ -1,0 +1,40 @@
+{
+  "snapshots": {
+    "session-hare-PARENT.json": {
+      "messages": 4030,
+      "created": "2026-09-15T04:50:14.891357Z",
+      "updated": "2026-09-15T11:11:24.144916Z"
+    },
+    "session-mizaru-CURRENT.json": {
+      "messages": 3705,
+      "created": "2026-09-15T05:13:24.640031Z",
+      "updated": "2026-09-15T11:09:36.551309Z"
+    },
+    "session-hare-PARENT.journal.jsonl": {
+      "meta": 18,
+      "append_messages": 17
+    },
+    "session-mizaru-CURRENT.journal.jsonl": {
+      "meta": 39,
+      "append_messages": 36,
+      "append_env_snapshots": 1
+    }
+  },
+  "unique_message_ids": 4341,
+  "conflicting_message_versions": 0,
+  "snapshot_id_union": 4288,
+  "shared_ids_between_snapshots": 3447,
+  "journal_additional_ids": 53,
+  "range_utc": [
+    "2026-09-12T01:53:21.184165Z",
+    "2026-09-15T11:19:15.366439Z"
+  ],
+  "deep_review_scope": "Selected authority, observation, migration, merge, deletion, retry and handoff events. Not every descendant session or historical repository branch is supplied.",
+  "limitations": [
+    "t-rex ancestor not separately supplied",
+    "most child worker complete sessions absent",
+    "no local repositories or backup bundles supplied",
+    "no full portfolio audit or native application tests performed",
+    "no model reasoning excerpts redistributed"
+  ]
+}

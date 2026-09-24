@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   analyze:
-    uses: KooshaPari/phenoShared/.github/workflows/reusable/codeql.yml@30358ce629168f0e1ec3699706cb73d1f77cb751
+    uses: <REDACTED>/phenoShared/.github/workflows/reusable/codeql.yml@30358ce629168f0e1ec3699706cb73d1f77cb751
     permissions:
       contents: read
       actions: read

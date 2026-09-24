@@ -1,0 +1,17 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "bootstrap",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D06",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "One bounded first-value or failure-repair slice; review the other domains for material risks.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

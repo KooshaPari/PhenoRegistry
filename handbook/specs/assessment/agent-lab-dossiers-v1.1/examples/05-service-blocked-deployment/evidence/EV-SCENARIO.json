@@ -1,0 +1,13 @@
+{
+  "kind": "evidence",
+  "schema_version": "1.0.0",
+  "id": "EV-SCENARIO",
+  "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+  "path": "raw/scenario.json",
+  "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "sensitivity": "PUBLIC",
+  "role": "OBSERVATION",
+  "origin": "EXTERNAL_REFERENCE",
+  "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+}

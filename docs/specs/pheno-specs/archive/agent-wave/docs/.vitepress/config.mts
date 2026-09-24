@@ -19,7 +19,7 @@ export default defineConfig({
         { text: 'Guide', items: [{ text: 'Getting Started', link: '/guide/' }] }
       ]
     },
-    socialLinks: [{ icon: 'github', link: `https://github.com/KooshaPari/${repoName}` }],
+    socialLinks: [{ icon: 'github', link: `https://github.com/<REDACTED>/${repoName}` }],
     search: { provider: 'local' }
   },
   markdown: { lineNumbers: true },

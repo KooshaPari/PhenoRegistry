@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/criterion.schema.json",
+  "title": "criterion",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "criterion"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pillar_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predicate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicability_trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modality": {
+      "type": "string",
+      "minLength": 1
+    },
+    "procedure": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "positive_control": {
+      "type": "string",
+      "minLength": 1
+    },
+    "negative_control": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acceptance_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "invalidators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "activation_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "implementation_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qualification_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_context_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "native_standard_requirement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "proposed_priority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_gate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "revision",
+    "domain_id",
+    "pillar_id",
+    "predicate",
+    "applicability_trigger",
+    "modality",
+    "procedure",
+    "evidence_requirements",
+    "positive_control",
+    "negative_control",
+    "acceptance_rule",
+    "invalidators",
+    "activation_requirements",
+    "implementation_status",
+    "qualification_status",
+    "origin",
+    "source_context_ids",
+    "native_standard_requirement_id",
+    "proposed_priority",
+    "default_gate"
+  ],
+  "additionalProperties": false
+}

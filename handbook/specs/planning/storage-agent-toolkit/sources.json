@@ -1,0 +1,171 @@
+{
+  "review_date": "2026-09-07",
+  "notes": "Primary documentation researched for this inventory; documentation review is not a runtime or source-security audit. URLs are provided for follow-up verification.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "WizTree automation guide",
+      "url": "https://diskanalyzer.com/guide"
+    },
+    {
+      "id": "S02",
+      "title": "WizTree design and duplicate-detection semantics",
+      "url": "https://diskanalyzer.com/about"
+    },
+    {
+      "id": "S03",
+      "title": "WizTree licensing",
+      "url": "https://diskanalyzer.com/eula"
+    },
+    {
+      "id": "S04",
+      "title": "Everything ES command-line interface",
+      "url": "https://www.voidtools.com/support/everything/command_line_interface/"
+    },
+    {
+      "id": "S05",
+      "title": "TreeSize Professional scheduled scans",
+      "url": "https://manuals.jam-software.com/treesize/EN/schedule_scans.html"
+    },
+    {
+      "id": "S06",
+      "title": "Windows Storage PowerShell module",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/storage/?view=windowsserver2025-ps"
+    },
+    {
+      "id": "S07",
+      "title": "Apple APFS volumes and shared container space",
+      "url": "https://support.apple.com/guide/disk-utility/add-delete-or-erase-apfs-volumes-dskua9e6a110/mac"
+    },
+    {
+      "id": "S08",
+      "title": "ncdu manual",
+      "url": "https://dev.yorhel.nl/ncdu/man"
+    },
+    {
+      "id": "S09",
+      "title": "dua-cli repository and platform documentation",
+      "url": "https://github.com/Byron/dua-cli"
+    },
+    {
+      "id": "S10",
+      "title": "Czkawka repository",
+      "url": "https://github.com/qarmin/czkawka"
+    },
+    {
+      "id": "S11",
+      "title": "fclones repository and platform limitations",
+      "url": "https://github.com/pkolaczk/fclones"
+    },
+    {
+      "id": "S12",
+      "title": "smartmontools FAQ",
+      "url": "https://www.smartmontools.org/wiki/FAQ"
+    },
+    {
+      "id": "S13",
+      "title": "smartctl JSON and scan options in official source",
+      "url": "https://www.smartmontools.org/static/doxygen/smartctl_8cpp_source.html"
+    },
+    {
+      "id": "S14",
+      "title": "rclone SFTP backend",
+      "url": "https://rclone.org/sftp/"
+    },
+    {
+      "id": "S15",
+      "title": "rclone check",
+      "url": "https://rclone.org/commands/rclone_check/"
+    },
+    {
+      "id": "S16",
+      "title": "Robocopy reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy"
+    },
+    {
+      "id": "S17",
+      "title": "restic backup and Windows VSS",
+      "url": "https://restic.readthedocs.io/en/stable/040_backup.html"
+    },
+    {
+      "id": "S18",
+      "title": "restic repository verification",
+      "url": "https://restic.readthedocs.io/en/stable/045_working_with_repos.html"
+    },
+    {
+      "id": "S19",
+      "title": "Syncthing REST API",
+      "url": "https://docs.syncthing.net/dev/rest.html"
+    },
+    {
+      "id": "S20",
+      "title": "Syncthing versioning",
+      "url": "https://docs.syncthing.net/users/versioning.html"
+    },
+    {
+      "id": "S21",
+      "title": "Windows OpenSSH server configuration",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh-server-configuration"
+    },
+    {
+      "id": "S22",
+      "title": "macOS Remote Login",
+      "url": "https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac"
+    },
+    {
+      "id": "S23",
+      "title": "Tailscale SSH platform support and ordinary SSH distinction",
+      "url": "https://tailscale.com/docs/features/tailscale-ssh"
+    },
+    {
+      "id": "S24",
+      "title": "disk-usage-mcp repository",
+      "url": "https://github.com/sandraschi/disk-usage-mcp"
+    },
+    {
+      "id": "S25",
+      "title": "MCP filesystem reference server",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md"
+    },
+    {
+      "id": "S26",
+      "title": "Everything search MCP",
+      "url": "https://github.com/mamertofabian/mcp-everything-search"
+    },
+    {
+      "id": "S27",
+      "title": "System information MCP",
+      "url": "https://github.com/dknell/mcp-system-info"
+    },
+    {
+      "id": "S28",
+      "title": "Desktop Commander MCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+    },
+    {
+      "id": "S29",
+      "title": "Agent Skills specification",
+      "url": "https://agentskills.io/specification"
+    },
+    {
+      "id": "S30",
+      "title": "uv cache management and filesystem placement",
+      "url": "https://docs.astral.sh/uv/concepts/cache/"
+    },
+    {
+      "id": "S31",
+      "title": "Time Machine local snapshots",
+      "url": "https://support.apple.com/en-us/102154"
+    },
+    {
+      "id": "S32",
+      "title": "Smart Tree",
+      "url": "https://github.com/8b-is/smart-tree"
+    },
+    {
+      "id": "S33",
+      "title": "Deep Directory Tree MCP",
+      "url": "https://github.com/andredezzy/deep-directory-tree-mcp"
+    }
+  ]
+}

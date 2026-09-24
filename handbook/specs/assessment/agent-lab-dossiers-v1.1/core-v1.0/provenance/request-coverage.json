@@ -1,0 +1,154 @@
+{
+  "basis": "User requirements in this conversation; delivery-state labels are deliberately bounded.",
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "requirement": "One final consolidated zip",
+      "artifacts": [
+        "README.md",
+        "docs/00-SPECIFICATION.md",
+        "provenance/history"
+      ],
+      "delivery_state": "PACKAGED"
+    },
+    {
+      "id": "REQ-02",
+      "requirement": "Inventory, audit, scorecard and rubric share records without collapsing meaning",
+      "artifacts": [
+        "docs/02-RECORDS-AND-STATE-MODEL.md",
+        "schemas"
+      ],
+      "delivery_state": "SPECIFIED_AND_PARTIALLY_IMPLEMENTED"
+    },
+    {
+      "id": "REQ-03",
+      "requirement": "Deep pillar/criterion coverage",
+      "artifacts": [
+        "catalog/catalog.json",
+        "catalog/domains"
+      ],
+      "delivery_state": "AUTHORED_CANDIDATES_NOT_FULLY_QUALIFIED"
+    },
+    {
+      "id": "REQ-04",
+      "requirement": "Machine-first plus semantic evaluation",
+      "artifacts": [
+        "tools/pep.py",
+        "docs/07-SEMANTIC-REVIEW.md",
+        "prompts"
+      ],
+      "delivery_state": "REFERENCE_KERNEL_AND_PROCEDURES"
+    },
+    {
+      "id": "REQ-05",
+      "requirement": "Factory/ATAM/other third-party foundations",
+      "artifacts": [
+        "sources/register.json",
+        "docs/21-SOURCE-AND-RIGHTS-NOTES.md"
+      ],
+      "delivery_state": "CONCEPTUAL_CROSSWALKS_NOT_NATIVE_CLAUSE_IMPORT"
+    },
+    {
+      "id": "REQ-06",
+      "requirement": "UX, AX, DX, polish, performance and product value",
+      "artifacts": [
+        "catalog/domains/D07.md",
+        "catalog/domains/D08.md",
+        "catalog/domains/D09.md",
+        "catalog/domains/D11.md",
+        "catalog/domains/D12.md"
+      ],
+      "delivery_state": "CANDIDATE_COVERAGE"
+    },
+    {
+      "id": "REQ-07",
+      "requirement": "Declared and undeclared gaps and research opportunities",
+      "artifacts": [
+        "docs/00-SPECIFICATION.md",
+        "schemas/finding.schema.json"
+      ],
+      "delivery_state": "SPECIFIED"
+    },
+    {
+      "id": "REQ-08",
+      "requirement": "Slice MVP and later multidimensional maturity",
+      "artifacts": [
+        "docs/08-SCORING-AND-MATURITY.md"
+      ],
+      "delivery_state": "GATE_REDUCER_PLUS_MATURITY_PROCEDURE"
+    },
+    {
+      "id": "REQ-09",
+      "requirement": "Commit-pinned repo and timestamped ledger/registry",
+      "artifacts": [
+        "docs/10-LEDGER-AND-PROVENANCE.md",
+        "integration"
+      ],
+      "delivery_state": "LOCAL_BINDINGS_IMPLEMENTED_REMOTE_DELIVERY_CONTRACT_ONLY"
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "100-percent agent-operated lab and agent-originated intent",
+      "artifacts": [
+        "START-HERE-AGENT.md",
+        "docs/01-AUTHORITY-AND-OPERATING-MODE.md"
+      ],
+      "delivery_state": "PROTOCOL_NOT_DEPLOYED_LAB"
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Agents construct and qualify their own assignment/grader",
+      "artifacts": [
+        "docs/05-ASSIGNMENT-QUALIFICATION.md",
+        "tools/demo_loop.py"
+      ],
+      "delivery_state": "PROCEDURE_AND_EXECUTED_TOY"
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Cheap replaceable workers with durable knowledge",
+      "artifacts": [
+        "docs/09-RESTARTS-CONVERGENCE-AND-ECONOMICS.md",
+        "templates/RESTART-PACKET.template.md"
+      ],
+      "delivery_state": "PROCEDURE_METRICS_NOT_MEASURED_FLEET_ECONOMICS"
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "Continue without AgilePlus or Tracera completion",
+      "artifacts": [
+        "runbooks/01-FIRST-REAL-ASSESSMENT.md",
+        "tools/pep.py"
+      ],
+      "delivery_state": "OFFLINE_REFERENCE_PATH_IMPLEMENTED"
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Autonomous improve/pivot/merge/retire within delegation",
+      "artifacts": [
+        "runbooks/07-PIVOT-MERGE-RETIRE.md",
+        "schemas/decision.schema.json"
+      ],
+      "delivery_state": "PROCEDURE_NOT_EXTERNAL_ACTION"
+    },
+    {
+      "id": "REQ-15",
+      "requirement": "Recover current device and Git history agents outputs",
+      "artifacts": [
+        "runbooks/02-RECOVER-HISTORY.md",
+        "schemas/census-item.schema.json",
+        "schemas/crosswalk.schema.json"
+      ],
+      "delivery_state": "IMPORT_CONTRACT_NOT_COMPLETED_CENSUS"
+    },
+    {
+      "id": "REQ-16",
+      "requirement": "Adversarial evaluation and self-consistent fiction resistance",
+      "artifacts": [
+        "docs/11-THREAT-MODEL-AND-ASSURANCE-DEPTH.md",
+        "tests/test_kernel.py"
+      ],
+      "delivery_state": "SELECTED_LOCAL_TESTS_PLUS_THREAT_MODEL"
+    }
+  ]
+}

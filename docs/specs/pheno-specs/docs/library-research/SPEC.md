@@ -1320,7 +1320,7 @@ The phenotype-registry provides a read-only query API for discovering and naviga
 #### 8.1.1 Base URL
 
 ```
-https://raw.githubusercontent.com/KooshaPari/phenotype-registry/main/
+https://raw.githubusercontent.com/<REDACTED>/phenotype-registry/main/
 ```
 
 #### 8.1.2 Endpoints
@@ -1581,19 +1581,19 @@ jobs:
       - name: Checkout PhenoSpecs
         uses: actions/checkout@v4
         with:
-          repository: KooshaPari/PhenoSpecs
+          repository: <REDACTED>/PhenoSpecs
           path: phenospecs
 
       - name: Checkout PhenoHandbook
         uses: actions/checkout@v4
         with:
-          repository: KooshaPari/PhenoHandbook
+          repository: <REDACTED>/PhenoHandbook
           path: phenohandbook
 
       - name: Checkout HexaKit
         uses: actions/checkout@v4
         with:
-          repository: KooshaPari/HexaKit
+          repository: <REDACTED>/HexaKit
           path: hexakit
 
       - name: Setup Python
@@ -2222,7 +2222,7 @@ import yaml
 from pathlib import Path
 
 class PhenotypeRegistryClient:
-    BASE_URL = "https://raw.githubusercontent.com/KooshaPari/phenotype-registry/main"
+    BASE_URL = "https://raw.githubusercontent.com/<REDACTED>/phenotype-registry/main"
 
     def __init__(self):
         self._index = None

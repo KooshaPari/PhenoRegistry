@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phenotype.invalid/schemas/worker-handoff.schema.json",
+  "title": "Repository Worker Handoff",
+  "type": "object",
+  "required": [
+    "repo_id",
+    "worker_run",
+    "authorized_mode",
+    "summary",
+    "gate",
+    "decisions_requested",
+    "artifacts",
+    "validation",
+    "coverage"
+  ],
+  "properties": {
+    "repo_id": {
+      "type": "string"
+    },
+    "worker_run": {
+      "type": "string"
+    },
+    "authorized_mode": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "gate": {
+      "type": "string"
+    },
+    "decisions_requested": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "command",
+          "status"
+        ],
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "BLOCKED",
+              "NOT_RUN"
+            ]
+          },
+          "evidence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "inspected",
+        "not_inspected"
+      ],
+      "properties": {
+        "inspected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "not_inspected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "next_closure_slice": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "checkpoint": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

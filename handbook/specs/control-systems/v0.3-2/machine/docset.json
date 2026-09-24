@@ -1,0 +1,3585 @@
+{
+  "schema_version": "0.3.0",
+  "document_date": "2026-09-12",
+  "status": "design_baseline_not_deployment_approval",
+  "sources_file": "machine/sources.json",
+  "constraints": [
+    {
+      "id": "CON-001",
+      "status": "direct_user_constraint",
+      "text": "GitHub Free/student; Podman / WSLC unless Docker Engine is provably better.",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CON-002",
+      "status": "direct_user_constraint",
+      "text": "Develop the API/automation and lifecycle plan; BytePort remains the GUI/application layer. No duplicate GUI or PaaS product is requested.",
+      "source_ids": [
+        "S032"
+      ]
+    },
+    {
+      "id": "CON-003",
+      "status": "direct_user_constraint",
+      "text": "Secondary dev backend runs on the desktop/local target; nightly means every 8 hours OR more than one new commit. Retain local placement even though the Render free-quota explanation needs correction.",
+      "source_ids": [
+        "S032",
+        "S040"
+      ]
+    },
+    {
+      "id": "CON-004",
+      "status": "direct_user_constraint",
+      "text": "Production uses the same CI foundation with maximal strictness, an additional trio-style rerun before final confirmation, and explicit recovery/rollback handling.",
+      "source_ids": [
+        "S032"
+      ]
+    },
+    {
+      "id": "CON-005",
+      "status": "direct_user_constraint",
+      "text": "Use existing BytePort, nanovms, PhenoCompose and related repositories as an ecosystem; a recalled PhenotypeActions role is a discovery target, not permission to invent its implementation.",
+      "source_ids": [
+        "S032"
+      ]
+    },
+    {
+      "id": "CON-006",
+      "status": "direct_user_constraint",
+      "text": "Personal desktop, laptop and other trivially enrolled machines may act as qualified compute nodes behind the cloud abstraction, but their foreground human workloads retain reserved capacity and priority.",
+      "source_ids": [
+        "S052"
+      ]
+    },
+    {
+      "id": "CON-007",
+      "status": "direct_user_constraint",
+      "text": "Humans, agents and automations are first-class product users. GUI, API, SDK and CLI surfaces must expose the same underlying capabilities and evidence rather than separate product truths.",
+      "source_ids": [
+        "S052"
+      ]
+    },
+    {
+      "id": "CON-008",
+      "status": "direct_user_constraint",
+      "text": "The review pipeline must add no new recurring spend. Existing subscriptions, free tiers and already-granted credits may be used, but paid overage or auto-refill is not authorized.",
+      "source_ids": [
+        "S052"
+      ]
+    },
+    {
+      "id": "CON-009",
+      "status": "direct_user_constraint",
+      "text": "Semantic review providers must be dispatched selectively and quota-aware; do not send every pull request to every reviewer.",
+      "source_ids": [
+        "S052"
+      ]
+    },
+    {
+      "id": "CON-010",
+      "status": "direct_user_constraint",
+      "text": "Historical review findings and unresolved threads must be reconciled, including remediation on a new pull request when the original pull request is already merged or closed and the defect still exists.",
+      "source_ids": [
+        "S052"
+      ]
+    },
+    {
+      "id": "CON-011",
+      "status": "direct_user_constraint",
+      "text": "Emergent Garden corpus work must continue from the existing ResearchLedger/CLI work and evidence rather than restart from a fresh research plan.",
+      "source_ids": [
+        "S052"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Stored source coverage now exceeds the excerpt, but completion claims still exceed evidence",
+      "priority": "P0",
+      "verdict": "partly_resolved",
+      "source_ids": [
+        "S001",
+        "S032",
+        "S033",
+        "S035"
+      ],
+      "detail": "The full export supplies root intent, descendant reports and a complete nightly workflow snapshot. The scan recovers direct bodies/payloads for only some named reports; both final follow-up audits lack a finished report in the retained contexts. All 81 conversations carry a compression flag. A local file, a written report, a remote artifact and a successful deployment remain distinct states.",
+      "closure": "Use the indexed message provenance and report-recovery map. Resolve remaining owner/current-ref/settings and operational receipts without asking for another full transcript."
+    },
+    {
+      "id": "F-002",
+      "title": "WSLC was silently collapsed into WSL2",
+      "priority": "P0",
+      "verdict": "correction",
+      "source_ids": [
+        "S001",
+        "S013"
+      ],
+      "detail": "The prior reasoning treats WSLC as a possible typo, then reasons about Podman inside WSL2. Microsoft documents a distinct wslc.exe implementation. A Podman socket, Quadlet generator, Compose consumer and WSLC CLI cannot be assumed interchangeable.",
+      "closure": "Inventory installed WSL and WSLC versions. Maintain separate runtime adapters and capability results; preserve the direct user preference."
+    },
+    {
+      "id": "F-003",
+      "title": "Free/student was treated as a complete GitHub entitlement model",
+      "priority": "P0",
+      "verdict": "correction",
+      "source_ids": [
+        "S001",
+        "S008",
+        "S009",
+        "S010",
+        "S031"
+      ],
+      "detail": "The synthesis conflates public and private repositories, personal and organization plans, and basic environments versus reviewer gates. Activated student Pro can change personal-private capabilities. At least BytePort was returned as public in connected repository metadata.",
+      "closure": "Record owner type, actual plan/benefit, repository visibility and real protection settings per repository. Do not use private-Free branch protection as an assumed fallback."
+    },
+    {
+      "id": "F-004",
+      "title": "The candidate CI trio is recovered; exact production authority is not",
+      "priority": "P0",
+      "verdict": "partly_resolved",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S034",
+        "S036",
+        "S048"
+      ],
+      "detail": "The stored CI audit identifies ci / lint, ci / test and CI; the current connected file confirms those names. The generated protection JSON uses ci/lint and ci/test, which are different strings. This resolves the likely job-name mapping, not the original historical phrase \u201ctrio we did above,\u201d actual check-run identity, latest complete runs, or approval policy.",
+      "closure": "Resolve exact check-run names and trusted producer/workflow identities at a pinned candidate revision, repair any mapping mismatch, and bind the strictly rerun candidate to final authorization."
+    },
+    {
+      "id": "F-005",
+      "title": "Coolify-primary on Podman was recommended without a supported-path proof",
+      "priority": "P1",
+      "verdict": "unsupported_recommendation",
+      "source_ids": [
+        "S001",
+        "S016",
+        "S017",
+        "S018",
+        "S019",
+        "S020",
+        "S021"
+      ],
+      "detail": "The reviewed PaaS setup instructions establish Docker-oriented paths, not a qualified rootless Podman/WSL path. Docker API compatibility does not establish Swarm behavior. Podman-aware administration products exist, but their supported configurations and authority boundaries differ.",
+      "closure": "Treat these as candidates. Require an exact-version, exact-configuration lifecycle and recovery test before choosing a PaaS or accepting a Docker exception."
+    },
+    {
+      "id": "F-006",
+      "title": "The proposed repository boundary conflicts with consolidation declarations",
+      "priority": "P0",
+      "verdict": "unresolved_ownership",
+      "source_ids": [
+        "S001",
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "detail": "A BytePort\u00d7PhenoCompose interlock may be a useful logical model, but the repos describe planned delivery, migrated bindings and a consolidation target. This evidence does not prove two independent new controllers are needed or that any advertised runtime is operational.",
+      "closure": "Resolve canonical module locations using current ADRs, imports, consumers, active releases and migration receipts. Preserve one actuator per resource and existing four-role document authority."
+    },
+    {
+      "id": "F-007",
+      "title": "WSL service-manager behavior was not translated into availability requirements",
+      "priority": "P1",
+      "verdict": "missing_operational_contract",
+      "source_ids": [
+        "S014",
+        "S015"
+      ],
+      "detail": "Native systemd support does not make a Windows workstation an always-on service host. Quadlet lifecycle also cannot be reproduced by pretending systemd is optional.",
+      "closure": "Test boot, logout, sleep/resume, WSL shutdown, network changes and cgroup enforcement; document acceptable outage behavior instead of declaring availability."
+    },
+    {
+      "id": "F-008",
+      "title": "Sharing a production runtime socket with general CI is a trust-boundary failure mode",
+      "priority": "P0",
+      "verdict": "design_risk",
+      "source_ids": [
+        "S012",
+        "S016",
+        "S007"
+      ],
+      "detail": "A rootless socket still confers execution as its owning user. An untrusted build or test job on that user can compromise services, credentials or host-accessible data. A fresh runner registration is not the same as a clean execution environment.",
+      "closure": "Separate untrusted build execution from trusted apply authority, runtime sockets, secret stores and state backends; test attempted cross-boundary access."
+    },
+    {
+      "id": "F-009",
+      "title": "Private network, public transport and application authorization were mixed",
+      "priority": "P1",
+      "verdict": "missing_security_contract",
+      "source_ids": [
+        "S001",
+        "S022",
+        "S024"
+      ],
+      "detail": "Funnel creates public reachability rather than visitor authentication. A named tunnel similarly does not define application identity policy by itself. Public portfolio pages and private admin applications must not share an accidental default exposure policy.",
+      "closure": "Declare each route as private-tailnet, authenticated-public-hostname, anonymous-public or authenticated-machine; test positive and negative identity paths and origin bypass."
+    },
+    {
+      "id": "F-010",
+      "title": "Quick Tunnel is incompatible with an SSE requirement",
+      "priority": "P1",
+      "verdict": "verified_product_constraint",
+      "source_ids": [
+        "S023",
+        "S001"
+      ],
+      "detail": "Cloudflare explicitly excludes SSE from Quick Tunnels. That disqualifies this transport for a required streaming path, but the supplied log does not establish that the failing request used any Cloudflare tunnel.",
+      "closure": "Record the actual ingress chain and verify stream framing, first-content latency, cancellation and idle behavior through the intended production path."
+    },
+    {
+      "id": "F-011",
+      "title": "A universal IaC swap was inferred from an SDK and compatible API",
+      "priority": "P1",
+      "verdict": "unsupported_portability_claim",
+      "source_ids": [
+        "S025",
+        "S026",
+        "S027",
+        "S028",
+        "S006"
+      ],
+      "detail": "Programmatic provisioning does not provide equivalent persistence, networking, approvals or rollback across local runtimes and managed services. A Python implementation also needs an explicit exception or fit within the existing language boundary.",
+      "closure": "Qualify adapters by resource and state semantics. Retain existing IaC where adequate; approve language/tool changes through the proper ADR. Assign exactly one state writer."
+    },
+    {
+      "id": "F-012",
+      "title": "WASI/Spin was described as a generic native-process escape hatch",
+      "priority": "P1",
+      "verdict": "correction",
+      "source_ids": [
+        "S001",
+        "S029",
+        "S030"
+      ],
+      "detail": "Spin is a WebAssembly-component application path, not a generic drop-in route for a process that could not run in OCI. A native process may instead need a native service or an actual VM. Firecracker specifically uses Linux KVM.",
+      "closure": "Classify binary format, syscall/device needs and state before placement. Separate custom nanovms project identity from third-party brands and verify host virtualization capabilities."
+    },
+    {
+      "id": "F-013",
+      "title": "Routing logs support an investigation, not a complete request diagnosis",
+      "priority": "P1",
+      "verdict": "evidence_limit",
+      "source_ids": [
+        "S001"
+      ],
+      "detail": "The file contains one explicit 83,173 ms / 32-fallback success event. Terminal decisions counts, HTTP status, empty-stream warnings and zero-model sync events have different semantics and lack a complete shared request denominator.",
+      "closure": "Instrument request, attempt, provider, config generation, semantic outcome, duration and emitted-content counters; inspect code defining decisions and correlate raw traces before attributing cause."
+    },
+    {
+      "id": "F-014",
+      "title": "Rollback and update ownership were not specified at the state boundary",
+      "priority": "P1",
+      "verdict": "missing_operational_contract",
+      "source_ids": [
+        "S001",
+        "S004",
+        "S007",
+        "S027"
+      ],
+      "detail": "An image rollback is not a database restoration contract. Multiple auto-deploy, automatic container-update or dependency-update controllers can also make a reviewed release differ from the applied one.",
+      "closure": "Use one update-PR owner per dependency stream and one release actuator. Define backup/restore evidence, migration reversibility, health probation and emergency rollback authority."
+    },
+    {
+      "id": "F-015",
+      "title": "PaaS, Kubernetes and provider alternatives were ranked beyond the evidence",
+      "priority": "P2",
+      "verdict": "recommendation_overreach",
+      "source_ids": [
+        "S001",
+        "S017",
+        "S018",
+        "S019",
+        "S028"
+      ],
+      "detail": "Best API, overkill for one node and not production-grade were presented too categorically. A single node does not itself settle workflow complexity, portability value or acceptable service limits.",
+      "closure": "Use a requirement-driven decision matrix with unknown cells, functional disqualifiers and measured operating cost. Do not manufacture a winner or introduce Kubernetes solely to obtain a GitOps label."
+    },
+    {
+      "id": "F-016",
+      "title": "The prototype deploys dev to Render despite the local-desktop requirement",
+      "priority": "P0",
+      "verdict": "source_requirement_mismatch",
+      "detail": "The original request places the dev backend on the desktop. The stored caller and reusable workflow instead target a second Render dev service. Cloud portability does not justify silently changing that primary placement.",
+      "closure": "Implement the local dev target behind the existing control interface; keep Render an explicitly selected managed adapter or qualified fallback.",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S040"
+      ]
+    },
+    {
+      "id": "F-017",
+      "title": "The reusable workflow path cannot be used as written",
+      "priority": "P0",
+      "verdict": "platform_semantics_failure",
+      "detail": "The stored caller references .github/workflows/reusable/nightly-dev-deploy.yml@main. GitHub does not support reusable workflow subdirectories. The current exact-path lookup also returned 404, which is retained separately rather than interpreted as proof of historical absence.",
+      "closure": "Move callable workflows directly under .github/workflows in the resolved owner; migrate callers and pin the approved revision. Validate syntax, resolution, workflow_call inputs and an actual disposable run.",
+      "source_ids": [
+        "S033",
+        "S035",
+        "S036"
+      ]
+    },
+    {
+      "id": "F-018",
+      "title": "Tested Git commit and deployed image are not bound",
+      "priority": "P0",
+      "verdict": "artifact_identity_gap",
+      "detail": "The Blueprint is image-backed and points to :latest. The workflow compiles/tests a checkout but POSTs commitId, without building and publishing an immutable image in that pipeline or binding it to the tested artifact. A source hash alone cannot attest the image deployed.",
+      "closure": "Build once; record image digest and platform; test that digest; use the provider operation for the actual service source type; verify the observed digest after apply.",
+      "source_ids": [
+        "S033",
+        "S037",
+        "S038"
+      ]
+    },
+    {
+      "id": "F-019",
+      "title": "Automatic rollback is claimed but absent from the recovered nightly workflow",
+      "priority": "P0",
+      "verdict": "contradicted_by_code",
+      "detail": "The complete 205-line nightly workflow ends on health failure with exit 1. It records no prior deploy identifier, invokes no rollback operation and performs no rollback verification. The verifier nevertheless described rollback safety. This finding is limited to the recovered nightly workflow, not unseen production code.",
+      "closure": "Preserve previous known-good identity before mutation; add an authorized data-compatible rollback or forward-recovery operation and independently verify recovery. Never equate failure reporting with rollback.",
+      "source_ids": [
+        "S033",
+        "S039"
+      ]
+    },
+    {
+      "id": "F-020",
+      "title": "The literal commit threshold is not implemented",
+      "priority": "P1",
+      "verdict": "behavior_mismatch",
+      "detail": "The caller triggers on every main push. The callee checks only whether HEAD equals the reported live commit; it never counts new commits. One new commit can deploy immediately. There is also no environment-scoped concurrency/lease in the stored pair.",
+      "closure": "Implement a tested dirty AND (scheduled_tick OR new_commits > 1 OR authorized_force) predicate, explicit counting basis, per-target serialization and offline catch-up policy.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ]
+    },
+    {
+      "id": "F-021",
+      "title": "Health validation has both mismatch and fail-open paths",
+      "priority": "P0",
+      "verdict": "verification_gap",
+      "detail": "The caller selects /health, while the Blueprint selects /healthz. Missing service URL causes exit 0. Even a successful health response does not identify the expected release generation.",
+      "closure": "Unify the application health contract, reject unknown endpoints/identity and verify the new artifact plus authenticated semantic health; use a bounded probation/recovery path.",
+      "source_ids": [
+        "S033"
+      ]
+    },
+    {
+      "id": "F-022",
+      "title": "Secret forwarding is incomplete and build/apply share credentials",
+      "priority": "P0",
+      "verdict": "trust_boundary_gap",
+      "detail": "The caller passes only RENDER_API_KEY. It neither passes a service-id input nor forwards RENDER_SERVICE_ID_DEV. The callee could receive an environment-scoped secret, but that configuration is not proven; a repository secret alone is not automatically forwarded. The same job exports the API key before executing caller-supplied build/test commands.",
+      "closure": "Make the source of each value explicit; prefer a nonsecret service-id input; separate untrusted build from the credentialed actuator. Do not use broad inherit as a substitute for deliberate secret scope.",
+      "source_ids": [
+        "S033",
+        "S036"
+      ]
+    },
+    {
+      "id": "F-023",
+      "title": "Source defaults are unsafe to reuse as a production fallback",
+      "priority": "P0",
+      "verdict": "data_and_secret_configuration_risk",
+      "detail": "The stored Blueprint contains a literal authentication-token value and in-memory SQLite. The token value is redacted in this package. This proves the values appeared in a configuration snapshot, not that they are active credentials or that a live data breach occurred.",
+      "closure": "Replace literal credentials with owner-managed secret references; determine exposure/rotation need privately. A durable fallback needs data replication/restore evidence, not an empty in-memory database that merely passes liveness.",
+      "source_ids": [
+        "S033",
+        "S040"
+      ]
+    },
+    {
+      "id": "F-024",
+      "title": "Follow-up research does not close runtime compatibility or plan gates",
+      "priority": "P1",
+      "verdict": "unqualified_research",
+      "detail": "The GitHub follow-up ends in a failed documentation fetch; the Podman parent has no final audit report in its stored context. A descendant calls VSOCK inter-service networking stable because it found no contrary documentation. Official Podman networking describes Netavark/Aardvark/Pasta; those facts do not establish WSL local stability or VSOCK transport for every service.",
+      "closure": "Record exact installed versions and topology; test socket, guest/host reachability, service DNS, reboot/resume and streaming paths. Absence of a reported problem is not compatibility evidence.",
+      "source_ids": [
+        "S032",
+        "S041",
+        "S042",
+        "S048"
+      ]
+    },
+    {
+      "id": "F-025",
+      "title": "Audit counts and status labels are not reliable acceptance evidence",
+      "priority": "P1",
+      "verdict": "audit_method_defect",
+      "detail": "A descendant claims 24 workflow files while its own final table enumerates 25. The pilot is repeatedly called production-ready in compaction summaries, while stored git status shows uncommitted changes and the concrete workflow has blockers. Runner labels, environments and branch references are also conflated in some reports.",
+      "closure": "Generate inventories from exact enumerated paths; derive counts; label file, source, run, settings and environment scopes separately; require command-result identity and terminal acceptance evidence.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ]
+    },
+    {
+      "id": "F-026",
+      "title": "LocalStack status was overstated; emulator and service roles must be separated",
+      "priority": "P2",
+      "verdict": "terminology_and_scope_correction",
+      "detail": "The source calls LocalStack defunct. The vendor documents a March 2026 move to authenticated consolidated images, not the end of the product. A reason to reject that dependency can be valid without asserting the product is gone. Moto-style simulation and durable local services serve different purposes.",
+      "closure": "Keep provider APIs and local durable service operations separate from test emulation. Test application-used APIs and reject unsupported semantics instead of promising full AWS equivalence.",
+      "source_ids": [
+        "S032",
+        "S043",
+        "S044",
+        "S045",
+        "S046",
+        "S047"
+      ]
+    },
+    {
+      "id": "F-027",
+      "title": "Paged provider observations and response shapes need contract tests",
+      "priority": "P1",
+      "verdict": "provider_adapter_gap",
+      "detail": "The historical workflow reads at most 20 deployments, assumes a flat item shape and turns no live commit into permission to deploy. Its status loop recognizes only a subset of failure strings and leaves others to timeout. A parsed response schema was not obtained in this review, so exact flat-vs-wrapper incompatibility is not asserted as proven.",
+      "closure": "Capture official/canonical schema and redacted actual fixtures; paginate or query authoritative active state; treat unknown source identity/status as blocked or explicit reconciliation-required, not a new release.",
+      "source_ids": [
+        "S033",
+        "S038",
+        "S051"
+      ]
+    },
+    {
+      "id": "F-028",
+      "title": "BytePort already has the correct control-plane seam",
+      "priority": "P0",
+      "verdict": "convergence",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "detail": "The current cloud design is capability-based and already spans compute/database/storage/network lifecycle. A second private-cloud GUI/controller would duplicate the intended BytePort control plane.",
+      "closure": "Reconcile current canonical BytePort module ownership, then add local-fleet capability support through that seam."
+    },
+    {
+      "id": "F-029",
+      "title": "Local deployment intent exists historically but is not current authority",
+      "priority": "P1",
+      "verdict": "qualified_precedent",
+      "source_ids": [
+        "S059",
+        "S060"
+      ],
+      "detail": "Two historical BytePort branches explicitly describe local runtime/compute-mesh intent, but both are closed unmerged. They validate direction, not current implementation.",
+      "closure": "Recover only the still-valid contracts into current authority through normal review; do not resurrect branch state wholesale."
+    },
+    {
+      "id": "F-030",
+      "title": "Foreground-use protection needs QoS, not a one-process pause script",
+      "priority": "P0",
+      "verdict": "architecture_gap",
+      "source_ids": [
+        "S052",
+        "S056",
+        "S057",
+        "S077"
+      ],
+      "detail": "The prior heavy-runner design protects interactive use with a narrow pause concept. The new requirement spans Ableton/creator workloads, gaming, local LLMs and background cloud services across heterogeneous nodes.",
+      "closure": "Define hard reserves, dynamic host modes, preemptibility, GPU/VRAM exclusivity, thermal/battery policies and observable admission decisions."
+    },
+    {
+      "id": "F-031",
+      "title": "Local delivery should pull immutable artifacts instead of exposing host control to CI",
+      "priority": "P0",
+      "verdict": "security_and_reliability",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "detail": "Direct CI-to-personal-host control creates broad credentials, inbound reachability and race-prone mutable state. The safer boundary is signed/pinned artifact publication plus desired-state delivery to an outbound-connected node daemon.",
+      "closure": "Prove immutable artifact identity from CI build through node observation; keep personal hosts privately reachable and least-privileged."
+    },
+    {
+      "id": "F-032",
+      "title": "A local database container is not equivalent to a managed database",
+      "priority": "P0",
+      "verdict": "semantic_gap",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "detail": "Database placement carries durability, backup, restore, upgrade, replication and RPO/RTO semantics. Treating container start success as PaaS-equivalent would fake capability parity.",
+      "closure": "Make stateful-service capabilities explicit and block migrations when backup/restore semantics are unqualified."
+    },
+    {
+      "id": "F-033",
+      "title": "Human, agent and automation parity must be an API invariant",
+      "priority": "P0",
+      "verdict": "product_tenet",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "detail": "A polished GUI that bypasses the API or stores unique state creates a second control plane and makes agents/automation second-class.",
+      "closure": "Adopt one typed control API/event/evidence model consumed by GUI, CLI and SDK; allow surface-specific ergonomics but no unique authority."
+    },
+    {
+      "id": "F-034",
+      "title": "The assessment two-step question is already structurally solved",
+      "priority": "P1",
+      "verdict": "convergence",
+      "source_ids": [
+        "S053",
+        "S054"
+      ],
+      "detail": "The Master Assessment Kit already separates inventory/context/evidence from measurement/verdict while preserving one Assessment Dossier authority. Creating an independent inventory file set and scorecard truth store would regress that design.",
+      "closure": "Formalize inventory as Phase A and evaluation/scoring as Phase B of one dossier; scores remain null until applicability and evidence are qualified."
+    },
+    {
+      "id": "F-035",
+      "title": "Existing scorecards should become profiles, not competing assessment authorities",
+      "priority": "P1",
+      "verdict": "deduplication",
+      "source_ids": [
+        "S053",
+        "S054"
+      ],
+      "detail": "The 88-pillar and other audit rubrics can be useful criterion catalogs, but parallel canonical scores create drift and contradictory maturity claims.",
+      "closure": "Map rubrics into versioned profiles/criterion catalogs and measurement bindings under the Master Assessment Kit."
+    },
+    {
+      "id": "F-036",
+      "title": "Emergent Garden is blocked on integration, not lack of research output",
+      "priority": "P0",
+      "verdict": "status_correction",
+      "source_ids": [
+        "S061",
+        "S062",
+        "S063"
+      ],
+      "detail": "PR 81 contains substantial validated work but is closed unmerged, while the reviewed current-main path does not contain the Wave 5 research index. Starting another corpus plan would duplicate work and risk losing the validated branch.",
+      "closure": "Preserve the exact PR-81 head, reconcile it against current main, rerun package validation, and land or consciously supersede it before new research waves."
+    },
+    {
+      "id": "F-037",
+      "title": "Research projection and source authority are temporarily inconsistent",
+      "priority": "P0",
+      "verdict": "cross_repo_inconsistency",
+      "source_ids": [
+        "S061",
+        "S063",
+        "S064"
+      ],
+      "detail": "phenotype-registry PR 550 merged a projection that points at the pinned ResearchLedger evidence head even though the source corpus PR itself is closed unmerged.",
+      "closure": "Retain the pinned projection but mark source integration state explicitly until ResearchLedger main contains or supersedes that evidence."
+    },
+    {
+      "id": "F-038",
+      "title": "Review quotas are live capabilities, not static plan constants",
+      "priority": "P0",
+      "verdict": "control_gap",
+      "source_ids": [
+        "S067",
+        "S068",
+        "S071",
+        "S072",
+        "S074"
+      ],
+      "detail": "Actual PR evidence shows simultaneous provider-specific quota exhaustion while other reviewers continue. Published limits also vary by plan, OSS status, credits and upstream model availability.",
+      "closure": "Maintain a refreshed provider-capability/quota record and schedule only from observed availability; never hard-code one rate as universal."
+    },
+    {
+      "id": "F-039",
+      "title": "Auto-review defaults can waste scarce semantic review capacity",
+      "priority": "P0",
+      "verdict": "quota_risk",
+      "source_ids": [
+        "S069",
+        "S073",
+        "S075"
+      ],
+      "detail": "Several providers automatically review PR opens/updates when enabled. High commit/PR volume can consume allowance before a candidate is review-ready.",
+      "closure": "Prefer label/manual/ready-state opt-in where supported, coalesce changes, and reserve capacity for final exact-head review and escalations."
+    },
+    {
+      "id": "F-040",
+      "title": "Merged PRs require historical finding revalidation, not thread cosmetics",
+      "priority": "P0",
+      "verdict": "remediation_gap",
+      "source_ids": [
+        "S065",
+        "S066",
+        "S067"
+      ],
+      "detail": "PR 277 is now merged after prior evidence of unresolved current threads. Closing or resolving the old threads does not tell whether the defect remains on main.",
+      "closure": "Revalidate each material historical finding on current default branch; open a remediation PR only when the defect still exists, then attach evidence and disposition."
+    },
+    {
+      "id": "F-041",
+      "title": "Reviewer output needs one normalized finding ledger",
+      "priority": "P0",
+      "verdict": "deduplication",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S070",
+        "S078"
+      ],
+      "detail": "Provider comments differ in identity, severity, anchors and lifecycle. Without normalization, duplicates consume repair cycles and stale comments can be mistaken for active defects.",
+      "closure": "Normalize findings by provider/source revision/diff anchor/semantic signature and record disposition, evidence and supersession."
+    },
+    {
+      "id": "F-042",
+      "title": "Deterministic checks must remain outside semantic-review quota arbitration",
+      "priority": "P0",
+      "verdict": "safety_floor",
+      "source_ids": [
+        "S052",
+        "S065"
+      ],
+      "detail": "Linters, tests, secret scanning, dependency policy and security gates are machine checks with different economics and guarantees. Skipping them to save AI review quota weakens the floor.",
+      "closure": "Keep mandatory deterministic gates independent and always eligible; use the broker only for semantic-review capacity."
+    },
+    {
+      "id": "F-043",
+      "title": "Observed provider failures justify adaptive dispatch",
+      "priority": "P1",
+      "verdict": "evidence",
+      "source_ids": [
+        "S067",
+        "S068"
+      ],
+      "detail": "The same ForgeCode PR showed Copilot quota exhaustion and CodeRabbit free-limit exhaustion while CodeAnt continued incremental reviews. Fixed reviewer sets are therefore brittle.",
+      "closure": "Use fallback ordering and orthogonality scoring, not a hard requirement that a named provider always participate."
+    },
+    {
+      "id": "F-044",
+      "title": "Zero-dollar Kilo reviews are possible but not a reliability guarantee",
+      "priority": "P1",
+      "verdict": "qualified_option",
+      "source_ids": [
+        "S072",
+        "S073"
+      ],
+      "detail": "Kilo documents free-model operation, but free model availability and upstream rate limits can change. Automatic PR update reviews can also amplify usage.",
+      "closure": "Treat Kilo/free models as a budget lane with health checks and fallbacks, not the sole approval authority."
+    },
+    {
+      "id": "F-045",
+      "title": "Macroscope credit must be modeled as a finite non-renewing budget",
+      "priority": "P1",
+      "verdict": "budget_control",
+      "source_ids": [
+        "S071",
+        "S079"
+      ],
+      "detail": "The advertised $100 workspace credit can cover useful specialist reviews, but usage-based billing and auto-refill exist.",
+      "closure": "Set cash-spend allowed=false, auto-refill off, explicit remaining-credit accounting, and dispatch Macroscope only when expected marginal value beats scarce-credit cost."
+    },
+    {
+      "id": "F-046",
+      "title": "A sixth semantic reviewer is not justified yet",
+      "priority": "P2",
+      "verdict": "portfolio_control",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S067"
+      ],
+      "detail": "Five semantic-review channels plus deterministic tooling already create overlap and quota complexity. Another provider is useful only if it contributes unique valid findings or availability.",
+      "closure": "Measure provider marginal unique-valid-finding yield before adding another default reviewer."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "FR-DEP-001",
+      "title": "Provenance and epistemic status",
+      "status": "proposed",
+      "statement": "Every material claim MUST identify source, revision/coverage limits, and whether it is observed, declared, inferred or proposed. Unknowns MUST NOT be promoted to verified by summaries.",
+      "source_ids": [
+        "S001",
+        "S007"
+      ],
+      "finding_ids": [
+        "F-001",
+        "F-013"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-001"
+      ],
+      "owner_role": "Existing audit/evidence owner"
+    },
+    {
+      "id": "FR-DEP-002",
+      "title": "Runtime identity",
+      "status": "proposed",
+      "statement": "Podman-on-WSL2, WSLC, Docker Engine and Docker Desktop MUST have distinct identity and capability records. The user\u2019s runtime preference MUST NOT be normalized away.",
+      "source_ids": [
+        "S001",
+        "S013"
+      ],
+      "finding_ids": [
+        "F-002"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-002"
+      ],
+      "owner_role": "Runtime adapter owner; location unresolved"
+    },
+    {
+      "id": "FR-DEP-003",
+      "title": "Preference-preserving selection",
+      "status": "proposed",
+      "statement": "Podman/WSLC MUST remain the preference. A Docker Engine exception MUST identify a required capability or measured advantage and receive explicit operator approval; absence of a benchmark is not proof of superiority.",
+      "source_ids": [
+        "S001"
+      ],
+      "finding_ids": [
+        "F-002",
+        "F-005",
+        "F-015"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-003"
+      ],
+      "owner_role": "Deployment policy owner"
+    },
+    {
+      "id": "FR-DEP-004",
+      "title": "Explicit runtime capabilities",
+      "status": "proposed",
+      "statement": "Placement MUST check architecture, devices, isolation, networking, storage, lifecycle and API semantics. Unsupported or unknown required capabilities MUST block placement.",
+      "source_ids": [
+        "S013",
+        "S015",
+        "S016",
+        "S030"
+      ],
+      "finding_ids": [
+        "F-002",
+        "F-005",
+        "F-012"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-004"
+      ],
+      "owner_role": "Runtime adapter owner"
+    },
+    {
+      "id": "FR-DEP-005",
+      "title": "Comparable performance evidence",
+      "status": "proposed",
+      "statement": "Runtime comparisons MUST use equivalent artifacts, host limits, filesystem placement, network path and workload classes, recording interference and functional failures as well as timings.",
+      "source_ids": [
+        "S001"
+      ],
+      "finding_ids": [
+        "F-015"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-005"
+      ],
+      "owner_role": "TestingKit consumer"
+    },
+    {
+      "id": "FR-DEP-006",
+      "title": "Single mutation owner",
+      "status": "proposed",
+      "statement": "Each deployment, container group, DNS route and stateful resource MUST have one canonical mutation owner. Other components may request or observe but MUST NOT independently reconcile the same resource.",
+      "source_ids": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "finding_ids": [
+        "F-006",
+        "F-011",
+        "F-014"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-006"
+      ],
+      "owner_role": "Canonical deployment owner; unresolved"
+    },
+    {
+      "id": "FR-DEP-007",
+      "title": "Reuse authoritative repositories",
+      "status": "proposed",
+      "statement": "This docset MUST integrate with existing INDEX, contract, convention, enforcement, schema, review and evidence owners. It MUST NOT establish a second global registry or review controller.",
+      "source_ids": [
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "finding_ids": [
+        "F-006"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-007"
+      ],
+      "owner_role": "Registry and PhenoSpecs maintainers"
+    },
+    {
+      "id": "FR-DEP-008",
+      "title": "Repository-specific entitlement",
+      "status": "proposed",
+      "statement": "Before enabling a GitHub-dependent gate, the controller MUST record repository ID, owner type, visibility, actual plan/benefit and observed supported settings. Missing access MUST be reported as unknown, not absent.",
+      "source_ids": [
+        "S008",
+        "S009",
+        "S010",
+        "S031"
+      ],
+      "finding_ids": [
+        "F-003"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-008"
+      ],
+      "owner_role": "Existing governance/review integration"
+    },
+    {
+      "id": "FR-DEP-009",
+      "title": "Exact verification-set definition",
+      "status": "proposed",
+      "statement": "The CI trio MUST be resolved to named check identities, commands/providers, accepted conclusions, source identity and freshness rules. An unknown or missing member MUST block production approval.",
+      "source_ids": [
+        "S001",
+        "S007",
+        "S008"
+      ],
+      "finding_ids": [
+        "F-004"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-009"
+      ],
+      "owner_role": "Existing review controller"
+    },
+    {
+      "id": "FR-DEP-010",
+      "title": "Candidate-bound human authorization",
+      "status": "proposed",
+      "statement": "Approval MUST bind exact candidate bytes/artifacts, source revision, environment, target generation, policy version, required-check result set and expiry. It MUST be attributable to an authorized identity outside untrusted candidate control.",
+      "source_ids": [
+        "S007",
+        "S012"
+      ],
+      "finding_ids": [
+        "F-004",
+        "F-008"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-010"
+      ],
+      "owner_role": "Existing approval authority with Authvault integration"
+    },
+    {
+      "id": "FR-DEP-011",
+      "title": "Release lifecycle and serialization",
+      "status": "proposed",
+      "statement": "Apply MUST use an exclusive environment lease, generation comparison, idempotency key and append-only transition receipts. Crash recovery MUST inspect observed state rather than blindly replaying side effects.",
+      "source_ids": [
+        "S007",
+        "S027"
+      ],
+      "finding_ids": [
+        "F-004",
+        "F-011",
+        "F-014"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-011"
+      ],
+      "owner_role": "Canonical deployment actuator"
+    },
+    {
+      "id": "FR-DEP-012",
+      "title": "Separate build and apply trust",
+      "status": "proposed",
+      "statement": "Untrusted tests MUST NOT receive production runtime sockets, approval keys, infrastructure state credentials or unrestricted workstation mounts. Trusted apply MUST consume verified artifacts rather than run candidate-controlled install scripts.",
+      "source_ids": [
+        "S012",
+        "S016"
+      ],
+      "finding_ids": [
+        "F-008"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-012"
+      ],
+      "owner_role": "Runner/execution owner"
+    },
+    {
+      "id": "FR-DEP-013",
+      "title": "Secret references and private evidence",
+      "status": "proposed",
+      "statement": "Deployment specifications and telemetry MUST use secret references, not plaintext secrets. Evidence publication MUST pass redaction/secret review while preserving a private integrity record.",
+      "source_ids": [
+        "S006",
+        "S007",
+        "S012"
+      ],
+      "finding_ids": [
+        "F-008"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-013"
+      ],
+      "owner_role": "Authvault and evidence consumers"
+    },
+    {
+      "id": "FR-DEP-014",
+      "title": "Declared ingress class",
+      "status": "proposed",
+      "statement": "Every route MUST declare private-tailnet, authenticated-public-hostname, anonymous-public or authenticated-machine semantics, including its actual auth owner and origin-bypass policy.",
+      "source_ids": [
+        "S022",
+        "S024"
+      ],
+      "finding_ids": [
+        "F-009"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-014"
+      ],
+      "owner_role": "Ingress adapter owner"
+    },
+    {
+      "id": "FR-DEP-015",
+      "title": "End-to-end streaming conformance",
+      "status": "proposed",
+      "statement": "Any route requiring SSE MUST pass framing, flushing, first-content latency, long-idle behavior, cancellation and semantic-completion tests through the full ingress chain. Quick Tunnels MUST NOT satisfy this capability.",
+      "source_ids": [
+        "S023",
+        "S001"
+      ],
+      "finding_ids": [
+        "F-010",
+        "F-013"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-015"
+      ],
+      "owner_role": "TestingKit and routing/ingress owners"
+    },
+    {
+      "id": "FR-DEP-016",
+      "title": "Workstation lifecycle qualification",
+      "status": "proposed",
+      "statement": "A Podman/Quadlet deployment MUST prove the installed systemd/cgroup prerequisites and survive or explicitly classify Windows/WSL lifecycle transitions within an approved availability policy.",
+      "source_ids": [
+        "S014",
+        "S015"
+      ],
+      "finding_ids": [
+        "F-007"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-016"
+      ],
+      "owner_role": "Host operations owner"
+    },
+    {
+      "id": "FR-DEP-017",
+      "title": "Resource budgets and interactive coexistence",
+      "status": "proposed",
+      "statement": "Each workload MUST declare enforceable CPU, memory, storage and concurrency budgets; heavy jobs MUST be tested under representative foreground load. Unknown capacity MUST queue or reject instead of overcommitting silently.",
+      "source_ids": [
+        "S001"
+      ],
+      "finding_ids": [
+        "F-007",
+        "F-015"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-017"
+      ],
+      "owner_role": "Capacity/scheduler owner"
+    },
+    {
+      "id": "FR-DEP-018",
+      "title": "Desired and observed state",
+      "status": "proposed",
+      "statement": "The UI/API MUST distinguish desired configuration, actual observed state, evidence freshness and reconciliation status. A plan or accepted HTTP request MUST NOT be displayed as a healthy active deployment.",
+      "source_ids": [
+        "S001",
+        "S002",
+        "S004"
+      ],
+      "finding_ids": [
+        "F-006",
+        "F-013"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-018"
+      ],
+      "owner_role": "Deployment UI and observability consumer"
+    },
+    {
+      "id": "FR-DEP-019",
+      "title": "Routing observability semantics",
+      "status": "proposed",
+      "statement": "Routing telemetry MUST distinguish request, attempt, decision event, fallback, transport completion and semantic completion, carrying correlation IDs and config generation. Retries MUST obey explicit budgets and replay-safety rules.",
+      "source_ids": [
+        "S001"
+      ],
+      "finding_ids": [
+        "F-013"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-019"
+      ],
+      "owner_role": "Existing OmniRoute/observability owner"
+    },
+    {
+      "id": "FR-DEP-020",
+      "title": "Data-aware rollback and restore",
+      "status": "proposed",
+      "statement": "Before a stateful release, the deployment MUST have an application-consistent backup, a tested restoration method and a migration compatibility decision. Image rollback MUST NOT stand in for data rollback.",
+      "source_ids": [
+        "S001",
+        "S004",
+        "S028"
+      ],
+      "finding_ids": [
+        "F-014"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-020"
+      ],
+      "owner_role": "Application/data owner with deployment actuator"
+    },
+    {
+      "id": "FR-DEP-021",
+      "title": "Capability-based portability",
+      "status": "proposed",
+      "statement": "A migration plan MUST classify image/binary format, architecture, devices, network identity, state, secret delivery and availability/cost limits. It MUST list adapter-specific differences and unsupported behaviors.",
+      "source_ids": [
+        "S025",
+        "S026",
+        "S028",
+        "S029",
+        "S030"
+      ],
+      "finding_ids": [
+        "F-011",
+        "F-012"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-021"
+      ],
+      "owner_role": "Application contract and target adapters"
+    },
+    {
+      "id": "FR-DEP-022",
+      "title": "IaC state ownership",
+      "status": "proposed",
+      "statement": "An IaC change MUST identify backend, locking, recovery, secrets, imported-resource ownership and the approved plan. Pulumi/OpenTofu/PaaS/Quadlet MUST NOT race to own the same lifecycle.",
+      "source_ids": [
+        "S025",
+        "S026",
+        "S027",
+        "S006"
+      ],
+      "finding_ids": [
+        "F-011",
+        "F-014"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-022"
+      ],
+      "owner_role": "Infrastructure provisioning owner"
+    },
+    {
+      "id": "FR-DEP-023",
+      "title": "Controlled updates",
+      "status": "proposed",
+      "statement": "Dependency PR creation, vulnerability alerting and runtime promotion MUST be separate roles. A mutable image tag, unattended updater or independent Git hook MUST NOT bypass candidate verification and approval.",
+      "source_ids": [
+        "S007",
+        "S004"
+      ],
+      "finding_ids": [
+        "F-014"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-023"
+      ],
+      "owner_role": "Dependency/review owner and deployment actuator"
+    },
+    {
+      "id": "FR-DEP-024",
+      "title": "Evidence-complete handoff",
+      "status": "proposed",
+      "statement": "Each integration work item MUST name canonical destination, inputs, non-goals, tests, rollback and completion evidence. Completion MUST report implementation and operational status separately from document completeness.",
+      "source_ids": [
+        "S001",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "finding_ids": [
+        "F-001",
+        "F-006"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-024"
+      ],
+      "owner_role": "Existing program/audit owner"
+    },
+    {
+      "id": "FR-DEP-025",
+      "title": "Local-first placement and workload profiles",
+      "status": "proposed",
+      "statement": "The control contract MUST distinguish workload type, environment and target; the dev backend defaults to the requested local desktop. A CLI/package/desktop repository MUST NOT be forced into a web-service deploy template.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ],
+      "finding_ids": [
+        "F-016",
+        "F-026"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-025"
+      ],
+      "owner_role": "Application/platform owner"
+    },
+    {
+      "id": "FR-DEP-026",
+      "title": "Exact nightly scheduling semantics",
+      "status": "proposed",
+      "statement": "Nightly eligibility MUST require changed candidate identity and a scheduled tick OR more than one new commit OR authorized force. Counting mode, successful watermark, offline catch-up and unknown ancestry MUST be explicit.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ],
+      "finding_ids": [
+        "F-020"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-026"
+      ],
+      "owner_role": "Existing scheduler owner"
+    },
+    {
+      "id": "FR-DEP-027",
+      "title": "Workflow semantic and caller-contract validation",
+      "status": "proposed",
+      "statement": "Callable GitHub workflows MUST use supported locations and validated workflow_call contracts, explicit privilege/secret flow and approved version pins. YAML parsing alone MUST NOT mark them executable.",
+      "source_ids": [
+        "S033",
+        "S036"
+      ],
+      "finding_ids": [
+        "F-017",
+        "F-022",
+        "F-025"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-027"
+      ],
+      "owner_role": "Shared workflow owner"
+    },
+    {
+      "id": "FR-DEP-028",
+      "title": "Source-mode and deployed-artifact binding",
+      "status": "proposed",
+      "statement": "The selected target adapter MUST distinguish Git-backed and image-backed deploy operations. The artifact tested and observed in probation MUST match the approved digest/platform/configuration.",
+      "source_ids": [
+        "S033",
+        "S037",
+        "S038"
+      ],
+      "finding_ids": [
+        "F-018",
+        "F-027"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-028"
+      ],
+      "owner_role": "Deployment adapter owner"
+    },
+    {
+      "id": "FR-DEP-029",
+      "title": "Machine-derived CI result contract",
+      "status": "proposed",
+      "statement": "The production check set MUST retain exact names, producer/workflow/run identity and required dependency results. A skipped or absent required job MUST fail unless an approved, explicit applicability rule proves not-applicable.",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S034"
+      ],
+      "finding_ids": [
+        "F-004",
+        "F-025"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-029"
+      ],
+      "owner_role": "Verification owner"
+    },
+    {
+      "id": "FR-DEP-030",
+      "title": "Verified recovery operations",
+      "status": "proposed",
+      "statement": "A failed health or deployment operation MUST NOT be reported as recovered until a scoped rollback or forward recovery reaches a verified healthy generation. Unknown health metadata MUST NOT succeed.",
+      "source_ids": [
+        "S033",
+        "S039"
+      ],
+      "finding_ids": [
+        "F-019",
+        "F-021",
+        "F-023"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-030"
+      ],
+      "owner_role": "Release controller owner"
+    },
+    {
+      "id": "FR-DEP-031",
+      "title": "Managed-service capabilities and test emulators",
+      "status": "proposed",
+      "statement": "A binding MUST state whether it targets a durable service, a managed-provider API or a test emulator. The used API actions, extensions, errors, authentication and persistence semantics MUST be qualified separately.",
+      "source_ids": [
+        "S032",
+        "S043",
+        "S044",
+        "S045",
+        "S046",
+        "S047"
+      ],
+      "finding_ids": [
+        "F-026"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-031"
+      ],
+      "owner_role": "Service binding owner"
+    },
+    {
+      "id": "FR-DEP-032",
+      "title": "Transcript provenance and compaction-aware intake",
+      "status": "proposed",
+      "statement": "Stored exports MUST be indexed without double-counting readable/JSON copies, with parent/message/source ranges preserved. Compaction summaries and task prompts MUST NOT become user approvals or run evidence.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ],
+      "finding_ids": [
+        "F-001",
+        "F-025"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-032"
+      ],
+      "owner_role": "Existing evidence owner"
+    },
+    {
+      "id": "FR-DEP-033",
+      "title": "Private ingress and application authorization",
+      "status": "proposed",
+      "statement": "Tailnet-only access MUST be enforced through route/listener/grant policy and negative reachability tests, not DNS naming or Funnel. Applications MUST enforce sensitive action authorization independently of coarse network membership.",
+      "source_ids": [
+        "S032",
+        "S041",
+        "S049"
+      ],
+      "finding_ids": [
+        "F-010",
+        "F-024"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-033"
+      ],
+      "owner_role": "Ingress/auth owner"
+    },
+    {
+      "id": "FR-DEP-034",
+      "title": "Declared versus live readiness states",
+      "status": "proposed",
+      "statement": "The product and audit records MUST distinguish proposed, local-file, committed, remotely-resolved, executed, observed and operationally accepted states. Missing remote artifacts or unknown settings MUST remain explicit.",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S035",
+        "S050"
+      ],
+      "finding_ids": [
+        "F-001",
+        "F-017",
+        "F-025"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-034"
+      ],
+      "owner_role": "Audit/product owner"
+    },
+    {
+      "id": "FR-DEP-035",
+      "title": "Single BytePort control plane",
+      "status": "proposed",
+      "statement": "BytePort MUST remain the project/environment/deployment control plane. Local compute support MUST extend the existing capability-based provider interface rather than create a separate GUI/controller.",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "finding_ids": [
+        "F-028"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-035"
+      ],
+      "owner_role": "BytePort/control-plane owner"
+    },
+    {
+      "id": "FR-DEP-036",
+      "title": "Qualified local-fleet provider",
+      "status": "proposed",
+      "statement": "A local-fleet provider MUST expose node and workload capabilities explicitly, including supported execution substrates, stateful services, devices, networking and lifecycle operations.",
+      "source_ids": [
+        "S052",
+        "S058",
+        "S076"
+      ],
+      "finding_ids": [
+        "F-028",
+        "F-032"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-036"
+      ],
+      "owner_role": "Local-fleet adapter owner"
+    },
+    {
+      "id": "FR-DEP-037",
+      "title": "Node daemon identity and admission",
+      "status": "proposed",
+      "statement": "Each enrolled node daemon MUST register a stable node identity, software version, runtime adapters, resource inventory, trust/attestation status and current admission state before receiving workloads.",
+      "source_ids": [
+        "S052",
+        "S076"
+      ],
+      "finding_ids": [
+        "F-030"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-037"
+      ],
+      "owner_role": "Node-agent/runtime owner"
+    },
+    {
+      "id": "FR-DEP-038",
+      "title": "Resource reservation and host modes",
+      "status": "proposed",
+      "statement": "Each node MUST support hard foreground reserves and dynamic host modes for human activity, with CPU, memory, GPU/VRAM, disk IO, network, battery and thermal policy represented as enforceable admission inputs where supported.",
+      "source_ids": [
+        "S052",
+        "S057",
+        "S077"
+      ],
+      "finding_ids": [
+        "F-030"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-038"
+      ],
+      "owner_role": "Placement/QoS owner"
+    },
+    {
+      "id": "FR-DEP-039",
+      "title": "Workload priority and preemption",
+      "status": "proposed",
+      "statement": "Workloads MUST declare priority, preemptibility, eviction grace and statefulness. Interactive human use MUST be able to shrink, pause, drain or reject lower-priority background workloads without corrupting state.",
+      "source_ids": [
+        "S052",
+        "S077"
+      ],
+      "finding_ids": [
+        "F-030",
+        "F-032"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-039"
+      ],
+      "owner_role": "Placement/QoS owner"
+    },
+    {
+      "id": "FR-DEP-040",
+      "title": "Immutable pull-based artifact delivery",
+      "status": "proposed",
+      "statement": "CI MUST publish immutable, content-addressed release artifacts with test/provenance receipts. Local nodes MUST pull the authorized artifact and report the observed identity instead of accepting an unpinned mutable deployment request.",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "finding_ids": [
+        "F-031"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-040"
+      ],
+      "owner_role": "Release/controller owner"
+    },
+    {
+      "id": "FR-DEP-041",
+      "title": "Daemon safe update and rollback",
+      "status": "proposed",
+      "statement": "Node-daemon updates MUST be staged, versioned, health-checked and rollback-capable without losing the last-known desired state or orphaning managed workloads.",
+      "source_ids": [
+        "S052"
+      ],
+      "finding_ids": [
+        "F-031"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-041"
+      ],
+      "owner_role": "Node-agent/runtime owner"
+    },
+    {
+      "id": "FR-DEP-042",
+      "title": "Private node control boundary",
+      "status": "proposed",
+      "statement": "Personal compute nodes MUST NOT require public inbound management ports. Control SHOULD originate through authenticated outbound/private connectivity with least-privilege credentials and revocable node enrollment.",
+      "source_ids": [
+        "S052",
+        "S055",
+        "S056"
+      ],
+      "finding_ids": [
+        "F-031"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-042"
+      ],
+      "owner_role": "Networking/identity owner"
+    },
+    {
+      "id": "FR-DEP-043",
+      "title": "Stateful-service lifecycle contract",
+      "status": "proposed",
+      "statement": "Database and volume workloads MUST declare durability, backup, restore, migration, upgrade and RPO/RTO capabilities separately from stateless container execution.",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "finding_ids": [
+        "F-032"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-043"
+      ],
+      "owner_role": "Stateful-services owner"
+    },
+    {
+      "id": "FR-DEP-044",
+      "title": "Capability-qualified portability",
+      "status": "proposed",
+      "statement": "A provider plan MUST report exact, approximate and unsupported semantics. The controller MUST block or require explicit approval when a target cannot preserve a required capability.",
+      "source_ids": [
+        "S058",
+        "S076"
+      ],
+      "finding_ids": [
+        "F-032"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-044"
+      ],
+      "owner_role": "Cloud-provider abstraction owner"
+    },
+    {
+      "id": "FR-DEP-045",
+      "title": "Human-agent-automation API parity",
+      "status": "proposed",
+      "statement": "GUI, CLI, SDK and agent/automation interfaces MUST consume the same typed control API, authorization model, idempotency rules and evidence receipts; no surface may own hidden deployment state.",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "finding_ids": [
+        "F-033"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-045"
+      ],
+      "owner_role": "BytePort API/DX owner"
+    },
+    {
+      "id": "FR-DEP-046",
+      "title": "Automation-safe operations",
+      "status": "proposed",
+      "statement": "Mutating operations MUST support idempotency keys, dry-run/plan output where meaningful, machine-readable errors, events and receipts so agents and automations can act without scraping GUI text.",
+      "source_ids": [
+        "S052"
+      ],
+      "finding_ids": [
+        "F-033"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-046"
+      ],
+      "owner_role": "BytePort API/DX owner"
+    },
+    {
+      "id": "FR-DEP-047",
+      "title": "Single Assessment Dossier with staged evaluation",
+      "status": "proposed",
+      "statement": "Repository/product assessment MUST use one canonical Assessment Dossier. Phase A inventories subject, scope, applicability, evidence and unknowns; Phase B executes measurements and produces verdicts/scores. Unexecuted score fields remain null/unknown.",
+      "source_ids": [
+        "S053",
+        "S054"
+      ],
+      "finding_ids": [
+        "F-034"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-047"
+      ],
+      "owner_role": "Assessment/audit owner"
+    },
+    {
+      "id": "FR-DEP-048",
+      "title": "Scorecard profile convergence",
+      "status": "proposed",
+      "statement": "Existing scorecard/audit rubrics MUST be versioned criterion/profile inputs and measurement bindings to the Assessment Dossier, not independent canonical score stores.",
+      "source_ids": [
+        "S053",
+        "S054"
+      ],
+      "finding_ids": [
+        "F-035"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-048"
+      ],
+      "owner_role": "Assessment/audit owner"
+    },
+    {
+      "id": "FR-DEP-049",
+      "title": "Emergent corpus branch salvage",
+      "status": "proposed",
+      "statement": "The exact ResearchLedger PR-81 head and published payload hashes MUST be preserved and reconciled against current main before any new corpus wave or destructive branch cleanup.",
+      "source_ids": [
+        "S061",
+        "S062",
+        "S063"
+      ],
+      "finding_ids": [
+        "F-036"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-049"
+      ],
+      "owner_role": "ResearchLedger owner"
+    },
+    {
+      "id": "FR-DEP-050",
+      "title": "Emergent corpus integration and continuation gate",
+      "status": "proposed",
+      "statement": "Corpus continuation MUST begin from a landed or explicitly superseded source-authority state, rerun the 70-test/package checks, preserve open limitations, and then schedule remaining transcripts, recursive-source closure, audience review, lineage work and live Benchora experiment independently.",
+      "source_ids": [
+        "S061",
+        "S062",
+        "S064"
+      ],
+      "finding_ids": [
+        "F-036",
+        "F-037"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-050"
+      ],
+      "owner_role": "ResearchLedger/ResearchOps owner"
+    },
+    {
+      "id": "FR-DEP-051",
+      "title": "Live review-provider capability registry",
+      "status": "proposed",
+      "statement": "The review controller MUST refresh each provider\u2019s availability, trigger mode, quota/reset, remaining free/credit budget, supported scopes, max diff limits and resolve/review controls before dispatch.",
+      "source_ids": [
+        "S067",
+        "S068",
+        "S071",
+        "S072",
+        "S074"
+      ],
+      "finding_ids": [
+        "F-038",
+        "F-043",
+        "F-044",
+        "F-045"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-051"
+      ],
+      "owner_role": "Existing review/GitOps controller"
+    },
+    {
+      "id": "FR-DEP-052",
+      "title": "Risk-tiered selective semantic review",
+      "status": "proposed",
+      "statement": "PRs MUST be assigned a risk tier and semantic-review budget. Low-risk changes use at most one semantic reviewer by default; higher-risk/release/security changes may use independent reviewers or specialists, while mandatory deterministic gates always run.",
+      "source_ids": [
+        "S052",
+        "S065"
+      ],
+      "finding_ids": [
+        "F-039",
+        "F-042",
+        "F-046"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-052"
+      ],
+      "owner_role": "Existing review/GitOps controller"
+    },
+    {
+      "id": "FR-DEP-053",
+      "title": "Review dispatch coalescing and quota reservation",
+      "status": "proposed",
+      "statement": "The controller MUST avoid re-review on every intermediate commit where provider controls allow it, coalesce repair batches, and reserve scarce quota/credits for exact-head final review, escalation and failures.",
+      "source_ids": [
+        "S068",
+        "S069",
+        "S073",
+        "S075"
+      ],
+      "finding_ids": [
+        "F-038",
+        "F-039"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-053"
+      ],
+      "owner_role": "Existing review/GitOps controller"
+    },
+    {
+      "id": "FR-DEP-054",
+      "title": "Historical review reconciliation",
+      "status": "proposed",
+      "statement": "The controller MUST inventory unresolved and material historical review findings. Open PR defects are repaired on the existing branch; merged/closed PR findings are revalidated on current default branch and remediated through a new PR only when still valid.",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S066",
+        "S070"
+      ],
+      "finding_ids": [
+        "F-040"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-054"
+      ],
+      "owner_role": "Review remediation owner"
+    },
+    {
+      "id": "FR-DEP-055",
+      "title": "Normalized finding and disposition ledger",
+      "status": "proposed",
+      "statement": "All semantic-review findings MUST normalize provider, source revision, diff anchor, semantic signature, severity, confidence, evidence, disposition, supersession and remediation linkage. Duplicate/stale/false-positive/accepted-risk states MUST NOT count as unresolved valid defects.",
+      "source_ids": [
+        "S065",
+        "S070",
+        "S078"
+      ],
+      "finding_ids": [
+        "F-041"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-055"
+      ],
+      "owner_role": "Review evidence owner"
+    },
+    {
+      "id": "FR-DEP-056",
+      "title": "Zero-new-spend review enforcement",
+      "status": "proposed",
+      "statement": "Review dispatch MUST enforce cash_spend_allowed=false by default. Paid overage, credit auto-refill and new subscriptions are blocked unless the user explicitly changes the budget authority. Existing shared subscription usage remains metered as scarce capacity.",
+      "source_ids": [
+        "S052",
+        "S071",
+        "S074",
+        "S079"
+      ],
+      "finding_ids": [
+        "F-038",
+        "F-045"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-056"
+      ],
+      "owner_role": "Review budget owner"
+    },
+    {
+      "id": "FR-DEP-057",
+      "title": "Deterministic gates independent of AI quotas",
+      "status": "proposed",
+      "statement": "Required tests, lint, security, secret scanning, dependency policy and release verification MUST NOT be skipped because a semantic reviewer is rate-limited or unavailable.",
+      "source_ids": [
+        "S052",
+        "S065"
+      ],
+      "finding_ids": [
+        "F-042"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-057"
+      ],
+      "owner_role": "CI/governance owner"
+    },
+    {
+      "id": "FR-DEP-058",
+      "title": "Reviewer marginal-yield measurement",
+      "status": "proposed",
+      "statement": "The review controller SHOULD record unique valid finding yield, duplicate rate, false-positive rate, remediation rate, latency and quota/cost efficiency by provider and risk class; a new default semantic reviewer requires evidence of marginal value or availability.",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S067"
+      ],
+      "finding_ids": [
+        "F-043",
+        "F-046"
+      ],
+      "acceptance_test_ids": [
+        "AT-DEP-058"
+      ],
+      "owner_role": "Review analytics owner"
+    }
+  ],
+  "acceptance_tests": [
+    {
+      "id": "AT-DEP-001",
+      "title": "Reject ungrounded closure",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-001"
+      ],
+      "procedure": [
+        "Submit a report with a claimed passing test but no receipt.",
+        "Submit a declaration-only ownership assertion as verified implementation."
+      ],
+      "expected": "Both are rejected as closure evidence, while their original records remain preserved.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-002",
+      "title": "Disambiguate runtime discovery",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-002"
+      ],
+      "procedure": [
+        "Collect WSL, wslc and Podman versions plus actual executable paths.",
+        "Present a WSLC-only node to a Podman-socket adapter."
+      ],
+      "expected": "The adapter reports unsupported or unqualified; it never fabricates a Podman endpoint.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-003",
+      "title": "Evaluate an engine exception",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-003"
+      ],
+      "procedure": [
+        "Compare an unsupported PaaS feature, an optional UI convenience and a measured critical-workload benefit.",
+        "Inspect the decision record and scope of approval."
+      ],
+      "expected": "Only documented, authorized exceptions can change placement; optional convenience is not silently treated as a hard requirement.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-004",
+      "title": "Fail closed on an unknown capability",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-004"
+      ],
+      "procedure": [
+        "Require Swarm semantics or KVM on a node with unknown support.",
+        "Require persistent storage on an ephemeral-only adapter."
+      ],
+      "expected": "Placement is blocked with a machine-readable reason before any mutation.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-005",
+      "title": "Reproduce a runtime comparison",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-005"
+      ],
+      "procedure": [
+        "Run the benchmark protocol in docs/06-runtime-selection.md.",
+        "Repeat paired runs and compare cold/warm and idle/contended results."
+      ],
+      "expected": "A report includes raw data and uncertainty; it cannot claim a global runtime winner from one synthetic benchmark.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-006",
+      "title": "Detect competing writers",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-006"
+      ],
+      "procedure": [
+        "Register a resource under both Quadlet and an independently auto-deploying PaaS.",
+        "Attempt concurrent apply with two controllers."
+      ],
+      "expected": "Registration or apply is blocked; the conflict is explicit and no double deployment is accepted.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-007",
+      "title": "Check the integration ownership map",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-007"
+      ],
+      "procedure": [
+        "Compare planned imports with current role ADRs, module locations and consumers.",
+        "Check tehgent/thegent distinctions and migration receipts."
+      ],
+      "expected": "Each authoritative artifact has one destination; provisional aliases remain visible until adjudicated.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-008",
+      "title": "Validate public/private plan cases",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-008"
+      ],
+      "procedure": [
+        "Exercise public-Free, personal-private-Free, personal-private-Pro and organization-private cases using inspected settings or isolated fixtures.",
+        "Simulate inaccessible settings."
+      ],
+      "expected": "Only supported gates are selected; access errors cannot produce a permissive fallback.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-009",
+      "title": "Reject unknown or spoofed checks",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-009"
+      ],
+      "procedure": [
+        "Omit one trio member.",
+        "Submit a similarly named check from an unauthorized producer or stale revision."
+      ],
+      "expected": "No release approval is issued; unknown trio identity is a first-class blocker.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-010",
+      "title": "Invalidate changed or forged approval",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-010"
+      ],
+      "procedure": [
+        "Approve candidate A, then change image digest, config, target or policy.",
+        "Replay the approval or substitute the actor identity."
+      ],
+      "expected": "Every changed, expired, reused or forged authorization is denied before apply.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-011",
+      "title": "Recover from apply crashes",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-011"
+      ],
+      "procedure": [
+        "Crash before mutation, after mutation but before receipt, and during health probation.",
+        "Retry with the same and conflicting candidate."
+      ],
+      "expected": "At most one accepted active generation exists; retries converge or stop for review without duplicate side effects.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-012",
+      "title": "Probe runner isolation",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-012"
+      ],
+      "procedure": [
+        "From an untrusted job attempt to access the production socket, secret store, state backend and host home directories.",
+        "Inspect network and mount boundaries."
+      ],
+      "expected": "Access is denied, sensitive material is absent, and cleanup is verified independently of runner deregistration.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-013",
+      "title": "Check secret handling",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-013"
+      ],
+      "procedure": [
+        "Inject a canary secret into a failed deployment path and a provider error.",
+        "Export the public evidence view."
+      ],
+      "expected": "The secret is absent from public artifacts, logs and manifest fields; private provenance remains linked.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-014",
+      "title": "Verify reachability and authorization",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-014"
+      ],
+      "procedure": [
+        "Test an allowed identity, denied identity, anonymous visitor and direct-origin access for each route class.",
+        "Attempt to change a private Serve port to Funnel."
+      ],
+      "expected": "Observed behavior matches the declared class; public exposure changes require separate authorization.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-015",
+      "title": "Test actual SSE path",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-015"
+      ],
+      "procedure": [
+        "Send chunked SSE with heartbeats, content, tool events, an empty terminal result and an upstream error.",
+        "Cancel the client and observe upstream work."
+      ],
+      "expected": "Events remain correctly ordered/framed; errors are classified, empty semantic results are not ordinary success, and cancellation is propagated.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-016",
+      "title": "Test workstation lifecycle",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-016"
+      ],
+      "procedure": [
+        "Exercise Windows reboot, user logout, sleep/resume, WSL termination and loss/restoration of network.",
+        "Check service ownership, persistent data and restart receipts."
+      ],
+      "expected": "Recovery behavior and outages are recorded; a user-service linger setting is not accepted as a keep-alive guarantee.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-017",
+      "title": "Measure contended-host behavior",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-017"
+      ],
+      "procedure": [
+        "Run a service plus a representative build/test job and operator foreground workload.",
+        "Exceed the configured memory, disk and concurrency limits."
+      ],
+      "expected": "Limits are enforced; queue/rejection and foreground degradation are measured against operator-approved tolerances.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-018",
+      "title": "Detect false green state",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-018"
+      ],
+      "procedure": [
+        "Return HTTP 200 with empty application output.",
+        "Make the desired generation differ from the observed image or config."
+      ],
+      "expected": "The interface reports degraded, unverified or drifted state rather than a green deployment.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-019",
+      "title": "Correlate fallback evidence",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-019"
+      ],
+      "procedure": [
+        "Reproduce an empty response, provider error, cancellation and successful bounded failover.",
+        "Inspect the exact code definition of the decisions counter."
+      ],
+      "expected": "Each event joins to the correct request/attempt; counts have defined denominators and no retry resumes after irreversible user-visible/tool side effects without policy.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-020",
+      "title": "Restore after incompatible migration",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-020"
+      ],
+      "procedure": [
+        "Restore a disposable copy of representative data.",
+        "Attempt rollback after a backward-incompatible migration."
+      ],
+      "expected": "Restoration is measured and verified; unsafe rollback stops for explicit recovery rather than corrupting data.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-021",
+      "title": "Reject a false portable placement",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-021"
+      ],
+      "procedure": [
+        "Attempt to move a persistent native process with device access to an incompatible WebAssembly or free ephemeral target.",
+        "Inspect data export/import and service identity."
+      ],
+      "expected": "The plan reports precise blockers and transformation work; a shared manifest does not imply semantic equivalence.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-022",
+      "title": "Test state-writer exclusion",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-022"
+      ],
+      "procedure": [
+        "Start two state-changing operations against the same resource scope.",
+        "Simulate a failed apply and recover state."
+      ],
+      "expected": "Only the authorized writer proceeds; recovery does not silently replace or orphan resources.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-023",
+      "title": "Stop update bypass",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-023"
+      ],
+      "procedure": [
+        "Change an upstream mutable tag after approval.",
+        "Enable a second automatic deploy hook for the same app."
+      ],
+      "expected": "Digest mismatch or ownership conflict prevents promotion; alerting continues without deployment authority.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-024",
+      "title": "Audit a handoff receipt",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-024"
+      ],
+      "procedure": [
+        "Compare the handoff against changed files, pinned revisions, test output and remaining blockers.",
+        "Present a documentation-only change as deployed functionality."
+      ],
+      "expected": "The documentation-only claim is rejected; partial delivery is retained with explicit next evidence requirements.",
+      "evidence_required": [
+        "Exact source/runtime/config revisions",
+        "Command or API request and complete relevant output",
+        "Observed outcome and timestamp",
+        "Reviewer or machine-verifier identity"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-025",
+      "title": "Local-first placement and workload profiles",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-025"
+      ],
+      "procedure": [
+        "Exercise a service, a CLI package, a desktop app and a documentation site using distinct delivery profiles.",
+        "Resolve local dev without provisioning a managed service."
+      ],
+      "expected": "No implicit cloud resource; each profile reaches its own artifact/operational acceptance boundary.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Versioned delivery profile for each workload class; resolved local target identity.",
+        "Artifact or observation receipts and a dry-run resource delta showing no implicit managed dev allocation."
+      ]
+    },
+    {
+      "id": "AT-DEP-026",
+      "title": "Exact nightly scheduling semantics",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-026"
+      ],
+      "procedure": [
+        "Test 0, 1 and 2 new commits on push and on a scheduled tick.",
+        "Inject missing ancestry, duplicate event and concurrent target requests."
+      ],
+      "expected": "One new commit waits for the scheduled path; two qualify on push; unknown ancestry blocks; duplicates cannot race.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Exact input event, due-tick record, observed healthy watermark and ancestry/counting rule.",
+        "One-commit, two-commit, same-candidate, offline, divergent-history and force/lease outcomes with immutable candidate identity."
+      ]
+    },
+    {
+      "id": "AT-DEP-027",
+      "title": "Workflow semantic and caller-contract validation",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-027"
+      ],
+      "procedure": [
+        "Validate location, inputs, secrets and permission contracts with semantic checks.",
+        "Resolve the pinned workflow and run a disposable credential-free caller before qualifying a trusted deploy path."
+      ],
+      "expected": "Nested paths, missing contracts and unexpected secret flow fail before apply.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Supported immutable workflow path and complete caller/interface declarations.",
+        "Actual disposable GitHub platform resolution/run result; redacted secret-scope and credential-boundary evidence."
+      ]
+    },
+    {
+      "id": "AT-DEP-028",
+      "title": "Source-mode and deployed-artifact binding",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-028"
+      ],
+      "procedure": [
+        "Deploy a fixture Git-backed service and image-backed service through distinct adapter branches.",
+        "Move a mutable image tag after approval and return malformed or paginated provider data."
+      ],
+      "expected": "No changed artifact is approved by an unchanged Git SHA; unknown/mismatched identity blocks promotion.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Immutable source/build/test provenance and published artifact digest.",
+        "Provider source-mode request/response fixture and independently observed deployed artifact/revision."
+      ]
+    },
+    {
+      "id": "AT-DEP-029",
+      "title": "Machine-derived CI result contract",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-029"
+      ],
+      "procedure": [
+        "Compare ci / lint and ci/lint and reject the mismatch.",
+        "Fail detect-changes, trunk-check or dependency-review; simulate an absent required job and duplicate display names."
+      ],
+      "expected": "No green aggregate hides a required dependency failure or ambiguous producer.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Observed check-run/context names, trusted app/workflow identities and exact candidate binding.",
+        "Complete dependency result matrix including approved not-applicable reasons; spoofed/stale/skipped-required rejection receipts."
+      ]
+    },
+    {
+      "id": "AT-DEP-030",
+      "title": "Verified recovery operations",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-030"
+      ],
+      "procedure": [
+        "Omit health URL; fail health; remove the previous image; test incompatible migration.",
+        "Attempt a rollback while provider autodeploy could restore the bad revision."
+      ],
+      "expected": "Unknown health blocks; recovery is observed; incompatible or missing recovery evidence leads to recovery-required.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Failure injection, previous healthy candidate and recovery authorization/action receipt.",
+        "Independent restored application/data integrity observations and missing-URL/wrong-candidate fail-closed receipts."
+      ]
+    },
+    {
+      "id": "AT-DEP-031",
+      "title": "Managed-service capabilities and test emulators",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-031"
+      ],
+      "procedure": [
+        "Run the application action suite on its emulator and actual durable-service fixture.",
+        "Test unsupported API action, auth mismatch, database extension and HTTP-vs-wire-protocol mismatch."
+      ],
+      "expected": "Simulator success cannot be relabeled production parity; unsupported requirements block the target.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Versioned required service operation matrix and redacted request/response fixtures.",
+        "Durability/restore and migration evidence; explicit emulator-only and unsupported-capability declarations."
+      ]
+    },
+    {
+      "id": "AT-DEP-032",
+      "title": "Transcript provenance and compaction-aware intake",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-032"
+      ],
+      "procedure": [
+        "Decode every retained conversation; compare count and source hash; label root vs delegated prompts.",
+        "Re-ingest the same export and verify idempotent evidence references; inject truncated JSON."
+      ],
+      "expected": "No duplicated message count, silent parse loss or compaction-to-approval promotion.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Original and derivative hashes, message/source ranges and parent links.",
+        "Duplicate/repeated ingestion outcomes and preserved compaction/source-class markers without secret or reasoning dumps."
+      ]
+    },
+    {
+      "id": "AT-DEP-033",
+      "title": "Private ingress and application authorization",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-033"
+      ],
+      "procedure": [
+        "Test off-tailnet, unauthorized-tailnet, permitted-client and permitted-CI identities.",
+        "Check DNS-only, proxied public, alternate provider hostname and direct-origin paths."
+      ],
+      "expected": "Only intended routes work; no public/origin bypass; membership alone cannot mutate production.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Private/public route classification, DNS/TLS identity and exact allowed principal policy.",
+        "Outside-tailnet deny, direct-origin bypass and insufficient-application-role negative-test receipts."
+      ]
+    },
+    {
+      "id": "AT-DEP-034",
+      "title": "Declared versus live readiness states",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-034"
+      ],
+      "procedure": [
+        "Present a valid local YAML that references a nonexistent remote path.",
+        "Present untracked manifests, unapplied protection JSON and a run that only parsed syntax."
+      ],
+      "expected": "None is reported deployed, enforced, production-ready or recovered without the matching evidence.",
+      "execution_evidence": [],
+      "evidence_required": [
+        "Separately linked write/readback/commit/platform/execution/observation/recovery/acceptance receipts where applicable.",
+        "Reviewer disposition proving a task completion flag or generated report alone cannot advance readiness."
+      ]
+    },
+    {
+      "id": "AT-DEP-035",
+      "title": "Single BytePort control plane",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-035"
+      ],
+      "procedure": [
+        "Exercise the single byteport control plane contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-036",
+      "title": "Qualified local-fleet provider",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-036"
+      ],
+      "procedure": [
+        "Exercise the qualified local-fleet provider contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-037",
+      "title": "Node daemon identity and admission",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-037"
+      ],
+      "procedure": [
+        "Exercise the node daemon identity and admission contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-038",
+      "title": "Resource reservation and host modes",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-038"
+      ],
+      "procedure": [
+        "Exercise the resource reservation and host modes contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-039",
+      "title": "Workload priority and preemption",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-039"
+      ],
+      "procedure": [
+        "Exercise the workload priority and preemption contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-040",
+      "title": "Immutable pull-based artifact delivery",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-040"
+      ],
+      "procedure": [
+        "Exercise the immutable pull-based artifact delivery contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-041",
+      "title": "Daemon safe update and rollback",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-041"
+      ],
+      "procedure": [
+        "Exercise the daemon safe update and rollback contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-042",
+      "title": "Private node control boundary",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-042"
+      ],
+      "procedure": [
+        "Exercise the private node control boundary contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-043",
+      "title": "Stateful-service lifecycle contract",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-043"
+      ],
+      "procedure": [
+        "Exercise the stateful-service lifecycle contract contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-044",
+      "title": "Capability-qualified portability",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-044"
+      ],
+      "procedure": [
+        "Exercise the capability-qualified portability contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-045",
+      "title": "Human-agent-automation API parity",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-045"
+      ],
+      "procedure": [
+        "Exercise the human-agent-automation api parity contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-046",
+      "title": "Automation-safe operations",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-046"
+      ],
+      "procedure": [
+        "Exercise the automation-safe operations contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-047",
+      "title": "Single Assessment Dossier with staged evaluation",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-047"
+      ],
+      "procedure": [
+        "Exercise the single assessment dossier with staged evaluation contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-048",
+      "title": "Scorecard profile convergence",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-048"
+      ],
+      "procedure": [
+        "Exercise the scorecard profile convergence contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-049",
+      "title": "Emergent corpus branch salvage",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-049"
+      ],
+      "procedure": [
+        "Exercise the emergent corpus branch salvage contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-050",
+      "title": "Emergent corpus integration and continuation gate",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-050"
+      ],
+      "procedure": [
+        "Exercise the emergent corpus integration and continuation gate contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-051",
+      "title": "Live review-provider capability registry",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-051"
+      ],
+      "procedure": [
+        "Exercise the live review-provider capability registry contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-052",
+      "title": "Risk-tiered selective semantic review",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-052"
+      ],
+      "procedure": [
+        "Exercise the risk-tiered selective semantic review contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-053",
+      "title": "Review dispatch coalescing and quota reservation",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-053"
+      ],
+      "procedure": [
+        "Exercise the review dispatch coalescing and quota reservation contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-054",
+      "title": "Historical review reconciliation",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-054"
+      ],
+      "procedure": [
+        "Exercise the historical review reconciliation contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-055",
+      "title": "Normalized finding and disposition ledger",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-055"
+      ],
+      "procedure": [
+        "Exercise the normalized finding and disposition ledger contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-056",
+      "title": "Zero-new-spend review enforcement",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-056"
+      ],
+      "procedure": [
+        "Exercise the zero-new-spend review enforcement contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-057",
+      "title": "Deterministic gates independent of AI quotas",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-057"
+      ],
+      "procedure": [
+        "Exercise the deterministic gates independent of ai quotas contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    },
+    {
+      "id": "AT-DEP-058",
+      "title": "Reviewer marginal-yield measurement",
+      "status": "not_run",
+      "requirement_ids": [
+        "FR-DEP-058"
+      ],
+      "procedure": [
+        "Exercise the reviewer marginal-yield measurement contract on an authorized disposable fixture or read-only live inventory.",
+        "Introduce one contrary/negative case that would falsely pass under a weaker implementation.",
+        "Record exact inputs, revisions, observed outputs and verifier identity."
+      ],
+      "expected": "The contract preserves the stated boundary, rejects or exposes the negative case, and produces machine-readable evidence without claiming broader readiness.",
+      "evidence_required": [
+        "Pinned subject/runtime/provider revisions",
+        "Complete relevant command/API or fixture output",
+        "Timestamped observed result",
+        "Verifier/reviewer identity and disposition"
+      ],
+      "execution_evidence": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "ADR-DEP-001",
+      "title": "Preserve the Podman / WSLC preference",
+      "status": "accepted_user_constraint",
+      "source_ids": [
+        "S001",
+        "S013"
+      ],
+      "decision": "Preserve the preference exactly; qualify distinct implementations. Docker Engine remains an exception candidate, not the default.",
+      "alternatives": [
+        "Treat WSLC as shorthand for WSL2: rejected because identity differs.",
+        "Default to Docker for ecosystem convenience: not authorized by the direct constraint."
+      ],
+      "revisit": "An operator-approved exact-workload capability or benchmark exception."
+    },
+    {
+      "id": "ADR-DEP-002",
+      "title": "One deployment actuator and existing ownership spine",
+      "status": "proposed",
+      "source_ids": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "decision": "Reuse the existing logical owners; reconcile current module locations before allocating implementation. Do not create a new controller or registry.",
+      "alternatives": [
+        "Independent BytePort and PaaS reconcilers: reject for duplicate writes.",
+        "Assume consolidation is complete because a README says so: reject without receipts."
+      ],
+      "revisit": "Current ownership ADR, consumer graph and migration receipt review."
+    },
+    {
+      "id": "ADR-DEP-003",
+      "title": "Plan-independent candidate-bound approval",
+      "status": "proposed",
+      "source_ids": [
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S012"
+      ],
+      "decision": "Use native protection where supported; otherwise retain a genuinely separate trusted human-apply path. A dispatch button is not an authorization boundary.",
+      "alternatives": [
+        "Private-Free branch protection fallback: unsupported assumption.",
+        "All listed environment reviewers must approve: incorrect quorum assumption."
+      ],
+      "revisit": "Exact trio, active entitlements, authorized identities and credential separation verified."
+    },
+    {
+      "id": "ADR-DEP-004",
+      "title": "Runtime lane and PaaS qualification",
+      "status": "proposed",
+      "source_ids": [
+        "S013",
+        "S014",
+        "S015",
+        "S016",
+        "S017",
+        "S018",
+        "S019",
+        "S020",
+        "S021"
+      ],
+      "decision": "Propose rootless Podman plus native WSL systemd/Quadlet for the first persistent-service slice; evaluate WSLC separately. PaaS candidates are conditional adapters, not prerequisites.",
+      "alternatives": [
+        "Make Coolify a required Podman layer now: no qualified path shown.",
+        "Use a Podman-aware UI as a second writer: violates the single-actuator boundary."
+      ],
+      "revisit": "Installed-version discovery and lifecycle tests; no engine installation follows from this ADR alone."
+    },
+    {
+      "id": "ADR-DEP-005",
+      "title": "Route classes and streaming transport",
+      "status": "proposed",
+      "source_ids": [
+        "S022",
+        "S023",
+        "S024"
+      ],
+      "decision": "Separate private administration from anonymous public sites and authenticated machine routes. Exclude Quick Tunnels from required SSE paths; qualify the full named-tunnel or private path.",
+      "alternatives": [
+        "Funnel grants visitor identity: false.",
+        "Put browser Access login in front of every webhook: incompatible unless the caller supports it."
+      ],
+      "revisit": "Verified hostname ownership, protocol tests, auth policy and origin-bypass tests."
+    },
+    {
+      "id": "ADR-DEP-006",
+      "title": "Portability by contract, not provider sameness",
+      "status": "proposed",
+      "source_ids": [
+        "S025",
+        "S026",
+        "S027",
+        "S028",
+        "S029",
+        "S030",
+        "S006"
+      ],
+      "decision": "Define target capability differences and state migration explicitly. Do not switch IaC language/tool or assume WASI/native compatibility without a demonstrated need and approved boundary.",
+      "alternatives": [
+        "One IaC provider model equals universal portability: reject.",
+        "WASM as an automatic fallback for arbitrary native binaries: reject."
+      ],
+      "revisit": "Real workload inventories and current IaC/code ownership audit."
+    },
+    {
+      "id": "ADR-DEP-007",
+      "title": "Separate routing incident evidence from deployment design",
+      "status": "proposed",
+      "source_ids": [
+        "S001"
+      ],
+      "decision": "Preserve sampled routing observations, add request/attempt instrumentation and bounded failover tests, and avoid attributing failures to ingress or model sync without a joined trace.",
+      "alternatives": [
+        "decisions=99 means 99 retries: unsupported.",
+        "HTTP 200 proves useful model output: unsupported."
+      ],
+      "revisit": "Exact config/code revision, trace correlation and reproducible failing fixture."
+    },
+    {
+      "id": "ADR-DEP-008",
+      "title": "Preserve local dev and use typed delivery profiles",
+      "status": "proposed",
+      "decision": "Default the requested dev backend to the qualified local target. Separate environment names from resource targets and workload types. Implement this in the existing API/automation ownership path, leaving BytePort as the product GUI.",
+      "alternatives": [
+        "Render-for-all: contradicts local placement and makes provider quota a hidden requirement.",
+        "One container deploy for all repos: misclassifies packages, desktop releases and documentation.",
+        "Local and managed profiles through one validated contract: preferred design."
+      ],
+      "revisit": "Confirm target/module ownership and application profiles before mutation; source placement is explicit but the implementation is not accepted.",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S040"
+      ]
+    },
+    {
+      "id": "ADR-DEP-009",
+      "title": "Use a tested event predicate and observed deployment watermark",
+      "status": "proposed",
+      "decision": "Proposed default: changed identity AND (scheduled tick OR new commits > 1 OR authorized force), after qualification gates. Persist the successful observed identity; use environment lease and generation fencing. Do not treat workflow attempts or API acceptance as last deployed.",
+      "alternatives": [
+        "Every push: simpler but does not preserve >1.",
+        "Cron only: ignores requested threshold responsiveness.",
+        "Event predicate with explicit counting basis: preferred."
+      ],
+      "revisit": "The exact commit-count convention and missed-tick coalescing are implementation choices proposed here, not historical user-approved policy.",
+      "source_ids": [
+        "S032",
+        "S033"
+      ]
+    },
+    {
+      "id": "ADR-DEP-010",
+      "title": "Quarantine the recovered pilot as evidence, not a deployment template",
+      "status": "proposed",
+      "decision": "Keep the recovered snapshots read-only for regression tests. Replace defects through reviewed patches in the resolved owner; do not execute this transcript or promote the old ready claim. Require source-mode binding, supported workflow locations, exact check mappings, secret isolation and recovery acceptance before rollout.",
+      "alternatives": [
+        "Commit and run the old pilot: known semantic and safety defects.",
+        "Discard the old pilot: loses useful provenance and regression fixtures.",
+        "Preserve evidence and repair narrowly: preferred."
+      ],
+      "revisit": "A clean current revision, settings receipt and disposable end-to-end proof can supersede the historical findings.",
+      "source_ids": [
+        "S032",
+        "S033",
+        "S034",
+        "S035",
+        "S036",
+        "S037",
+        "S038",
+        "S039"
+      ]
+    },
+    {
+      "id": "ADR-DEP-011",
+      "title": "Represent local machines as a qualified BytePort provider",
+      "status": "proposed",
+      "source_ids": [
+        "S052",
+        "S058",
+        "S059",
+        "S060"
+      ],
+      "decision": "Extend BytePort with a local-fleet provider whose node daemon exposes capabilities and executes desired state. Do not build another PaaS GUI or global controller.",
+      "alternatives": [
+        "Separate private-cloud product: rejected for duplicate control/state surfaces.",
+        "Treat GitHub self-hosted runners as the local-cloud abstraction: rejected because they do not model databases, services, volumes or lifecycle semantics.",
+        "Full Kubernetes/OpenNebula-style private cloud on every personal node: retain only as a dedicated-host option, not the default laptop/desktop contract."
+      ],
+      "revisit": "Current owner/module reconciliation or evidence that BytePort cannot host the required provider semantics."
+    },
+    {
+      "id": "ADR-DEP-012",
+      "title": "Use immutable pull delivery for personal compute nodes",
+      "status": "proposed",
+      "source_ids": [
+        "S052",
+        "S058"
+      ],
+      "decision": "CI builds/tests/publishes immutable artifacts; the controller authorizes desired state; an outbound/private node daemon pulls exact artifacts and reports observed identity.",
+      "alternatives": [
+        "CI SSH/push directly into personal machines: rejected as a broad credential and lifecycle boundary.",
+        "Mutable latest-tag deployment: rejected because tested bytes are not bound to observed runtime bytes."
+      ],
+      "revisit": "A substrate with equivalent authenticated content-addressed pull and stronger attestation."
+    },
+    {
+      "id": "ADR-DEP-013",
+      "title": "Protect foreground work with reservation and preemption policy",
+      "status": "proposed",
+      "source_ids": [
+        "S052",
+        "S056",
+        "S057",
+        "S077"
+      ],
+      "decision": "Model foreground reserves and dynamic host modes as placement inputs. Background workloads are admitted only from allocatable capacity and may be drained/preempted according to declared policy.",
+      "alternatives": [
+        "Pause one runner when Parsec appears: rejected as application-specific and incomplete.",
+        "Static CPU/RAM limit only: rejected because GPU, thermal, battery and interactive latency can dominate."
+      ],
+      "revisit": "Measured workload interference data may simplify or specialize the policy per node class."
+    },
+    {
+      "id": "ADR-DEP-014",
+      "title": "Make human, agent and automation parity a platform tenet",
+      "status": "accepted_user_constraint",
+      "source_ids": [
+        "S052"
+      ],
+      "decision": "All product surfaces share one typed capability/control/evidence model. Humans may get richer presentation, agents structured operations, and automations event/idempotency support, but none receives a second source of truth.",
+      "alternatives": [
+        "GUI-first with private backend state: rejected by the direct requirement.",
+        "Agent-only API with human UI as an afterthought: rejected because humans remain first-class."
+      ],
+      "revisit": "Only by explicit user change to the global product tenet."
+    },
+    {
+      "id": "ADR-DEP-015",
+      "title": "Use one Assessment Dossier with inventory and evaluation phases",
+      "status": "proposed",
+      "source_ids": [
+        "S053",
+        "S054"
+      ],
+      "decision": "Phase A captures inventory/applicability/evidence and leaves verdict/score unknown; Phase B binds qualified instruments and records evaluation. Both phases mutate/append the same dossier authority and generate views.",
+      "alternatives": [
+        "Separate inventory database and scorecard database: rejected for identity and drift risk.",
+        "Single flat score sheet: rejected because unknown/applicability/evidence states collapse into misleading scores."
+      ],
+      "revisit": "Only if a concrete consumer requires a distinct projection; the canonical dossier remains singular."
+    },
+    {
+      "id": "ADR-DEP-016",
+      "title": "Extend the existing review/GitOps controller with a quota-aware broker",
+      "status": "proposed",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S067",
+        "S068",
+        "S069",
+        "S070",
+        "S071",
+        "S072",
+        "S074"
+      ],
+      "decision": "Provider adapters expose live quota/trigger/cost/capability state. A risk-tier scheduler assigns the smallest sufficient semantic reviewer set, coalesces reruns, normalizes findings, and reserves capacity for final review.",
+      "alternatives": [
+        "Every provider on every PR: rejected for quota waste, duplicate noise and observed rate-limit failures.",
+        "One fixed reviewer everywhere: rejected for outages, quota exhaustion and blind spots.",
+        "New review product/repository: reject unless current controller ownership cannot absorb the capability."
+      ],
+      "revisit": "Measured marginal-yield and reliability data may change default provider weights."
+    },
+    {
+      "id": "ADR-DEP-017",
+      "title": "Reconcile historical review findings after merge",
+      "status": "proposed",
+      "source_ids": [
+        "S052",
+        "S065",
+        "S066",
+        "S070"
+      ],
+      "decision": "A merged/closed PR finding is revalidated against current main. Valid surviving defects create a remediation item/new PR; fixed/stale/duplicate/false-positive findings receive evidence-backed dispositions. Old thread state is not treated as code truth.",
+      "alternatives": [
+        "Bulk resolve all old threads: rejected because unresolved can still mean real defect.",
+        "Automatically open a fix PR for every old bot comment: rejected because stale/duplicate/false-positive findings create churn."
+      ],
+      "revisit": "After historical backlog reaches a stable SLA and can move to continuous reconciliation."
+    },
+    {
+      "id": "ADR-DEP-018",
+      "title": "Salvage Emergent Garden Wave 5 before starting another research wave",
+      "status": "proposed",
+      "source_ids": [
+        "S061",
+        "S062",
+        "S063",
+        "S064"
+      ],
+      "decision": "Preserve PR-81 head/payload, reconcile it with current ResearchLedger main, rerun bundle/tests, then land or explicitly supersede it before new corpus expansion. Keep registry projection qualified during the gap.",
+      "alternatives": [
+        "Restart research from YouTube: rejected because substantial validated work already exists.",
+        "Treat merged registry projection as proof the ResearchLedger source landed: rejected; projection and source authority are separate."
+      ],
+      "revisit": "After source-authority integration is demonstrably complete."
+    }
+  ],
+  "work_items": [
+    {
+      "id": "WP-01",
+      "title": "Recover source and resolve ownership",
+      "depends_on": [],
+      "requirement_ids": [
+        "FR-DEP-001",
+        "FR-DEP-007",
+        "FR-DEP-024"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Source export indexed in this package; remaining work is canonical owner, approved check-run mapping, actual settings and missing artifact-body reconciliation."
+    },
+    {
+      "id": "WP-02",
+      "title": "Read-only host and entitlement inventory",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-002",
+        "FR-DEP-004",
+        "FR-DEP-008"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Installed runtime/version/capability records and per-repository plan/settings snapshot; no mutation."
+    },
+    {
+      "id": "WP-03",
+      "title": "Specify trusted promotion boundary",
+      "depends_on": [
+        "WP-01",
+        "WP-02"
+      ],
+      "requirement_ids": [
+        "FR-DEP-006",
+        "FR-DEP-009",
+        "FR-DEP-010",
+        "FR-DEP-011",
+        "FR-DEP-012",
+        "FR-DEP-013"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Reviewed gate/state-machine contract with negative fixtures and actual credential boundary."
+    },
+    {
+      "id": "WP-04",
+      "title": "Prove one disposable local service",
+      "depends_on": [
+        "WP-02",
+        "WP-03"
+      ],
+      "requirement_ids": [
+        "FR-DEP-003",
+        "FR-DEP-005",
+        "FR-DEP-016",
+        "FR-DEP-017",
+        "FR-DEP-018"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Exact-version Podman/WSL service evidence, restart/failure/resource tests and a measured runtime comparison."
+    },
+    {
+      "id": "WP-05",
+      "title": "Qualify one private ingress and one SSE path",
+      "depends_on": [
+        "WP-04"
+      ],
+      "requirement_ids": [
+        "FR-DEP-014",
+        "FR-DEP-015",
+        "FR-DEP-019"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Positive/negative identity tests, origin bypass check, full-chain streaming and bounded failover traces."
+    },
+    {
+      "id": "WP-06",
+      "title": "Prove stateful recovery and adapter boundaries",
+      "depends_on": [
+        "WP-04"
+      ],
+      "requirement_ids": [
+        "FR-DEP-020",
+        "FR-DEP-021",
+        "FR-DEP-022",
+        "FR-DEP-023"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Restored disposable data, migration decision, single state writer, digest-controlled update flow."
+    },
+    {
+      "id": "WP-07",
+      "title": "Integrate approved docs and evidence",
+      "depends_on": [
+        "WP-05",
+        "WP-06"
+      ],
+      "requirement_ids": [
+        "FR-DEP-024"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Atomic or staged cross-repository PR plan, regenerated index links, complete receipts and remaining-limitations statement."
+    },
+    {
+      "id": "WP-08",
+      "title": "Repair shared workflow and verification contracts",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-027",
+        "FR-DEP-029",
+        "FR-DEP-034"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Supported pinned workflow paths, exact emitted checks, explicit secrets and a disposable invocation receipt."
+    },
+    {
+      "id": "WP-09",
+      "title": "Implement local delivery profiles and nightly predicate",
+      "depends_on": [
+        "WP-02",
+        "WP-08"
+      ],
+      "requirement_ids": [
+        "FR-DEP-025",
+        "FR-DEP-026",
+        "FR-DEP-033"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Local dev placement, schedule truth table, offline catch-up, target serialization and negative ingress proof."
+    },
+    {
+      "id": "WP-10",
+      "title": "Qualify provider artifact, service bindings and recovery",
+      "depends_on": [
+        "WP-09"
+      ],
+      "requirement_ids": [
+        "FR-DEP-028",
+        "FR-DEP-030",
+        "FR-DEP-031"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Immutable tested image observation, emulator-vs-service action tests, stateful rollback/restore and provider source-mode fixtures."
+    },
+    {
+      "id": "WP-11",
+      "title": "Integrate compaction-safe source intake into existing evidence owner",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-032"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Idempotent provenance import with original hashes/ranges and explicit author/evidence classes; no second global ledger."
+    },
+    {
+      "id": "WP-12",
+      "title": "Reconcile current owners and historical local-cloud branches",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-035",
+        "FR-DEP-036",
+        "FR-DEP-044"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Current owner/module map plus accepted/rejected contract diff from historical BytePort local-cloud branches; no blind branch resurrection."
+    },
+    {
+      "id": "WP-13",
+      "title": "Specify and qualify local node daemon and capability inventory",
+      "depends_on": [
+        "WP-12",
+        "WP-02"
+      ],
+      "requirement_ids": [
+        "FR-DEP-037",
+        "FR-DEP-042"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Versioned node identity/capability contract, private enrollment flow and read-only inventory receipts on at least one disposable or non-impacting node."
+    },
+    {
+      "id": "WP-14",
+      "title": "Implement resource reservation, modes and preemption fixtures",
+      "depends_on": [
+        "WP-13"
+      ],
+      "requirement_ids": [
+        "FR-DEP-038",
+        "FR-DEP-039",
+        "FR-DEP-043"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Admission/preemption truth tables covering interactive, creator/audio, gaming, LLM, idle and stateful negative cases with no foreground starvation claim beyond measured fixtures."
+    },
+    {
+      "id": "WP-15",
+      "title": "Bind CI artifacts to local lifecycle management",
+      "depends_on": [
+        "WP-08",
+        "WP-13"
+      ],
+      "requirement_ids": [
+        "FR-DEP-040",
+        "FR-DEP-041"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Immutable artifact build receipt, node pull/observation, health transition and daemon/workload rollback on a disposable service."
+    },
+    {
+      "id": "WP-16",
+      "title": "Unify GUI API CLI SDK and agent automation contract",
+      "depends_on": [
+        "WP-12"
+      ],
+      "requirement_ids": [
+        "FR-DEP-045",
+        "FR-DEP-046"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Same plan/apply/observe operation demonstrated through API and at least two clients without hidden surface-specific state."
+    },
+    {
+      "id": "WP-17",
+      "title": "Converge audit and scorecard systems into Assessment Dossiers",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-047",
+        "FR-DEP-048"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "One real repository dossier where Phase A inventory leaves scores unknown and Phase B executes qualified measurements; legacy scorecard mapped as a profile rather than copied truth."
+    },
+    {
+      "id": "WP-18",
+      "title": "Recover and integrate Emergent Garden Wave 5 authority",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-049",
+        "FR-DEP-050"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Exact PR-81 payload preserved, reconciled against current main, package/tests rerun, landed or explicitly superseded, and projection status corrected."
+    },
+    {
+      "id": "WP-19",
+      "title": "Inventory reviewer providers and enforce zero-spend broker policy",
+      "depends_on": [
+        "WP-01"
+      ],
+      "requirement_ids": [
+        "FR-DEP-051",
+        "FR-DEP-052",
+        "FR-DEP-053",
+        "FR-DEP-056",
+        "FR-DEP-057"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Live provider capability/quota snapshot, cash-spend=false enforcement, risk-tier dispatch fixtures, and deterministic gates proven independent of semantic-review outages."
+    },
+    {
+      "id": "WP-20",
+      "title": "Reconcile historical review backlog",
+      "depends_on": [
+        "WP-19"
+      ],
+      "requirement_ids": [
+        "FR-DEP-054",
+        "FR-DEP-055"
+      ],
+      "priority": "P0",
+      "status": "not_started",
+      "exit_evidence": "Sample merged/open PR backlog classified finding-by-finding; surviving defects linked to remediation PRs and stale/fixed/duplicate findings have evidence-backed dispositions."
+    },
+    {
+      "id": "WP-21",
+      "title": "Measure reviewer marginal yield and tune provider routing",
+      "depends_on": [
+        "WP-19",
+        "WP-20"
+      ],
+      "requirement_ids": [
+        "FR-DEP-058"
+      ],
+      "priority": "P1",
+      "status": "not_started",
+      "exit_evidence": "Per-provider unique-valid-finding, duplicate, false-positive, remediation, latency and quota-efficiency report sufficient to justify or reject a sixth default semantic reviewer."
+    }
+  ],
+  "unresolved": {
+    "exact_ci_trio": null,
+    "activated_student_pro": null,
+    "repository_owner_plan_matrix": null,
+    "canonical_deployment_module": null,
+    "installed_wsl_version": null,
+    "installed_wslc_version": null,
+    "installed_podman_version": null,
+    "production_approval_identity": null,
+    "monthly_cost_ceiling_for_this_stack": null,
+    "availability_rto_rpo_targets": null,
+    "exact_ci_trio_note": "Candidate job names now observed: ci / lint, ci / test, CI. Historical phrase, on-wire check-run/producer identity, required full-strict dependency set and approval policy remain unresolved.",
+    "original_full_transcript": "received_and_structurally_indexed; pre-compaction history not reconstructable from export",
+    "local_node_daemon_canonical_owner": null,
+    "desktop_resource_reserve_profile": null,
+    "laptop_resource_reserve_profile": null,
+    "current_reviewer_quota_snapshot": null,
+    "macroscope_credit_remaining": null,
+    "emergent_garden_integration_target": null,
+    "review_backlog_total_unresolved_material_findings": null
+  }
+}

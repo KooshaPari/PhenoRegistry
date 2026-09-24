@@ -1,0 +1,242 @@
+[
+  {
+    "repository_id": "1199812615",
+    "name": ".github",
+    "role_proposal": "Publication/support only",
+    "responsibility": "Publish approved shared conformance/workflow references; do not host user runtime state.",
+    "first_acceptance": "Verify published defaults and links without granting cross-app permissions.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1169608854",
+    "name": "AgilePlus",
+    "role_proposal": "Host + provider",
+    "responsibility": "Expose scoped work commands, actual receipts and work-item views; consume product context without owning Tracera state.",
+    "first_acceptance": "Complete both directions of the Tracera witness on one real Git-root-scoped subject.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "861430079",
+    "name": "BytePort",
+    "role_proposal": "Host + provider",
+    "responsibility": "Expose deployment/status/rollback contracts and contextual views; consume scoped process supervision.",
+    "first_acceptance": "Operate one real deployment from BytePort and inspect the same authorized workload from ShareCLI without duplicate actions.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1308570444",
+    "name": "CivicWarfare",
+    "role_proposal": "Provider/optional creator host",
+    "responsibility": "Qualify game/mod telemetry and creator/test contributions only where the game integration permits.",
+    "first_acceptance": "Provide a bounded real session/status adapter; do not overlay unrelated admin chrome during play.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1164684442",
+    "name": "Civis",
+    "role_proposal": "Game + optional creator/admin host",
+    "responsibility": "Expose real world/session/editor capabilities with player-facing constraints; keep game input/rendering/authority primary.",
+    "first_acceptance": "Test one creator/admin integration without focus, framerate, world-state or save-regression; no blanket app-center dependency.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1177712269",
+    "name": "Dino",
+    "role_proposal": "Creator/mod host + provider",
+    "responsibility": "Compose pack-authoring, validation, installation and game-status capabilities; preserve actual loader/runtime constraints.",
+    "first_acceptance": "A pack workflow uses a shared capability without launching duplicate game instances or bypassing game authorization.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1165315873",
+    "name": "HeliosCLI",
+    "role_proposal": "Headless provider + CLI host",
+    "responsibility": "Expose bounded agent/session/tool operations and consume authorized capabilities with clean machine I/O.",
+    "first_acceptance": "Invoke one shared operation through installed CLI and a host view with identical permissions and outcome receipts.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1167587447",
+    "name": "HeliosLab",
+    "role_proposal": "Candidate native/workbench host",
+    "responsibility": "Reconcile accepted product identity before adopting a host shell; reuse command/view contracts, not whole app copies.",
+    "first_acceptance": "Prove one coherent inspector/action with focus/accessibility and real provider behavior after standalone identity is settled.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1226104769",
+    "name": "HeliosLite",
+    "role_proposal": "Headless provider + CLI host",
+    "responsibility": "Contribute session/control/task capabilities and optional views while preserving foreign-session read-only rules.",
+    "first_acceptance": "Open the same allowed session in two perspectives, interrupt/reconnect, and prove no duplicate tool side effects.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1365855438",
+    "name": "KCode",
+    "role_proposal": "Headless provider + CLI host",
+    "responsibility": "Expose existing session and child-agent control through bounded interfaces; preserve transport and safety behavior.",
+    "first_acceptance": "Qualify scoped session/status integration including crash recovery and forbidden mutations.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1322607630",
+    "name": "Khostty",
+    "role_proposal": "Specialized terminal surface/provider",
+    "responsibility": "Use supported terminal embedding/API boundaries and native event ownership; do not accept untrusted arbitrary app code.",
+    "first_acceptance": "Render and focus a qualified terminal surface, preserving IME/shortcuts/security and standalone terminal correctness.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1349458262",
+    "name": "KooshaPari",
+    "role_proposal": "Public projection only",
+    "responsibility": "Explain actual integration tiers and publish authentic installation/composition evidence.",
+    "first_acceptance": "A visitor can identify standalone prerequisites, integration directions and privacy limits; no unimplemented merge marketing.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1262466303",
+    "name": "Melosviz",
+    "role_proposal": "Creative host + provider",
+    "responsibility": "Contribute actual preview/render/job capabilities; consume scoped assets/process services without replacing creative output with placeholders.",
+    "first_acceptance": "Execute real media through two perspectives, cancellation/recovery and export while controlling renderer/GPU demand.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1226171396",
+    "name": "OmniRoute",
+    "role_proposal": "Service provider; optional admin host",
+    "responsibility": "Expose typed provider/model/routing/budget capabilities behind existing security; no shared credential bag.",
+    "first_acceptance": "An authorized consumer and route-admin perspective operate the same scoped request with truthful quotas/errors.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1272990345",
+    "name": "PhenoApps",
+    "role_proposal": "Application collection + optional Center shell",
+    "responsibility": "Keep each contained app independently useful; evaluate Center as an optional existing-shell view, not a new universal owner.",
+    "first_acceptance": "Host two qualified applets without merging their databases, starting all apps, or coupling every release.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1169864396",
+    "name": "PhenoDesign",
+    "role_proposal": "Design and host-rendering contracts",
+    "responsibility": "Own approved tokens, slot UX, accessible patterns, motion budgets and editable source assets.",
+    "first_acceptance": "Render the same bounded contribution in two hosts with native keyboard/accessibility and reduced-motion parity.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1363521465",
+    "name": "PhenoFabric",
+    "role_proposal": "Placement/transport provider + workspace host where accepted",
+    "responsibility": "Supply qualified local/VM/network paths and I/O routing below semantic capability selection; data ownership remains unchanged.",
+    "first_acceptance": "Use a real selected route and failover/permission case without mandatory RPC for local composition.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1269695199",
+    "name": "PhenoLab",
+    "role_proposal": "Evaluation provider + results host",
+    "responsibility": "Expose truthful task/run/results capabilities and consume the same typed fixtures for composed testing.",
+    "first_acceptance": "Known-good, known-bad, missing and revoked-provider cases stay distinguishable in a real run.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1201113097",
+    "name": "PhenoRegistry",
+    "role_proposal": "Curated catalog/conformance metadata",
+    "responsibility": "Publish accepted product/capability identities and recipes where its current role authorizes; not every machine live grant/store.",
+    "first_acceptance": "Resolve a published capability/profile to versioned source and tests without claiming installed/active state.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1200273587",
+    "name": "PhenoShared",
+    "role_proposal": "Shared contracts/SDK/adapter home",
+    "responsibility": "Inspect and improve existing reusable runtime/manifest/lifecycle packages before handroll; keep neutral APIs and per-consumer tests.",
+    "first_acceptance": "Two distinct hosts reuse one qualified provider contract with source ownership, scoped leases and lifecycle proof.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1165351720",
+    "name": "Portage",
+    "role_proposal": "Evaluation runtime provider",
+    "responsibility": "Use existing environment/task/resource contracts as an evaluation applet; avoid a second task system.",
+    "first_acceptance": "Run the same bounded benchmark through standalone and host-mediated entrypoints with actual failure/cancel receipts.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1191459198",
+    "name": "ShareCLI",
+    "role_proposal": "Process/resource provider + operator host",
+    "responsibility": "Provide scope-safe activation/leases and supervision where appropriate; never coalesce tasks solely by command text.",
+    "first_acceptance": "Two hosts share only a compatible permitted instance, preserve foreground workload, and release correctly.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1162254344",
+    "name": "Tracera",
+    "role_proposal": "Product-model host + provider",
+    "responsibility": "Present and own persistent reconciled product context; consume actual AgilePlus work views/receipts as subordinate relations.",
+    "first_acceptance": "Import a real product, show genuine dissatisfaction, act through scoped work integration, and retain context in both apps.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  },
+  {
+    "repository_id": "1241972761",
+    "name": "WorldSphereMod",
+    "role_proposal": "Specialized game/render provider",
+    "responsibility": "Expose only supported game/creator interfaces; remoted graphics does not imply universal native applet semantics.",
+    "first_acceptance": "Exercise one real in-game consumer path with explicit camera/input/render and performance limits.",
+    "owner_chats": 1,
+    "native_evidence": [],
+    "authority": "Proposal within existing owner boundaries; not authorization or a new current-state audit."
+  }
+]

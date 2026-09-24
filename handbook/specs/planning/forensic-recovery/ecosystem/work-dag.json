@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "F0",
+      "name": "evidence perimeter",
+      "depends_on": []
+    },
+    {
+      "id": "F1-HCLI",
+      "name": "helios-cli local reconstruction",
+      "depends_on": [
+        "F0"
+      ]
+    },
+    {
+      "id": "F1-HLAB",
+      "name": "heliosLab local reconstruction",
+      "depends_on": [
+        "F0"
+      ]
+    },
+    {
+      "id": "F1-FORGE",
+      "name": "forgecode local reconstruction",
+      "depends_on": [
+        "F0"
+      ]
+    },
+    {
+      "id": "F1-AGENT",
+      "name": "Agentora local reconstruction",
+      "depends_on": [
+        "F0"
+      ]
+    },
+    {
+      "id": "F2",
+      "name": "cross-repository reconciliation",
+      "depends_on": [
+        "F1-HCLI",
+        "F1-HLAB",
+        "F1-FORGE",
+        "F1-AGENT"
+      ]
+    },
+    {
+      "id": "F3",
+      "name": "target-state alternatives and ADR",
+      "depends_on": [
+        "F2"
+      ]
+    },
+    {
+      "id": "F4",
+      "name": "isolated replay and characterization",
+      "depends_on": [
+        "F3"
+      ]
+    },
+    {
+      "id": "F5",
+      "name": "SSOT generation and drift controls",
+      "depends_on": [
+        "F4"
+      ]
+    },
+    {
+      "id": "F6",
+      "name": "integration proposal",
+      "depends_on": [
+        "F5"
+      ]
+    }
+  ]
+}

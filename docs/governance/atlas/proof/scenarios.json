@@ -1,0 +1,382 @@
+[
+  {
+    "id": "CASE-13-01",
+    "requirement_ids": [
+      "PROOF-13-01"
+    ],
+    "positive": "Qualify composed behavior with no requirement to mount a peer UI.",
+    "negative": "A host command uses a real provider with zero UI mounts and retains a coherent result.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-02",
+    "requirement_ids": [
+      "PROOF-13-02"
+    ],
+    "positive": "Assess both available providers and current/credible future consumers before significant implementation.",
+    "negative": "A proposed handroll without owned/external alternatives or consumer impact remains incomplete.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-03",
+    "requirement_ids": [
+      "PROOF-13-03"
+    ],
+    "positive": "Preserve accepted behavior, error/cancellation/state/resource and consumer contracts when replacing code.",
+    "negative": "A faster or shorter replacement that breaks a critical consumer is rejected.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-04",
+    "requirement_ids": [
+      "PROOF-13-04"
+    ],
+    "positive": "Select compile-time, direct-call, IPC, network or UI adapters according to actual constraints.",
+    "negative": "A valid in-process provider is not forced through an unnecessary network layer.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-05",
+    "requirement_ids": [
+      "PROOF-13-05"
+    ],
+    "positive": "Enforce domain dependency direction and real adapter contracts.",
+    "negative": "A prohibited UI/transport dependency introduced into the domain fails the architecture check.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-06",
+    "requirement_ids": [
+      "PROOF-13-06"
+    ],
+    "positive": "Peer discovery, permissions, absence, replacement and detach are explicit.",
+    "negative": "Revoked authority or absent optional peer does not silently trigger privileged fallback.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-07",
+    "requirement_ids": [
+      "PROOF-13-07"
+    ],
+    "positive": "Composed UX does not silently merge data owners, identities or lifecycle obligations.",
+    "negative": "Two host perspectives reference one authoritative object and reject duplicate mutation.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-13-08",
+    "requirement_ids": [
+      "PROOF-13-08"
+    ],
+    "positive": "Use pure tests, real adapter tests and actual user journeys as distinct complementary layers.",
+    "negative": "Mocked provider success cannot satisfy a required live integration.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-01",
+    "requirement_ids": [
+      "PROOF-14-01"
+    ],
+    "positive": "Declare owned, gray and black-box access per boundary and operation.",
+    "negative": "An unavailable proprietary-state API cannot be marked exercised.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-02",
+    "requirement_ids": [
+      "PROOF-14-02"
+    ],
+    "positive": "Bind actions, observations and captures to the intended artifact/session/window/world.",
+    "negative": "A wrong process or stale nonce is rejected before input.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-03",
+    "requirement_ids": [
+      "PROOF-14-03"
+    ],
+    "positive": "Distinguish fixture control, semantic commands and actual user input.",
+    "negative": "Teleport/state mutation cannot satisfy a click-and-move user-path criterion.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-04",
+    "requirement_ids": [
+      "PROOF-14-04"
+    ],
+    "positive": "Correlate accepted command, domain result, pixels and persistence as applicable.",
+    "negative": "Acknowledgement without the required effect is non-accepting.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-05",
+    "requirement_ids": [
+      "PROOF-14-05"
+    ],
+    "positive": "Record monotonic/action, simulation, render and capture relationships.",
+    "negative": "A prior frame from the correct window cannot prove a new action.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-06",
+    "requirement_ids": [
+      "PROOF-14-06"
+    ],
+    "positive": "Use approved private sessions, per-run writable state, limits and entitlements.",
+    "negative": "Cross-worker capture/data access or missing license cannot be bypassed to pass.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-07",
+    "requirement_ids": [
+      "PROOF-14-07"
+    ],
+    "positive": "Test actual installed output as well as embedded/headless diagnostic profiles.",
+    "negative": "A logic-only run is rejected for a required graphical claim.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-08",
+    "requirement_ids": [
+      "PROOF-14-08"
+    ],
+    "positive": "Qualify lifecycle, cancellation, missing methods and uncertain outcomes.",
+    "negative": "Timeout is not successful completion and uncertain side effects are reconciled before retry.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-09",
+    "requirement_ids": [
+      "PROOF-14-09"
+    ],
+    "positive": "Bind tiny visual features to reviewed regions, camera/scale and independent evidence.",
+    "negative": "A missing small required icon fails even if full-frame similarity is high.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-10",
+    "requirement_ids": [
+      "PROOF-14-10"
+    ],
+    "positive": "Capture enough frames to test flicker, stutter, LOD and animation behavior.",
+    "negative": "A lucky still frame cannot satisfy a temporal criterion.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-11",
+    "requirement_ids": [
+      "PROOF-14-11"
+    ],
+    "positive": "Test controlled regression and representative shipping profiles separately.",
+    "negative": "Disabling the effect under test cannot produce shipping-quality approval.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-14-12",
+    "requirement_ids": [
+      "PROOF-14-12"
+    ],
+    "positive": "Use known-good/bad classes, holdouts, model/metric provenance and disagreement rules.",
+    "negative": "Known-bad subtle examples must be caught at the predeclared required rates.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-01",
+    "requirement_ids": [
+      "PROOF-15-01"
+    ],
+    "positive": "Persist inspectable design/mockup/flow sources with versioned previews.",
+    "negative": "A runtime screenshot cannot replace the missing editable design when required.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-02",
+    "requirement_ids": [
+      "PROOF-15-02"
+    ],
+    "positive": "Design relevant empty/loading/error/permission/recovery and support variants.",
+    "negative": "One happy-path frame cannot close an entire flow.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-03",
+    "requirement_ids": [
+      "PROOF-15-03"
+    ],
+    "positive": "Separate exploratory, proposed, reviewed and accepted design versions.",
+    "negative": "An agent-written approved field without actual decision evidence does not promote scope.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-04",
+    "requirement_ids": [
+      "PROOF-15-04"
+    ],
+    "positive": "Distinguish intended design, regression baseline and actual implementation evidence.",
+    "negative": "Autoupdating a failed screenshot baseline without a decision cannot close the defect.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-05",
+    "requirement_ids": [
+      "PROOF-15-05"
+    ],
+    "positive": "Classify meaningful code/config/assets/docs/tests/builds/research/runtime evidence and lineage.",
+    "negative": "Excluded code or generated files do not disappear from the inventory without producer/scope rationale.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-06",
+    "requirement_ids": [
+      "PROOF-15-06"
+    ],
+    "positive": "Find unimplemented intent and undocumented/orphan implementation with typed relations.",
+    "negative": "A complete forward link set does not conceal an unowned public command.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-07",
+    "requirement_ids": [
+      "PROOF-15-07"
+    ],
+    "positive": "Retain authority-specific source/state and machine-readable reconciled projections.",
+    "negative": "A generated page does not fabricate an AgilePlus engine transition or authoritative data move.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-15-08",
+    "requirement_ids": [
+      "PROOF-15-08"
+    ],
+    "positive": "Preserve full horizon and bounded CVP, with explicit requirement/scope version changes.",
+    "negative": "Dropping a hard requirement to improve the percentage is visible and needs authorization.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-01",
+    "requirement_ids": [
+      "PROOF-16-01"
+    ],
+    "positive": "Compute a numerical score and letter grade against a versioned applicable rubric.",
+    "negative": "The output names scope/profile/revision and never presents the result as universal quality.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-02",
+    "requirement_ids": [
+      "PROOF-16-02"
+    ],
+    "positive": "Fix category/criterion weights and eligible units before assessing the candidate.",
+    "negative": "Adding many easy tests or duplicate criteria cannot silently dilute a failed critical criterion.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-03",
+    "requirement_ids": [
+      "PROOF-16-03"
+    ],
+    "positive": "Bind earned units to exact candidate/profile/oracle identity, freshness and required channels.",
+    "negative": "Stale, wrong-build or no-pixel evidence earns no credit for a visible current feature.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-04",
+    "requirement_ids": [
+      "PROOF-16-04"
+    ],
+    "positive": "Missing, blocked, unrun and inadmissible obligations remain visible and earn zero.",
+    "negative": "Deleting missing outcomes from the evidence set cannot increase the grade.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-05",
+    "requirement_ids": [
+      "PROOF-16-05"
+    ],
+    "positive": "Keep critical invariants and required independent coverage gates outside averaging.",
+    "negative": "A high numeric grade with a failed critical invariant remains BLOCKED.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-06",
+    "requirement_ids": [
+      "PROOF-16-06"
+    ],
+    "positive": "Distinguish assessed weight, unknown bound, stochastic intervals and evaluator class.",
+    "negative": "Model confidence is not accepted as a probability or proof.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-07",
+    "requirement_ids": [
+      "PROOF-16-07"
+    ],
+    "positive": "Publish same-scope progress and rubric/denominator changes separately.",
+    "negative": "A scope expansion is not misreported as a code regression or hidden to keep a score rising.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-08",
+    "requirement_ids": [
+      "PROOF-16-08"
+    ],
+    "positive": "Test graders and native adapters with adversarial controls and independent review.",
+    "negative": "A structurally valid invented receipt never claims authenticated product qualification.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-09",
+    "requirement_ids": [
+      "PROOF-16-09"
+    ],
+    "positive": "Use appropriate GUI/game/library/CLI/infra and white/gray/black-box applicability.",
+    "negative": "Do not assert line coverage of inaccessible third-party engine internals.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "CASE-16-10",
+    "requirement_ids": [
+      "PROOF-16-10"
+    ],
+    "positive": "Integrate with existing accepted rubric/process; preserve unresolved SROC/CDP names.",
+    "negative": "No invented acronym or new registry becomes authority from this amendment.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "actual_evidence_ids": []
+  }
+]

@@ -1,0 +1,161 @@
+{
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "product_execution_performed": false,
+  "notice": "All states are authored premises for explaining a filled audit. This is not a test transcript, consumer observation, or instrument qualification.",
+  "rows": [
+    {
+      "cid": "PEP-05-01-01",
+      "state": "PASS",
+      "note": "Local request completes the documented operation.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-SLICE",
+      "title": "The core operation produces the required result for a representative valid input",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-05-01-04",
+      "state": "PASS",
+      "note": "Malformed records are rejected without storage corruption.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-SLICE",
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-14-02-01",
+      "state": "PASS",
+      "note": "Local invalid tokens cannot create authenticated sessions.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-SLICE",
+      "title": "Invalid credentials cannot create an authenticated session",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-03-03-06",
+      "state": "PASS",
+      "note": "Local records survive the supported restart boundary.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "LOCAL-SLICE",
+      "title": "Required data survives the journey's supported restart boundary",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-13-01-10",
+      "state": "PASS",
+      "note": "An injected local failure is visible in the declared diagnostic path.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A known injected failure is visible through the selected observability path",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-07-01-05",
+      "state": "PASS",
+      "note": "Missing deployment credentials produce a scoped diagnostic.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Missing credentials produce a scoped actionable blocker",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-03-03",
+      "state": "UNKNOWN",
+      "note": "No authority is available to inspect or change the hosted deployment.",
+      "action": "Wait for explicitly scoped hosted verification access.",
+      "mandatory": true,
+      "gate": "HOSTED-RELEASE",
+      "title": "The deployed artifact matches the intended release digest",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-03-04",
+      "state": "UNKNOWN",
+      "note": "Routing to the actual hosted application is not verified.",
+      "action": "Verify the requested host through the authorized route.",
+      "mandatory": true,
+      "gate": "HOSTED-RELEASE",
+      "title": "Routing reaches the actual intended product surface",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-03-05",
+      "state": "UNKNOWN",
+      "note": "Required transport security is not measured on the hosted target.",
+      "action": "Obtain authorized hosted transport evidence.",
+      "mandatory": true,
+      "gate": "HOSTED-RELEASE",
+      "title": "TLS or equivalent transport expectations are verified where applicable",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-03-06",
+      "state": "UNKNOWN",
+      "note": "The hosted post-deployment journey has not run.",
+      "action": "Run it only after the target and authority are resolved.",
+      "mandatory": true,
+      "gate": "HOSTED-RELEASE",
+      "title": "Health and core-journey checks pass after deployment",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-16-03-10",
+      "state": "PASS",
+      "note": "Independent local verification continues despite blocked deployment.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Missing deployment authority does not block unrelated local verification",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-08-02-10",
+      "state": "PASS",
+      "note": "The local native no-Docker path remains supported.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "The workflow supports the permitted native no-Docker path when required by the fleet",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-12-01-10",
+      "state": "PASS",
+      "note": "Local performance is not promoted to a hosted guarantee.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A result from one environment is not silently promoted to another environment's guarantee",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-14-01-02",
+      "state": "UNKNOWN",
+      "note": "Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+      "action": "Resolve hosted tenancy before releasing.",
+      "mandatory": true,
+      "gate": "HOSTED-RELEASE",
+      "title": "External and internal trust boundaries are distinguishable",
+      "app": "UNRESOLVED",
+      "fresh": "CURRENT"
+    }
+  ]
+}

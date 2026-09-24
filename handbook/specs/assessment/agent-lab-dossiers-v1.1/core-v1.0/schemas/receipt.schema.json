@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/receipt.schema.json",
+  "title": "receipt",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "receipt"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "destination_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "report_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registry_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "remote_observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "issuer_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verification_ref": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "destination_label",
+    "payload_digest",
+    "idempotency_key",
+    "subject_revision",
+    "report_revision",
+    "registry_revision",
+    "remote_observed_at",
+    "issuer_ref",
+    "verification_ref"
+  ],
+  "additionalProperties": false
+}

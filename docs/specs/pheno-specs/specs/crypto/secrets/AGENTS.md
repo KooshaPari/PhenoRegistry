@@ -4,7 +4,7 @@
 
 - **Name**: Guardis (Security & Compliance Platform)
 - **Description**: Security scanning, policy enforcement, and compliance monitoring platform
-- **Location**: `/Users/kooshapari/CodeProjects/Phenotype/repos/Guardis`
+- **Location**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/Guardis`
 - **Language Stack**: TypeScript, Node.js 20+, PostgreSQL
 - **Published**: Private (Phenotype org)
 
@@ -12,7 +12,7 @@
 
 ```bash
 # Navigate to project
-cd /Users/kooshapari/CodeProjects/Phenotype/repos/Guardis
+cd /Users/<REDACTED>/CodeProjects/Phenotype/repos/Guardis
 
 # Install dependencies
 npm install

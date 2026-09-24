@@ -1,0 +1,178 @@
+{
+  "kind": "assignment",
+  "schema_version": "1.0.0",
+  "id": "A-GRADER-BEFORE",
+  "record_status": "EXAMPLE",
+  "epoch_id": "E-GRADER-BEFORE",
+  "status": "LOCKED",
+  "subject_id": "PATHJUDGE-SAME-SUBJECT",
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c",
+  "mandate_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+  "intent_ref": "dossier.json",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "profile_id": "bootstrap",
+  "coverage_statement": "11 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable.",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "scope_review_status": "ACCEPTED",
+  "scope_review_ref": "SCENARIO-SCOPE-ASSUMPTION",
+  "instances": [
+    {
+      "id": "I-01",
+      "criterion_id": "PEP-05-01-01",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-05-01-01",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": true,
+      "measurement_binding_ref": "measurement-bindings/MB-I-01.json"
+    },
+    {
+      "id": "I-02",
+      "criterion_id": "PEP-06-02-01",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-06-02-01",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": true,
+      "measurement_binding_ref": "measurement-bindings/MB-I-02.json"
+    },
+    {
+      "id": "I-03",
+      "criterion_id": "PEP-06-02-02",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-06-02-02",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": true,
+      "measurement_binding_ref": "measurement-bindings/MB-I-03.json"
+    },
+    {
+      "id": "I-04",
+      "criterion_id": "PEP-06-02-07",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-06-02-07",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-04.json"
+    },
+    {
+      "id": "I-05",
+      "criterion_id": "PEP-06-02-09",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-06-02-09",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-05.json"
+    },
+    {
+      "id": "I-06",
+      "criterion_id": "PEP-06-02-10",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-06-02-10",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-06.json"
+    },
+    {
+      "id": "I-07",
+      "criterion_id": "PEP-17-04-04",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-17-04-04",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-07.json"
+    },
+    {
+      "id": "I-08",
+      "criterion_id": "PEP-17-04-07",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-17-04-07",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-08.json"
+    },
+    {
+      "id": "I-09",
+      "criterion_id": "PEP-18-05-02",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-18-05-02",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-09.json"
+    },
+    {
+      "id": "I-10",
+      "criterion_id": "PEP-18-05-07",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-18-05-07",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-10.json"
+    },
+    {
+      "id": "I-11",
+      "criterion_id": "PEP-18-05-10",
+      "criterion_revision": "1.0.0",
+      "obligation_key": "PEP-18-05-10",
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+      "applicability": "APPLICABLE",
+      "applicability_reason": "Capability is required by the stated fictional slice.",
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+      "weight": 1,
+      "mandatory": false,
+      "measurement_binding_ref": "measurement-bindings/MB-I-11.json"
+    }
+  ],
+  "gates": [
+    {
+      "id": "BEHAVIORAL-TARGET",
+      "required_instance_ids": [
+        "I-01"
+      ]
+    },
+    {
+      "id": "EVALUATOR-QUALIFICATION",
+      "required_instance_ids": [
+        "I-02",
+        "I-03"
+      ]
+    }
+  ]
+}

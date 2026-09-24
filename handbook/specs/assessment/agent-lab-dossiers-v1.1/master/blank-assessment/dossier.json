@@ -1,0 +1,123 @@
+{
+  "kind": "dossier",
+  "schema_version": "1.1.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "example_class": "TEMPLATE",
+  "title": "REPLACE_WITH_TITLE",
+  "subtitle": "REPLACE_WITH_SUBTITLE",
+  "purpose": "REPLACE_WITH_PURPOSE",
+  "boundary": "REPLACE_WITH_BOUNDARY",
+  "beneficiary": "REPLACE_WITH_BENEFICIARY",
+  "authorship": "AGENT_ORIGINATED",
+  "intent_status": "REPLACE_WITH_INTENT_STATUS",
+  "genesis_rationale": "REPLACE_WITH_GENESIS_RATIONALE",
+  "alternatives": [
+    "REPLACE_WITH_CREDIBLE_ALTERNATIVES"
+  ],
+  "authority": "REPLACE_WITH_AUTHORITY",
+  "non_goals": [],
+  "subject_identity": {
+    "source_revision": null,
+    "identity_method": "Template descriptor only; replace with actual subject/BOM identity.",
+    "limitation": "No source or product evidence supplied."
+  },
+  "inventory": [],
+  "maturity": {
+    "scenario_or_scoped_label": "NOT_EVALUATED",
+    "claim_limit": "Unaccepted template only.",
+    "axes": [],
+    "value_evidence": "NOT_EVALUATED"
+  },
+  "finding_ids": [],
+  "decision_ids": [],
+  "semantic_reviews": [],
+  "next_action": "REPLACE_WITH_NEXT_ACTION",
+  "stop_condition": "REPLACE_WITH_STOP_CONDITION",
+  "restart_packet": {
+    "accepted_baseline": "None; template only.",
+    "failed_hypotheses": [],
+    "next_reproduction": "Resolve the real subject and bounded assignment.",
+    "budget_and_permissions": "Use the actual standing mandate, not this template."
+  },
+  "lineage": {
+    "previous_dossier_id": null,
+    "change_class": "TEMPLATE",
+    "description": "No operational assessment has occurred."
+  },
+  "provenance_notice": "REPLACE_WITH_PROVENANCE_NOTICE",
+  "row_notes": [
+    {
+      "instance_id": "I-1",
+      "title": "PEP-01-01-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-2",
+      "title": "PEP-01-02-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-3",
+      "title": "PEP-01-03-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-4",
+      "title": "PEP-01-04-02",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-5",
+      "title": "PEP-03-02-02",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-6",
+      "title": "PEP-03-03-04",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-7",
+      "title": "PEP-06-02-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-8",
+      "title": "PEP-06-02-02",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-9",
+      "title": "PEP-17-02-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-10",
+      "title": "PEP-17-03-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-11",
+      "title": "PEP-17-04-01",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    },
+    {
+      "instance_id": "I-12",
+      "title": "PEP-18-01-04",
+      "interpretation": "Applicability and measurement not yet resolved.",
+      "next_action": "Bind to actual product context and qualified evidence."
+    }
+  ]
+}

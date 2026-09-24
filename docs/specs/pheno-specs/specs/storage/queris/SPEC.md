@@ -2102,7 +2102,7 @@ let pool = Pool::connect(&url)
 
 ```bash
 # Clone repository
-git clone https://github.com/kooshapari/queris.git
+git clone https://github.com/KooshaPari/queris.git
 cd queris
 
 # Install dependencies

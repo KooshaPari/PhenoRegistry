@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1165315873",
+  "name": "HeliosCLI",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "1615dcd44f76aea55fbd04912b27d20b3536319f",
+  "sampled_commit_date_utc": "2026-09-16T10:27:00Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent commits expand root Dependabot coverage and update a Mergify configuration field.",
+  "assessment": "RECENT_MAINTENANCE_PRODUCT_PROOF_OPEN",
+  "role": "Codex-derived coding client and harness",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "The inherited atlas flags a root workspace versus real vendored agent executable distinction. Revalidate rather than assuming fixed or broken."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1165315873-A1",
+      "title": "Identify the shipped binary",
+      "work": "Map real executable/build root and owned upstream delta; compare the installed version with the claimed candidate.",
+      "acceptance": "A clean install launches the intended fork, not a harness-only package or upstream binary.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165315873",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1165315873-A2",
+      "title": "Complete a controlled coding task",
+      "work": "Read permitted source, change one feature, run meaningful tests, deny prohibited writes, interrupt and resume.",
+      "acceptance": "Task outcome and side effects are correct; source/profile/artifact and failure receipts attached.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165315873",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1165315873-A3",
+      "title": "Close update and upstream contracts",
+      "work": "Update the fork from a supported installed version and test preserved sessions/settings and rollback; compare with upstream on the same task.",
+      "acceptance": "Upgrade does not overwrite unrelated data; owned value is separated from inherited features.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165315873",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Reuse core contracts and utilities from actual authoritative owners; do not duplicate provider/session policy across the coding-client family.",
+  "parent_acceptance": "A real installed coding agent completes and recovers a useful task through its owned distribution channel.",
+  "sources": [
+    {
+      "id": "CUR-1165315873-S01",
+      "url": "https://github.com/KooshaPari/HeliosCLI/commit/1615dcd44f76aea55fbd04912b27d20b3536319f",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

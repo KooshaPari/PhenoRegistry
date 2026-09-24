@@ -245,7 +245,7 @@ domain: auth
 status: implemented
 created: 2024-01-15
 updated: 2024-03-20
-author: @kooshapari
+author: @<REDACTED>
 tags: [auth, oauth, security]
 implements: [ADR-012]
 ---
@@ -300,7 +300,7 @@ id: ADR-005
 title: Multi-Format Documentation Strategy
 status: accepted
 date: 2026-04-04
-author: @kooshapari
+author: @<REDACTED>
 tags: [documentation, process]
 implements: []
 ---

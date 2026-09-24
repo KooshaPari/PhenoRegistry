@@ -1,0 +1,618 @@
+[
+  {
+    "id": "FED-TEST-01-01",
+    "requirement_ids": [
+      "FED-01-01"
+    ],
+    "scenario": "Independent base usefulness",
+    "oracle": "Launch A without B and complete its base task; missing base dependency is explicit, not mocked.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-02",
+    "requirement_ids": [
+      "FED-01-02"
+    ],
+    "scenario": "Host-relative primary perspective",
+    "oracle": "Open A and B concurrently on one subject; chrome differs but object IDs/state authorities agree.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-03",
+    "requirement_ids": [
+      "FED-01-03"
+    ],
+    "scenario": "Separate operation kinds",
+    "oracle": "Installing an extension neither rewrites repositories nor migrates domain data.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-04",
+    "requirement_ids": [
+      "FED-01-04"
+    ],
+    "scenario": "Stable scoped identities",
+    "oracle": "A rename or second host does not create a second logical task or broaden scope.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-05",
+    "requirement_ids": [
+      "FED-01-05"
+    ],
+    "scenario": "Bounded recursive exports",
+    "oracle": "A nested consumer cannot call an unexported child operation or see child-only private settings.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-06",
+    "requirement_ids": [
+      "FED-01-06"
+    ],
+    "scenario": "Meaningful reciprocity",
+    "oracle": "Exercise both declared host directions; unsupported directions are shown as unsupported.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-07",
+    "requirement_ids": [
+      "FED-01-07"
+    ],
+    "scenario": "Optional app-center UI",
+    "oracle": "Disable the Center UI; the selected local base and valid cached binding still work.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-01-08",
+    "requirement_ids": [
+      "FED-01-08"
+    ],
+    "scenario": "No silent default takeover",
+    "oracle": "Install a competing provider while editing and verify pinned routes/focus remain unchanged.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-01",
+    "requirement_ids": [
+      "FED-02-01"
+    ],
+    "scenario": "Typed capability manifests",
+    "oracle": "Reject oversized/malformed manifests and incompatible contract profiles before activating code.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-02",
+    "requirement_ids": [
+      "FED-02-02"
+    ],
+    "scenario": "Source-backed artifact identity",
+    "oracle": "A copied display name or mismatched digest cannot activate a trusted binding.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-03",
+    "requirement_ids": [
+      "FED-02-03"
+    ],
+    "scenario": "Install-order convergence",
+    "oracle": "Run both clean install orders; compare resolved plans excluding permitted instance-local IDs.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-04",
+    "requirement_ids": [
+      "FED-02-04"
+    ],
+    "scenario": "Lazy activation",
+    "oracle": "Install multiple idle providers; measure zero unrequested heavy backend activations.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-05",
+    "requirement_ids": [
+      "FED-02-05"
+    ],
+    "scenario": "Deterministic provider selection",
+    "oracle": "Provide two candidates; show why one is selected or require a choice rather than oscillating.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-06",
+    "requirement_ids": [
+      "FED-02-06"
+    ],
+    "scenario": "Separate discovery and permission",
+    "oracle": "Co-install a provider requiring new private data; activation remains awaiting consent or denied.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-07",
+    "requirement_ids": [
+      "FED-02-07"
+    ],
+    "scenario": "Inspectable adaptation",
+    "oracle": "Reject auto-execution of newly generated adapter code; reset a preference without deleting data.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-02-08",
+    "requirement_ids": [
+      "FED-02-08"
+    ],
+    "scenario": "Incremental reconciliation",
+    "oracle": "Update one provider; retain unrelated known-good bindings and distinguish incomplete inventory.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-01",
+    "requirement_ids": [
+      "FED-03-01"
+    ],
+    "scenario": "Contextual host contributions",
+    "oracle": "Mount a relevant panel and command; unrelated provider navigation does not invade the host.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-02",
+    "requirement_ids": [
+      "FED-03-02"
+    ],
+    "scenario": "Stable object handoff",
+    "oracle": "Open the same task in both perspectives and preserve selection, source identity and permission.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-03",
+    "requirement_ids": [
+      "FED-03-03"
+    ],
+    "scenario": "Focus and shortcuts",
+    "oracle": "Test keyboard, IME, accessibility and conflicting shortcuts without duplicate invocation.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-04",
+    "requirement_ids": [
+      "FED-03-04"
+    ],
+    "scenario": "Semantic accessibility",
+    "oracle": "Screen-reader and keyboard users complete the workflow; remoted pixels advertise their limits.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-05",
+    "requirement_ids": [
+      "FED-03-05"
+    ],
+    "scenario": "Consistent command semantics",
+    "oracle": "An invisible or disabled menu does not bypass backend authorization through another entrypoint.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-06",
+    "requirement_ids": [
+      "FED-03-06"
+    ],
+    "scenario": "Explicit undo semantics",
+    "oracle": "Abort a cross-owner operation and observe defined compensation rather than fictional global rollback.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-07",
+    "requirement_ids": [
+      "FED-03-07"
+    ],
+    "scenario": "Unified bounded status",
+    "oracle": "One operation produces one appropriate notification per audience; denied search content never appears.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-03-08",
+    "requirement_ids": [
+      "FED-03-08"
+    ],
+    "scenario": "Richness with graceful reduction",
+    "oracle": "Run the complete task under reduced-motion/high-contrast and the accepted low-resource profile.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-01",
+    "requirement_ids": [
+      "FED-04-01"
+    ],
+    "scenario": "Explicit binding state",
+    "oracle": "A process that starts but fails readiness cannot appear as an active required capability.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-02",
+    "requirement_ids": [
+      "FED-04-02"
+    ],
+    "scenario": "Idempotent reconcile",
+    "oracle": "Deliver the same event repeatedly and compare durable resulting bindings and side effects.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-03",
+    "requirement_ids": [
+      "FED-04-03"
+    ],
+    "scenario": "Recover unknown outcomes",
+    "oracle": "Kill the host after provider acceptance; resume without executing a duplicate mutation.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-04",
+    "requirement_ids": [
+      "FED-04-04"
+    ],
+    "scenario": "Versioned active plans",
+    "oracle": "Update B while A edits; the active version is stable until an approved safe transition.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-05",
+    "requirement_ids": [
+      "FED-04-05"
+    ],
+    "scenario": "Safe quiescence",
+    "oracle": "Attempt detach during a long operation; report its completion/cancellation and unresolved effects.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-06",
+    "requirement_ids": [
+      "FED-04-06"
+    ],
+    "scenario": "Honest hot-unload support",
+    "oracle": "A native non-unloadable adapter requests restart rather than freeing active resources.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-07",
+    "requirement_ids": [
+      "FED-04-07"
+    ],
+    "scenario": "Uninstall is not deletion",
+    "oracle": "Uninstall and reinstall B; A base use survives and owned data remains recoverable.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-04-08",
+    "requirement_ids": [
+      "FED-04-08"
+    ],
+    "scenario": "Reference-aware termination",
+    "oracle": "Two hosts share a permitted instance; close one, then both, and inspect leases/background policy.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-01",
+    "requirement_ids": [
+      "FED-05-01"
+    ],
+    "scenario": "Scoped delegated authority",
+    "oracle": "A valid token for workspace X or audience B fails against workspace Y or audience C.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-02",
+    "requirement_ids": [
+      "FED-05-02"
+    ],
+    "scenario": "Provider-side enforcement",
+    "oracle": "Bypass the host menu and send a forbidden operation; the provider rejects it.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-03",
+    "requirement_ids": [
+      "FED-05-03"
+    ],
+    "scenario": "No credential copying",
+    "oracle": "Inspect distributed artifacts, traces and configs for real secrets; another app cannot read owner tokens.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-04",
+    "requirement_ids": [
+      "FED-05-04"
+    ],
+    "scenario": "Explicit data owners",
+    "oracle": "Edit from two hosts; detect conflicts and retain one defined authority rather than divergent copies.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-05",
+    "requirement_ids": [
+      "FED-05-05"
+    ],
+    "scenario": "Trust-matched isolation",
+    "oracle": "An untrusted extension cannot enter a high-trust native host merely because its interface matches.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-06",
+    "requirement_ids": [
+      "FED-05-06"
+    ],
+    "scenario": "Safe external inputs",
+    "oracle": "Reject malicious schemes, traversal, context substitution and prompt-like policy overrides.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-07",
+    "requirement_ids": [
+      "FED-05-07"
+    ],
+    "scenario": "Derived-data privacy",
+    "oracle": "Revoke access; stale previews/counts/snippets cannot reveal restricted source content.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-05-08",
+    "requirement_ids": [
+      "FED-05-08"
+    ],
+    "scenario": "Inspectable exit",
+    "oracle": "Complete a detach/export workflow without forced account sign-in or unrelated product install.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-01",
+    "requirement_ids": [
+      "FED-06-01"
+    ],
+    "scenario": "No recursive shell loop",
+    "oracle": "Reject A-shell-in-B-shell-in-A-shell and a circular required startup plan.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-02",
+    "requirement_ids": [
+      "FED-06-02"
+    ],
+    "scenario": "Bounded cyclic event protocols",
+    "oracle": "Create a reflected event; verify it does not become an unbounded command or notification loop.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-03",
+    "requirement_ids": [
+      "FED-06-03"
+    ],
+    "scenario": "Scope-safe service reuse",
+    "oracle": "Requests from separate tenants are isolated despite identical command or provider names.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-04",
+    "requirement_ids": [
+      "FED-06-04"
+    ],
+    "scenario": "Locality-aware lowering",
+    "oracle": "Compare selected path and allocations against a native direct baseline at the accepted profile.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-05",
+    "requirement_ids": [
+      "FED-06-05"
+    ],
+    "scenario": "Resource admission",
+    "oracle": "Saturate builds/inference while using the host; retain the declared foreground latency/audio contract.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-06",
+    "requirement_ids": [
+      "FED-06-06"
+    ],
+    "scenario": "Failure-domain containment",
+    "oracle": "Crash one optional provider; independent base functions remain useful and diagnostics identify the cause.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-07",
+    "requirement_ids": [
+      "FED-06-07"
+    ],
+    "scenario": "Capability-oriented reuse",
+    "oracle": "Add a second host and measure reused logic, adapter size and no competing state authority.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-06-08",
+    "requirement_ids": [
+      "FED-06-08"
+    ],
+    "scenario": "Platform-specific conformance",
+    "oracle": "Install the real package on each required profile and verify its claimed integration tier.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-01",
+    "requirement_ids": [
+      "FED-07-01"
+    ],
+    "scenario": "Separate structural and product proof",
+    "oracle": "Every synthetic fixture and result is marked; missing native proof keeps graduation open.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-02",
+    "requirement_ids": [
+      "FED-07-02"
+    ],
+    "scenario": "Independent suite coverage",
+    "oracle": "Below-floor, missing, skipped and wrong-revision required reports each reject qualification.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-03",
+    "requirement_ids": [
+      "FED-07-03"
+    ],
+    "scenario": "Complete critical evidence",
+    "oracle": "A green aggregate cannot conceal a missing permission, preservation or recovery scenario.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-04",
+    "requirement_ids": [
+      "FED-07-04"
+    ],
+    "scenario": "Two independent consumers",
+    "oracle": "Demonstrate reused contracts rather than duplicate bespoke adapters or mocked providers.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-05",
+    "requirement_ids": [
+      "FED-07-05"
+    ],
+    "scenario": "Comparative product pilot",
+    "oracle": "Retain successful and failed trials, setup effort, maintenance changes and performance distributions.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-06",
+    "requirement_ids": [
+      "FED-07-06"
+    ],
+    "scenario": "Authentic media",
+    "oracle": "Trace displayed claims to source/run/artifact; a mock UI cannot qualify an embedded product.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-07",
+    "requirement_ids": [
+      "FED-07-07"
+    ],
+    "scenario": "Owner-coordinated rollout",
+    "oracle": "No worker edits another owner checkout or marks consumer adoption from provider-only tests.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  },
+  {
+    "id": "FED-TEST-07-08",
+    "requirement_ids": [
+      "FED-07-08"
+    ],
+    "scenario": "Incremental adoption",
+    "oracle": "Two apps remain individually installable and the rest of the estate can ignore federation.",
+    "status": "PLANNED_NOT_EXECUTED",
+    "source_kind": "planned-product-scenario",
+    "actual_evidence_ids": []
+  }
+]

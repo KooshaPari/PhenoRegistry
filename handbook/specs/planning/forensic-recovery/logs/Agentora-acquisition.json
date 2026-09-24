@@ -1,0 +1,18 @@
+{
+  "repo": "Agentora",
+  "attempts": [
+    {
+      "method": "https",
+      "url": "https://github.com/KooshaPari/Agentora.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/Agentora.git'...\nfatal: unable to access 'https://github.com/KooshaPari/Agentora.git/': Could not resolve host: github.com\n"
+    },
+    {
+      "method": "https",
+      "url": "https://github.com/kooshapari/Agentora.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/Agentora.git'...\nfatal: unable to access 'https://github.com/kooshapari/Agentora.git/': Could not resolve host: github.com\n"
+    }
+  ],
+  "status": "unavailable"
+}

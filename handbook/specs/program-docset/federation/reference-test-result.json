@@ -1,0 +1,10 @@
+{
+  "total_reference_tests": 238,
+  "seconds": 27.483,
+  "status": "PASS",
+  "new_federation_reference_tests": 35,
+  "native_products_executed": false,
+  "actual_integrations_executed": false,
+  "fresh_github_audit": false,
+  "signatures_and_grants_authenticated": false
+}

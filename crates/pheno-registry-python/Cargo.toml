@@ -1,6 +1,6 @@
 [package]
 name = "pheno-registry-python"
-version = "0.1.0"
+version = "1.1.0"
 edition = "2021"
 description = "Python SDK for phenotype-registry via PyO3"
 
@@ -9,5 +9,5 @@ name = "pheno_registry_python"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = { version = "0.23", features = ["extension-module"] }
+pyo3 = { version = "0.29", features = ["extension-module"] }
 phenotype-registry = { path = "../.." }

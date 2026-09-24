@@ -1,0 +1,521 @@
+{
+  "schema_version": "0.1.0",
+  "estimate_unit": "agent-hours",
+  "assumptions": [
+    "Three-point estimates are planning estimates, not measured durations.",
+    "Critical path is dependency-only with unlimited parallel resources.",
+    "Resource-constrained schedule must separately model reviewers, platform hardware, CI, and human decisions.",
+    "T-000 is marked done for the connected GitHub census only; local-only history is not covered."
+  ],
+  "critical_path_expected_hours": 605.0,
+  "critical_path": [
+    "T-000",
+    "T-020",
+    "T-040",
+    "T-060",
+    "T-610",
+    "T-620",
+    "T-700",
+    "T-710",
+    "T-720"
+  ],
+  "tasks": [
+    {
+      "id": "T-000",
+      "name": "Confirm 146-repo census and observation baseline",
+      "phase": "P0",
+      "pred": [],
+      "o": 4,
+      "m": 8,
+      "p": 16,
+      "status": "DONE",
+      "pert_hours": 8.67,
+      "variance": 4.0
+    },
+    {
+      "id": "T-010",
+      "name": "Build repeatable GitHub live-fact observer",
+      "phase": "P0",
+      "pred": [
+        "T-000"
+      ],
+      "o": 6,
+      "m": 16,
+      "p": 32,
+      "status": "READY",
+      "pert_hours": 17.0,
+      "variance": 18.78
+    },
+    {
+      "id": "T-020",
+      "name": "Adopt typed IDs and machine schemas",
+      "phase": "P0",
+      "pred": [
+        "T-000"
+      ],
+      "o": 4,
+      "m": 10,
+      "p": 20,
+      "status": "READY",
+      "pert_hours": 10.67,
+      "variance": 7.11
+    },
+    {
+      "id": "T-030",
+      "name": "Decide live-fact versus curated-registry authority",
+      "phase": "P1",
+      "pred": [
+        "T-010",
+        "T-020"
+      ],
+      "o": 8,
+      "m": 20,
+      "p": 40,
+      "status": "BLOCKED_DECISION",
+      "pert_hours": 21.33,
+      "variance": 28.44
+    },
+    {
+      "id": "T-040",
+      "name": "Decide product-local versus cross-product spec authority",
+      "phase": "P1",
+      "pred": [
+        "T-020"
+      ],
+      "o": 10,
+      "m": 28,
+      "p": 56,
+      "status": "BLOCKED_DECISION",
+      "pert_hours": 29.67,
+      "variance": 58.78
+    },
+    {
+      "id": "T-050",
+      "name": "Decide active enforcement authority",
+      "phase": "P1",
+      "pred": [
+        "T-020"
+      ],
+      "o": 8,
+      "m": 20,
+      "p": 40,
+      "status": "BLOCKED_DECISION",
+      "pert_hours": 21.33,
+      "variance": 28.44
+    },
+    {
+      "id": "T-060",
+      "name": "Implement worker handoff and portfolio validation",
+      "phase": "P1",
+      "pred": [
+        "T-030",
+        "T-040",
+        "T-050"
+      ],
+      "o": 8,
+      "m": 20,
+      "p": 40,
+      "status": "BLOCKED",
+      "pert_hours": 21.33,
+      "variance": 28.44
+    },
+    {
+      "id": "T-100",
+      "name": "Audit vibe monitoring micro-family",
+      "phase": "P2",
+      "pred": [
+        "T-020"
+      ],
+      "o": 6,
+      "m": 14,
+      "p": 28,
+      "status": "READY",
+      "pert_hours": 15.0,
+      "variance": 13.44
+    },
+    {
+      "id": "T-110",
+      "name": "Stage monitoring consolidation/tombstones",
+      "phase": "P2",
+      "pred": [
+        "T-100",
+        "T-030"
+      ],
+      "o": 8,
+      "m": 20,
+      "p": 40,
+      "status": "BLOCKED",
+      "pert_hours": 21.33,
+      "variance": 28.44
+    },
+    {
+      "id": "T-120",
+      "name": "Forensic audit Planify and Planify2",
+      "phase": "P2",
+      "pred": [
+        "T-020"
+      ],
+      "o": 16,
+      "m": 40,
+      "p": 80,
+      "status": "READY",
+      "pert_hours": 42.67,
+      "variance": 113.78
+    },
+    {
+      "id": "T-130",
+      "name": "Stage canonical Planify fork migration",
+      "phase": "P2",
+      "pred": [
+        "T-120",
+        "T-030"
+      ],
+      "o": 16,
+      "m": 36,
+      "p": 72,
+      "status": "BLOCKED",
+      "pert_hours": 38.67,
+      "variance": 87.11
+    },
+    {
+      "id": "T-140",
+      "name": "Forensic audit FocalPoint and phenotype-apps",
+      "phase": "P2",
+      "pred": [
+        "T-020"
+      ],
+      "o": 24,
+      "m": 64,
+      "p": 128,
+      "status": "READY",
+      "pert_hours": 68.0,
+      "variance": 300.44
+    },
+    {
+      "id": "T-150",
+      "name": "Stage FocalPoint recovery and canonicalization",
+      "phase": "P2",
+      "pred": [
+        "T-140",
+        "T-030",
+        "T-040"
+      ],
+      "o": 24,
+      "m": 64,
+      "p": 128,
+      "status": "BLOCKED",
+      "pert_hours": 68.0,
+      "variance": 300.44
+    },
+    {
+      "id": "T-160",
+      "name": "Adjudicate pheno shelf/meta role",
+      "phase": "P2",
+      "pred": [
+        "T-020"
+      ],
+      "o": 4,
+      "m": 12,
+      "p": 24,
+      "status": "READY",
+      "pert_hours": 12.67,
+      "variance": 11.11
+    },
+    {
+      "id": "T-170",
+      "name": "Close pheno meta/workspace disposition",
+      "phase": "P2",
+      "pred": [
+        "T-160",
+        "T-030"
+      ],
+      "o": 6,
+      "m": 14,
+      "p": 28,
+      "status": "BLOCKED",
+      "pert_hours": 15.0,
+      "variance": 13.44
+    },
+    {
+      "id": "T-200",
+      "name": "Scan consumers and overlap for foundation fragments",
+      "phase": "P3",
+      "pred": [
+        "T-030",
+        "T-040",
+        "T-050"
+      ],
+      "o": 24,
+      "m": 64,
+      "p": 128,
+      "status": "BLOCKED",
+      "pert_hours": 68.0,
+      "variance": 300.44
+    },
+    {
+      "id": "T-210",
+      "name": "Select foundation package homes and compatibility plan",
+      "phase": "P3",
+      "pred": [
+        "T-200"
+      ],
+      "o": 16,
+      "m": 40,
+      "p": 80,
+      "status": "BLOCKED",
+      "pert_hours": 42.67,
+      "variance": 113.78
+    },
+    {
+      "id": "T-220",
+      "name": "Stage foundation consolidation wave 1",
+      "phase": "P3",
+      "pred": [
+        "T-210",
+        "T-060"
+      ],
+      "o": 32,
+      "m": 96,
+      "p": 192,
+      "status": "BLOCKED",
+      "pert_hours": 101.33,
+      "variance": 711.11
+    },
+    {
+      "id": "T-300",
+      "name": "Audit execution/agent family capability and lineage",
+      "phase": "P4",
+      "pred": [
+        "T-060"
+      ],
+      "o": 32,
+      "m": 96,
+      "p": 192,
+      "status": "BLOCKED",
+      "pert_hours": 101.33,
+      "variance": 711.11
+    },
+    {
+      "id": "T-310",
+      "name": "Run bounded Agentora framework pilot",
+      "phase": "P4",
+      "pred": [
+        "T-300"
+      ],
+      "o": 32,
+      "m": 72,
+      "p": 144,
+      "status": "BLOCKED",
+      "pert_hours": 77.33,
+      "variance": 348.44
+    },
+    {
+      "id": "T-320",
+      "name": "Decide execution family target topology",
+      "phase": "P4",
+      "pred": [
+        "T-300",
+        "T-310"
+      ],
+      "o": 16,
+      "m": 48,
+      "p": 96,
+      "status": "BLOCKED_DECISION",
+      "pert_hours": 50.67,
+      "variance": 177.78
+    },
+    {
+      "id": "T-330",
+      "name": "Stage execution family migration wave 1",
+      "phase": "P4",
+      "pred": [
+        "T-320",
+        "T-220"
+      ],
+      "o": 48,
+      "m": 120,
+      "p": 240,
+      "status": "BLOCKED",
+      "pert_hours": 128.0,
+      "variance": 1024.0
+    },
+    {
+      "id": "T-400",
+      "name": "Forensic audit Helios family and consolidation branch",
+      "phase": "P4",
+      "pred": [
+        "T-060"
+      ],
+      "o": 32,
+      "m": 96,
+      "p": 192,
+      "status": "BLOCKED",
+      "pert_hours": 101.33,
+      "variance": 711.11
+    },
+    {
+      "id": "T-410",
+      "name": "Run Helios app/CLI/headless comparative pilot",
+      "phase": "P4",
+      "pred": [
+        "T-400"
+      ],
+      "o": 32,
+      "m": 80,
+      "p": 160,
+      "status": "BLOCKED",
+      "pert_hours": 85.33,
+      "variance": 455.11
+    },
+    {
+      "id": "T-420",
+      "name": "Stage Helios target topology and shared-code migration",
+      "phase": "P4",
+      "pred": [
+        "T-410",
+        "T-320"
+      ],
+      "o": 32,
+      "m": 80,
+      "p": 160,
+      "status": "BLOCKED",
+      "pert_hours": 85.33,
+      "variance": 455.11
+    },
+    {
+      "id": "T-500",
+      "name": "Audit router/gateway/proxy upstream and semantic lineage",
+      "phase": "P5",
+      "pred": [
+        "T-060"
+      ],
+      "o": 48,
+      "m": 128,
+      "p": 256,
+      "status": "BLOCKED",
+      "pert_hours": 136.0,
+      "variance": 1201.78
+    },
+    {
+      "id": "T-510",
+      "name": "Run router reliability/performance/DX pilot",
+      "phase": "P5",
+      "pred": [
+        "T-500"
+      ],
+      "o": 40,
+      "m": 96,
+      "p": 192,
+      "status": "BLOCKED",
+      "pert_hours": 102.67,
+      "variance": 641.78
+    },
+    {
+      "id": "T-520",
+      "name": "Select and stage routing target topology",
+      "phase": "P5",
+      "pred": [
+        "T-510",
+        "T-220"
+      ],
+      "o": 24,
+      "m": 64,
+      "p": 128,
+      "status": "BLOCKED",
+      "pert_hours": 68.0,
+      "variance": 300.44
+    },
+    {
+      "id": "T-600",
+      "name": "Audit compute/inference/fleet/fabric boundaries",
+      "phase": "P6",
+      "pred": [
+        "T-060"
+      ],
+      "o": 48,
+      "m": 128,
+      "p": 256,
+      "status": "BLOCKED",
+      "pert_hours": 136.0,
+      "variance": 1201.78
+    },
+    {
+      "id": "T-610",
+      "name": "Triage and gate all applied-product families",
+      "phase": "P7",
+      "pred": [
+        "T-060"
+      ],
+      "o": 48,
+      "m": 120,
+      "p": 240,
+      "status": "BLOCKED",
+      "pert_hours": 128.0,
+      "variance": 1024.0
+    },
+    {
+      "id": "T-620",
+      "name": "Run selected applied-product pilots and closure waves",
+      "phase": "P7",
+      "pred": [
+        "T-610"
+      ],
+      "o": 80,
+      "m": 240,
+      "p": 480,
+      "status": "BLOCKED",
+      "pert_hours": 253.33,
+      "variance": 4444.44
+    },
+    {
+      "id": "T-700",
+      "name": "Generate public/developer/operator/history portfolio projections",
+      "phase": "P8",
+      "pred": [
+        "T-110",
+        "T-130",
+        "T-150",
+        "T-170",
+        "T-330",
+        "T-420",
+        "T-520",
+        "T-600",
+        "T-620"
+      ],
+      "o": 20,
+      "m": 48,
+      "p": 96,
+      "status": "BLOCKED",
+      "pert_hours": 51.33,
+      "variance": 160.44
+    },
+    {
+      "id": "T-710",
+      "name": "Execute approved archive/tombstone/redirect wave",
+      "phase": "P8",
+      "pred": [
+        "T-700"
+      ],
+      "o": 24,
+      "m": 64,
+      "p": 128,
+      "status": "BLOCKED",
+      "pert_hours": 68.0,
+      "variance": 300.44
+    },
+    {
+      "id": "T-720",
+      "name": "Validate final authority graph, birth policy and counts",
+      "phase": "P8",
+      "pred": [
+        "T-710"
+      ],
+      "o": 12,
+      "m": 32,
+      "p": 64,
+      "status": "BLOCKED",
+      "pert_hours": 34.0,
+      "variance": 75.11
+    }
+  ]
+}

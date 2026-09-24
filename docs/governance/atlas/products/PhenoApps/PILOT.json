@@ -1,0 +1,24 @@
+{
+  "product_id": "SUP-PHENOAPPS",
+  "name": "PhenoApps",
+  "role": "Independent application in a collection",
+  "status": "PLANNED_NOT_EXECUTED",
+  "baseline": "Simplest correct current user workflow; final comparator versions to be resolved before running",
+  "scenario": "Select one accepted runnable application; compare clean setup and useful workflow before and after package/collection integration, without requiring every other app.",
+  "negative_cases": [
+    "Unrelated app fails to build",
+    "Cross-app secrets/state leak",
+    "Upgrade rollback",
+    "Missing shared package"
+  ],
+  "measurements": [
+    "Correct useful outcome",
+    "Time and effort to first use",
+    "Failure detection and recovery",
+    "Maintenance and consumer burden",
+    "Relevant resource/profile effects"
+  ],
+  "results": null,
+  "winner": null,
+  "authorization": "Not granted by package"
+}

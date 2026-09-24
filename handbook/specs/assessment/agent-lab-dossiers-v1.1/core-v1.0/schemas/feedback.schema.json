@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/feedback.schema.json",
+  "title": "feedback",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "feedback"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "enum": [
+        "INSTRUCTION",
+        "PREFERENCE",
+        "OBSERVATION",
+        "QUESTION",
+        "BRAINSTORM",
+        "OVERRIDE"
+      ]
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "affected_subjects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "decision_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_effect": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "source_ref",
+    "source_text",
+    "classification",
+    "interpretation",
+    "affected_subjects",
+    "decision_ref",
+    "authority_effect"
+  ],
+  "additionalProperties": false
+}

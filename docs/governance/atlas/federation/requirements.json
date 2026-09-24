@@ -1,0 +1,898 @@
+[
+  {
+    "id": "FED-01-01",
+    "group": "identity",
+    "title": "Independent base usefulness",
+    "statement": "Each qualified application shall remain usable with its declared base dependencies when optional peers or App Center are absent.",
+    "acceptance": "Launch A without B and complete its base task; missing base dependency is explicit, not mocked.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-02",
+    "group": "identity",
+    "title": "Host-relative primary perspective",
+    "statement": "Opening an app deliberately shall choose that window/workspace perspective without changing authoritative records.",
+    "acceptance": "Open A and B concurrently on one subject; chrome differs but object IDs/state authorities agree.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-03",
+    "group": "identity",
+    "title": "Separate operation kinds",
+    "statement": "Source consolidation, installation, runtime composition, view composition and data migration shall be represented as different operations.",
+    "acceptance": "Installing an extension neither rewrites repositories nor migrates domain data.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-04",
+    "group": "identity",
+    "title": "Stable scoped identities",
+    "statement": "Packages, products, applets, processes, bindings, users, workspaces and surfaces shall have distinct stable scoped identifiers.",
+    "acceptance": "A rename or second host does not create a second logical task or broaden scope.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-05",
+    "group": "identity",
+    "title": "Bounded recursive exports",
+    "statement": "A composite shall declare exactly the capabilities and obligations it re-exports.",
+    "acceptance": "A nested consumer cannot call an unexported child operation or see child-only private settings.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-06",
+    "group": "identity",
+    "title": "Meaningful reciprocity",
+    "statement": "Supported integration directions shall be explicit; reciprocal support shall not be inferred from one embedded panel.",
+    "acceptance": "Exercise both declared host directions; unsupported directions are shown as unsupported.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-07",
+    "group": "identity",
+    "title": "Optional app-center UI",
+    "statement": "The visible App Center shall not be required to launch/use already-qualified independent apps and bindings.",
+    "acceptance": "Disable the Center UI; the selected local base and valid cached binding still work.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-01-08",
+    "group": "identity",
+    "title": "No silent default takeover",
+    "statement": "New installation or background activation shall not change a user-selected provider or primary perspective silently.",
+    "acceptance": "Install a competing provider while editing and verify pinned routes/focus remain unchanged.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-01",
+    "group": "discovery",
+    "title": "Typed capability manifests",
+    "statement": "Installed providers shall expose bounded validated metadata describing versions, interfaces, scopes and host support.",
+    "acceptance": "Reject oversized/malformed manifests and incompatible contract profiles before activating code.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-02",
+    "group": "discovery",
+    "title": "Source-backed artifact identity",
+    "statement": "Discovery shall bind metadata to an actual trusted package/artifact under explicit policy.",
+    "acceptance": "A copied display name or mismatched digest cannot activate a trusted binding.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-03",
+    "group": "discovery",
+    "title": "Install-order convergence",
+    "statement": "Given the same packages and policy, supported A-then-B and B-then-A installs shall converge to the same selected capabilities.",
+    "acceptance": "Run both clean install orders; compare resolved plans excluding permitted instance-local IDs.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-04",
+    "group": "discovery",
+    "title": "Lazy activation",
+    "statement": "Metadata discovery shall not launch every provider or its entire desktop UI.",
+    "acceptance": "Install multiple idle providers; measure zero unrequested heavy backend activations.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-05",
+    "group": "discovery",
+    "title": "Deterministic provider selection",
+    "statement": "The resolver shall honor valid user pins, compatible policy and deterministic ambiguity handling.",
+    "acceptance": "Provide two candidates; show why one is selected or require a choice rather than oscillating.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-06",
+    "group": "discovery",
+    "title": "Separate discovery and permission",
+    "statement": "Presence shall not imply permission; scopes must be sufficient for the exact binding and operation.",
+    "acceptance": "Co-install a provider requiring new private data; activation remains awaiting consent or denied.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-07",
+    "group": "discovery",
+    "title": "Inspectable adaptation",
+    "statement": "Learned suggestions and preferences shall be scoped, explainable, reversible and not executable authority.",
+    "acceptance": "Reject auto-execution of newly generated adapter code; reset a preference without deleting data.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-02-08",
+    "group": "discovery",
+    "title": "Incremental reconciliation",
+    "statement": "Changed package/policy observations shall invalidate affected bindings without rebuilding unrelated workspaces.",
+    "acceptance": "Update one provider; retain unrelated known-good bindings and distinguish incomplete inventory.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-01",
+    "group": "experience",
+    "title": "Contextual host contributions",
+    "statement": "Contributions shall use declared slots and context/enablement rules instead of nesting complete app chrome by default.",
+    "acceptance": "Mount a relevant panel and command; unrelated provider navigation does not invade the host.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-02",
+    "group": "experience",
+    "title": "Stable object handoff",
+    "statement": "Host transitions shall carry permitted object references and versions without manual ID/path copying.",
+    "acceptance": "Open the same task in both perspectives and preserve selection, source identity and permission.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-03",
+    "group": "experience",
+    "title": "Focus and shortcuts",
+    "statement": "One view shall own each input event, with documented host/platform shortcut precedence.",
+    "acceptance": "Test keyboard, IME, accessibility and conflicting shortcuts without duplicate invocation.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-04",
+    "group": "experience",
+    "title": "Semantic accessibility",
+    "statement": "Native/semantic integration claims shall include verified accessible structure and focus behavior.",
+    "acceptance": "Screen-reader and keyboard users complete the workflow; remoted pixels advertise their limits.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-05",
+    "group": "experience",
+    "title": "Consistent command semantics",
+    "statement": "Menus, palette, shortcuts, CLI and API entrypoints shall invoke the same authorized command contract.",
+    "acceptance": "An invisible or disabled menu does not bypass backend authorization through another entrypoint.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-06",
+    "group": "experience",
+    "title": "Explicit undo semantics",
+    "statement": "Commands shall declare local undo, compensation or irreversibility; multi-owner actions must report partial outcomes.",
+    "acceptance": "Abort a cross-owner operation and observe defined compensation rather than fictional global rollback.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-07",
+    "group": "experience",
+    "title": "Unified bounded status",
+    "statement": "Shared search, progress, notifications and settings views shall preserve owner namespaces and avoid duplicate signals.",
+    "acceptance": "One operation produces one appropriate notification per audience; denied search content never appears.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-03-08",
+    "group": "experience",
+    "title": "Richness with graceful reduction",
+    "statement": "Motion, materials and optional 3D content shall have usable low-resource, reduced-motion and contrast alternatives.",
+    "acceptance": "Run the complete task under reduced-motion/high-contrast and the accepted low-resource profile.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-01",
+    "group": "lifecycle",
+    "title": "Explicit binding state",
+    "statement": "Installed, resolved, authorized, active, degraded, quiescing and detached states shall be separately observable.",
+    "acceptance": "A process that starts but fails readiness cannot appear as an active required capability.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-02",
+    "group": "lifecycle",
+    "title": "Idempotent reconcile",
+    "statement": "Repeated package events and retries shall not duplicate services, commands, migrations or jobs.",
+    "acceptance": "Deliver the same event repeatedly and compare durable resulting bindings and side effects.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-03",
+    "group": "lifecycle",
+    "title": "Recover unknown outcomes",
+    "statement": "A lost acknowledgment shall trigger operation-ID reconciliation before a mutation is repeated.",
+    "acceptance": "Kill the host after provider acceptance; resume without executing a duplicate mutation.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-04",
+    "group": "lifecycle",
+    "title": "Versioned active plans",
+    "statement": "Updates shall not silently replace in-use contracts or a pinned provider.",
+    "acceptance": "Update B while A edits; the active version is stable until an approved safe transition.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-05",
+    "group": "lifecycle",
+    "title": "Safe quiescence",
+    "statement": "Removal or update shall drain/cancel/checkpoint work under a declared lifecycle and lease policy.",
+    "acceptance": "Attempt detach during a long operation; report its completion/cancellation and unresolved effects.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-06",
+    "group": "lifecycle",
+    "title": "Honest hot-unload support",
+    "statement": "Providers shall declare whether live replacement is supported or a restart is needed.",
+    "acceptance": "A native non-unloadable adapter requests restart rather than freeing active resources.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-07",
+    "group": "lifecycle",
+    "title": "Uninstall is not deletion",
+    "statement": "Uninstall or detach shall preserve authoritative user data unless separately authorized for deletion.",
+    "acceptance": "Uninstall and reinstall B; A base use survives and owned data remains recoverable.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-04-08",
+    "group": "lifecycle",
+    "title": "Reference-aware termination",
+    "statement": "Closing a view or removing one consumer shall not kill another valid consumer or orphan an unowned process.",
+    "acceptance": "Two hosts share a permitted instance; close one, then both, and inspect leases/background policy.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-01",
+    "group": "security",
+    "title": "Scoped delegated authority",
+    "statement": "Operations shall bind user/workspace/resource/audience/action/expiry and enforce revocation.",
+    "acceptance": "A valid token for workspace X or audience B fails against workspace Y or audience C.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-02",
+    "group": "security",
+    "title": "Provider-side enforcement",
+    "statement": "Each provider shall check request scope and object-version preconditions, independently of UI visibility.",
+    "acceptance": "Bypass the host menu and send a forbidden operation; the provider rejects it.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-03",
+    "group": "security",
+    "title": "No credential copying",
+    "statement": "Integration shall use scoped references/brokering rather than a universal shared credential configuration.",
+    "acceptance": "Inspect distributed artifacts, traces and configs for real secrets; another app cannot read owner tokens.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-04",
+    "group": "security",
+    "title": "Explicit data owners",
+    "statement": "Each state contract shall name its writer authority, read projections and consistency/migration semantics.",
+    "acceptance": "Edit from two hosts; detect conflicts and retain one defined authority rather than divergent copies.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-05",
+    "group": "security",
+    "title": "Trust-matched isolation",
+    "statement": "In-process, web, process, VM and network modes shall be selected by compatible trust and performance policy.",
+    "acceptance": "An untrusted extension cannot enter a high-trust native host merely because its interface matches.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-06",
+    "group": "security",
+    "title": "Safe external inputs",
+    "statement": "Manifests, routes, deep links, contexts and integration messages shall be bounded and validated as data.",
+    "acceptance": "Reject malicious schemes, traversal, context substitution and prompt-like policy overrides.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-07",
+    "group": "security",
+    "title": "Derived-data privacy",
+    "statement": "Caches, search, telemetry, screenshots and generated summaries shall inherit source sensitivity.",
+    "acceptance": "Revoke access; stale previews/counts/snippets cannot reveal restricted source content.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-05-08",
+    "group": "security",
+    "title": "Inspectable exit",
+    "statement": "Users shall be able to see providers/permissions/state owners and detach or export under documented contracts.",
+    "acceptance": "Complete a detach/export workflow without forced account sign-in or unrelated product install.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-01",
+    "group": "composition",
+    "title": "No recursive shell loop",
+    "statement": "Mount graphs and strict startup dependencies shall be acyclic for the initial supported profile.",
+    "acceptance": "Reject A-shell-in-B-shell-in-A-shell and a circular required startup plan.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-02",
+    "group": "composition",
+    "title": "Bounded cyclic event protocols",
+    "statement": "Permitted event cycles shall carry origin/correlation/deduplication and bounded feedback policies.",
+    "acceptance": "Create a reflected event; verify it does not become an unbounded command or notification loop.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-03",
+    "group": "composition",
+    "title": "Scope-safe service reuse",
+    "statement": "Shared instances shall require compatible principal, workspace, configuration, tenancy and isolation.",
+    "acceptance": "Requests from separate tenants are isolated despite identical command or provider names.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-04",
+    "group": "composition",
+    "title": "Locality-aware lowering",
+    "statement": "Same-process/host composition shall use an appropriate qualified local path where feasible, not compulsory network RPC.",
+    "acceptance": "Compare selected path and allocations against a native direct baseline at the accepted profile.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-05",
+    "group": "composition",
+    "title": "Resource admission",
+    "statement": "Discovery, providers and optional graphics shall obey admitted CPU/GPU/memory/network/background budgets.",
+    "acceptance": "Saturate builds/inference while using the host; retain the declared foreground latency/audio contract.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-06",
+    "group": "composition",
+    "title": "Failure-domain containment",
+    "statement": "A provider or broker failure shall have explicit effects and bounded recovery rather than an app-wide crash loop.",
+    "acceptance": "Crash one optional provider; independent base functions remain useful and diagnostics identify the cause.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-07",
+    "group": "composition",
+    "title": "Capability-oriented reuse",
+    "statement": "New hosts shall consume shared capabilities/SDK contracts instead of copying providers or adding arbitrary pairwise data hacks.",
+    "acceptance": "Add a second host and measure reused logic, adapter size and no competing state authority.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-06-08",
+    "group": "composition",
+    "title": "Platform-specific conformance",
+    "statement": "Each native/embedded/remote tier shall declare supported platform, packaging, permissions and degraded behaviors.",
+    "acceptance": "Install the real package on each required profile and verify its claimed integration tier.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-01",
+    "group": "assurance",
+    "title": "Separate structural and product proof",
+    "statement": "Schemas and local validator passes shall not be represented as live product correctness or authorization.",
+    "acceptance": "Every synthetic fixture and result is marked; missing native proof keeps graduation open.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-02",
+    "group": "assurance",
+    "title": "Independent suite coverage",
+    "statement": "Composed paths shall meet independent accepted unit/integration/E2E and other applicable floors without averaging.",
+    "acceptance": "Below-floor, missing, skipped and wrong-revision required reports each reject qualification.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-03",
+    "group": "assurance",
+    "title": "Complete critical evidence",
+    "statement": "All critical federation obligations shall have actual meaningful verification evidence for the selected profile.",
+    "acceptance": "A green aggregate cannot conceal a missing permission, preservation or recovery scenario.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-04",
+    "group": "assurance",
+    "title": "Two independent consumers",
+    "statement": "Shared contract graduation shall include two meaningfully different consumers and one recursive-composite witness.",
+    "acceptance": "Demonstrate reused contracts rather than duplicate bespoke adapters or mocked providers.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-05",
+    "group": "assurance",
+    "title": "Comparative product pilot",
+    "statement": "The same useful job shall be compared against standalone/manual, handoff and conventional integration baselines.",
+    "acceptance": "Retain successful and failed trials, setup effort, maintenance changes and performance distributions.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-06",
+    "group": "assurance",
+    "title": "Authentic media",
+    "statement": "Journey recordings and screenshots shall depict the tested actual profile; authored assets remain separately labelled.",
+    "acceptance": "Trace displayed claims to source/run/artifact; a mock UI cannot qualify an embedded product.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-07",
+    "group": "assurance",
+    "title": "Owner-coordinated rollout",
+    "statement": "Cross-repo provider/consumer changes shall have one integration lead, explicit leases and actual permissions.",
+    "acceptance": "No worker edits another owner checkout or marks consumer adoption from provider-only tests.",
+    "critical": true,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  },
+  {
+    "id": "FED-07-08",
+    "group": "assurance",
+    "title": "Incremental adoption",
+    "statement": "First real bindings shall ship without requiring every product to join or an entirely new platform to exist.",
+    "acceptance": "Two apps remain individually installable and the rest of the estate can ignore federation.",
+    "critical": false,
+    "sources": [
+      "INT-005"
+    ],
+    "status": "PROPOSED_PROGRAM_REQUIREMENT",
+    "verification": "Native contract/journey/fault test as specified; no executed product evidence in this package.",
+    "spec_id": "SPEC-12",
+    "owner_role": "Existing provider and host owners with designated reviewer",
+    "evidence_ids": []
+  }
+]

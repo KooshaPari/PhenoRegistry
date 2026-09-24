@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "recorded_at": "2026-09-11T07:22:03.955030+00:00",
+  "zip_crc": "PASS",
+  "clean_extraction_manifest": {
+    "status": "PASS",
+    "files_verified": 183,
+    "meaning": "Integrity relative to this unsigned manifest; no independent authenticity claim."
+  },
+  "clean_extraction_tests_exit": 0,
+  "clean_extraction_test_count": 68,
+  "fresh_demo": {
+    "record_status": "EXAMPLE",
+    "before_gate": "FAIL",
+    "after_gate": "PASS",
+    "false_success_rejected": true,
+    "limitations": "This is a deterministic toy demonstration, not an autonomous lab or repository deployment."
+  },
+  "tampered_readme_rejected": true,
+  "exact_readme_restoration_accepted": true,
+  "note": "Actual tests on candidate release extraction. Final reseal adds this receipt; final extraction is rechecked without rewriting this receipt.",
+  "final_internal_markdown_targets_resolved": 98
+}

@@ -7,7 +7,7 @@
 
 ## Doctrine
 
-File parity between archived `KooshaPari/TestingKit` and `phenotype-python-sdk/packages/testing-kit/` does **not** close the testing boundary. Testing spans multiple capability slices; each slice has a distinct canonical owner.
+File parity between archived `<REDACTED>/TestingKit` and `phenotype-python-sdk/packages/testing-kit/` does **not** close the testing boundary. Testing spans multiple capability slices; each slice has a distinct canonical owner.
 
 ## Slice matrix
 
@@ -25,7 +25,7 @@ File parity between archived `KooshaPari/TestingKit` and `phenotype-python-sdk/p
 ## Consumer guidance
 
 1. **Python test tooling** — depend on `phenotype-python-sdk` `packages/testing-kit`, not archived TestingKit Python paths.
-2. **Rust testing crates** — depend on `KooshaPari/TestingKit` `rust/` members; do not add HexaKit path deps on evicted crates.
+2. **Rust testing crates** — depend on `<REDACTED>/TestingKit` `rust/` members; do not add HexaKit path deps on evicted crates.
 3. **E2E journeys** — depend on `phenotype-journeys`; BDD crate in TestingKit is interim Rust only.
 
 ## Delete gate

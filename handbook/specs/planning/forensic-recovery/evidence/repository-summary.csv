@@ -1,0 +1,5 @@
+repo,status,evidence_gap
+helios-cli,unavailable,Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid.
+heliosLab,unavailable,Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid.
+forgecode,unavailable,Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid.
+Agentora,unavailable,Repository could not be acquired through available authenticated/public Git transports. No absence inference is valid.

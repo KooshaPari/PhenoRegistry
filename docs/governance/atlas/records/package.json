@@ -1,0 +1,22 @@
+{
+  "package_version": "1.4.0",
+  "scope_date": "2026-09-16",
+  "packaged_at_utc": "2026-09-16T22:58:53.913648+00:00",
+  "packaged_at_pacific": null,
+  "mode": "ADDITIVE_CAPABILITY_DESIGN_PROOF_AND_NUMERIC_GRADING",
+  "fresh_github_audit_performed": false,
+  "native_product_tests_performed": false,
+  "source_repositories_mutated": false,
+  "pilot_results_generated": false,
+  "runtime_authority_granted": false,
+  "based_on_package_version": "1.3.0",
+  "base_archive_sha256": "aa4f4df3f9eefde318880628892bcb1ed3d590cf41079ebb2baf423979ef5863",
+  "revision_intent_ids": [
+    "INT-006"
+  ],
+  "packaged_at_note": "Packaging clock is not an atomic observation cutoff for sequential GitHub reads.",
+  "audit_scope": "Targeted Dino/Civis source and official documentation review; no new inventory census, current-state portfolio audit, native product tests, live grade or bridge execution.",
+  "current_non_zz_owner_count": 24,
+  "owner_allocation_evidence": "Inherited 24-ID one-owner allocation; refresh actual identities and leases before executing.",
+  "targeted_source_inspection_performed": true
+}

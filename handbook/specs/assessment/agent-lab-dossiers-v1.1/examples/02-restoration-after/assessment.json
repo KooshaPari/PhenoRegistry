@@ -1,0 +1,28 @@
+{
+  "kind": "assessment",
+  "schema_version": "1.0.0",
+  "id": "ASSESS-after",
+  "record_status": "EXAMPLE",
+  "assignment_id": "A-after",
+  "assignment_digest": "sha256:afe771e15c13f04b151237ac7a382597531c31637661248cb9b292b09af0fe43",
+  "epoch_id": "E-TOY-1",
+  "subject_digest": "sha256:1433edcb15661c3af159f06100a15bb8ba4b40ac35cf5a8d172ec44ac4237537",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "as_of": "2026-09-11T23:19:57.190324+00:00",
+  "result_ids": [
+    "R-I-RESTORE",
+    "R-I-CORRUPT"
+  ],
+  "evidence_ids": [
+    "EV-OBS",
+    "EV-QUAL"
+  ],
+  "qualification_ids": [
+    "Q-TOY"
+  ],
+  "coverage_limitations": [
+    "Only two toy restoration predicates evaluated.",
+    "No autonomous worker, hosted integration, actual user data, or portfolio repository evaluated."
+  ],
+  "registration_state": "NOT_REQUESTED"
+}

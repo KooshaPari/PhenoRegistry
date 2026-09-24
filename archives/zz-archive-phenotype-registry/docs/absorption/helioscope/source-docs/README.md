@@ -7,9 +7,9 @@
 
 # heliosCLI
 
-[![Build](https://img.shields.io/github/actions/workflow/status/KooshaPari/heliosCLI/ci.yml?branch=main&label=build)](https://github.com/KooshaPari/heliosCLI/actions)
-[![Release](https://img.shields.io/github/v/release/KooshaPari/heliosCLI?include_prereleases&sort=semver)](https://github.com/KooshaPari/heliosCLI/releases)
-[![License](https://img.shields.io/github/license/KooshaPari/heliosCLI)](LICENSE)
+[![Build](https://img.shields.io/github/actions/workflow/status/<REDACTED>/heliosCLI/ci.yml?branch=main&label=build)](https://github.com/KooshaPari/heliosCLI/actions)
+[![Release](https://img.shields.io/github/v/release/<REDACTED>/heliosCLI?include_prereleases&sort=semver)](https://github.com/KooshaPari/heliosCLI/releases)
+[![License](https://img.shields.io/github/license/<REDACTED>/heliosCLI)](LICENSE)
 [![Phenotype](https://img.shields.io/badge/Phenotype-org-blueviolet)](https://github.com/KooshaPari)
 [![AI Slop Inside](https://sladge.net/badge.svg)](https://sladge.net)
 

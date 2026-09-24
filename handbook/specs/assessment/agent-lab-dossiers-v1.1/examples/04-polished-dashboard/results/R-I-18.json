@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-18",
+  "instance_id": "I-18",
+  "criterion_id": "PEP-09-01-02",
+  "assignment_id": "A-DRAFTBOARD",
+  "epoch_id": "E-DRAFTBOARD",
+  "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e",
+  "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c",
+  "execution": "COMPLETED",
+  "verdict": "PASS",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Create task is visually distinct from optional settings.",
+    "assertions_executed": null,
+    "modality": "DYNAMIC"
+  },
+  "supersedes": []
+}

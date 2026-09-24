@@ -1,0 +1,19 @@
+{
+  "kind": "amendment",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "prior_epoch_ref": "REPLACE_WITH_PRIOR_EPOCH_REF",
+  "next_epoch_ref": "REPLACE_WITH_NEXT_EPOCH_REF",
+  "authority_ref": "REPLACE_WITH_AUTHORITY_REF",
+  "change_class": "PRODUCT",
+  "rationale": "REPLACE_WITH_RATIONALE",
+  "alternatives": [
+    "REPLACE_WITH_ALTERNATIVES"
+  ],
+  "affected_obligation_refs": [],
+  "qualification_refs": [],
+  "status": "PROPOSED",
+  "prior_subject_reassessment_ref": "REPLACE_WITH_PRIOR_SUBJECT_REASSESSMENT_REF"
+}

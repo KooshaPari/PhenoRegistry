@@ -35,7 +35,7 @@ planify/
 ### CI/CD
 
 ![CI](https://github.com/KooshaPari/Planify/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/github/license/KooshaPari/Planify)
+![License](https://img.shields.io/github/license/<REDACTED>/Planify)
 
 GitHub Actions CI runs on every push and pull request to `main`, with two
 parallel jobs:
@@ -49,7 +49,7 @@ updates.
 
 ## Deployment
 
-- Web: Vercel (planify.space or planify.kooshapari.com)
+- Web: Vercel (planify.space or planify.<REDACTED>.com)
 - Stack: Upstream Plane (apps/web, apps/space, apps/admin)
 - DB/cache: Postgres 16 + Dragonfly via infra/docker-compose.plane.yml
 

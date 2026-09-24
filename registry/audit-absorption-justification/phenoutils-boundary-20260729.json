@@ -1,9 +1,9 @@
 {
   "audit_id": "phenoutils-boundary-20260729",
   "captured_at": "2026-07-29T00:29:21Z",
-  "scope": "canonical-boundary refresh for KooshaPari/phenoUtils",
+  "scope": "canonical-boundary refresh for <REDACTED>/phenoUtils",
   "source": {
-    "repo": "KooshaPari/phenoUtils",
+    "repo": "<REDACTED>/phenoUtils",
     "url": "https://github.com/KooshaPari/phenoUtils",
     "visibility": "public",
     "archived": false,

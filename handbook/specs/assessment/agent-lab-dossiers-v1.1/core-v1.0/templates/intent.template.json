@@ -1,0 +1,20 @@
+{
+  "kind": "intent",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "parent_intent_refs": [],
+  "mandate_ref": "REPLACE_WITH_MANDATE_REF",
+  "authorship": "HUMAN",
+  "beneficiary": "REPLACE_WITH_BENEFICIARY",
+  "outcome_hypothesis": "REPLACE_WITH_OUTCOME_HYPOTHESIS",
+  "epistemic_status": "UNKNOWN",
+  "commitment": "PROPOSED",
+  "evidence_refs": [],
+  "alternatives": [
+    "REPLACE_WITH_ALTERNATIVES"
+  ],
+  "refutation_condition": "REPLACE_WITH_REFUTATION_CONDITION",
+  "non_goals": []
+}

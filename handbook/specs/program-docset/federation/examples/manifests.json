@@ -1,0 +1,94 @@
+[
+  {
+    "id": "SYN-A-MANIFEST",
+    "product_id": "SYN-APP-A",
+    "package_id": "SYN-PACKAGE-A",
+    "package_version": "0.0.0-example",
+    "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "publisher_id": "SYN-PUBLISHER",
+    "synthetic": true,
+    "evidence_status": "ILLUSTRATIVE_NOT_INSTALLED",
+    "provided_capabilities": [
+      {
+        "id": "SYN-PRODUCT-CONTEXT",
+        "interface_version": "1.0-example",
+        "semantic_contract": "SYN-PRODUCT-CONTEXT-CONTRACT",
+        "schema_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "operations": [
+          "read-product",
+          "explain-gap"
+        ],
+        "data_authority": "SYN-PRODUCT-OWNER"
+      }
+    ],
+    "base_requirements": [],
+    "optional_requirements": [
+      "SYN-WORK-CONTEXT"
+    ],
+    "host_slots": [
+      {
+        "id": "SYN-A-INSPECTOR",
+        "kinds": [
+          "inspector",
+          "command"
+        ],
+        "supported_adapters": [
+          "host-rendered",
+          "headless"
+        ],
+        "security_profile": "SYN-SCOPED-CONTEXT"
+      }
+    ],
+    "lifecycle_contract": "SYN-LEASED-LIFECYCLE",
+    "resource_profile": "SYN-DESKTOP-BUDGET",
+    "state_authorities": [
+      "SYN-PRODUCT-OWNER"
+    ]
+  },
+  {
+    "id": "SYN-B-MANIFEST",
+    "product_id": "SYN-APP-B",
+    "package_id": "SYN-PACKAGE-B",
+    "package_version": "0.0.0-example",
+    "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "publisher_id": "SYN-PUBLISHER",
+    "synthetic": true,
+    "evidence_status": "ILLUSTRATIVE_NOT_INSTALLED",
+    "provided_capabilities": [
+      {
+        "id": "SYN-WORK-CONTEXT",
+        "interface_version": "1.0-example",
+        "semantic_contract": "SYN-WORK-CONTEXT-CONTRACT",
+        "schema_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "operations": [
+          "read-work",
+          "propose-change"
+        ],
+        "data_authority": "SYN-WORK-OWNER"
+      }
+    ],
+    "base_requirements": [],
+    "optional_requirements": [
+      "SYN-PRODUCT-CONTEXT"
+    ],
+    "host_slots": [
+      {
+        "id": "SYN-B-INSPECTOR",
+        "kinds": [
+          "inspector",
+          "command"
+        ],
+        "supported_adapters": [
+          "host-rendered",
+          "headless"
+        ],
+        "security_profile": "SYN-SCOPED-CONTEXT"
+      }
+    ],
+    "lifecycle_contract": "SYN-LEASED-LIFECYCLE",
+    "resource_profile": "SYN-DESKTOP-BUDGET",
+    "state_authorities": [
+      "SYN-WORK-OWNER"
+    ]
+  }
+]

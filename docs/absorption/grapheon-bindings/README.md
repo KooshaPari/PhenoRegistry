@@ -4,8 +4,8 @@
 
 | Field | Value |
 |-------|-------|
-| Source repo | `KooshaPari/grapheon-bindings` |
-| Target repo | `KooshaPari/phenotype-go-sdk` |
+| Source repo | `<REDACTED>/grapheon-bindings` |
+| Target repo | `<REDACTED>/phenotype-go-sdk` |
 | Target paths | `packages/graphclient/` |
 | Absorbed date | 2026-07-17 |
 | Absorbed by | forge agent |
@@ -45,5 +45,5 @@ locally for testing).
 ## Provenance
 
 Branch: `origin/absorb/grapheon-bindings-2026-07-17` on
-`KooshaPari/phenotype-go-sdk`. Source repo
-`KooshaPari/grapheon-bindings` archived via `gh repo archive`.
+`<REDACTED>/phenotype-go-sdk`. Source repo
+`<REDACTED>/grapheon-bindings` archived via `gh repo archive`.

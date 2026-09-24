@@ -1,0 +1,11 @@
+{
+  "generated_at_utc": "2026-09-15T22:51:27.974477+00:00",
+  "observation_date": "2026-09-15",
+  "observation_time_precision": "day for sequential connector reads; exact source event timestamps where supplied",
+  "native_product_execution": false,
+  "packages": {
+    "reportlab": "4.4.9",
+    "PyMuPDF": "1.26.7",
+    "Pillow": "12.3.0"
+  }
+}

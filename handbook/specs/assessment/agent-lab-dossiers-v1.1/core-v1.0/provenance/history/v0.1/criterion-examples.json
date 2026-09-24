@@ -1,0 +1,135 @@
+{
+  "status": "ILLUSTRATIVE_DRAFTS_NOT_QUALIFIED_ADAPTERS",
+  "note": "These are proposed criterion designs, not evaluations. Resolve subject-owned thresholds and qualify referenced procedures before activation.",
+  "criteria": [
+    {
+      "id": "DX.CLEAN-CONSUMER.001",
+      "revision": "0.1.0-draft",
+      "outcome": "A declared consumer obtains the documented core outcome from the distributed artifact in a clean supported environment.",
+      "applicability": "APPLICABLE when the selected slice promises distribution to such a consumer; otherwise explicit scope review",
+      "measurement_mode": "EXECUTABLE",
+      "qualification_status": "NOT_YET_QUALIFIED",
+      "inputs": [
+        "subject artifact digest",
+        "supported environment manifest",
+        "fixture digest",
+        "accepted consumer journey",
+        "setup and execution budget"
+      ],
+      "procedure": [
+        "Create an authorized isolated clean environment",
+        "Acquire the exact distribution artifact",
+        "Follow the declared setup path",
+        "Run the real core journey",
+        "Assert the specified externally observable outcome",
+        "Capture failure, cleanup and provenance"
+      ],
+      "thresholds": "Read outcome and time/resource budgets from accepted subject profile; no universal numeric threshold is invented.",
+      "negative_controls": [
+        "remove a required runtime dependency",
+        "supply an invalid fixture",
+        "replace the main command with successful no-op"
+      ],
+      "evidence": [
+        "installation transcript",
+        "artifact/environment/fixture digests",
+        "journey output",
+        "oracle result",
+        "resource measurements"
+      ],
+      "invalidators": [
+        "distribution artifact changes",
+        "supported environment changes",
+        "journey or oracle changes",
+        "relevant dependency changes"
+      ]
+    },
+    {
+      "id": "DATA.RESTORE-INTEGRITY.001",
+      "revision": "0.1.0-draft",
+      "outcome": "Restoring an accepted backup reproduces the user-data integrity predicates promised for the recovery scenario.",
+      "applicability": "APPLICABLE only where accepted or implied data-durability and recovery obligations require restoration; assess scope rather than blanket library/CLI exclusion",
+      "measurement_mode": "EXECUTABLE",
+      "qualification_status": "NOT_YET_QUALIFIED",
+      "inputs": [
+        "disposable data fixture",
+        "backup digest",
+        "accepted integrity predicates",
+        "restoration procedure",
+        "explicit destructive-test authorization within sandbox"
+      ],
+      "procedure": [
+        "Establish fixture state and integrity baseline",
+        "Create a real backup",
+        "Simulate the authorized failure in isolation",
+        "Restore using the real supported path",
+        "Evaluate integrity predicates against the restored state"
+      ],
+      "thresholds": "All selected mandatory integrity predicates must hold; recovery time and recovery point are separate scoped criteria.",
+      "negative_controls": [
+        "corrupt backup content",
+        "remove an expected record",
+        "mock a successful restore without restoring state"
+      ],
+      "evidence": [
+        "before/after integrity measurements",
+        "backup digest",
+        "restore transcript",
+        "oracle result",
+        "subject and environment identity"
+      ],
+      "invalidators": [
+        "storage schema changes",
+        "backup or restore path changes",
+        "encryption or key-access configuration changes",
+        "relevant dependency changes"
+      ]
+    },
+    {
+      "id": "INTENT.FALSIFIABILITY.001",
+      "revision": "0.1.0-draft",
+      "outcome": "The product's leading value claim has a concrete beneficiary, observable outcome, credible alternatives and a discriminating experiment.",
+      "applicability": "APPLICABLE to active product work seeking further resource allocation; adapt for maintenance-only or archival scopes",
+      "measurement_mode": "ANCHORED_SEMANTIC",
+      "qualification_status": "NOT_YET_QUALIFIED",
+      "inputs": [
+        "accepted intent",
+        "beneficiary evidence",
+        "existing alternatives",
+        "constraints",
+        "research provenance"
+      ],
+      "review_questions": [
+        "What observable outcome supports the claim?",
+        "What evidence would contradict it?",
+        "What could solve the same problem without this feature or product?",
+        "Which smallest authorized experiment would distinguish the alternatives?"
+      ],
+      "anchors": {
+        "UNASSESSABLE": "Required intent or source evidence is unavailable or contradictory without resolution.",
+        "UNSUPPORTED": "A benefit is asserted without a testable beneficiary/outcome relationship.",
+        "TESTABLE": "Beneficiary, outcome, credible alternatives and a discriminating experiment are specified coherently.",
+        "EMPIRICALLY_SUPPORTED": "A relevant executed experiment supports the claim within explicit limits; does not imply market-wide validation."
+      },
+      "negative_controls": [
+        "generic benefit statement with no observable outcome",
+        "invented user evidence",
+        "experiment whose outcome cannot contradict the claim"
+      ],
+      "evidence": [
+        "supporting anchors",
+        "contradicting anchors",
+        "alternatives",
+        "concise review rationale",
+        "uncertainty and abstention",
+        "model/prompt/procedure provenance where used"
+      ],
+      "invalidators": [
+        "target beneficiary changes",
+        "value claim changes",
+        "contradicting evidence arrives",
+        "material changes to alternatives"
+      ]
+    }
+  ]
+}

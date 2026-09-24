@@ -38,7 +38,7 @@ Cluster spine: `docs/compute-infra-subtree.md` on origin/main (9.1 KB, authorita
 |---|---|---|
 | (none) | no live ADR — 0-LOC repo archived as scaffold-only | registry/disposition-index.json (row `repo-go-nippon-archive-only`) |
 
-Retroactive ABSORPTION.md: `KooshaPari/phenotype-tooling/docs/absorbed-from-go-nippon/ABSORPTION.md` on origin (commit `e23873c`).
+Retroactive ABSORPTION.md: `<REDACTED>/phenotype-tooling/docs/absorbed-from-go-nippon/ABSORPTION.md` on origin (commit `e23873c`).
 """,
     "nanovms": """## Authoritative Org ADRs (Upstream Cross-Reference)
 
@@ -82,7 +82,7 @@ Cluster spine: `docs/compute-infra-subtree.md` on origin/main (9.1 KB, authorita
 |---|---|---|
 | (none) | no live ADR — empty 0-LOC scaffold repo | registry/disposition-index.json (row `repo-smart-mcp-go-no-merit`) |
 
-Retroactive ABSORPTION.md: `KooshaPari/phenotype-tooling/docs/absorbed-from-smart-mcp-go/ABSORPTION.md` on origin (commit `e23873c`).
+Retroactive ABSORPTION.md: `<REDACTED>/phenotype-tooling/docs/absorbed-from-smart-mcp-go/ABSORPTION.md` on origin (commit `e23873c`).
 """,
 }
 

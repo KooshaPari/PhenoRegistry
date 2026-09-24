@@ -1,0 +1,26 @@
+{
+  "kind": "measurement-binding",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "criterion_id": "REPLACE_WITH_CRITERION_ID",
+  "instance_id": "REPLACE_WITH_INSTANCE_ID",
+  "subject_scope": "REPLACE_WITH_SUBJECT_SCOPE",
+  "modality": "SEMANTIC",
+  "method": "REPLACE_WITH_METHOD",
+  "expected_behavior": "REPLACE_WITH_EXPECTED_BEHAVIOR",
+  "units_or_anchors": "REPLACE_WITH_UNITS_OR_ANCHORS",
+  "environment_ref": "REPLACE_WITH_ENVIRONMENT_REF",
+  "fixtures": [],
+  "positive_control": "REPLACE_WITH_POSITIVE_CONTROL",
+  "negative_control": "REPLACE_WITH_NEGATIVE_CONTROL",
+  "qualification_refs": [],
+  "resource_limit": "REPLACE_WITH_RESOURCE_LIMIT",
+  "side_effects": [],
+  "authority_ref": "REPLACE_WITH_AUTHORITY_REF",
+  "freshness_rule": "REPLACE_WITH_FRESHNESS_RULE",
+  "evidence_requirements": [
+    "REPLACE_WITH_EVIDENCE_REQUIREMENTS"
+  ]
+}

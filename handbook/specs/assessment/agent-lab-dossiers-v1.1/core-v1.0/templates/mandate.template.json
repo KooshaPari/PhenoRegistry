@@ -1,0 +1,25 @@
+{
+  "kind": "mandate",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "parent_ref": "REPLACE_WITH_PARENT_REF",
+  "issuer_ref": "REPLACE_WITH_ISSUER_REF",
+  "status": "PROPOSED",
+  "scope": [
+    "REPLACE_WITH_SCOPE"
+  ],
+  "allowed_actions": [],
+  "reserved_actions": [],
+  "resource_envelope": {
+    "total_budget_units": 0,
+    "unit": "REPLACE_WITH_UNIT",
+    "consumed_units": 0,
+    "expires_at": "2026-09-10T23:00:00-07:00"
+  },
+  "host_authority_evidence_refs": [],
+  "stop_conditions": [
+    "REPLACE_WITH_STOP_CONDITIONS"
+  ]
+}

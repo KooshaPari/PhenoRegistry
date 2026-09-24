@@ -82,8 +82,8 @@ These invariants conflict directly with `phenodocs`'s bun-workspace design
 
 ## What was archived instead
 
-- Source repo: `KooshaPari/phenotype-landing` → archived on GitHub via
-  `gh repo archive KooshaPari/phenotype-landing --yes`
+- Source repo: `<REDACTED>/phenotype-landing` → archived on GitHub via
+  `gh repo archive <REDACTED>/phenotype-landing --yes`
 - Registry row: `repo-phenotype-landing` → `disposition=ARCHIVE_ONLY`,
   `fsm=absorbed`, `archived_at=2026-07-17T15:50:00.000000Z`,
   `target="phenodocs (packages/landing/ — deferred absorption stub; no code copied)"`

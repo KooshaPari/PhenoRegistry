@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1201113097",
+  "name": "PhenoRegistry",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "8502db07c1692fba78dd221154322938532f5bd0",
+  "sampled_commit_date_utc": "2026-09-15T20:04:40Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "The current default history contains a handbook absorption. New PhenoShared work integrates registry implementation crates while this repository remains listed and owned.",
+  "assessment": "AUTHORITY_AND_IMPLEMENTATION_SPLIT_OPEN",
+  "role": "Curated identity, role and portfolio projections",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Implementation crates moving does not automatically move accepted policy, source intent or all durable state.",
+    "A long squash message includes historical changes; do not count them all as fresh delivery."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1201113097-A1",
+      "title": "Resolve field-level authority",
+      "work": "Map live GitHub facts, accepted identities/roles, source docs, mutable work and generated views. Record what PhenoShared moved and what stays authoritative here.",
+      "acceptance": "One writer/owner per governed field; no duplicate registry inferred from package names.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1201113097",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1201113097-A2",
+      "title": "Refresh the actual non-zz dispatch map",
+      "work": "Bind stable repository IDs, current names/default branches and one user-reported owner chat; record missing/unavailable separately from deleted.",
+      "acceptance": "Every current subject maps to one current folder and receipt; a rename preserves identity.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1201113097",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1201113097-A3",
+      "title": "Make projections truthful and reproducible",
+      "work": "Generate topical views and public metadata from approved records; detect source contradictions and validate links/private-data boundaries.",
+      "acceptance": "Known stale/conflicting records are surfaced; no invented approval or completion percentage.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1201113097",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Coordinate with .github and KooshaPari publication and PhenoShared runtime libraries; do not absorb tool-specific state into a universal database.",
+  "parent_acceptance": "The portfolio map is current, noncontradictory and evidence-qualified while each underlying authority remains explicit.",
+  "sources": [
+    {
+      "id": "CUR-1201113097-S01",
+      "url": "https://github.com/KooshaPari/PhenoRegistry/commit/8502db07c1692fba78dd221154322938532f5bd0",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

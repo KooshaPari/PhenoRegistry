@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Master index and **boundary SSOT** for the KooshaPari polyrepo ecosystem. Connects specs, patterns, templates, and rationalization execution plans.
+Master index and **boundary SSOT** for the <REDACTED> polyrepo ecosystem. Connects specs, patterns, templates, and rationalization execution plans.
 
 ## Stack
 

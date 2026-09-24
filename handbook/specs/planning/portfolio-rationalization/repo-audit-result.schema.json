@@ -1,0 +1,365 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kooshapari.local/schemas/repo-audit-result.schema.json",
+  "title": "Repository Audit Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "repository",
+    "audited_sha",
+    "evidence_tier",
+    "decision",
+    "completion_vector",
+    "claims",
+    "contradictions",
+    "verification",
+    "migration",
+    "repo_ledger_patch",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audited_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{7,64}$"
+    },
+    "evidence_tier": {
+      "enum": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "disposition",
+        "selected_role",
+        "target_authority",
+        "confidence",
+        "human_approval_required"
+      ],
+      "properties": {
+        "disposition": {
+          "enum": [
+            "canonical",
+            "canonical_reset",
+            "canonical_fork",
+            "canonical_lineage",
+            "conditional_canonical",
+            "incubator",
+            "private_ops",
+            "generated_surface",
+            "upstream_reference",
+            "decompose_and_narrow",
+            "decompose_and_archive",
+            "absorb_then_archive",
+            "archive_normalize",
+            "forensic_hold",
+            "forensic_quarantine"
+          ]
+        },
+        "selected_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_authority": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "human_approval_required": {
+          "type": "boolean"
+        },
+        "rejected_alternatives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "alternative",
+              "reason"
+            ],
+            "properties": {
+              "alternative": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "completion_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "artifacts",
+        "verification",
+        "code",
+        "operations",
+        "evaluation",
+        "traceability",
+        "boundary"
+      ],
+      "properties": {
+        "identity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "artifacts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "verification": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "code": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "operations": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "evaluation": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "traceability": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "boundary": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "text",
+          "declared_status",
+          "actual_status",
+          "max_evidence_tier",
+          "evidence"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_-]+$"
+          },
+          "text": {
+            "type": "string"
+          },
+          "declared_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "actual_status": {
+            "enum": [
+              "planned",
+              "specified",
+              "test_defined",
+              "stub",
+              "partial",
+              "implemented_unverified",
+              "verified",
+              "released",
+              "operational",
+              "deprecated",
+              "removed",
+              "unknown"
+            ]
+          },
+          "max_evidence_tier": {
+            "enum": [
+              "E0",
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E5"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "severity",
+          "description",
+          "evidence",
+          "resolution"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resolution": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "check_id",
+          "command",
+          "environment",
+          "exit_code",
+          "result",
+          "evidence_path"
+        ],
+        "properties": {
+          "check_id": {
+            "type": "string"
+          },
+          "command": {
+            "type": "string"
+          },
+          "environment": {
+            "type": "string"
+          },
+          "exit_code": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "result": {
+            "enum": [
+              "pass",
+              "fail",
+              "blocked",
+              "not_run"
+            ]
+          },
+          "evidence_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "migration": {
+      "type": "object",
+      "required": [
+        "state",
+        "sources",
+        "targets",
+        "consumer_status",
+        "rollback"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "none",
+            "proposed",
+            "in_progress",
+            "dual_run",
+            "cutover",
+            "closed",
+            "blocked"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "consumer_status": {
+          "type": "string"
+        },
+        "rollback": {
+          "type": "string"
+        }
+      }
+    },
+    "repo_ledger_patch": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

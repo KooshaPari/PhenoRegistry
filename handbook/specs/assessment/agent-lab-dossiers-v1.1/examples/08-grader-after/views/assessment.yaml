@@ -1,0 +1,1224 @@
+# GENERATED VIEW. Edit canonical JSON inputs, then render again.
+"format": "ASSESSMENT_DOSSIER_VIEW_V1_1"
+"dossier":
+  "kind": "dossier"
+  "schema_version": "1.1.0"
+  "id": "GRADER-AFTER"
+  "record_status": "EXAMPLE"
+  "example_class": "ILLUSTRATIVE_SCENARIO"
+  "title": "PathJudge / corrected evaluator"
+  "subtitle": "The product is unchanged. A qualified assignment amendment can improve the judgment without improving the code."
+  "purpose": "Distinguish behaviorally correct output from incidental filename choices that the consumer does not require."
+  "boundary": "The same fictional output-producing component under two illustrative evaluator epochs."
+  "beneficiary": "A consumer reading records via the public return path, not by a hard-coded grader filename."
+  "authorship": "AGENT_ORIGINATED"
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment."
+  "genesis_rationale": "This fictional repository was created by agents to isolate a consumer-facing capability. Its boundary is a hypothesis, not proof that a separate repository is necessary."
+  "alternatives":
+    - "Keep the output filename requirement only if a real consumer depends on it"
+    - "Correct the grader to validate the public behavior"
+    - "Revise the public contract in a new epoch"
+    - "Do not change the product"
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example."
+  "non_goals":
+    - "Claim real-repository completion"
+    - "Require a human-authored repository idea"
+    - "Wait for a central registry to become operational"
+  "subject_identity":
+    "source_revision": null
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact."
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  "inventory":
+    -
+      "id": "INV-01"
+      "item": "Product output"
+      "declared": "Returns required records"
+      "observed_or_assumed": "Correct contents assumed in both epochs"
+      "gap": "No product delta"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-02"
+      "item": "Filename rule"
+      "declared": "Not required by consumer"
+      "observed_or_assumed": "Grader uses supported return path"
+      "gap": "Evaluator correction, not feature implementation"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-03"
+      "item": "Historical reports"
+      "declared": "Immutable old judgment"
+      "observed_or_assumed": "Old epoch retained"
+      "gap": "No retroactive replacement"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+  "maturity":
+    "scenario_or_scoped_label": "Illustrative: behavioral gate passes; no product-change credit."
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding."
+    "axes":
+      -
+        "axis": "PRODUCT_BEHAVIOR"
+        "status": "ILLUSTRATIVE PASS — same premise"
+        "basis": "No product source changed."
+      -
+        "axis": "ASSIGNMENT_QUALIFICATION"
+        "status": "ILLUSTRATIVE PASS"
+        "basis": "Valid non-identical witness distinguishes grader error."
+      -
+        "axis": "ACTUAL_PRODUCT_EVIDENCE"
+        "status": "NOT_EVALUATED"
+        "basis": "This is an authored scenario, not a live grader run."
+    "value_evidence": "No actual consumer value evidence is included. The case distinguishes a plausible intent from a validated benefit."
+  "finding_ids": []
+  "decision_ids":
+    - "DEC-NEXT"
+  "semantic_reviews":
+    -
+      "topic": "Does this assignment serve the parent outcome?"
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository."
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome."
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product."
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions."
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+  "next_action": "Preserve both epochs and classify the delta as evaluator correction, not implementation improvement."
+  "stop_condition": "Stop repeated implementation retries when a valid witness falsifies the grader assumption."
+  "restart_packet":
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work."
+    "failed_hypotheses":
+      - "The only valid implementation must write output.json."
+      - "A fresh session alone repairs a logically wrong test."
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations."
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  "lineage":
+    "previous_dossier_id": "GRADER-BEFORE"
+    "change_class": "EVALUATOR_CORRECTION"
+    "description": "Subject descriptor digest is identical across the two dossiers. Assignment bytes, epoch, and proposed evaluator interpretation change; no actual product code was modified."
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit."
+  "row_notes":
+    -
+      "instance_id": "I-01"
+      "title": "The core operation produces the required result for a representative valid input"
+      "interpretation": "The scenario product produces the correct set of output records."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-02"
+      "title": "The grader accepts a valid solution that differs from its reference implementation"
+      "interpretation": "A valid implementation using a different output filename is accepted."
+      "next_action": "Qualify filename-independent semantic equivalence against the accepted outcome."
+    -
+      "instance_id": "I-03"
+      "title": "The grader rejects an empty or no-op implementation for nonempty behavior"
+      "interpretation": "The grader still rejects empty/no-op output."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-04"
+      "title": "The oracle's expected result has a justification outside the candidate output alone"
+      "interpretation": "Expected records come from the accepted consumer contract rather than copying candidate output."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-05"
+      "title": "Known grader limitations constrain the claims it may support"
+      "interpretation": "The evaluator scope excludes arbitrary filename requirements not in the consumer contract."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-06"
+      "title": "A grader update has its own version and qualification record"
+      "interpretation": "The corrected evaluator has a new declared version with its own qualification procedure."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-07"
+      "title": "Changing a grader creates an attributable evaluator revision"
+      "interpretation": "Evaluator changes are attributed to a new epoch."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-08"
+      "title": "A corrected oracle does not retroactively rewrite the old product verdict"
+      "interpretation": "The previous report remains preserved; it is not rewritten as a product success."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-09"
+      "title": "A repeated failure signature is retained across sessions"
+      "interpretation": "Repeated failure fingerprints identify the same incidental filename assertion."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-10"
+      "title": "Restart, replay, reseed, replan and contract revision are separately recorded"
+      "interpretation": "Restarting a context is distinguished from correcting the contract."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-11"
+      "title": "A next action targets a discriminating observation rather than identical unbounded retries"
+      "interpretation": "A valid non-identical witness is the next discriminating experiment, not another identical patch."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+"assessment":
+  "kind": "assessment"
+  "schema_version": "1.0.0"
+  "id": "ASSESS-GRADER-AFTER"
+  "record_status": "EXAMPLE"
+  "assignment_id": "A-GRADER-AFTER"
+  "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+  "epoch_id": "E-GRADER-AFTER"
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "result_ids":
+    - "R-I-01"
+    - "R-I-02"
+    - "R-I-03"
+    - "R-I-04"
+    - "R-I-05"
+    - "R-I-06"
+    - "R-I-07"
+    - "R-I-08"
+    - "R-I-09"
+    - "R-I-10"
+    - "R-I-11"
+  "evidence_ids":
+    - "EV-SCENARIO"
+  "qualification_ids": []
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "registration_state": "NOT_REQUESTED"
+"assignment":
+  "kind": "assignment"
+  "schema_version": "1.0.0"
+  "id": "A-GRADER-AFTER"
+  "record_status": "EXAMPLE"
+  "epoch_id": "E-GRADER-AFTER"
+  "status": "LOCKED"
+  "subject_id": "PATHJUDGE-SAME-SUBJECT"
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+  "mandate_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+  "intent_ref": "dossier.json"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "profile_id": "bootstrap"
+  "coverage_statement": "11 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "created_at": "2026-09-11T23:19:57.136661+00:00"
+  "scope_review_status": "ACCEPTED"
+  "scope_review_ref": "SCENARIO-SCOPE-ASSUMPTION"
+  "instances":
+    -
+      "id": "I-01"
+      "criterion_id": "PEP-05-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-05-01-01"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-01.json"
+    -
+      "id": "I-02"
+      "criterion_id": "PEP-06-02-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-02-01"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-02.json"
+    -
+      "id": "I-03"
+      "criterion_id": "PEP-06-02-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-02-02"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-03.json"
+    -
+      "id": "I-04"
+      "criterion_id": "PEP-06-02-07"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-02-07"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-04.json"
+    -
+      "id": "I-05"
+      "criterion_id": "PEP-06-02-09"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-02-09"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-05.json"
+    -
+      "id": "I-06"
+      "criterion_id": "PEP-06-02-10"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-02-10"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-06.json"
+    -
+      "id": "I-07"
+      "criterion_id": "PEP-17-04-04"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-17-04-04"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-07.json"
+    -
+      "id": "I-08"
+      "criterion_id": "PEP-17-04-07"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-17-04-07"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-08.json"
+    -
+      "id": "I-09"
+      "criterion_id": "PEP-18-05-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-05-02"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-09.json"
+    -
+      "id": "I-10"
+      "criterion_id": "PEP-18-05-07"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-05-07"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-10.json"
+    -
+      "id": "I-11"
+      "criterion_id": "PEP-18-05-10"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-05-10"
+      "scope": "The same fictional output-producing component under two illustrative evaluator epochs."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-11.json"
+  "gates":
+    -
+      "id": "BEHAVIORAL-TARGET"
+      "required_instance_ids":
+        - "I-01"
+    -
+      "id": "EVALUATOR-QUALIFICATION"
+      "required_instance_ids":
+        - "I-02"
+        - "I-03"
+"evidence_summary":
+  "kernel_version": "1.0.0"
+  "assessment_id": "ASSESS-GRADER-AFTER"
+  "epoch_id": "E-GRADER-AFTER"
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "record_status": "EXAMPLE"
+  "interpretation": "Consistency-based reduction of accepted input records, NOT independent authentication, product verification, or publication authorization."
+  "coverage_statement": "11 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "weights":
+    "pass_weight": 0.0
+    "fail_weight": 0.0
+    "unknown_weight": 11.0
+    "unresolved_applicability_weight": 0.0
+    "not_applicable_weight": 0.0
+  "assessed_pass_rate": null
+  "assessment_coverage": 0.0
+  "verified_satisfaction_within_settled_applicability": 0.0
+  "optimistic_bound_within_settled_applicability": 1.0
+  "applicability_complete": true
+  "scope_locked": true
+  "mandatory_gate_state": "BLOCKED"
+  "registration_state": "NOT_REQUESTED"
+  "gates":
+    -
+      "id": "BEHAVIORAL-TARGET"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-01"
+    -
+      "id": "EVALUATOR-QUALIFICATION"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-02"
+        - "I-03"
+  "instances":
+    -
+      "instance_id": "I-01"
+      "criterion_id": "PEP-05-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-02"
+      "criterion_id": "PEP-06-02-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-03"
+      "criterion_id": "PEP-06-02-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-04"
+      "criterion_id": "PEP-06-02-07"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-05"
+      "criterion_id": "PEP-06-02-09"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-06"
+      "criterion_id": "PEP-06-02-10"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-07"
+      "criterion_id": "PEP-17-04-04"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-08"
+      "criterion_id": "PEP-17-04-07"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-09"
+      "criterion_id": "PEP-18-05-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-10"
+      "criterion_id": "PEP-18-05-07"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-11"
+      "criterion_id": "PEP-18-05-10"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+"illustrative_summary":
+  "classification": "HYPOTHETICAL_PREMISES_ONLY_NOT_PRODUCT_EVIDENCE"
+  "counts":
+    "PASS": 11
+    "FAIL": 0
+    "UNKNOWN": 0
+    "NOT_APPLICABLE": 0
+    "UNRESOLVED": 0
+  "weights":
+    "PASS": 11.0
+    "FAIL": 0.0
+    "UNKNOWN": 0.0
+    "NOT_APPLICABLE": 0.0
+    "UNRESOLVED": 0.0
+  "assessed_pass_rate": 1.0
+  "assessment_coverage": 1.0
+  "satisfaction": 1.0
+  "states":
+    "I-01": "PASS"
+    "I-02": "PASS"
+    "I-03": "PASS"
+    "I-04": "PASS"
+    "I-05": "PASS"
+    "I-06": "PASS"
+    "I-07": "PASS"
+    "I-08": "PASS"
+    "I-09": "PASS"
+    "I-10": "PASS"
+    "I-11": "PASS"
+  "gates":
+    -
+      "id": "BEHAVIORAL-TARGET"
+      "status": "PASS"
+      "required_instance_ids":
+        - "I-01"
+    -
+      "id": "EVALUATOR-QUALIFICATION"
+      "status": "PASS"
+      "required_instance_ids":
+        - "I-02"
+        - "I-03"
+"findings": []
+"decisions":
+  -
+    "kind": "decision"
+    "schema_version": "1.0.0"
+    "id": "DEC-NEXT"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PATHJUDGE-SAME-SUBJECT"
+    "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+    "disposition": "REVISE_EVALUATOR"
+    "status": "PROPOSED"
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "alternatives":
+      - "Keep the output filename requirement only if a real consumer depends on it"
+      - "Correct the grader to validate the public behavior"
+      - "Revise the public contract in a new epoch"
+      - "Do not change the product"
+    "rationale": "Preserve both epochs and classify the delta as evaluator correction, not implementation improvement."
+    "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET"
+    "reversal_condition": "Stop repeated implementation retries when a valid witness falsifies the grader assumption."
+    "execution_receipt_refs": []
+"rows":
+  -
+    "instance_id": "I-01"
+    "criterion_id": "PEP-05-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The core operation produces the required result for a representative valid input"
+    "interpretation": "The scenario product produces the correct set of output records."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D05"
+    "predicate": "The core operation produces the required result for a representative valid input."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-01"
+        "instance_id": "I-01"
+        "criterion_id": "PEP-05-01-01"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario product produces the correct set of output records."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-02"
+    "criterion_id": "PEP-06-02-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The grader accepts a valid solution that differs from its reference implementation"
+    "interpretation": "A valid implementation using a different output filename is accepted."
+    "next_action": "Qualify filename-independent semantic equivalence against the accepted outcome."
+    "domain": "D06"
+    "predicate": "The grader accepts a valid solution that differs from its reference implementation."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-02"
+        "instance_id": "I-02"
+        "criterion_id": "PEP-06-02-01"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: A valid implementation using a different output filename is accepted."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-03"
+    "criterion_id": "PEP-06-02-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The grader rejects an empty or no-op implementation for nonempty behavior"
+    "interpretation": "The grader still rejects empty/no-op output."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D06"
+    "predicate": "The grader rejects an empty or no-op implementation for nonempty behavior."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-03"
+        "instance_id": "I-03"
+        "criterion_id": "PEP-06-02-02"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The grader still rejects empty/no-op output."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-04"
+    "criterion_id": "PEP-06-02-07"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The oracle's expected result has a justification outside the candidate output alone"
+    "interpretation": "Expected records come from the accepted consumer contract rather than copying candidate output."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D06"
+    "predicate": "The oracle's expected result has a justification outside the candidate output alone."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-04"
+        "instance_id": "I-04"
+        "criterion_id": "PEP-06-02-07"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Expected records come from the accepted consumer contract rather than copying candidate output."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-05"
+    "criterion_id": "PEP-06-02-09"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Known grader limitations constrain the claims it may support"
+    "interpretation": "The evaluator scope excludes arbitrary filename requirements not in the consumer contract."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D06"
+    "predicate": "Known grader limitations constrain the claims it may support."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-05"
+        "instance_id": "I-05"
+        "criterion_id": "PEP-06-02-09"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The evaluator scope excludes arbitrary filename requirements not in the consumer contract."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-06"
+    "criterion_id": "PEP-06-02-10"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A grader update has its own version and qualification record"
+    "interpretation": "The corrected evaluator has a new declared version with its own qualification procedure."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D06"
+    "predicate": "A grader update has its own version and qualification record."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-06"
+        "instance_id": "I-06"
+        "criterion_id": "PEP-06-02-10"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The corrected evaluator has a new declared version with its own qualification procedure."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-07"
+    "criterion_id": "PEP-17-04-04"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Changing a grader creates an attributable evaluator revision"
+    "interpretation": "Evaluator changes are attributed to a new epoch."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D17"
+    "predicate": "Changing a grader creates an attributable evaluator revision."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-07"
+        "instance_id": "I-07"
+        "criterion_id": "PEP-17-04-04"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Evaluator changes are attributed to a new epoch."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-08"
+    "criterion_id": "PEP-17-04-07"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A corrected oracle does not retroactively rewrite the old product verdict"
+    "interpretation": "The previous report remains preserved; it is not rewritten as a product success."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D17"
+    "predicate": "A corrected oracle does not retroactively rewrite the old product verdict."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-08"
+        "instance_id": "I-08"
+        "criterion_id": "PEP-17-04-07"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The previous report remains preserved; it is not rewritten as a product success."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-09"
+    "criterion_id": "PEP-18-05-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A repeated failure signature is retained across sessions"
+    "interpretation": "Repeated failure fingerprints identify the same incidental filename assertion."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D18"
+    "predicate": "A repeated failure signature is retained across sessions."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-09"
+        "instance_id": "I-09"
+        "criterion_id": "PEP-18-05-02"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Repeated failure fingerprints identify the same incidental filename assertion."
+          "assertions_executed": null
+          "modality": "OBSERVATIONAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-10"
+    "criterion_id": "PEP-18-05-07"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Restart, replay, reseed, replan and contract revision are separately recorded"
+    "interpretation": "Restarting a context is distinguished from correcting the contract."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D18"
+    "predicate": "Restart, replay, reseed, replan and contract revision are separately recorded."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-10"
+        "instance_id": "I-10"
+        "criterion_id": "PEP-18-05-07"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Restarting a context is distinguished from correcting the contract."
+          "assertions_executed": null
+          "modality": "OBSERVATIONAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-11"
+    "criterion_id": "PEP-18-05-10"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A next action targets a discriminating observation rather than identical unbounded retries"
+    "interpretation": "A valid non-identical witness is the next discriminating experiment, not another identical patch."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D18"
+    "predicate": "A next action targets a discriminating observation rather than identical unbounded retries."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-11"
+        "instance_id": "I-11"
+        "criterion_id": "PEP-18-05-10"
+        "assignment_id": "A-GRADER-AFTER"
+        "epoch_id": "E-GRADER-AFTER"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: A valid non-identical witness is the next discriminating experiment, not another identical patch."
+          "assertions_executed": null
+          "modality": "OBSERVATIONAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c"
+        "path": "raw/scenario.json"
+        "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+"input_files":
+  -
+    "path": "assessment.json"
+    "bytes": 1202
+    "digest": "sha256:0162e0355b64ee589e8e5534289bc197e6f77a1e01be6e94bc3af21b8d1c5c40"
+  -
+    "path": "assignment.json"
+    "bytes": 7202
+    "digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f"
+  -
+    "path": "decisions/DEC-NEXT.json"
+    "bytes": 938
+    "digest": "sha256:1ca9a5ad635fbba5bbfe18b83f038713fa50589de8ce31dfb2ad1ea5b3c0d380"
+  -
+    "path": "dossier.json"
+    "bytes": 9629
+    "digest": "sha256:fae8a48ffe71cbcb36011290d91af62bd55c0e459d1fe504c01a85e7d8851292"
+  -
+    "path": "evidence/EV-SCENARIO.json"
+    "bytes": 543
+    "digest": "sha256:0f6f698f42a2851a819cfce30756ca0bfa9e75f2e6403d742c8a9db6493e4e06"
+  -
+    "path": "measurement-bindings/MB-I-01.json"
+    "bytes": 1655
+    "digest": "sha256:eecaabcfd67e1be519c2c20235a5219f22ac4e30395b0a86b7a97a91189f4069"
+  -
+    "path": "measurement-bindings/MB-I-02.json"
+    "bytes": 1659
+    "digest": "sha256:73ebe5d86215de46593334e5f1f8a444efddd6112de1a1b1f40ccf0ff23525f8"
+  -
+    "path": "measurement-bindings/MB-I-03.json"
+    "bytes": 1641
+    "digest": "sha256:8c8edec9e92c1d948684307f7492a758c1e494583fd869d20e1177419d49c2bb"
+  -
+    "path": "measurement-bindings/MB-I-04.json"
+    "bytes": 1661
+    "digest": "sha256:f06262d714a723303fc370b1907c4567145748de27e4d0dad834b33616e701d9"
+  -
+    "path": "measurement-bindings/MB-I-05.json"
+    "bytes": 1615
+    "digest": "sha256:058791dc196d2dac08cb66c84539ea89e03f624df0bb0b194562725a50926963"
+  -
+    "path": "measurement-bindings/MB-I-06.json"
+    "bytes": 1615
+    "digest": "sha256:6e98bce5a0b085ee0a12304e50f6871173946d2cb722e56833e668dd3f4d843d"
+  -
+    "path": "measurement-bindings/MB-I-07.json"
+    "bytes": 1616
+    "digest": "sha256:970d8397bff81383e5ed47ca78f7d9b18758a5d93c124e9f7bb8beb51b357a2c"
+  -
+    "path": "measurement-bindings/MB-I-08.json"
+    "bytes": 1642
+    "digest": "sha256:915272f60291c99bdd153b0d394adbcdef966e53edc2f43c1216c10df9944a0c"
+  -
+    "path": "measurement-bindings/MB-I-09.json"
+    "bytes": 1613
+    "digest": "sha256:873ee2f791c63735e61ca77cfa2173a2d5735d2c0696576cfab0501c24713539"
+  -
+    "path": "measurement-bindings/MB-I-10.json"
+    "bytes": 1655
+    "digest": "sha256:6387a7c87689682c0749a160d977db0e621dc37d870535d06f6eb8e942818c12"
+  -
+    "path": "measurement-bindings/MB-I-11.json"
+    "bytes": 1681
+    "digest": "sha256:a01643bcfff1ab8941593f19aed24adb0e0df05ff0c74a6cd1b411777bcdca5e"
+  -
+    "path": "raw/scenario.json"
+    "bytes": 5071
+    "digest": "sha256:edd0efd4a79cd87f561ba525e1039d76709c8ff0033d94d2de22de89c572646b"
+  -
+    "path": "results/R-I-01.json"
+    "bytes": 1032
+    "digest": "sha256:aadb65f0aeea3aa669526869d41aa5c2cff54638e3246b302931f7aa703f84d0"
+  -
+    "path": "results/R-I-02.json"
+    "bytes": 1037
+    "digest": "sha256:dbc246793711bdc8eb71a45d44e26e145639fa3f947e198d851177befe8873bb"
+  -
+    "path": "results/R-I-03.json"
+    "bytes": 1012
+    "digest": "sha256:82db8d5716ea2b941ba272fede9cff273df8016e8423f6879894afee1ceb750a"
+  -
+    "path": "results/R-I-04.json"
+    "bytes": 1063
+    "digest": "sha256:450ec3938cdd3edae9d93eded836cf53f3a6c6d65663f5844438f585c483a5c1"
+  -
+    "path": "results/R-I-05.json"
+    "bytes": 1058
+    "digest": "sha256:0cbe91f6c633525d4801d4dfe609329aca1b15c059a34584c170b7bf76b22961"
+  -
+    "path": "results/R-I-06.json"
+    "bytes": 1056
+    "digest": "sha256:ed14170b7bb192602a0e165d1ddbe0c0491489bff8d92d1d80f49a20ef9cb684"
+  -
+    "path": "results/R-I-07.json"
+    "bytes": 1017
+    "digest": "sha256:3d0ff416d00508907e8b8ac30fe67e38c15e4eb086905d01963735163cb85945"
+  -
+    "path": "results/R-I-08.json"
+    "bytes": 1049
+    "digest": "sha256:593b78b3a919459411104864dab1503edfce65e6a29a5c4e0af70d3b2c461e89"
+  -
+    "path": "results/R-I-09.json"
+    "bytes": 1052
+    "digest": "sha256:63a6ade4a04434915eaac5264809fe37dfa751b924995dbd94e2a5a48d6832c8"
+  -
+    "path": "results/R-I-10.json"
+    "bytes": 1041
+    "digest": "sha256:9223c82297ea1b92509fe4658b37c93c417866c16e57b7b843ecc737f9510e79"
+  -
+    "path": "results/R-I-11.json"
+    "bytes": 1071
+    "digest": "sha256:908f3bb140288d4efc1cf1082a462d200595f634b46385f75fe492ba20bf690b"
+  -
+    "path": "subject.json"
+    "bytes": 187
+    "digest": "sha256:6d0abace691d8361f21eaab3bdb7208e89f98756825536778e06985acd392726"
+"authority_notice": "A generated view and matching hashes establish neither truthful observations nor permission to publish, merge, spend, or retire."

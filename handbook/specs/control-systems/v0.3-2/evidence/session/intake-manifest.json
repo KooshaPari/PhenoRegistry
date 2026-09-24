@@ -1,0 +1,45 @@
+{
+  "source_file": "forge-session-57292f3c-39b6-4f1d-8d38-2446b6148c93-20260911-234402.md",
+  "source_file_id": "file_0000000006f081fdb401cc009d8bf306",
+  "source_sha256": "95bbc70bce59d6771395b4500fe5586838a7d009b054c9ff0d079699f5ad3dcd",
+  "source_bytes": 47868179,
+  "source_lines": 730096,
+  "exported_at": "2026-09-12T06:44:01.529550+00:00",
+  "root_conversation": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+  "conversation_count": 81,
+  "unique_conversation_count": 81,
+  "message_count_decoded": 4588,
+  "database_sections": {
+    ".forge.writes.db": 81
+  },
+  "compressed_conversations": 81,
+  "compaction_frame_message_count": 41,
+  "role_counts": {
+    "System": 162,
+    "User": 141,
+    "Assistant": 1293,
+    "Tool": 2992
+  },
+  "tool_output_counts": {
+    "todo_read": 3,
+    "todo_write": 83,
+    "shell": 597,
+    "fetch": 271,
+    "task": 17,
+    "read": 1430,
+    "fs_search": 545,
+    "search": 10,
+    "write": 20,
+    "patch": 3,
+    "plan": 1,
+    "fs_read": 1,
+    "skill": 2,
+    "remove": 1,
+    "sage": 8
+  },
+  "tool_outputs_marked_error": 392,
+  "method": "Decode each complete JSON context once; do not count readable and lossless views twice. No reconstruction of pre-compaction history. Metadata times retained as stored; their timezone is not independently verified.",
+  "coverage": "Entire export structurally indexed; root decisions and targeted deployment/runtime descendant evidence semantically reviewed. Not a line-by-line semantic audit of all 730096 lines.",
+  "raw_included": false,
+  "publication_note": "Raw export intentionally excluded. Selected excerpts are redacted where needed. Index contains task metadata, not credentials or model reasoning."
+}

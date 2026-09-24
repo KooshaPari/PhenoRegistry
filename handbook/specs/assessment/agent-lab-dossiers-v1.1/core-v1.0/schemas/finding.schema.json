@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/finding.schema.json",
+  "title": "finding",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "finding"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instance_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "class": {
+      "enum": [
+        "IMPLEMENTATION_GAP",
+        "VERIFICATION_GAP",
+        "REQUIREMENT_GAP",
+        "RESEARCH_GAP",
+        "OPPORTUNITY",
+        "CONTRADICTORY_CLAIM",
+        "UNDECLARED_BEHAVIOR",
+        "OBSOLETE_CAPABILITY",
+        "MEASUREMENT_DEFECT",
+        "PROVENANCE_GAP"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "INFORMATIONAL"
+      ]
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "counterevidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "owner_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_action_kind": {
+      "enum": [
+        "IMPLEMENT",
+        "INSTRUMENT",
+        "TEST",
+        "RESEARCH",
+        "EXPERIMENT",
+        "REVISE_ASSIGNMENT",
+        "REMOVE",
+        "NO_ACTION"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "ACCEPTED",
+        "IN_PROGRESS",
+        "BLOCKED",
+        "RESOLVED",
+        "REJECTED"
+      ]
+    },
+    "wakeup_condition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "subject_ref",
+    "instance_refs",
+    "class",
+    "severity",
+    "claim",
+    "evidence_refs",
+    "counterevidence_refs",
+    "owner_ref",
+    "next_action_kind",
+    "status",
+    "wakeup_condition"
+  ],
+  "additionalProperties": false
+}

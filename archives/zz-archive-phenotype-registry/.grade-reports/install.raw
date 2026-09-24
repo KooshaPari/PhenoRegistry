@@ -74,4 +74,4 @@ npm error
 npm error aliases: clean-install, ic, install-clean, isntall-clean
 npm error
 npm error Run "npm help ci" for more info
-npm error A complete log of this run can be found in: /Users/kooshapari/.npm/_logs/2026-06-09T04_21_49_000Z-debug-0.log
+npm error A complete log of this run can be found in: /Users/<REDACTED>/.npm/_logs/2026-06-09T04_21_49_000Z-debug-0.log

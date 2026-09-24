@@ -84,9 +84,9 @@ flowchart TD
 - [x] Agentora consumer repoint — [#90](https://github.com/KooshaPari/Agentora/pull/90) merged; stub crates → phenotype-types/phenotype-config
 - [x] TestingKit phenotype-health repoint — [#8](https://github.com/KooshaPari/TestingKit/pull/8) merged → PhenoObservability
 - [x] Fleet tail verified-clean — phenotype-gfx, Civis, phenotype-teamcomm, phenotype-go-sdk (manifest scan 2026-06-19)
-- [x] Org scan: 0 external `KooshaPari/pheno` git manifest refs (gh search + fleet Cargo.toml/go.mod scan; excl. pheno self + audit docs)
+- [x] Org scan: 0 external `<REDACTED>/pheno` git manifest refs (gh search + fleet Cargo.toml/go.mod scan; excl. pheno self + audit docs)
 - [x] PhenoCompose verified-clean — in-repo path deps only (chokepoints 2026-06-18)
-- [x] `gh repo archive KooshaPari/pheno` — executed 2026-06-19 post gate (registry closeout PR)
+- [x] `gh repo archive <REDACTED>/pheno` — executed 2026-06-19 post gate (registry closeout PR)
 
 ---
 

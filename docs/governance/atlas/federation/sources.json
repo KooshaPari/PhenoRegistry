@@ -1,0 +1,137 @@
+[
+  {
+    "id": "FED-S01",
+    "title": "Apple: Adding support for app extensions",
+    "url": "https://developer.apple.com/documentation/extensionfoundation/adding-support-for-app-extensions-to-your-app",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Custom extension points, discovery, XPC, scope and UI support through ExtensionKit. Platform/SDK/entitlement constraints apply; not arbitrary app embedding.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S02",
+    "title": "Apple: App Extensions",
+    "url": "https://developer.apple.com/documentation/appkit/app-extensions",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Native extension contexts and supported extension surfaces; a limited contract, not whole-app fusion.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S03",
+    "title": "Microsoft: Create app extensions for Windows App SDK apps",
+    "url": "https://learn.microsoft.com/en-us/windows/apps/develop/launch/app-extensions",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Package-catalog discovery, host/provider roles and install/update lifecycle. This documented path requires MSIX identity.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S04",
+    "title": "Microsoft: Implementing In-Place Activation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/com/implementing-in-place-activation",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "OLE demonstrates embedded object interaction and context-sensitive composite menus. Windows-specific precedent; not the proposed universal runtime.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S05",
+    "title": "OSGi Core 8: Resolver Service",
+    "url": "https://osgi.github.io/osgi/core/service.resolver.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Requirement/capability wiring, transitive resolution, contexts and diagnostic failures; reuse ideas or implementation where appropriate.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S06",
+    "title": "Apache Felix Framework",
+    "url": "https://felix.apache.org/documentation/subprojects/apache-felix-framework.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Existing OSGi R8 core implementation. Candidate only where language/runtime/operational costs fit.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S07",
+    "title": "XDG Desktop Portal: For App Developers",
+    "url": "https://flatpak.github.io/xdg-desktop-portal/docs/for-app-developers.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Desktop-resource integration with user-controlled permissions; not general GUI federation.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S08",
+    "title": "XDG Desktop Portal: Documents",
+    "url": "https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Documents.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Scoped document access and permission revocation; portal deletion removes an entry, not the underlying file.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S09",
+    "title": "VS Code: Commands",
+    "url": "https://code.visualstudio.com/api/extension-guides/command",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Command contributions, context conditions, enablement and lazy activation; useful host-adapter reference.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S10",
+    "title": "Eclipse Theia: Extensions and Plugins",
+    "url": "https://theia-ide.org/docs/extensions/",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Different compile-time and runtime extension models; headless and frontend lifecycle must not be conflated.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S11",
+    "title": "Module Federation: Runtime API",
+    "url": "https://module-federation.io/guide/runtime/runtime-api",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Dynamic web remote-module and shared-dependency APIs; not a sandbox or data-authority contract.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S12",
+    "title": "WebAssembly Component Model: Worlds",
+    "url": "https://component-model.bytecodealliance.org/design/worlds.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Import/export boundaries and host/component roles; type surfaces do not establish behavior.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S13",
+    "title": "WebAssembly Component Model: Components",
+    "url": "https://component-model.bytecodealliance.org/design/components.html",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Recursive component composition; component memories are not exported/imported as shared memory.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S14",
+    "title": "Microsoft: Extensibility overview",
+    "url": "https://learn.microsoft.com/en-us/windows/apps/develop/launch/extensibility-overview",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Combines extension discovery and app services; optional package and service models have different purposes.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  },
+  {
+    "id": "FED-S15",
+    "title": "Eclipse Theia: Composing Applications",
+    "url": "https://theia-ide.org/docs/composing_applications/",
+    "consulted_date": "2026-09-16",
+    "kind": "primary-official-documentation",
+    "supports": "Existing configurable application composition and reuse; not necessary to build a new IDE shell for every product.",
+    "limits": "Consulted documentation, not executed integration or exhaustive compatibility verification."
+  }
+]

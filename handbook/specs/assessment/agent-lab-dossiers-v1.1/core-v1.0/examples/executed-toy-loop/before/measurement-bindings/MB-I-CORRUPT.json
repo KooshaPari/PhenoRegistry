@@ -1,0 +1,33 @@
+{
+  "kind": "measurement-binding",
+  "schema_version": "1.0.0",
+  "id": "MB-I-CORRUPT",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T07:03:49.655887+00:00",
+  "criterion_id": "PEP-13-03-03",
+  "instance_id": "I-CORRUPT",
+  "subject_scope": "Bundled toy JSON restoration with a two-record fixture.",
+  "modality": "DYNAMIC",
+  "method": "tools/demo_loop.py observe() executes the selected toy variant and checks the retained raw outcome.",
+  "expected_behavior": "corrupt_backup_rejected must be true",
+  "units_or_anchors": "Boolean predicate; exactly one asserted outcome for this instance.",
+  "environment_ref": "Local temporary directory under this Python process",
+  "fixtures": [
+    "synthetic-alpha-beta-records"
+  ],
+  "positive_control": "restore_checked accepts intact backup and rejects corrupted backup.",
+  "negative_control": "restore_noop emits success text but fails both required outcome predicates.",
+  "qualification_refs": [
+    "Q-TOY"
+  ],
+  "resource_limit": "Two tiny fixture executions; no network.",
+  "side_effects": [
+    "Temporary toy files only"
+  ],
+  "authority_ref": "EXAMPLE-LOCAL-TOY-ONLY",
+  "freshness_rule": "Any change to toy implementation variant, evaluator or fixture requires rerun.",
+  "evidence_requirements": [
+    "raw/observations.json",
+    "raw/qualification.json"
+  ]
+}

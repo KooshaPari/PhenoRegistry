@@ -25,7 +25,7 @@
   "tier": "phenotype-framework",
   "architecture": "layered-workspace",
   "language": "rust",
-  "home": "KooshaPari/PhenoVCS",
+  "home": "<REDACTED>/PhenoVCS",
   "supersedes": [],
   "superseded_by": [],
   "gh_url": "https://github.com/KooshaPari/PhenoVCS",

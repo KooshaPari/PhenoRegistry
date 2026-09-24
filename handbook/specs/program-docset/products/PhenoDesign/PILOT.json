@@ -1,0 +1,24 @@
+{
+  "product_id": "SUP-PHENODESIGN",
+  "name": "PhenoDesign",
+  "role": "Shared design consumer adoption",
+  "status": "PLANNED_NOT_EXECUTED",
+  "baseline": "Simplest correct current user workflow; final comparator versions to be resolved before running",
+  "scenario": "Apply one editable token/component/asset change to two real consumers, compare manual copying with the shared export mechanism.",
+  "negative_cases": [
+    "Broken token export",
+    "Missing licensed asset",
+    "Reduced-motion fallback",
+    "Accessibility regression"
+  ],
+  "measurements": [
+    "Correct useful outcome",
+    "Time and effort to first use",
+    "Failure detection and recovery",
+    "Maintenance and consumer burden",
+    "Relevant resource/profile effects"
+  ],
+  "results": null,
+  "winner": null,
+  "authorization": "Not granted by package"
+}

@@ -3,7 +3,7 @@
 ## Question
 
 Are `Dev/Quillr`, `pheno/Quillr`, `pheno-absorb/Quillr` three separate
-working copies of KooshaPari/Quillr, requiring reconciliation?
+working copies of <REDACTED>/Quillr, requiring reconciliation?
 
 ## Audit method
 
@@ -32,7 +32,7 @@ absorbed/imported snapshot of Quillr from a prior absorption phase).
 - QUI-AUD-009 = **closed** (no action)
 - QUI-GIT-101 (reconcile clones) = **cancelled** (premise was wrong)
 - Cross-repo ref: `pheno/Quillr/` should be marked as
-  `quillr-mirror: deprecated, see KooshaPari/Quillr` in the
+  `quillr-mirror: deprecated, see <REDACTED>/Quillr` in the
   monorepo's docs
 
 ## Action

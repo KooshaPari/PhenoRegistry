@@ -1,6 +1,6 @@
 # Colab Extensions (migrated)
 
-Migrated from archived `KooshaPari/phenotype-colab-extensions` (2026-06-16).
+Migrated from archived `<REDACTED>/phenotype-colab-extensions` (2026-06-16).
 
 ## Runtime home
 - [HeliosLab](https://github.com/KooshaPari/HeliosLab) — `webflow-plugin/`, `agileplus-specs/`

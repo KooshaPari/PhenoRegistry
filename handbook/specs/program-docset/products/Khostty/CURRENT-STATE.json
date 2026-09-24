@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1322607630",
+  "name": "Khostty",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "79e27b63f96669b26f1346a1b9985c327311bd6e",
+  "sampled_commit_date_utc": "2026-09-15T04:39:50Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "The bounded latest default history is README/badge changes. No new terminal implementation is demonstrated by that sample.",
+  "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+  "role": "Native terminal fork or embedding dependency",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Retain current work instead of assuming the lack of a push means no activity."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1322607630-A1",
+      "title": "Identify owned delta and distribution",
+      "work": "Return exact worktree/source base, local patches, intended role (standalone/embedded) and installed build.",
+      "acceptance": "Clear upstream/owned feature and compatibility map.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1322607630",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1322607630-A2",
+      "title": "Run the terminal correctness corpus",
+      "work": "Exercise Unicode, input/IME, resize, alternate-screen, paste, shell integration and high-volume output using real native UI.",
+      "acceptance": "No regressions against upstream on mandatory terminal semantics; native captures and diagnostics.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1322607630",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1322607630-A3",
+      "title": "Prove the actual differentiated use",
+      "work": "Qualify the embedding/integration or workflow the fork exists for, including lifecycle and updates.",
+      "acceptance": "A useful owned outcome with reproducible performance and safe update behavior.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1322607630",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Keep terminal protocol semantics authoritative; use narrow integration adapters rather than duplicating native renderer/editor stacks.",
+  "parent_acceptance": "The intended terminal or embedded terminal is usable and maintains the required semantics of its upstream.",
+  "sources": [
+    {
+      "id": "CUR-1322607630-S01",
+      "url": "https://github.com/KooshaPari/Khostty/commit/79e27b63f96669b26f1346a1b9985c327311bd6e",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

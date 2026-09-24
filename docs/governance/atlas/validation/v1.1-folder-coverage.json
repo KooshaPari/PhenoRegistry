@@ -1,0 +1,24 @@
+{
+  "source_zip_sha256": "dcce1346c0e6b743a75c85cfb1d8ab9f27ae090c5b4e99ca8fa5b4a2535e2a4c",
+  "archive_files": 259,
+  "existing_subject_folders": 32,
+  "current_non_zz": 24,
+  "covered_by_exact_name": 22,
+  "missing_by_exact_name": [
+    ".github",
+    "PhenoShared"
+  ],
+  "other_historical_or_capability_folders": [
+    "Agentora-capability",
+    "PhenoAI",
+    "PhenoGfx",
+    "PhenoInfra",
+    "PhenoMLX",
+    "PhenoTooling",
+    "Pine",
+    "ResearchLedger",
+    "SessionLedger",
+    "Substrate"
+  ],
+  "meaning": "This checks folder coverage only, not whether every subject dossier is semantically complete or current."
+}

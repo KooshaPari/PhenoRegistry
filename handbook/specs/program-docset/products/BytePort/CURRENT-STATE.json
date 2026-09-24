@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "861430079",
+  "name": "BytePort",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "0b4a23b1196d1e25a1bcfb405d2a0f07e7c64fc7",
+  "sampled_commit_date_utc": "2026-09-16T00:35:18Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Two recent changes report removal of duplicate/conflicting global logger initialization in the Tauri application.",
+  "assessment": "RECENT_LAUNCH_REPAIR_UNQUALIFIED",
+  "role": "Git-to-service deployment product",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "A logger fix is useful but is not a measured clean launch or a deployment journey.",
+    "Trace/log semantics can change when one logging layer is removed."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-861430079-A1",
+      "title": "Verify native launch and logging",
+      "work": "Run the actual packaged app from a clean profile outside the repository in debug/release where supported; test single initialization and usable diagnostic output.",
+      "acceptance": "No initialization panic, no duplicated/missing required logs, no secret exposure.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "861430079",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-861430079-A2",
+      "title": "Close one deployment path",
+      "work": "Connect a real permitted repository, build, provision, observe health/logs, update and roll back on one supported target.",
+      "acceptance": "A real service responds; failed provisioning and failed updates leave known recoverable state.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "861430079",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-861430079-A3",
+      "title": "Exercise current shared dependencies",
+      "work": "Coordinate runtime/manifest packages with PhenoShared and test cache-isolated source resolution and actual consumer behavior.",
+      "acceptance": "No reliance on a deleted path, warm Cargo cache or adjacent developer checkout; contract-compatible migration evidence.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "861430079",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "BytePort owns the deployment experience, not a new copy of the runtime foundation. Runtime capabilities must be negotiated and verified.",
+  "parent_acceptance": "An installed client completes repository-to-service and recovery on a supported target.",
+  "sources": [
+    {
+      "id": "CUR-861430079-S01",
+      "url": "https://github.com/KooshaPari/BytePort/commit/0b4a23b1196d1e25a1bcfb405d2a0f07e7c64fc7",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-861430079-S02",
+      "url": "https://github.com/KooshaPari/BytePort/commit/c0aff200ef81b6d8914543b1e9f40ae9c001e8df",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

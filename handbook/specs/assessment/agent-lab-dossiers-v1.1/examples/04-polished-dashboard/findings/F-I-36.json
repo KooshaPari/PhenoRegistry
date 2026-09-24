@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-36",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "DRAFTBOARD",
+  "instance_refs": [
+    "I-36"
+  ],
+  "class": "RESEARCH_GAP",
+  "severity": "MEDIUM",
+  "claim": "In the fictional scenario: No feasibility experiment tested the essential persistence dependency.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "RESEARCH",
+  "status": "PROPOSED",
+  "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+}

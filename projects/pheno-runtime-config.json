@@ -1,6 +1,6 @@
 {
   "name": "pheno-runtime-config",
-  "full_name": "KooshaPari/pheno-runtime-config",
+  "full_name": "<REDACTED>/pheno-runtime-config",
   "description": "Phenotype-org runtime configuration loader",
   "default_branch": "main",
   "language": "Rust",
@@ -15,7 +15,7 @@
   "role": "runtime-config",
   "federated_crates": [],
   "federated_to": "phenotype-infra",
-  "absorbed_into": "KooshaPari/phenotype-infra (federation-service per ADR-049) + pheno-* runtime context layer",
+  "absorbed_into": "<REDACTED>/phenotype-infra (federation-service per ADR-049) + pheno-* runtime context layer",
   "disposition": "ARCHIVE_ONLY",
   "status": "active",
   "lifecycle": "active",

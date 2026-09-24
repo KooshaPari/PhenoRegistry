@@ -1,0 +1,31 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-RESTORE",
+  "instance_id": "I-RESTORE",
+  "criterion_id": "PEP-13-03-05",
+  "assignment_id": "A-after",
+  "assignment_digest": "sha256:69141f4688b81d5d8d692b63694308060fbc5d49cfe0f6c477117a74cacc13c9",
+  "epoch_id": "E-TOY-1",
+  "subject_digest": "sha256:1433edcb15661c3af159f06100a15bb8ba4b40ac35cf5a8d172ec44ac4237537",
+  "execution": "COMPLETED",
+  "verdict": "PASS",
+  "evidence_state": "CURRENT",
+  "review_status": "ACCEPTED",
+  "observed_at": "2026-09-11T07:03:49.676153+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-OBS"
+  ],
+  "qualification_ids": [
+    "Q-TOY"
+  ],
+  "evaluator_id": "toy-outcome-grader",
+  "evaluator_digest": "sha256:01f9fdab5fa5e8dcc42fc4d5a28d8c56cf44793be09287582bbcbab5c7d5d239",
+  "observation": {
+    "summary": "restored_integrity observed as True on the actual bundled toy variant.",
+    "assertions_executed": 1,
+    "modality": "DYNAMIC"
+  },
+  "supersedes": []
+}

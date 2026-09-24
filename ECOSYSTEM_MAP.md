@@ -1,4 +1,4 @@
-# KooshaPari Ecosystem Map
+# <REDACTED> Ecosystem Map
 
 > ⚠️ **NARRATIVE MAP STALE (as of 2026-06-28).** The role tables below use an
 > older 111-repo taxonomy and still reference EXCLUDED / archived / deleted repos
@@ -10,7 +10,7 @@
 
 > Generated: 2026-06-19 | Repos audited: 13 canonical (live, GitHub-reachable) | Validator: `task validate` → `scripts/validate-ecosystem.sh`
 > _2026-06-19 (P4 hygiene #93):_ Clusters **D** (observability), **I** (*Kit SDKs), **H** (gateway + config) refreshed from `BOUNDARY_OWNERS.md` matrix.
-> Absorption traceability: `.kilo/audits/kooshapari-absorption-2026-06-18.md` is the authoritative absorption traceability matrix for this update.
+> Absorption traceability: `.kilo/audits/<REDACTED>-absorption-2026-06-18.md` is the authoritative absorption traceability matrix for this update.
 > Last SSOT run: see `scripts/validate-ecosystem.sh --json` (re-run on every map edit)
 > _2026-06-18 (L5-114, post-archive):_ 4 source repos (phenotype-voxel, phenotype-terrain, phenotype-water, phenotype-postfx) **ARCHIVED + DELETED** after phenotype-gfx#10 merged (sha 5380b2bd, 311 tests pass, 18,957 lines migrated). Registry rows terminal `fsm=archived`.
 
@@ -43,7 +43,7 @@ Role split for the spec/governance spine (so indexes stop competing):
 |------|-------|-------|
 | **shared-lib** | 23 | pheno, HexaKit, phenoShared, phenoUtils, Authvault, Tasken, Apisync, phenoObservability, PhenoPlugins, FocalPoint, PhenoVCS, Benchora, phenotype-journeys, **phenotype-gfx** (single canonical graphics/visual substrate per ADR-004 + ADR-031; absorbs voxel/terrain/water/postfx via PR #10), Compound-Spheres-3D, **fastmcp-asset** (Rust pack/asset handler folded into PhenoFastMCP-rust/crates/fastmcp-asset after McpKit extraction - see registry#projects/phenotype-mcp-asset.json), **nanovms** (3-tier VMM/sandbox layer per ADR-022) |
 
-> **Note 2026-06-18**: `phenotype-auth-ts` was archived in this wave and absorbed into [AuthKit](https://github.com/KooshaPari/AuthKit) `typescript/packages/auth-ts/` (PR #120). The row above is stale pending the next rationalization update. **McpKit carve-out (2026-06-18)**: the Rust `phenotype-mcp-asset` lib was extracted from `McpKit/rust/phenotype-mcp-asset/` into temporary [KooshaPari/phenotype-mcp-asset](https://github.com/KooshaPari/phenotype-mcp-asset), then folded into [KooshaPari/PhenoFastMCP-rust](https://github.com/KooshaPari/PhenoFastMCP-rust) at `crates/fastmcp-asset`.|
+> **Note 2026-06-18**: `phenotype-auth-ts` was archived in this wave and absorbed into [AuthKit](https://github.com/KooshaPari/AuthKit) `typescript/packages/auth-ts/` (PR #120). The row above is stale pending the next rationalization update. **McpKit carve-out (2026-06-18)**: the Rust `phenotype-mcp-asset` lib was extracted from `McpKit/rust/phenotype-mcp-asset/` into temporary [<REDACTED>/phenotype-mcp-asset](https://github.com/KooshaPari/phenotype-mcp-asset), then folded into [<REDACTED>/PhenoFastMCP-rust](https://github.com/KooshaPari/PhenoFastMCP-rust) at `crates/fastmcp-asset`.|
 | **SDK** | 8 | AuthKit, DataKit, ObservabilityKit, ResilienceKit, TestingKit, PlatformKit, PhenoKits, HexaKit |
 | **tooling** | 11 | AgilePlus, phenotype-dep-guard, phenotype-tooling, phenotype-infra, PhenoDevOps, Conft, agent-devops-setups, helioscope, Benchora, agileplus-spec-harmonizer, PhenoCompose |
 | **product / app** | 12 | Agentora, thegent, Tracera, AgilePlus, PlayCua, Dino, eyetracker, hwLedger, phenoRouterMonitor, slickport, **BytePort** (Tauri 2.x desktop app per ADR-022), **SessionLedger** (OKF-native session compiler: sl-daemon + sl-viewer) |
@@ -62,7 +62,7 @@ Role split for the spec/governance spine (so indexes stop competing):
 
 ### 1.1 Unknown Repos Triage (T-SP.2, 2026-06-24)
 
-Reconciliation of `gh repo list KooshaPari` (128 repos, 2026-06-24) against the 111 already-mapped. The remaining 88 were not classified in the prior pass because they were either (a) absorbed already but the row was missed, (b) absorbed already and missing, or (c) true orphans needing a role decision. Full triage in [`docs/registry-sweep-2026-06-24.md`](./docs/registry-sweep-2026-06-24.md).
+Reconciliation of `gh repo list <REDACTED>` (128 repos, 2026-06-24) against the 111 already-mapped. The remaining 88 were not classified in the prior pass because they were either (a) absorbed already but the row was missed, (b) absorbed already and missing, or (c) true orphans needing a role decision. Full triage in [`docs/registry-sweep-2026-06-24.md`](./docs/registry-sweep-2026-06-24.md).
 
 **Top 18 ACTIVE orphans** (most-recently-pushed, highest language fit, need role decision):
 
@@ -105,13 +105,13 @@ Reconciliation of `gh repo list KooshaPari` (128 repos, 2026-06-24) against the 
 
 \* MCP boundary rationalization (2026-06-17, ADR-017): **McpKit**, **PhenoMCP** archived — superseded by [PhenoFastMCP](https://github.com/KooshaPari/PhenoFastMCP)* (framework), [PhenoMCPServers](https://github.com/KooshaPari/PhenoMCPServers) (implementations), and [substrate](https://github.com/KooshaPari/substrate) (runtime). Py edge: `phenotype-python-sdk` `[connect]` extras; Go edge: PhenoFastMCP-go / MCPForge.
 
-\* Absorption outcomes (2026-06-18): **dagctl** → absorbed into [phenodag](https://github.com/KooshaPari/phenodag) (archived, see `docs/adr/ADR-dag-superset-merge.md`); **kwality** → archived (preserved for historical reference; ADR/SBOM/SLSA patterns extracted to `phenotype-tooling`); **phenotype-auth-ts** → replaced by `libs/auth-ts` (TypeScript auth library) + `AuthKit` (Rust auth SDK); **dinoforge-packs** → absorbed into `Dino/community-packs/`; **Configra** → phantom (404; config responsibility owned by `Conft` + `phenoShared`); **Logify** → phantom (404; out of scope); **phenotype-voxel, phenotype-terrain, phenotype-water, phenotype-postfx** → ARCHIVED + DELETED 2026-06-18 (L5-114) after [PR #10](https://github.com/KooshaPari/phenotype-gfx/pull/10) merged (sha 5380b2bd, ADR-004 + ADR-031; 4 → 1). See `.kilo/audits/kooshapari-absorption-2026-06-18.md` for the authoritative absorption traceability matrix.
+\* Absorption outcomes (2026-06-18): **dagctl** → absorbed into [phenodag](https://github.com/KooshaPari/phenodag) (archived, see `docs/adr/ADR-dag-superset-merge.md`); **kwality** → archived (preserved for historical reference; ADR/SBOM/SLSA patterns extracted to `phenotype-tooling`); **phenotype-auth-ts** → replaced by `libs/auth-ts` (TypeScript auth library) + `AuthKit` (Rust auth SDK); **dinoforge-packs** → absorbed into `Dino/community-packs/`; **Configra** → phantom (404; config responsibility owned by `Conft` + `phenoShared`); **Logify** → phantom (404; out of scope); **phenotype-voxel, phenotype-terrain, phenotype-water, phenotype-postfx** → ARCHIVED + DELETED 2026-06-18 (L5-114) after [PR #10](https://github.com/KooshaPari/phenotype-gfx/pull/10) merged (sha 5380b2bd, ADR-004 + ADR-031; 4 → 1). See `.kilo/audits/<REDACTED>-absorption-2026-06-18.md` for the authoritative absorption traceability matrix.
 
 ---
 
 ## 2. Dependency Edges (Adjacency List)
 
-Notation: `A -> B` means A depends on B. Only cross-repo edges to other KooshaPari repos are shown. Internal workspace path-deps are listed as `(workspace crate)`.
+Notation: `A -> B` means A depends on B. Only cross-repo edges to other <REDACTED> repos are shown. Internal workspace path-deps are listed as `(workspace crate)`.
 
 ```text
 phenotype-infra           -> (standalone IaC/spec, no code deps)
@@ -140,7 +140,7 @@ phenoRouterMonitor        -> pheno (phenotype-error-core, phenotype-errors,
                               phenotype-core, phenotype-health, phenotype-async-traits,
                               phenotype-validation)
 Agentora                  -> (self-contained Rust workspace: agentkit)
-thegent                   -> (Python; no KooshaPari cross-deps detected)
+thegent                   -> (Python; no <REDACTED> cross-deps detected)
 PhenoAgent                -> (empty/stub manifest; extracted from phenotype-infra)
 phenotype-gfx             -> (self-contained: Rust core + Zig/Mojo hot-path ports + C#/other edges, ADR-004 single-core-ffi-edges; phenotype-voxel/terrain/water/postfx absorbed 2026-06-18 via PR #10 (merged, sha 5380b2bd) — source repos archived + deleted; Unity shims + bevy_adapter feature under phenotype-gfx/crates/)
 phenotype-voxel (A)      -> ARCHIVED + DELETED 2026-06-18 (L5-114) [absorbed into phenotype-gfx via PR #10, sha 5380b2bd]
@@ -634,7 +634,7 @@ archived). Protected: `KlipDot`, `KodeVibeGo`, `kwality`, `AppGen`,
 | 2026-06-18 (L5-114, archive wave) | **4 sister repos ARCHIVED + DELETED** (phenotype-voxel, phenotype-terrain, phenotype-water, phenotype-postfx) after [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) merged (sha 5380b2bd, 311 tests pass, 18,957 lines migrated, 13,275 LOC in target after dedup). Registry rows: `fsm=awaiting-pr-merge → archived`, `archived_date: 2026-06-18`. `gh repo archive` + `gh repo delete` (delete_repo scope) executed for all 4. Cross-reference descriptions added before deletion. Chokepoint `phenotype-gfx-pr-10-merge` CLEARED. | SUPERSEDE → ARCHIVED (4 sister repos deleted) | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged), registry `disposition-index.json` rows `block-c-phenotype-{voxel,terrain,water,postfx}`, `chokepoints.json` row `phenotype-gfx-pr-10-merge` cleared |
 | 2026-06-18 (L5-104.7) | **4 source repos (phenotype-voxel, phenotype-terrain, phenotype-water, phenotype-postfx) SUPERSEDED by phenotype-gfx** per ADR-004 (single-core-ffi-edges) + ADR-031 (supersession pattern). phenotype-gfx is the single canonical graphics/visual substrate (Rust core + Zig/Mojo hot-path ports + C#/other edges). Source repos pending archive once PR #10 merges. Registry rows updated to `disposition=SUPERSEDE`, `target=phenotype-gfx`, `fsm=awaiting-pr-merge`. | AFFIRM → SUPERSEDE (voxel, postfx); (new SUPERSEDE) (terrain, water); 4 sister repos pending archive | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (open, awaiting merge) — see [RATIONALIZATION_PLAN.md § Active Consolidation](RATIONALIZATION_PLAN.md#active-consolidation-2026-06-18-phenotype-gfx-absorbs-the-4-sister-repos) and `registry/disposition-index.json` rows `block-c-phenotype-{voxel,terrain,water,postfx}` |
 | 2026-06-18 (#153) | **4-repo retirement:** dagctl, kwality, dinoforge-packs, phenotype-auth-ts archived; absorbed into phenodag / phenotype-tooling / Dino / AuthKit respectively. Source content preserved at target. | 4 → 0 (RETIRE / ABSORB / archived) | registry#194 / toolkit#158 / Dino#297 / AuthKit#120 |
-| 2026-06-18 | Configra / Logify phantom (404) — config responsibility owned by Conft + phenoShared | n/a (out of scope) | `.kilo/audits/kooshapari-absorption-2026-06-18.md` |
+| 2026-06-18 | Configra / Logify phantom (404) — config responsibility owned by Conft + phenoShared | n/a (out of scope) | `.kilo/audits/<REDACTED>-absorption-2026-06-18.md` |
 | 2026-06-17 (ADR-017) | MCP boundary rationalization — McpKit, PhenoMCP archived; superseded by PhenoFastMCP + PhenoMCPServers + substrate | SUPERSEDE | registry#156, ADR-017 |
 | 2026-06-17 (ADR-019) | MCP runtime absorption — cheap-llm-mcp, dispatch-mcp, thegent-dispatch deleted; absorbed into substrate | SUPERSEDE | substrate#28 |
 
@@ -677,7 +677,7 @@ bottom of this file. The `--check` mode of the regen script (and the
   - `--out FILE` — write to a different path (does not touch the canonical file).
   - `--bindings PATH` — override the path to the sibling curation-data repo's `_bindings.json`.
 
-*This document is the living ecosystem map for KooshaPari/phenotype-registry. Update on each major rationalization action.*
+*This document is the living ecosystem map for <REDACTED>/phenotype-registry. Update on each major rationalization action.*
 
 <!-- drift-detection: auto-regen-on-push-pr (.github/workflows/ecosystem-map-regen.yml) -->
 <!-- drift-detection: weekly-cron (.github/workflows/ecosystem-map-weekly.yml) -->

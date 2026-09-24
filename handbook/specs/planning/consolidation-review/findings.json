@@ -1,0 +1,105 @@
+{
+  "review_date": "2026-09-15",
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P0 before split",
+      "title": "False Agentora classification propagates into split instructions",
+      "evidence": [
+        "E11"
+      ],
+      "observations": [
+        "R01",
+        "R02"
+      ],
+      "status": "confirmed-source-mismatch",
+      "next_action": "Rebuild component map before further target moves"
+    },
+    {
+      "id": "F02",
+      "priority": "P0 before mutations",
+      "title": "Branch count and admin privileges substitute for acceptance",
+      "evidence": [
+        "E02",
+        "E09"
+      ],
+      "observations": [
+        "R03",
+        "R04"
+      ],
+      "status": "confirmed-instructions-and-selected-merges",
+      "next_action": "Preserve refs; enforce current-head checks and explicit action authority"
+    },
+    {
+      "id": "F03",
+      "priority": "P0 observation",
+      "title": "Deletion verdict misclassifies archived=false",
+      "evidence": [
+        "E04",
+        "E05"
+      ],
+      "observations": [],
+      "status": "fixture-reproduced",
+      "next_action": "Use typed observation, immutable IDs, access/error classification and negative controls"
+    },
+    {
+      "id": "F04",
+      "priority": "P0 authority",
+      "title": "Scoped decisions and supersession do not consistently reach descendants",
+      "evidence": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E08",
+        "E12",
+        "E15"
+      ],
+      "observations": [],
+      "status": "confirmed-timeline; selected-late-actions-unresolved",
+      "next_action": "Reconcile per-entity approvals/skips; retain named exceptions as exceptions"
+    },
+    {
+      "id": "F05",
+      "priority": "P0 acceptance",
+      "title": "File presence and limited checks over-promoted to semantic migration",
+      "evidence": [
+        "E06",
+        "E07",
+        "E10",
+        "E15"
+      ],
+      "observations": [
+        "R03",
+        "R04",
+        "R06",
+        "R07"
+      ],
+      "status": "confirmed-proof-gap; current-runtime-parity-unverified",
+      "next_action": "Verify capability, consumer, packaging and custody at frozen target revisions"
+    },
+    {
+      "id": "F06",
+      "priority": "P0 concurrent writes",
+      "title": "Shared target worktrees and restart retries lack bounded ownership",
+      "evidence": [
+        "E13",
+        "E14"
+      ],
+      "observations": [],
+      "status": "confirmed-overlap; corruption-not-established",
+      "next_action": "Unique worktrees, target-manifest leases, operation IDs and generation fencing"
+    },
+    {
+      "id": "F07",
+      "priority": "P1 handoff",
+      "title": "Compressed summary is treated as authority and current state",
+      "evidence": [
+        "E16"
+      ],
+      "observations": [],
+      "status": "source-metadata-and-summary-inconsistency",
+      "next_action": "Use exact instructions and receipts; summaries navigation only"
+    }
+  ]
+}

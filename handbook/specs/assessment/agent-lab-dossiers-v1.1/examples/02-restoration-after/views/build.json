@@ -1,0 +1,108 @@
+{
+  "format": "DOSSIER_RENDER_RECEIPT_V1_1",
+  "renderer_version": "1.1.0",
+  "renderer_digest": "sha256:6504776ad4708c2799d3fbc50bbabc8d403a004ce42cb074e67b648a94f809ba",
+  "core_reducer_digest": "sha256:ac58230d111f1bb4542ad0818bd15e618b30067cc0f1c09d10355f6b21e48c52",
+  "schema_digest": "sha256:324acd4bc92509dd6b31f1d34ca06baba8fc4612d1987b967da26ac371f17a61",
+  "input_manifest_digest": "sha256:b9786b542945b8066c8466b7b6da66d2f1ef81fa9310281a48e456d49c2c7212",
+  "input_digest_profile": "PEP Python JSON digest profile; NOT RFC8785/JCS",
+  "inputs": [
+    {
+      "path": "assessment.json",
+      "bytes": 884,
+      "digest": "sha256:5385eb479549ebcfbdf3de000e51d3750083e27ce8d5f87680cc7f7577e37d8f"
+    },
+    {
+      "path": "assignment.json",
+      "bytes": 2019,
+      "digest": "sha256:afe771e15c13f04b151237ac7a382597531c31637661248cb9b292b09af0fe43"
+    },
+    {
+      "path": "decisions/DEC-NEXT.json",
+      "bytes": 854,
+      "digest": "sha256:c38c74217e55719903bee036f66bdea089ef8d66508c030ebe2a443bfe11dd1b"
+    },
+    {
+      "path": "dossier.json",
+      "bytes": 6050,
+      "digest": "sha256:1212cbe434a1251caac49cf0315d505b6b765c0afc29449f519916c1e44283ff"
+    },
+    {
+      "path": "evidence/EV-OBS.json",
+      "bytes": 518,
+      "digest": "sha256:63051b58a29fc0d129a5437d3593a94c8b068e37f07fe9a3e07e2db978d7ba5f"
+    },
+    {
+      "path": "evidence/EV-QUAL.json",
+      "bytes": 522,
+      "digest": "sha256:71712654cb6d0f96ad361b2e1ee2cfb9c222e07c8c1bc7fa46959d2ebc30f5f4"
+    },
+    {
+      "path": "measurement-bindings/MB-I-CORRUPT.json",
+      "bytes": 1336,
+      "digest": "sha256:0b67f40bceae1cfb842111169d2bd1a854e11ae605298ef7631961e1e213988f"
+    },
+    {
+      "path": "measurement-bindings/MB-I-RESTORE.json",
+      "bytes": 1331,
+      "digest": "sha256:fbca9eae26622d0638ab2cfeca115b0b8cfec58fae8aae4f1f3baf875d9910b0"
+    },
+    {
+      "path": "qualifications/Q-TOY.json",
+      "bytes": 661,
+      "digest": "sha256:e9cdc7fcc65585fb1e18053b5ab06463523f4c0a9baa4145faa186681a83d9b5"
+    },
+    {
+      "path": "raw/observations.json",
+      "bytes": 514,
+      "digest": "sha256:dd88e71502430bead1624a16280513ddd8265ba53d3246dbeac38b7f63433fa6"
+    },
+    {
+      "path": "raw/qualification.json",
+      "bytes": 1205,
+      "digest": "sha256:716000a8dfa0907b86038d4ea42f9357fc736c7b2cdadd98c7fbc5ce7a9d29d9"
+    },
+    {
+      "path": "results/R-I-CORRUPT.json",
+      "bytes": 984,
+      "digest": "sha256:14e7fc4f08212f7e1cc155e90a38ef4798289d4d12595b7e48f44e05385808f3"
+    },
+    {
+      "path": "results/R-I-RESTORE.json",
+      "bytes": 979,
+      "digest": "sha256:484d9aecacb375eb5240125569dc73a0de27298ebcfdfbb89ec0922a03802c07"
+    },
+    {
+      "path": "subject.json",
+      "bytes": 119,
+      "digest": "sha256:c3a7b00bcc1b68aa32774e4e8316e0ae721b9ec1d6c9c7e8c7ba043e1efb2866"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "ASSESSMENT.html",
+      "digest": "sha256:dfd8dc95341c3d5f1cee957468330ec12e16f27897bea239817811f83d3206f4"
+    },
+    {
+      "path": "ASSESSMENT.md",
+      "digest": "sha256:fa8f0e06c71057651bbbd607036aa71961761c19eea643e4db2ed1ddd085375f"
+    },
+    {
+      "path": "views/assessment.json",
+      "digest": "sha256:b45af0ee6bd561e39ef3038ef8b1d8df15b09c9c55a4c38087dd5aa18c669124"
+    },
+    {
+      "path": "views/assessment.yaml",
+      "digest": "sha256:7e9c113a7f4fd44d439168d75c907fb9275f9dfdfaa1922976d1cddc05f3060d"
+    },
+    {
+      "path": "views/records.jsonl",
+      "digest": "sha256:f0d89484ebb2e5e7132aac16d090f062f9066982467364e8361ef5aae146d9c5"
+    }
+  ],
+  "generated_build_receipt_is_not_signed": true,
+  "source_revision": null,
+  "report_commit": null,
+  "registry_commit": null,
+  "registry_state": "NOT_REQUESTED"
+}

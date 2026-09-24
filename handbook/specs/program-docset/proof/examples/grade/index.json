@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.4",
+  "rubric_sha256": "cb4b3e6e888c287df0993612e6b6cd4ba595742d7bea76f7fa72c763334b1a4a",
+  "as_of": "2026-09-16T12:00:00Z",
+  "receipts": [
+    {
+      "path": "receipts/0.json",
+      "sha256": "4b014d43d46e279491ae5999e65ce83caa8199be626f25cd83ae42311d39cedd"
+    },
+    {
+      "path": "receipts/1.json",
+      "sha256": "02db8f07654ec94c5a2af31dc93c47b2479eae92add71eed89e4f0c52cfc7cec"
+    },
+    {
+      "path": "receipts/2.json",
+      "sha256": "36f618d8e6deca74c7fbdfc174f6d18c411410cf8aa40061a0f655fb758a8ed2"
+    },
+    {
+      "path": "receipts/3.json",
+      "sha256": "34825f18b1daddb01a066f8c7e27dd09d4261e4a352c94b09cfb7cf0df8faa18"
+    },
+    {
+      "path": "receipts/4.json",
+      "sha256": "74c4a2ca556a29a78539fbc3733b85562683ac248faead2144b4faac36a44b9d"
+    },
+    {
+      "path": "receipts/5.json",
+      "sha256": "ab753826306e8a206658f791b53aba472e29b429e7d165b551d967b624d58213"
+    },
+    {
+      "path": "receipts/6.json",
+      "sha256": "0739bb5da416d23503305884c129383b59215fd9e0ea54d86ddaa8b56cf00daf"
+    },
+    {
+      "path": "receipts/7.json",
+      "sha256": "797e4b2909e8cfa59e4ff5c28d30082e5c50e91b9af452df9cdebcf4cbdb9aa7"
+    },
+    {
+      "path": "receipts/8.json",
+      "sha256": "afebd04941a9baf55a08dbc6120630909d252f211392519ebdd3d06927aaad38"
+    }
+  ]
+}

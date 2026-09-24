@@ -54,7 +54,7 @@ Per [ADR-ECO-014](docs/adrs/ADR-ECO-014-phenoshared-decompose.md) (2026-06-17):
 - **Not** a domain SDK, framework, or shared-lib SSOT.
 - **Interim staging only** for crates evicted from HexaKit during P3; each crate must land in a **role owner** (`phenotype-config`, `phenotype-resilience`, `PhenoObservability`, `phenotype-types`, `Eventra`, …).
 - Fleet repoints from `pheno` / HexaKit must **not** terminate on `phenoShared` as final target.
-- DELETE gate: all crates relocated + 0 external refs → archive/delete `KooshaPari/phenoShared`.
+- DELETE gate: all crates relocated + 0 external refs → archive/delete `<REDACTED>/phenoShared`.
 
 ---
 
@@ -131,6 +131,12 @@ release-ready cockpit.
 | Live Beads ledger | **UNASSIGNED** | The former loose `phenotype-dag/beads.jsonl` path was volatile and is not a proven canonical store | No agent may call it the SSOT, replay it, or silently recreate it from a stale copy | Name a tracked or managed store; specify writer identity, schema, retention, and read-only recovery procedure |
 | Cockpit publication | **UNASSIGNED** | The former loose HTML output was volatile; its no-delete producer is retained separately | There is no current production dashboard or publication endpoint | Declare a versioned output target, retained artifact policy, reader contract, and deployment/recovery evidence |
 | Legacy loose paths | **PRESERVE / DO NOT OPERATE** | Historical paths remain evidence only when present | Their absence is not authorization to delete, prune, or synthesize replacement content | Complete the four owner gates above, then make a separate retirement decision under the preserve-first policy |
+
+**Source custodian (local operational cockpit):** `cockpit-source` is the provisional
+SOURCE custodian for the **local operational cockpit generators** (LaunchAgent dashboard
+wrapper + Leapfrog static multi-view cockpit). This is distinct from the Beads renderer
+(`pheno-harness`) above and from the UNASSIGNED publication/ledger boundaries. Registered
+in `projects/cockpit-source.json` (boundary `cockpit-source-custodian`).
 
 **Required handoff sequence:** (1) a reviewed source and ledger boundary, (2) a configured
 writer that never deletes prior outputs, (3) content-addressed publication plus retention
@@ -224,7 +230,7 @@ DELETE archived repo  IFF:
 
 
 ### Interaction (added 2026-06-23)
-- **Canonical owner:** `KooshaPari/eyetracker`
+- **Canonical owner:** `<REDACTED>/eyetracker`
 - **Stack:** Rust + UniFFI bindings (Kotlin + Swift)
 - **Boundary:** Eye-tracking framework, calibration, fixation detection, dwell-click accessibility
 - **Status:** active (v0.1.0-alpha, 16/16 FRs defined, released 2026-06-20 per PR #64)
@@ -234,7 +240,7 @@ DELETE archived repo  IFF:
 - **Recommendation:** **KEEP_ACTIVE** — establish per-platform SOTA gap closure roadmap
 
 ### Event-bus Runtime (updated 2026-07-14)
-- **Canonical owner:** `KooshaPari/phenoEvents` ([v0.1.0](https://github.com/KooshaPari/phenoEvents/releases/tag/v0.1.0))
+- **Canonical owner:** `<REDACTED>/phenoEvents` ([v0.1.0](https://github.com/KooshaPari/phenoEvents/releases/tag/v0.1.0))
 - **Stack:** Rust (SQLite durable outbox + OTLP)
 - **Boundary:** Reusable runtime event bus, envelope handling, retries, DLQ, idempotency, projections, and tracing.
 - **Status:** active; Eventra archived after the Eventra #65 migration landed in phenoEvents #30.
@@ -244,7 +250,7 @@ DELETE archived repo  IFF:
 - **Recommendation:** **KEEP_ACTIVE** — consolidate eligible consumers onto phenoEvents; retain Eventra only as read-only history.
 
 ### Configuration (Rust) (refreshed 2026-06-23)
-- **Canonical owner:** `KooshaPari/Configra`
+- **Canonical owner:** `<REDACTED>/Configra`
 - **Stack:** Rust
 - **Boundary:** Rust config framework (typed layered config, hot-reload, schema validation)
 - **Status:** active (v0.4.0; supersedes phenotype-config per ADR-031)
@@ -254,7 +260,7 @@ DELETE archived repo  IFF:
 - **Recommendation:** **KEEP_ACTIVE** — add notify + figment + schemars + aes-gcm; reconcile README encryption-at-rest claim
 
 ### Performance / Benchmark Harness (added 2026-06-23)
-- **Canonical owner:** `KooshaPari/Benchora`
+- **Canonical owner:** `<REDACTED>/Benchora`
 - **Stack:** Rust (criterion)
 - **Boundary:** Perf-harness framework, regression gating, baseline matrix for owned scope
 - **Status:** active (v0.2.0, single crate `gauge`)
@@ -264,8 +270,8 @@ DELETE archived repo  IFF:
 - **Recommendation:** **KEEP_ACTIVE** — add github-action-benchmark + cargo-flamegraph + dhat/iai
 
 ### HTTP Middleware (added 2026-06-23)
-- **Canonical owner:** `KooshaPari/Quillr`
-- **Stack:** Rust (httpora-core) + TypeScript (@kooshapari/quillts)
+- **Canonical owner:** `<REDACTED>/Quillr`
+- **Stack:** Rust (httpora-core) + TypeScript (@<REDACTED>/quillts)
 - **Boundary:** HTTP toolkit — Tower middleware (rate-limit/retry/CB/CORS) + TS client
 - **Status:** active (v0.1.0; httpora absorbed 2026-06-20 per #28)
 - **Absorb from:** Httpora (folded per Quillr#27)
@@ -274,8 +280,8 @@ DELETE archived repo  IFF:
 - **Recommendation:** **KEEP_ACTIVE** — add reqwest + quinn/h3 + tracing-opentelemetry + moka
 
 ### Auth Runtime (refreshed 2026-06-24)
-- **Canonical owner:** `KooshaPari/AuthKit` (active; successor to archived Authvault)
-- **Historical owner:** `KooshaPari/Authvault` (archived 2026-06-20, commit c7994b9)
+- **Canonical owner:** `<REDACTED>/AuthKit` (active; successor to archived Authvault)
+- **Historical owner:** `<REDACTED>/Authvault` (archived 2026-06-20, commit c7994b9)
 - **Stack:** Rust (OAuth2/OIDC/JWT/RBAC/ABAC, multi-tenant)
 - **Boundary:** Rust auth framework — PKCE, JWS, vault, KMS, audit
 - **Status:** AuthKit active (v0.1.0, FR-AUTHV-018 landed 2026-06-24 commit 064b310); Authvault read-only history
@@ -288,8 +294,8 @@ DELETE archived repo  IFF:
 
 | Slice | Canonical owner | Layer | Consumer pattern | Recommendation |
 |-------|-----------------|-------|------------------|----------------|
-| Design tokens + UX spine | **`KooshaPari/phenoDesign`** | Spine `CREATIVITY_DESIGN_UX` | `@phenotype/design` npm/git dep; VitePress theme | **DECLARE_SPINE** — unarchived 2026-07-20; reverses 2026-07-17 phenodocs absorption |
-| Asset render pipeline | **`KooshaPari/asset-engine`** | Domain workspace | Blender/FFmpeg/ImageMagick/Unreal legs; orchestrator | **DECLARE_BOUNDARY_OWNER** — extracted from `phenoDesign/engine/` |
+| Design tokens + UX spine | **`<REDACTED>/phenoDesign`** | Spine `CREATIVITY_DESIGN_UX` | `@phenotype/design` npm/git dep; VitePress theme | **DECLARE_SPINE** — unarchived 2026-07-20; reverses 2026-07-17 phenodocs absorption |
+| Asset render pipeline | **`<REDACTED>/asset-engine`** | Domain workspace | Blender/FFmpeg/ImageMagick/Unreal legs; orchestrator | **DECLARE_BOUNDARY_OWNER** — extracted from `phenoDesign/engine/` |
 | Docs site hosting | `phenodocs` | docs | May mirror tokens; not canonical for design | **DOWNSTREAM_CONSUMER** only |
 | 3D graphics SDK | `phenotype-gfx` | shared-lib | Voxel/terrain/water — distinct from design tokens | **KEEP_ACTIVE** — do not merge into phenoDesign |
 

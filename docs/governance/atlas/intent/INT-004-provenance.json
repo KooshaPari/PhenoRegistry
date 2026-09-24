@@ -1,0 +1,9 @@
+{
+  "id": "INT-004",
+  "kind": "exact_visible_user_message",
+  "path": "INT-004-user-one-chat-exact.txt",
+  "sha256": "e55dade6acb19d586a74cc0b8c571c60bc6eb1ec428cb524eee89da905d1e8ff",
+  "capture": "Directly copied from current conversation, trailing newline added; source timestamp not supplied.",
+  "interpretation": "One existing owner chat for each current non-zz repository; fresh state evaluation plus one current subject folder per owner.",
+  "supersedes": "Earlier staffing assumptions, not the product/assurance/reuse requirements or permissions."
+}

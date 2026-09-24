@@ -1,0 +1,13 @@
+{
+  "kind": "evidence",
+  "schema_version": "1.0.0",
+  "id": "EV-OBS",
+  "subject_digest": "sha256:6d77fb232b7d0496ff96e887982239501ebd7f6a4a9075360564709d37cb6acc",
+  "path": "raw/observations.json",
+  "digest": "sha256:d6819424655049d1ee7a0b9708f15c3383e286dd75105703fef842b0fa07658b",
+  "observed_at": "2026-09-11T23:19:57.152144+00:00",
+  "sensitivity": "PUBLIC",
+  "role": "OBSERVATION",
+  "origin": "EXAMPLE_EXECUTION",
+  "summary": "Actual execution of bundled synthetic example; no real product evaluation."
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "assessment",
+  "schema_version": "1.0.0",
+  "id": "ASSESS-RELAYSUITE",
+  "record_status": "EXAMPLE",
+  "assignment_id": "A-RELAYSUITE",
+  "assignment_digest": "sha256:98745e4031d5a09a908141f4c5c5d4029a0417d8b882e9e0705117233643d28f",
+  "epoch_id": "E-RELAYSUITE",
+  "subject_digest": "sha256:f8bea6ef0d129c7caf37f2343fb37100d7eff60445f4b5616ddd4845bba065c6",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "as_of": "2026-09-11T23:19:57.136661+00:00",
+  "result_ids": [
+    "R-I-01",
+    "R-I-02",
+    "R-I-03",
+    "R-I-04",
+    "R-I-05",
+    "R-I-06",
+    "R-I-07",
+    "R-I-08",
+    "R-I-09",
+    "R-I-10",
+    "R-I-11",
+    "R-I-12"
+  ],
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "coverage_limitations": [
+    "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected.",
+    "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked.",
+    "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  ],
+  "registration_state": "NOT_REQUESTED"
+}

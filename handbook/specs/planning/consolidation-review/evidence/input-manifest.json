@@ -1,0 +1,45 @@
+{
+  "archive_sha256": "3daede7eb2fb69e8008f5d6e9649e22a16935fcf534e07fbee13aac0a7103cab",
+  "files": [
+    {
+      "path": "session-dump/.SESSION-2026-09-15-polyrepo-consolidation.md.swp",
+      "size": 16384,
+      "sha256": "d33ec7e6e943f21da8bc869fe0f789ded8cd89f7df722070c370dffcd7edb4b0"
+    },
+    {
+      "path": "session-dump/AGENT-STATUS.md",
+      "size": 1003,
+      "sha256": "6c2d3d8a38f5c2fdde22574d39cfc1650b5590d117085df19e04ef92771152ef"
+    },
+    {
+      "path": "session-dump/TODO-STATE.md",
+      "size": 872,
+      "sha256": "c69f1fd6fc511c47f2829cc5ad9b21b5dc5b001fb2c06ad4c244514aa3f0f670"
+    },
+    {
+      "path": "session-dump/SESSION-2026-09-15-polyrepo-consolidation.md",
+      "size": 7573,
+      "sha256": "c2e783aa1e5cdaa345a96246e466c03d6de471624532d803799da47130fdb7cc"
+    },
+    {
+      "path": "session-dump/session-mizaru-CURRENT.journal.jsonl",
+      "size": 311067,
+      "sha256": "c8a462153bec2445f36d51d2d2464df442b26cad88a7657d45aaad7ce8d2a365"
+    },
+    {
+      "path": "session-dump/session-hare-PARENT.json",
+      "size": 6025159,
+      "sha256": "6cad832cf9882bb5fb82c220cb00d5be4344ac4a92c5b70cd48c8506c98b9fbb"
+    },
+    {
+      "path": "session-dump/session-mizaru-CURRENT.json",
+      "size": 5771774,
+      "sha256": "9e22ee59c04803022cd0f67c27954cd5974e9274b9b08c73b22443f61c7cb650"
+    },
+    {
+      "path": "session-dump/session-hare-PARENT.journal.jsonl",
+      "size": 77772,
+      "sha256": "8ab884ac184655d16b0ceeab0c07a2046ac6fc1b1e030cde0634f0dc1a76846b"
+    }
+  ]
+}

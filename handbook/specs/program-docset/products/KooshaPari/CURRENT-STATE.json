@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1349458262",
+  "name": "KooshaPari",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "9ac2bdb938453e67858e451867613224365ea85b",
+  "sampled_commit_date_utc": "2026-09-15T08:51:22Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Latest sampled commit absorbs an incubating site/project; no current production-domain verification was performed here.",
+  "assessment": "PUBLICATION_PROOF_OPEN",
+  "role": "Public portfolio and landing consumer",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "A merged website is not verified routing or accurate product readiness.",
+    "Do not expose private source captures or internal worker receipts on public pages."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1349458262-A1",
+      "title": "Reconcile site and profile ownership",
+      "work": "Map actual profile README, landing/build roots, public subjects and approved source records; coordinate .github/registry without duplicating authority.",
+      "acceptance": "One truthful publication inventory with private/public separation.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1349458262",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1349458262-A2",
+      "title": "Build and deploy the actual surface",
+      "work": "Verify the existing authorized Vercel/Pages/domain setup, relative paths, deep links, search and static assets for selected routes.",
+      "acceptance": "Current source-to-artifact-to-route receipt and rollback; no inferred DNS changes.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1349458262",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1349458262-A3",
+      "title": "Publish actual product proof",
+      "work": "Use authentic tested packages, screenshots/VHS and compatibility notes; label concepts/fixtures.",
+      "acceptance": "An unfamiliar user can discover, install and assess an actual product without misleading links or claims.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1349458262",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Use PhenoDocs as renderer and PhenoDesign sources as assets; neither stores portfolio state by hardcoding the tool.",
+  "parent_acceptance": "Public portfolio accurately exposes usable products and correctly scoped documentation/download destinations.",
+  "sources": [
+    {
+      "id": "CUR-1349458262-S01",
+      "url": "https://github.com/KooshaPari/KooshaPari/commit/9ac2bdb938453e67858e451867613224365ea85b",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

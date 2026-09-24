@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1365855438",
+  "name": "KCode",
+  "default_branch": "master",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "88a996e030c203e776b31ca61720d09b362d787a",
+  "sampled_commit_date_utc": "2026-09-15T23:00:41Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Latest work adds HERDR idle debounce, retry-grace/error-hold and overrides; the preceding handoff reports 258/266 passing tests.",
+  "assessment": "REPORTED_PARTIAL_TEST_RESULT",
+  "role": "Rust coding harness fork",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "258/266 passing is not a passing mandatory suite; actual failed/skipped cases need classification.",
+    "A debounced dashboard state must not conceal failed or abandoned side effects."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1365855438-A1",
+      "title": "Reconcile reported failures and installed fork",
+      "work": "Locate actual failing cases, environment and source identity; distinguish reporting state from the real process/tool state.",
+      "acceptance": "All mandatory failures have reproduced repair or explicit approved exception; no percentage-based pass.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1365855438",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1365855438-A2",
+      "title": "Exercise restart and duplicate-event safety",
+      "work": "Force stream failures, child restarts, duplicate notifications and termination around sensitive tool calls.",
+      "acceptance": "State recovers honestly; side effects are not duplicated; destructive operations remain separately authorized.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1365855438",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1365855438-A3",
+      "title": "Qualify release and peer comparison",
+      "work": "Install owned binaries on actual target systems, test updates, memory use and a matched upstream/HeliosLite task.",
+      "acceptance": "Clean launch, recovery and measured resource claims on the distributed artifact, not only a source build.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1365855438",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Treat upstream patches and shared telemetry/session adapters as reusable contracts; preserve fork attribution and small owned delta.",
+  "parent_acceptance": "A safe current installed harness sustains useful execution and honest reporting through interruptions.",
+  "sources": [
+    {
+      "id": "CUR-1365855438-S01",
+      "url": "https://github.com/KooshaPari/KCode/commit/88a996e030c203e776b31ca61720d09b362d787a",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

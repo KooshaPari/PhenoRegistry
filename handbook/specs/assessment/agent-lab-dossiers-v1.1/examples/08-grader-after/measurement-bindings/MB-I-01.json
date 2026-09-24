@@ -1,0 +1,29 @@
+{
+  "kind": "measurement-binding",
+  "schema_version": "1.0.0",
+  "id": "MB-I-01",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "criterion_id": "PEP-05-01-01",
+  "instance_id": "I-01",
+  "subject_scope": "The same fictional output-producing component under two illustrative evaluator epochs.",
+  "modality": "DYNAMIC",
+  "method": "PROPOSED PROCEDURE ONLY: collect evidence directly relevant to The core operation produces the required result for a representative valid input",
+  "expected_behavior": "The core operation produces the required result for a representative valid input.",
+  "units_or_anchors": "Pass only the stated predicate at the accepted scope; otherwise fail, abstain, or record a measurement blocker.",
+  "environment_ref": "No product environment was executed; resolve from the actual subject before use.",
+  "fixtures": [
+    "raw/scenario.json (teaching premises only)"
+  ],
+  "positive_control": "Before activation, demonstrate an independently justified valid witness accepted by the real instrument.",
+  "negative_control": "Before activation, demonstrate a meaningful invalid/no-op witness rejected by the real instrument.",
+  "qualification_refs": [],
+  "resource_limit": "No product execution allowed by this fixture. Bind actual limits from the mandate.",
+  "side_effects": [],
+  "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+  "freshness_rule": "Fictional premises never become current operational evidence; collect and pin a real run.",
+  "evidence_requirements": [
+    "Actual raw observations at the pinned subject",
+    "Qualified positive and negative controls"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1272990345",
+  "name": "PhenoApps",
+  "default_branch": "apps-extract",
+  "visibility": "private",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "be4194594f35604782c8456de2057d98f3df66bb",
+  "sampled_commit_date_utc": "2026-09-15T23:07:09Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Default branch is apps-extract, not main. Recent sampled commits absorb NetWeave; collection-level capability and release completeness were not established.",
+  "assessment": "COLLECTION_INTEGRATION_OPEN",
+  "role": "Application collection with distinct product contracts",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Shared repository does not make Localbase, fitness, focus and other apps one runtime or one release.",
+    "Use current apps-extract source; do not audit an assumed main branch.",
+    "Future planned donors are not automatically authorized migrations."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1272990345-A1",
+      "title": "Build the per-application atlas",
+      "work": "Inventory each app entrypoint, domain, manifest, data/secret ownership, packaging and consumer; distinguish recovered snapshots from integrated runnable apps.",
+      "acceptance": "Every material app has a disposition, active source, missing-obligation record and exact owner; unknown is not discarded.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1272990345",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1272990345-A2",
+      "title": "Complete one runnable app without blocking the collection",
+      "work": "Select the nearest accepted useful application and qualify install/onboarding/state/recovery. Keep unrelated applications independently buildable.",
+      "acceptance": "Real role-specific CVP and clean isolated build; no collection-wide completeness claim.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1272990345",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1272990345-A3",
+      "title": "Refine shared boundaries with PhenoShared",
+      "work": "Move only approved stable shared capabilities through contract-tested adapters; preserve each application semantics and private data.",
+      "acceptance": "Consumer acceptance and provenance retained; no speculative framework or global version lockstep.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1272990345",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "PhenoApps owns app-specific jobs; PhenoShared owns only accepted reusable capabilities. Donor movement requires a separate accepted record.",
+  "parent_acceptance": "Each selected application becomes independently understandable, buildable and usable while collection custody remains intact.",
+  "sources": [
+    {
+      "id": "CUR-1272990345-S01",
+      "url": "https://github.com/KooshaPari/PhenoApps/commit/be4194594f35604782c8456de2057d98f3df66bb",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

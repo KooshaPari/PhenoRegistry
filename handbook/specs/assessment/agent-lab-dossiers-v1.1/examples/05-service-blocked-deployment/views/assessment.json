@@ -1,0 +1,1893 @@
+{
+  "format": "ASSESSMENT_DOSSIER_VIEW_V1_1",
+  "dossier": {
+    "kind": "dossier",
+    "schema_version": "1.1.0",
+    "id": "HARBORAPI",
+    "record_status": "EXAMPLE",
+    "example_class": "ILLUSTRATIVE_SCENARIO",
+    "title": "HarborAPI / local slice ready, hosted slice blocked",
+    "subtitle": "Unknown deployment evidence is not the same as a failed product test.",
+    "purpose": "Provide reliable authenticated local API behavior and later a separately verified hosted release.",
+    "boundary": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+    "beneficiary": "Local operator now; hosted clients only after the hosted acceptance gate.",
+    "authorship": "AGENT_ORIGINATED",
+    "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment.",
+    "genesis_rationale": "This fictional repository was created by agents to isolate a consumer-facing capability. Its boundary is a hypothesis, not proof that a separate repository is necessary.",
+    "alternatives": [
+      "Implement the capability in an existing owner",
+      "Use a suitable existing dependency",
+      "Run a narrower experiment",
+      "Do not build"
+    ],
+    "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example.",
+    "non_goals": [
+      "Claim real-repository completion",
+      "Require a human-authored repository idea",
+      "Wait for a central registry to become operational"
+    ],
+    "subject_identity": {
+      "source_revision": null,
+      "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact.",
+      "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+    },
+    "inventory": [
+      {
+        "id": "INV-01",
+        "item": "Local API",
+        "declared": "Authenticated persistent behavior",
+        "observed_or_assumed": "Local path assumed passing",
+        "gap": "Only local fixture scope",
+        "evidence_basis": "Authored scenario premise, not a collected product observation."
+      },
+      {
+        "id": "INV-02",
+        "item": "Hosted artifact",
+        "declared": "Same intended release",
+        "observed_or_assumed": "Not observable with available authority",
+        "gap": "Publication evidence blocked",
+        "evidence_basis": "Authored scenario premise, not a collected product observation."
+      },
+      {
+        "id": "INV-03",
+        "item": "Hosted routing / TLS",
+        "declared": "Reachable protected endpoint",
+        "observed_or_assumed": "Not measured",
+        "gap": "Unknown",
+        "evidence_basis": "Authored scenario premise, not a collected product observation."
+      },
+      {
+        "id": "INV-04",
+        "item": "Registry receipt",
+        "declared": "Assessment recorded centrally",
+        "observed_or_assumed": "No delivery receipt",
+        "gap": "Pending projection, not lab-wide blocker",
+        "evidence_basis": "Authored scenario premise, not a collected product observation."
+      }
+    ],
+    "maturity": {
+      "scenario_or_scoped_label": "Illustrative: local slice MVP; hosted release BLOCKED, not failed by inference.",
+      "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding.",
+      "axes": [
+        {
+          "axis": "PRODUCT_VERIFIED",
+          "status": "ILLUSTRATIVE PASS — LOCAL ONLY",
+          "basis": "Local required behavior assumed passing."
+        },
+        {
+          "axis": "PUBLISHED_VERIFIED",
+          "status": "BLOCKED_AUTHORITY",
+          "basis": "Hosted target not verified."
+        },
+        {
+          "axis": "OPERATED_VERIFIED",
+          "status": "UNKNOWN",
+          "basis": "No hosted operating window."
+        },
+        {
+          "axis": "TENANCY_SCOPE",
+          "status": "UNRESOLVED",
+          "basis": "Deployment capability may add mandatory authorization obligations."
+        }
+      ],
+      "value_evidence": "The scenario provides local functional premises but no actual observed operational benefit or hosted adoption evidence."
+    },
+    "finding_ids": [
+      "F-I-07",
+      "F-I-08",
+      "F-I-09",
+      "F-I-10",
+      "F-I-14"
+    ],
+    "decision_ids": [
+      "DEC-NEXT"
+    ],
+    "semantic_reviews": [
+      {
+        "topic": "Does this assignment serve the parent outcome?",
+        "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository.",
+        "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome.",
+        "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product.",
+        "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions.",
+        "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+      }
+    ],
+    "next_action": "Continue authorized local work and queue hosted verification. Resolve target tenancy before any release claim.",
+    "stop_condition": "Do not deploy, claim hosted readiness, or infer public authorization from local success.",
+    "restart_packet": {
+      "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work.",
+      "failed_hypotheses": [
+        "A well-formed record is not proof the product behavior occurred."
+      ],
+      "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations.",
+      "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+    },
+    "lineage": {
+      "previous_dossier_id": null,
+      "change_class": "ILLUSTRATIVE_BASELINE",
+      "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+    },
+    "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit.",
+    "row_notes": [
+      {
+        "instance_id": "I-01",
+        "title": "The core operation produces the required result for a representative valid input",
+        "interpretation": "Local request completes the documented operation.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-02",
+        "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+        "interpretation": "Malformed records are rejected without storage corruption.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-03",
+        "title": "Invalid credentials cannot create an authenticated session",
+        "interpretation": "Local invalid tokens cannot create authenticated sessions.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-04",
+        "title": "Required data survives the journey's supported restart boundary",
+        "interpretation": "Local records survive the supported restart boundary.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-05",
+        "title": "A known injected failure is visible through the selected observability path",
+        "interpretation": "An injected local failure is visible in the declared diagnostic path.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-06",
+        "title": "Missing credentials produce a scoped actionable blocker",
+        "interpretation": "Missing deployment credentials produce a scoped diagnostic.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-07",
+        "title": "The deployed artifact matches the intended release digest",
+        "interpretation": "No authority is available to inspect or change the hosted deployment.",
+        "next_action": "Wait for explicitly scoped hosted verification access."
+      },
+      {
+        "instance_id": "I-08",
+        "title": "Routing reaches the actual intended product surface",
+        "interpretation": "Routing to the actual hosted application is not verified.",
+        "next_action": "Verify the requested host through the authorized route."
+      },
+      {
+        "instance_id": "I-09",
+        "title": "TLS or equivalent transport expectations are verified where applicable",
+        "interpretation": "Required transport security is not measured on the hosted target.",
+        "next_action": "Obtain authorized hosted transport evidence."
+      },
+      {
+        "instance_id": "I-10",
+        "title": "Health and core-journey checks pass after deployment",
+        "interpretation": "The hosted post-deployment journey has not run.",
+        "next_action": "Run it only after the target and authority are resolved."
+      },
+      {
+        "instance_id": "I-11",
+        "title": "Missing deployment authority does not block unrelated local verification",
+        "interpretation": "Independent local verification continues despite blocked deployment.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-12",
+        "title": "The workflow supports the permitted native no-Docker path when required by the fleet",
+        "interpretation": "The local native no-Docker path remains supported.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-13",
+        "title": "A result from one environment is not silently promoted to another environment's guarantee",
+        "interpretation": "Local performance is not promoted to a hosted guarantee.",
+        "next_action": "Collect the actual product evidence before accepting this claim."
+      },
+      {
+        "instance_id": "I-14",
+        "title": "External and internal trust boundaries are distinguishable",
+        "interpretation": "Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+        "next_action": "Resolve hosted tenancy before releasing."
+      }
+    ]
+  },
+  "assessment": {
+    "kind": "assessment",
+    "schema_version": "1.0.0",
+    "id": "ASSESS-HARBORAPI",
+    "record_status": "EXAMPLE",
+    "assignment_id": "A-HARBORAPI",
+    "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+    "epoch_id": "E-HARBORAPI",
+    "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+    "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+    "as_of": "2026-09-11T23:19:57.136661+00:00",
+    "result_ids": [
+      "R-I-01",
+      "R-I-02",
+      "R-I-03",
+      "R-I-04",
+      "R-I-05",
+      "R-I-06",
+      "R-I-07",
+      "R-I-08",
+      "R-I-09",
+      "R-I-10",
+      "R-I-11",
+      "R-I-12",
+      "R-I-13",
+      "R-I-14"
+    ],
+    "evidence_ids": [
+      "EV-SCENARIO"
+    ],
+    "qualification_ids": [],
+    "coverage_limitations": [
+      "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected.",
+      "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked.",
+      "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+    ],
+    "registration_state": "PENDING"
+  },
+  "assignment": {
+    "kind": "assignment",
+    "schema_version": "1.0.0",
+    "id": "A-HARBORAPI",
+    "record_status": "EXAMPLE",
+    "epoch_id": "E-HARBORAPI",
+    "status": "LOCKED",
+    "subject_id": "HARBORAPI",
+    "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+    "mandate_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+    "intent_ref": "dossier.json",
+    "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+    "profile_id": "bootstrap",
+    "coverage_statement": "14 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable.",
+    "created_at": "2026-09-11T23:19:57.136661+00:00",
+    "scope_review_status": "ACCEPTED",
+    "scope_review_ref": "SCENARIO-SCOPE-ASSUMPTION",
+    "instances": [
+      {
+        "id": "I-01",
+        "criterion_id": "PEP-05-01-01",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-05-01-01",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-01.json"
+      },
+      {
+        "id": "I-02",
+        "criterion_id": "PEP-05-01-04",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-05-01-04",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-02.json"
+      },
+      {
+        "id": "I-03",
+        "criterion_id": "PEP-14-02-01",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-14-02-01",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-03.json"
+      },
+      {
+        "id": "I-04",
+        "criterion_id": "PEP-03-03-06",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-03-03-06",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-04.json"
+      },
+      {
+        "id": "I-05",
+        "criterion_id": "PEP-13-01-10",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-13-01-10",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": false,
+        "measurement_binding_ref": "measurement-bindings/MB-I-05.json"
+      },
+      {
+        "id": "I-06",
+        "criterion_id": "PEP-07-01-05",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-07-01-05",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": false,
+        "measurement_binding_ref": "measurement-bindings/MB-I-06.json"
+      },
+      {
+        "id": "I-07",
+        "criterion_id": "PEP-16-03-03",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-16-03-03",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-07.json"
+      },
+      {
+        "id": "I-08",
+        "criterion_id": "PEP-16-03-04",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-16-03-04",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-08.json"
+      },
+      {
+        "id": "I-09",
+        "criterion_id": "PEP-16-03-05",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-16-03-05",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-09.json"
+      },
+      {
+        "id": "I-10",
+        "criterion_id": "PEP-16-03-06",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-16-03-06",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-10.json"
+      },
+      {
+        "id": "I-11",
+        "criterion_id": "PEP-16-03-10",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-16-03-10",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": false,
+        "measurement_binding_ref": "measurement-bindings/MB-I-11.json"
+      },
+      {
+        "id": "I-12",
+        "criterion_id": "PEP-08-02-10",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-08-02-10",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": false,
+        "measurement_binding_ref": "measurement-bindings/MB-I-12.json"
+      },
+      {
+        "id": "I-13",
+        "criterion_id": "PEP-12-01-10",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-12-01-10",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Capability is required by the stated fictional slice.",
+        "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION",
+        "weight": 1,
+        "mandatory": false,
+        "measurement_binding_ref": "measurement-bindings/MB-I-13.json"
+      },
+      {
+        "id": "I-14",
+        "criterion_id": "PEP-14-01-02",
+        "criterion_revision": "1.0.0",
+        "obligation_key": "PEP-14-01-02",
+        "scope": "Local single-operator service plus a distinct proposed hosted deployment; never combine their readiness.",
+        "applicability": "UNRESOLVED",
+        "applicability_reason": "Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+        "applicability_decision_ref": null,
+        "weight": 1,
+        "mandatory": true,
+        "measurement_binding_ref": "measurement-bindings/MB-I-14.json"
+      }
+    ],
+    "gates": [
+      {
+        "id": "LOCAL-SLICE",
+        "required_instance_ids": [
+          "I-01",
+          "I-02",
+          "I-03",
+          "I-04"
+        ]
+      },
+      {
+        "id": "HOSTED-RELEASE",
+        "required_instance_ids": [
+          "I-07",
+          "I-08",
+          "I-09",
+          "I-10",
+          "I-14"
+        ]
+      }
+    ]
+  },
+  "evidence_summary": {
+    "kernel_version": "1.0.0",
+    "assessment_id": "ASSESS-HARBORAPI",
+    "epoch_id": "E-HARBORAPI",
+    "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+    "as_of": "2026-09-11T23:19:57.136661+00:00",
+    "record_status": "EXAMPLE",
+    "interpretation": "Consistency-based reduction of accepted input records, NOT independent authentication, product verification, or publication authorization.",
+    "coverage_statement": "14 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable.",
+    "coverage_limitations": [
+      "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected.",
+      "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked.",
+      "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+    ],
+    "weights": {
+      "pass_weight": 0.0,
+      "fail_weight": 0.0,
+      "unknown_weight": 13.0,
+      "unresolved_applicability_weight": 1.0,
+      "not_applicable_weight": 0.0
+    },
+    "assessed_pass_rate": null,
+    "assessment_coverage": 0.0,
+    "verified_satisfaction_within_settled_applicability": 0.0,
+    "optimistic_bound_within_settled_applicability": 1.0,
+    "applicability_complete": false,
+    "scope_locked": true,
+    "mandatory_gate_state": "BLOCKED",
+    "registration_state": "PENDING",
+    "gates": [
+      {
+        "id": "LOCAL-SLICE",
+        "status": "BLOCKED",
+        "required_instance_ids": [
+          "I-01",
+          "I-02",
+          "I-03",
+          "I-04"
+        ]
+      },
+      {
+        "id": "HOSTED-RELEASE",
+        "status": "BLOCKED",
+        "required_instance_ids": [
+          "I-07",
+          "I-08",
+          "I-09",
+          "I-10",
+          "I-14"
+        ]
+      }
+    ],
+    "instances": [
+      {
+        "instance_id": "I-01",
+        "criterion_id": "PEP-05-01-01",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-02",
+        "criterion_id": "PEP-05-01-04",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-03",
+        "criterion_id": "PEP-14-02-01",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-04",
+        "criterion_id": "PEP-03-03-06",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-05",
+        "criterion_id": "PEP-13-01-10",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": false
+      },
+      {
+        "instance_id": "I-06",
+        "criterion_id": "PEP-07-01-05",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": false
+      },
+      {
+        "instance_id": "I-07",
+        "criterion_id": "PEP-16-03-03",
+        "state": "UNKNOWN",
+        "reason": "execution not completed",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-08",
+        "criterion_id": "PEP-16-03-04",
+        "state": "UNKNOWN",
+        "reason": "execution not completed",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-09",
+        "criterion_id": "PEP-16-03-05",
+        "state": "UNKNOWN",
+        "reason": "execution not completed",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-10",
+        "criterion_id": "PEP-16-03-06",
+        "state": "UNKNOWN",
+        "reason": "execution not completed",
+        "weight": 1,
+        "mandatory": true
+      },
+      {
+        "instance_id": "I-11",
+        "criterion_id": "PEP-16-03-10",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": false
+      },
+      {
+        "instance_id": "I-12",
+        "criterion_id": "PEP-08-02-10",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": false
+      },
+      {
+        "instance_id": "I-13",
+        "criterion_id": "PEP-12-01-10",
+        "state": "UNKNOWN",
+        "reason": "review is not accepted (waivers are not passes)",
+        "weight": 1,
+        "mandatory": false
+      },
+      {
+        "instance_id": "I-14",
+        "criterion_id": "PEP-14-01-02",
+        "state": "UNRESOLVED",
+        "reason": "applicability not accepted",
+        "weight": 1,
+        "mandatory": true
+      }
+    ]
+  },
+  "illustrative_summary": {
+    "classification": "HYPOTHETICAL_PREMISES_ONLY_NOT_PRODUCT_EVIDENCE",
+    "counts": {
+      "PASS": 9,
+      "FAIL": 0,
+      "UNKNOWN": 4,
+      "NOT_APPLICABLE": 0,
+      "UNRESOLVED": 1
+    },
+    "weights": {
+      "PASS": 9.0,
+      "FAIL": 0.0,
+      "UNKNOWN": 4.0,
+      "NOT_APPLICABLE": 0.0,
+      "UNRESOLVED": 1.0
+    },
+    "assessed_pass_rate": 1.0,
+    "assessment_coverage": 0.6923076923076923,
+    "satisfaction": 0.6923076923076923,
+    "states": {
+      "I-01": "PASS",
+      "I-02": "PASS",
+      "I-03": "PASS",
+      "I-04": "PASS",
+      "I-05": "PASS",
+      "I-06": "PASS",
+      "I-07": "UNKNOWN",
+      "I-08": "UNKNOWN",
+      "I-09": "UNKNOWN",
+      "I-10": "UNKNOWN",
+      "I-11": "PASS",
+      "I-12": "PASS",
+      "I-13": "PASS",
+      "I-14": "UNRESOLVED"
+    },
+    "gates": [
+      {
+        "id": "LOCAL-SLICE",
+        "status": "PASS",
+        "required_instance_ids": [
+          "I-01",
+          "I-02",
+          "I-03",
+          "I-04"
+        ]
+      },
+      {
+        "id": "HOSTED-RELEASE",
+        "status": "BLOCKED",
+        "required_instance_ids": [
+          "I-07",
+          "I-08",
+          "I-09",
+          "I-10",
+          "I-14"
+        ]
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "finding",
+      "schema_version": "1.0.0",
+      "id": "F-I-07",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "instance_refs": [
+        "I-07"
+      ],
+      "class": "VERIFICATION_GAP",
+      "severity": "HIGH",
+      "claim": "In the fictional scenario: No authority is available to inspect or change the hosted deployment.",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "counterevidence_refs": [],
+      "owner_ref": "ROLE:subject-owner",
+      "next_action_kind": "TEST",
+      "status": "PROPOSED",
+      "wakeup_condition": "Wait for explicitly scoped hosted verification access."
+    },
+    {
+      "kind": "finding",
+      "schema_version": "1.0.0",
+      "id": "F-I-08",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "instance_refs": [
+        "I-08"
+      ],
+      "class": "VERIFICATION_GAP",
+      "severity": "HIGH",
+      "claim": "In the fictional scenario: Routing to the actual hosted application is not verified.",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "counterevidence_refs": [],
+      "owner_ref": "ROLE:subject-owner",
+      "next_action_kind": "TEST",
+      "status": "PROPOSED",
+      "wakeup_condition": "Verify the requested host through the authorized route."
+    },
+    {
+      "kind": "finding",
+      "schema_version": "1.0.0",
+      "id": "F-I-09",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "instance_refs": [
+        "I-09"
+      ],
+      "class": "VERIFICATION_GAP",
+      "severity": "HIGH",
+      "claim": "In the fictional scenario: Required transport security is not measured on the hosted target.",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "counterevidence_refs": [],
+      "owner_ref": "ROLE:subject-owner",
+      "next_action_kind": "TEST",
+      "status": "PROPOSED",
+      "wakeup_condition": "Obtain authorized hosted transport evidence."
+    },
+    {
+      "kind": "finding",
+      "schema_version": "1.0.0",
+      "id": "F-I-10",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "instance_refs": [
+        "I-10"
+      ],
+      "class": "VERIFICATION_GAP",
+      "severity": "HIGH",
+      "claim": "In the fictional scenario: The hosted post-deployment journey has not run.",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "counterevidence_refs": [],
+      "owner_ref": "ROLE:subject-owner",
+      "next_action_kind": "TEST",
+      "status": "PROPOSED",
+      "wakeup_condition": "Run it only after the target and authority are resolved."
+    },
+    {
+      "kind": "finding",
+      "schema_version": "1.0.0",
+      "id": "F-I-14",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "instance_refs": [
+        "I-14"
+      ],
+      "class": "VERIFICATION_GAP",
+      "severity": "HIGH",
+      "claim": "In the fictional scenario: Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "counterevidence_refs": [],
+      "owner_ref": "ROLE:subject-owner",
+      "next_action_kind": "TEST",
+      "status": "PROPOSED",
+      "wakeup_condition": "Resolve hosted tenancy before releasing."
+    }
+  ],
+  "decisions": [
+    {
+      "kind": "decision",
+      "schema_version": "1.0.0",
+      "id": "DEC-NEXT",
+      "record_status": "EXAMPLE",
+      "created_at": "2026-09-11T23:19:57.136661+00:00",
+      "subject_ref": "HARBORAPI",
+      "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+      "disposition": "IMPROVE",
+      "status": "PROPOSED",
+      "evidence_refs": [
+        "EV-SCENARIO"
+      ],
+      "alternatives": [
+        "Implement the capability in an existing owner",
+        "Use a suitable existing dependency",
+        "Run a narrower experiment",
+        "Do not build"
+      ],
+      "rationale": "Continue authorized local work and queue hosted verification. Resolve target tenancy before any release claim.",
+      "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET",
+      "reversal_condition": "Do not deploy, claim hosted readiness, or infer public authorization from local success.",
+      "execution_receipt_refs": []
+    }
+  ],
+  "rows": [
+    {
+      "instance_id": "I-01",
+      "criterion_id": "PEP-05-01-01",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": true,
+      "title": "The core operation produces the required result for a representative valid input",
+      "interpretation": "Local request completes the documented operation.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D05",
+      "predicate": "The core operation produces the required result for a representative valid input.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-01",
+          "instance_id": "I-01",
+          "criterion_id": "PEP-05-01-01",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Local request completes the documented operation.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-02",
+      "criterion_id": "PEP-05-01-04",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": true,
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+      "interpretation": "Malformed records are rejected without storage corruption.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D05",
+      "predicate": "Invalid input cannot silently produce a valid-looking corrupt result.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-02",
+          "instance_id": "I-02",
+          "criterion_id": "PEP-05-01-04",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Malformed records are rejected without storage corruption.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-03",
+      "criterion_id": "PEP-14-02-01",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": true,
+      "title": "Invalid credentials cannot create an authenticated session",
+      "interpretation": "Local invalid tokens cannot create authenticated sessions.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D14",
+      "predicate": "Invalid credentials cannot create an authenticated session.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-03",
+          "instance_id": "I-03",
+          "criterion_id": "PEP-14-02-01",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Local invalid tokens cannot create authenticated sessions.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-04",
+      "criterion_id": "PEP-03-03-06",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": true,
+      "title": "Required data survives the journey's supported restart boundary",
+      "interpretation": "Local records survive the supported restart boundary.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D03",
+      "predicate": "Required data survives the journey's supported restart boundary.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-04",
+          "instance_id": "I-04",
+          "criterion_id": "PEP-03-03-06",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Local records survive the supported restart boundary.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-05",
+      "criterion_id": "PEP-13-01-10",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": false,
+      "title": "A known injected failure is visible through the selected observability path",
+      "interpretation": "An injected local failure is visible in the declared diagnostic path.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D13",
+      "predicate": "A known injected failure is visible through the selected observability path.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-05",
+          "instance_id": "I-05",
+          "criterion_id": "PEP-13-01-10",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: An injected local failure is visible in the declared diagnostic path.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-06",
+      "criterion_id": "PEP-07-01-05",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": false,
+      "title": "Missing credentials produce a scoped actionable blocker",
+      "interpretation": "Missing deployment credentials produce a scoped diagnostic.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D07",
+      "predicate": "Missing credentials produce a scoped actionable blocker.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-06",
+          "instance_id": "I-06",
+          "criterion_id": "PEP-07-01-05",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Missing deployment credentials produce a scoped diagnostic.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-07",
+      "criterion_id": "PEP-16-03-03",
+      "state": "UNKNOWN",
+      "reason": "execution not completed",
+      "weight": 1,
+      "mandatory": true,
+      "title": "The deployed artifact matches the intended release digest",
+      "interpretation": "No authority is available to inspect or change the hosted deployment.",
+      "next_action": "Wait for explicitly scoped hosted verification access.",
+      "domain": "D16",
+      "predicate": "The deployed artifact matches the intended release digest.",
+      "display_state": "UNKNOWN",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-07",
+          "instance_id": "I-07",
+          "criterion_id": "PEP-16-03-03",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "BLOCKED",
+          "verdict": "UNKNOWN",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: No authority is available to inspect or change the hosted deployment.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-08",
+      "criterion_id": "PEP-16-03-04",
+      "state": "UNKNOWN",
+      "reason": "execution not completed",
+      "weight": 1,
+      "mandatory": true,
+      "title": "Routing reaches the actual intended product surface",
+      "interpretation": "Routing to the actual hosted application is not verified.",
+      "next_action": "Verify the requested host through the authorized route.",
+      "domain": "D16",
+      "predicate": "Routing reaches the actual intended product surface.",
+      "display_state": "UNKNOWN",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-08",
+          "instance_id": "I-08",
+          "criterion_id": "PEP-16-03-04",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "BLOCKED",
+          "verdict": "UNKNOWN",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Routing to the actual hosted application is not verified.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-09",
+      "criterion_id": "PEP-16-03-05",
+      "state": "UNKNOWN",
+      "reason": "execution not completed",
+      "weight": 1,
+      "mandatory": true,
+      "title": "TLS or equivalent transport expectations are verified where applicable",
+      "interpretation": "Required transport security is not measured on the hosted target.",
+      "next_action": "Obtain authorized hosted transport evidence.",
+      "domain": "D16",
+      "predicate": "TLS or equivalent transport expectations are verified where applicable.",
+      "display_state": "UNKNOWN",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-09",
+          "instance_id": "I-09",
+          "criterion_id": "PEP-16-03-05",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "BLOCKED",
+          "verdict": "UNKNOWN",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Required transport security is not measured on the hosted target.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-10",
+      "criterion_id": "PEP-16-03-06",
+      "state": "UNKNOWN",
+      "reason": "execution not completed",
+      "weight": 1,
+      "mandatory": true,
+      "title": "Health and core-journey checks pass after deployment",
+      "interpretation": "The hosted post-deployment journey has not run.",
+      "next_action": "Run it only after the target and authority are resolved.",
+      "domain": "D16",
+      "predicate": "Health and core-journey checks pass after deployment.",
+      "display_state": "UNKNOWN",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-10",
+          "instance_id": "I-10",
+          "criterion_id": "PEP-16-03-06",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "BLOCKED",
+          "verdict": "UNKNOWN",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The hosted post-deployment journey has not run.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-11",
+      "criterion_id": "PEP-16-03-10",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": false,
+      "title": "Missing deployment authority does not block unrelated local verification",
+      "interpretation": "Independent local verification continues despite blocked deployment.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D16",
+      "predicate": "Missing deployment authority does not block unrelated local verification.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-11",
+          "instance_id": "I-11",
+          "criterion_id": "PEP-16-03-10",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Independent local verification continues despite blocked deployment.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-12",
+      "criterion_id": "PEP-08-02-10",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": false,
+      "title": "The workflow supports the permitted native no-Docker path when required by the fleet",
+      "interpretation": "The local native no-Docker path remains supported.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D08",
+      "predicate": "The workflow supports the permitted native no-Docker path when required by the fleet.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-12",
+          "instance_id": "I-12",
+          "criterion_id": "PEP-08-02-10",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The local native no-Docker path remains supported.",
+            "assertions_executed": null,
+            "modality": "DYNAMIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-13",
+      "criterion_id": "PEP-12-01-10",
+      "state": "UNKNOWN",
+      "reason": "review is not accepted (waivers are not passes)",
+      "weight": 1,
+      "mandatory": false,
+      "title": "A result from one environment is not silently promoted to another environment's guarantee",
+      "interpretation": "Local performance is not promoted to a hosted guarantee.",
+      "next_action": "Collect the actual product evidence before accepting this claim.",
+      "domain": "D12",
+      "predicate": "A result from one environment is not silently promoted to another environment's guarantee.",
+      "display_state": "PASS",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-13",
+          "instance_id": "I-13",
+          "criterion_id": "PEP-12-01-10",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "COMPLETED",
+          "verdict": "PASS",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Local performance is not promoted to a hosted guarantee.",
+            "assertions_executed": null,
+            "modality": "STRUCTURAL"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    },
+    {
+      "instance_id": "I-14",
+      "criterion_id": "PEP-14-01-02",
+      "state": "UNRESOLVED",
+      "reason": "applicability not accepted",
+      "weight": 1,
+      "mandatory": true,
+      "title": "External and internal trust boundaries are distinguishable",
+      "interpretation": "Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+      "next_action": "Resolve hosted tenancy before releasing.",
+      "domain": "D14",
+      "predicate": "External and internal trust boundaries are distinguishable.",
+      "display_state": "UNRESOLVED",
+      "result_records": [
+        {
+          "kind": "result",
+          "schema_version": "1.0.0",
+          "id": "R-I-14",
+          "instance_id": "I-14",
+          "criterion_id": "PEP-14-01-02",
+          "assignment_id": "A-HARBORAPI",
+          "epoch_id": "E-HARBORAPI",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "assignment_digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6",
+          "execution": "BLOCKED",
+          "verdict": "UNKNOWN",
+          "evidence_state": "CURRENT",
+          "review_status": "PROPOSED",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "expires_at": null,
+          "evidence_ids": [
+            "EV-SCENARIO"
+          ],
+          "qualification_ids": [],
+          "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+          "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+          "observation": {
+            "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Multi-tenant exposure may apply, but the hosted slice and ownership boundary are unresolved.",
+            "assertions_executed": null,
+            "modality": "SEMANTIC"
+          },
+          "supersedes": []
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "schema_version": "1.0.0",
+          "id": "EV-SCENARIO",
+          "subject_digest": "sha256:887e3f510204be19688947b91fc3df3251a2f6ae95e2290705123bd932e5eb04",
+          "path": "raw/scenario.json",
+          "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a",
+          "observed_at": "2026-09-11T23:19:57.136661+00:00",
+          "sensitivity": "PUBLIC",
+          "role": "OBSERVATION",
+          "origin": "EXTERNAL_REFERENCE",
+          "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+        }
+      ]
+    }
+  ],
+  "input_files": [
+    {
+      "path": "assessment.json",
+      "bytes": 1229,
+      "digest": "sha256:fb14f20dc06a29f91ab1ab9619f054a2707a1f3be23a91393d3c237a3eba0066"
+    },
+    {
+      "path": "assignment.json",
+      "bytes": 9194,
+      "digest": "sha256:9b50cb2dde7c3bd424713b3a88c9c90de84ca6996dda5aca1a849069e647b2f6"
+    },
+    {
+      "path": "decisions/DEC-NEXT.json",
+      "bytes": 850,
+      "digest": "sha256:0f45feaa1bd9de9a228030e0bf3d60f6f54a940d5d48450273b5ba83ca0b97e4"
+    },
+    {
+      "path": "dossier.json",
+      "bytes": 10475,
+      "digest": "sha256:5cf1481316fc4ab44849893ceb69add2d9b6c7c3078e19d2e7d6c490734f41cf"
+    },
+    {
+      "path": "evidence/EV-SCENARIO.json",
+      "bytes": 543,
+      "digest": "sha256:06ffb5f21c897ac154be6b6367a0dde1c0f328736ea3e317cb6e64cc86026672"
+    },
+    {
+      "path": "findings/F-I-07.json",
+      "bytes": 629,
+      "digest": "sha256:e2c2813d6d2bc5b6b7a2d064082f5a361e03a7d69b01029f5985be1f0433282e"
+    },
+    {
+      "path": "findings/F-I-08.json",
+      "bytes": 618,
+      "digest": "sha256:34262fc532c7b2d3a8e252f62f19ee8ba1ec88d2cdc07f1dfac34ee8662dd297"
+    },
+    {
+      "path": "findings/F-I-09.json",
+      "bytes": 615,
+      "digest": "sha256:b0db6dcfa08f4c873916ca3c81d939b7e537868502b2a1e3a7817c37332ca509"
+    },
+    {
+      "path": "findings/F-I-10.json",
+      "bytes": 609,
+      "digest": "sha256:cc81fcfae7b07da20925b54f2293cd9d922faec9009e0f7313390a182da37977"
+    },
+    {
+      "path": "findings/F-I-14.json",
+      "bytes": 638,
+      "digest": "sha256:9e30d3bb8dec4efc59fc94bcbb981a4024f5229112dbc704a3fed0e10be51188"
+    },
+    {
+      "path": "measurement-bindings/MB-I-01.json",
+      "bytes": 1673,
+      "digest": "sha256:0c494e95f01f8706690b98eb13ec1e99a4b86d9d7020658d5ae5e317da534137"
+    },
+    {
+      "path": "measurement-bindings/MB-I-02.json",
+      "bytes": 1649,
+      "digest": "sha256:57b78c8b1ee450398ee9e87fe5a02123431e6b391efa45258e167cf18991ff8f"
+    },
+    {
+      "path": "measurement-bindings/MB-I-03.json",
+      "bytes": 1629,
+      "digest": "sha256:31ccd16ce5f14494bf17e24b58a8ba1954d2439d1785c66c015d019913769d87"
+    },
+    {
+      "path": "measurement-bindings/MB-I-04.json",
+      "bytes": 1639,
+      "digest": "sha256:c18b0955a70eb365fa929d152ec90c9cb3140dffe783276b10f54ced6d06f228"
+    },
+    {
+      "path": "measurement-bindings/MB-I-05.json",
+      "bytes": 1663,
+      "digest": "sha256:4fd08d363da7343e20d6c1f1bdfed18a3cb7a7936bcaab69b97a6f6b9b4ef5bf"
+    },
+    {
+      "path": "measurement-bindings/MB-I-06.json",
+      "bytes": 1623,
+      "digest": "sha256:649450a549e7cdcc54330a94d9aeba73076482eb6ce9f4d70a83042d12417591"
+    },
+    {
+      "path": "measurement-bindings/MB-I-07.json",
+      "bytes": 1627,
+      "digest": "sha256:9606dda14891f8f3e3c1e8e7d9abed3ff850caf4006cdd3cab6ccb9cb36eca85"
+    },
+    {
+      "path": "measurement-bindings/MB-I-08.json",
+      "bytes": 1615,
+      "digest": "sha256:058630a0791891d27876b80e8b4a3d5b036514b8eb854ecf2801efb08783b546"
+    },
+    {
+      "path": "measurement-bindings/MB-I-09.json",
+      "bytes": 1653,
+      "digest": "sha256:ee82902ee1f939523abb3bd903b3b0c245d1ea423f1ac79553c6db640d54a2da"
+    },
+    {
+      "path": "measurement-bindings/MB-I-10.json",
+      "bytes": 1617,
+      "digest": "sha256:6fe2034a8a282e0248b3e547e4044524aeee32a9e627dc239ea71234b945d39b"
+    },
+    {
+      "path": "measurement-bindings/MB-I-11.json",
+      "bytes": 1657,
+      "digest": "sha256:a691f09ebaac0f0f86fe63906a10a8773c57e0c942ff7f813c8ec3e0669ffb42"
+    },
+    {
+      "path": "measurement-bindings/MB-I-12.json",
+      "bytes": 1681,
+      "digest": "sha256:905c6bc99cd52591f5731d2c1bb1431270aba4623b95456d182fc7ca01afa090"
+    },
+    {
+      "path": "measurement-bindings/MB-I-13.json",
+      "bytes": 1694,
+      "digest": "sha256:69c2d94604d6ec6324028dbc610e9624aca20b8bc429197f8356924d62ec87e9"
+    },
+    {
+      "path": "measurement-bindings/MB-I-14.json",
+      "bytes": 1630,
+      "digest": "sha256:2803884f41d829d2ba3e42bf199ac37fb5fb032f0fff6684799ade1b4bbef7dc"
+    },
+    {
+      "path": "outbox/OUTBOX-SCENARIO-001.json",
+      "bytes": 668,
+      "digest": "sha256:997f95325582c24e1d2eeec39ec53668fee30c279e714a0b300a71fcba740767"
+    },
+    {
+      "path": "raw/scenario.json",
+      "bytes": 6053,
+      "digest": "sha256:f9a98a96c39846a9bc7dd4241edafcd5eba8b18b0d3f8c2fa3528a94db35e69a"
+    },
+    {
+      "path": "results/R-I-01.json",
+      "bytes": 1011,
+      "digest": "sha256:502cef47e42d429680ce678c49880fb2abe73a74ebcc93ba4cc762143b7b346c"
+    },
+    {
+      "path": "results/R-I-02.json",
+      "bytes": 1020,
+      "digest": "sha256:869ba97c8598b68bb0d3033242f3279a292d07a4302138e946f2a91864bec2f0"
+    },
+    {
+      "path": "results/R-I-03.json",
+      "bytes": 1020,
+      "digest": "sha256:c8868d659b052ec2d1de71aa4cb5efa60c6a45bceef55c3ba7f17cc6dca57207"
+    },
+    {
+      "path": "results/R-I-04.json",
+      "bytes": 1015,
+      "digest": "sha256:0bdd93c9214435e88ea411cb2a9416d797e936f82d7e37520a6359395c3361dc"
+    },
+    {
+      "path": "results/R-I-05.json",
+      "bytes": 1031,
+      "digest": "sha256:b40539b9bd291e9e655fd662219c22ad37ca22fc5073990f78f1a2aac4bbfee3"
+    },
+    {
+      "path": "results/R-I-06.json",
+      "bytes": 1021,
+      "digest": "sha256:2e2fd78052def403e948ef4ca3e0b4e4805910a1c6ba0a6120ccce30d1ec0239"
+    },
+    {
+      "path": "results/R-I-07.json",
+      "bytes": 1032,
+      "digest": "sha256:f4e9a9ea8fe0be859e37152d85e177d2c939de4dd1c97502e10b43a7f0558445"
+    },
+    {
+      "path": "results/R-I-08.json",
+      "bytes": 1020,
+      "digest": "sha256:ef7ae096c2201b3a698575c39ee0da48c111ad67b8e747b0ac75b38fa994fc1c"
+    },
+    {
+      "path": "results/R-I-09.json",
+      "bytes": 1028,
+      "digest": "sha256:b0689cde814c9d8acd22ad55cb99ebd3316f9df8f2cd1e428df9d487575df5de"
+    },
+    {
+      "path": "results/R-I-10.json",
+      "bytes": 1010,
+      "digest": "sha256:82bff77c8137fd17e38c1ba2437a6cf062fa87cc7275e421764ed103bc58a723"
+    },
+    {
+      "path": "results/R-I-11.json",
+      "bytes": 1030,
+      "digest": "sha256:791f2196d1c7292395514fa9bf9e1b8397999b2fa2033ea1c80ad9c07a398988"
+    },
+    {
+      "path": "results/R-I-12.json",
+      "bytes": 1012,
+      "digest": "sha256:a801238ae091dad48b7612beeddbfe0bec5c72b85f617fa354ad2ba3a1cd1526"
+    },
+    {
+      "path": "results/R-I-13.json",
+      "bytes": 1021,
+      "digest": "sha256:092fa2cef446a34d27ef070fea6a05977b2bdcfac790432b744cc7c93cde3b4d"
+    },
+    {
+      "path": "results/R-I-14.json",
+      "bytes": 1056,
+      "digest": "sha256:c05fb8712838668a4b8166d50ea45d990c8a8c67139a63901fca0afcc7dddff4"
+    },
+    {
+      "path": "subject.json",
+      "bytes": 174,
+      "digest": "sha256:f7765661376926c14cbec7f3b6096155f379b215f43130ab853f568725178d1c"
+    }
+  ],
+  "authority_notice": "A generated view and matching hashes establish neither truthful observations nor permission to publish, merge, spend, or retire."
+}

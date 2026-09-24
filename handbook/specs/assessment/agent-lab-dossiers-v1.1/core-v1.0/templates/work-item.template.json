@@ -1,0 +1,18 @@
+{
+  "kind": "work-item",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "assignment_ref": "REPLACE_WITH_ASSIGNMENT_REF",
+  "finding_refs": [],
+  "outcome": "REPLACE_WITH_OUTCOME",
+  "acceptance": "REPLACE_WITH_ACCEPTANCE",
+  "dependencies": [],
+  "owner_ref": "REPLACE_WITH_OWNER_REF",
+  "claim_ref": "REPLACE_WITH_CLAIM_REF",
+  "status": "PROPOSED",
+  "budget_ref": "REPLACE_WITH_BUDGET_REF",
+  "next_action": "REPLACE_WITH_NEXT_ACTION",
+  "wakeup_condition": "REPLACE_WITH_WAKEUP_CONDITION"
+}

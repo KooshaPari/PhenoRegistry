@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-31",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "DRAFTBOARD",
+  "instance_refs": [
+    "I-31"
+  ],
+  "class": "IMPLEMENTATION_GAP",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: The distribution contains a frontend but omits the promised persistence service.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "IMPLEMENT",
+  "status": "PROPOSED",
+  "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+}

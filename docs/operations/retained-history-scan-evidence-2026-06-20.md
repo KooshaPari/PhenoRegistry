@@ -5,7 +5,7 @@ secret values.
 
 ## Why This Exists
 
-GitHub secret scanning is unavailable while `KooshaPari/phenotype-registry` is
+GitHub secret scanning is unavailable while `<REDACTED>/phenotype-registry` is
 private. During the incident, retained refs were rewritten and scanned with a
 local mirror. This repository now includes `scripts/retained-history-secret-scan.py`
 so the check can be repeated before reopening the repository or re-enabling

@@ -1,0 +1,8 @@
+{
+  "candidate_key": "EXAMPLE-candidate-new",
+  "observed_healthy_key": "EXAMPLE-observed-healthy",
+  "new_eligible_commits": 2,
+  "event": "push",
+  "target_qualified": true,
+  "lineage_verified": true
+}

@@ -41,7 +41,7 @@ grade:
     @echo "=== Running full grade ==="
     ./grade.sh
 
-# Validate the 13 canonical KooshaPari repos: GitHub reachability + meta-file
+# Validate the 13 canonical ecosystem repos: GitHub reachability + meta-file
 # presence. Reports drift and exits non-zero on any miss.
 validate:
     @echo "=== Validating ecosystem (13 canonical repos) ==="

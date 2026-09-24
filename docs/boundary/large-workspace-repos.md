@@ -20,7 +20,7 @@ from the spine.
 |---|---|---|---|---|---|
 | `PhenoRuntime` | DSPI-12 | 13 | 1.3M | `pheno-runtime` (binary) | `eyetracker-*` + `pheno-*` + `phenotype-*` |
 | `HexaKit` | DSPI-15 | 38 | 1.5G | (multiple) | `phenotype-*-core` infrastructure |
-| `Grapheon` | DSPI-16 | 7 | 8.6G | (likely graph-DB) | GraphDB / MSDF ecosystem |
+| `zz-archive-grapheon` (was `Grapheon`) | DSPI-16 | 7 | 8.6G | (likely graph-DB) | GraphDB / MSDF ecosystem |
 | `Tasken` | DSPI-17 | 1 (workspace) | 1.1G | `taskkit` | universal task execution |
 | `Agentora` | DSPI-18 | 43 | 249M | (agent platform) | agent-era platform |
 | `PhenoCompose` | DSPI-19 | 28 | 3.1M | (composer) | multi-model composition |
@@ -94,7 +94,7 @@ Suggested as a separate "Pheno vs HexaKit de-duplication" project.
 
 ## Grapheon — member list (7 crates)
 
-**Source**: https://github.com/KooshaPari/Grapheon
+**Source**: https://github.com/KooshaPari/zz-archive-grapheon (retired/renamed 2026-09-03)
 **Audit size**: 8.6G total (heavy build/cache footprint), 23 source files
 
 **Triangulation hint**: The 8.6G footprint with only 23 source files suggests

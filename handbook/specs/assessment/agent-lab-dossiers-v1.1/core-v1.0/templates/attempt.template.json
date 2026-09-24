@@ -1,0 +1,20 @@
+{
+  "kind": "attempt",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "assignment_ref": "REPLACE_WITH_ASSIGNMENT_REF",
+  "epoch_id": "REPLACE_WITH_EPOCH_ID",
+  "actor_ref": "REPLACE_WITH_ACTOR_REF",
+  "operation": "INITIAL",
+  "subject_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "hypothesis": "REPLACE_WITH_HYPOTHESIS",
+  "method": "REPLACE_WITH_METHOD",
+  "outcome": "SUCCESS",
+  "result_refs": [],
+  "failure_fingerprint": "REPLACE_WITH_FAILURE_FINGERPRINT",
+  "cost_units": 0,
+  "elapsed_seconds": 0,
+  "next_action": "REPLACE_WITH_NEXT_ACTION"
+}

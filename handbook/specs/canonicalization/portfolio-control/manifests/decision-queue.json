@@ -1,0 +1,249 @@
+{
+  "schema_version": "0.1.0",
+  "observation_date": "2026-09-01",
+  "decisions": [
+    {
+      "id": "DEC-ECO-001",
+      "question": "What system owns live repository facts and what system owns curated ecosystem roles?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "RepoLedger",
+        "phenotype-registry",
+        "GitHub inventory"
+      ],
+      "evidence_required": [
+        "current implementation",
+        "write paths",
+        "consumers",
+        "generation workflows",
+        "conflict behavior"
+      ],
+      "provisional_hypothesis": "RepoLedger/live observer owns GitHub facts; phenotype-registry owns curated roles and generated maps."
+    },
+    {
+      "id": "DEC-ECO-002",
+      "question": "Where do product-local specs end and cross-product contracts begin?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "AgilePlus",
+        "PhenoSpecs",
+        "product repositories",
+        "phenotype-traceability-spine"
+      ],
+      "evidence_required": [
+        "current schemas",
+        "consumer workflows",
+        "duplicate documents",
+        "lifecycle authority"
+      ],
+      "provisional_hypothesis": "Product-local intent/specs stay local and are lifecycle-managed by AgilePlus; cross-product contracts/RFCs remain central."
+    },
+    {
+      "id": "DEC-ECO-003",
+      "question": "What is the active enforcement authority?",
+      "status": "BLOCKED",
+      "scope": [
+        ".github",
+        "phenotypeActions",
+        "PhenoDevOps",
+        "phenotype-tooling",
+        "zz-archive-phenotype-org-governance"
+      ],
+      "evidence_required": [
+        "current workflows",
+        "policy sources",
+        "exceptions",
+        "consumers",
+        "historical migration"
+      ],
+      "provisional_hypothesis": "One active policy owner plus reusable workflows/projections; archived references must be corrected."
+    },
+    {
+      "id": "DEC-ECO-004",
+      "question": "Which repository is canonical for FocalPoint?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "FocalPoint",
+        "phenotype-apps",
+        "zz-RIP-Fitness-App",
+        "eyetracker"
+      ],
+      "evidence_required": [
+        "intent lineage",
+        "branch ancestry",
+        "capability matrix",
+        "build/release reproduction",
+        "consumers"
+      ],
+      "provisional_hypothesis": "Undecided; requires T4 forensic recovery."
+    },
+    {
+      "id": "DEC-ECO-005",
+      "question": "Which repository is canonical for Planify and how should the Plane fork be maintained?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "Planify",
+        "Planify2",
+        "AgilePlus"
+      ],
+      "evidence_required": [
+        "upstream bases",
+        "local patch sets",
+        "license",
+        "consumers",
+        "release/deploy paths"
+      ],
+      "provisional_hypothesis": "One strategic fork target; other becomes provenance/redirect after migration."
+    },
+    {
+      "id": "DEC-ECO-006",
+      "question": "What is the current role of pheno?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "pheno",
+        "local workspace tooling",
+        "phenotype-registry"
+      ],
+      "evidence_required": [
+        "actual tracked tree",
+        "consumer workflows",
+        "local shelf use",
+        "public product claims"
+      ],
+      "provisional_hypothesis": "Meta/workspace manifest or retire; not a generic product authority."
+    },
+    {
+      "id": "DEC-ECO-007",
+      "question": "What is the canonical strategy/capital authority after archived AGSLAG generations?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "zz-agslag",
+        "zz-agslag-dash",
+        "zz-agslag-docs",
+        "Parpoura",
+        "AgilePlus",
+        "RepoLedger",
+        "hwLedger"
+      ],
+      "evidence_required": [
+        "human intent",
+        "accepted architecture",
+        "historical code/docs",
+        "current consumers"
+      ],
+      "provisional_hypothesis": "Restore/create an explicit AGSLAG authority or publish a formal supersession."
+    },
+    {
+      "id": "DEC-ECO-008",
+      "question": "How should the agent execution family be layered?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "thegent",
+        "Agentora",
+        "substrate",
+        "Tasken",
+        "Sidekick",
+        "PhenoProc",
+        "sharecli",
+        "agentapi-plusplus"
+      ],
+      "evidence_required": [
+        "capability union",
+        "consumers",
+        "pilots",
+        "co-change",
+        "runtime boundaries",
+        "history"
+      ],
+      "provisional_hypothesis": "thegent labor/orchestration; Agentora SDK if justified; ShareCLI independent supervisor; others absorb or narrow."
+    },
+    {
+      "id": "DEC-ECO-009",
+      "question": "How should the Helios app/CLI/framework family be partitioned?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "HeliosLab",
+        "forgecode",
+        "helios-cli",
+        "Agentora",
+        "ghostty"
+      ],
+      "evidence_required": [
+        "historical consolidation branch",
+        "user journeys",
+        "upstream lineage",
+        "shared code",
+        "pilots"
+      ],
+      "provisional_hypothesis": "Desktop workbench, terminal CLI, headless harness, reusable framework can remain distinct only if contracts are enforced."
+    },
+    {
+      "id": "DEC-ECO-010",
+      "question": "What is the minimal coherent provider routing/gateway/fork topology?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "OmniRoute",
+        "bifrost",
+        "cliproxyapi-plusplus",
+        "vibeproxy",
+        "phenotype-router",
+        "phenotype-gateway",
+        "phenoAI"
+      ],
+      "evidence_required": [
+        "upstreams",
+        "protocols",
+        "original patches",
+        "consumers",
+        "performance/reliability pilot"
+      ],
+      "provisional_hypothesis": "One product-facing router plus explicit upstream-derived adapters/forks and one observability home."
+    },
+    {
+      "id": "DEC-ECO-011",
+      "question": "Which tiny/generic foundations deserve independent repositories?",
+      "status": "INVESTIGATING",
+      "scope": [
+        "Configra",
+        "Logify",
+        "phenoUtils",
+        "PhenoContracts",
+        "HexaKit",
+        "phenokits-commons",
+        "PhenoVCS",
+        "SDKs",
+        "Kits"
+      ],
+      "evidence_required": [
+        "real consumers",
+        "release histories",
+        "co-change",
+        "API stability",
+        "license/security boundaries"
+      ],
+      "provisional_hypothesis": "Compress into a small number of package homes; retain only stable multi-consumer contracts."
+    },
+    {
+      "id": "DEC-ECO-012",
+      "question": "What repository boundaries implement the distributed compute/data/I-O fabric vision?",
+      "status": "PROPOSED",
+      "scope": [
+        "hwLedger",
+        "sharecli",
+        "nanovms",
+        "NetWeave",
+        "phenotype-fleet-ops",
+        "localbase3",
+        "future fabric"
+      ],
+      "evidence_required": [
+        "existing implementations",
+        "consumer map",
+        "SOTA",
+        "prototype experiments",
+        "real-time/scale requirements"
+      ],
+      "provisional_hypothesis": "New product/runtime repo may be justified, with existing repos providing adapters/ledgers rather than absorbing the whole vision."
+    }
+  ]
+}

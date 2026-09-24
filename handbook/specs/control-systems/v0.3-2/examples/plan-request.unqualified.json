@@ -1,0 +1,20 @@
+{
+  "candidate": {
+    "candidate_id": "EXAMPLE-UNQUALIFIED-CANDIDATE",
+    "workload_id": "tracera-server",
+    "environment_id": "dev",
+    "profile": "service",
+    "artifacts": [
+      {
+        "kind": "oci_image",
+        "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "source_revision": "EXAMPLE-NOT-A-REAL-REVISION"
+      }
+    ],
+    "configuration_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "policy_revision": "EXAMPLE-NOT-APPROVED",
+    "secret_version_refs": []
+  },
+  "target_id": "EXAMPLE-LOCAL-TARGET-NOT-INVENTORIED",
+  "expected_target_generation": 0
+}

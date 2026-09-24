@@ -1,0 +1,18 @@
+{
+  "repo": "forgecode",
+  "attempts": [
+    {
+      "method": "https",
+      "url": "https://github.com/KooshaPari/forgecode.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/forgecode.git'...\nfatal: unable to access 'https://github.com/KooshaPari/forgecode.git/': Could not resolve host: github.com\n"
+    },
+    {
+      "method": "https",
+      "url": "https://github.com/kooshapari/forgecode.git",
+      "returncode": 128,
+      "stderr": "Cloning into bare repository '/mnt/data/helios-forgecode-agentora-forensic-recovery/_mirrors/forgecode.git'...\nfatal: unable to access 'https://github.com/kooshapari/forgecode.git/': Could not resolve host: github.com\n"
+    }
+  ],
+  "status": "unavailable"
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "report_name": "audit-cross-repo.md",
+    "visible_payloads": [
+      {
+        "kind": "read_output",
+        "conversation": "11ff3f72-c8ac-4128-9f92-5d83113b697f",
+        "message": 7,
+        "lines": [
+          53997,
+          54050
+        ],
+        "chars": 3068
+      },
+      {
+        "kind": "read_output",
+        "conversation": "11ff3f72-c8ac-4128-9f92-5d83113b697f",
+        "message": 8,
+        "lines": [
+          54051,
+          54090
+        ],
+        "chars": 1636
+      }
+    ],
+    "recovery_status": "partial_read_or_patch",
+    "limitations": "Absence here means no direct read/write body was recovered by the exact-path scanner; summary references and script-embedded content may remain. It does not prove a local file never existed."
+  },
+  {
+    "report_name": "audit-selfhost-paas.md",
+    "visible_payloads": [
+      {
+        "kind": "patch_argument",
+        "conversation": "3890f436-8620-41bf-8b5d-b5ffe2a7acc9",
+        "message": 7,
+        "lines": [
+          166255,
+          166321
+        ],
+        "chars": 551
+      },
+      {
+        "kind": "read_output",
+        "conversation": "3890f436-8620-41bf-8b5d-b5ffe2a7acc9",
+        "message": 16,
+        "lines": [
+          166736,
+          166841
+        ],
+        "chars": 4611
+      },
+      {
+        "kind": "read_output",
+        "conversation": "3890f436-8620-41bf-8b5d-b5ffe2a7acc9",
+        "message": 18,
+        "lines": [
+          166896,
+          166956
+        ],
+        "chars": 1845
+      }
+    ],
+    "recovery_status": "partial_read_or_patch",
+    "limitations": "Absence here means no direct read/write body was recovered by the exact-path scanner; summary references and script-embedded content may remain. It does not prove a local file never existed."
+  },
+  {
+    "report_name": "audit-rollback.md",
+    "visible_payloads": [
+      {
+        "kind": "write_argument",
+        "conversation": "3cf77748-c6c1-44d0-9ddf-36e26df2b28d",
+        "message": 110,
+        "lines": [
+          193921,
+          194083
+        ],
+        "chars": 7621
+      }
+    ],
+    "recovery_status": "write_payload_recovered",
+    "limitations": "Absence here means no direct read/write body was recovered by the exact-path scanner; summary references and script-embedded content may remain. It does not prove a local file never existed."
+  },
+  {
+    "report_name": "audit-gitops-updates.md",
+    "visible_payloads": [
+      {
+        "kind": "write_argument",
+        "conversation": "4b2411cd-830d-4727-9b70-b86073e37e5a",
+        "message": 35,
+        "lines": [
+          249051,
+          249318
+        ],
+        "chars": 17747
+      }
+    ],
+    "recovery_status": "write_payload_recovered",
+    "limitations": "Absence here means no direct read/write body was recovered by the exact-path scanner; summary references and script-embedded content may remain. It does not prove a local file never existed."
+  },
+  {
+    "report_name": "audit-portability-substrates.md",
+    "visible_payloads": [
+      {
+        "kind": "write_argument",
+        "conversation": "9c31e321-a8ca-4154-8691-333247a694ec",
+        "message": 35,
+        "lines": [
+          450195,
+          450367
+        ],
+        "chars": 10298
+      },
+      {
+        "kind": "read_output",
+        "conversation": "9c31e321-a8ca-4154-8691-333247a694ec",
+        "message": 38,
+        "lines": [
+          450448,
+          450493
+        ],
+        "chars": 2419
+      },
+      {
+        "kind": "patch_argument",
+        "conversation": "9c31e321-a8ca-4154-8691-333247a694ec",
+        "message": 39,
+        "lines": [
+          450494,
+          450557
+        ],
+        "chars": 283
+      }
+    ],
+    "recovery_status": "write_payload_recovered",
+    "limitations": "Absence here means no direct read/write body was recovered by the exact-path scanner; summary references and script-embedded content may remain. It does not prove a local file never existed."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "weights": {
+    "intent_design": 12,
+    "spec_architecture": 10,
+    "behavior": 20,
+    "assurance": 18,
+    "experience": 14,
+    "safety_recovery": 12,
+    "ecosystem": 5,
+    "delivery_operations": 5,
+    "docs_research": 4
+  },
+  "letter_mapping": {
+    "A": 95,
+    "B": 85,
+    "C": 70,
+    "D": 50,
+    "F": 0
+  },
+  "current_product_grades": null,
+  "critical_gate_can_be_compensated": false
+}

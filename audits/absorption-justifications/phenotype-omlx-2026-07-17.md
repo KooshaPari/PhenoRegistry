@@ -7,7 +7,7 @@ Compliance standard: registry/audit-absorption-justification/schema.json (14/14 
 
 ## Source
 
-- **Repo:** `KooshaPari/phenotype-omlx`
+- **Repo:** `<REDACTED>/phenotype-omlx`
 - **GitHub URL:** https://github.com/KooshaPari/phenotype-omlx
 - **Archived at:** False
 - **Default branch at audit time:** `main`
@@ -39,7 +39,7 @@ Compliance standard: registry/audit-absorption-justification/schema.json (14/14 
 - **Total branches (remote):** 4
 - **Open issues at audit time:** 0
 - **Bundle reference:** NONE — repo is live, no bundle required
-- **Source-tombstone posture:** `KooshaPari/phenotype-omlx` active on GitHub
+- **Source-tombstone posture:** `<REDACTED>/phenotype-omlx` active on GitHub
 
 ## BRANCH_INVENTORY
 

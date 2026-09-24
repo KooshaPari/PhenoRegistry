@@ -1,7 +1,7 @@
 {
   "audit_id": "phenospecs-boundary-20260726",
   "captured_at": "2026-07-26T10:46:00Z",
-  "scope": "KooshaPari/PhenoSpecs remote boundary and existing registry claims",
+  "scope": "<REDACTED>/PhenoSpecs remote boundary and existing registry claims",
   "remote": {
     "url": "https://github.com/KooshaPari/PhenoSpecs",
     "visibility": "public",

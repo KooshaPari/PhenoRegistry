@@ -75,7 +75,7 @@ This protocol follows semver.
 ## Reference implementation
 
 The canonical Rust implementation lives at
-[`KooshaPari/substrate/crates/substrate-core`](https://github.com/KooshaPari/substrate/tree/main/crates/substrate-core).
+[`<REDACTED>/substrate/crates/substrate-core`](https://github.com/KooshaPari/substrate/tree/main/crates/substrate-core).
 
 Specifically:
 - `domain.rs` — Task, Conversation, Session, Message, StructuredResult, RoutingDecision, EngineCapabilities, TaskState
@@ -83,7 +83,7 @@ Specifically:
 - `trace.rs` — TracePort + TraceEvent + TaskRegistered/TaskCompleted/TaskFailed variants
 
 The agent-facing **wire** is published separately at
-[`KooshaPari/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle).
+[`<REDACTED>/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle).
 
 ## License
 
@@ -101,6 +101,6 @@ reporting issues, and validating schemas.
 
 ## Related repos
 
-- [`KooshaPari/substrate`](https://github.com/KooshaPari/substrate) — Rust hexagonal spine, reference implementations
-- [`KooshaPari/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle) — meta-repo of standalone adapter crates
-- [`KooshaPari/phenotype-registry`](https://github.com/KooshaPari/phenotype-registry) — registry of phenotype-related projects
+- [`<REDACTED>/substrate`](https://github.com/KooshaPari/substrate) — Rust hexagonal spine, reference implementations
+- [`<REDACTED>/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle) — meta-repo of standalone adapter crates
+- [`<REDACTED>/phenotype-registry`](https://github.com/KooshaPari/phenotype-registry) — registry of phenotype-related projects

@@ -1,0 +1,51 @@
+{
+  "id": "SYN-PLAN-A",
+  "synthetic": true,
+  "status": "PROPOSED_NOT_EXECUTED",
+  "principal": "SYN-PERSON",
+  "workspace": "SYN-WORKSPACE",
+  "primary_app": "SYN-APP-A",
+  "perspective_id": "SYN-A-PERSPECTIVE",
+  "package_locks": [
+    {
+      "manifest_id": "SYN-A-MANIFEST",
+      "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "manifest_id": "SYN-B-MANIFEST",
+      "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  ],
+  "bindings": [
+    {
+      "id": "SYN-BIND-B-IN-A",
+      "consumer": "SYN-APP-A",
+      "provider": "SYN-APP-B",
+      "capability": "SYN-WORK-CONTEXT",
+      "semantic_contract": "SYN-WORK-CONTEXT-CONTRACT",
+      "principal": "SYN-PERSON",
+      "workspace": "SYN-WORKSPACE",
+      "transport": "local-ipc",
+      "grant_references": [
+        "SYN-SCOPED-GRANT-REFERENCE"
+      ],
+      "data_authority": "SYN-WORK-OWNER",
+      "depends_on": [],
+      "instance_scope": "SYN-PERSON-WORKSPACE-B-V1"
+    }
+  ],
+  "mounts": [
+    {
+      "id": "SYN-MOUNT-B-IN-A",
+      "binding_id": "SYN-BIND-B-IN-A",
+      "host": "SYN-APP-A",
+      "slot_id": "SYN-A-INSPECTOR",
+      "adapter": "host-rendered",
+      "parent_mount": null
+    }
+  ],
+  "recipe_id": "SYN-RECIPE-WORK-IN-PRODUCT",
+  "policy_profile": "SYN-PREAUTHORIZED-DEMO-POLICY",
+  "authorization_receipt": null,
+  "runtime_result": null
+}

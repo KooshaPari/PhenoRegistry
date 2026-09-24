@@ -1,0 +1,738 @@
+{
+  "release": "1.0.0",
+  "status": "PROPOSED_ADOPTION_PLAN_NOT_EXECUTED",
+  "notes": "Dependencies are a suggested partial order; select bounded useful slices. Infrastructure adapters are optional until needed and available. No dates or resource entitlements are granted.",
+  "work_items": [
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-001",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Verify the delivered kit",
+      "acceptance": "All package checks pass or exact failures are retained; toy false-success path is rejected. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [],
+      "owner_ref": "role:operator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Run digest checks, self-tests and the toy; keep actual environment/output.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-002",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Resolve owner and authority map",
+      "acceptance": "No tool repository absorbs unrelated portfolio truth; authority limits recorded. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-001"
+      ],
+      "owner_ref": "role:coordinator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Read actual mandate, accepted record owners and existing audit paths.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-003",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Pin a real subject snapshot",
+      "acceptance": "Subject identity reconstructs actual evaluated bytes; incomplete coverage explicit. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-002"
+      ],
+      "owner_ref": "role:auditor",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Capture code/dirty state, artifact/configuration and dependencies of one bounded consumer journey.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-004",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Recover or derive slice intent",
+      "acceptance": "Agent authorship accepted; missing historical provenance not fabricated. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-002"
+      ],
+      "owner_ref": "role:mission",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Produce beneficiary outcome, hypotheses, alternatives and parent mandate.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-005",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Create the first bounded assignment",
+      "acceptance": "Assignment is consistent, risk-relevant and explicitly proposed before lock. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-003",
+        "ADOPT-004"
+      ],
+      "owner_ref": "role:assignment",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Select relevant obligations, scope, non-goals and actual resource envelope.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-006",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Bind the first measurement",
+      "acceptance": "Measurement binding has concrete evidence and side-effect/stop limits. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-005"
+      ],
+      "owner_ref": "role:evaluator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Choose actual method, expected behavior, environment and control witnesses.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-007",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify the first evaluator",
+      "acceptance": "Valid witness accepted, false-success witness rejected; uncertainty retained. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-006"
+      ],
+      "owner_ref": "role:verifier",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Execute meaningful positive and negative controls.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-008",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Measure the first product baseline",
+      "acceptance": "Raw evidence and unknown/error/fail distinctions reconcile with report. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-007"
+      ],
+      "owner_ref": "role:auditor",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Run qualified checks and semantic review against pinned subject.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-009",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Complete one repair or discriminating experiment",
+      "acceptance": "A real change or learning outcome is recorded; no acceptance rule weakened. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-008"
+      ],
+      "owner_ref": "role:implementer",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Act inside existing permissions on the highest-value finding.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-010",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Verify through a separate path",
+      "acceptance": "Independence limitations and current acceptance evidence are explicit. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-009"
+      ],
+      "owner_ref": "role:verifier",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Evaluate candidate effects and required regressions at actual revision.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-011",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Demonstrate fresh-session continuity",
+      "acceptance": "Important failure reproduced and rejected hypotheses not rediscovered blindly. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-010"
+      ],
+      "owner_ref": "role:coordinator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Replace the worker and continue from checkpoint and raw references.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-012",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Exercise offline registration",
+      "acceptance": "No false receipt; local completion remains distinct from registration. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-010"
+      ],
+      "owner_ref": "role:integration",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Queue a real authorized destination record without requiring live service.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-013",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Census authorized local templates",
+      "acceptance": "Roots/versions/coverage distinguished; no destructive consolidation. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-002"
+      ],
+      "owner_ref": "role:recovery",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Merge outputs of existing device audit agents with provenance.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-014",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Census permitted Git history",
+      "acceptance": "Shallow/missing refs and uncommitted variants remain visible. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-002"
+      ],
+      "owner_ref": "role:recovery",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Inspect known refs and historical variants with coverage bounds.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-015",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Normalize historical predicates",
+      "acceptance": "Native IDs and rejected history retained; source count not criterion count. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-013",
+        "ADOPT-014"
+      ],
+      "owner_ref": "role:catalog",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Crosswalk semantic obligations and conflicting evidence requirements.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-016",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Review candidate overlap",
+      "acceptance": "Independent weight budget prevents duplicate or split-credit inflation. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-015"
+      ],
+      "owner_ref": "role:catalog",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Adjudicate overlap among authored and recovered catalog entries.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-017",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Activate a CLI/library profile",
+      "acceptance": "Product-relevant checks activated; irrelevant infrastructure not required. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-011",
+        "ADOPT-016"
+      ],
+      "owner_ref": "role:auditor",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Evaluate actual installation, consumer path and failure semantics.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-018",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Activate a rendered-UI profile",
+      "acceptance": "Screenshots separated from interaction proof; inaccessible evidence not invented. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-011",
+        "ADOPT-016"
+      ],
+      "owner_ref": "role:auditor",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Run actual journeys, keyboard/recovery paths and anchored polish review.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-019",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Activate a cross-repository journey",
+      "acceptance": "Component passes do not substitute for integrated acceptance. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-011",
+        "ADOPT-016"
+      ],
+      "owner_ref": "role:auditor",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Freeze consumer BOM and exercise integrated behavior.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-020",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify clean-install and upgrade checks",
+      "acceptance": "Expected outputs and rollback behavior demonstrated in authorized environment. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-017"
+      ],
+      "owner_ref": "role:evaluator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Test installed consumer, configuration and data preservation across versions.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-021",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify performance workload checks",
+      "acceptance": "Benchmarks reproduce defined workload; idle-host results not generalized. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-019"
+      ],
+      "owner_ref": "role:evaluator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Bind realistic load, resources, distributions and competing workload.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-022",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify fault and recovery checks",
+      "acceptance": "No-op recovery and corrupted evidence are rejected. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-019"
+      ],
+      "owner_ref": "role:evaluator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Inject bounded permitted faults and verify restored state.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-023",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Calibrate semantic review",
+      "acceptance": "Disagreement and abstention tracked; scores do not impersonate user evidence. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-018"
+      ],
+      "owner_ref": "role:evaluator",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Collect anchored accepted/disputed cases and independent adjudication.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-024",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Implement changed-scope scheduling only where needed",
+      "acceptance": "Known consequential dependencies invalidate evidence; savings measured. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-017",
+        "ADOPT-018",
+        "ADOPT-019"
+      ],
+      "owner_ref": "role:scheduler",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Compare full versus impact-selected obligations with periodic random/full audits.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-025",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Prove actual claim fencing",
+      "acceptance": "Stale writers prevented or acceptance serialized; JSON lease alone not trusted. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-019"
+      ],
+      "owner_ref": "role:coordination",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Test expired/duplicated workers through the chosen authority.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-026",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify AgilePlus transport when available",
+      "acceptance": "Idempotent accepted state verified from engine, not rendered Markdown. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-012",
+        "ADOPT-025"
+      ],
+      "owner_ref": "role:integration",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Discover real API/engine contracts and map logical work records.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-027",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify registry outbox delivery",
+      "acceptance": "True receipt matches payload and authority; offline replay does not regrade. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-012"
+      ],
+      "owner_ref": "role:integration",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Test actual destination acknowledgement, duplicates and conflicts.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-028",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify Tracera ingestion when available",
+      "acceptance": "Imported graph preserves provenance and gaps without duplicate authority. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-027"
+      ],
+      "owner_ref": "role:integration",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Map owner-held claims, evidence, assessments and supersession to actual interface.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-029",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Qualify evidence/session capture adapters",
+      "acceptance": "Run-to-artifact/evidence causality verified; transcripts not proof of success. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-019"
+      ],
+      "owner_ref": "role:integration",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Integrate accepted SessionLedger/observability paths only at needed boundary.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-030",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Render documentation projections",
+      "acceptance": "Private evidence allowlists and stale-source detection tested. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-027"
+      ],
+      "owner_ref": "role:documentation",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Generate human views without relocating source-of-truth records.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-031",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Measure loop economics",
+      "acceptance": "Failed/censored attempts retained; acceptance not normalized to rubric points. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-011"
+      ],
+      "owner_ref": "role:analysis",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Collect elapsed construction/assurance/value-learning and total resource cost.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-032",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Compare restart strategies",
+      "acceptance": "Continued/restarted/reseeded conditions tracked without cherry-picked successes. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-031"
+      ],
+      "owner_ref": "role:analysis",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Use equal-budget bounded tasks and frozen qualified evaluation.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-033",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Exercise a governed evaluator amendment",
+      "acceptance": "Product versus scope/evaluator/policy delta decomposed; history unchanged. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-023"
+      ],
+      "owner_ref": "role:governance",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Use a real counterexample and qualified replacement baseline.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-034",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Exercise reversible strategic choice",
+      "acceptance": "Actual mandate, contrary hypothesis, budget and reversal condition present. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-031"
+      ],
+      "owner_ref": "role:mission",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Compare improve/narrow/reuse/pause against beneficiary evidence.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-035",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Exercise consumer-safe boundary change",
+      "acceptance": "No irreversible action outside authority; actual migration evidence precedes retirement. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-034"
+      ],
+      "owner_ref": "role:portfolio",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Propose merge/pivot/retire with complete dependency/custody analysis.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    },
+    {
+      "kind": "work-item",
+      "schema_version": "1.0.0",
+      "id": "ADOPT-036",
+      "record_status": "TEMPLATE",
+      "created_at": "2026-09-10T23:00:00-07:00",
+      "assignment_ref": "REPLACE_WITH_ACCEPTED_LOCAL_ASSIGNMENT",
+      "finding_refs": [],
+      "outcome": "Evaluate wider rollout",
+      "acceptance": "Expansion justified by accepted outcomes; unfinished tools not lab-wide dependency. Stop the affected task if authority, evidence integrity or the assigned resource cap is unavailable; continue independent work.",
+      "dependencies": [
+        "ADOPT-017",
+        "ADOPT-018",
+        "ADOPT-019",
+        "ADOPT-032",
+        "ADOPT-033",
+        "ADOPT-034"
+      ],
+      "owner_ref": "role:portfolio",
+      "claim_ref": null,
+      "status": "PROPOSED",
+      "budget_ref": "REPLACE_WITH_ACTUAL_CUMULATIVE_BUDGET",
+      "next_action": "Review actual pilots, remaining risks and resource economics before expansion.",
+      "wakeup_condition": "Actual local mandate, inputs, dependencies and bounded resources are resolved."
+    }
+  ]
+}

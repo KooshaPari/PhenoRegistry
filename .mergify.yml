@@ -1,5 +1,5 @@
 # Mergify Configuration — Optimized for multi-language monorepos
-# Docs: https://docs.mergify.com/ (validated 2026-07-28)
+# Docs: https://docs.mergify.com/
 
 pull_request_rules:
   # Auto-merge when all CI checks pass and PR is approved
@@ -7,61 +7,43 @@ pull_request_rules:
     conditions:
       - "#review-requested=0"
       - "#approved-reviews-by>=1"
-      - check-success=ci
-      - check-success=lint
-      - check-success=typecheck
-      - check-success=test
+      - check-success=Summary
       - -conflict
       - -closed
     actions:
       merge:
         method: squash
-        commit_message_template: |
-          {{ title }} (#{{ number }})
-          
-          Co-authored-by: {{ author }}
+        commit_message_format:
+          title: pr-title
 
   # Auto-merge dependabot/Renovate PRs when CI passes
   - name: Auto-merge dependency updates
     conditions:
       - or:
-          - author = dependabot[bot]
-          - author = renovate[bot]
-      - check-success=ci
+          - author=dependabot[bot]
+          - author=renovate[bot]
+      - check-success=Summary
       - -conflict
       - -closed
     actions:
       merge:
         method: squash
-        commit_message_template: |
-          {{ title }} (#{{ number }})
-          
-          Co-authored-by: {{ author }}
+        commit_message_format:
+          title: pr-title
 
   # Auto-merge bot PRs (CI configs, formatting) when CI passes
   - name: Auto-merge bot housekeeping PRs
     conditions:
       - or:
-          - author = trunk-io[bot]
-          - author = mergify[bot]
-          - author = github-actions[bot]
-      - check-success=ci
-      - check-success=lint
+          - author=trunk-io[bot]
+          - author=mergify[bot]
+          - author=github-actions[bot]
+      - check-success=Summary
       - -conflict
       - -closed
     actions:
       merge:
         method: squash
-
-  # Add reviewers based on changed paths
-  - name: Request review from team
-    conditions:
-      - -closed
-      - -draft
-    actions:
-      request_reviews:
-        users:
-          - KooshaPari
 
   # Label PRs based on changed files
   - name: Label Python changes
@@ -127,9 +109,7 @@ pull_request_rules:
     conditions:
       - -closed
       - -draft
-      - check-success=ci
-      - check-success=lint
-      - check-success=test
+      - check-success=Summary
       - "#approved-reviews-by>=1"
     actions:
       label:

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "E001",
+    "label": "Original local dev/nightly and strict production request",
+    "evidence_class": "direct_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 3,
+    "source_lines": [
+      280791,
+      280818
+    ],
+    "bundled_path": "evidence/session/E001.md",
+    "sha256": "ec571589b3de495ad903d1f1bee5331fabb5d72f54738b22b7f883a82ec08d6e"
+  },
+  {
+    "id": "E002",
+    "label": "Managed local-node and lifecycle request",
+    "evidence_class": "direct_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 12,
+    "source_lines": [
+      282134,
+      282161
+    ],
+    "bundled_path": "evidence/session/E002.md",
+    "sha256": "4b6ac5b51d54d5e9592403b5ed039150fa43ae71c6bfa4bec0fe55d3e1780cd0"
+  },
+  {
+    "id": "E003",
+    "label": "BytePort GUI boundary and plans-only scope",
+    "evidence_class": "direct_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 14,
+    "source_lines": [
+      282280,
+      282307
+    ],
+    "bundled_path": "evidence/session/E003.md",
+    "sha256": "b29adc3f182e7407703b0ec7fe4a3e7c411fd765192514509c298a924cbfa640"
+  },
+  {
+    "id": "E004",
+    "label": "Existing ecosystem roles; PhenotypeActions recalled, not established",
+    "evidence_class": "direct_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 15,
+    "source_lines": [
+      282308,
+      282335
+    ],
+    "bundled_path": "evidence/session/E004.md",
+    "sha256": "a9c1d2dd7ab8b7568ffe87ee0e4e5debfc18f584bd5e014a68174fefa9025a42"
+  },
+  {
+    "id": "E005",
+    "label": "Free/student and Podman / WSLC constraint",
+    "evidence_class": "direct_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 24,
+    "source_lines": [
+      283107,
+      283134
+    ],
+    "bundled_path": "evidence/session/E005.md",
+    "sha256": "b8c7e270397dc2dc2265a107b64b56927297a3ea58030adf027afb4e8bfcce09"
+  },
+  {
+    "id": "E006",
+    "label": "Recovered tailnet-first and owned-domain request",
+    "evidence_class": "compaction_embedded_user",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 11,
+    "source_lines": [
+      281999,
+      282133
+    ],
+    "bundled_path": "evidence/session/E006.md",
+    "sha256": "fd13aa967f721ee674450df5694876901c7950b4207bf0508e934b8b590cb186"
+  },
+  {
+    "id": "E007",
+    "label": "Historical Tracera nightly caller",
+    "evidence_class": "tool",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 11,
+    "source_lines": [
+      678418,
+      678456
+    ],
+    "bundled_path": "evidence/session/E007.md",
+    "sha256": "57ec65d89f4e511d5e1ddc4f5e3fe6d16068878d14f2ae1346897223d636a218"
+  },
+  {
+    "id": "E008",
+    "label": "Historical branch-protection JSON",
+    "evidence_class": "tool",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 12,
+    "source_lines": [
+      678457,
+      678502
+    ],
+    "bundled_path": "evidence/session/E008.md",
+    "sha256": "c4ed31f6d86516d65c5b35b6fd371469020dfa02ee4d93e47fbb7057b4d26992"
+  },
+  {
+    "id": "E009",
+    "label": "Historical 205-line reusable nightly workflow",
+    "evidence_class": "tool",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 28,
+    "source_lines": [
+      679667,
+      679895
+    ],
+    "bundled_path": "evidence/session/E009.md",
+    "sha256": "6dc7fe89e0d5e28cbd67137fcac9f3255f7949120cf7b9570edb909105d2b91a"
+  },
+  {
+    "id": "E010",
+    "label": "Historical Render Blueprint; literal credential and provider ID redacted",
+    "evidence_class": "tool",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 29,
+    "source_lines": [
+      679896,
+      679990
+    ],
+    "bundled_path": "evidence/session/E010.md",
+    "sha256": "7b7c059b06e2f50150dcc5f8abe7bd7b75cedafb5059a98198b93a185b52dd24"
+  },
+  {
+    "id": "E011",
+    "label": "Historical Tracera working-tree state",
+    "evidence_class": "tool",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 8,
+    "source_lines": [
+      678044,
+      678152
+    ],
+    "bundled_path": "evidence/session/E011.md",
+    "sha256": "33b438b49be229115b9caff1305a494f665106fb127797e6df00b1d7e922ded4"
+  },
+  {
+    "id": "E012",
+    "label": "Pilot verifier conclusion, not independent acceptance",
+    "evidence_class": "assistant_assertion",
+    "conversation_id": "f57e3c3f-fb9f-414d-a9dd-6ae2a573da67",
+    "message": 48,
+    "source_lines": [
+      681510,
+      681598
+    ],
+    "bundled_path": "evidence/session/E012.md",
+    "sha256": "609c8b36056b8ffc90e30adb3a02ae6fae96c78da15e03d7af5cd01bd3650e0e"
+  },
+  {
+    "id": "E013",
+    "label": "CI audit conclusion identifying candidate trio",
+    "evidence_class": "assistant_assertion",
+    "conversation_id": "a8de6222-fa53-4417-ad76-21a14b19352f",
+    "message": 130,
+    "source_lines": [
+      516453,
+      516510
+    ],
+    "bundled_path": "evidence/session/E013.md",
+    "sha256": "b113f8bada170d0871eeb4f5c82e3b2955a6eff40ab6eeebbd4bd73ee52b06f7"
+  },
+  {
+    "id": "E014",
+    "label": "Follow-up VSOCK verdict requiring correction",
+    "evidence_class": "assistant_assertion",
+    "conversation_id": "9c877b6e-056e-4dac-a760-7e6dba912488",
+    "message": 33,
+    "source_lines": [
+      458583,
+      458701
+    ],
+    "bundled_path": "evidence/session/E014.md",
+    "sha256": "95902d5da12c3bb6dbc664df34d16935b2549ff3ad94266c83e970426f4d3177"
+  },
+  {
+    "id": "E015",
+    "label": "Last stored GitHub follow-up result",
+    "evidence_class": "tool",
+    "conversation_id": "92d8f425-abf0-4aca-92da-801d28a63553",
+    "message": 20,
+    "source_lines": [
+      394946,
+      394981
+    ],
+    "bundled_path": "evidence/session/E015.md",
+    "sha256": "b840299b5a81082afe51ce436f77244df557b496bbd407eb0110135d0a97b481"
+  },
+  {
+    "id": "E016",
+    "label": "Compacted production-ready claim subsequently contradicted",
+    "evidence_class": "compaction_frame",
+    "conversation_id": "57292f3c-39b6-4f1d-8d38-2446b6148c93",
+    "message": 8,
+    "source_lines": [
+      281794,
+      281916
+    ],
+    "bundled_path": "evidence/session/E016.md",
+    "sha256": "0db6b3e80bdb93ed12951c47a61d72f1b1fec9f9932f154c4585af329e02e2ba"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "record_status": "EXAMPLE",
+  "before_gate": "FAIL",
+  "after_gate": "PASS",
+  "false_success_rejected": true,
+  "limitations": "This is a deterministic toy demonstration, not an autonomous lab or repository deployment."
+}

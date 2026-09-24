@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-04",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "RELAYSUITE",
+  "instance_refs": [
+    "I-04"
+  ],
+  "class": "IMPLEMENTATION_GAP",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: The producer emits the new schema while the installed consumer expects the old one.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "IMPLEMENT",
+  "status": "PROPOSED",
+  "wakeup_condition": "Exercise the actual two versions together."
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "decision",
+  "schema_version": "1.0.0",
+  "id": "DEC-NEXT",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "synthetic-restoration-before",
+  "authority_ref": "EXAMPLE-LOCAL-TOY-ONLY",
+  "disposition": "IMPROVE",
+  "status": "PROPOSED",
+  "evidence_refs": [
+    "EV-OBS",
+    "EV-QUAL"
+  ],
+  "alternatives": [
+    "Implement the capability in an existing owner",
+    "Use a suitable existing dependency",
+    "Run a narrower experiment",
+    "Do not build"
+  ],
+  "rationale": "Replace the no-op implementation and rerun the same qualified checks.",
+  "resource_envelope_ref": "LOCAL-BUNDLED-FIXTURE-ONLY",
+  "reversal_condition": "Stop any promotion that interprets these two toy passes as production backup safety.",
+  "execution_receipt_refs": []
+}

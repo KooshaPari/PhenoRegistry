@@ -153,7 +153,7 @@ index 88fec07..e5fe6fb 100644
 --- a/.github/CODEOWNERS
 +++ b/.github/CODEOWNERS
 @@ -1 +1,17 @@
--* @KooshaPari
+-* @<REDACTED>
 +# Phenotype-org standard CODEOWNERS (v2 / 2026-06-14)
 +#
 +# Source: https://github.com/KooshaPari/phenotype-tooling/blob/main/templates/CODEOWNERS
@@ -170,7 +170,7 @@ index 88fec07..e5fe6fb 100644
 +# ── catch-all owner ────────────────────────────────────────────────────────
 +# Every PR must get approval from at least one of these reviewers unless
 +# a more specific block below overrides.
-+* @KooshaPari
++* @<REDACTED>
 \ No newline at end of file
 diff --git a/.github/ISSUE_TEMPLATE/bug.md b/.github/ISSUE_TEMPLATE/bug.md
 deleted file mode 100644
@@ -269,7 +269,7 @@ index 0000000..8b297e9
 +blank_issues_enabled: false
 +
 +contact_links:
-+  - name: phenotype-bus maintainer (KooshaPari)
++  - name: phenotype-bus maintainer (<REDACTED>)
 +    url: https://github.com/KooshaPari
 +    about: Direct contact for questions that don't fit a bug or feature request.
 +  - name: Security advisory (private disclosure)

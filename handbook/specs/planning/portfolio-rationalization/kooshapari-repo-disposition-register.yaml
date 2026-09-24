@@ -1,0 +1,2205 @@
+portfolio:
+  schema_version: '1.0'
+  generated_on: '2026-09-01'
+  account: KooshaPari
+  inventory_total: 146
+  github_metadata:
+    public: 112
+    private: 34
+    archived: 29
+    not_archived: 117
+  evidence_scope:
+    E1_root_docs_reviewed: 108
+    E0_metadata_only: 38
+    E2_plus_completed: 0
+    warning: This is a portfolio triage register, not a claim that every branch, tag,
+      commit, build, test, release, package, or live journey was verified.
+  recommended_operating_model:
+    managed: 63
+    incubator_or_hold: 15
+    frozen_reference: 13
+    retire_after_gate: 55
+    actionable_agent_owned_set: 78
+  recommendation_counts:
+    absorb_then_archive: 13
+    canonical: 24
+    canonical_reset: 8
+    incubator: 7
+    upstream_reference: 12
+    archive_normalize: 40
+    canonical_fork: 5
+    private_ops: 3
+    forensic_hold: 6
+    canonical_lineage: 2
+    historical_showcase: 1
+    decompose_and_narrow: 7
+    forensic_quarantine: 2
+    generated_surface: 3
+    conditional_canonical: 9
+    decompose_and_archive: 2
+    canonical_collection: 1
+    canonical_research: 1
+repositories:
+- family: portfolio-governance
+  recommendation: absorb_then_archive
+  target: KooshaPari profile + phenotype-fleet-ops
+  first_task: Inventory account-level templates; migrate only live profile/community/workflow
+    assets; leave tombstone.
+  confidence: high
+  id: 1
+  repo: .github
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: routing-provider
+  recommendation: absorb_then_archive
+  target: substrate
+  first_task: Prove adapter/API parity and preserve upstream provenance before freezing
+    this donor.
+  confidence: high
+  id: 2
+  repo: agentapi-plusplus
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-runtime
+  recommendation: canonical
+  target: Agentora
+  first_task: Finish role charter, compatibility matrix, one Codex-class pilot, and
+    measured framework comparison.
+  confidence: high
+  id: 3
+  repo: Agentora
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: delivery-control
+  recommendation: canonical_reset
+  target: AgilePlus
+  first_task: Remove foreign DINO/shelf material; rebuild work-authority spec and
+    executable traceability from evidence.
+  confidence: high
+  id: 4
+  repo: AgilePlus
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: canonical_reset
+  target: Apisync
+  first_task: Choose the released Rust API toolkit identity; delete the contradictory
+    API-sync/npm product fiction after history audit.
+  confidence: high
+  id: 5
+  repo: Apisync
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: incubator
+  target: argis-extensions
+  first_task: Demonstrate a maintained Bifrost extension delta, one deployment journey,
+    and two real consumers or absorb into substrate.
+  confidence: medium
+  id: 6
+  repo: argis-extensions
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: security-auth
+  recommendation: incubator
+  target: AuthKit
+  first_task: Resolve license, threat model, package identity, and two-consumer proof;
+    otherwise absorb facades into domain owners.
+  confidence: medium
+  id: 7
+  repo: AuthKit
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: evidence-quality
+  recommendation: canonical
+  target: Benchora
+  first_task: Use as the portfolio benchmark authority; add comparator schemas, immutable
+    result bundles, and Tracera export.
+  confidence: high
+  id: 8
+  repo: Benchora
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: upstream_reference
+  target: bifrost
+  first_task: Add UPSTREAM/DELTA/SYNC/EXIT files; no first-party product claims without
+    owned divergence evidence.
+  confidence: high
+  id: 9
+  repo: bifrost
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: infra-product
+  recommendation: canonical
+  target: BytePort
+  first_task: Run one successful end-to-end deployment through BytePort -> NanoVMS
+    pipeline. Publish operator journey with evidence.
+  confidence: high
+  id: 10
+  repo: BytePort
+  visibility: public
+  github_archived: false
+  evidence_tier: E2-source-code
+  operating_class: managed
+  decision_status: decided
+  scope_note: 'Full source-code audit 2026-09-14. Independent product (NOT FocalPoint
+    descendant). 387 commits, 61+ tests, 28 CI, 15 ADRs, PRD, SPEC. Consumer of NanoVMS
+    via HTTP API. SOTA research doc (1646 lines). Score: 35/60.'
+- family: product-game
+  recommendation: canonical
+  target: CivicSurvival-public
+  first_task: Preserve public-client/closed-server boundary; add release evidence
+    and player case-study metrics without fake buildability.
+  confidence: high
+  id: 11
+  repo: CivicSurvival-public
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: product-game
+  recommendation: canonical_reset
+  target: Civis
+  first_task: Replace percent claims with reproducible game-loop evidence; reconcile
+    39-member scope and complete one playable vertical slice.
+  confidence: high
+  id: 12
+  repo: Civis
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: clap-ext
+  first_task: Verify tombstone/provenance and remove from actionable dashboards.
+  confidence: high
+  id: 13
+  repo: clap-ext
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: routing-provider
+  recommendation: canonical_fork
+  target: cliproxyapi-plusplus
+  first_task: Formalize owned deltas, upstream sync cadence, compatibility suite,
+    and subscription-proxy benchmark.
+  confidence: high
+  id: 14
+  repo: cliproxyapi-plusplus
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: private-ops
+  recommendation: private_ops
+  target: cockpit
+  first_task: Keep source-only; make RepoLedger its only state source and prohibit
+    generated/runtime state in Git.
+  confidence: high
+  id: 15
+  repo: cockpit
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: graphics-game
+  recommendation: canonical_fork
+  target: Compound-Spheres-3D
+  first_task: Keep narrow WSM3D dependency boundary; automate upstream divergence
+    and WorldSphere integration verification.
+  confidence: high
+  id: 16
+  repo: Compound-Spheres-3D
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: canonical
+  target: Configra
+  first_task: Publish stable configuration contracts and prove adoption across at
+    least two products.
+  confidence: high
+  id: 17
+  repo: Configra
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: Conft
+  first_task: Confirm no unique consumers; retain history only.
+  confidence: high
+  id: 18
+  repo: Conft
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: agent-runtime
+  recommendation: upstream_reference
+  target: context-mode-plusplus
+  first_task: Document upstream pin and actual delta; upstream or archive if no material
+    maintained difference.
+  confidence: medium
+  id: 19
+  repo: context-mode-plusplus
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: sdk-shared
+  recommendation: archive_normalize
+  target: domain data owners
+  first_task: Follow its own deprecation decision; verify no consumers and preserve
+    migration map.
+  confidence: high
+  id: 20
+  repo: DataKit
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: Diffuse
+  first_task: Retain history only; no active-agent ownership.
+  confidence: high
+  id: 21
+  repo: Diffuse
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: product-game
+  recommendation: canonical
+  target: Dino
+  first_task: Treat DINOForge as a flagship platform; independently reproduce packages,
+    installer, tests, and one live mod journey.
+  confidence: high
+  id: 22
+  repo: Dino
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: product-game
+  recommendation: upstream_reference
+  target: Dino dependency pin
+  first_task: Record exact upstream pin/license and consume as dependency; do not
+    market unchanged upstream code as first-party.
+  confidence: high
+  id: 23
+  repo: DINOForge-UnityDoorstop
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: device-automation
+  recommendation: canonical
+  target: Eidolon
+  first_task: Make device/sandbox contract authoritative; reconcile extraction satellites
+    and prove desktop+mobile+isolation journeys.
+  confidence: high
+  id: 24
+  repo: Eidolon
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: events-state
+  recommendation: forensic_hold
+  target: Eventra or restored phenoEvents
+  first_task: Do not archive into a nonexistent successor; locate parity, consumers,
+    releases, and choose one real event-bus authority.
+  confidence: high
+  id: 25
+  repo: Eventra
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: Eidolon research history
+  first_task: Preserve useful experiments under Eidolon research/provenance; remove
+    from actionable set.
+  confidence: medium
+  id: 26
+  repo: eyetracker
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: product-app
+  recommendation: forensic_hold
+  target: one of FocalPoint / phenotype-apps
+  first_task: Recover branches and product history; select one canonical screen-time/dependency
+    identity and redirect the loser.
+  confidence: high
+  id: 27
+  repo: FocalPoint
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-cli
+  recommendation: canonical_lineage
+  target: forgecode
+  first_task: Keep headless/performance lineage separate; benchmark against helios-cli
+    before any convergence.
+  confidence: high
+  id: 28
+  repo: forgecode
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical-showcase
+  recommendation: historical_showcase
+  target: Frostify
+  first_task: Keep visibly archived as a proven historical release; correct obsolete
+    install links and preserve download evidence.
+  confidence: high
+  id: 29
+  repo: Frostify
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-workbench
+  recommendation: upstream_reference
+  target: HeliosLab dependency/reference
+  first_task: Document whether any maintained terminal delta exists; otherwise track
+    upstream rather than operate a product fork.
+  confidence: medium
+  id: 30
+  repo: ghostty
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: trace-knowledge
+  recommendation: forensic_hold
+  target: Grapheon or Tracera module
+  first_task: Prove an independent generic claim/provenance graph job and consumers;
+    otherwise absorb into Tracera.
+  confidence: high
+  id: 31
+  repo: Grapheon
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-cli
+  recommendation: canonical_lineage
+  target: helios-cli
+  first_task: Keep UX-leading interactive lineage; produce shared task corpus and
+    compatibility matrix with forgecode.
+  confidence: high
+  id: 32
+  repo: helios-cli
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-workbench
+  recommendation: canonical_reset
+  target: HeliosLab
+  first_task: Replace configuration-workspace README with the human-approved desktop
+    coding-workbench charter and executable prototype journey.
+  confidence: high
+  id: 33
+  repo: HeliosLab
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: decompose_and_narrow
+  target: HexaKit genesis/scaffolding only
+  first_task: Extract domain crates to owners; retain only generators, project templates,
+    schema validation, and migration tooling.
+  confidence: high
+  id: 34
+  repo: HexaKit
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: ml-research
+  recommendation: forensic_quarantine
+  target: hfscope or ResearchLedger
+  first_task: Time-box a code/history audit; either prove a usable model-analysis
+    tool or archive its fragments into research history.
+  confidence: high
+  id: 35
+  repo: hfscope
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: generated_surface
+  target: OmniRoute release pipeline
+  first_task: Generate formula from signed OmniRoute releases; archive if OmniRoute
+    has no surviving release boundary.
+  confidence: medium
+  id: 36
+  repo: homebrew-omniroute
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: asset-ledger
+  recommendation: canonical
+  target: hwLedger
+  first_task: Resolve conflict with phenotype-omlx; keep hardware/fleet/capacity authority
+    and export evidence to Tracera.
+  confidence: high
+  id: 37
+  repo: hwLedger
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: device-automation
+  recommendation: absorb_then_archive
+  target: Eidolon
+  first_task: Run shared mobile fixture corpus; migrate unique Rust capabilities to
+    Eidolon, retain provenance, then freeze.
+  confidence: high
+  id: 38
+  repo: kmobile
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-brand
+  recommendation: canonical
+  target: KooshaPari
+  first_task: Use as profile/portfolio front door generated from RepoLedger; no duplicate
+    hand-maintained project truth.
+  confidence: high
+  id: 39
+  repo: KooshaPari
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: private-ops
+  recommendation: private_ops
+  target: local-ops
+  first_task: Keep non-secret local automation sources; add executable inventory and
+    disaster-recovery checks.
+  confidence: high
+  id: 40
+  repo: local-ops
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: marketplace-lab
+  recommendation: incubator
+  target: localbase3
+  first_task: '60-day proof gate: one real provider, one buyer flow, settlement threat
+    model, and deployable vertical slice or archive.'
+  confidence: medium
+  id: 41
+  repo: localbase3
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: observability
+  recommendation: absorb_then_archive
+  target: PhenoObservability/logkit
+  first_task: Verify byte/API parity and consumers, then enforce the already-declared
+    absorption.
+  confidence: high
+  id: 42
+  repo: Logify
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: mcp
+  recommendation: conditional_canonical
+  target: MCPForge
+  first_task: Prove LSP-to-MCP delta, protocol-2026-07-28 compliance, interop tests,
+    and at least one consumer.
+  confidence: medium
+  id: 43
+  repo: MCPForge
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: product-app
+  recommendation: canonical
+  target: Melosviz
+  first_task: Complete one local audio-to-visual live-performance journey, packaging,
+    latency benchmark, and comparative case study.
+  confidence: high
+  id: 44
+  repo: Melosviz
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: device-automation
+  recommendation: upstream_reference
+  target: Eidolon comparison fixture
+  first_task: Pin upstream and use as comparator; migrate only uniquely valuable behavior
+    after measured parity.
+  confidence: high
+  id: 45
+  repo: mobile-cli
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: device-automation
+  recommendation: upstream_reference
+  target: Eidolon comparison fixture
+  first_task: Pin upstream and use for MCP parity/security tests; avoid a parallel
+    first-party roadmap.
+  confidence: high
+  id: 46
+  repo: mobile-mcp
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: ResearchLedger history
+  first_task: Preserve model-routing research only; remove active ownership.
+  confidence: high
+  id: 47
+  repo: model-conductor-hub
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: infra-runtime
+  recommendation: canonical
+  target: nanovms or Eidolon sandbox runtime
+  first_task: Add install docs and Docker image. Run Docker/Firecracker pilot for
+    multi-tier evidence.
+  confidence: high
+  id: 48
+  repo: nanovms
+  visibility: public
+  github_archived: false
+  evidence_tier: E2-source-code
+  operating_class: managed
+  decision_status: decided
+  scope_note: 'Full source-code forensic audit 2026-09-14. Tombstone reverted. 345
+    commits, 28 tiers on macOS (30 registered), 83 test files, 7 CI workflows. Full
+    lifecycle API pilot (health, deploy, list, stop, delete). SOTA documented (1841
+    lines). Score: 39/60, Gate G4 PARTIAL.'
+- family: network-lab
+  recommendation: conditional_canonical
+  target: NetWeave
+  first_task: Prove a repeatable traffic-simulation workload, benchmark, package,
+    and at least one internal consumer.
+  confidence: medium
+  id: 49
+  repo: NetWeave
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: upstream-contribution
+  recommendation: upstream_reference
+  target: upstream kunchenguid/no-mistakes
+  first_task: Keep fork for contribution/experimentation; document only Koosha-authored
+    delta and upstream PR status.
+  confidence: high
+  id: 50
+  repo: no-mistakes
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: canonical_reset
+  target: OmniRoute
+  first_task: Separate owned router product from upstream/vendor code; add DELTA,
+    deterministic route tests, cost/latency/quality pilot.
+  confidence: high
+  id: 51
+  repo: OmniRoute
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: OmniRoute history
+  first_task: Retain migration history only.
+  confidence: high
+  id: 52
+  repo: omniroute-rust
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: planning-history
+  recommendation: absorb_then_archive
+  target: AgilePlus + ResearchLedger
+  first_task: Honor strict pause; migrate unique venture/spec research with provenance,
+    then archive cleanly.
+  confidence: high
+  id: 53
+  repo: Parpoura
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-runtime
+  recommendation: conditional_canonical
+  target: phench
+  first_task: Prove project materialization/locking/sync as a narrow control plane;
+    integrate RepoLedger rather than duplicate it.
+  confidence: medium
+  id: 54
+  repo: phench
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-governance
+  recommendation: absorb_then_archive
+  target: RepoLedger + local workspace config
+  first_task: Retire repo-of-repos shelf authority; preserve only local materialization
+    manifests and history.
+  confidence: high
+  id: 55
+  repo: pheno
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: evaluation-runtime
+  recommendation: decompose_and_narrow
+  target: Benchora + OmniRoute + turboquant + ResearchLedger
+  first_task: Split benchmark authority, router configs, kernel research, and local
+    serving; retain only a coherent operator testbed if needed.
+  confidence: high
+  id: 56
+  repo: pheno-harness
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: observability
+  recommendation: absorb_then_archive
+  target: PhenoObservability
+  first_task: Consolidate the trace port into the instrumentation owner unless independent
+    package adoption is proven.
+  confidence: high
+  id: 57
+  repo: pheno-tracing
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: ml-research
+  recommendation: decompose_and_narrow
+  target: ResearchLedger + turboquant + phenotype-omlx
+  first_task: Classify every artifact; move durable research/model work to specific
+    owners and retire the generic AI umbrella.
+  confidence: high
+  id: 58
+  repo: phenoAI
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: infra-runtime
+  recommendation: absorbed
+  target: NanoVMS (absorbed)
+  first_task: No action required. PhenoCompose absorbed into NanoVMS via integrations/pheno-compose/
+    bridge.
+  confidence: high
+  id: 59
+  repo: PhenoCompose
+  visibility: public
+  github_archived: false
+  evidence_tier: E2-source-code
+  operating_class: incubator_or_hold
+  decision_status: decided
+  scope_note: 'Confirmed absorbed: first commit of NanoVMS is "unified NVMS with PhenoCompose
+    integration". Integration bridge at integrations/pheno-compose/.'
+- family: formal-verification
+  recommendation: conditional_canonical
+  target: PhenoContracts
+  first_task: Demonstrate real Kani/Prusti/Coq backends, package releases, and two
+    consumers; otherwise move schemas to PhenoSpecs.
+  confidence: medium
+  id: 60
+  repo: PhenoContracts
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: product-local design systems / PhenoHandbook
+  first_task: Apply its declared archive state and preserve migration pointers.
+  confidence: high
+  id: 61
+  repo: phenoDesign
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-governance
+  recommendation: absorb_then_archive
+  target: phenotype-fleet-ops + RepoLedger
+  first_task: Dismantle the repo shelf; migrate only live shared operations or catalog
+    metadata.
+  confidence: high
+  id: 62
+  repo: PhenoDevOps
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: documentation
+  recommendation: generated_surface
+  target: phenodocs
+  first_task: Keep as rendered federation only; generate navigation/status from RepoLedger
+    and source docs from owners.
+  confidence: high
+  id: 63
+  repo: phenodocs
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: mcp
+  recommendation: upstream_reference
+  target: PhenoFastMCP
+  first_task: Prove maintained framework delta against upstream FastMCP and current
+    MCP spec or freeze as reference.
+  confidence: high
+  id: 64
+  repo: PhenoFastMCP
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: task-process
+  recommendation: absorb_then_archive
+  target: Tasken
+  first_task: Verify Tasken contains every unique task-runner contract/benchmark;
+    then enforce the recorded absorption.
+  confidence: high
+  id: 65
+  repo: phenoForge
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: documentation
+  recommendation: canonical
+  target: PhenoHandbook
+  first_task: Own conventions/patterns only; eliminate project status and contract
+    authority from the handbook.
+  confidence: high
+  id: 66
+  repo: PhenoHandbook
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: decompose_and_archive
+  target: domain owners
+  first_task: Recover concatenated Python/Go/utils/infra histories into correct owners;
+    this cannot remain an authority.
+  confidence: high
+  id: 67
+  repo: phenokits-commons
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: mcp
+  recommendation: canonical
+  target: PhenoMCPServers
+  first_task: Keep runnable server catalog; require protocol conformance, security
+    manifests, ownership, and per-server release tests.
+  confidence: high
+  id: 68
+  repo: PhenoMCPServers
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: observability
+  recommendation: canonical_reset
+  target: PhenoObservability
+  first_task: Narrow to instrumentation/runtime libraries; reconcile absorbed crates
+    and remove evidence-product overlap with Tracera.
+  confidence: high
+  id: 69
+  repo: PhenoObservability
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: plugin-runtime
+  recommendation: conditional_canonical
+  target: PhenoPlugins
+  first_task: Prove Agentora interoperability, ABI/manifest versioning, sandbox/security
+    model, and multiple host consumers.
+  confidence: medium
+  id: 70
+  repo: PhenoPlugins
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: task-process
+  recommendation: canonical
+  target: PhenoProc
+  first_task: Keep process/IPC primitives distinct from Tasken; harden cross-platform
+    behavior, safety invariants, and benchmarks.
+  confidence: high
+  id: 71
+  repo: PhenoProc
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: research-runtime
+  recommendation: absorb_then_archive
+  target: ResearchLedger + Agentora/Tasken
+  first_task: Locate the claimed successor; preserve workflow/provenance contracts
+    and retire the nonexistent-monorepo pointer.
+  confidence: high
+  id: 72
+  repo: phenoResearchEngine
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: documentation
+  recommendation: canonical
+  target: PhenoSpecs
+  first_task: Own cross-repo protocols and ADRs only; repo-local requirements remain
+    with their products.
+  confidence: high
+  id: 73
+  repo: PhenoSpecs
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: product-app
+  recommendation: forensic_hold
+  target: one of phenotype-apps / FocalPoint
+  first_task: Resolve its collision with FocalPoint and giant mixed history; select
+    one product identity and decompose unrelated apps.
+  confidence: high
+  id: 74
+  repo: phenotype-apps
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: fleet-assurance
+  recommendation: canonical
+  target: phenotype-fleet-ops
+  first_task: Become sole shared CI/security/release/attestation authority; fix nonexistent-owner
+    URLs and integrate RepoLedger state.
+  confidence: high
+  id: 75
+  repo: phenotype-fleet-ops
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: archive_normalize
+  target: substrate + phenotype-router
+  first_task: It already declares archive; verify real successors and fix redirects
+    before normalizing GitHub state.
+  confidence: high
+  id: 76
+  repo: phenotype-gateway
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: graphics-game
+  recommendation: incubator
+  target: phenotype-gfx
+  first_task: '90-day consumer gate: prove shared data contracts across at least two
+    games; otherwise return modules to product owners.'
+  confidence: medium
+  id: 77
+  repo: phenotype-gfx
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: absorb_then_archive
+  target: domain Go packages
+  first_task: Inventory modules and move each to its domain owner; retire language
+    bucket.
+  confidence: high
+  id: 78
+  repo: phenotype-go-kit
+  visibility: private
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: sdk-shared
+  recommendation: archive_normalize
+  target: domain Go packages / HexaKit templates
+  first_task: Apply its explicit retirement; remove nonexistent successor links and
+    preserve only genesis templates where appropriate.
+  confidence: high
+  id: 79
+  repo: phenotype-go-sdk
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: infra-runtime
+  recommendation: canonical_reset
+  target: phenotype-infra
+  first_task: Own shared IaC/topology/runtime deployment only; eject BytePort and
+    other whole products back to their repos.
+  confidence: high
+  id: 80
+  repo: phenotype-infra
+  visibility: public
+  github_archived: false
+  evidence_tier: E2-source-code
+  operating_class: managed
+  decision_status: decided
+  scope_note: 'Boundary confirmed (commit 67560d7): phenotype-infra owns shared IaC
+    only. BytePort ejected from README as independent product.'
+- family: infra-runtime
+  recommendation: absorb_then_archive
+  target: phenotype-infra + Configra
+  first_task: Migrate unique IaC/config adapters to owners; retire generic infrastructure
+    kit.
+  confidence: medium
+  id: 81
+  repo: phenotype-infrakit
+  visibility: private
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: evidence-quality
+  recommendation: canonical
+  target: phenotype-journeys
+  first_task: Make hard assertions mandatory, add non-LLM validators, sign evidence
+    bundles, and feed Tracera.
+  confidence: high
+  id: 82
+  repo: phenotype-journeys
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-brand
+  recommendation: canonical_collection
+  target: phenotype-landing
+  first_task: Keep shared static-site deployment collection; generate product facts
+    from RepoLedger to prevent drift.
+  confidence: high
+  id: 83
+  repo: phenotype-landing
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: ml-runtime
+  recommendation: canonical_fork
+  target: phenotype-omlx
+  first_task: Clarify fork delta, local-runtime boundary, and relationship to hwLedger;
+    add reproducible model/hardware benchmarks.
+  confidence: high
+  id: 84
+  repo: phenotype-omlx
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: canonical_reset
+  target: phenotype-python-sdk
+  first_task: Be a generated/released Python facade only; remove unresolved merge
+    markers and domain logic; publish or stop claiming installability.
+  confidence: high
+  id: 85
+  repo: phenotype-python-sdk
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-governance
+  recommendation: generated_surface
+  target: phenotype-registry
+  first_task: Generate human catalog from RepoLedger; prohibit hand-edited lifecycle
+    authority.
+  confidence: high
+  id: 86
+  repo: phenotype-registry
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: conditional_canonical
+  target: phenotype-router
+  first_task: Resolve library-only versus HTTP-product contradiction; prove package
+    publication and real consumers or absorb into substrate.
+  confidence: high
+  id: 87
+  repo: phenotype-router
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-runtime
+  recommendation: incubator
+  target: phenotype-teamcomm
+  first_task: Land protocol/persistence/CLI/MCP, integrate PhenoVCS locks, and prove
+    two-agent collision avoidance before promotion.
+  confidence: medium
+  id: 88
+  repo: phenotype-teamcomm
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: fleet-assurance
+  recommendation: decompose_and_narrow
+  target: phenotype-fleet-ops + Benchora + HexaKit
+  first_task: Route CI/policy to fleet ops, benchmarks to Benchora, scaffolds to HexaKit;
+    retain only coherent developer tooling if any.
+  confidence: high
+  id: 89
+  repo: phenotype-tooling
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: trace-knowledge
+  recommendation: archive_normalize
+  target: Tracera
+  first_task: Apply its own supersession decision after consumer/redirect verification.
+  confidence: high
+  id: 90
+  repo: phenotype-traceability-spine
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: ml-runtime
+  recommendation: upstream_reference
+  target: upstream Unsloth + local patches
+  first_task: Add exact upstream pin and delta inventory; maintain only deliberate
+    local changes, not a shadow product identity.
+  confidence: high
+  id: 91
+  repo: phenotype-unsloth-studio
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: fleet-assurance
+  recommendation: absorb_then_archive
+  target: phenotype-fleet-ops
+  first_task: Move reusable actions/workflows with history and tests; leave one fleet
+    assurance surface.
+  confidence: high
+  id: 92
+  repo: phenotypeActions
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: decompose_and_narrow
+  target: domain utility crates
+  first_task: Find consumers/co-change clusters; promote independently versioned utilities
+    or absorb them—no generic dumping ground.
+  confidence: high
+  id: 93
+  repo: phenoUtils
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: task-process
+  recommendation: canonical
+  target: PhenoVCS
+  first_task: Finish safe worktree/airlock primitives, non-destructive invariants,
+    and integration with teamcomm/agents.
+  confidence: high
+  id: 94
+  repo: PhenoVCS
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: platform-lab
+  recommendation: incubator
+  target: Pine
+  first_task: Time-box a smallest compatibility-layer vertical slice and compare against
+    Wine/Proton/VM approaches; archive if no edge.
+  confidence: medium
+  id: 95
+  repo: Pine
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: delivery-control
+  recommendation: upstream_reference
+  target: Planify2 or upstream Plane
+  first_task: Freeze feature work; use only as comparator/donor until a branch/history
+    parity decision chooses one fork.
+  confidence: high
+  id: 96
+  repo: Planify
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: delivery-control
+  recommendation: conditional_canonical
+  target: Planify2
+  first_task: Prove meaningful Plane divergence, reproducible install, migration from
+    Planify, and a differentiated planning journey.
+  confidence: medium
+  id: 97
+  repo: Planify2
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: device-automation
+  recommendation: canonical_fork
+  target: PlayCua
+  first_task: Keep as native CUA adapter under Eidolon; publish honestly and test
+    platform adapters plus protocol conformance.
+  confidence: high
+  id: 98
+  repo: PlayCua
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: fleet-assurance
+  recommendation: archive_normalize
+  target: phenotype-fleet-ops
+  first_task: Apply declared migration after parity and redirect checks.
+  confidence: high
+  id: 99
+  repo: PolicyStack
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: evaluation-runtime
+  recommendation: upstream_reference
+  target: portage
+  first_task: Maintain as Harbor evaluation fork/reference with explicit upstream/delta
+    and no duplicate benchmark authority.
+  confidence: medium
+  id: 100
+  repo: portage
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: Project-Spyn
+  first_task: Retain history only.
+  confidence: high
+  id: 101
+  repo: Project-Spyn
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: ml-research
+  recommendation: incubator
+  target: QuadSGM
+  first_task: Require a reproducible paper/code benchmark, dataset provenance, and
+    one clear research thesis before promotion.
+  confidence: low
+  id: 102
+  repo: QuadSGM
+  visibility: private
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: sdk-shared
+  recommendation: conditional_canonical
+  target: Quillr
+  first_task: Prove package distribution, protocol scope, benchmarks, and consumers;
+    merge into Apisync if jobs are materially identical.
+  confidence: medium
+  id: 103
+  repo: Quillr
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: portfolio-governance
+  recommendation: canonical
+  target: RepoLedger
+  first_task: 'First priority: reconcile live GitHub state, own machine manifest/API,
+    emit generated views, and fail on drift.'
+  confidence: high
+  id: 104
+  repo: RepoLedger
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: research-ledger
+  recommendation: canonical
+  target: ResearchLedger
+  first_task: Own source/provenance/synthesis records; integrate SOTA snapshots, claims,
+    and exports to Tracera.
+  confidence: high
+  id: 105
+  repo: ResearchLedger
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: sdk-shared
+  recommendation: archive_normalize
+  target: phenotype-fleet-ops / product runbooks
+  first_task: Apply declared archive; preserve any unique resilience patterns with
+    provenance.
+  confidence: high
+  id: 106
+  repo: ResilienceKit
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: private-ops
+  recommendation: private_ops
+  target: resume-all
+  first_task: Keep source-only recovery toolkit; verify every entry point and prevent
+    secrets/runtime snapshots from entering Git.
+  confidence: high
+  id: 107
+  repo: resume-all
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: domain CLI owners
+  first_task: Retain history; migrate only proven reusable components.
+  confidence: high
+  id: 108
+  repo: rich-cli-kit
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: forensic_quarantine
+  target: archive or named target
+  first_task: Identify what the tiny private repo contains; rename/promote within
+    one session or archive.
+  confidence: low
+  id: 109
+  repo: rust
+  visibility: private
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: incubator_or_hold
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: session-ledger
+  recommendation: canonical
+  target: SessionLedger
+  first_task: Keep narrow lossless capture/replay authority; verify privacy, format
+    evolution, release channels, and Tracera export.
+  confidence: high
+  id: 110
+  repo: SessionLedger
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-runtime
+  recommendation: canonical
+  target: sharecli
+  first_task: Keep OS-level agent resource/coalescing runtime; independently verify
+    package/release claims and contention benchmarks.
+  confidence: high
+  id: 111
+  repo: sharecli
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: agent-runtime
+  recommendation: decompose_and_archive
+  target: Agentora + substrate + communication owner
+  first_task: Split unrelated presence, cheap-routing, and messaging capabilities;
+    preserve only independently justified components.
+  confidence: high
+  id: 112
+  repo: Sidekick
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: events-state
+  recommendation: conditional_canonical
+  target: Stashly
+  first_task: Narrow storage/state/cache contract, prove package/consumer adoption,
+    and resolve naming/link drift.
+  confidence: medium
+  id: 113
+  repo: Stashly
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: canonical
+  target: substrate
+  first_task: Own agent-process dispatch gateway/TUI/adapters; define boundary against
+    OmniRoute, router library, and Agentora.
+  confidence: high
+  id: 114
+  repo: substrate
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: substrate
+  first_task: Retain absorbed-adapter history only.
+  confidence: high
+  id: 115
+  repo: substrate-adapters-bundle
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: Synthia
+  first_task: Retain history only.
+  confidence: high
+  id: 116
+  repo: Synthia
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: task-process
+  recommendation: canonical
+  target: Tasken
+  first_task: Own task/DAG/scheduling semantics; prove phenoForge absorption and separate
+    low-level process primitives from PhenoProc.
+  confidence: high
+  id: 117
+  repo: Tasken
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: developer-platform
+  recommendation: conditional_canonical
+  target: thegent
+  first_task: Prove real consumers and production-grade dispatch/orchestration; maintain
+    boundary from NanoVMS cluster.
+  confidence: high
+  id: 118
+  repo: thegent
+  visibility: public
+  github_archived: false
+  evidence_tier: E2-source-code
+  operating_class: managed
+  decision_status: decided
+  scope_note: 'Separate from NanoVMS cluster (REC-DEC-004). Has own apps/byteport/ with
+    different stack (Python/Next.js). Independent dispatch/orchestration tool.
+    Score: pending.'
+- family: historical
+  recommendation: archive_normalize
+  target: thegent history
+  first_task: Ensure unique uncommitted recovery was imported; retain frozen evidence
+    only.
+  confidence: high
+  id: 119
+  repo: thegent-pr2-v2-uncommitted-2026-07-14
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: thegent history
+  first_task: Verify migration and keep frozen workspace evidence only.
+  confidence: high
+  id: 120
+  repo: thegent-workspace
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: cost-ledger
+  recommendation: decompose_and_narrow
+  target: Tokn accounting ledger + substrate/router
+  first_task: Keep token/cost/budget accounting; move provider-routing behavior to
+    routing authorities.
+  confidence: high
+  id: 121
+  repo: Tokn
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: Tracera / PhenoObservability history
+  first_task: Retain provenance only.
+  confidence: high
+  id: 122
+  repo: Tracely
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: trace-knowledge
+  recommendation: canonical
+  target: Tracera
+  first_task: Own evidence/trace graph; harden verifier, schema, provenance, queryability,
+    and integrations with every ledger.
+  confidence: high
+  id: 123
+  repo: Tracera
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: ml-research
+  recommendation: canonical_research
+  target: turboquant
+  first_task: Keep focused quantization research; require reproducible baselines,
+    hardware matrix, artifacts, and paper-grade reports.
+  confidence: high
+  id: 124
+  repo: turboquant
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: upstream-contribution
+  recommendation: upstream_reference
+  target: upstream BloopAI/vibe-kanban
+  first_task: Honor “reference only”; archive/freeze fork and extract only attributed
+    research into HeliosLab/AgilePlus.
+  confidence: high
+  id: 125
+  repo: vibe-kanban
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: reference
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: archive_normalize
+  target: PhenoObservability or substrate runbooks
+  first_task: Empty duplicate scaffold; preserve spec if unique, then archive.
+  confidence: high
+  id: 126
+  repo: vibe-monitor
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: archive_normalize
+  target: cliproxyapi-plusplus / substrate
+  first_task: Apply its own supersession decision after consumer scan.
+  confidence: high
+  id: 127
+  repo: vibeproxy
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: archive_normalize
+  target: PhenoObservability or product-local ops
+  first_task: Duplicate empty scaffold; consolidate any unique rules and archive.
+  confidence: high
+  id: 128
+  repo: vibeproxy-monitoring
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: routing-provider
+  recommendation: archive_normalize
+  target: PhenoObservability or product-local ops
+  first_task: Select no separate monitoring authority unless deployable assets and
+    independent consumers exist.
+  confidence: high
+  id: 129
+  repo: vibeproxy-monitoring-unified
+  visibility: public
+  github_archived: false
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: product-game
+  recommendation: canonical_fork
+  target: WorldSphereMod
+  first_task: Keep flagship hard fork; automate live-game journey evidence, upstream
+    divergence, and Compound-Spheres compatibility.
+  confidence: high
+  id: 130
+  repo: WorldSphereMod
+  visibility: public
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: managed
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: No active work; retain provenance only.
+  confidence: high
+  id: 131
+  repo: zz-472-P2-Flame-War
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: AGSLAG current authority
+  first_task: Verify any unique source was migrated; retain frozen history.
+  confidence: high
+  id: 132
+  repo: zz-agslag
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: AGSLAG / RepoLedger dashboard
+  first_task: Preserve unique dashboard history only.
+  confidence: high
+  id: 133
+  repo: zz-agslag-dash
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: AGSLAG docs
+  first_task: Preserve unique documents with provenance only.
+  confidence: high
+  id: 134
+  repo: zz-agslag-docs
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 135
+  repo: zz-archive-phenoData
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 136
+  repo: zz-archive-PhenoProject
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 137
+  repo: zz-archive-phenoRouterMonitor
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 138
+  repo: zz-archive-PhenoRuntime
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: RepoLedger evidence imports
+  first_task: Retain immutable audit provenance; do not revive as authority.
+  confidence: high
+  id: 139
+  repo: zz-archive-phenotype-org-audits
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: PhenoSpecs + PhenoHandbook
+  first_task: Retain decisions as evidence; current governance must be generated/enforced
+    elsewhere.
+  confidence: high
+  id: 140
+  repo: zz-archive-phenotype-org-governance
+  visibility: private
+  github_archived: true
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 141
+  repo: zz-archive-services
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical product bundle
+  first_task: Retain private product history only; no active agents.
+  confidence: high
+  id: 142
+  repo: zz-atoms.tech
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical product bundle
+  first_task: Apply its strict freeze and GitHub archive state; security-review secrets/config
+    before final closure.
+  confidence: high
+  id: 143
+  repo: ZZ-AtomsBot
+  visibility: private
+  github_archived: false
+  evidence_tier: E1-root-docs
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Root documentation inspected; code/history/build not yet independently
+    verified.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 144
+  repo: zz-GDK
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 145
+  repo: zz-KaskMan
+  visibility: private
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.
+- family: historical
+  recommendation: archive_normalize
+  target: historical bundle
+  first_task: Already historical; keep out of actionable set.
+  confidence: high
+  id: 146
+  repo: zz-RIP-Fitness-App
+  visibility: public
+  github_archived: true
+  evidence_tier: E0-metadata-name
+  operating_class: retire
+  decision_status: provisional
+  scope_note: Metadata/name-level hypothesis only; repository inspection required
+    before irreversible action.

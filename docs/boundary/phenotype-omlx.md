@@ -5,7 +5,7 @@ status: archived
 last_boundary_review: 2026-07-17
 review_cadence: 90d
 disposition: ARCHIVE_ONLY
-absorbing_repo: "KooshaPari/phenotype-registry"
+absorbing_repo: "<REDACTED>/phenotype-registry"
 target: "phenotype-registry (docs/boundary/phenotype-omlx.md)"
 archived_at: 2026-07-17
 archive_reason: failsafe-platform-specific-mlx-stack
@@ -21,13 +21,13 @@ out_of_scope:
 
 This repo is archived. No source code migration performed. Local clone at
 `repos/phenotype-omlx/` preserved per container-policy ("preserve dirty child
-repositories and linked worktrees"). GitHub remote `KooshaPari/phenotype-omlx`
-set to read-only via `gh repo archive KooshaPari/phenotype-omlx -y` on
+repositories and linked worktrees"). GitHub remote `<REDACTED>/phenotype-omlx`
+set to read-only via `gh repo archive <REDACTED>/phenotype-omlx -y` on
 2026-07-17.
 
 ## In Scope (informational only)
 
-Source repository `KooshaPari/phenotype-omlx` (266KB source, 2.3GB on disk
+Source repository `<REDACTED>/phenotype-omlx` (266KB source, 2.3GB on disk
 incl. target/ + .venv), a fork of OMLX (`/Applications/oMLX.app`) extending
 the upstream MLX research stack with:
 
@@ -52,7 +52,7 @@ the upstream MLX research stack with:
 
 ## Audit decision (2026-07-17)
 
-**Task:** Absorb `KooshaPari/phenotype-omlx` (OML phenotyping) into `phenoAI`.
+**Task:** Absorb `<REDACTED>/phenotype-omlx` (OML phenotyping) into `phenoAI`.
 **Failsafe:** `ARCHIVE_ONLY` if no clear home.
 
 ### Why failsafe engaged
@@ -60,7 +60,7 @@ the upstream MLX research stack with:
 phenoAI (`repos/phenoAI`) is a tightly scoped Rust workspace:
 
 ```toml
-# /Users/kooshapari/CodeProjects/Phenotype/repos/phenoAI/Cargo.toml
+# /Users/<REDACTED>/CodeProjects/Phenotype/repos/phenoAI/Cargo.toml
 [workspace]
 members = [
     "crates/llm-router",
@@ -136,7 +136,7 @@ when no clear home exists. For completeness:
 **Reviewer:** forge subagent (2026-07-17 absorption pass)
 **Decisions:**
 - ARCHIVE_ONLY via failsafe clause (no clear home in phenoAI).
-- GitHub repo archived via `gh repo archive KooshaPari/phenotype-omlx -y`.
+- GitHub repo archived via `gh repo archive <REDACTED>/phenotype-omlx -y`.
 - Local clone preserved under `repos/phenotype-omlx/` per container policy.
 - Registry `projects/phenotype-omlx.json` flipped `disposition`:
   DROP/absorbed_into=hwledger → ARCHIVE_ONLY/target=phenotype-registry.

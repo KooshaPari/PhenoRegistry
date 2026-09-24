@@ -2,8 +2,8 @@
 
 **Status**: `LIVE` / `DECLARE_BOUNDARY_OWNER` (2026-07-20)  
 **Source**: `github.com/KooshaPari/asset-engine`  
-**Extracted from**: `KooshaPari/phenoDesign/engine/`  
-**Spine peer**: `KooshaPari/phenoDesign` (creativity / design / UX spine)
+**Extracted from**: `<REDACTED>/phenoDesign/engine/`  
+**Spine peer**: `<REDACTED>/phenoDesign` (creativity / design / UX spine)
 
 ## Description
 

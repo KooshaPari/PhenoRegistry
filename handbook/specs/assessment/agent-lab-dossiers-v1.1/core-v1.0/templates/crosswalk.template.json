@@ -1,0 +1,17 @@
+{
+  "kind": "crosswalk",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "source_record_ref": "REPLACE_WITH_SOURCE_RECORD_REF",
+  "source_native_id": "REPLACE_WITH_SOURCE_NATIVE_ID",
+  "source_revision": "REPLACE_WITH_SOURCE_REVISION",
+  "target_criterion_refs": [
+    "REPLACE_WITH_TARGET_CRITERION_REFS"
+  ],
+  "relation": "EQUIVALENT",
+  "status": "PROPOSED",
+  "rights_note": "REPLACE_WITH_RIGHTS_NOTE",
+  "rationale": "REPLACE_WITH_RATIONALE"
+}

@@ -23,4 +23,4 @@ See [`MOVED_TO_OBSERVABILITYKIT.md`](./MOVED_TO_OBSERVABILITYKIT.md) for the ful
 ## Status
 
 - GitHub: **Archived** (read-only)
-- Local: Kept for historical reference at `/Users/kooshapari/CodeProjects/Phenotype/repos/Profila/`
+- Local: Kept for historical reference at `/Users/<REDACTED>/CodeProjects/Phenotype/repos/Profila/`

@@ -1,0 +1,3814 @@
+# GENERATED VIEW. Edit canonical JSON inputs, then render again.
+"format": "ASSESSMENT_DOSSIER_VIEW_V1_1"
+"dossier":
+  "kind": "dossier"
+  "schema_version": "1.1.0"
+  "id": "DRAFTBOARD"
+  "record_status": "EXAMPLE"
+  "example_class": "ILLUSTRATIVE_SCENARIO"
+  "title": "Draftboard / polished interface, broken outcome"
+  "subtitle": "A broad, 18-domain filled example: visual finish does not purchase a functioning core journey."
+  "purpose": "Let a single project operator create and retrieve tasks reliably across a browser restart."
+  "boundary": "Local browser interface, task API, and persistence boundary; one operator journey only."
+  "beneficiary": "Single local project operator."
+  "authorship": "AGENT_ORIGINATED"
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment."
+  "genesis_rationale": "This fictional repository was created by agents to isolate a consumer-facing capability. Its boundary is a hypothesis, not proof that a separate repository is necessary."
+  "alternatives":
+    - "Implement the capability in an existing owner"
+    - "Use a suitable existing dependency"
+    - "Run a narrower experiment"
+    - "Do not build"
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example."
+  "non_goals":
+    - "Claim real-repository completion"
+    - "Require a human-authored repository idea"
+    - "Wait for a central registry to become operational"
+  "subject_identity":
+    "source_revision": null
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact."
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  "inventory":
+    -
+      "id": "INV-01"
+      "item": "Create-task control"
+      "declared": "Creates a durable task"
+      "observed_or_assumed": "Success toast changes a mock array"
+      "gap": "Core persistence missing"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-02"
+      "item": "Restart path"
+      "declared": "Tasks survive reload"
+      "observed_or_assumed": "Task disappears in scenario premise"
+      "gap": "Durability failure"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-03"
+      "item": "Visual design"
+      "declared": "Polished card layout"
+      "observed_or_assumed": "Consistent roles and hierarchy assumed"
+      "gap": "Does not prove behavior"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-04"
+      "item": "Keyboard path"
+      "declared": "Supported modal operation"
+      "observed_or_assumed": "Keyboard completion blocked"
+      "gap": "Accessibility gate fails"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-05"
+      "item": "Agent API"
+      "declared": "Stable JSON operations"
+      "observed_or_assumed": "Ad-hoc success response"
+      "gap": "Machine contract missing"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-06"
+      "item": "Deployment package"
+      "declared": "Complete local product"
+      "observed_or_assumed": "Frontend only"
+      "gap": "Missing runtime dependency"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-07"
+      "item": "Security boundary"
+      "declared": "Per-project ownership"
+      "observed_or_assumed": "Authorization untested"
+      "gap": "Unknown, not safe by default"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-08"
+      "item": "Value hypothesis"
+      "declared": "Less task-management friction"
+      "observed_or_assumed": "No beneficiary experiment"
+      "gap": "Research gap"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+  "maturity":
+    "scenario_or_scoped_label": "Illustrative: UI prototype, not an integrated product MVP."
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding."
+    "axes":
+      -
+        "axis": "DESIGN_READY"
+        "status": "ILLUSTRATIVE PARTIAL"
+        "basis": "Visual design is assumed coherent; behavioral contract has gaps."
+      -
+        "axis": "PIPELINE_VERIFIED"
+        "status": "UNKNOWN"
+        "basis": "No actual CI evidence is provided."
+      -
+        "axis": "PRODUCT_VERIFIED"
+        "status": "ILLUSTRATIVE FAIL"
+        "basis": "Core persisted outcome is missing."
+      -
+        "axis": "ACCESSIBILITY"
+        "status": "ILLUSTRATIVE FAIL"
+        "basis": "Required keyboard journey blocked."
+      -
+        "axis": "PUBLISHED_VERIFIED"
+        "status": "NOT_EVALUATED"
+        "basis": "Package is incomplete even within scenario."
+      -
+        "axis": "VALUE_VALIDATED"
+        "status": "UNKNOWN"
+        "basis": "No actual user outcome evidence."
+    "value_evidence": "No actual consumer value evidence is included. The case distinguishes a plausible intent from a validated benefit."
+  "finding_ids":
+    - "F-I-03"
+    - "F-I-08"
+    - "F-I-09"
+    - "F-I-11"
+    - "F-I-16"
+    - "F-I-19"
+    - "F-I-23"
+    - "F-I-25"
+    - "F-I-26"
+    - "F-I-28"
+    - "F-I-29"
+    - "F-I-31"
+    - "F-I-32"
+    - "F-I-36"
+  "decision_ids":
+    - "DEC-NEXT"
+  "semantic_reviews":
+    -
+      "topic": "Visual polish versus product completeness"
+      "assessment": "The design may be coherent while the product is still a UI prototype."
+      "support": "The premises describe consistent cards, semantic colors, and identifiable actions."
+      "countercase": "Screenshots cannot show persistence, tenant authorization, error recovery, or keyboard completion."
+      "discriminator": "Create a task through the real UI, kill/restart relevant processes, and retrieve it through an independent reader."
+      "confidence_basis": "High confidence in the logical distinction; no confidence claim about any real application."
+    -
+      "topic": "Scope before expansion"
+      "assessment": "Do not add collaboration, analytics, or a second UI until the single-operator outcome is demonstrated."
+      "support": "The central promise already requires data persistence and a working control path."
+      "countercase": "A user might value an ephemeral board; that would require an explicit intent revision, not silently weakening persistence."
+      "discriminator": "Compare persistent and intentionally ephemeral variants against the accepted beneficiary need."
+      "confidence_basis": "Scenario-based recommendation; retain both hypotheses until evidence distinguishes them."
+  "next_action": "Wire and verify durable creation end to end before more visual refinement; repair the keyboard-blocking modal in parallel."
+  "stop_condition": "Do not promote while task creation loses data or the required journey is inaccessible by keyboard."
+  "restart_packet":
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work."
+    "failed_hypotheses":
+      - "A well-formed record is not proof the product behavior occurred."
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations."
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  "lineage":
+    "previous_dossier_id": null
+    "change_class": "ILLUSTRATIVE_BASELINE"
+    "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit."
+  "row_notes":
+    -
+      "instance_id": "I-01"
+      "title": "The current work has an identifiable source of delegated authority"
+      "interpretation": "The scenario names a bounded evaluation mandate."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-02"
+      "title": "The mandate distinguishes permitted observation from permitted mutation"
+      "interpretation": "Observation and mutation permissions are separated."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-03"
+      "title": "Each material research claim has an identifiable source record"
+      "interpretation": "The user-demand claim has no underlying interview or usage record."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-04"
+      "title": "Source records distinguish primary evidence from secondary interpretation"
+      "interpretation": "The scenario distinguishes reference documentation from agent interpretation."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-05"
+      "title": "The inventory identifies actual externally reachable entrypoints"
+      "interpretation": "Routes, buttons, and request boundaries are inventoried."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-06"
+      "title": "Exported library interfaces are distinguished from internal helpers"
+      "interpretation": "Public exports and internal UI helpers are separated."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-07"
+      "title": "Each authoritative data object has one designated owner"
+      "interpretation": "The service is the intended authoritative owner of task data."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-08"
+      "title": "Generated projections identify their source of truth"
+      "interpretation": "The dashboard treats its local mock array as authoritative application state."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-09"
+      "title": "The core operation produces the required result for a representative valid input"
+      "interpretation": "Creating a task produces a toast but no persisted task after restart."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-10"
+      "title": "Empty input follows the declared domain behavior"
+      "interpretation": "An empty list renders a deliberate empty state rather than crashing."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-11"
+      "title": "The test inventory identifies which accepted obligations each suite exercises"
+      "interpretation": "The stated test inventory covers mock handlers, not the accepted persistence obligation."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-12"
+      "title": "Required test selection includes the intended packages and platforms"
+      "interpretation": "The intended frontend package is selected by the scenario test command."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-13"
+      "title": "A clean checkout identifies the minimum required tools"
+      "interpretation": "The scenario setup guide names its runtime and package manager."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-14"
+      "title": "Setup does not depend on an undocumented local path"
+      "interpretation": "No undocumented absolute workstation path is required."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-15"
+      "title": "Available operations are discoverable through a documented machine-facing surface"
+      "interpretation": "The API surface is documented for agent discovery."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-16"
+      "title": "Machine-readable success outputs conform to a stable schema"
+      "interpretation": "The create response uses an unversioned ad-hoc success string."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-17"
+      "title": "A new intended user can identify the primary purpose"
+      "interpretation": "The screen presents a clear task-board purpose."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-18"
+      "title": "The first required action is distinguishable from optional exploration"
+      "interpretation": "Create task is visually distinct from optional settings."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-19"
+      "title": "All required interactive controls are reachable by keyboard"
+      "interpretation": "The primary modal cannot be dismissed or completed by keyboard alone."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-20"
+      "title": "Keyboard focus remains visibly identifiable"
+      "interpretation": "Focusable buttons have a visible focus treatment."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-21"
+      "title": "Repeated components use consistent visual semantics"
+      "interpretation": "Repeated cards share coherent spacing and interaction treatment in the premise."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-22"
+      "title": "Color roles distinguish emphasis, state and decoration"
+      "interpretation": "Color roles separate emphasis, state, and decoration."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-23"
+      "title": "The workload represents the claimed user or agent scenario"
+      "interpretation": "Latency claims use an idle machine and one request, not the declared concurrent workload."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-24"
+      "title": "Input size and distribution are specified"
+      "interpretation": "The scenario records the data size used by its mock benchmark."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-25"
+      "title": "Required operations emit an observable completion or failure signal"
+      "interpretation": "Success telemetry records the button handler, not durable task creation."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-26"
+      "title": "Telemetry identifies the relevant subject artifact and environment"
+      "interpretation": "Logs are not tied to a deployed artifact and environment."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-27"
+      "title": "Sensitive assets are identified for the selected product slice"
+      "interpretation": "Task content and user identifiers are named sensitive assets."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-28"
+      "title": "External and internal trust boundaries are distinguishable"
+      "interpretation": "The service boundary is sketched, but tenant authorization behavior is unexamined."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-29"
+      "title": "Required fields cannot be silently omitted from accepted records"
+      "interpretation": "Task creation can omit the accepted owner identifier without rejection."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-30"
+      "title": "Identifiers preserve their declared uniqueness scope"
+      "interpretation": "The scenario declares task IDs unique within the project scope."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-31"
+      "title": "The package contains the files required for its promised capability"
+      "interpretation": "The distribution contains a frontend but omits the promised persistence service."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-32"
+      "title": "A clean consumer can install the selected artifact"
+      "interpretation": "No clean end-user installation of the complete product was performed."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-33"
+      "title": "Records have stable unique identifiers within their declared namespace"
+      "interpretation": "The scenario separates immutable record IDs from display names."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-34"
+      "title": "Each record declares its schema version"
+      "interpretation": "Structured records declare their schema versions."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-35"
+      "title": "Concept maturity does not imply implemented behavior"
+      "interpretation": "The plan explicitly distinguishes a concept from shipping behavior."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    -
+      "instance_id": "I-36"
+      "title": "A feasibility prototype resolves a named technical uncertainty"
+      "interpretation": "No feasibility experiment tested the essential persistence dependency."
+      "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+"assessment":
+  "kind": "assessment"
+  "schema_version": "1.0.0"
+  "id": "ASSESS-DRAFTBOARD"
+  "record_status": "EXAMPLE"
+  "assignment_id": "A-DRAFTBOARD"
+  "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+  "epoch_id": "E-DRAFTBOARD"
+  "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "result_ids":
+    - "R-I-01"
+    - "R-I-02"
+    - "R-I-03"
+    - "R-I-04"
+    - "R-I-05"
+    - "R-I-06"
+    - "R-I-07"
+    - "R-I-08"
+    - "R-I-09"
+    - "R-I-10"
+    - "R-I-11"
+    - "R-I-12"
+    - "R-I-13"
+    - "R-I-14"
+    - "R-I-15"
+    - "R-I-16"
+    - "R-I-17"
+    - "R-I-18"
+    - "R-I-19"
+    - "R-I-20"
+    - "R-I-21"
+    - "R-I-22"
+    - "R-I-23"
+    - "R-I-24"
+    - "R-I-25"
+    - "R-I-26"
+    - "R-I-27"
+    - "R-I-28"
+    - "R-I-29"
+    - "R-I-30"
+    - "R-I-31"
+    - "R-I-32"
+    - "R-I-33"
+    - "R-I-34"
+    - "R-I-35"
+    - "R-I-36"
+  "evidence_ids":
+    - "EV-SCENARIO"
+  "qualification_ids": []
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "registration_state": "NOT_REQUESTED"
+"assignment":
+  "kind": "assignment"
+  "schema_version": "1.0.0"
+  "id": "A-DRAFTBOARD"
+  "record_status": "EXAMPLE"
+  "epoch_id": "E-DRAFTBOARD"
+  "status": "LOCKED"
+  "subject_id": "DRAFTBOARD"
+  "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+  "mandate_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+  "intent_ref": "dossier.json"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "profile_id": "web"
+  "coverage_statement": "36 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "created_at": "2026-09-11T23:19:57.136661+00:00"
+  "scope_review_status": "ACCEPTED"
+  "scope_review_ref": "SCENARIO-SCOPE-ASSUMPTION"
+  "instances":
+    -
+      "id": "I-01"
+      "criterion_id": "PEP-01-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-01.json"
+    -
+      "id": "I-02"
+      "criterion_id": "PEP-01-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-02.json"
+    -
+      "id": "I-03"
+      "criterion_id": "PEP-02-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-02-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-03.json"
+    -
+      "id": "I-04"
+      "criterion_id": "PEP-02-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-02-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-04.json"
+    -
+      "id": "I-05"
+      "criterion_id": "PEP-03-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-03-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-05.json"
+    -
+      "id": "I-06"
+      "criterion_id": "PEP-03-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-03-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-06.json"
+    -
+      "id": "I-07"
+      "criterion_id": "PEP-04-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-04-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-07.json"
+    -
+      "id": "I-08"
+      "criterion_id": "PEP-04-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-04-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-08.json"
+    -
+      "id": "I-09"
+      "criterion_id": "PEP-05-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-05-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-09.json"
+    -
+      "id": "I-10"
+      "criterion_id": "PEP-05-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-05-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-10.json"
+    -
+      "id": "I-11"
+      "criterion_id": "PEP-06-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-11.json"
+    -
+      "id": "I-12"
+      "criterion_id": "PEP-06-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-06-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-12.json"
+    -
+      "id": "I-13"
+      "criterion_id": "PEP-07-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-07-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-13.json"
+    -
+      "id": "I-14"
+      "criterion_id": "PEP-07-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-07-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-14.json"
+    -
+      "id": "I-15"
+      "criterion_id": "PEP-08-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-08-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-15.json"
+    -
+      "id": "I-16"
+      "criterion_id": "PEP-08-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-08-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-16.json"
+    -
+      "id": "I-17"
+      "criterion_id": "PEP-09-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-09-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-17.json"
+    -
+      "id": "I-18"
+      "criterion_id": "PEP-09-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-09-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-18.json"
+    -
+      "id": "I-19"
+      "criterion_id": "PEP-10-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-10-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-19.json"
+    -
+      "id": "I-20"
+      "criterion_id": "PEP-10-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-10-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-20.json"
+    -
+      "id": "I-21"
+      "criterion_id": "PEP-11-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-11-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-21.json"
+    -
+      "id": "I-22"
+      "criterion_id": "PEP-11-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-11-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-22.json"
+    -
+      "id": "I-23"
+      "criterion_id": "PEP-12-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-12-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-23.json"
+    -
+      "id": "I-24"
+      "criterion_id": "PEP-12-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-12-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-24.json"
+    -
+      "id": "I-25"
+      "criterion_id": "PEP-13-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-13-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-25.json"
+    -
+      "id": "I-26"
+      "criterion_id": "PEP-13-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-13-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-26.json"
+    -
+      "id": "I-27"
+      "criterion_id": "PEP-14-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-14-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-27.json"
+    -
+      "id": "I-28"
+      "criterion_id": "PEP-14-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-14-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-28.json"
+    -
+      "id": "I-29"
+      "criterion_id": "PEP-15-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-15-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-29.json"
+    -
+      "id": "I-30"
+      "criterion_id": "PEP-15-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-15-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-30.json"
+    -
+      "id": "I-31"
+      "criterion_id": "PEP-16-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-16-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-31.json"
+    -
+      "id": "I-32"
+      "criterion_id": "PEP-16-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-16-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-32.json"
+    -
+      "id": "I-33"
+      "criterion_id": "PEP-17-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-17-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-33.json"
+    -
+      "id": "I-34"
+      "criterion_id": "PEP-17-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-17-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-34.json"
+    -
+      "id": "I-35"
+      "criterion_id": "PEP-18-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-01-01"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-35.json"
+    -
+      "id": "I-36"
+      "criterion_id": "PEP-18-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-01-02"
+      "scope": "Local browser interface, task API, and persistence boundary; one operator journey only."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-36.json"
+  "gates":
+    -
+      "id": "CORE-USER-JOURNEY"
+      "required_instance_ids":
+        - "I-08"
+        - "I-09"
+        - "I-11"
+        - "I-16"
+        - "I-29"
+        - "I-31"
+    -
+      "id": "ACCESSIBILITY-BASELINE"
+      "required_instance_ids":
+        - "I-19"
+    -
+      "id": "AUTHORIZATION"
+      "required_instance_ids":
+        - "I-28"
+"evidence_summary":
+  "kernel_version": "1.0.0"
+  "assessment_id": "ASSESS-DRAFTBOARD"
+  "epoch_id": "E-DRAFTBOARD"
+  "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "record_status": "EXAMPLE"
+  "interpretation": "Consistency-based reduction of accepted input records, NOT independent authentication, product verification, or publication authorization."
+  "coverage_statement": "36 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "weights":
+    "pass_weight": 0.0
+    "fail_weight": 0.0
+    "unknown_weight": 36.0
+    "unresolved_applicability_weight": 0.0
+    "not_applicable_weight": 0.0
+  "assessed_pass_rate": null
+  "assessment_coverage": 0.0
+  "verified_satisfaction_within_settled_applicability": 0.0
+  "optimistic_bound_within_settled_applicability": 1.0
+  "applicability_complete": true
+  "scope_locked": true
+  "mandatory_gate_state": "BLOCKED"
+  "registration_state": "NOT_REQUESTED"
+  "gates":
+    -
+      "id": "CORE-USER-JOURNEY"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-08"
+        - "I-09"
+        - "I-11"
+        - "I-16"
+        - "I-29"
+        - "I-31"
+    -
+      "id": "ACCESSIBILITY-BASELINE"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-19"
+    -
+      "id": "AUTHORIZATION"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-28"
+  "instances":
+    -
+      "instance_id": "I-01"
+      "criterion_id": "PEP-01-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-02"
+      "criterion_id": "PEP-01-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-03"
+      "criterion_id": "PEP-02-01-01"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-04"
+      "criterion_id": "PEP-02-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-05"
+      "criterion_id": "PEP-03-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-06"
+      "criterion_id": "PEP-03-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-07"
+      "criterion_id": "PEP-04-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-08"
+      "criterion_id": "PEP-04-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-09"
+      "criterion_id": "PEP-05-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-10"
+      "criterion_id": "PEP-05-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-11"
+      "criterion_id": "PEP-06-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-12"
+      "criterion_id": "PEP-06-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-13"
+      "criterion_id": "PEP-07-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-14"
+      "criterion_id": "PEP-07-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-15"
+      "criterion_id": "PEP-08-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-16"
+      "criterion_id": "PEP-08-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-17"
+      "criterion_id": "PEP-09-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-18"
+      "criterion_id": "PEP-09-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-19"
+      "criterion_id": "PEP-10-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-20"
+      "criterion_id": "PEP-10-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-21"
+      "criterion_id": "PEP-11-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-22"
+      "criterion_id": "PEP-11-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-23"
+      "criterion_id": "PEP-12-01-01"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-24"
+      "criterion_id": "PEP-12-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-25"
+      "criterion_id": "PEP-13-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-26"
+      "criterion_id": "PEP-13-01-02"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-27"
+      "criterion_id": "PEP-14-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-28"
+      "criterion_id": "PEP-14-01-02"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-29"
+      "criterion_id": "PEP-15-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-30"
+      "criterion_id": "PEP-15-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-31"
+      "criterion_id": "PEP-16-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-32"
+      "criterion_id": "PEP-16-01-02"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-33"
+      "criterion_id": "PEP-17-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-34"
+      "criterion_id": "PEP-17-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-35"
+      "criterion_id": "PEP-18-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-36"
+      "criterion_id": "PEP-18-01-02"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+"illustrative_summary":
+  "classification": "HYPOTHETICAL_PREMISES_ONLY_NOT_PRODUCT_EVIDENCE"
+  "counts":
+    "PASS": 22
+    "FAIL": 8
+    "UNKNOWN": 6
+    "NOT_APPLICABLE": 0
+    "UNRESOLVED": 0
+  "weights":
+    "PASS": 22.0
+    "FAIL": 8.0
+    "UNKNOWN": 6.0
+    "NOT_APPLICABLE": 0.0
+    "UNRESOLVED": 0.0
+  "assessed_pass_rate": 0.7333333333333333
+  "assessment_coverage": 0.8333333333333334
+  "satisfaction": 0.6111111111111112
+  "states":
+    "I-01": "PASS"
+    "I-02": "PASS"
+    "I-03": "UNKNOWN"
+    "I-04": "PASS"
+    "I-05": "PASS"
+    "I-06": "PASS"
+    "I-07": "PASS"
+    "I-08": "FAIL"
+    "I-09": "FAIL"
+    "I-10": "PASS"
+    "I-11": "FAIL"
+    "I-12": "PASS"
+    "I-13": "PASS"
+    "I-14": "PASS"
+    "I-15": "PASS"
+    "I-16": "FAIL"
+    "I-17": "PASS"
+    "I-18": "PASS"
+    "I-19": "FAIL"
+    "I-20": "PASS"
+    "I-21": "PASS"
+    "I-22": "PASS"
+    "I-23": "UNKNOWN"
+    "I-24": "PASS"
+    "I-25": "FAIL"
+    "I-26": "UNKNOWN"
+    "I-27": "PASS"
+    "I-28": "UNKNOWN"
+    "I-29": "FAIL"
+    "I-30": "PASS"
+    "I-31": "FAIL"
+    "I-32": "UNKNOWN"
+    "I-33": "PASS"
+    "I-34": "PASS"
+    "I-35": "PASS"
+    "I-36": "UNKNOWN"
+  "gates":
+    -
+      "id": "CORE-USER-JOURNEY"
+      "status": "FAIL"
+      "required_instance_ids":
+        - "I-08"
+        - "I-09"
+        - "I-11"
+        - "I-16"
+        - "I-29"
+        - "I-31"
+    -
+      "id": "ACCESSIBILITY-BASELINE"
+      "status": "FAIL"
+      "required_instance_ids":
+        - "I-19"
+    -
+      "id": "AUTHORIZATION"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-28"
+"findings":
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-03"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-03"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: The user-demand claim has no underlying interview or usage record."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-08"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-08"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The dashboard treats its local mock array as authoritative application state."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-09"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-09"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: Creating a task produces a toast but no persisted task after restart."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-11"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-11"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The stated test inventory covers mock handlers, not the accepted persistence obligation."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-16"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-16"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The create response uses an unversioned ad-hoc success string."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-19"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-19"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The primary modal cannot be dismissed or completed by keyboard alone."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-23"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-23"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: Latency claims use an idle machine and one request, not the declared concurrent workload."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-25"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-25"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: Success telemetry records the button handler, not durable task creation."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-26"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-26"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: Logs are not tied to a deployed artifact and environment."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-28"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-28"
+    "class": "VERIFICATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The service boundary is sketched, but tenant authorization behavior is unexamined."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-29"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-29"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: Task creation can omit the accepted owner identifier without rejection."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-31"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-31"
+    "class": "IMPLEMENTATION_GAP"
+    "severity": "HIGH"
+    "claim": "In the fictional scenario: The distribution contains a frontend but omits the promised persistence service."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "IMPLEMENT"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-32"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-32"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: No clean end-user installation of the complete product was performed."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-36"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "instance_refs":
+      - "I-36"
+    "class": "RESEARCH_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: No feasibility experiment tested the essential persistence dependency."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "RESEARCH"
+    "status": "PROPOSED"
+    "wakeup_condition": "Capture and independently verify the real scoped behavior before accepting this row."
+"decisions":
+  -
+    "kind": "decision"
+    "schema_version": "1.0.0"
+    "id": "DEC-NEXT"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "DRAFTBOARD"
+    "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+    "disposition": "IMPROVE"
+    "status": "PROPOSED"
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "alternatives":
+      - "Implement the capability in an existing owner"
+      - "Use a suitable existing dependency"
+      - "Run a narrower experiment"
+      - "Do not build"
+    "rationale": "Wire and verify durable creation end to end before more visual refinement; repair the keyboard-blocking modal in parallel."
+    "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET"
+    "reversal_condition": "Do not promote while task creation loses data or the required journey is inaccessible by keyboard."
+    "execution_receipt_refs": []
+"rows":
+  -
+    "instance_id": "I-01"
+    "criterion_id": "PEP-01-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The current work has an identifiable source of delegated authority"
+    "interpretation": "The scenario names a bounded evaluation mandate."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D01"
+    "predicate": "The current work has an identifiable source of delegated authority."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-01"
+        "instance_id": "I-01"
+        "criterion_id": "PEP-01-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario names a bounded evaluation mandate."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-02"
+    "criterion_id": "PEP-01-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The mandate distinguishes permitted observation from permitted mutation"
+    "interpretation": "Observation and mutation permissions are separated."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D01"
+    "predicate": "The mandate distinguishes permitted observation from permitted mutation."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-02"
+        "instance_id": "I-02"
+        "criterion_id": "PEP-01-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Observation and mutation permissions are separated."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-03"
+    "criterion_id": "PEP-02-01-01"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "Each material research claim has an identifiable source record"
+    "interpretation": "The user-demand claim has no underlying interview or usage record."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D02"
+    "predicate": "Each material research claim has an identifiable source record."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-03"
+        "instance_id": "I-03"
+        "criterion_id": "PEP-02-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The user-demand claim has no underlying interview or usage record."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-04"
+    "criterion_id": "PEP-02-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Source records distinguish primary evidence from secondary interpretation"
+    "interpretation": "The scenario distinguishes reference documentation from agent interpretation."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D02"
+    "predicate": "Source records distinguish primary evidence from secondary interpretation."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-04"
+        "instance_id": "I-04"
+        "criterion_id": "PEP-02-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario distinguishes reference documentation from agent interpretation."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-05"
+    "criterion_id": "PEP-03-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The inventory identifies actual externally reachable entrypoints"
+    "interpretation": "Routes, buttons, and request boundaries are inventoried."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D03"
+    "predicate": "The inventory identifies actual externally reachable entrypoints."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-05"
+        "instance_id": "I-05"
+        "criterion_id": "PEP-03-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Routes, buttons, and request boundaries are inventoried."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-06"
+    "criterion_id": "PEP-03-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Exported library interfaces are distinguished from internal helpers"
+    "interpretation": "Public exports and internal UI helpers are separated."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D03"
+    "predicate": "Exported library interfaces are distinguished from internal helpers."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-06"
+        "instance_id": "I-06"
+        "criterion_id": "PEP-03-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Public exports and internal UI helpers are separated."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-07"
+    "criterion_id": "PEP-04-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Each authoritative data object has one designated owner"
+    "interpretation": "The service is the intended authoritative owner of task data."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D04"
+    "predicate": "Each authoritative data object has one designated owner."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-07"
+        "instance_id": "I-07"
+        "criterion_id": "PEP-04-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The service is the intended authoritative owner of task data."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-08"
+    "criterion_id": "PEP-04-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "Generated projections identify their source of truth"
+    "interpretation": "The dashboard treats its local mock array as authoritative application state."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D04"
+    "predicate": "Generated projections identify their source of truth."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-08"
+        "instance_id": "I-08"
+        "criterion_id": "PEP-04-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The dashboard treats its local mock array as authoritative application state."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-09"
+    "criterion_id": "PEP-05-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The core operation produces the required result for a representative valid input"
+    "interpretation": "Creating a task produces a toast but no persisted task after restart."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D05"
+    "predicate": "The core operation produces the required result for a representative valid input."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-09"
+        "instance_id": "I-09"
+        "criterion_id": "PEP-05-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Creating a task produces a toast but no persisted task after restart."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-10"
+    "criterion_id": "PEP-05-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Empty input follows the declared domain behavior"
+    "interpretation": "An empty list renders a deliberate empty state rather than crashing."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D05"
+    "predicate": "Empty input follows the declared domain behavior."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-10"
+        "instance_id": "I-10"
+        "criterion_id": "PEP-05-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: An empty list renders a deliberate empty state rather than crashing."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-11"
+    "criterion_id": "PEP-06-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The test inventory identifies which accepted obligations each suite exercises"
+    "interpretation": "The stated test inventory covers mock handlers, not the accepted persistence obligation."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D06"
+    "predicate": "The test inventory identifies which accepted obligations each suite exercises."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-11"
+        "instance_id": "I-11"
+        "criterion_id": "PEP-06-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The stated test inventory covers mock handlers, not the accepted persistence obligation."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-12"
+    "criterion_id": "PEP-06-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Required test selection includes the intended packages and platforms"
+    "interpretation": "The intended frontend package is selected by the scenario test command."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D06"
+    "predicate": "Required test selection includes the intended packages and platforms."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-12"
+        "instance_id": "I-12"
+        "criterion_id": "PEP-06-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The intended frontend package is selected by the scenario test command."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-13"
+    "criterion_id": "PEP-07-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A clean checkout identifies the minimum required tools"
+    "interpretation": "The scenario setup guide names its runtime and package manager."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D07"
+    "predicate": "A clean checkout identifies the minimum required tools."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-13"
+        "instance_id": "I-13"
+        "criterion_id": "PEP-07-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario setup guide names its runtime and package manager."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-14"
+    "criterion_id": "PEP-07-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Setup does not depend on an undocumented local path"
+    "interpretation": "No undocumented absolute workstation path is required."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D07"
+    "predicate": "Setup does not depend on an undocumented local path."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-14"
+        "instance_id": "I-14"
+        "criterion_id": "PEP-07-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: No undocumented absolute workstation path is required."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-15"
+    "criterion_id": "PEP-08-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Available operations are discoverable through a documented machine-facing surface"
+    "interpretation": "The API surface is documented for agent discovery."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D08"
+    "predicate": "Available operations are discoverable through a documented machine-facing surface."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-15"
+        "instance_id": "I-15"
+        "criterion_id": "PEP-08-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The API surface is documented for agent discovery."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-16"
+    "criterion_id": "PEP-08-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "Machine-readable success outputs conform to a stable schema"
+    "interpretation": "The create response uses an unversioned ad-hoc success string."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D08"
+    "predicate": "Machine-readable success outputs conform to a stable schema."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-16"
+        "instance_id": "I-16"
+        "criterion_id": "PEP-08-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The create response uses an unversioned ad-hoc success string."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-17"
+    "criterion_id": "PEP-09-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "A new intended user can identify the primary purpose"
+    "interpretation": "The screen presents a clear task-board purpose."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D09"
+    "predicate": "A new intended user can identify the primary purpose."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-17"
+        "instance_id": "I-17"
+        "criterion_id": "PEP-09-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The screen presents a clear task-board purpose."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-18"
+    "criterion_id": "PEP-09-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The first required action is distinguishable from optional exploration"
+    "interpretation": "Create task is visually distinct from optional settings."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D09"
+    "predicate": "The first required action is distinguishable from optional exploration."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-18"
+        "instance_id": "I-18"
+        "criterion_id": "PEP-09-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Create task is visually distinct from optional settings."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-19"
+    "criterion_id": "PEP-10-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "All required interactive controls are reachable by keyboard"
+    "interpretation": "The primary modal cannot be dismissed or completed by keyboard alone."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D10"
+    "predicate": "All required interactive controls are reachable by keyboard."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-19"
+        "instance_id": "I-19"
+        "criterion_id": "PEP-10-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The primary modal cannot be dismissed or completed by keyboard alone."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-20"
+    "criterion_id": "PEP-10-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Keyboard focus remains visibly identifiable"
+    "interpretation": "Focusable buttons have a visible focus treatment."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D10"
+    "predicate": "Keyboard focus remains visibly identifiable."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-20"
+        "instance_id": "I-20"
+        "criterion_id": "PEP-10-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Focusable buttons have a visible focus treatment."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-21"
+    "criterion_id": "PEP-11-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Repeated components use consistent visual semantics"
+    "interpretation": "Repeated cards share coherent spacing and interaction treatment in the premise."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D11"
+    "predicate": "Repeated components use consistent visual semantics."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-21"
+        "instance_id": "I-21"
+        "criterion_id": "PEP-11-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Repeated cards share coherent spacing and interaction treatment in the premise."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-22"
+    "criterion_id": "PEP-11-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Color roles distinguish emphasis, state and decoration"
+    "interpretation": "Color roles separate emphasis, state, and decoration."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D11"
+    "predicate": "Color roles distinguish emphasis, state and decoration."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-22"
+        "instance_id": "I-22"
+        "criterion_id": "PEP-11-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Color roles separate emphasis, state, and decoration."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-23"
+    "criterion_id": "PEP-12-01-01"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "The workload represents the claimed user or agent scenario"
+    "interpretation": "Latency claims use an idle machine and one request, not the declared concurrent workload."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D12"
+    "predicate": "The workload represents the claimed user or agent scenario."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-23"
+        "instance_id": "I-23"
+        "criterion_id": "PEP-12-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Latency claims use an idle machine and one request, not the declared concurrent workload."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-24"
+    "criterion_id": "PEP-12-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Input size and distribution are specified"
+    "interpretation": "The scenario records the data size used by its mock benchmark."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D12"
+    "predicate": "Input size and distribution are specified."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-24"
+        "instance_id": "I-24"
+        "criterion_id": "PEP-12-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario records the data size used by its mock benchmark."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-25"
+    "criterion_id": "PEP-13-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Required operations emit an observable completion or failure signal"
+    "interpretation": "Success telemetry records the button handler, not durable task creation."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D13"
+    "predicate": "Required operations emit an observable completion or failure signal."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-25"
+        "instance_id": "I-25"
+        "criterion_id": "PEP-13-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Success telemetry records the button handler, not durable task creation."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-26"
+    "criterion_id": "PEP-13-01-02"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "Telemetry identifies the relevant subject artifact and environment"
+    "interpretation": "Logs are not tied to a deployed artifact and environment."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D13"
+    "predicate": "Telemetry identifies the relevant subject artifact and environment."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-26"
+        "instance_id": "I-26"
+        "criterion_id": "PEP-13-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Logs are not tied to a deployed artifact and environment."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-27"
+    "criterion_id": "PEP-14-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Sensitive assets are identified for the selected product slice"
+    "interpretation": "Task content and user identifiers are named sensitive assets."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D14"
+    "predicate": "Sensitive assets are identified for the selected product slice."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-27"
+        "instance_id": "I-27"
+        "criterion_id": "PEP-14-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Task content and user identifiers are named sensitive assets."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-28"
+    "criterion_id": "PEP-14-01-02"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": true
+    "title": "External and internal trust boundaries are distinguishable"
+    "interpretation": "The service boundary is sketched, but tenant authorization behavior is unexamined."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D14"
+    "predicate": "External and internal trust boundaries are distinguishable."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-28"
+        "instance_id": "I-28"
+        "criterion_id": "PEP-14-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The service boundary is sketched, but tenant authorization behavior is unexamined."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-29"
+    "criterion_id": "PEP-15-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "Required fields cannot be silently omitted from accepted records"
+    "interpretation": "Task creation can omit the accepted owner identifier without rejection."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D15"
+    "predicate": "Required fields cannot be silently omitted from accepted records."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-29"
+        "instance_id": "I-29"
+        "criterion_id": "PEP-15-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Task creation can omit the accepted owner identifier without rejection."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-30"
+    "criterion_id": "PEP-15-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Identifiers preserve their declared uniqueness scope"
+    "interpretation": "The scenario declares task IDs unique within the project scope."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D15"
+    "predicate": "Identifiers preserve their declared uniqueness scope."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-30"
+        "instance_id": "I-30"
+        "criterion_id": "PEP-15-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario declares task IDs unique within the project scope."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-31"
+    "criterion_id": "PEP-16-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The package contains the files required for its promised capability"
+    "interpretation": "The distribution contains a frontend but omits the promised persistence service."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D16"
+    "predicate": "The package contains the files required for its promised capability."
+    "display_state": "FAIL"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-31"
+        "instance_id": "I-31"
+        "criterion_id": "PEP-16-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "FAIL"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The distribution contains a frontend but omits the promised persistence service."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-32"
+    "criterion_id": "PEP-16-01-02"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "A clean consumer can install the selected artifact"
+    "interpretation": "No clean end-user installation of the complete product was performed."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D16"
+    "predicate": "A clean consumer can install the selected artifact."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-32"
+        "instance_id": "I-32"
+        "criterion_id": "PEP-16-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: No clean end-user installation of the complete product was performed."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-33"
+    "criterion_id": "PEP-17-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Records have stable unique identifiers within their declared namespace"
+    "interpretation": "The scenario separates immutable record IDs from display names."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D17"
+    "predicate": "Records have stable unique identifiers within their declared namespace."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-33"
+        "instance_id": "I-33"
+        "criterion_id": "PEP-17-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The scenario separates immutable record IDs from display names."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-34"
+    "criterion_id": "PEP-17-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Each record declares its schema version"
+    "interpretation": "Structured records declare their schema versions."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D17"
+    "predicate": "Each record declares its schema version."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-34"
+        "instance_id": "I-34"
+        "criterion_id": "PEP-17-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Structured records declare their schema versions."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-35"
+    "criterion_id": "PEP-18-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Concept maturity does not imply implemented behavior"
+    "interpretation": "The plan explicitly distinguishes a concept from shipping behavior."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D18"
+    "predicate": "Concept maturity does not imply implemented behavior."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-35"
+        "instance_id": "I-35"
+        "criterion_id": "PEP-18-01-01"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The plan explicitly distinguishes a concept from shipping behavior."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-36"
+    "criterion_id": "PEP-18-01-02"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "A feasibility prototype resolves a named technical uncertainty"
+    "interpretation": "No feasibility experiment tested the essential persistence dependency."
+    "next_action": "Capture and independently verify the real scoped behavior before accepting this row."
+    "domain": "D18"
+    "predicate": "A feasibility prototype resolves a named technical uncertainty."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-36"
+        "instance_id": "I-36"
+        "criterion_id": "PEP-18-01-02"
+        "assignment_id": "A-DRAFTBOARD"
+        "epoch_id": "E-DRAFTBOARD"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "assignment_digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: No feasibility experiment tested the essential persistence dependency."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:447538844e4c631f9a76881e9a0c2ff6ffcae6fe874e185e76cfea8aa52c9c7e"
+        "path": "raw/scenario.json"
+        "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+"input_files":
+  -
+    "path": "assessment.json"
+    "bytes": 1546
+    "digest": "sha256:09fef24cfe3c02b7ed94327c518f253aaa055fcf75e4eb694b57649db3ce2d83"
+  -
+    "path": "assignment.json"
+    "bytes": 21272
+    "digest": "sha256:7caf8e4d01b2df094d8d8027f2cb2ff474fd8b39bd1fddc54d1b90117e2be75c"
+  -
+    "path": "decisions/DEC-NEXT.json"
+    "bytes": 873
+    "digest": "sha256:4156989c09ca773c533c1eaa5c72c9b365a7c4b66bb6f38b5adb5cd8a7b6ee68"
+  -
+    "path": "dossier.json"
+    "bytes": 20032
+    "digest": "sha256:a9e4e0a8fd8b1a68e4455a3d272b157f03753dd711976a9039021be201e980b8"
+  -
+    "path": "evidence/EV-SCENARIO.json"
+    "bytes": 543
+    "digest": "sha256:f89837d77d7f70c513570778a1f2adde2560569afc6f2c051d5c9b187c9939b4"
+  -
+    "path": "findings/F-I-03.json"
+    "bytes": 659
+    "digest": "sha256:d0e06a917a69e753d161b6a82480d0333ba13acfb3075eb2e32b0081bdf5ba16"
+  -
+    "path": "findings/F-I-08.json"
+    "bytes": 675
+    "digest": "sha256:078940121eca6ce8e48b5707df674a8bdf0c1b8427687127fd7db99a425d4648"
+  -
+    "path": "findings/F-I-09.json"
+    "bytes": 667
+    "digest": "sha256:bf6743fc81437ce38f267b372e8e9dd67bed8df9f496c7d4ce5860b4483163a3"
+  -
+    "path": "findings/F-I-11.json"
+    "bytes": 686
+    "digest": "sha256:bffab25b8ab44923e05fb2112445559cc6d8a8c896685584be6b3eafc5e822c5"
+  -
+    "path": "findings/F-I-16.json"
+    "bytes": 660
+    "digest": "sha256:9a57a366cfd2da38e351ab52307e6aa5f5cd8ce70b276845c89447c101b475a9"
+  -
+    "path": "findings/F-I-19.json"
+    "bytes": 667
+    "digest": "sha256:85fb0553b030734b3fa59137174e41715995f53805aaa77492907974048f3b26"
+  -
+    "path": "findings/F-I-23.json"
+    "bytes": 682
+    "digest": "sha256:34d0aba9a0db9b2faca86171aec96df91e43dc4ee92b756653d60a4284eaa687"
+  -
+    "path": "findings/F-I-25.json"
+    "bytes": 672
+    "digest": "sha256:14fc322fe1be45ae56ab65025bdfd566a2e3ff963d42000e5dcabb4a0b675b30"
+  -
+    "path": "findings/F-I-26.json"
+    "bytes": 650
+    "digest": "sha256:649cdfea34e06c733b71051e3f77c58a3515b5577cec4551486bf8205b3e631d"
+  -
+    "path": "findings/F-I-28.json"
+    "bytes": 673
+    "digest": "sha256:e11b191108b6ca8723c91353b315039b84cc116f380ab9bef6cf6c02d57a010e"
+  -
+    "path": "findings/F-I-29.json"
+    "bytes": 669
+    "digest": "sha256:43ae75df38861d9be786c75e85ed9c89da5682e6e084f8fbff0da8e65360ad9c"
+  -
+    "path": "findings/F-I-31.json"
+    "bytes": 678
+    "digest": "sha256:7ba2baf41280ec0a06fdce66a0eeaad4ffdc73392c583b9838a40943c6670fc5"
+  -
+    "path": "findings/F-I-32.json"
+    "bytes": 662
+    "digest": "sha256:43a784eeb761952a82298843fa9f421e58dacdf68d9e4862cf9cc550bd3e8e13"
+  -
+    "path": "findings/F-I-36.json"
+    "bytes": 663
+    "digest": "sha256:1475668f84c2ff128309f1b4e10497a2f685e046448cc74bc71aac2610b0724f"
+  -
+    "path": "measurement-bindings/MB-I-01.json"
+    "bytes": 1629
+    "digest": "sha256:cfece214fb495374fce9b7eb09fd9697a109e8b4359b5e3c843901896fccedbf"
+  -
+    "path": "measurement-bindings/MB-I-02.json"
+    "bytes": 1639
+    "digest": "sha256:8744b09e2a1ca0476b1fcb675aced473cb049572c7266b79bbb924d901082b8d"
+  -
+    "path": "measurement-bindings/MB-I-03.json"
+    "bytes": 1623
+    "digest": "sha256:8f0bf4dc438749c12e66f08ce34b3d0512bb8df7a433a2fa95e78ce561a5fa61"
+  -
+    "path": "measurement-bindings/MB-I-04.json"
+    "bytes": 1645
+    "digest": "sha256:c31bfd0c556404d44e0e226cc17edaede91960a16e91bf349c16f4d0f7aaf2d9"
+  -
+    "path": "measurement-bindings/MB-I-05.json"
+    "bytes": 1627
+    "digest": "sha256:0465db906863f44b98441e4841f7a4b023dc5ab662991a81341c5b0983128e0f"
+  -
+    "path": "measurement-bindings/MB-I-06.json"
+    "bytes": 1633
+    "digest": "sha256:20590595d7f03b9ea370aa4ce10b21d5d9428e2b2dd7b0b95193dccc5486da23"
+  -
+    "path": "measurement-bindings/MB-I-07.json"
+    "bytes": 1607
+    "digest": "sha256:0bd6e5f9866c713dee7b7b369db2a3b7529fa40b5bca8467d79eeefd82bf1f6c"
+  -
+    "path": "measurement-bindings/MB-I-08.json"
+    "bytes": 1601
+    "digest": "sha256:ee7216508dbc65a568e13467da22fbc0a027914e444bae308b8dcead4d51bc7f"
+  -
+    "path": "measurement-bindings/MB-I-09.json"
+    "bytes": 1656
+    "digest": "sha256:968fbde0c89e6943f4242efdd1ea8527e609a3bcf929da2b1797a63679ba7ab3"
+  -
+    "path": "measurement-bindings/MB-I-10.json"
+    "bytes": 1592
+    "digest": "sha256:7a0ada07419ca0316fa455c072f89c3b12016915156ecbcce348b4cd7904ece7"
+  -
+    "path": "measurement-bindings/MB-I-11.json"
+    "bytes": 1653
+    "digest": "sha256:6899646169932563bdd14d9ad626026f1a94055c4a20aafeb8eeb79852065050"
+  -
+    "path": "measurement-bindings/MB-I-12.json"
+    "bytes": 1635
+    "digest": "sha256:6aa6ee87634ddd09ef30ecf360c902afae0ecadca557db2fb562360050eb7672"
+  -
+    "path": "measurement-bindings/MB-I-13.json"
+    "bytes": 1604
+    "digest": "sha256:c1d2a3acce8be8d1bbc84bc00347677e0705e59cb9ff458695f5ee66cebeb8f5"
+  -
+    "path": "measurement-bindings/MB-I-14.json"
+    "bytes": 1598
+    "digest": "sha256:5314f3ca2a0072e9eba3e21d10c8ebc61fe7a6240900d985e2bc583a9a1a86ea"
+  -
+    "path": "measurement-bindings/MB-I-15.json"
+    "bytes": 1658
+    "digest": "sha256:5df13ea44ad948050a32f98c3c895b0557836c8f106c0aa57c6f0ca6bb0724af"
+  -
+    "path": "measurement-bindings/MB-I-16.json"
+    "bytes": 1614
+    "digest": "sha256:3c1bb0d276e6fb856278e081db05ff9bfd6d9b7d0745ea7acde7b8320ada342e"
+  -
+    "path": "measurement-bindings/MB-I-17.json"
+    "bytes": 1600
+    "digest": "sha256:2541a59b11ece27864273b99ab5fadcc8365e31ad4754abee74ca6c42133fa49"
+  -
+    "path": "measurement-bindings/MB-I-18.json"
+    "bytes": 1636
+    "digest": "sha256:4720e0f37d3d6dd2fdf2dd7289d1b5be714d1d537725392c6240979f90f5a04d"
+  -
+    "path": "measurement-bindings/MB-I-19.json"
+    "bytes": 1614
+    "digest": "sha256:e490094d0194024054af5857b51256955660b9fe948c009f0aa1e4a2e83e4805"
+  -
+    "path": "measurement-bindings/MB-I-20.json"
+    "bytes": 1582
+    "digest": "sha256:a64c058db2d2ff7f46b4c250697df623787bb69d147b7473bbe0b4d27943d176"
+  -
+    "path": "measurement-bindings/MB-I-21.json"
+    "bytes": 1599
+    "digest": "sha256:126871d31dd375ece9bf28d3a814379bb74ebe71618ac487de23ae4d702eb81d"
+  -
+    "path": "measurement-bindings/MB-I-22.json"
+    "bytes": 1605
+    "digest": "sha256:a99853389377402dc2b746f08ea9de43b21bc36a64e5ad4f4b9e2efde7b7177e"
+  -
+    "path": "measurement-bindings/MB-I-23.json"
+    "bytes": 1615
+    "digest": "sha256:4776f6c9910dafea6609dc73f7105337045952bca5176c6c801a0b34ea7df875"
+  -
+    "path": "measurement-bindings/MB-I-24.json"
+    "bytes": 1581
+    "digest": "sha256:b86a00e0e94b09ddd94659f8175cab0393c5113fd192cebddf6c2f5de5de2f62"
+  -
+    "path": "measurement-bindings/MB-I-25.json"
+    "bytes": 1630
+    "digest": "sha256:a22a9608626b68991d7e1561242e2283f28d84c60a2a690b0f26ba713abdaa8a"
+  -
+    "path": "measurement-bindings/MB-I-26.json"
+    "bytes": 1628
+    "digest": "sha256:3255e3f31aff9212e1420b924301f11d68af11109d1adcdd12b522442217d20e"
+  -
+    "path": "measurement-bindings/MB-I-27.json"
+    "bytes": 1621
+    "digest": "sha256:dd9e4e7ab72551a233f8aebe24589efee532afc427066932dc0939608d114b50"
+  -
+    "path": "measurement-bindings/MB-I-28.json"
+    "bytes": 1613
+    "digest": "sha256:dae164386f4b6dae1a0c9128307df1c8e216a545779c4eada227bd7c07055d56"
+  -
+    "path": "measurement-bindings/MB-I-29.json"
+    "bytes": 1624
+    "digest": "sha256:127da77d0c2d109653c8ffa0f2ca0e230440fa4ddddad73558c893710e322562"
+  -
+    "path": "measurement-bindings/MB-I-30.json"
+    "bytes": 1600
+    "digest": "sha256:4a997b807a9d81062c757f2488f31ecc67c3e88a6c560ed1c510193abd362f57"
+  -
+    "path": "measurement-bindings/MB-I-31.json"
+    "bytes": 1630
+    "digest": "sha256:fb71169420d9621e4deae754eb8bb90cc02676090b0716d15cd63e73f58a4696"
+  -
+    "path": "measurement-bindings/MB-I-32.json"
+    "bytes": 1596
+    "digest": "sha256:a275778f83a92de7abf43909b53ad45afae5f589a477de83103dd5493bb4c68e"
+  -
+    "path": "measurement-bindings/MB-I-33.json"
+    "bytes": 1639
+    "digest": "sha256:ba378d48d238f74a95d91dbd95187ec17c344b20d2c579bfb4db3de0d21de10e"
+  -
+    "path": "measurement-bindings/MB-I-34.json"
+    "bytes": 1577
+    "digest": "sha256:94929b99b523a091ea41c3954c4b6da18a16bdba73a52ad6c9899952481909a5"
+  -
+    "path": "measurement-bindings/MB-I-35.json"
+    "bytes": 1601
+    "digest": "sha256:d0a607e1806542f07362e279b942b8822850e636d9e730f92818fa620bc6c037"
+  -
+    "path": "measurement-bindings/MB-I-36.json"
+    "bytes": 1621
+    "digest": "sha256:49917486be1a3af2d13a90d45c1661c5c2c006bc2fc7b7b678d0210b7fb336b4"
+  -
+    "path": "raw/scenario.json"
+    "bytes": 15826
+    "digest": "sha256:dae21f74489c5d437ac41ddc0f8b2341a97c6447b044cb42abf2e3e8238a8b4c"
+  -
+    "path": "results/R-I-01.json"
+    "bytes": 1013
+    "digest": "sha256:002f7747396c227b7dfc80207cf0767a01a9ea3db413c7fbe1bcaff7fbadea60"
+  -
+    "path": "results/R-I-02.json"
+    "bytes": 1016
+    "digest": "sha256:2e8ac258e7e87d5b1f68dfb5798508061ef16f9d4267f70fa8b9b1940e66d374"
+  -
+    "path": "results/R-I-03.json"
+    "bytes": 1034
+    "digest": "sha256:f792cfca3adef5e180d496afef40e4eca99f5a8ca616ce51e43d1e17d2c709fb"
+  -
+    "path": "results/R-I-04.json"
+    "bytes": 1044
+    "digest": "sha256:c6cb42c06c400c141d132a5855364be2f9d65bbb92fc67d5810b0cc65a0c1446"
+  -
+    "path": "results/R-I-05.json"
+    "bytes": 1023
+    "digest": "sha256:c936ff472b261a94e2a6359520e744072557f09d0b75899eedb351973918f0f0"
+  -
+    "path": "results/R-I-06.json"
+    "bytes": 1020
+    "digest": "sha256:69516b2525f902f51eb9b898b5c93fbeab033724779453d1fb694b4b32a9ff79"
+  -
+    "path": "results/R-I-07.json"
+    "bytes": 1026
+    "digest": "sha256:aa4c9b1bd63a64bc4c8c5c13329db01887272907bbdf61692c18860f38eff077"
+  -
+    "path": "results/R-I-08.json"
+    "bytes": 1042
+    "digest": "sha256:a4e927c81c60088be819b48c5dc16def8880ae943a67885244bbcabe885bcbb0"
+  -
+    "path": "results/R-I-09.json"
+    "bytes": 1033
+    "digest": "sha256:a513857d4764334082a6bc66994255e3cbc04f4ce349e6f995646f9443fb6151"
+  -
+    "path": "results/R-I-10.json"
+    "bytes": 1032
+    "digest": "sha256:486181b8f7ce95b8e86cd5da3cab4d613ec7fcdd5d86b8e11fb50b0e79319da3"
+  -
+    "path": "results/R-I-11.json"
+    "bytes": 1055
+    "digest": "sha256:ada8ec92503fb7b8d20e5d3586ecda2feb32897c994ec5af3728e62d1db00d49"
+  -
+    "path": "results/R-I-12.json"
+    "bytes": 1038
+    "digest": "sha256:b8f9041cd11dc7187f3ac0a9ed82f3c443c6392e567032427a1a671e9bb34ce8"
+  -
+    "path": "results/R-I-13.json"
+    "bytes": 1027
+    "digest": "sha256:d0ac4920bb7175f070595742bdc25f6067433fb7c277dd0f8fd48eec1bdcc2ba"
+  -
+    "path": "results/R-I-14.json"
+    "bytes": 1018
+    "digest": "sha256:7054c5823a2a2e1aaff0610cb972ab47c15f43aa71873ec875627e91dc39946a"
+  -
+    "path": "results/R-I-15.json"
+    "bytes": 1014
+    "digest": "sha256:539033934fdadeceef5caa2275113b5adbaff9bf53fa49dbf933bf6910ccb4f7"
+  -
+    "path": "results/R-I-16.json"
+    "bytes": 1026
+    "digest": "sha256:9d778629b330bdd5aa54fc519534e7fcc762eb1610741a388a8657d8da4d5ffc"
+  -
+    "path": "results/R-I-17.json"
+    "bytes": 1011
+    "digest": "sha256:a627542b143b5a2acf581789efefc5101e607bd14beb070d0c92d85095af44b3"
+  -
+    "path": "results/R-I-18.json"
+    "bytes": 1020
+    "digest": "sha256:12643b580b94c2806751b9225e5287a6378e0efa4d57b25acd25b4d6bfd23d4d"
+  -
+    "path": "results/R-I-19.json"
+    "bytes": 1033
+    "digest": "sha256:385ab4cc5bbd1612b97d5dd0596191239519237e5fadc7d8097be911c81a6240"
+  -
+    "path": "results/R-I-20.json"
+    "bytes": 1013
+    "digest": "sha256:f21b20738a2a47280b502fb939e3e2a23a044d7db0e23d6eb0cb64c380c16543"
+  -
+    "path": "results/R-I-21.json"
+    "bytes": 1044
+    "digest": "sha256:e77c1ce810ed0a0e13c1f40e5168da4271ab772d64266b6b84785c20f285aa77"
+  -
+    "path": "results/R-I-22.json"
+    "bytes": 1018
+    "digest": "sha256:8e5f8e4270035973cde71c400549b9f6116972cd2c9d6c1e6350c3cdadb0ac20"
+  -
+    "path": "results/R-I-23.json"
+    "bytes": 1057
+    "digest": "sha256:b859832e81d55ade510204d36e39a1b9cd3acd38b404776b98af1162c1c4620c"
+  -
+    "path": "results/R-I-24.json"
+    "bytes": 1029
+    "digest": "sha256:cabce4e5787c3e0a29d92a0ad521156b72108133a7f5edd84cc901ddde7baa6e"
+  -
+    "path": "results/R-I-25.json"
+    "bytes": 1036
+    "digest": "sha256:6a2a18e1ec7369f240fd10a6be71851c82bdc92ad8bb81983d06af5c12b73a46"
+  -
+    "path": "results/R-I-26.json"
+    "bytes": 1022
+    "digest": "sha256:f22bdfca97fafb443b10faa2c687078035d2714ac64c4101291ebeed37a3745c"
+  -
+    "path": "results/R-I-27.json"
+    "bytes": 1026
+    "digest": "sha256:e8e87035a180ab73ea8d3d486adea7d0e7411a6a826223e8ae81a2b2cedab578"
+  -
+    "path": "results/R-I-28.json"
+    "bytes": 1048
+    "digest": "sha256:1a1d2ef567a58e7c4c2d7c25358885a7a90d6b68a383210c466b8f9a9bc3159e"
+  -
+    "path": "results/R-I-29.json"
+    "bytes": 1035
+    "digest": "sha256:205562c007e53db259b188749f513dcbffb786d627a772a14f7a33b57173221a"
+  -
+    "path": "results/R-I-30.json"
+    "bytes": 1027
+    "digest": "sha256:776bbcf48916845ee0cf45e4f6889bb994ab659e04dab47b19c8e2548a0a187e"
+  -
+    "path": "results/R-I-31.json"
+    "bytes": 1044
+    "digest": "sha256:b68265abd4122f2edefcf5c385d45b495c3738a461fede011bfab2be93e763de"
+  -
+    "path": "results/R-I-32.json"
+    "bytes": 1034
+    "digest": "sha256:a0200d973c3265ed66d554413abc9bdd0dfd163556f9b17ed40ca080c2620dcf"
+  -
+    "path": "results/R-I-33.json"
+    "bytes": 1030
+    "digest": "sha256:01e1a55b1ecc60890384ca8447711def18adca5477c0e4cd41fd05c211d696eb"
+  -
+    "path": "results/R-I-34.json"
+    "bytes": 1016
+    "digest": "sha256:7dab83b05d8d835fa7f99c4b5408b64ac775090ff4a10358fe53d21abd5a0aa4"
+  -
+    "path": "results/R-I-35.json"
+    "bytes": 1032
+    "digest": "sha256:e44e21989cf51fcbff5f64918af8ccb0ca1bbbde01dfe60d2a62ef1b3f2a84dd"
+  -
+    "path": "results/R-I-36.json"
+    "bytes": 1036
+    "digest": "sha256:78adb8c24c9ea3a45389e3ab90ac96888bced28dcb0a9516d8e96f139ed65e14"
+  -
+    "path": "subject.json"
+    "bytes": 175
+    "digest": "sha256:da3720ad323022427d4e172adf9aafdb67cd443b18988622c839b2ffe25916a9"
+"authority_notice": "A generated view and matching hashes establish neither truthful observations nor permission to publish, merge, spend, or retire."

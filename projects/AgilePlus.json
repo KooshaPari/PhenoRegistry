@@ -4,16 +4,15 @@
     "Rust"
   ],
   "primary_language": "Rust",
-  "status": "queued",
   "has_readme": false,
   "type": "tooling",
-  "path": "repos/AgilePlus",
-  "disposition": "ABSORB",
-  "wave": "2026-07-17-queue-refresh-batch3",
-  "queued_at": "2026-07-17",
-  "proposed_target": "pheno (crates/agile-plus)",
-  "proposed_target_repo": "pheno",
-  "proposed_target_path": "crates/agile-plus/",
-  "absorption_note": null,
-  "note": "Phenotype-org spec-driven development; possible migration to omni-rust workflow."
+  "status": "active",
+  "disposition": "KEEP",
+  "proposed_target": null,
+  "proposed_target_repo": null,
+  "proposed_target_path": null,
+  "absorption_note": "Reaffirmed 2026-09-01: AgilePlus is the canonical governance/tools owner per RATIONALIZATION_PLAN.md line 182 and BOUNDARY_OWNERS.md line 109. The 2026-07-17 'ABSORB' queue disposition was overridden by user re-instatement. Live repo at <REDACTED>/AgilePlus (HEAD: main) with active fix/* branches and PRs (#1058, #1060, etc.).",
+  "wave": null,
+  "queued_at": null,
+  "note": "Phenotype-org spec-driven development; dual tooling/product role. Canonical owner of spec-lifecycle slice (BOUNDARY_OWNERS.md §2). No absorption planned; standalone KEEP."
 }

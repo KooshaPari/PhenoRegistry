@@ -325,7 +325,7 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 | Security audit (monthly) | first Monday of month 09:00 PDT | security-audit circle | 🟡 PENDING FIRST RUN |
 | Registry validation (bi-weekly) | every other Monday 09:00 PDT | registry-audit circle | 🟡 PENDING FIRST RUN |
 
-**Launchd plist location:** `~/Library/LaunchAgents/com.kooshapari.phenotype-registry.weekly-refresh.plist` (to be authored before 2026-06-22 09:00 PDT).
+**Launchd plist location:** `~/Library/LaunchAgents/com.<REDACTED>.phenotype-registry.weekly-refresh.plist` (to be authored before 2026-06-22 09:00 PDT).
 
 **First run verification:** user to confirm that the Monday 09:00 PDT scheduled task fires and produces a refresh log under `worklogs/weekly-refresh-<YYYY-MM-DD>.json`.
 
@@ -380,7 +380,7 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 ## 10. Next Steps (post-L7-008)
 
 1. **Verify orphan-push this turn** — new SHA should be live on GitHub after `--force` push
-2. **Verify via curl** — `curl https://api.github.com/repos/KooshaPari/phenotype-registry/branches/chore/l7-001-contract-only-orphan-2026-06-17` returns new SHA
+2. **Verify via curl** — `curl https://api.github.com/repos/<REDACTED>/phenotype-registry/branches/chore/l7-001-contract-only-orphan-2026-06-17` returns new SHA
 3. **Schedule L7-009 (next archived-flag refresh)** — weekly cadence per ADR-024 / ADR-041; first scheduled run 2026-06-22 09:00 PDT via launchd
 4. **Close L5-117 pheno-capacity execution** — deferred to v12+ per ADR-036
 5. **Continue V11-016 tier-0 retirement wave** on registry main (separate from L7 sweep)
@@ -391,7 +391,7 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 
 | Version | Date | Author | Change |
 | :--- | :--- | :--- | :--- |
-| 1.0.0 | 2026-06-20 18:45 PDT | KooshaPari (macbook, L7-008) | Initial STATUS.md — replaces STATUS-REPORT.md (L7-003) and STATUS-L7-004-VERIFICATION.md as canonical status document. Covers L7-001 → L7-008 phase recap with deltas, current remote SHAs, per-phase key outputs (45,091 records, 107 bound repos, 8 stubs, 3 extraction targets, 12 archived markers), 21 successful subagent dispatches across 8 phases, outstanding human-judgment queue, weekly refresh cadence status. |
+| 1.0.0 | 2026-06-20 18:45 PDT | <REDACTED> (macbook, L7-008) | Initial STATUS.md — replaces STATUS-REPORT.md (L7-003) and STATUS-L7-004-VERIFICATION.md as canonical status document. Covers L7-001 → L7-008 phase recap with deltas, current remote SHAs, per-phase key outputs (45,091 records, 107 bound repos, 8 stubs, 3 extraction targets, 12 archived markers), 21 successful subagent dispatches across 8 phases, outstanding human-judgment queue, weekly refresh cadence status. |
 
 ---
 

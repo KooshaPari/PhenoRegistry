@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - docs/**
+      - handbook/**
       - package.json
       - bun.lock
       - .github/workflows/pages.yml
@@ -31,6 +32,13 @@ jobs:
         run: bun run docs:build
         env:
           GITHUB_PAGES: "true"
+      - name: Build handbook
+        run: |
+          cd handbook/docs
+          bun install --frozen-lockfile
+          npx vitepress build
+      - name: Copy handbook dist into docs dist
+        run: cp -r handbook/docs/.vitepress/dist docs/.vitepress/dist/handbook
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
       - uses: actions/upload-pages-artifact@98ef48e41587a300b82de4cf298aa98b57b2faae # v-latest
         with:

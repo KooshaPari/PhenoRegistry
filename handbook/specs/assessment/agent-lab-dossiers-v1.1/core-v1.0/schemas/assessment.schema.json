@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/assessment.schema.json",
+  "title": "assessment",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "assessment"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "assignment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epoch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "catalog_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "result_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "qualification_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "coverage_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "registration_state": {
+      "enum": [
+        "NOT_REQUESTED",
+        "PENDING",
+        "BLOCKED",
+        "REGISTERED"
+      ]
+    },
+    "assignment_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "assignment_id",
+    "epoch_id",
+    "subject_digest",
+    "catalog_digest",
+    "as_of",
+    "result_ids",
+    "evidence_ids",
+    "qualification_ids",
+    "coverage_limitations",
+    "registration_state",
+    "assignment_digest"
+  ],
+  "additionalProperties": false
+}

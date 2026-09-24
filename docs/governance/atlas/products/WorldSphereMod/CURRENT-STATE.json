@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1241972761",
+  "name": "WorldSphereMod",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "515779751856e0eee63a2d92d8ef87139e1a6952",
+  "sampled_commit_date_utc": "2026-09-05T06:13:10Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Sampled default head remains the Sep5 terrain color fix. Earlier user reports said work shifted toward storage and multi-game testing; current local destination is unknown.",
+  "assessment": "LOCAL_AND_BRANCH_PROGRESS_UNKNOWN",
+  "role": "Actual in-game rendering and world-shape mod",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "A stale default branch is not evidence of inactivity; changed session scope must be surfaced.",
+    "Product qualification needs the exact game/branch/asset profile actually used."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1241972761-A1",
+      "title": "Return the actual owner work receipt",
+      "work": "Identify this chat's current repo/worktree, whether it still owns this product, and any delegated all-game infrastructure tasks.",
+      "acceptance": "No work falsely attributed here; linked infrastructure ownership and next product action are clear.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1241972761",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1241972761-A2",
+      "title": "Qualify the true rendering candidate",
+      "work": "Install the supported game/mod combination and required assets; test terrain, actors, shape/LOD/camera behavior and save/reload.",
+      "acceptance": "Native captures and measured frame pacing/memory plus real negative cases; no disabled feature described as delivered.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1241972761",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1241972761-A3",
+      "title": "Compare and preserve upstream semantics",
+      "work": "Use matched populated scenes against upstream/baseline and test coexistence, update, disable and recovery.",
+      "acceptance": "Measured visual value and explicit trade-offs without broken game state or unsafe dependency replacement.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1241972761",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Reuse game bridge/capture and graphics contracts where qualified; distinguish shared infrastructure from this product's actual rendering obligations.",
+  "parent_acceptance": "A player can use the intended real 3D/world-shape behavior in the installed supported game with continuity and recovery.",
+  "sources": [
+    {
+      "id": "CUR-1241972761-S01",
+      "url": "https://github.com/KooshaPari/WorldSphereMod/commit/515779751856e0eee63a2d92d8ef87139e1a6952",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

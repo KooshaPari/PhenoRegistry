@@ -2,12 +2,12 @@
 
 **All 4 previously-deferred repos have been promoted to L4 (14/14) and pushed to `main` (commit `a7447b9`).**
 
-| Repo | Audit File | Score | Status |
-|---|---|---|---|
-| `KooshaPari/Tracera` | `Tracera-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
-| `KooshaPari/AuthKit` | `AuthKit-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
-| `KooshaPari/PhenoSpecs` | `PhenoSpecs-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
-| `KooshaPari/Eidolon` | `Eidolon-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
+| Repo                    | Audit File                 | Score | Status                    |
+| ----------------------- | -------------------------- | ----- | ------------------------- |
+| `<REDACTED>/Tracera`    | `Tracera-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
+| `<REDACTED>/AuthKit`    | `AuthKit-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
+| `<REDACTED>/PhenoSpecs` | `PhenoSpecs-2026-06-25.md` | 14/14 | **DONE** — pushed to main |
+| `<REDACTED>/Eidolon`    | `Eidolon-2026-06-25.md`    | 14/14 | **DONE** — pushed to main |
 
 ## Why these were deferred (historical)
 
@@ -40,3 +40,13 @@ manually following the same pattern as the 8 audited repos.
 - Template: `phenotype-tooling/bin/ABSORPTION_TEMPLATE.md` (5 mandatory headings)
 - Orchestrator: `phenotype-tooling/bin/absorption-justification.{sh,py}`
 - Fleet state: `audits/absorption-justifications/GRADES.json` (8 audits, 100%, L4)
+
+## 2026-09-09 — PhenoSpecs → phenotype-registry migration
+
+PhenoSpecs tombstoned. registry.yaml content migrated to:
+  registry/specs/from-PhenoSpecs/registry.yaml
+
+Consumers referencing <REDACTED>/PhenoSpecs/registry.yaml should update
+to phenotype-registry/registry/specs/from-PhenoSpecs/registry.yaml.
+
+Git history preserved on <REDACTED>/zz-no-archive-PhenoSpecs (hist branch).

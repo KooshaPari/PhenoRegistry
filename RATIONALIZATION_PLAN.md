@@ -30,10 +30,10 @@
 
 | Source repo | Target path in phenotype-gfx | PR | Lines migrated (approx) | Disposition pre → post |
 |-------------|------------------------------|-----|-------------------------|--------------------------|
-| `KooshaPari/phenotype-voxel` | `phenotype-gfx/crates/voxel` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | voxel substrate (adaptive voxel) | AFFIRM → **SUPERSEDE → ARCHIVED** |
-| `KooshaPari/phenotype-terrain` | `phenotype-gfx/crates/unity-terrain-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity terrain bridge | AFFIRM → **SUPERSEDE → ARCHIVED** |
-| `KooshaPari/phenotype-water` | `phenotype-gfx/crates/unity-water-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity water bridge | AFFIRM → **SUPERSEDE → ARCHIVED** |
-| `KooshaPari/phenotype-postfx` | `phenotype-gfx/crates/unity-postfx-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity BRP post-FX | (new entry) → **SUPERSEDE → ARCHIVED** |
+| `<REDACTED>/phenotype-voxel` | `phenotype-gfx/crates/voxel` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | voxel substrate (adaptive voxel) | AFFIRM → **SUPERSEDE → ARCHIVED** |
+| `<REDACTED>/phenotype-terrain` | `phenotype-gfx/crates/unity-terrain-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity terrain bridge | AFFIRM → **SUPERSEDE → ARCHIVED** |
+| `<REDACTED>/phenotype-water` | `phenotype-gfx/crates/unity-water-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity water bridge | AFFIRM → **SUPERSEDE → ARCHIVED** |
+| `<REDACTED>/phenotype-postfx` | `phenotype-gfx/crates/unity-postfx-shim` | [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) (merged) | Unity BRP post-FX | (new entry) → **SUPERSEDE → ARCHIVED** |
 
 ### Policy (ADR-004 + ADR-031)
 
@@ -388,7 +388,7 @@ Priority order: highest ROI first, dependency-safe (no step breaks a downstream 
 | 10 | **PhenoFastMCP + PhenoFastMCP-go + PhenoFastMCP-rust** | 3 upstream MCP forks vs tracked McpKit/PhenoRMCP/MCPForge | one canonical per language; extract SUPERSET.md deltas first |
 | 11 | **phenotype-otel + Profila** ↔ PhenoObservability | PO already has `tracing/` + `profiling/` dirs | fold both into PhenoObservability |
 | 12 | **agileplus-spec-harmonizer** ↔ AgilePlus | 13 KB format-bridge (Rust, 12/12 tests) | merge into AgilePlus; keep spec-kitty only if plugin actively distributed |
-| 13 | **phenotype-water + phenotype-terrain** | (supersession pattern — see [Active Consolidation](#active-consolidation-2026-06-18-phenotype-gfx-absorbs-the-4-sister-repos)) absorbed into KooshaPari/phenotype-gfx via [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) per ADR-004 + ADR-031. Disposition: SUPERSEDE (target=phenotype-gfx, fsm=archived). All 4 source repos archived + deleted 2026-06-18 (delete_repo scope). phenotype-voxel + phenotype-postfx absorbed in the same PR. |
+| 13 | **phenotype-water + phenotype-terrain** | (supersession pattern — see [Active Consolidation](#active-consolidation-2026-06-18-phenotype-gfx-absorbs-the-4-sister-repos)) absorbed into <REDACTED>/phenotype-gfx via [phenotype-gfx#10](https://github.com/KooshaPari/phenotype-gfx/pull/10) per ADR-004 + ADR-031. Disposition: SUPERSEDE (target=phenotype-gfx, fsm=archived). All 4 source repos archived + deleted 2026-06-18 (delete_repo scope). phenotype-voxel + phenotype-postfx absorbed in the same PR. |
 | 14 | **Httpora + Quillr** | half-baked HTTP repos with self-acknowledged naming drift (Quillr README: _"repo 'Quillr'/README 'quill'…to reconcile"_) | reconcile identity/name first |
 
 ### Tier 3 — lower confidence (worth a look)
@@ -397,12 +397,12 @@ Priority order: highest ROI first, dependency-safe (no step breaks a downstream 
 |---|------|------|--------|
 | 15 | **phenotype-monorepo-state** | 22 KB governance snapshots (no README) | fold into phenotype-registry |
 | 16 | **pheno-context** | 6 KB crate, no README | fold into phenoShared/pheno |
-| 17 | **TripleM** | **156 MB, 2-yr stale (2024-08), no README, `GET /repos/KooshaPari/TripleM` returns 404 even with auth — anomaly** | investigate via clone; if empty/corrupt/abandoned, delete |
+| 17 | **TripleM** | **156 MB, 2-yr stale (2024-08), no README, `GET /repos/<REDACTED>/TripleM` returns 404 even with auth — anomaly** | investigate via clone; if empty/corrupt/abandoned, delete |
 | 18 | **Zerokit** | "Restored: Zerokit" scaffold, no `src/` | confirm intent; archive if not built out |
 
 ### Anomalies / hygiene flags (separate concerns, noted)
 
-- **TripleM 404 anomaly** — listed in `/users/KooshaPari/repos` but root GET 404s
+- **TripleM 404 anomaly** — listed in `/users/<REDACTED>/repos` but root GET 404s
   with auth. Could be a renamed/deleted/private-visibility quirk or corruption.
   Worth a direct investigation before any registry entry is written.
 - **Secrets hygiene (out of scope here, flag for security pass):** `phenokits-commons`

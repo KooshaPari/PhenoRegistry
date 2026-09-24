@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-02",
+  "instance_id": "I-02",
+  "criterion_id": "PEP-06-02-01",
+  "assignment_id": "A-GRADER-AFTER",
+  "epoch_id": "E-GRADER-AFTER",
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c",
+  "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f",
+  "execution": "COMPLETED",
+  "verdict": "PASS",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: A valid implementation using a different output filename is accepted.",
+    "assertions_executed": null,
+    "modality": "DYNAMIC"
+  },
+  "supersedes": []
+}

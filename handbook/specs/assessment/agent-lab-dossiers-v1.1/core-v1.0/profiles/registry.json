@@ -1,0 +1,25 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "registry",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Identity, ownership, append/supersede, idempotent reconciliation and privacy; keep tools separate from live data.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

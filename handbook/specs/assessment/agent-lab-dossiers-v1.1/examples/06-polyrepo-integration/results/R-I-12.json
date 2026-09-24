@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "schema_version": "1.0.0",
+  "id": "R-I-12",
+  "instance_id": "I-12",
+  "criterion_id": "PEP-01-04-06",
+  "assignment_id": "A-RELAYSUITE",
+  "epoch_id": "E-RELAYSUITE",
+  "subject_digest": "sha256:f8bea6ef0d129c7caf37f2343fb37100d7eff60445f4b5616ddd4845bba065c6",
+  "assignment_digest": "sha256:98745e4031d5a09a908141f4c5c5d4029a0417d8b882e9e0705117233643d28f",
+  "execution": "BLOCKED",
+  "verdict": "UNKNOWN",
+  "evidence_state": "CURRENT",
+  "review_status": "PROPOSED",
+  "observed_at": "2026-09-11T23:19:57.136661+00:00",
+  "expires_at": null,
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR",
+  "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80",
+  "observation": {
+    "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Separate repositories have not demonstrated a benefit over a versioned package set.",
+    "assertions_executed": null,
+    "modality": "SEMANTIC"
+  },
+  "supersedes": []
+}

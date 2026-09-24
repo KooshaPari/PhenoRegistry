@@ -1,0 +1,15 @@
+{
+  "kind": "outbox",
+  "schema_version": "1.0.0",
+  "id": "OUTBOX-SCENARIO-001",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "destination_label": "Illustrative registry adapter; no network endpoint configured",
+  "payload_digest": "sha256:fb14f20dc06a29f91ab1ab9619f054a2707a1f3be23a91393d3c237a3eba0066",
+  "idempotency_key": "SCENARIO-ONLY:ASSESS-HARBORAPI:sha256:fb14f20dc06a29f91ab1ab9619f054a2707a1f3be23a91393d3c237a3eba0066",
+  "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY",
+  "state": "PENDING",
+  "attempt_count": 0,
+  "receipt_ref": null,
+  "last_error": "No delivery attempted; fictional example only."
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "library",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D12",
+    "D14",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Separate consumer installation and API behavior; do not require a fake GUI or hosted app.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

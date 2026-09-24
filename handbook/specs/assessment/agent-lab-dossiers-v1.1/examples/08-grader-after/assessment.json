@@ -1,0 +1,35 @@
+{
+  "kind": "assessment",
+  "schema_version": "1.0.0",
+  "id": "ASSESS-GRADER-AFTER",
+  "record_status": "EXAMPLE",
+  "assignment_id": "A-GRADER-AFTER",
+  "assignment_digest": "sha256:f33db041d35a4edd659a411c5bb7620f54950bd3b963e66da4fdbcdbe0c1d08f",
+  "epoch_id": "E-GRADER-AFTER",
+  "subject_digest": "sha256:7ffa5154575c304b4675322a2b3a91cfcdd9935cd517028387fd45338bf0412c",
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58",
+  "as_of": "2026-09-11T23:19:57.136661+00:00",
+  "result_ids": [
+    "R-I-01",
+    "R-I-02",
+    "R-I-03",
+    "R-I-04",
+    "R-I-05",
+    "R-I-06",
+    "R-I-07",
+    "R-I-08",
+    "R-I-09",
+    "R-I-10",
+    "R-I-11"
+  ],
+  "evidence_ids": [
+    "EV-SCENARIO"
+  ],
+  "qualification_ids": [],
+  "coverage_limitations": [
+    "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected.",
+    "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked.",
+    "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  ],
+  "registration_state": "NOT_REQUESTED"
+}

@@ -1,0 +1,540 @@
+[
+  {
+    "id": "WP-FED-01",
+    "title": "Confirm consumers and existing extension contracts",
+    "owner_role": "Current provider/host owners",
+    "depends_on": [],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Inventory actual runnable app contracts, existing adapters, data authorities and platform restrictions.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Inventory actual runnable app contracts, existing adapters, data authorities and platform restrictions.",
+    "negative_acceptance": [
+      "No new framework selected from names alone."
+    ],
+    "requirements": [
+      "FED-01-01",
+      "FED-01-02",
+      "FED-01-03",
+      "FED-01-04",
+      "FED-01-05",
+      "FED-01-06",
+      "FED-01-07",
+      "FED-01-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-02",
+    "title": "Build typed manifests and candidate resolution",
+    "owner_role": "PhenoShared + qualified platform adapters",
+    "depends_on": [
+      "WP-FED-01"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Expose metadata and resolve one scoped candidate plan using reuse-first facilities.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Expose metadata and resolve one scoped candidate plan using reuse-first facilities.",
+    "negative_acceptance": [
+      "No executable activation from invalid metadata or unresolved mandatory contracts."
+    ],
+    "requirements": [
+      "FED-02-01",
+      "FED-02-02",
+      "FED-02-03",
+      "FED-02-04",
+      "FED-02-05",
+      "FED-02-06",
+      "FED-02-07",
+      "FED-02-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-03",
+    "title": "Implement scoped grants and owner-preserving context",
+    "owner_role": "Provider owners + reviewer",
+    "depends_on": [
+      "WP-FED-01"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Use existing auth/identity facilities and real provider checks; retain explicit data ownership.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Use existing auth/identity facilities and real provider checks; retain explicit data ownership.",
+    "negative_acceptance": [
+      "Wrong-principal/workspace/audience and revoked operations are rejected."
+    ],
+    "requirements": [
+      "FED-05-01",
+      "FED-05-02",
+      "FED-05-03",
+      "FED-05-04",
+      "FED-05-05",
+      "FED-05-06",
+      "FED-05-07",
+      "FED-05-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-04",
+    "title": "Implement lifecycle journal and service leases",
+    "owner_role": "Provider and shared-runtime owners",
+    "depends_on": [
+      "WP-FED-02",
+      "WP-FED-03"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Qualify idempotent activate/reconcile/detach and recoverable upgrade with actual state.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Qualify idempotent activate/reconcile/detach and recoverable upgrade with actual state.",
+    "negative_acceptance": [
+      "Crash/lost-ack/repeated install events do not duplicate protected side effects."
+    ],
+    "requirements": [
+      "FED-04-01",
+      "FED-04-02",
+      "FED-04-03",
+      "FED-04-04",
+      "FED-04-05",
+      "FED-04-06",
+      "FED-04-07",
+      "FED-04-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-05",
+    "title": "Implement host slots and contextual command adapters",
+    "owner_role": "Host owners + PhenoDesign",
+    "depends_on": [
+      "WP-FED-01"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Reuse real native/host UI mechanisms for one bounded panel and command family.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Reuse real native/host UI mechanisms for one bounded panel and command family.",
+    "negative_acceptance": [
+      "Focus/accessibility and backend authorization survive alternate entrypoints."
+    ],
+    "requirements": [
+      "FED-03-01",
+      "FED-03-02",
+      "FED-03-03",
+      "FED-03-04",
+      "FED-03-05",
+      "FED-03-06",
+      "FED-03-07",
+      "FED-03-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-06",
+    "title": "Qualify locality and recursive composition",
+    "owner_role": "PhenoFabric/PhenoShared and affected hosts",
+    "depends_on": [
+      "WP-FED-02",
+      "WP-FED-03",
+      "WP-FED-04"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Resolve a local route and a reduced composite with no shell/startup cycles.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Resolve a local route and a reduced composite with no shell/startup cycles.",
+    "negative_acceptance": [
+      "Untrusted mode, wrong instance scope, or forbidden cycle fails explicitly."
+    ],
+    "requirements": [
+      "FED-06-01",
+      "FED-06-02",
+      "FED-06-03",
+      "FED-06-04",
+      "FED-06-05",
+      "FED-06-06",
+      "FED-06-07",
+      "FED-06-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-07",
+    "title": "Deliver Tracera–AgilePlus reciprocal witness",
+    "owner_role": "Tracera + AgilePlus owners",
+    "depends_on": [
+      "WP-FED-04",
+      "WP-FED-05"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Prove standalone, both perspectives, shared object identity and real work receipts.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Prove standalone, both perspectives, shared object identity and real work receipts.",
+    "negative_acceptance": [
+      "No mock or data copy is accepted as a real reciprocal integration."
+    ],
+    "requirements": [
+      "FED-07-01",
+      "FED-07-02",
+      "FED-07-03",
+      "FED-07-04",
+      "FED-07-05",
+      "FED-07-06",
+      "FED-07-07",
+      "FED-07-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-08",
+    "title": "Validate a second distinct consumer pair",
+    "owner_role": "BytePort + ShareCLI or selected runnable pair",
+    "depends_on": [
+      "WP-FED-04",
+      "WP-FED-05"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Demonstrate a real deployment/control workflow using the same qualified contract family.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Demonstrate a real deployment/control workflow using the same qualified contract family.",
+    "negative_acceptance": [
+      "Avoid duplicate processes, jobs, notifications and copied credentials."
+    ],
+    "requirements": [
+      "FED-07-01",
+      "FED-07-02",
+      "FED-07-03",
+      "FED-07-04",
+      "FED-07-05",
+      "FED-07-06",
+      "FED-07-07",
+      "FED-07-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-09",
+    "title": "Evaluate optional App Center and nested perspective",
+    "owner_role": "Accepted shell/PhenoApps owner",
+    "depends_on": [
+      "WP-FED-07",
+      "WP-FED-08",
+      "WP-FED-06"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Expose inspect/repair/detach and a nested composition without owning product state.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Expose inspect/repair/detach and a nested composition without owning product state.",
+    "negative_acceptance": [
+      "Disabling Center UI does not destroy valid local apps or their data."
+    ],
+    "requirements": [
+      "FED-01-01",
+      "FED-01-02",
+      "FED-01-03",
+      "FED-01-04",
+      "FED-01-05",
+      "FED-01-06",
+      "FED-01-07",
+      "FED-01-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-10",
+    "title": "Run adversarial lifecycle and native UX qualification",
+    "owner_role": "Designated independent reviewer + native environment owners",
+    "depends_on": [
+      "WP-FED-07",
+      "WP-FED-08",
+      "WP-FED-06"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Execute planned failure, update, uninstall, multiwindow, privacy and resource scenarios.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Execute planned failure, update, uninstall, multiwindow, privacy and resource scenarios.",
+    "negative_acceptance": [
+      "Missing/skipped/fixture-only required evidence blocks graduation."
+    ],
+    "requirements": [
+      "FED-07-01",
+      "FED-07-02",
+      "FED-07-03",
+      "FED-07-04",
+      "FED-07-05",
+      "FED-07-06",
+      "FED-07-07",
+      "FED-07-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-11",
+    "title": "Run comparative product and maintenance pilot",
+    "owner_role": "Independent comparative evaluator",
+    "depends_on": [
+      "WP-FED-07",
+      "WP-FED-08"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Compare manual, handoff, conventional plugin and reciprocal workflows with declared metrics.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Compare manual, handoff, conventional plugin and reciprocal workflows with declared metrics.",
+    "negative_acceptance": [
+      "Preserve disadvantages, failed trials and inconclusive results rather than select only showcase runs."
+    ],
+    "requirements": [
+      "FED-07-01",
+      "FED-07-02",
+      "FED-07-03",
+      "FED-07-04",
+      "FED-07-05",
+      "FED-07-06",
+      "FED-07-07",
+      "FED-07-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  },
+  {
+    "id": "WP-FED-12",
+    "title": "Publish qualified SDK/recipes and owner rollout",
+    "owner_role": "Shared SDK + product release owners",
+    "depends_on": [
+      "WP-FED-09",
+      "WP-FED-10",
+      "WP-FED-11"
+    ],
+    "kind": "federation-contract-and-implementation",
+    "status": "PLANNED_NOT_CLAIMED",
+    "product_id": null,
+    "logical_write_scope": "Ship only approved supported profiles with docs, conformance evidence, install and rollback.",
+    "resolved_paths": null,
+    "lease_id": null,
+    "source_revision": null,
+    "mutation_authorized": false,
+    "outcome": "Ship only approved supported profiles with docs, conformance evidence, install and rollback.",
+    "negative_acceptance": [
+      "No broad porting, remote publication or release authority is inferred from this plan."
+    ],
+    "requirements": [
+      "FED-07-01",
+      "FED-07-02",
+      "FED-07-03",
+      "FED-07-04",
+      "FED-07-05",
+      "FED-07-06",
+      "FED-07-07",
+      "FED-07-08"
+    ],
+    "estimate_hours": {
+      "optimistic": null,
+      "most_likely": null,
+      "pessimistic": null
+    },
+    "effort_estimate_status": "UNESTIMATED_UNTIL_CURRENT_SOURCE_AND_NATIVE_PROFILE",
+    "rollback": "Preserve prior known-good bindings, data, source and artifacts; no unapproved source/credential/data migration.",
+    "completion_evidence": [],
+    "permission_prerequisites": [
+      "Accepted scoped task",
+      "Actual provider and consumer identities",
+      "Owner-coordinated write leases",
+      "Independent approval for sensitive/publication actions"
+    ]
+  }
+]

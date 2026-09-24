@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/amendment.schema.json",
+  "title": "amendment",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "amendment"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "prior_epoch_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_epoch_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "change_class": {
+      "enum": [
+        "PRODUCT",
+        "EVIDENCE",
+        "SCOPE",
+        "EVALUATOR",
+        "POLICY",
+        "INTENT"
+      ]
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "affected_obligation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "qualification_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "ACCEPTED",
+        "REJECTED"
+      ]
+    },
+    "prior_subject_reassessment_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "prior_epoch_ref",
+    "next_epoch_ref",
+    "authority_ref",
+    "change_class",
+    "rationale",
+    "alternatives",
+    "affected_obligation_refs",
+    "qualification_refs",
+    "status",
+    "prior_subject_reassessment_ref"
+  ],
+  "additionalProperties": false
+}

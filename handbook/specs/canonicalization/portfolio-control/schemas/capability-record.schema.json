@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phenotype.invalid/schemas/capability-record.schema.json",
+  "title": "Capability Record",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "status",
+    "owner",
+    "trace"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CAP-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "criticality": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    "owner": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "CANONICAL",
+            "SHARED_BY_CONTRACT",
+            "CONFLICTED",
+            "UNOWNED",
+            "PROPOSED"
+          ]
+        },
+        "repo_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": [
+        "I",
+        "P",
+        "S",
+        "A",
+        "C",
+        "Q",
+        "E",
+        "O",
+        "M",
+        "G"
+      ],
+      "properties": {
+        "I": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "P": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "S": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "A": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "C": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "Q": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "E": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "O": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "M": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        },
+        "G": {
+          "enum": [
+            "U",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "X",
+            "D",
+            "R",
+            "S"
+          ]
+        }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "properties": {
+        "intent": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "jobs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "implementation": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "quality": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "consumers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

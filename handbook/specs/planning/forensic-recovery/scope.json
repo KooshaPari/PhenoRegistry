@@ -1,0 +1,20 @@
+{
+  "run_at_utc": "2026-08-29T09:41:22+00:00",
+  "owner_candidates": [
+    "KooshaPari",
+    "kooshapari"
+  ],
+  "repositories": [
+    "helios-cli",
+    "heliosLab",
+    "forgecode",
+    "Agentora"
+  ],
+  "analysis_unit": "one ecosystem plus four independently evidenced repositories",
+  "protocol_precedence": [
+    "03-forensic-ssot-recovery(4).md",
+    "01-brownfield(4).md"
+  ],
+  "mutation_policy": "read-only evidence capture; no remote writes, force-pushes, branch deletion, issue creation, or SSOT promotion",
+  "epistemic_policy": "candidate evidence is not canonical merely because it is newer, older, larger, or on a named branch"
+}

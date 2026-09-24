@@ -16,14 +16,14 @@
 
 ## Terminal owner crate inventory
 
-### phenotype-config (`KooshaPari/phenotype-config`)
+### phenotype-config (`<REDACTED>/phenotype-config`)
 
 | Crate | Source | PR |
 |-------|--------|-----|
 | `phenotype-config-loader` | phenoShared interim | phenotype-config#2 |
 | `settly` | HexaKit wave 8 (prior) | HexaKit#245 |
 
-### phenotype-types (`KooshaPari/phenotype-types`)
+### phenotype-types (`<REDACTED>/phenotype-types`)
 
 | Crate | Source | PR |
 |-------|--------|-----|

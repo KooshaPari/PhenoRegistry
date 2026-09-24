@@ -8,9 +8,9 @@ and library research into one reference surface.
 
 | Registry | Purpose | Canonical Surface |
 | --- | --- | --- |
-| PhenoSpecs | Product specifications, ADRs, and API contracts | [`KooshaPari/PhenoSpecs`](https://github.com/KooshaPari/PhenoSpecs) |
-| PhenoHandbook | Patterns, anti-patterns, guidelines, and methodologies | [`KooshaPari/PhenoHandbook`](https://github.com/KooshaPari/PhenoHandbook) |
-| HexaKit | Template and scaffold registry | [`KooshaPari/HexaKit`](https://github.com/KooshaPari/HexaKit) |
+| PhenoSpecs | Product specifications, ADRs, and API contracts | [`<REDACTED>/PhenoSpecs`](https://github.com/KooshaPari/PhenoSpecs) |
+| PhenoHandbook | Patterns, anti-patterns, guidelines, and methodologies | [`<REDACTED>/PhenoHandbook`](https://github.com/KooshaPari/PhenoHandbook) |
+| HexaKit | Template and scaffold registry | [`<REDACTED>/HexaKit`](https://github.com/KooshaPari/HexaKit) |
 | Library Research | Wrap-vs-handroll evidence and dependency catalog | [`LIBRARY_RESEARCH_REGISTRY.md`](https://github.com/KooshaPari/phenotype-registry/blob/main/LIBRARY_RESEARCH_REGISTRY.md) |
 
 ## Quick Paths

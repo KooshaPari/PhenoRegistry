@@ -1,6 +1,6 @@
 > **Work-state:** ARCHIVED
 >
-> Conft has been drained into [KooshaPari/Configra](https://github.com/KooshaPari/Configra)
+> Conft has been drained into [<REDACTED>/Configra](https://github.com/KooshaPari/Configra)
 > and is now archived. See ADR-031 / L5-111.
 >
 > All unique content has been absorbed:
@@ -17,7 +17,7 @@
 **Universal Configuration Management with Cross-Language Support**
 
 This repository is archived. All content has been migrated to
-[**KooshaPari/Configra**](https://github.com/KooshaPari/Configra).
+[**<REDACTED>/Configra**](https://github.com/KooshaPari/Configra).
 
 ## Migration
 

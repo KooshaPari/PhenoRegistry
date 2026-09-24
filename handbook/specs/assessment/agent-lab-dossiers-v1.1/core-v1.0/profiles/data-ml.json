@@ -1,0 +1,26 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "data-ml",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D08",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Dataset lineage, contamination, robust holdouts, reproducible measurement and inference-resource constraints.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

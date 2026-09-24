@@ -1,0 +1,251 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "synthetic": {
+      "const": true
+    },
+    "status": {
+      "const": "PROPOSED_NOT_EXECUTED"
+    },
+    "principal": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "workspace": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "primary_app": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "perspective_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "package_locks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "manifest_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "artifact_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "manifest_id",
+          "artifact_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "consumer": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "provider": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "capability": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "semantic_contract": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "principal": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "workspace": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "transport": {
+            "enum": [
+              "in-process",
+              "local-ipc",
+              "vm-shared-memory",
+              "network",
+              "headless"
+            ]
+          },
+          "grant_references": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+              "minLength": 2
+            },
+            "uniqueItems": true
+          },
+          "data_authority": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+              "minLength": 2
+            },
+            "uniqueItems": true
+          },
+          "instance_scope": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          }
+        },
+        "required": [
+          "id",
+          "consumer",
+          "provider",
+          "capability",
+          "semantic_contract",
+          "principal",
+          "workspace",
+          "transport",
+          "grant_references",
+          "data_authority",
+          "depends_on",
+          "instance_scope"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "mounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "binding_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "host": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "slot_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+            "minLength": 2
+          },
+          "adapter": {
+            "enum": [
+              "native-extension",
+              "host-rendered",
+              "isolated-webview",
+              "web-module",
+              "remote-surface",
+              "headless"
+            ]
+          },
+          "parent_mount": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "binding_id",
+          "host",
+          "slot_id",
+          "adapter",
+          "parent_mount"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "recipe_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "policy_profile": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "minLength": 2
+    },
+    "authorization_receipt": {
+      "type": "null"
+    },
+    "runtime_result": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "id",
+    "synthetic",
+    "status",
+    "principal",
+    "workspace",
+    "primary_app",
+    "perspective_id",
+    "package_locks",
+    "bindings",
+    "mounts",
+    "recipe_id",
+    "policy_profile",
+    "authorization_receipt",
+    "runtime_result"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:phenotype:plan:federation:composition:1",
+  "title": "Illustrative scoped composition plan; not activation authority"
+}

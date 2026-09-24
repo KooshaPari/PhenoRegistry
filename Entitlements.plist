@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Minimal entitlements for phenotype-registry's absorbed binaries, including
+  the 308-LOC eidolon-desktop/src/macos.rs Core Graphics implementation.
+
+  Direct distribution (not Mac App Store), so sandbox is intentionally OFF.
+-->
+<plist version="1.0">
+<dict>
+  <!-- Registry fetches absorbed crate signatures from the registry index and
+       talks to any local daemons (eidolon-desktop IPC, etc.). -->
+  <key>com.apple.security.network.client</key>
+  <true/>
+
+  <!-- If app uses the camera/mic/etc., add the corresponding entitlement. -->
+</dict>
+</plist>

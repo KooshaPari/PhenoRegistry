@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1199812615",
+  "name": ".github",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "bcd1aac744881e1600573918973b7f9494de2153",
+  "sampled_commit_date_utc": "2026-09-16T08:51:20Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent history adds profile content, but the pinned root README still says long pause and ARCHIVED / RETIRED.",
+  "assessment": "SOURCE_CONFIRMED_INSTRUCTION_CONFLICT",
+  "role": "Account defaults and publication surface",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "A restored name is not permission to ignore the remaining paused source instruction.",
+    "The user account profile and an organization profile are different publication contexts; verify the effective destination."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1199812615-A1",
+      "title": "Resolve the live instruction contract",
+      "work": "Find the accepted restoration decision, map account-default files and profile destinations, and update only authorized contradictory pointers.",
+      "acceptance": "One role and allowed-action statement; actual user-profile/default-file consumers verified.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1199812615",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1199812615-A2",
+      "title": "Qualify reusable defaults",
+      "work": "Check links, issue templates, security contact, supported default files and inheritance on an unrelated subject without overwriting its own files.",
+      "acceptance": "Known-bad links/templates fail; intended consumers receive the expected defaults.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1199812615",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1199812615-A3",
+      "title": "Publish a truthful account surface",
+      "work": "Coordinate with KooshaPari and PhenoRegistry owners; retain a minimal publisher rather than another portfolio database.",
+      "acceptance": "Exact published source and links validated by the owning reviewer.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1199812615",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "KooshaPari owns its public profile/site; .github publishes appropriate reusable account defaults; PhenoRegistry supplies approved metadata.",
+  "parent_acceptance": "An actual consumer sees the intended defaults and the correct public profile, with no conflicting lifecycle instruction.",
+  "sources": [
+    {
+      "id": "CUR-1199812615-S01",
+      "url": "https://github.com/KooshaPari/.github/blob/bcd1aac744881e1600573918973b7f9494de2153/README.md",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1199812615-S02",
+      "url": "https://github.com/KooshaPari/.github/commit/bcd1aac744881e1600573918973b7f9494de2153",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

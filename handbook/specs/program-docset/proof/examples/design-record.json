@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.4",
+  "id": "SYN-DESIGN",
+  "subject_id": "SYN-SUBJECT",
+  "revision": "1",
+  "intent_ids": [
+    "INT-006"
+  ],
+  "capability_ids": [
+    "SYN-CAPABILITY"
+  ],
+  "states": [
+    {
+      "id": "idle",
+      "purpose": "Await scoped action",
+      "fixture_id": "SYN-EMPTY"
+    },
+    {
+      "id": "result",
+      "purpose": "Present authoritative result",
+      "fixture_id": "SYN-RESULT"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "execute",
+      "from_state": "idle",
+      "to_state": "result",
+      "action": "user chooses run",
+      "expected_effect": "Real provider result is returned; mock record does not claim execution"
+    }
+  ],
+  "editable_source": {
+    "path": "design-sketch.txt",
+    "sha256": "2ba0d917e7d44e0ff59590d3be728404c63982dca4a2d16a20a1184bf9016fd7",
+    "kind": "ascii"
+  },
+  "previews": [],
+  "review_status": "proposed",
+  "approval_reference": null,
+  "implementation_evidence_ids": [],
+  "synthetic": true
+}

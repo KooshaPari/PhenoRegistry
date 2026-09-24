@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/measurement-binding.schema.json",
+  "title": "measurement-binding",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "measurement-binding"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "criterion_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modality": {
+      "enum": [
+        "SEMANTIC",
+        "STRUCTURAL",
+        "DYNAMIC",
+        "OBSERVATIONAL"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected_behavior": {
+      "type": "string",
+      "minLength": 1
+    },
+    "units_or_anchors": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "positive_control": {
+      "type": "string",
+      "minLength": 1
+    },
+    "negative_control": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qualification_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "resource_limit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "side_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "authority_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "freshness_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "criterion_id",
+    "instance_id",
+    "subject_scope",
+    "modality",
+    "method",
+    "expected_behavior",
+    "units_or_anchors",
+    "environment_ref",
+    "fixtures",
+    "positive_control",
+    "negative_control",
+    "qualification_refs",
+    "resource_limit",
+    "side_effects",
+    "authority_ref",
+    "freshness_rule",
+    "evidence_requirements"
+  ],
+  "additionalProperties": false
+}

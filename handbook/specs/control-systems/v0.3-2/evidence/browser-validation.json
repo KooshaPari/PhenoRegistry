@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "browser": "Installed Chromium headless via Playwright",
+  "viewports": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "body": 1440,
+      "chapters": 48,
+      "viewport": "desktop"
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "body": 390,
+      "chapters": 48,
+      "viewport": "mobile"
+    }
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "filter_test": "48 chapters indexed; query narrowed to 1; clearing restored 48",
+  "scope": "In-memory HTML rendering/overflow and chapter-filter behavior; not a complete accessibility or cross-browser audit."
+}

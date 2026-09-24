@@ -44,7 +44,7 @@ A 2026-07-17 absorption copied token files into `phenodocs/packages/design/` and
 | Check | Result |
 |-------|--------|
 | GitHub repo LIVE | unarchived 2026-07-20 |
-| CODEOWNERS | `@KooshaPari` |
+| CODEOWNERS | `@<REDACTED>` |
 | Asset pipeline split | `asset-engine` seeded from `engine/` |
 | Registry SSOT updated | `projects/phenoDesign.json`, disposition-index |
 
@@ -52,5 +52,5 @@ A 2026-07-17 absorption copied token files into `phenodocs/packages/design/` and
 
 - [x] Absorption reversed in registry SSOT
 - [x] GitHub unarchived
-- [x] Asset engine extracted to `KooshaPari/asset-engine`
+- [x] Asset engine extracted to `<REDACTED>/asset-engine`
 - [ ] Fleet consumers repoint token deps to phenoDesign canonical (follow-up)

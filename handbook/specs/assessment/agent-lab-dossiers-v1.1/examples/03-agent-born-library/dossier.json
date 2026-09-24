@@ -1,0 +1,209 @@
+{
+  "kind": "dossier",
+  "schema_version": "1.1.0",
+  "id": "PARCELKIT",
+  "record_status": "EXAMPLE",
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "title": "ParcelKit / agent-created library",
+  "subtitle": "An agent-originated component can be legitimate without a human-authored idea.",
+  "purpose": "Reduce duplicated manifest parsing and inconsistent diagnostics across two real consumers in the scenario.",
+  "boundary": "One local packaged library and Consumer A; Consumer B compatibility remains an open check.",
+  "beneficiary": "Internal CLI maintainers and consuming agents.",
+  "authorship": "AGENT_ORIGINATED",
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment.",
+  "genesis_rationale": "The scenario agents decomposed two CLI implementations to share parsing. The intent originates from a parent capability, not a human naming a new repo.",
+  "alternatives": [
+    "Keep parsing in the existing CLI module",
+    "Adopt a suitable upstream parser",
+    "Keep a separate package but not a separate repository",
+    "Do not generalize beyond one consumer"
+  ],
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example.",
+  "non_goals": [
+    "Claim real-repository completion",
+    "Require a human-authored repository idea",
+    "Wait for a central registry to become operational"
+  ],
+  "subject_identity": {
+    "source_revision": null,
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact.",
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  },
+  "inventory": [
+    {
+      "id": "INV-01",
+      "item": "Library API",
+      "declared": "parse / validate / normalize",
+      "observed_or_assumed": "Representative consumer path assumed passing",
+      "gap": "Broader input corpus unmeasured",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-02",
+      "item": "Package distribution",
+      "declared": "Install without source checkout",
+      "observed_or_assumed": "Clean installation assumed passing",
+      "gap": "Second consumer compatibility missing",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-03",
+      "item": "Benchmark",
+      "declared": "Low-overhead parsing",
+      "observed_or_assumed": "Warm-cache number only",
+      "gap": "No current cold-cache evidence",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    },
+    {
+      "id": "INV-04",
+      "item": "Repository role",
+      "declared": "Shared parsing owner",
+      "observed_or_assumed": "Agent-derived boundary recorded",
+      "gap": "Absorption condition missing",
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    }
+  ],
+  "maturity": {
+    "scenario_or_scoped_label": "Illustrative: local consumer slice MVP; broader compatibility and external value remain unproven.",
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding.",
+    "axes": [
+      {
+        "axis": "PRODUCT_VERIFIED",
+        "status": "ILLUSTRATIVE PASS — Consumer A",
+        "basis": "Scenario assumes a genuine packaged consumer path."
+      },
+      {
+        "axis": "COMPATIBILITY",
+        "status": "ILLUSTRATIVE UNKNOWN",
+        "basis": "Consumer B not exercised."
+      },
+      {
+        "axis": "VALUE_VALIDATED",
+        "status": "UNKNOWN",
+        "basis": "No external outcome evidence."
+      }
+    ],
+    "value_evidence": "No actual consumer value evidence is included. The case distinguishes a plausible intent from a validated benefit."
+  },
+  "finding_ids": [
+    "F-I-05",
+    "F-I-11",
+    "F-I-12",
+    "F-I-14"
+  ],
+  "decision_ids": [
+    "DEC-NEXT"
+  ],
+  "semantic_reviews": [
+    {
+      "topic": "Does this assignment serve the parent outcome?",
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository.",
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome.",
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product.",
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions.",
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+    }
+  ],
+  "next_action": "Run the second consumer against the package and define an absorption trigger before expanding the repository.",
+  "stop_condition": "Pause separate-repository investment if only one consumer remains and all releases must change in lockstep.",
+  "restart_packet": {
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work.",
+    "failed_hypotheses": [
+      "A well-formed record is not proof the product behavior occurred."
+    ],
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations.",
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  },
+  "lineage": {
+    "previous_dossier_id": null,
+    "change_class": "ILLUSTRATIVE_BASELINE",
+    "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+  },
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit.",
+  "row_notes": [
+    {
+      "instance_id": "I-01",
+      "title": "Intent authorship is recorded separately from intent acceptance",
+      "interpretation": "Authorship is agent-originated; acceptance is a separate experiment decision.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-02",
+      "title": "Derived intent links to its parent capability or mandate",
+      "interpretation": "Parent capability is shared manifest parsing for two CLI consumers.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-03",
+      "title": "The repository boundary has an explicit consumer-facing responsibility",
+      "interpretation": "The library owns parse/validate/normalize, not portfolio state.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-04",
+      "title": "An existing-owner alternative was evaluated before creating duplicate authority",
+      "interpretation": "A module in the existing CLI and an upstream parser were compared before extraction.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-05",
+      "title": "The repository has an absorption or reversal trigger",
+      "interpretation": "No absorption trigger was recorded.",
+      "next_action": "Set a review condition for one remaining consumer or lockstep releases."
+    },
+    {
+      "instance_id": "I-06",
+      "title": "The core operation produces the required result for a representative valid input",
+      "interpretation": "Consumer A parses a valid manifest into the specified fields.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-07",
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result",
+      "interpretation": "Malformed required fields fail with structured diagnostics.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-08",
+      "title": "A clean consumer can install the selected artifact",
+      "interpretation": "A clean consumer installs the packaged artifact without the source checkout.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-09",
+      "title": "Setup does not depend on an undocumented local path",
+      "interpretation": "Setup has no undeclared machine-specific paths.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-10",
+      "title": "Machine-readable success outputs conform to a stable schema",
+      "interpretation": "Machine-readable successful results match a documented schema.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-11",
+      "title": "A compatible older consumer is exercised when backward compatibility is promised",
+      "interpretation": "The second consumer still uses the preceding package version.",
+      "next_action": "Run the actual older consumer against the proposed package."
+    },
+    {
+      "instance_id": "I-12",
+      "title": "Warm-cache and cold-cache conditions are distinguished",
+      "interpretation": "The only stated throughput number comes from a warm cache.",
+      "next_action": "Collect a cold-cache run separately."
+    },
+    {
+      "instance_id": "I-13",
+      "title": "All required interactive controls are reachable by keyboard",
+      "interpretation": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream.",
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    },
+    {
+      "instance_id": "I-14",
+      "title": "Value evidence is not inferred from engineering quality",
+      "interpretation": "External value is unmeasured even though the local technical slice is assumed to work.",
+      "next_action": "Measure a real consumer outcome before expanding scope."
+    }
+  ]
+}

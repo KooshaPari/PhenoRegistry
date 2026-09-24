@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:phenotype:local-node-capability:0.3.0",
+  "title": "Qualified local node capability record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "node_id",
+    "agent_version",
+    "trust_state",
+    "host_mode",
+    "resources",
+    "runtimes",
+    "admission"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.3.0"
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trust_state": {
+      "enum": [
+        "unqualified",
+        "qualified",
+        "revoked"
+      ]
+    },
+    "host_mode": {
+      "enum": [
+        "interactive",
+        "creator_audio",
+        "gaming",
+        "llm_local",
+        "idle",
+        "maintenance",
+        "unknown"
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "required": [
+        "cpu",
+        "memory_bytes",
+        "reserve"
+      ],
+      "properties": {
+        "cpu": {
+          "type": "number",
+          "minimum": 0
+        },
+        "memory_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reserve": {
+          "type": "object"
+        },
+        "gpus": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "runtimes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "qualified"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "qualified": {
+            "type": "boolean"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "admission": {
+      "type": "object",
+      "required": [
+        "accepting_work",
+        "reason"
+      ],
+      "properties": {
+        "accepting_work": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

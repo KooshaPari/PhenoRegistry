@@ -1,0 +1,128 @@
+{
+  "example_class": "ILLUSTRATIVE_SCENARIO",
+  "product_execution_performed": false,
+  "notice": "All states are authored premises for explaining a filled audit. This is not a test transcript, consumer observation, or instrument qualification.",
+  "rows": [
+    {
+      "cid": "PEP-05-01-01",
+      "state": "PASS",
+      "note": "The scenario product produces the correct set of output records.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "BEHAVIORAL-TARGET",
+      "title": "The core operation produces the required result for a representative valid input",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-06-02-01",
+      "state": "FAIL",
+      "note": "A valid implementation using a different output filename is rejected despite producing the right records.",
+      "action": "Qualify filename-independent semantic equivalence against the accepted outcome.",
+      "mandatory": true,
+      "gate": "EVALUATOR-QUALIFICATION",
+      "title": "The grader accepts a valid solution that differs from its reference implementation",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-06-02-02",
+      "state": "PASS",
+      "note": "The grader still rejects empty/no-op output.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": true,
+      "gate": "EVALUATOR-QUALIFICATION",
+      "title": "The grader rejects an empty or no-op implementation for nonempty behavior",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-06-02-07",
+      "state": "PASS",
+      "note": "Expected records come from the accepted consumer contract rather than copying candidate output.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "The oracle's expected result has a justification outside the candidate output alone",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-06-02-09",
+      "state": "FAIL",
+      "note": "The evaluator scope silently adds a filename constraint absent from the consumer contract.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Known grader limitations constrain the claims it may support",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-06-02-10",
+      "state": "UNKNOWN",
+      "note": "The corrected evaluator has not yet been versioned and qualified.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A grader update has its own version and qualification record",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-17-04-04",
+      "state": "UNKNOWN",
+      "note": "Evaluator changes have not yet been applied.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Changing a grader creates an attributable evaluator revision",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-17-04-07",
+      "state": "PASS",
+      "note": "The previous report remains preserved; it is not rewritten as a product success.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A corrected oracle does not retroactively rewrite the old product verdict",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-18-05-02",
+      "state": "PASS",
+      "note": "Repeated failure fingerprints identify the same incidental filename assertion.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A repeated failure signature is retained across sessions",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-18-05-07",
+      "state": "PASS",
+      "note": "Restarting a context is distinguished from correcting the contract.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "Restart, replay, reseed, replan and contract revision are separately recorded",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    },
+    {
+      "cid": "PEP-18-05-10",
+      "state": "PASS",
+      "note": "A valid non-identical witness is the next discriminating experiment, not another identical patch.",
+      "action": "Collect the actual product evidence before accepting this claim.",
+      "mandatory": false,
+      "gate": null,
+      "title": "A next action targets a discriminating observation rather than identical unbounded retries",
+      "app": "APPLICABLE",
+      "fresh": "CURRENT"
+    }
+  ]
+}

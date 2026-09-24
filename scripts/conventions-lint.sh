@@ -73,8 +73,8 @@ if [ -d .github/workflows ]; then
     warn "workflows use ubuntu-latest — pin ubuntu-24.04 for reproducibility"
   fi
   # Phantom-action rot class (repository-not-found refs seen org-wide).
-  if grep -rqsE 'uses:\s*(trufflehog/actions|KooshaPari/phenotypeActions)' .github/workflows 2>/dev/null; then
-    fail "phantom action ref (trufflehog/actions or KooshaPari/phenotypeActions) — does not resolve; use canonical action"
+  if grep -rqsE 'uses:\s*(trufflehog/actions|<REDACTED>/phenotypeActions)' .github/workflows 2>/dev/null; then
+    fail "phantom action ref (trufflehog/actions or <REDACTED>/phenotypeActions) — does not resolve; use canonical action"
   fi
 fi
 

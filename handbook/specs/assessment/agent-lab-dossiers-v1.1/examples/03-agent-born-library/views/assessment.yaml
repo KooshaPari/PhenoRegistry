@@ -1,0 +1,1533 @@
+# GENERATED VIEW. Edit canonical JSON inputs, then render again.
+"format": "ASSESSMENT_DOSSIER_VIEW_V1_1"
+"dossier":
+  "kind": "dossier"
+  "schema_version": "1.1.0"
+  "id": "PARCELKIT"
+  "record_status": "EXAMPLE"
+  "example_class": "ILLUSTRATIVE_SCENARIO"
+  "title": "ParcelKit / agent-created library"
+  "subtitle": "An agent-originated component can be legitimate without a human-authored idea."
+  "purpose": "Reduce duplicated manifest parsing and inconsistent diagnostics across two real consumers in the scenario."
+  "boundary": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+  "beneficiary": "Internal CLI maintainers and consuming agents."
+  "authorship": "AGENT_ORIGINATED"
+  "intent_status": "Accepted for a bounded experiment within the fictional scenario; not an actual portfolio commitment."
+  "genesis_rationale": "The scenario agents decomposed two CLI implementations to share parsing. The intent originates from a parent capability, not a human naming a new repo."
+  "alternatives":
+    - "Keep parsing in the existing CLI module"
+    - "Adopt a suitable upstream parser"
+    - "Keep a separate package but not a separate repository"
+    - "Do not generalize beyond one consumer"
+  "authority": "Illustrative delegated mandate only. No actual device, repository, deployment, financial, or lifecycle authority is granted by this example."
+  "non_goals":
+    - "Claim real-repository completion"
+    - "Require a human-authored repository idea"
+    - "Wait for a central registry to become operational"
+  "subject_identity":
+    "source_revision": null
+    "identity_method": "PEP value digest of subject.json (an authored scenario descriptor), not a Git commit or runtime artifact."
+    "limitation": "No source checkout, real product execution, or real user observations were collected for this illustrative case."
+  "inventory":
+    -
+      "id": "INV-01"
+      "item": "Library API"
+      "declared": "parse / validate / normalize"
+      "observed_or_assumed": "Representative consumer path assumed passing"
+      "gap": "Broader input corpus unmeasured"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-02"
+      "item": "Package distribution"
+      "declared": "Install without source checkout"
+      "observed_or_assumed": "Clean installation assumed passing"
+      "gap": "Second consumer compatibility missing"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-03"
+      "item": "Benchmark"
+      "declared": "Low-overhead parsing"
+      "observed_or_assumed": "Warm-cache number only"
+      "gap": "No current cold-cache evidence"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+    -
+      "id": "INV-04"
+      "item": "Repository role"
+      "declared": "Shared parsing owner"
+      "observed_or_assumed": "Agent-derived boundary recorded"
+      "gap": "Absorption condition missing"
+      "evidence_basis": "Authored scenario premise, not a collected product observation."
+  "maturity":
+    "scenario_or_scoped_label": "Illustrative: local consumer slice MVP; broader compatibility and external value remain unproven."
+    "claim_limit": "Illustrative stage interpretation only. The current evidence-backed result is not a real-product maturity finding."
+    "axes":
+      -
+        "axis": "PRODUCT_VERIFIED"
+        "status": "ILLUSTRATIVE PASS — Consumer A"
+        "basis": "Scenario assumes a genuine packaged consumer path."
+      -
+        "axis": "COMPATIBILITY"
+        "status": "ILLUSTRATIVE UNKNOWN"
+        "basis": "Consumer B not exercised."
+      -
+        "axis": "VALUE_VALIDATED"
+        "status": "UNKNOWN"
+        "basis": "No external outcome evidence."
+    "value_evidence": "No actual consumer value evidence is included. The case distinguishes a plausible intent from a validated benefit."
+  "finding_ids":
+    - "F-I-05"
+    - "F-I-11"
+    - "F-I-12"
+    - "F-I-14"
+  "decision_ids":
+    - "DEC-NEXT"
+  "semantic_reviews":
+    -
+      "topic": "Does this assignment serve the parent outcome?"
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository."
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome."
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product."
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions."
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+  "next_action": "Run the second consumer against the package and define an absorption trigger before expanding the repository."
+  "stop_condition": "Pause separate-repository investment if only one consumer remains and all releases must change in lockstep."
+  "restart_packet":
+    "accepted_baseline": "Use this fixture as an example only; establish a real pinned subject and assignment before operational work."
+    "failed_hypotheses":
+      - "A well-formed record is not proof the product behavior occurred."
+    "next_reproduction": "Translate the scenario into a bounded authorized real-product experiment, then replace fictional premises with collected observations."
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  "lineage":
+    "previous_dossier_id": null
+    "change_class": "ILLUSTRATIVE_BASELINE"
+    "description": "A constructed teaching case, not a measurement of changes in the user portfolio."
+  "provenance_notice": "Fictional worked example. Every purported product outcome below is an authored premise. Result records remain PROPOSED and instrument qualifications are absent, so the real evidence reducer grants no acceptance credit."
+  "row_notes":
+    -
+      "instance_id": "I-01"
+      "title": "Intent authorship is recorded separately from intent acceptance"
+      "interpretation": "Authorship is agent-originated; acceptance is a separate experiment decision."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-02"
+      "title": "Derived intent links to its parent capability or mandate"
+      "interpretation": "Parent capability is shared manifest parsing for two CLI consumers."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-03"
+      "title": "The repository boundary has an explicit consumer-facing responsibility"
+      "interpretation": "The library owns parse/validate/normalize, not portfolio state."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-04"
+      "title": "An existing-owner alternative was evaluated before creating duplicate authority"
+      "interpretation": "A module in the existing CLI and an upstream parser were compared before extraction."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-05"
+      "title": "The repository has an absorption or reversal trigger"
+      "interpretation": "No absorption trigger was recorded."
+      "next_action": "Set a review condition for one remaining consumer or lockstep releases."
+    -
+      "instance_id": "I-06"
+      "title": "The core operation produces the required result for a representative valid input"
+      "interpretation": "Consumer A parses a valid manifest into the specified fields."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-07"
+      "title": "Invalid input cannot silently produce a valid-looking corrupt result"
+      "interpretation": "Malformed required fields fail with structured diagnostics."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-08"
+      "title": "A clean consumer can install the selected artifact"
+      "interpretation": "A clean consumer installs the packaged artifact without the source checkout."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-09"
+      "title": "Setup does not depend on an undocumented local path"
+      "interpretation": "Setup has no undeclared machine-specific paths."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-10"
+      "title": "Machine-readable success outputs conform to a stable schema"
+      "interpretation": "Machine-readable successful results match a documented schema."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-11"
+      "title": "A compatible older consumer is exercised when backward compatibility is promised"
+      "interpretation": "The second consumer still uses the preceding package version."
+      "next_action": "Run the actual older consumer against the proposed package."
+    -
+      "instance_id": "I-12"
+      "title": "Warm-cache and cold-cache conditions are distinguished"
+      "interpretation": "The only stated throughput number comes from a warm cache."
+      "next_action": "Collect a cold-cache run separately."
+    -
+      "instance_id": "I-13"
+      "title": "All required interactive controls are reachable by keyboard"
+      "interpretation": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream."
+      "next_action": "Collect the actual product evidence before accepting this claim."
+    -
+      "instance_id": "I-14"
+      "title": "Value evidence is not inferred from engineering quality"
+      "interpretation": "External value is unmeasured even though the local technical slice is assumed to work."
+      "next_action": "Measure a real consumer outcome before expanding scope."
+"assessment":
+  "kind": "assessment"
+  "schema_version": "1.0.0"
+  "id": "ASSESS-PARCELKIT"
+  "record_status": "EXAMPLE"
+  "assignment_id": "A-PARCELKIT"
+  "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+  "epoch_id": "E-PARCELKIT"
+  "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "result_ids":
+    - "R-I-01"
+    - "R-I-02"
+    - "R-I-03"
+    - "R-I-04"
+    - "R-I-05"
+    - "R-I-06"
+    - "R-I-07"
+    - "R-I-08"
+    - "R-I-09"
+    - "R-I-10"
+    - "R-I-11"
+    - "R-I-12"
+    - "R-I-14"
+  "evidence_ids":
+    - "EV-SCENARIO"
+  "qualification_ids": []
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "registration_state": "NOT_REQUESTED"
+"assignment":
+  "kind": "assignment"
+  "schema_version": "1.0.0"
+  "id": "A-PARCELKIT"
+  "record_status": "EXAMPLE"
+  "epoch_id": "E-PARCELKIT"
+  "status": "LOCKED"
+  "subject_id": "PARCELKIT"
+  "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+  "mandate_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+  "intent_ref": "dossier.json"
+  "catalog_digest": "sha256:1d6e8a8f14423a541573c0c95b4921979b6da8ba01596a8268b93f6650002e58"
+  "profile_id": "bootstrap"
+  "coverage_statement": "14 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "created_at": "2026-09-11T23:19:57.136661+00:00"
+  "scope_review_status": "ACCEPTED"
+  "scope_review_ref": "SCENARIO-SCOPE-ASSUMPTION"
+  "instances":
+    -
+      "id": "I-01"
+      "criterion_id": "PEP-01-04-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-04-01"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-01.json"
+    -
+      "id": "I-02"
+      "criterion_id": "PEP-01-04-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-04-02"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-02.json"
+    -
+      "id": "I-03"
+      "criterion_id": "PEP-01-04-04"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-04-04"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-03.json"
+    -
+      "id": "I-04"
+      "criterion_id": "PEP-01-04-07"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-04-07"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-04.json"
+    -
+      "id": "I-05"
+      "criterion_id": "PEP-01-04-08"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-01-04-08"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-05.json"
+    -
+      "id": "I-06"
+      "criterion_id": "PEP-05-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-05-01-01"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-06.json"
+    -
+      "id": "I-07"
+      "criterion_id": "PEP-05-01-04"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-05-01-04"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-07.json"
+    -
+      "id": "I-08"
+      "criterion_id": "PEP-16-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-16-01-02"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": true
+      "measurement_binding_ref": "measurement-bindings/MB-I-08.json"
+    -
+      "id": "I-09"
+      "criterion_id": "PEP-07-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-07-01-02"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-09.json"
+    -
+      "id": "I-10"
+      "criterion_id": "PEP-08-01-02"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-08-01-02"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-10.json"
+    -
+      "id": "I-11"
+      "criterion_id": "PEP-04-02-09"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-04-02-09"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-11.json"
+    -
+      "id": "I-12"
+      "criterion_id": "PEP-12-01-04"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-12-01-04"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-12.json"
+    -
+      "id": "I-13"
+      "criterion_id": "PEP-10-01-01"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-10-01-01"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "NOT_APPLICABLE"
+      "applicability_reason": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-13.json"
+    -
+      "id": "I-14"
+      "criterion_id": "PEP-18-01-08"
+      "criterion_revision": "1.0.0"
+      "obligation_key": "PEP-18-01-08"
+      "scope": "One local packaged library and Consumer A; Consumer B compatibility remains an open check."
+      "applicability": "APPLICABLE"
+      "applicability_reason": "Capability is required by the stated fictional slice."
+      "applicability_decision_ref": "SCENARIO-SCOPE-ASSUMPTION"
+      "weight": 1
+      "mandatory": false
+      "measurement_binding_ref": "measurement-bindings/MB-I-14.json"
+  "gates":
+    -
+      "id": "LOCAL-CONSUMER-SLICE"
+      "required_instance_ids":
+        - "I-06"
+        - "I-07"
+        - "I-08"
+"evidence_summary":
+  "kernel_version": "1.0.0"
+  "assessment_id": "ASSESS-PARCELKIT"
+  "epoch_id": "E-PARCELKIT"
+  "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+  "as_of": "2026-09-11T23:19:57.136661+00:00"
+  "record_status": "EXAMPLE"
+  "interpretation": "Consistency-based reduction of accepted input records, NOT independent authentication, product verification, or publication authorization."
+  "coverage_statement": "14 deliberately selected criteria for this fictional bounded slice. Other catalog criteria remain unassessed; omitted is not not-applicable."
+  "coverage_limitations":
+    - "All product states are fictional premises. No product observations, benchmark runs, UI captures, or beneficiary evidence collected."
+    - "Illustrative pass/fail states are PROPOSED; no qualification records exist. Operational acceptance remains blocked."
+    - "The selected rows are a teaching slice, not comprehensive coverage of the candidate catalog."
+  "weights":
+    "pass_weight": 0.0
+    "fail_weight": 0.0
+    "unknown_weight": 13.0
+    "unresolved_applicability_weight": 0.0
+    "not_applicable_weight": 1.0
+  "assessed_pass_rate": null
+  "assessment_coverage": 0.0
+  "verified_satisfaction_within_settled_applicability": 0.0
+  "optimistic_bound_within_settled_applicability": 1.0
+  "applicability_complete": true
+  "scope_locked": true
+  "mandatory_gate_state": "BLOCKED"
+  "registration_state": "NOT_REQUESTED"
+  "gates":
+    -
+      "id": "LOCAL-CONSUMER-SLICE"
+      "status": "BLOCKED"
+      "required_instance_ids":
+        - "I-06"
+        - "I-07"
+        - "I-08"
+  "instances":
+    -
+      "instance_id": "I-01"
+      "criterion_id": "PEP-01-04-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-02"
+      "criterion_id": "PEP-01-04-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-03"
+      "criterion_id": "PEP-01-04-04"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-04"
+      "criterion_id": "PEP-01-04-07"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-05"
+      "criterion_id": "PEP-01-04-08"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-06"
+      "criterion_id": "PEP-05-01-01"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-07"
+      "criterion_id": "PEP-05-01-04"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-08"
+      "criterion_id": "PEP-16-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": true
+    -
+      "instance_id": "I-09"
+      "criterion_id": "PEP-07-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-10"
+      "criterion_id": "PEP-08-01-02"
+      "state": "UNKNOWN"
+      "reason": "review is not accepted (waivers are not passes)"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-11"
+      "criterion_id": "PEP-04-02-09"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-12"
+      "criterion_id": "PEP-12-01-04"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-13"
+      "criterion_id": "PEP-10-01-01"
+      "state": "NOT_APPLICABLE"
+      "reason": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream."
+      "weight": 1
+      "mandatory": false
+    -
+      "instance_id": "I-14"
+      "criterion_id": "PEP-18-01-08"
+      "state": "UNKNOWN"
+      "reason": "execution not completed"
+      "weight": 1
+      "mandatory": false
+"illustrative_summary":
+  "classification": "HYPOTHETICAL_PREMISES_ONLY_NOT_PRODUCT_EVIDENCE"
+  "counts":
+    "PASS": 9
+    "FAIL": 0
+    "UNKNOWN": 4
+    "NOT_APPLICABLE": 1
+    "UNRESOLVED": 0
+  "weights":
+    "PASS": 9.0
+    "FAIL": 0.0
+    "UNKNOWN": 4.0
+    "NOT_APPLICABLE": 1.0
+    "UNRESOLVED": 0.0
+  "assessed_pass_rate": 1.0
+  "assessment_coverage": 0.6923076923076923
+  "satisfaction": 0.6923076923076923
+  "states":
+    "I-01": "PASS"
+    "I-02": "PASS"
+    "I-03": "PASS"
+    "I-04": "PASS"
+    "I-05": "UNKNOWN"
+    "I-06": "PASS"
+    "I-07": "PASS"
+    "I-08": "PASS"
+    "I-09": "PASS"
+    "I-10": "PASS"
+    "I-11": "UNKNOWN"
+    "I-12": "UNKNOWN"
+    "I-13": "NOT_APPLICABLE"
+    "I-14": "UNKNOWN"
+  "gates":
+    -
+      "id": "LOCAL-CONSUMER-SLICE"
+      "status": "PASS"
+      "required_instance_ids":
+        - "I-06"
+        - "I-07"
+        - "I-08"
+"findings":
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-05"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PARCELKIT"
+    "instance_refs":
+      - "I-05"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: No absorption trigger was recorded."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Set a review condition for one remaining consumer or lockstep releases."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-11"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PARCELKIT"
+    "instance_refs":
+      - "I-11"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: The second consumer still uses the preceding package version."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Run the actual older consumer against the proposed package."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-12"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PARCELKIT"
+    "instance_refs":
+      - "I-12"
+    "class": "VERIFICATION_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: The only stated throughput number comes from a warm cache."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "TEST"
+    "status": "PROPOSED"
+    "wakeup_condition": "Collect a cold-cache run separately."
+  -
+    "kind": "finding"
+    "schema_version": "1.0.0"
+    "id": "F-I-14"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PARCELKIT"
+    "instance_refs":
+      - "I-14"
+    "class": "RESEARCH_GAP"
+    "severity": "MEDIUM"
+    "claim": "In the fictional scenario: External value is unmeasured even though the local technical slice is assumed to work."
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "counterevidence_refs": []
+    "owner_ref": "ROLE:subject-owner"
+    "next_action_kind": "RESEARCH"
+    "status": "PROPOSED"
+    "wakeup_condition": "Measure a real consumer outcome before expanding scope."
+"decisions":
+  -
+    "kind": "decision"
+    "schema_version": "1.0.0"
+    "id": "DEC-NEXT"
+    "record_status": "EXAMPLE"
+    "created_at": "2026-09-11T23:19:57.136661+00:00"
+    "subject_ref": "PARCELKIT"
+    "authority_ref": "SCENARIO-MANDATE-NOT-ACTUAL-AUTHORITY"
+    "disposition": "EXPERIMENT"
+    "status": "PROPOSED"
+    "evidence_refs":
+      - "EV-SCENARIO"
+    "alternatives":
+      - "Keep parsing in the existing CLI module"
+      - "Adopt a suitable upstream parser"
+      - "Keep a separate package but not a separate repository"
+      - "Do not generalize beyond one consumer"
+    "rationale": "Run the second consumer against the package and define an absorption trigger before expanding the repository."
+    "resource_envelope_ref": "SCENARIO-ONLY-NO-REAL-BUDGET"
+    "reversal_condition": "Pause separate-repository investment if only one consumer remains and all releases must change in lockstep."
+    "execution_receipt_refs": []
+"rows":
+  -
+    "instance_id": "I-01"
+    "criterion_id": "PEP-01-04-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Intent authorship is recorded separately from intent acceptance"
+    "interpretation": "Authorship is agent-originated; acceptance is a separate experiment decision."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D01"
+    "predicate": "Intent authorship is recorded separately from intent acceptance."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-01"
+        "instance_id": "I-01"
+        "criterion_id": "PEP-01-04-01"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Authorship is agent-originated; acceptance is a separate experiment decision."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-02"
+    "criterion_id": "PEP-01-04-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Derived intent links to its parent capability or mandate"
+    "interpretation": "Parent capability is shared manifest parsing for two CLI consumers."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D01"
+    "predicate": "Derived intent links to its parent capability or mandate."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-02"
+        "instance_id": "I-02"
+        "criterion_id": "PEP-01-04-02"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Parent capability is shared manifest parsing for two CLI consumers."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-03"
+    "criterion_id": "PEP-01-04-04"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "The repository boundary has an explicit consumer-facing responsibility"
+    "interpretation": "The library owns parse/validate/normalize, not portfolio state."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D01"
+    "predicate": "The repository boundary has an explicit consumer-facing responsibility."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-03"
+        "instance_id": "I-03"
+        "criterion_id": "PEP-01-04-04"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The library owns parse/validate/normalize, not portfolio state."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-04"
+    "criterion_id": "PEP-01-04-07"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "An existing-owner alternative was evaluated before creating duplicate authority"
+    "interpretation": "A module in the existing CLI and an upstream parser were compared before extraction."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D01"
+    "predicate": "An existing-owner alternative was evaluated before creating duplicate authority."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-04"
+        "instance_id": "I-04"
+        "criterion_id": "PEP-01-04-07"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: A module in the existing CLI and an upstream parser were compared before extraction."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-05"
+    "criterion_id": "PEP-01-04-08"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "The repository has an absorption or reversal trigger"
+    "interpretation": "No absorption trigger was recorded."
+    "next_action": "Set a review condition for one remaining consumer or lockstep releases."
+    "domain": "D01"
+    "predicate": "The repository has an absorption or reversal trigger."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-05"
+        "instance_id": "I-05"
+        "criterion_id": "PEP-01-04-08"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: No absorption trigger was recorded."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-06"
+    "criterion_id": "PEP-05-01-01"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "The core operation produces the required result for a representative valid input"
+    "interpretation": "Consumer A parses a valid manifest into the specified fields."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D05"
+    "predicate": "The core operation produces the required result for a representative valid input."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-06"
+        "instance_id": "I-06"
+        "criterion_id": "PEP-05-01-01"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Consumer A parses a valid manifest into the specified fields."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-07"
+    "criterion_id": "PEP-05-01-04"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "Invalid input cannot silently produce a valid-looking corrupt result"
+    "interpretation": "Malformed required fields fail with structured diagnostics."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D05"
+    "predicate": "Invalid input cannot silently produce a valid-looking corrupt result."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-07"
+        "instance_id": "I-07"
+        "criterion_id": "PEP-05-01-04"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Malformed required fields fail with structured diagnostics."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-08"
+    "criterion_id": "PEP-16-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": true
+    "title": "A clean consumer can install the selected artifact"
+    "interpretation": "A clean consumer installs the packaged artifact without the source checkout."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D16"
+    "predicate": "A clean consumer can install the selected artifact."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-08"
+        "instance_id": "I-08"
+        "criterion_id": "PEP-16-01-02"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: A clean consumer installs the packaged artifact without the source checkout."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-09"
+    "criterion_id": "PEP-07-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Setup does not depend on an undocumented local path"
+    "interpretation": "Setup has no undeclared machine-specific paths."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D07"
+    "predicate": "Setup does not depend on an undocumented local path."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-09"
+        "instance_id": "I-09"
+        "criterion_id": "PEP-07-01-02"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Setup has no undeclared machine-specific paths."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-10"
+    "criterion_id": "PEP-08-01-02"
+    "state": "UNKNOWN"
+    "reason": "review is not accepted (waivers are not passes)"
+    "weight": 1
+    "mandatory": false
+    "title": "Machine-readable success outputs conform to a stable schema"
+    "interpretation": "Machine-readable successful results match a documented schema."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D08"
+    "predicate": "Machine-readable success outputs conform to a stable schema."
+    "display_state": "PASS"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-10"
+        "instance_id": "I-10"
+        "criterion_id": "PEP-08-01-02"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "COMPLETED"
+        "verdict": "PASS"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: Machine-readable successful results match a documented schema."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-11"
+    "criterion_id": "PEP-04-02-09"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "A compatible older consumer is exercised when backward compatibility is promised"
+    "interpretation": "The second consumer still uses the preceding package version."
+    "next_action": "Run the actual older consumer against the proposed package."
+    "domain": "D04"
+    "predicate": "A compatible older consumer is exercised when backward compatibility is promised."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-11"
+        "instance_id": "I-11"
+        "criterion_id": "PEP-04-02-09"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The second consumer still uses the preceding package version."
+          "assertions_executed": null
+          "modality": "DYNAMIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-12"
+    "criterion_id": "PEP-12-01-04"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "Warm-cache and cold-cache conditions are distinguished"
+    "interpretation": "The only stated throughput number comes from a warm cache."
+    "next_action": "Collect a cold-cache run separately."
+    "domain": "D12"
+    "predicate": "Warm-cache and cold-cache conditions are distinguished."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-12"
+        "instance_id": "I-12"
+        "criterion_id": "PEP-12-01-04"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "STALE"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: The only stated throughput number comes from a warm cache."
+          "assertions_executed": null
+          "modality": "STRUCTURAL"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+  -
+    "instance_id": "I-13"
+    "criterion_id": "PEP-10-01-01"
+    "state": "NOT_APPLICABLE"
+    "reason": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream."
+    "weight": 1
+    "mandatory": false
+    "title": "All required interactive controls are reachable by keyboard"
+    "interpretation": "No interactive controls are included in this pure library slice; consumer UI remains owned downstream."
+    "next_action": "Collect the actual product evidence before accepting this claim."
+    "domain": "D10"
+    "predicate": "All required interactive controls are reachable by keyboard."
+    "display_state": "NOT_APPLICABLE"
+    "result_records": []
+    "evidence": []
+  -
+    "instance_id": "I-14"
+    "criterion_id": "PEP-18-01-08"
+    "state": "UNKNOWN"
+    "reason": "execution not completed"
+    "weight": 1
+    "mandatory": false
+    "title": "Value evidence is not inferred from engineering quality"
+    "interpretation": "External value is unmeasured even though the local technical slice is assumed to work."
+    "next_action": "Measure a real consumer outcome before expanding scope."
+    "domain": "D18"
+    "predicate": "Value evidence is not inferred from engineering quality."
+    "display_state": "UNKNOWN"
+    "result_records":
+      -
+        "kind": "result"
+        "schema_version": "1.0.0"
+        "id": "R-I-14"
+        "instance_id": "I-14"
+        "criterion_id": "PEP-18-01-08"
+        "assignment_id": "A-PARCELKIT"
+        "epoch_id": "E-PARCELKIT"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "assignment_digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+        "execution": "BLOCKED"
+        "verdict": "UNKNOWN"
+        "evidence_state": "CURRENT"
+        "review_status": "PROPOSED"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "expires_at": null
+        "evidence_ids":
+          - "EV-SCENARIO"
+        "qualification_ids": []
+        "evaluator_id": "SCENARIO-AUTHOR-NOT-A-PRODUCT-EVALUATOR"
+        "evaluator_digest": "sha256:89a4556c1d88222d52162ce711e6f94158d1804d9b0a6254f6291264f4b8aa80"
+        "observation":
+          "summary": "AUTHORED SCENARIO PREMISE, NOT EXECUTED: External value is unmeasured even though the local technical slice is assumed to work."
+          "assertions_executed": null
+          "modality": "SEMANTIC"
+        "supersedes": []
+    "evidence":
+      -
+        "kind": "evidence"
+        "schema_version": "1.0.0"
+        "id": "EV-SCENARIO"
+        "subject_digest": "sha256:1af45efdc0a5be853a2f8ba972f803d78a3fe1e1c3344684363197c6b60d942a"
+        "path": "raw/scenario.json"
+        "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+        "observed_at": "2026-09-11T23:19:57.136661+00:00"
+        "sensitivity": "PUBLIC"
+        "role": "OBSERVATION"
+        "origin": "EXTERNAL_REFERENCE"
+        "summary": "Reference to authored fictional premises only. No product observation or execution was performed."
+"input_files":
+  -
+    "path": "assessment.json"
+    "bytes": 1221
+    "digest": "sha256:18a81e67a27aa9749de4118373c44f1a8a7a0e96e107415bf6cfe9022b70bc2c"
+  -
+    "path": "assignment.json"
+    "bytes": 8871
+    "digest": "sha256:39e3b16e742a76e4e3a8ca547e633cdbb1babd4c2f500c30b36e8251ced5338e"
+  -
+    "path": "decisions/DEC-NEXT.json"
+    "bytes": 916
+    "digest": "sha256:b485312aad7f9000df83e7498442e2e9cc046d74cc743205e84f935265e7ea1d"
+  -
+    "path": "dossier.json"
+    "bytes": 10429
+    "digest": "sha256:7858814e8d99994fbdb56163211185518336160393426506025361ac1c609a2c"
+  -
+    "path": "evidence/EV-SCENARIO.json"
+    "bytes": 543
+    "digest": "sha256:eabcc20112c562786872f3bed5cdb65c53c2952cf0bd3fa16b415d0f92722ecb"
+  -
+    "path": "findings/F-I-05.json"
+    "bytes": 614
+    "digest": "sha256:745534ea7ad26e7c3e7c7209cd90884a2d156d02f0c5b54674850526136713c5"
+  -
+    "path": "findings/F-I-11.json"
+    "bytes": 628
+    "digest": "sha256:bd3bedba2603accd8f4415416e5b5f6fef393fdfec83d0ae67a5d9e4f6b97e36"
+  -
+    "path": "findings/F-I-12.json"
+    "bytes": 602
+    "digest": "sha256:16fe2f79f5431dfcdb94be6a79d2ae0a9a9486c898cfe8167f3630767e350433"
+  -
+    "path": "findings/F-I-14.json"
+    "bytes": 649
+    "digest": "sha256:f4db32d89b8b46484988a121ba1ba2530abe1ac76413e8078cc79cb8ee52e6ff"
+  -
+    "path": "measurement-bindings/MB-I-01.json"
+    "bytes": 1626
+    "digest": "sha256:1529497f5450f4dba0da114917bd0e28a3a093635f8c3caa4d24503ae0077f2b"
+  -
+    "path": "measurement-bindings/MB-I-02.json"
+    "bytes": 1612
+    "digest": "sha256:ca92d09f30a3856edf5585ce62fc55b4c52b063675aae651b8c53fb49c4d49ce"
+  -
+    "path": "measurement-bindings/MB-I-03.json"
+    "bytes": 1640
+    "digest": "sha256:19ace49a4dcb50c48e30d4b8563b77e46e7c594031a613dca4246871afe4b3de"
+  -
+    "path": "measurement-bindings/MB-I-04.json"
+    "bytes": 1658
+    "digest": "sha256:50a6f79d17fcc511f8fea830243603376f25bfbfea02894a39b611def4256f7d"
+  -
+    "path": "measurement-bindings/MB-I-05.json"
+    "bytes": 1604
+    "digest": "sha256:c8be026caa41e05dc9a24162becdc937af76f7cb22e88671cb903d0d99d62b2c"
+  -
+    "path": "measurement-bindings/MB-I-06.json"
+    "bytes": 1659
+    "digest": "sha256:742b099057626928680bde566ac83aa72935a2d46d359c6fab9c54af238f5ebf"
+  -
+    "path": "measurement-bindings/MB-I-07.json"
+    "bytes": 1635
+    "digest": "sha256:c668b8fd883758ac1a23b12928a6f0291e947ffe3300bec1d45f00b5eb2f7ee0"
+  -
+    "path": "measurement-bindings/MB-I-08.json"
+    "bytes": 1599
+    "digest": "sha256:cb4992effa4bd1deb8b1a0d07a89c51c9e000b9d5cfa5e20f2c1a65a0ea549b7"
+  -
+    "path": "measurement-bindings/MB-I-09.json"
+    "bytes": 1601
+    "digest": "sha256:0e4762f5041e4265e6d486b52778877bb3b7c684ddd2149039b7dd02a015c4c1"
+  -
+    "path": "measurement-bindings/MB-I-10.json"
+    "bytes": 1617
+    "digest": "sha256:7b161a293ee4cd19672b798b69ea65f38e47619b750651ca4eff4644e56a1066"
+  -
+    "path": "measurement-bindings/MB-I-11.json"
+    "bytes": 1659
+    "digest": "sha256:5e3b8de4c79611ba7f02a48f8b95f65a12407b9173228c58eb41203192c41a02"
+  -
+    "path": "measurement-bindings/MB-I-12.json"
+    "bytes": 1610
+    "digest": "sha256:ac2e846144b2e24576911b8526a9f83cbb453d704e9d371bfae4bcf006fd68eb"
+  -
+    "path": "measurement-bindings/MB-I-13.json"
+    "bytes": 1617
+    "digest": "sha256:0687f06eaa2bd6a45fb707398268b9b167d94e9cf092247696ac57d859a3fc97"
+  -
+    "path": "measurement-bindings/MB-I-14.json"
+    "bytes": 1610
+    "digest": "sha256:e832bee7211c99d0839849dcf996aa608599e6b93efd13ef939acf49c186d881"
+  -
+    "path": "raw/scenario.json"
+    "bytes": 6087
+    "digest": "sha256:4a1060b1537400cacc658b539073e0cd676086f6769e9312a356d1fe18176df5"
+  -
+    "path": "results/R-I-01.json"
+    "bytes": 1040
+    "digest": "sha256:196f0d0171cc26463a37cdefddf091f4b0c0d3d5cd55cb4038c89ec72fe04b04"
+  -
+    "path": "results/R-I-02.json"
+    "bytes": 1030
+    "digest": "sha256:04f58068022e539c62fb9233614fc1f1568b6f0216aa62f4b86f6fb610ea597f"
+  -
+    "path": "results/R-I-03.json"
+    "bytes": 1026
+    "digest": "sha256:f512cde649ad4513687438fc4a27d7dd0cc604456e4204097d4e42e712b407ab"
+  -
+    "path": "results/R-I-04.json"
+    "bytes": 1047
+    "digest": "sha256:3ece1b07be4305bdf826143f48464cac0e32cb888358c8505fd4a427e290239f"
+  -
+    "path": "results/R-I-05.json"
+    "bytes": 999
+    "digest": "sha256:7f64677e05af8e66827da0001a66582a7d052312499cb2cedd602e659903e7ec"
+  -
+    "path": "results/R-I-06.json"
+    "bytes": 1023
+    "digest": "sha256:504bfc0a6ec73eac1611a5967a55927bd54e783ab2ca58836f0619abc939d35a"
+  -
+    "path": "results/R-I-07.json"
+    "bytes": 1021
+    "digest": "sha256:4dcf2957740250be7ff1001f17465535cf0c06dbd355877574c2c90ba7d7c5b6"
+  -
+    "path": "results/R-I-08.json"
+    "bytes": 1038
+    "digest": "sha256:92f1f5d0c76a1bc8cbcb964408f5a64113ccd12eacebc3da8917bfd24c5fb9f1"
+  -
+    "path": "results/R-I-09.json"
+    "bytes": 1009
+    "digest": "sha256:b895e54fd478efda3007c4eca3ef0f80b0f1e5eaa0df876b174c589d456eb6ad"
+  -
+    "path": "results/R-I-10.json"
+    "bytes": 1024
+    "digest": "sha256:d7abaf11d4f99d3b7b4793a064d7c34d1ce2c487b4af870cf54b52f2072985e9"
+  -
+    "path": "results/R-I-11.json"
+    "bytes": 1024
+    "digest": "sha256:d5e47b00d61b99f31cef8bc75973e70b56954fcabdd258eaeaf6ac829aa2f24b"
+  -
+    "path": "results/R-I-12.json"
+    "bytes": 1022
+    "digest": "sha256:6c3ecc2554690eca047796601bcc382122b8b377bd1d985c9c56fbdcb50a584b"
+  -
+    "path": "results/R-I-14.json"
+    "bytes": 1050
+    "digest": "sha256:2e5662d986f1f189921c26031eae5b8924eaaf4246f0bac046036e3b0173af23"
+  -
+    "path": "subject.json"
+    "bytes": 174
+    "digest": "sha256:77903d051811d2d9a00714c34ace2502ed27910da5de2fe8e6ae3c642da0202f"
+"authority_notice": "A generated view and matching hashes establish neither truthful observations nor permission to publish, merge, spend, or retire."

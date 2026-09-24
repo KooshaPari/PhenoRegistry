@@ -1,0 +1,114 @@
+[
+  {
+    "id": "SRC-V14-01",
+    "title": "Dino GameControlCli project",
+    "url": "https://github.com/KooshaPari/Dino/blob/17119051e782b32615413049c1c3cd207f0b540e/src/Tools/GameControlCli/GameControlCli.csproj",
+    "finding_or_use": "Connector search confirms existing named-pipe game-control CLI. Reuse/investigate; no execution here.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-02",
+    "title": "Dino QA validation matrix",
+    "url": "https://github.com/KooshaPari/Dino/blob/17119051e782b32615413049c1c3cd207f0b540e/docs/QA_VALIDATION_MATRIX.md",
+    "finding_or_use": "Fetched source is explicitly last validated March 30, 2026. It distinguishes some visual/runtime failures, but also labels some visible-feature claims programmatic from initialization logs. Treat as historical evidence taxonomy needing refresh, not current bug/grade measurement.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-03",
+    "title": "Civis capture guide and stub",
+    "url": "https://github.com/KooshaPari/Civis/blob/8650471500928f047370585d8fe5c43275b18aaf/scripts/capture/README.md",
+    "finding_or_use": "Search identifies this path as planned/stub capture helpers; does not imply no other working capture exists. Existing dispatch instructions separately require reading actual PNGs.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-04",
+    "title": "Playwright visual comparisons",
+    "url": "https://playwright.dev/docs/test-snapshots",
+    "finding_or_use": "Official guidance on screenshot baselines and rendering environment variability; use pinned supported versions.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-05",
+    "title": "Playwright screenshots",
+    "url": "https://playwright.dev/docs/screenshots",
+    "finding_or_use": "Official full-page, buffer and element capture primitives.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-06",
+    "title": "Bevy externally driven renderer",
+    "url": "https://github.com/bevyengine/bevy/blob/main/examples/app/externally_driven_headless_renderer.rs",
+    "finding_or_use": "Official example of externally driven offscreen rendering; current main is a research source, not a pinned production dependency.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-07",
+    "title": "Bevy headless renderer",
+    "url": "https://github.com/bevyengine/bevy/blob/main/examples/app/headless_renderer.rs",
+    "finding_or_use": "Official example includes GPU-image readback and render/main-world frame-latency concerns. No renderer execution here.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-08",
+    "title": "Godot viewport capture",
+    "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/viewports.html",
+    "finding_or_use": "Viewport texture capture and waiting for rendering are relevant primitives; verify actual shipped backend.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-09",
+    "title": "Unreal Automation Test Framework",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/automation-test-framework-in-unreal-engine",
+    "finding_or_use": "Official framework distinguishes unit/feature/content/screenshot tests and input/functional testing facilities.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-10",
+    "title": "Unreal screenshot comparison",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/screenshot-comparison-tool-in-unreal-engine",
+    "finding_or_use": "Official settings include tolerances, camera/resolution, noisy-feature handling and diagnostic buffers.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-11",
+    "title": "Unreal automation execution",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/run-automation-tests-in-unreal-engine",
+    "finding_or_use": "Official client/editor execution and report export facilities; editor success is not automatically packaged-client proof.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-12",
+    "title": "Unity Test Runner",
+    "url": "https://docs.unity3d.com/kr/2018.3/Manual/testing-editortestsrunner.html",
+    "finding_or_use": "Historical official documentation establishes Edit/Play/target-player distinction. It is not a current package-version recommendation. Inspect installed package docs before command selection.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-13",
+    "title": "W3C accessibility evaluation tools",
+    "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting/",
+    "finding_or_use": "Tools assist evaluation but cannot determine all accessibility aspects; qualified judgment remains needed for some criteria.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  },
+  {
+    "id": "SRC-V14-14",
+    "title": "Supplied v1.3 archive",
+    "url": "../references/v1.3-input-identity.json",
+    "finding_or_use": "Previous package is preserved externally and identified by digest in this amendment; prior policies and 24 owner folders are retained, not a live refreshed census.",
+    "observed_date": "2026-09-16",
+    "product_executed": false
+  }
+]

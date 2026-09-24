@@ -1,0 +1,23 @@
+{
+  "product_id": "SUP-PHENOSHARED",
+  "name": "PhenoShared",
+  "status": "PLANNED_NOT_EXECUTED",
+  "baseline": "Existing simplest correct consumer/default-file workflow using maintained tools",
+  "scenario": "A bounded reusable capability can be installed and used by its actual consumers from a clean environment, with precise provenance and safe change semantics.",
+  "negative_cases": [
+    "Missing required source or dependency",
+    "Contradictory ownership or source revision",
+    "Private content exposure",
+    "Known broken consumer/check returns apparent success"
+  ],
+  "measurements": [
+    "Correct consumer outcome",
+    "Independent negative-case discrimination",
+    "Setup and maintenance effort",
+    "Compatibility and recovery",
+    "Relevant runtime/build cost"
+  ],
+  "results": null,
+  "winner": null,
+  "authorization": "Not granted by this package"
+}

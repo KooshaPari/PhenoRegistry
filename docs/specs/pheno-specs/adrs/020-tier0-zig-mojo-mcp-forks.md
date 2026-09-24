@@ -40,7 +40,7 @@ Draft (stub) — **defer implementation** until rmcp superset gate clears.
 
 ## Consequences
 
-- No `KooshaPari/PhenoFastMCP-zig` or `-mojo` repos until gates clear.
+- No `<REDACTED>/PhenoFastMCP-zig` or `-mojo` repos until gates clear.
 - `validate_fork_parents.py` continues to skip zig/mojo future entries.
 
 ## References

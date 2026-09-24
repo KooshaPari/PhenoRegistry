@@ -28,7 +28,7 @@ export default defineConfig({
       { text: "Registries", link: "/registries" },
       { text: "Library Research", link: "/library-research" },
       { text: "Grades", link: "/grades/" },
-      { text: "GitHub", link: "https://github.com/KooshaPari/phenotype-registry" },
+      { text: "GitHub", link: "https://github.com/<REDACTED>/phenotype-registry" },
     ],
     sidebar: [
       {
@@ -78,7 +78,7 @@ export default defineConfig({
         ],
       },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/KooshaPari/phenotype-registry" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/<REDACTED>/phenotype-registry" }],
     search: {
       provider: "local",
     },

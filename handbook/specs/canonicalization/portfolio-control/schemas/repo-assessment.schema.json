@@ -1,0 +1,481 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phenotype.invalid/schemas/repo-assessment.schema.json",
+  "title": "Repository Assessment",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "repo_id",
+    "repository",
+    "observation",
+    "role_hypotheses",
+    "completeness",
+    "findings",
+    "proposed_disposition",
+    "coverage"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "repo_id": {
+      "type": "string",
+      "pattern": "^REP-[0-9]{3,}$"
+    },
+    "repository": {
+      "type": "object",
+      "required": [
+        "owner",
+        "name"
+      ],
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "github_id": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "private",
+            "internal",
+            "unknown"
+          ]
+        },
+        "archived": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fork": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "upstream": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "observation": {
+      "type": "object",
+      "required": [
+        "observed_at",
+        "ref"
+      ],
+      "properties": {
+        "observed_at": {
+          "type": "string"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dirty": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "history_depth": {
+          "enum": [
+            "T0",
+            "T1",
+            "T2",
+            "T3",
+            "T4"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "role_hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "rationale",
+          "confidence"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "UNKNOWN"
+            ]
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completeness": {
+      "type": "object",
+      "required": [
+        "gate",
+        "dimensions"
+      ],
+      "properties": {
+        "gate": {
+          "enum": [
+            "G0",
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5",
+            "G6",
+            "UNASSESSED"
+          ]
+        },
+        "dimensions": {
+          "type": "object",
+          "required": [
+            "I",
+            "P",
+            "S",
+            "A",
+            "C",
+            "Q",
+            "E",
+            "O",
+            "M",
+            "G"
+          ],
+          "properties": {
+            "I": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "P": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "S": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "A": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "C": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "Q": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "E": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "O": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "M": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            },
+            "G": {
+              "enum": [
+                "U",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "X",
+                "D",
+                "R",
+                "S"
+              ]
+            }
+          }
+        },
+        "critical_blockers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "claim",
+          "evidence_class",
+          "confidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "evidence_class": {
+            "enum": [
+              "HUMAN_SOURCE",
+              "ACCEPTED_CONTRACT",
+              "OBSERVED_STATIC",
+              "REPRODUCED",
+              "RELEASED",
+              "OPERATED",
+              "VENDOR_CLAIM",
+              "INFERENCE",
+              "HYPOTHESIS",
+              "UNKNOWN",
+              "SUPERSEDED"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "UNKNOWN"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "proposed_disposition": {
+      "type": "object",
+      "required": [
+        "status",
+        "rationale"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "UNDECIDED",
+            "RETAIN_AND_REFOCUS",
+            "ABSORB_WHOLE",
+            "SPLIT_ACROSS_TARGETS",
+            "MERGE_WITH_SEMANTIC_PEER",
+            "EXTRACT_SHARED_LIBRARY",
+            "EXTRACT_PROTOCOL_OR_SDK",
+            "PRODUCTIZE",
+            "CONVERT_TO_STRATEGIC_FORK",
+            "CONVERT_TO_ADAPTER_OR_PACKAGING",
+            "REIMPLEMENT_BEHIND_CONTRACT",
+            "PRESERVE_AS_REFERENCE",
+            "ARCHIVE_WITH_TOMBSTONE",
+            "INTENTIONALLY_RETIRE",
+            "INCUBATE_WITH_TTL",
+            "RESEARCH_OR_UNRESOLVED"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "candidate_targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decision_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "inspected",
+        "not_inspected"
+      ],
+      "properties": {
+        "inspected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "not_inspected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commands_run": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "checkpoint": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

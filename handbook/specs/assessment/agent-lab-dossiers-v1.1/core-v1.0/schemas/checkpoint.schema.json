@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/checkpoint.schema.json",
+  "title": "checkpoint",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "checkpoint"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assignment_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epoch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mandate_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "accepted_baseline_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "failure_fingerprints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "rejected_hypothesis_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "claim_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "remaining_budget_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "assignment_ref",
+    "epoch_id",
+    "mandate_ref",
+    "subject_digest",
+    "accepted_baseline_ref",
+    "candidate_refs",
+    "failure_fingerprints",
+    "rejected_hypothesis_refs",
+    "evidence_refs",
+    "claim_ref",
+    "remaining_budget_ref",
+    "next_action",
+    "stop_conditions"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "receipt",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "destination_label": "REPLACE_WITH_DESTINATION_LABEL",
+  "payload_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "idempotency_key": "REPLACE_WITH_IDEMPOTENCY_KEY",
+  "subject_revision": "REPLACE_WITH_SUBJECT_REVISION",
+  "report_revision": "REPLACE_WITH_REPORT_REVISION",
+  "registry_revision": "REPLACE_WITH_REGISTRY_REVISION",
+  "remote_observed_at": "2026-09-10T23:00:00-07:00",
+  "issuer_ref": "REPLACE_WITH_ISSUER_REF",
+  "verification_ref": "REPLACE_WITH_VERIFICATION_REF"
+}

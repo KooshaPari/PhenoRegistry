@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-07",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "HARBORAPI",
+  "instance_refs": [
+    "I-07"
+  ],
+  "class": "VERIFICATION_GAP",
+  "severity": "HIGH",
+  "claim": "In the fictional scenario: No authority is available to inspect or change the hosted deployment.",
+  "evidence_refs": [
+    "EV-SCENARIO"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:subject-owner",
+  "next_action_kind": "TEST",
+  "status": "PROPOSED",
+  "wakeup_condition": "Wait for explicitly scoped hosted verification access."
+}

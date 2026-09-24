@@ -1,0 +1,24 @@
+{
+  "kind": "profile",
+  "schema_version": "1.0.0",
+  "id": "cli",
+  "status": "PROPOSED_SELECTION_AID",
+  "candidate_domains": [
+    "D01",
+    "D03",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D10",
+    "D12",
+    "D14",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "default_applicability": "UNRESOLVED",
+  "note": "Terminal, machine-output, errors, cancellation, clean installation and actual consumer commands.",
+  "automatic_exclusions": [],
+  "mandatory_gates": []
+}

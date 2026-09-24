@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1262466303",
+  "name": "Melosviz",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "edbbd40016680bc430d26fb0d4a2a73999cd8ba5",
+  "sampled_commit_date_utc": "2026-09-16T10:01:17Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "New director/storyboard tests accompany an offline pipeline that creates solid-colour placeholder MP4 clips via FFmpeg, then assembles/masters/ships them. The source explicitly labels the generation as placeholder.",
+  "assessment": "PIPELINE_REHEARSAL_NOT_PRODUCT_PROOF",
+  "role": "Music visualization and authored media product",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "The offline smoke is useful integration rehearsal, not proof of visual quality or a functioning live creative backend.",
+    "On placeholder generation failure the adapter can return workflow JSON; downstream contracts must distinguish metadata from playable media.",
+    "Reported 13/13 E2E results were not rerun here."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1262466303-A1",
+      "title": "Type and label backend outcomes",
+      "work": "Separate live render, placeholder, job-spec-only, unavailable and failed outputs; ensure release/product acceptance cannot silently consume fixture output as production.",
+      "acceptance": "Known absent backend, failed render and malformed/zero-duration media are rejected or explicitly blocked; rehearsal stays runnable.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1262466303",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1262466303-A2",
+      "title": "Run real creative output",
+      "work": "Import an actual licensed audio track, use the intended available renderer, edit the scene/preset, export and inspect audio/video synchronization and content.",
+      "acceptance": "Real output reviewed, not only a ZIP/nonempty file; actual run parameters and derivatives are traceable.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1262466303",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1262466303-A3",
+      "title": "Qualify installation and comparison",
+      "work": "Run outside the repo, reopen projects and recover interrupted rendering; compare time-to-useful-output with a suitable established workflow.",
+      "acceptance": "Repeatable actual creative result plus qualitative and resource measurements; no inflated completion from fixture success.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1262466303",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Reuse FFmpeg/Blender/available licensed tools and shared design/capture contracts; do not handroll codecs or copy fake-success adapters.",
+  "parent_acceptance": "The installed product produces and edits a real useful synchronized visualization, with honest backend modes.",
+  "sources": [
+    {
+      "id": "CUR-1262466303-S01",
+      "url": "https://github.com/KooshaPari/Melosviz/commit/31f19056f429718c6e8303e4fd0c64ca56e5374a",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    },
+    {
+      "id": "CUR-1262466303-S02",
+      "url": "https://github.com/KooshaPari/Melosviz/commit/edbbd40016680bc430d26fb0d4a2a73999cd8ba5",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

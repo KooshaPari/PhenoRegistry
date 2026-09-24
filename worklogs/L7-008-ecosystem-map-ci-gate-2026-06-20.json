@@ -8,14 +8,14 @@
     "phenotype-registry/SPEC.md (Registry Index table: PhenoSpecs, PhenoHandbook, HexaKit, AgilePlus)",
     "phenotype-registry/docs/registries.md (Archive Migration Redirects table: 7 retired source -> canonical owner rows)",
     "phenotype-registry-curation-data/_bindings.json (107 bound repo keys, 0 unbound)",
-    "AGENTS.md § Project Overview (this is a sub-repo of the phenotype monorepo at /Users/kooshapari/CodeProjects/Phenotype/repos/)",
+    "AGENTS.md § Project Overview (this is a sub-repo of the phenotype monorepo at /Users/<REDACTED>/CodeProjects/Phenotype/repos/)",
     "ADR-041 (71-pillar refresh cadence: weekly Monday 09:00 PDT cron)",
     "peter-evans/create-pull-request@v6 (GitHub Action for auto-opening remediation PRs)"
   ],
   "actions": [
     "Author scripts/regen-ecosystem-map.py — deterministic Python 3.12 generator with --check (CI gate), --diff, and --out modes. Zero third-party deps. Parses SPEC.md (Registry Index) + docs/registries.md (Archive Migration Redirects) + _bindings.json (bound set), preserves the hand-curated cluster appendix (## 3. through ## 9.) verbatim from the existing file, and appends the three required drift-detection HTML comment markers.",
     "Add Taskfile.yml targets: regen-ecosystem-map, regen-ecosystem-map:check, regen-ecosystem-map:diff. Task CLI confirms the new targets via `task --taskfile Taskfile.yml --list`.",
-    "Add .github/workflows/ecosystem-map-regen.yml — push/PR gate on main for paths {ECOSYSTEM_MAP.md, SPEC.md, docs/registries.md, scripts/regen-ecosystem-map.py, Taskfile.yml, .github/workflows/ecosystem-map-regen.yml}; runs `python3 scripts/regen-ecosystem-map.py --check` on ubuntu-24.04 with python 3.12, checks out the sibling KooshaPari/phenotype-registry-curation-data repo at the relative default path, and fails the job on non-zero exit. Job also runs on workflow_dispatch.",
+    "Add .github/workflows/ecosystem-map-regen.yml — push/PR gate on main for paths {ECOSYSTEM_MAP.md, SPEC.md, docs/registries.md, scripts/regen-ecosystem-map.py, Taskfile.yml, .github/workflows/ecosystem-map-regen.yml}; runs `python3 scripts/regen-ecosystem-map.py --check` on ubuntu-24.04 with python 3.12, checks out the sibling <REDACTED>/phenotype-registry-curation-data repo at the relative default path, and fails the job on non-zero exit. Job also runs on workflow_dispatch.",
     "Add .github/workflows/ecosystem-map-weekly.yml — schedule `0 16 * * 1` (Monday 16:00 UTC = 09:00 PDT, per ADR-041). On drift, stages the regen output at the canonical ECOSYSTEM_MAP.md path and opens a remediation PR via peter-evans/create-pull-request@v6 with title `chore(ecosystem-map): weekly regen <run-id>`, branch `chore/ecosystem-map-weekly-<run-id>`, body documenting what changed + how to verify locally. No-op on clean state. workflow_dispatch input `force` allows manual PR open without drift. Permissions: contents: write + pull-requests: write.",
     "Append drift-detection comments to the bottom of ECOSYSTEM_MAP.md — new section '## 10. Drift detection (CI gate)' + three HTML comments: `<!-- drift-detection: auto-regen-on-push-pr ... -->`, `<!-- drift-detection: weekly-cron ... -->`, `<!-- drift-detection: regen-script scripts/regen-ecosystem-map.py -->`. The regen script's appendix extraction (regex `^## 3\\.\\s+` .. min(`^## 9\\.\\s+`, `^<!-- drift-detection:`)) correctly excludes the new section so the hand-curated cluster tables are still preserved verbatim across regens."
   ],
@@ -70,7 +70,7 @@
   },
   "status": "DONE",
   "next": [
-    "1. Open PR: chore(L7-008): wire ECOSYSTEM_MAP.md regeneration into CI gate — against KooshaPari/phenotype-registry:main",
+    "1. Open PR: chore(L7-008): wire ECOSYSTEM_MAP.md regeneration into CI gate — against <REDACTED>/phenotype-registry:main",
     "2. After PR merges, first Monday 09:00 PDT cron run will verify the auto-PR flow end-to-end (open test PR, watch peter-evans/cpr run, confirm remediation PR appears)",
     "3. Consider adding `task regen-ecosystem-map:check` to a fleet-wide `task lint` aggregate so other repos' workflows can re-use it",
     "4. Backfill: if the auto-regen output is unsatisfactory in any section, refine the spec parser (parse_spec_registries) or the registries.md parser (parse_archive_redirects) rather than hand-editing ECOSYSTEM_MAP.md"

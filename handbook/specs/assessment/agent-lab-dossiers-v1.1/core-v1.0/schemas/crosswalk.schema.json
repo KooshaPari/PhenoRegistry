@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/crosswalk.schema.json",
+  "title": "crosswalk",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "crosswalk"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "TEMPLATE",
+        "EXAMPLE",
+        "OPERATIONAL"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_record_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_native_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_criterion_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "relation": {
+      "enum": [
+        "EQUIVALENT",
+        "NARROWER",
+        "BROADER",
+        "OVERLAPS",
+        "CONFLICTS",
+        "RELATED_READING",
+        "SUPERSEDES"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "ADJUDICATED",
+        "REJECTED"
+      ]
+    },
+    "rights_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "record_status",
+    "created_at",
+    "source_record_ref",
+    "source_native_id",
+    "source_revision",
+    "target_criterion_refs",
+    "relation",
+    "status",
+    "rights_note",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

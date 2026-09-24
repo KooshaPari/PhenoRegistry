@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.4"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "criterion_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "oracle_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "assessed",
+        "not-run",
+        "blocked",
+        "error"
+      ]
+    },
+    "earned_units": {
+      "type": "number",
+      "minimum": 0
+    },
+    "total_units": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "fixture-control",
+          "semantic-command",
+          "user-input",
+          "accessibility-action",
+          "browser-action",
+          "read-only",
+          "none"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "evaluator_kind": {
+      "enum": [
+        "deterministic",
+        "model-assisted",
+        "human-adjudicated"
+      ]
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "modality": {
+            "enum": [
+              "source",
+              "design",
+              "semantic-state",
+              "pixels",
+              "video",
+              "audio",
+              "metrics",
+              "test-report",
+              "install",
+              "release",
+              "user-study"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "modality",
+          "media_type"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "criterion_id",
+    "scope_id",
+    "subject_id",
+    "profile_id",
+    "source_revision",
+    "artifact_sha256",
+    "oracle_sha256",
+    "synthetic",
+    "run_id",
+    "observed_at",
+    "status",
+    "earned_units",
+    "total_units",
+    "actions",
+    "evaluator_kind",
+    "artifacts"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

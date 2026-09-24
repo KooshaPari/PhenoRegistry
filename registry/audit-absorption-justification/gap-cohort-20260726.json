@@ -3,7 +3,7 @@
   "captured_at": "2026-07-26T00:26:30Z",
   "scope": "high-value GitHub raw-name gaps with local checkouts",
   "source_of_truth": {
-    "github_owner": "KooshaPari",
+    "github_owner": "<REDACTED>",
     "registry_head": "b19cc4d",
     "github_repo_count": 296,
     "registry_project_json_count": 154

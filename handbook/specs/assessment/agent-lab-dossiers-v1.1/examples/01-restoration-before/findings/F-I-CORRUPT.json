@@ -1,0 +1,22 @@
+{
+  "kind": "finding",
+  "schema_version": "1.0.0",
+  "id": "F-I-CORRUPT",
+  "record_status": "EXAMPLE",
+  "created_at": "2026-09-11T23:19:57.136661+00:00",
+  "subject_ref": "synthetic-restoration-before",
+  "instance_refs": [
+    "I-CORRUPT"
+  ],
+  "class": "IMPLEMENTATION_GAP",
+  "severity": "HIGH",
+  "claim": "corrupt_backup_rejected observed as False on the actual bundled toy variant.",
+  "evidence_refs": [
+    "EV-OBS"
+  ],
+  "counterevidence_refs": [],
+  "owner_ref": "ROLE:toy-example-maintainer",
+  "next_action_kind": "IMPLEMENT",
+  "status": "ACCEPTED",
+  "wakeup_condition": null
+}

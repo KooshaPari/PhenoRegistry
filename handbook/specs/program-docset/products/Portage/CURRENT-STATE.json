@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1165351720",
+  "name": "Portage",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-16",
+  "observation_method": "Sequential connected-GitHub inventory and bounded default-history/source reads; selected fields transcribed, not a raw API export.",
+  "sampled_commit": "7204235dbbe81317c61ae5d2b994d671a63523f4",
+  "sampled_commit_date_utc": "2026-09-16T08:13:39Z",
+  "sampled_commit_scope": "Latest default-history item returned at this repository read; not all branches or local state and not an atomic end-of-audit head.",
+  "movement": "Recent history merges an upstream-sync branch and commits upstream-synced evaluation result timestamps.",
+  "assessment": "UPSTREAM_SYNC_NOT_NEW_EVALUATION_PROOF",
+  "role": "Evaluation runner fork",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": null,
+  "doc_adoption": "NOT_OBSERVED",
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Imported or updated timestamps are not receipts of newly executed owned evaluations.",
+    "A successful merge does not establish fork-specific adapter and scorer behavior."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1165351720-A1",
+      "title": "Reconcile exact owned upstream delta",
+      "work": "Record upstream source/revision, local patches, imported results and current build.",
+      "acceptance": "Each result has producer/source provenance; imported evidence is not represented as a new local run.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165351720",
+      "priority_order": 1,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1165351720-A2",
+      "title": "Run matched positive/negative tasks",
+      "work": "Use identical real tasks on the owned fork and upstream; inject timeout, missing tool, incorrect answer and cleanup interruption.",
+      "acceptance": "Trustworthy result classification and retained artifacts; no required oracle silently skipped.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165351720",
+      "priority_order": 2,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    },
+    {
+      "id": "CUR-1165351720-A3",
+      "title": "Qualify install and shared consumers",
+      "work": "Install the fork cleanly; exercise PhenoLab/current consumer interfaces, cancellation, storage/cleanup and resource limits.",
+      "acceptance": "Consumer contract remains compatible after upstream sync with measured benefit or justified patch value.",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "owner_repository_id": "1165351720",
+      "priority_order": 3,
+      "hard_dependencies": [],
+      "cross_repo_writes_authorized": false
+    }
+  ],
+  "ecosystem_contract": "Portage owns runner behavior, PhenoLab owns experiments, shared adapters belong only in the accepted authoritative package home.",
+  "parent_acceptance": "The actual fork executes, scores and preserves a bounded evaluation faithfully and reproducibly.",
+  "sources": [
+    {
+      "id": "CUR-1165351720-S01",
+      "url": "https://github.com/KooshaPari/Portage/commit/7204235dbbe81317c61ae5d2b994d671a63523f4",
+      "source_kind": "github_source_or_metadata",
+      "retrieved_in_current_turn": true
+    }
+  ],
+  "scope_missing": [
+    "local branches and dirty/untracked state",
+    "actual chat receipts and read acknowledgement",
+    "full history",
+    "native product suites/coverage",
+    "all hosted required checks/reviews",
+    "installed/deployed artifact qualification",
+    "executed comparative pilot"
+  ]
+}

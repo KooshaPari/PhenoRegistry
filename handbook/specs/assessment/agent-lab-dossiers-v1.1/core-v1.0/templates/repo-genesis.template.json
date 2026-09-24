@@ -1,0 +1,18 @@
+{
+  "kind": "repo-genesis",
+  "schema_version": "1.0.0",
+  "id": "REPLACE_WITH_ID",
+  "record_status": "TEMPLATE",
+  "created_at": "2026-09-10T23:00:00-07:00",
+  "subject_id": "REPLACE_WITH_SUBJECT_ID",
+  "intent_ref": "REPLACE_WITH_INTENT_REF",
+  "parent_capability": "REPLACE_WITH_PARENT_CAPABILITY",
+  "boundary_rationale": "REPLACE_WITH_BOUNDARY_RATIONALE",
+  "consumers": [],
+  "alternatives": [
+    "REPLACE_WITH_ALTERNATIVES"
+  ],
+  "history_status": "RECOVERED",
+  "origin_refs": [],
+  "absorption_trigger": "REPLACE_WITH_ABSORPTION_TRIGGER"
+}

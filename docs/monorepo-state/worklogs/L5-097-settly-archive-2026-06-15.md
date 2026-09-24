@@ -5,7 +5,7 @@
 **Branch**: main
 
 ## Decision
-Finalized archive of `KooshaPari/settly`. No code in any other phenodocs
+Finalized archive of `<REDACTED>/settly`. No code in any other phenodocs
 crate or external consumer depends on it. Per ADR-017, we close the
 deprecation loop rather than leaving it as a tombstone.
 

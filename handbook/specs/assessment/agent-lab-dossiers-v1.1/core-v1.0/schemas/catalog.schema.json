@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/catalog.schema.json",
+  "title": "catalog",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "catalog"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "CANDIDATE_CATALOG"
+    },
+    "authorship": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "pillars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "domain_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mode": {
+            "enum": [
+              "SEMANTIC",
+              "STRUCTURAL",
+              "DYNAMIC",
+              "OBSERVATIONAL"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "domain_id",
+          "title",
+          "method",
+          "mode"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "$ref": "criterion.schema.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "revision",
+    "status",
+    "authorship",
+    "domains",
+    "pillars",
+    "criteria"
+  ],
+  "additionalProperties": false
+}

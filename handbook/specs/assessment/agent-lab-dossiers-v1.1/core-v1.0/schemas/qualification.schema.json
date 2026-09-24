@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.phenotype.invalid/pep/1.0.0/qualification.schema.json",
+  "title": "qualification",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "qualification"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluator_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluator_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "status": {
+      "enum": [
+        "UNQUALIFIED",
+        "QUALIFIED",
+        "REVOKED"
+      ]
+    },
+    "scope_instance_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "positive_control_passed": {
+      "type": "boolean"
+    },
+    "negative_control_passed": {
+      "type": "boolean"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "kind",
+    "schema_version",
+    "id",
+    "evaluator_id",
+    "evaluator_digest",
+    "status",
+    "scope_instance_ids",
+    "positive_control_passed",
+    "negative_control_passed",
+    "evidence_ids",
+    "observed_at",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "Internal docset consistency and source integrity only; no operational acceptance tests executed.",
+  "counts": {
+    "findings": 46,
+    "requirements": 58,
+    "acceptance_tests": 58,
+    "decisions": 18,
+    "work_items": 21,
+    "sources": 79
+  },
+  "source_sha256": "c38c0ec8b8e42a65be6c1e0e0a15cab1d42f127de300ab0c5460c3639e7a62f9"
+}

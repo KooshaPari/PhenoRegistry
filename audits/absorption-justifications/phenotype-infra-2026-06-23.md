@@ -204,7 +204,7 @@ Total artifacts audited: 194 files. Active, healthy, on-track.
 | `release/2026-q2-platform-cut` | 2026-06-15 | platform-team | Release branch, will merge post-audit. |
 | `feature/sbom-cyclonedx-1.6` | 2026-06-18 | ci-team | In-flight SBOM upgrade. |
 | `chore/adr-040-dr-posture` | 2026-06-20 | governance-team | ADR-040 implementation, in review. |
-| `infra/nanovms-absorb-packages` | 2026-06-23 | kooshapari | Pending branch for nanovms subpath absorption. |
+| `infra/nanovms-absorb-packages` | 2026-06-23 | <REDACTED> | Pending branch for nanovms subpath absorption. |
 
 All branches are active and load-bearing for the consolidation
 program.

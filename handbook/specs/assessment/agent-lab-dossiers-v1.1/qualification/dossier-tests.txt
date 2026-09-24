@@ -1,0 +1,40 @@
+test_102_scoped_rows_not_102_new_criteria (test_dossiers.DossierTests.test_102_scoped_rows_not_102_new_criteria) ... ok
+test_all_eight_dossiers_consistent (test_dossiers.DossierTests.test_all_eight_dossiers_consistent) ... ok
+test_assignment_byte_tamper_rejected (test_dossiers.DossierTests.test_assignment_byte_tamper_rejected) ... ok
+test_assumed_dashboard_failures_remain_visible (test_dossiers.DossierTests.test_assumed_dashboard_failures_remain_visible) ... ok
+test_blank_template_not_evaluated (test_dossiers.DossierTests.test_blank_template_not_evaluated) ... ok
+test_dashboard_spans_18_domains (test_dossiers.DossierTests.test_dashboard_spans_18_domains) ... ok
+test_duplicate_json_keys_rejected (test_dossiers.DossierTests.test_duplicate_json_keys_rejected) ... ok
+test_example_cannot_relabel_as_operational (test_dossiers.DossierTests.test_example_cannot_relabel_as_operational) ... ok
+test_executed_after_passes_only_fixture (test_dossiers.DossierTests.test_executed_after_passes_only_fixture) ... ok
+test_executed_before_fails (test_dossiers.DossierTests.test_executed_before_fails) ... ok
+test_fictional_premises_get_zero_evidence_credit (test_dossiers.DossierTests.test_fictional_premises_get_zero_evidence_credit) ... ok
+test_grader_revision_preserves_subject (test_dossiers.DossierTests.test_grader_revision_preserves_subject) ... ok
+test_html_drift_rejected (test_dossiers.DossierTests.test_html_drift_rejected) ... ok
+test_html_escapes_script_text (test_dossiers.DossierTests.test_html_escapes_script_text) ... ok
+test_illustrative_cannot_claim_local_execution_origin (test_dossiers.DossierTests.test_illustrative_cannot_claim_local_execution_origin) ... ok
+test_illustrative_cannot_mark_review_accepted (test_dossiers.DossierTests.test_illustrative_cannot_mark_review_accepted) ... ok
+test_illustrative_cannot_relabel_as_executed_fixture (test_dossiers.DossierTests.test_illustrative_cannot_relabel_as_executed_fixture) ... ok
+test_jsonl_carries_each_source_digest (test_dossiers.DossierTests.test_jsonl_carries_each_source_digest) ... ok
+test_markdown_drift_rejected (test_dossiers.DossierTests.test_markdown_drift_rejected) ... ok
+test_markdown_escapes_html_tags (test_dossiers.DossierTests.test_markdown_escapes_html_tags) ... ok
+test_missing_row_note_rejected (test_dossiers.DossierTests.test_missing_row_note_rejected) ... ok
+test_no_invented_git_or_signing_identities (test_dossiers.DossierTests.test_no_invented_git_or_signing_identities) ... ok
+test_outbox_wrong_payload_rejected (test_dossiers.DossierTests.test_outbox_wrong_payload_rejected) ... ok
+test_raw_evidence_tamper_rejected (test_dossiers.DossierTests.test_raw_evidence_tamper_rejected) ... ok
+test_rehashed_fiction_still_requires_fiction_label (test_dossiers.DossierTests.test_rehashed_fiction_still_requires_fiction_label) ... ok
+test_render_changes_only_views (test_dossiers.DossierTests.test_render_changes_only_views) ... ok
+test_render_deterministic (test_dossiers.DossierTests.test_render_deterministic) ... ok
+test_service_has_no_fake_receipt (test_dossiers.DossierTests.test_service_has_no_fake_receipt) ... ok
+test_service_unknown_applicability_not_hidden (test_dossiers.DossierTests.test_service_unknown_applicability_not_hidden) ... ok
+test_subject_descriptor_tamper_rejected (test_dossiers.DossierTests.test_subject_descriptor_tamper_rejected) ... ok
+test_symlink_output_directory_rejected (test_dossiers.DossierTests.test_symlink_output_directory_rejected) ... ok
+test_unknown_finding_evidence_rejected (test_dossiers.DossierTests.test_unknown_finding_evidence_rejected) ... ok
+test_unlisted_finding_rejected (test_dossiers.DossierTests.test_unlisted_finding_rejected) ... ok
+test_yaml_drift_rejected (test_dossiers.DossierTests.test_yaml_drift_rejected) ... ok
+test_yaml_roundtrip_if_parser_available (test_dossiers.DossierTests.test_yaml_roundtrip_if_parser_available) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 5.273s
+
+OK

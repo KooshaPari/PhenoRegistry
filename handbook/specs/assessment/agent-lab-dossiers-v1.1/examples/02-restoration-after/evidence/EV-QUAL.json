@@ -1,0 +1,13 @@
+{
+  "kind": "evidence",
+  "schema_version": "1.0.0",
+  "id": "EV-QUAL",
+  "subject_digest": "sha256:1433edcb15661c3af159f06100a15bb8ba4b40ac35cf5a8d172ec44ac4237537",
+  "path": "raw/qualification.json",
+  "digest": "sha256:716000a8dfa0907b86038d4ea42f9357fc736c7b2cdadd98c7fbc5ce7a9d29d9",
+  "observed_at": "2026-09-11T23:19:57.185691+00:00",
+  "sensitivity": "PUBLIC",
+  "role": "QUALIFICATION",
+  "origin": "EXAMPLE_EXECUTION",
+  "summary": "Actual execution of bundled synthetic example; no real product evaluation."
+}

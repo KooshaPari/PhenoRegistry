@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-19  
 **Scope:** Fleet `Cargo.toml` manifests under `migration-work/` clone root  
-**Gate:** Zero **new** path dependencies on `KooshaPari/HexaKit` evicted crate trees
+**Gate:** Zero **new** path dependencies on `<REDACTED>/HexaKit` evicted crate trees
 
 ## Method
 

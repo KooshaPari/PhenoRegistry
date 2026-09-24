@@ -1,0 +1,60 @@
+{
+  "archives": [
+    {
+      "name": "product-evaluation-protocol-v0.1.zip",
+      "sha256": "e9014dea30b2d1c7d2ee4d96a71aec1ee73b16f757b3ecee6a0d369431ddf5c2",
+      "bytes": 22373
+    },
+    {
+      "name": "product-evaluation-protocol-v0.2.zip",
+      "sha256": "164759b56f301b9618f69299790c641235fc9f5303f7bb7a564cec0995ace652",
+      "bytes": 37734
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "provenance/history/v0.1/PRODUCT-EVALUATION-PROTOCOL-v0.1.md",
+      "sha256": "e073d2626cce4b6a0cc4147d2900475dc0d9e3eb52a15b69d2e8350cac161e66"
+    },
+    {
+      "path": "provenance/history/v0.1/README.md",
+      "sha256": "0ec8b59ae4acb33b1993b181f4dabb8af0de97c7f549a500bfc877d5ce056634"
+    },
+    {
+      "path": "provenance/history/v0.1/criterion-examples.json",
+      "sha256": "594d4bf67fd433dc46b70491c8f51e163ac25c50e9a75a635562f006a9f9d147"
+    },
+    {
+      "path": "provenance/history/v0.1/protocol.contract.json",
+      "sha256": "3b4e1aac08ef088cd5a755339d8f98de8fad9cbeb719c43a8d30aa0de2ac13e2"
+    },
+    {
+      "path": "provenance/history/v0.2/MANIFEST.json",
+      "sha256": "678a25e95414c390263c21d0a1b31dbac9511f1dff8b36983d3748d11709ab76"
+    },
+    {
+      "path": "provenance/history/v0.2/PRODUCT-EVALUATION-PROTOCOL-v0.2.md",
+      "sha256": "e5f2ef5d0c6d5ee6e397b4373d3e97f60f08771bb4fbb4a3aac1f3f9a90bf409"
+    },
+    {
+      "path": "provenance/history/v0.2/README.md",
+      "sha256": "2e62b229eca418f0930d6f9b91ca19fad83f61fe0a9d8e01668fd8e377f7995e"
+    },
+    {
+      "path": "provenance/history/v0.2/START-HERE-AGENT.md",
+      "sha256": "c1cfb451e68db9cf855594faf4e86ba269dca8446c208ba0fe20da9427078030"
+    },
+    {
+      "path": "provenance/history/v0.2/bootstrap-assignment.template.yaml",
+      "sha256": "bb2c2e09e126d3a6dd4cbcd2c74f15138479de076b42ded4a9afce19a38e4016"
+    },
+    {
+      "path": "provenance/history/v0.2/criterion-examples-v0.1-retained.json",
+      "sha256": "594d4bf67fd433dc46b70491c8f51e163ac25c50e9a75a635562f006a9f9d147"
+    },
+    {
+      "path": "provenance/history/v0.2/protocol.contract.json",
+      "sha256": "e77c39d82e6fba7f5d6419a112d708d1af9251ab80871595f45c65092c3025e7"
+    }
+  ]
+}

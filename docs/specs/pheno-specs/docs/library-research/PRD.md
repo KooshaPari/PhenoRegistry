@@ -589,7 +589,7 @@ implements:
 
 ### 4.1 Registry Query API
 
-**Base URL:** `https://raw.githubusercontent.com/KooshaPari/phenotype-registry/main/`
+**Base URL:** `https://raw.githubusercontent.com/<REDACTED>/phenotype-registry/main/`
 
 **Endpoints:**
 

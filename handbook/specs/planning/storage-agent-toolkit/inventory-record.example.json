@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1-proposal",
+  "status": "NOT A LIVE MEASUREMENT",
+  "host_id": null,
+  "physical_disk_ids": [],
+  "volume_id": null,
+  "capacity_pool_id": null,
+  "mount_paths": [],
+  "filesystem": null,
+  "collector": null,
+  "collector_version": null,
+  "scanned_at": null,
+  "scope": {
+    "roots": [],
+    "exclusions": [],
+    "follows_links": false,
+    "crosses_mounts": false
+  },
+  "coverage": {
+    "complete": false,
+    "errors": [],
+    "skipped_count": null,
+    "interrupted": null
+  },
+  "bytes": {
+    "logical": null,
+    "allocated": null,
+    "reclaimable_estimate": null,
+    "capacity_pool_total": null,
+    "capacity_pool_free": null
+  },
+  "reclaim_estimate_basis": null,
+  "detail_artifact": null
+}

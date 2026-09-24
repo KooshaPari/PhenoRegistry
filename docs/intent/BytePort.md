@@ -1,9 +1,9 @@
 ---
-repo: "byteport"
-aliases: []
-role: unknown
+repo: "BytePort"
+aliases: ["byteport"]
+role: product
 status: active
-last_verified: 2026-06-17
+last_verified: 2026-09-20
 bound_prompts: 39
 bound_plans: 0
 bound_responses: 0
@@ -14,7 +14,36 @@ device: macbook
 
 ## Intent Statement
 
-<To be filled in by hand from the most recent binding prompt. This repo is bound to 39 prompts, 0 plans, and 0 agent responses captured between 2025-08 and 2026-06-17.>
+BytePort exists to be the **local-first, open-source desktop deployment
+application** for the Phenotype ecosystem. A user installs one signed
+artifact, gets a native UI that talks to a local Go backend, and can
+deploy, monitor, and update containerized workloads on their own
+machine without depending on a cloud account or a separate web server.
+
+The repo's core commitments:
+
+1. **Desktop-first surface.** The user reaches for BytePort on their
+   own machine, not in a browser tab. The Tauri 2 binary is the canonical
+   entry point; the SvelteKit UI exists only inside the desktop shell.
+2. **Local data sovereignty.** Deployment state, container logs, and
+   credentials live in the desktop app's local data dir. No cloud
+   roundtrip required for the CVP. Cloud sync is post-CVP.
+3. **Lean transport.** The pure-Rust S3 presigner
+   (`crates/byteport-transport/`) ships no AWS SDK and stays small
+   enough that other Phenotype tools can adopt it without dragging in
+   tokio / aws-sdk-s3 / tracing.
+4. **Hardened desktop shell.** `tauri.conf.json` enforces CSP, COOP /
+   COEP / CORP, HSTS, X-Frame-Options, X-Content-Type-Options,
+   Referrer-Policy, and Permissions-Policy. The asset protocol scope
+   is `$APPDATA` and `$APPLOCALDATA` only — never `["**"]`.
+5. **Phenotype ecosystem citizenship.** Multi-cloud transport lives in
+   `pheno-transport`. MCP server lives in `PhenoMCPServers`. Native
+   sandboxing lives in `nanovms`. Agent-specific desktop shells live
+   in each agent's own repo. BytePort stays out of all of those.
+
+The thing BytePort *is not*: a generic web deploy UI (Coolify), a
+proprietary SaaS (Server Compass), an agent runtime, or a CI server.
+Those identities live elsewhere.
 
 ## Bound Prompts
 
@@ -72,18 +101,39 @@ device: macbook
 
 ## Boundary
 
-See: [`docs/boundary/byteport.md`](../boundary/byteport.md)
+See: [`docs/boundary/BytePort.md`](../boundary/BytePort.md)
+
+## CVP
+
+See: [`docs/cvp/BytePort.md`](../cvp/BytePort.md)
 
 ## Ecosystem Role
 
-<See `ECOSYSTEM_MAP.md` for the canonical ecosystem role.>
+BytePort is the canonical desktop deployment application in the
+Phenotype ecosystem. It owns the local-machine deploy / monitor / update
+surface for containerized workloads and ships the reusable pure-Rust
+S3 presigner that other Phenotype tools depend on. It deliberately
+stays out of multi-cloud transport, MCP server hosting, native
+sandboxing, and per-agent desktop shells — each of those identities
+lives in its own repo.
+
+See [`docs/ECOSYSTEM_MAP_REALIGNMENT.md`](../ECOSYSTEM_MAP_REALIGNMENT.md)
+for the broader ecosystem context.
 
 ## Open Questions
 
-- <To be filled from the latest prompt on this repo.>
+- **Mobile target scope**: is mobile in scope for a future CVP, or is
+  desktop the only target forever? Mobile changes the transport story
+  (no local Podman daemon on iOS).
+- **`byteport-dag` necessity**: the DAG foundation crate is referenced
+  from `byteport-cli` but not from the desktop binary. Confirm it
+  belongs in the CVP or move it post-CVP.
+- **`backend/bytebridge/` removal**: legacy Go module, no callers. Remove
+  in a follow-up cleanup PR.
 
 ## Change Log
 
 | Date | Change | Worklog |
 | ---- | ------ | ------- |
 | 2026-06-17 | Initial binding (L7-001 sweep) | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
+| 2026-09-20 | Filled intent statement and added CVP cross-link | this commit |

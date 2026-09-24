@@ -1,0 +1,118 @@
+{
+  "format": "DOSSIER_RENDER_RECEIPT_V1_1",
+  "renderer_version": "1.1.0",
+  "renderer_digest": "sha256:6504776ad4708c2799d3fbc50bbabc8d403a004ce42cb074e67b648a94f809ba",
+  "core_reducer_digest": "sha256:ac58230d111f1bb4542ad0818bd15e618b30067cc0f1c09d10355f6b21e48c52",
+  "schema_digest": "sha256:324acd4bc92509dd6b31f1d34ca06baba8fc4612d1987b967da26ac371f17a61",
+  "input_manifest_digest": "sha256:28abc96927c3f5722dba2487c89d6b0e12c8e8f8c74b4be3a72873aae6fa364a",
+  "input_digest_profile": "PEP Python JSON digest profile; NOT RFC8785/JCS",
+  "inputs": [
+    {
+      "path": "assessment.json",
+      "bytes": 886,
+      "digest": "sha256:33a68b58e8f72780d63353cbfb274ace778d84ed346adf74a40cad5edd5dcc5a"
+    },
+    {
+      "path": "assignment.json",
+      "bytes": 2021,
+      "digest": "sha256:fd3f4f3243f9e6b52229d7761130988609453fa5b92c484ff8da78d77f7842ec"
+    },
+    {
+      "path": "decisions/DEC-NEXT.json",
+      "bytes": 817,
+      "digest": "sha256:e78a51bd63cd738d3d3b535630e5f80594d25bda07d01a05750e185cb11403c7"
+    },
+    {
+      "path": "dossier.json",
+      "bytes": 5922,
+      "digest": "sha256:3ede1190f8eda7b8fd0f6a7421b5ae8a8b21d03613ee516a389927195035e3ee"
+    },
+    {
+      "path": "evidence/EV-OBS.json",
+      "bytes": 518,
+      "digest": "sha256:7532d2207697ff7207cbb5d9d4189c5d2da09964651a140a0ab85c018b1e9c04"
+    },
+    {
+      "path": "evidence/EV-QUAL.json",
+      "bytes": 522,
+      "digest": "sha256:8b20c2f5592d510c0032042bcdc516aceb804f1845fb187e4ba0e9c157a8084a"
+    },
+    {
+      "path": "findings/F-I-CORRUPT.json",
+      "bytes": 597,
+      "digest": "sha256:3e0e398f275ff2575320c4a37dbe521816c3a5d2ff0c553ff57d3a03f7e18dc6"
+    },
+    {
+      "path": "findings/F-I-RESTORE.json",
+      "bytes": 592,
+      "digest": "sha256:bacbf86423815d8408f2e3aa248d86a15ae57f45fadb5427776fddd1ed5f44e2"
+    },
+    {
+      "path": "measurement-bindings/MB-I-CORRUPT.json",
+      "bytes": 1336,
+      "digest": "sha256:99845ad33329fae0acd1a398728a405202388de4744c962da5c902cbcdfccf3a"
+    },
+    {
+      "path": "measurement-bindings/MB-I-RESTORE.json",
+      "bytes": 1331,
+      "digest": "sha256:c307b9fc955d516e87e1a57e810d704563d16a5c7f6009f07091c97d73be6efa"
+    },
+    {
+      "path": "qualifications/Q-TOY.json",
+      "bytes": 661,
+      "digest": "sha256:189d8015ce819d1c4b32aab7744bea6ec4f8672baa2d251d27920c9f702bc59a"
+    },
+    {
+      "path": "raw/observations.json",
+      "bytes": 386,
+      "digest": "sha256:d6819424655049d1ee7a0b9708f15c3383e286dd75105703fef842b0fa07658b"
+    },
+    {
+      "path": "raw/qualification.json",
+      "bytes": 1205,
+      "digest": "sha256:716000a8dfa0907b86038d4ea42f9357fc736c7b2cdadd98c7fbc5ce7a9d29d9"
+    },
+    {
+      "path": "results/R-I-CORRUPT.json",
+      "bytes": 986,
+      "digest": "sha256:9e5f23ba1618393eb215d7094505fbb49e1f456fd25ef665841e40735bf13aab"
+    },
+    {
+      "path": "results/R-I-RESTORE.json",
+      "bytes": 981,
+      "digest": "sha256:dd5661aabe207803b5e38fcf95de549fb01b47726775d3835b1c3508c396d8cd"
+    },
+    {
+      "path": "subject.json",
+      "bytes": 120,
+      "digest": "sha256:5eee99f97bfb4af7a7940ecd78f50aafbeea4666a8c51978c4c070d4f6912cc2"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "ASSESSMENT.html",
+      "digest": "sha256:9c72ee94d1215879aa0f6d71c09bbfb691c66b15cd71ff965fa8675cdaf8494d"
+    },
+    {
+      "path": "ASSESSMENT.md",
+      "digest": "sha256:0d7a3d1672b66e55df14752f00facb19338a8472218c087bcbeaa046872198d7"
+    },
+    {
+      "path": "views/assessment.json",
+      "digest": "sha256:373146be4b32d9acc51d2cd5461b0131fed4b0528b66b59cc15102f07f14729e"
+    },
+    {
+      "path": "views/assessment.yaml",
+      "digest": "sha256:501e18e345e40a8499a2b5915429bff11e98b4812327ad4f49c390d236d503e3"
+    },
+    {
+      "path": "views/records.jsonl",
+      "digest": "sha256:4513b5439890a7bc0d27da1f3da92ee9782da643d43408632a78ce58386f0104"
+    }
+  ],
+  "generated_build_receipt_is_not_signed": true,
+  "source_revision": null,
+  "report_commit": null,
+  "registry_commit": null,
+  "registry_state": "NOT_REQUESTED"
+}

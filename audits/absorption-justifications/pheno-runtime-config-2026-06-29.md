@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Repo | `KooshaPari/pheno-runtime-config` |
+| Repo | `<REDACTED>/pheno-runtime-config` |
 | Description | Hot-reloadable runtime configuration loader for the pheno-* fleet |
 | Default branch | `main` |
 | Language | Rust |
@@ -19,7 +19,7 @@
 
 | Target | Role | Why |
 |---|---|---|
-| `KooshaPari/phenotype-infra` (federation-service) | runtime config schema host | Smallest, cleanest separation: pheno-runtime-config is the dedicated hot-reload lib; phenotype-infra integrates it. |
+| `<REDACTED>/phenotype-infra` (federation-service) | runtime config schema host | Smallest, cleanest separation: pheno-runtime-config is the dedicated hot-reload lib; phenotype-infra integrates it. |
 | `pheno-*` runtime context layer | shared types | The pheno-* crates all consume the config schema through this crate. |
 
 This is an `ARCHIVE_ONLY` disposition: the source remains the canonical home; the federated `phenotype-infra` references the crate. No content migration needed; the codebase is a single 10-KB Rust library with tests and CI.
@@ -30,7 +30,7 @@ This is an `ARCHIVE_ONLY` disposition: the source remains the canonical home; th
 |---|---|
 | Disposition | `ARCHIVE_ONLY` |
 | Action class | **none** (canonical home) |
-| Absorbed into | `KooshaPari/phenotype-infra` (federation-service per ADR-049) |
+| Absorbed into | `<REDACTED>/phenotype-infra` (federation-service per ADR-049) |
 | Last verified | 2026-06-29 |
 | Gate tooling reference | `bin/repo-delete-gate.sh` (N/A — not deleting) |
 
@@ -150,9 +150,9 @@ The Restore-Command is followed by a federation smoke test to verify the re-clon
 
 | Tool | Path | Status |
 |---|---|---|
-| `bin/repo-delete-gate.sh` | `KooshaPari/phenotype-tooling/bin/repo-delete-gate.sh` | N/A (not deleting) |
-| `bin/repo-archive-gate.sh` | `KooshaPari/phenotype-tooling/bin/repo-archive-gate.sh` | N/A (not archiving) |
-| `bin/repo-status-scan.py` | `KooshaPari/phenotype-tooling/bin/repo-status-scan.py` | N/A (not deleting) |
-| `bin/absorption-justification.py` | `KooshaPari/phenotype-tooling/bin/absorption-justification.py` | N/A (already federated, not new audit) |
+| `bin/repo-delete-gate.sh` | `<REDACTED>/phenotype-tooling/bin/repo-delete-gate.sh` | N/A (not deleting) |
+| `bin/repo-archive-gate.sh` | `<REDACTED>/phenotype-tooling/bin/repo-archive-gate.sh` | N/A (not archiving) |
+| `bin/repo-status-scan.py` | `<REDACTED>/phenotype-tooling/bin/repo-status-scan.py` | N/A (not deleting) |
+| `bin/absorption-justification.py` | `<REDACTED>/phenotype-tooling/bin/absorption-justification.py` | N/A (already federated, not new audit) |
 
 This audit was produced by hand from the auto-generated 8/14 grade; the audit-template-based 14/14 was re-applied retroactively to bring pheno-runtime-config to the same quality bar as the rest of the fleet.

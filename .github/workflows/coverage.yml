@@ -11,7 +11,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write  # for OIDC trust (no PAT secrets)
+  id-token: write # for OIDC trust (no PAT secrets)
 
 env:
   HOOKS_SKIP: ${{ vars.HOOKS_SKIP || 'false' }}

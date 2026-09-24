@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.2.0",
+  "repository_id": "1262466303",
+  "name": "Melosviz",
+  "default_branch": "main",
+  "visibility": "public",
+  "observation_date": "2026-09-17",
+  "observation_method": "Post-release supersession of the 2026-09-16 snapshot; verified via git, gh release view, and recorded commits.",
+  "sampled_commit": "f082aa5c",
+  "sampled_commit_short": "f082aa5",
+  "sampled_commit_message": "chore(desktop): enable macOS bundle targets for .app and .dmg output",
+  "sampled_commit_date_local": "2026-09-16T19:48:48-07:00",
+  "release": {
+    "tag": "v0.1.0",
+    "published_at": "2026-09-17T03:00:57Z",
+    "url": "https://github.com/KooshaPari/Melosviz/releases/tag/v0.1.0",
+    "assets": [
+      {"name": "Melosviz-v0.1.0-macos-arm64.tar.gz", "size_bytes": 4805307, "sha256_short": "1c588123", "content_type": "application/x-gtar"},
+      {"name": "Melosviz_0.1.0_aarch64.dmg", "size_bytes": 4810712, "sha256_short": "2946909e", "content_type": "application/x-apple-diskimage"}
+    ]
+  },
+  "movement": "v0.1.0 released; remaining web-test failures from the Sept 16 snapshot resolved (243/246 passing, 3 skipped spec-first); Tauri bundle targets enabled (.app + .dmg produced from clean build).",
+  "assessment": "RELEASE_SHIPPED_WITH_KNOWN_PARTIAL_RENDER",
+  "role": "Music visualization and authored media product",
+  "owner_chat_count": 1,
+  "owner_chat_evidence": "USER_REPORTED_NOT_INDEPENDENTLY_OBSERVED",
+  "owner_chat_id": null,
+  "local_worktree": "/Users/kooshapari/CodeProjects/Phenotype/repos/melosviz",
+  "doc_adoption": "INDIRECT_OBSERVED",
+  "test_results_local": {
+    "web": {"passing": 243, "failing": 0, "skipped": 3, "suite_size": 246, "source_commit": "390b859"},
+    "backend": {"passing": 1448, "failing": 0, "skipped": 0, "suite_size": 1450, "evidence": "carry-forward from prior validated run, not rerun in this snapshot"}
+  },
+  "desktop_build": {"targets": ["app", "dmg"], "status": "produced", "evidence_commit": "f082aa5"},
+  "native_tests_run_by_this_audit": false,
+  "hosted_checks_exhaustively_reviewed": false,
+  "installed_product_qualified": false,
+  "new_authority_granted": false,
+  "repository_completion": "NOT_CERTIFIED",
+  "concerns": [
+    "Offline smoke is PIPELINE_REHEARSAL_NOT_PRODUCT_PROOF (placeholder MP4 clips).",
+    "Clean-machine install of the released v0.1.0 artifact not yet smoke-tested outside the source tree.",
+    "Three spec-first web components (Fullscreen toggle, Playback transport, Scene jump panel) are not yet wired into App.tsx.",
+    "Live creative render backend (ComfyUI et al.) not yet product-proven."
+  ],
+  "next_actions": [
+    {
+      "id": "CUR-1262466303-A1",
+      "title": "Type and label backend outcomes",
+      "description": "Distinguish live render, placeholder, job-spec-only, unavailable, and failed outputs.",
+      "status": "open"
+    },
+    {
+      "id": "CUR-1262466303-A2",
+      "title": "Run real creative output",
+      "description": "Import a licensed audio track; render through the intended live backend; verify A/V sync.",
+      "status": "open"
+    },
+    {
+      "id": "CUR-1262466303-A3",
+      "title": "Qualify installation and comparison",
+      "description": "Run outside the repo; reopen projects; recover from interrupted rendering; compare to baseline workflow.",
+      "status": "open"
+    },
+    {
+      "id": "POST-1262466303-B1",
+      "title": "Clean-machine install smoke of v0.1.0",
+      "description": "Mount/download the published .dmg/.tar.gz outside the repo tree; launch and exercise a basic workflow.",
+      "status": "open",
+      "rationale": "Smallest remaining gap between published artifact and verifiable installed product."
+    },
+    {
+      "id": "POST-1262466303-B2",
+      "title": "Wire three skipped spec-first components",
+      "description": "Add Fullscreen toggle, Playback transport, and Scene jump panel into web/App.tsx so the 3 skipped tests pass.",
+      "status": "open"
+    },
+    {
+      "id": "POST-1262466303-B3",
+      "title": "Document the v0.1.0 delivery contract",
+      "description": "Reconcile release notes with shipped feature set; amend CHANGELOG and docs if claims exceed what the artifact delivers.",
+      "status": "open"
+    }
+  ],
+  "evidence_limits": "Independent clean-machine install, live-render output, and full-history audit not run in this snapshot. Commit and release descriptions are local claims unless source-confirmed. No pilot winner or product completion is inferred.",
+  "supersedes": "2026-09-16 snapshot (sampled_commit edbbd400)."
+}

@@ -1,0 +1,117 @@
+{
+  "kind": "dossier",
+  "schema_version": "1.1.0",
+  "id": "RESTORE-AFTER",
+  "record_status": "EXAMPLE",
+  "example_class": "EXECUTED_FIXTURE",
+  "title": "Restoration / corrected behavior",
+  "subtitle": "Actual bundled fixture execution. Same two outcome checks; different implementation variants.",
+  "purpose": "Show that a successful-looking return message cannot substitute for restored data and corruption rejection.",
+  "boundary": "Two-record JSON restoration fixture in a temporary local directory; not a production backup system.",
+  "beneficiary": "The local fixture consumer reading the restored records, not an external user population.",
+  "authorship": "AGENT_DERIVED",
+  "intent_status": "Accepted for local bundled demonstration only.",
+  "genesis_rationale": "This fixture exists only to qualify the example grader. It is not a proposed new portfolio repository.",
+  "alternatives": [
+    "Implement the capability in an existing owner",
+    "Use a suitable existing dependency",
+    "Run a narrower experiment",
+    "Do not build"
+  ],
+  "authority": "Only bundled synthetic code and temporary local files were executed. No network, credentials or user repositories were used.",
+  "non_goals": [
+    "Validate a production storage system",
+    "Measure full product maturity",
+    "Claim an independent external auditor"
+  ],
+  "subject_identity": {
+    "source_revision": null,
+    "identity_method": "PEP value digest of the real bundled toy_product.py byte digest plus selected before/after variant in subject.json.",
+    "limitation": "Actual Python fixture execution only; no Git commit exists for this materialized package and none was invented."
+  },
+  "inventory": [
+    {
+      "id": "INV-01",
+      "item": "Restore operation",
+      "declared": "Claims restoration completed",
+      "observed_or_assumed": "Two required records restored with exact values",
+      "gap": "No gap in this two-record predicate",
+      "evidence_basis": "Actual raw/observations.json from this response."
+    },
+    {
+      "id": "INV-02",
+      "item": "Corruption handling",
+      "declared": "Backup digest should match records",
+      "observed_or_assumed": "Corrupt backup rejected with ValueError",
+      "gap": "Only this corruption fixture was exercised",
+      "evidence_basis": "Actual raw/observations.json from this response."
+    }
+  ],
+  "maturity": {
+    "scenario_or_scoped_label": "Not a product stage. Two-predicate fixture passes.",
+    "claim_limit": "This result supports only the two executed fixture predicates. It does not establish an MVP, a release, or production-safe restoration.",
+    "axes": [
+      {
+        "axis": "PRODUCT_VERIFIED",
+        "status": "PASS — scoped fixture only",
+        "basis": "Exact restore and corruption predicates executed."
+      },
+      {
+        "axis": "PUBLISHED_VERIFIED",
+        "status": "NOT_EVALUATED",
+        "basis": "No publication was performed."
+      },
+      {
+        "axis": "VALUE_VALIDATED",
+        "status": "NOT_EVALUATED",
+        "basis": "No beneficiary study was performed."
+      }
+    ],
+    "value_evidence": "Educational demonstration of outcome-based verification; no real-product or market value measurement."
+  },
+  "finding_ids": [],
+  "decision_ids": [
+    "DEC-NEXT"
+  ],
+  "semantic_reviews": [
+    {
+      "topic": "Does this assignment serve the parent outcome?",
+      "assessment": "Judge the named consumer outcome rather than the existence of infrastructure or the size of the repository.",
+      "support": "The fictional scenario names a bounded consumer and a failure that would prevent its outcome.",
+      "countercase": "The same outcome may be served more cheaply by an existing owner, a smaller feature, or no new product.",
+      "discriminator": "Execute the smallest real consumer journey under the same success and failure conditions.",
+      "confidence_basis": "Reasoned interpretation of the supplied fictional premises; no empirical product confidence is claimed."
+    }
+  ],
+  "next_action": "Retain the verified fixture result; add independent failure modes before making any wider recovery claim.",
+  "stop_condition": "Stop any promotion that interprets these two toy passes as production backup safety.",
+  "restart_packet": {
+    "accepted_baseline": "Retain both implementation-variant digests, raw outputs, and the E-TOY-1 predicate set.",
+    "failed_hypotheses": [
+      "Returning a success string establishes restoration.",
+      "A parseable but checksum-mismatched backup can be accepted."
+    ],
+    "next_reproduction": "Run python core-v1.0/tools/demo_loop.py --out .local-runs/new-toy and inspect raw/observations.json in both snapshots.",
+    "budget_and_permissions": "No product mutation or external actions authorized by this package. Carry forward the actual cumulative budget and permissions from the operating mandate."
+  },
+  "lineage": {
+    "previous_dossier_id": "RESTORE-BEFORE",
+    "change_class": "PRODUCT_VARIANT_CHANGE",
+    "description": "The selected implementation variant changes; the two acceptance predicates stay the same. The report records real fixture outputs, not a simulated repair by an autonomous agent."
+  },
+  "provenance_notice": "Executed synthetic fixture, not a real-repository audit. Raw observations were produced by the included Python demonstration during this response. The two-predicate grader accepted a valid witness and rejected a no-op.",
+  "row_notes": [
+    {
+      "instance_id": "I-CORRUPT",
+      "title": "Reject digest-mismatched backup",
+      "interpretation": "corrupt_backup_rejected observed as True on the actual bundled toy variant.",
+      "next_action": "Reuse only within this unchanged fixture/implementation/evaluator scope."
+    },
+    {
+      "instance_id": "I-RESTORE",
+      "title": "Restore exact record contents",
+      "interpretation": "restored_integrity observed as True on the actual bundled toy variant.",
+      "next_action": "Reuse only within this unchanged fixture/implementation/evaluator scope."
+    }
+  ]
+}
