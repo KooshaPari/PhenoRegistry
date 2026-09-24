@@ -17,6 +17,9 @@ def is_full_sha(ref: str) -> bool:
 
 def extract_uses(line: str) -> str | None:
     stripped = line.strip()
+    # Compact list-item syntax: "- uses: owner/action@ref"
+    if stripped.startswith("- "):
+        stripped = stripped[2:].strip()
     if not stripped.startswith("uses:"):
         return None
     value = stripped.split(":", 1)[1].strip()

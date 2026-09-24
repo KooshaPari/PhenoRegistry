@@ -1,0 +1,62 @@
+name: Workflow Action Guard
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request_target:
+    branches: [main]
+
+# Workflow-level token permissions — least privilege default for the gate.
+# The guard reads repository contents only; it never pushes, never writes.
+permissions:
+  contents: read
+
+jobs:
+  action-pin-check:
+    name: Immutable Action References
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Checkout 1: base branch (trusted). Holds the canonical guard script
+      # and the workflow files being scanned on push / workflow_dispatch.
+      # `pull_request_target` runs this checkout against the PR base ref by
+      # default, so `base/` is always trusted code (not PR-controlled).
+      - name: Checkout base branch (trusted)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          path: base
+
+      # Checkout 2: PR head (untrusted). Only used as a read-only input to
+      # the guard script. We never `run:` anything from this tree. We only
+      # parse its YAML files. sparse-checkout keeps the working tree tiny.
+      # `allow-unsafe-pr-checkout` is required because checkout pins are v7:
+      # on a fork PR it rejects `ref:` set to the PR head SHA unless this
+      # input is true (the job would otherwise fail before scanning).
+      - name: Checkout PR head workflows (scanned, not executed)
+        if: github.event_name == 'pull_request_target'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          allow-unsafe-pr-checkout: true
+          path: pr
+          sparse-checkout: .github/workflows
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+
+      # The guard script always comes from `base/` (trusted). Only the
+      # workflows directory being scanned changes between modes.
+      - name: Scan PR head workflows (trusted script, untrusted inputs)
+        if: github.event_name == 'pull_request_target'
+        run: python base/scripts/workflow-action-guard.py pr/.github/workflows
+
+      - name: Scan base workflows
+        if: github.event_name != 'pull_request_target'
+        run: python base/scripts/workflow-action-guard.py base/.github/workflows
