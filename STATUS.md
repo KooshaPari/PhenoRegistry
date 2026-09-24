@@ -218,7 +218,7 @@ Source of truth: `phenotype-registry/worklogs/L7-007-archived-marker-pass-2026-0
 | dinoforge-packs   |      14 | 4-repo retirement wave 2026-06-18 → Dino#297    |
 | phenotype-auth-ts |      13 | 4-repo retirement wave 2026-06-18 → AuthKit#120 |
 
-**19 patterns with no match** (verified — never bound in `_bindings.json`): NetScript (ADR-001), cheap-llm-mcp (ADR-007), Stashly (ADR-017), bifrost (ADR-017), odin-landing (ADR-017), thegent-landing (ADR-017), phenoVessel-_ (ADR-019), phenoTypes-_ (ADR-020), phenoPatch-_ (ADR-020), Profila (ADR-021), dagctl (4-repo retirement), kwality (4-repo retirement), HeliosCLI (V11-016), PhenoCompose (Dmouse92 archive), phenotype-ops (Dmouse92 archive), phenotype-otel (Dmouse92 archive), Nanovms (Dmouse92 archive), phenotype-teamcomm (Dmouse92 archive), phenoagents-cheap-mcp-_ (subagent-D).
+**19 patterns with no match** (verified — never bound in `_bindings.json`): NetScript (ADR-001), cheap-llm-mcp (ADR-007), Stashly (ADR-017), bifrost (ADR-017), odin-landing (ADR-017), thegent-landing (ADR-017), `phenoVessel-*` (ADR-019), `phenoTypes-*` (ADR-020), `phenoPatch-*` (ADR-020), Profila (ADR-021), dagctl (4-repo retirement), kwality (4-repo retirement), HeliosCLI (V11-016), PhenoCompose (Dmouse92 archive), phenotype-ops (Dmouse92 archive), phenotype-otel (Dmouse92 archive), Nanovms (Dmouse92 archive), phenotype-teamcomm (Dmouse92 archive), `phenoagents-cheap-mcp-*` (subagent-D).
 
 **Metrics:**
 
