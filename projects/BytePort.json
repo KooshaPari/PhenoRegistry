@@ -6,10 +6,10 @@
   "has_readme": true,
   "type": "cli",
   "path": "repos/BytePort",
-  "disposition": "ARCHIVE_ONLY",
+  "disposition": "KEEP_CANONICAL",
   "wave": "absorption-justification-2026-06-23",
-  "absorbed_into": "phenotype-tooling",
-  "absorption_note": "ADR-040: BytePort CLI to be consolidated into phenotype-tooling/crates/byteport. Active in dev (unarchived 2026-07-17).",
+  "absorbed_into": null,
+  "absorption_note": "ADR-040: BytePort CLI to be consolidated into phenotype-tooling/crates/byteport. Active in dev (unarchived 2026-07-17). Superseded 2026-07-18: BytePort reinstated as canonical hub (registry/disposition-index.json repo-BytePort + queue-repo-BytePort); not absorbed. Index repo-BytePort still carries fsm=archived/archived_at=2026-07-18 (stale pre-reinstatement snapshot); the index is frozen:true (forge-session-2026-07-17-18), so this card records ground truth instead: GitHub repo live, not archived (verified 2026-09-24).",
   "adr": "ADR-040",
   "note": "Audited 2026-06-23; active in dev (37 unmerged branches); local mirror at repos/BytePort."
 }
