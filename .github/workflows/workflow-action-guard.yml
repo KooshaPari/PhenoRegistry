@@ -23,7 +23,7 @@ jobs:
       # `pull_request_target` runs this checkout against the PR base ref by
       # default, so `base/` is always trusted code (not PR-controlled).
       - name: Checkout base branch (trusted)
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 1
           persist-credentials: false
@@ -32,13 +32,17 @@ jobs:
       # Checkout 2: PR head (untrusted). Only used as a read-only input to
       # the guard script. We never `run:` anything from this tree. We only
       # parse its YAML files. sparse-checkout keeps the working tree tiny.
+      # `allow-unsafe-pr-checkout` is required because checkout pins are v7:
+      # on a fork PR it rejects `ref:` set to the PR head SHA unless this
+      # input is true (the job would otherwise fail before scanning).
       - name: Checkout PR head workflows (scanned, not executed)
         if: github.event_name == 'pull_request_target'
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 1
           persist-credentials: false
+          allow-unsafe-pr-checkout: true
           path: pr
           sparse-checkout: .github/workflows
 
