@@ -1,14 +1,49 @@
 # Phenotype Registry — STATUS
 
-**Generated:** 2026-06-20 18:45 PDT
-**Scope:** L7-001 → L7-008 sweep — `phenotype-registry`
-**Author device:** macbook
-**Audience:** user (consolidated, committed, orphan-push pending this turn)
+**Generated:** 2026-09-20 (current-state preamble added; L7 historical content preserved below)
+**Original scope:** L7-001 → L7-008 sweep — `phenotype-registry` (2026-06-17 → 2026-06-20)
+**Author device:** macbook (L7 era) / homelab-koosh + macbook (current)
+**Audience:** user (consolidated, committed)
 **Authority:** this file replaces the prior STATUS-REPORT.md (L7-003 era) and STATUS-L7-004-VERIFICATION.md as the canonical status document for the registry contract layer.
 
 ---
 
-## 1. Current Branch State (2026-06-20 18:45 PDT)
+## 0. Current State (2026-09-20)
+
+This is the canonical status preamble. The L7 historical sweep (sections 1–8 below) is preserved for traceability but no longer reflects active work.
+
+| Item | Value | Notes |
+| :--- | :--- | :--- |
+| `main` HEAD | `fd309a37` (origin/main) | Local at `fd6d2a4c`; 2 ahead / 67 behind (local carries 2 stale CVP branch leftovers) |
+| Workflow pin status | ✅ 38/38 workflow files SHA-pinned on `origin/main` | Done upstream `e0699dc` (Sep 11); commit `42bb670f` from this branch is now redundant |
+| `workflow-action-guard.py` | Exists at `scripts/` | Not yet wired into CI as a gate (B1.2 pending) |
+| Open CVP PRs | #574 (Tracera), #575 (BytePort) | Both received CodeRabbit CHANGES_REQUESTED reviews on the initial commit; both updated 2026-09-20 with fixes |
+| CVP branches | `cvp-tracera-2026-09-20` (`19470b2a`), `cvp-byteport-2026-09-20` (`041fad23`) | Both carrying the same CodeRabbit fixes |
+| Pin branches | ❌ DELETED | `chore/pin-action-shas` (local + remote) + `chore/pin-action-shas-v2` deleted 2026-09-20; `origin` pruned |
+| Open p0 issues | #320 (secret rotation tracker) | Provider-side blockers; 17 of 17 checklist rows unchecked |
+| Active `docs/cvp/` | README + Tracera + BytePort | AuthKit, AgentMCP, PhenotypeApps CVP expansion queued |
+| Last dossier refresh | 2026-09-20 | `PHENOREG-DOSSIER-20260920.md` + `PHENOREG-FORWARD-WBS-20260920.md` in `agents/sandbox/` |
+
+**Active workstreams (WBS, 2026-09-20):**
+
+- **A — CVP program (in progress):** fix CodeRabbit findings on PR #574 + #575 ✅; expand CVP coverage to AuthKit, AgentMCP, PhenotypeApps (deferred — requires intake interviews)
+- **B — Workflow pin cleanup (✅ done):** all 38 workflow files SHA-pinned on `origin/main`; stale pin branches deleted; guard verified 38/38
+- **B1.2 — CI gate (pending):** add `workflow-action-guard.py` as a required status check on PRs
+- **C — Dossier refresh (in progress):** this preamble; full STATUS-REPORT.md refresh deferred until CVP program lands
+- **D — Hygiene (pending):** issue #320 secret rotation; pre-existing Windows-illegal filenames in `.kilo/audits/` blocking lefthook grade task
+- **E — Long-term (queued):** CVP expansion to remaining repos; pin-tooling hardening; intent-boundary sync for CVP-tagged repos
+
+**Verification anchors (2026-09-20):**
+
+- `scripts/workflow-action-guard.py --all` → 38/38 files clean
+- `gh pr list --state open` → [#574, #575] only
+- `git rev-parse origin/main` → `fd309a37`
+- `git branch -r | grep pin` → (none)
+- Issue #320 → 17 of 17 rotation checklist rows unchecked
+
+---
+
+## 1. Current Branch State (2026-06-20 18:45 PDT) [HISTORICAL — preserved]
 
 | Branch | Type | Local SHA | Remote SHA | Notes |
 | :--- | :--- | :--- | :--- | :--- |
@@ -325,7 +360,7 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 | Security audit (monthly) | first Monday of month 09:00 PDT | security-audit circle | 🟡 PENDING FIRST RUN |
 | Registry validation (bi-weekly) | every other Monday 09:00 PDT | registry-audit circle | 🟡 PENDING FIRST RUN |
 
-**Launchd plist location:** `~/Library/LaunchAgents/com.<REDACTED>.phenotype-registry.weekly-refresh.plist` (to be authored before 2026-06-22 09:00 PDT).
+**Launchd plist location:** `~/Library/LaunchAgents/com.kooshapari.phenotype-registry.weekly-refresh.plist` (to be authored before 2026-06-22 09:00 PDT).
 
 **First run verification:** user to confirm that the Monday 09:00 PDT scheduled task fires and produces a refresh log under `worklogs/weekly-refresh-<YYYY-MM-DD>.json`.
 
@@ -380,7 +415,7 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 ## 10. Next Steps (post-L7-008)
 
 1. **Verify orphan-push this turn** — new SHA should be live on GitHub after `--force` push
-2. **Verify via curl** — `curl https://api.github.com/repos/<REDACTED>/phenotype-registry/branches/chore/l7-001-contract-only-orphan-2026-06-17` returns new SHA
+2. **Verify via curl** — `curl https://api.github.com/repos/KooshaPari/phenotype-registry/branches/chore/l7-001-contract-only-orphan-2026-06-17` returns new SHA
 3. **Schedule L7-009 (next archived-flag refresh)** — weekly cadence per ADR-024 / ADR-041; first scheduled run 2026-06-22 09:00 PDT via launchd
 4. **Close L5-117 pheno-capacity execution** — deferred to v12+ per ADR-036
 5. **Continue V11-016 tier-0 retirement wave** on registry main (separate from L7 sweep)
@@ -391,7 +426,8 @@ Per ADR-024 + ADR-041 (refresh cadence), the registry contract layer has a weekl
 
 | Version | Date | Author | Change |
 | :--- | :--- | :--- | :--- |
-| 1.0.0 | 2026-06-20 18:45 PDT | <REDACTED> (macbook, L7-008) | Initial STATUS.md — replaces STATUS-REPORT.md (L7-003) and STATUS-L7-004-VERIFICATION.md as canonical status document. Covers L7-001 → L7-008 phase recap with deltas, current remote SHAs, per-phase key outputs (45,091 records, 107 bound repos, 8 stubs, 3 extraction targets, 12 archived markers), 21 successful subagent dispatches across 8 phases, outstanding human-judgment queue, weekly refresh cadence status. |
+| 1.0.0 | 2026-06-20 18:45 PDT | KooshaPari (macbook, L7-008) | Initial STATUS.md — replaces STATUS-REPORT.md (L7-003) and STATUS-L7-004-VERIFICATION.md as canonical status document. Covers L7-001 → L7-008 phase recap with deltas, current remote SHAs, per-phase key outputs (45,091 records, 107 bound repos, 8 stubs, 3 extraction targets, 12 archived markers), 21 successful subagent dispatches across 8 phases, outstanding human-judgment queue, weekly refresh cadence status. |
+| 1.1.0 | 2026-09-20 | KooshaPari (homelab-koosh) | Added §0 "Current State (2026-09-20)" preamble; CVP program status (PR #574, #575), workflow pin completion (origin/main fd309a37, 38/38 files clean), pin-branch cleanup (deleted local + remote), and updated WBS. Sections 1–8 (L7 historical) preserved verbatim for traceability. |
 
 ---
 
