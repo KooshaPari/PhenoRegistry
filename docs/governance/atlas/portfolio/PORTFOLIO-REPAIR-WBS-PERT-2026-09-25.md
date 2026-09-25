@@ -1,3 +1,5 @@
+> **Authored by Instinct (Koosha’s personal assistant), not by the CLI agent fleet.**
+
 # Repository and portfolio repair plan: WBS / PERT
 
 **Planning baseline:** September 25, 2026. **Status:** proposal from a bounded read-only audit, not an execution receipt or approved release plan. **Owner:** Koosha Paridehpour. This document belongs in the PhenoRegistry governance atlas as a cross-repository planning record, not a product-specific `STATE.md` or a claim that the repositories have changed.
