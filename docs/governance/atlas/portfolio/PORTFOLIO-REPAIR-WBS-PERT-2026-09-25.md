@@ -1,4 +1,4 @@
-> **Authored by Instinct (Koosha’s personal assistant), not by the CLI agent fleet.**
+> **Authored by Instinct (Koosha’s pilot assistant), not by the CLI agent fleet.**
 
 # Repository and portfolio repair plan: WBS / PERT
 
