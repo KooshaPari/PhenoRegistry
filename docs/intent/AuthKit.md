@@ -14,7 +14,7 @@ device: macbook
 
 ## Intent Statement
 
-Own the fleet's authentication and authorization runtime boundary as a single Rust crate: enforce the PKCE state ↔ session invariant at the middleware for every PhenoService (`enforce_pkce_state_session`, FR-AUTHV-018, 11 unit tests), store sessions behind the hexagonal `SessionStore` port, and grow through the documented AUT-SOTA series (key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate limiting). AuthKit supersedes Authvault (card status `archived-superseded`) and is designated the standalone canonical WorkOS-themed auth hub by USER-DECISION 2026-07-19. Services authenticate through AuthKit; each service keeps its own authorization policy.
+Own the fleet's authentication runtime boundary as a single Rust crate: enforce the PKCE state ↔ session invariant at the middleware for every PhenoService (`enforce_pkce_state_session`, FR-AUTHV-018, 11 unit tests), store sessions behind the hexagonal `SessionStore` port, and grow through the documented AUT-SOTA series (key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate limiting). AuthKit supersedes Authvault (card status `archived-superseded`) and is designated the standalone canonical WorkOS-themed auth hub by USER-DECISION 2026-07-19. Services authenticate through AuthKit; each service keeps its own authorization policy.
 
 ## Bound Prompts
 
@@ -104,3 +104,4 @@ Canonical auth-runtime boundary: `projects/AuthKit.json` disposition `AFFIRM` wi
 | ---------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | 2026-06-17 | Initial binding (L7-001 sweep)                                                                      | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
 | 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AuthKit.md`) | PHENOREG-FORWARD-WBS A3.1 / C3.3                           |
+| 2026-09-27 | Review fixes: authentication-only boundary wording (services own authorization policy)              | PR #585 review round                                       |

@@ -12,15 +12,17 @@ build_deploy_status: "absorbed"
 ## Identity
 
 AgentMCP was the fleet's **MCP (Model Context Protocol) client hub** — the
-agent ↔ MCP-directory ↔ tools surface that let Phenotype agents discover and
+Python client surface that let Phenotype agents discover and
 call MCP servers. Its identity today survives as the **hexagonal
 `agentmcp-hex` package inside `phenotype-python-sdk`**: extracted from
 `McpKit/python/agentmcp/` v0.x.x → 0.3.0 with the hexagonal DDD structure
 preserved, shipped as a P1 patch per the McpKit absorption audit
 (`phenotype-python-sdk#21`, merged 2026-06-19), while the higher-level MCP
 _patterns_ were routed to Agentora per the ADR-017/019 retirement wave
-(2026-06-17/18). What you would lose without this identity: the Python SDK's
-MCP client slice — an agent with no protocol-facing directory/tools ports.
+(2026-06-17/18). What you would lose without this identity: the extracted
+`agentmcp-hex` package and its provenance chain — the package triad scopes it
+as the hex-grid testing harness (see Open Questions for the scope
+contradiction).
 
 ## Closest Viable Product
 
@@ -28,9 +30,8 @@ The AgentMCP CVP is **a Python consumer that can**:
 
 1. `import` the `agentmcp-hex` package from an installed
    `phenotype-python-sdk`.
-2. Wire an agent to an MCP server through the preserved hexagonal ports
-   (agent, directory, tools) — the same ports that existed in
-   `McpKit/python/agentmcp/`.
+2. Run the deterministic hex-grid testing harness and its 16-task fleet
+   (the package triad's declared scope).
 3. Rely on the P1 patch lineage (bugfixes landed with the extraction, not a
    verbatim copy).
 4. Trace the provenance back through the registry notes to the original
@@ -43,7 +44,9 @@ the retirement of the standalone repo.
 ## In CVP (must ship in this slice)
 
 - **`agentmcp-hex` package** in `phenotype-python-sdk/packages/agentmcp-hex/`
-  with the hexagonal DDD structure intact (ports not flattened).
+  with the hexagonal DDD structure intact (disposition note: "hexagonal DDD
+  pattern preserved"; package triad scope: hex-grid test harness — see Open
+  Questions).
 - **P1 patch behavior** from the McpKit absorption audit carried into the
   package.
 - **Provenance chain**: disposition-index extraction row (source
@@ -92,6 +95,14 @@ the retirement of the standalone repo.
 
 ## Open Questions
 
+- **Package scope contradiction**: the package triad
+  (`docs/intent/agentmcp-hex.md`, `docs/boundary/agentmcp-hex.md`) scopes
+  `agentmcp-hex` as a hex-grid testing harness — deterministic decimal math,
+  16-task fleet, CI integration — while the disposition extraction row frames the same
+  lift as an MCP client extraction with "hexagonal DDD pattern preserved."
+  Whether any MCP client ports survived inside the package is not resolvable
+  from registry records; check the `phenotype-python-sdk` source before
+  claiming MCP client capability anywhere.
 - **Tombstone or re-point**: should the AgentMCP disposition rows be given an
   explicit tombstone (as with `repo-phenotype-config` / `repo-kvirtualdesktop-core`)
   now that neither AgentMCP nor Agentora is on GitHub?
@@ -104,6 +115,7 @@ the retirement of the standalone repo.
 
 ## Change Log
 
-| Date       | Change                                                                                      | Worklog                 |
-| ---------- | ------------------------------------------------------------------------------------------- | ----------------------- |
-| 2026-09-27 | Initial CVP (WBS A3.2). Documents shipped `agentmcp-hex` slice + standalone-repo retirement | PHENOREG-FORWARD-WBS A3 |
+| Date       | Change                                                                                                                        | Worklog                 |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 2026-09-27 | Initial CVP (WBS A3.2). Documents shipped `agentmcp-hex` slice + standalone-repo retirement                                   | PHENOREG-FORWARD-WBS A3 |
+| 2026-09-27 | Review fixes: port-name claims removed (package records scope a hex-grid harness); scope contradiction added as Open Question | PR #585 review round    |

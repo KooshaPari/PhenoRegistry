@@ -14,7 +14,7 @@ device: macbook
 
 ## Intent Statement
 
-Preserve the fleet's MCP client capability as the hexagonal `agentmcp-hex` package inside `phenotype-python-sdk` — agent, MCP-directory, and tool ports intact (DDD preserved from `McpKit/python/agentmcp/` v0.x.x → 0.3.0, shipped as a P1 patch per the McpKit absorption audit, `phenotype-python-sdk#21` merged 2026-06-19) — while the higher-level MCP _patterns_ were routed to Agentora during the ADR-017/019 retirement wave (2026-06-17/18). The standalone AgentMCP repository is retired; what the fleet must not lose is the Python SDK's MCP client slice: an agent with protocol-facing directory/tools ports.
+Preserve the fleet's extracted MCP-side package as the hexagonal `agentmcp-hex` package inside `phenotype-python-sdk` — scoped by the package triad as the deterministic hex-grid testing harness (exact-decimal math, 16-task fleet, CI integration), extracted with "hexagonal DDD pattern preserved" from `McpKit/python/agentmcp/` v0.x.x → 0.3.0 as a P1 patch per the McpKit absorption audit (disposition row id=54, `phenotype-python-sdk#21` merged 2026-06-19) — while the higher-level MCP _patterns_ were routed to Agentora during the ADR-017/019 retirement wave (2026-06-17/18). The standalone AgentMCP repository is retired; what the fleet must not lose is the extracted package and its provenance chain. Whether MCP client ports (the pre-extraction surface) survived inside the package is an open question: the package records define the harness scope only.
 
 ## Bound Prompts
 
@@ -62,6 +62,7 @@ Legacy MCP client hub, retired 2026-06-17/18 per ADR-017/019: Py package lives o
 
 ## Open Questions
 
+- **Package scope contradiction**: `docs/intent/agentmcp-hex.md` and `docs/boundary/agentmcp-hex.md` (the package triad) scope `agentmcp-hex` as a hex-grid testing harness, while the disposition extraction row frames the lift as an MCP client extraction with "hexagonal DDD pattern preserved." Port-level claims (agent / directory / tools) are not evidenced by package records — verify against the `phenotype-python-sdk` source before asserting MCP client capability.
 - **Pattern target unreachable**: Agentora (`KooshaPari/Agentora`) also returns 404 as of 2026-09-27, and the disposition rows contradict each other (`queue-repo-agentora` says canonical; `repo-Agentora` says `TOO_LARGE_RETIRE` targeting `pheno (crates/agentora)`). Resolve before the next boundary review.
 - **Tombstone or re-point**: should the AgentMCP disposition rows get an explicit tombstone (as `repo-phenotype-config` did) now that neither AgentMCP nor Agentora is on GitHub?
 - **Does `agentmcp-hex` get its own first-class CVP?** It already has its own intent/boundary triad.
@@ -72,3 +73,4 @@ Legacy MCP client hub, retired 2026-06-17/18 per ADR-017/019: Py package lives o
 | ---------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | 2026-06-17 | Initial binding (L7-001 sweep)                                                                       | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
 | 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AgentMCP.md`) | PHENOREG-FORWARD-WBS A3.2 / C3.3                           |
+| 2026-09-27 | Review fixes: port-name claims removed; package scope contradiction added as Open Question           | PR #585 review round                                       |

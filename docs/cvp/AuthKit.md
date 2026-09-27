@@ -11,7 +11,7 @@ build_deploy_status: "mirror-only"
 
 ## Identity
 
-AuthKit is the **canonical authentication and authorization runtime boundary**
+AuthKit is the **canonical authentication runtime boundary**
 of the Phenotype fleet: a Rust crate (hexagonal `SessionStore` port + tower
 PKCE middleware) that supersedes Authvault and is designated the standalone,
 WorkOS-themed auth hub by USER-DECISION 2026-07-19. The thing it does that
@@ -29,11 +29,13 @@ The AuthKit CVP is **a PhenoService that can**:
    `064b310`).
 2. Store and retrieve sessions exclusively through the `SessionStore` port
    (in-memory implementation for now).
-3. Run the crate's unit suite — 11 tests covering PKCE state binding — green
-   on every push.
+3. Run the crate's unit suite — 11 tests covering PKCE state binding —
+   from the local mirror (the card's `ci_state` still reads `CI not yet
+configured`, and the GitHub 404 makes remote CI status unverifiable).
 4. Build from a pinned toolchain with the repo's hardening scaffolding
-   present: `rust-toolchain.toml`, `deny.toml`, `gitleaks.toml`, `mutants.toml`,
-   `fuzz/`, `.circleci` CI, `Justfile`/`Makefile` drivers.
+   present in the mirror: `rust-toolchain.toml`, `deny.toml`, `gitleaks.toml`,
+   `mutants.toml`, `fuzz/`, `.circleci` CI config, `Justfile`/`Makefile`
+   drivers — files present, CI execution unconfirmed (`ci_state` caveat above).
 
 That slice already exists in the local mirror; the CVP question is whether it
 stays reachable and CI-backed (see registry reality below).
@@ -45,7 +47,8 @@ stays reachable and CI-backed (see registry reality below).
 - **`SessionStore` hexagonal port** with an in-memory implementation; other
   implementations (Redis, KMS-backed) are post-CVP.
 - **Hardening scaffolding**: pinned Rust toolchain, cargo-deny, gitleaks,
-  cargo-mutants config, fuzz targets, CI config.
+  cargo-mutants config, fuzz targets, CI config files (present in the mirror;
+  card `ci_state` says not yet configured — CI execution unconfirmed).
 - **Boundary documentation**: `docs/` + `specs/` in-repo, cross-linked to
   `docs/boundary/AuthKit.md` and `docs/intent/AuthKit.md` in the registry.
 - **Registry triad**: this CVP + intent + boundary, kept checked against the
@@ -104,9 +107,14 @@ repos/KooshaPari/AuthKit` and `git ls-remote` (both not-found) with a
   `libs/auth-ts` — pick one canonical home and update ECOSYSTEM_MAP.
 - **Card consolidation**: merge or correct the Rust/Go discrepancy between
   `projects/AuthKit.json` and `projects/AuthKit-2026-06-25.json`.
+- **CI state discrepancy**: the local mirror contains `.circleci/`,
+  `gitleaks.toml`, `mutants.toml` etc. while the card's `ci_state` reads
+  `newly-created; CI not yet configured (SOTA-001 unit)` — reconcile the card
+  with the tree (or vice versa) at the next boundary review.
 
 ## Change Log
 
-| Date       | Change                                                                                     | Worklog                 |
-| ---------- | ------------------------------------------------------------------------------------------ | ----------------------- |
-| 2026-09-27 | Initial CVP (WBS A3.1). GitHub 404 + local-mirror status recorded; triad authored same day | PHENOREG-FORWARD-WBS A3 |
+| Date       | Change                                                                                                         | Worklog                 |
+| ---------- | -------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 2026-09-27 | Initial CVP (WBS A3.1). GitHub 404 + local-mirror status recorded; triad authored same day                     | PHENOREG-FORWARD-WBS A3 |
+| 2026-09-27 | Review fixes: authentication-only boundary wording (services own authz), CI claim corrected to card `ci_state` | PR #585 review round    |

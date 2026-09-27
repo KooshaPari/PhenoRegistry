@@ -6,7 +6,7 @@ status: active
 last_boundary_review: 2026-09-27
 review_cadence: 30d
 in_scope:
-  - "apps/<name> BLOCK-A application children with lift provenance (tracely, conft, apisync, melosviz, subject, testing-kit, helios-app, ...)"
+  - "apps/<name> BLOCK-A application children with lift provenance (tracely, conft, apisync, subject, helios-app; excluded: datakit voided, planify rejected, melosviz independent, testing-kit retired -> python-sdk)"
   - "archive/ retirement shelf on the default branch (FocalPoint, PhenoInfra)"
   - "ADR-023 application-collection policy enforcement (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
@@ -47,13 +47,13 @@ out_of_scope:
 
 ## Boundary Crossings
 
-| Crossing                                                                                | Direction                             | Surface                   | Status                                                                |
-| --------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| Absorbed app lift (tracely, conft, apisync, melosviz, subject, testing-kit, helios-app) | source repo → PhenoApps `apps/<name>` | git lift + build verify   | green (registry-cited July lifts)                                     |
-| FocalPoint / PhenoInfra retirement move                                                 | source repo → `archive/`              | git archive move          | green (PR #169, 2026-09-17)                                           |
-| `apps/<name>` children reachable at default-branch root                                 | PhenoApps → verifiers                 | git tree                  | amber (root now `archive/` only; post-2026-09-16 location unverified) |
-| Planify upstream sync                                                                   | upstream Plane → `upstream/`          | vendored subtree          | amber (read-only; do not modify)                                      |
-| Services consuming absorbed apps                                                        | PhenoServices → PhenoApps             | package / repo dependency | amber (depends on children location question)                         |
+| Crossing                                                                                                         | Direction                             | Surface                   | Status                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------- | -------------------------------------------------------------------------- |
+| Absorbed app lift (tracely, conft, apisync, subject, helios-app; excluded cohorts per card/disposition evidence) | source repo → PhenoApps `apps/<name>` | git lift + build verify   | green (registry-cited July lifts; tree location unresolved — see cvp gate) |
+| FocalPoint / PhenoInfra retirement move                                                                          | source repo → `archive/`              | git archive move          | green (PR #169, 2026-09-17)                                                |
+| `apps/<name>` children reachable at default-branch root                                                          | PhenoApps → verifiers                 | git tree                  | amber (root now `archive/` only; post-2026-09-16 location unverified)      |
+| Planify upstream sync                                                                                            | upstream Plane → `upstream/`          | vendored subtree          | amber (read-only; do not modify)                                           |
+| Services consuming absorbed apps                                                                                 | PhenoServices → PhenoApps             | package / repo dependency | amber (depends on children location question)                              |
 
 ## Last Boundary Review
 
