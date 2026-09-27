@@ -1,7 +1,7 @@
 # Absorption: backend → phenotype-python-sdk/packages/melosviz
 
-**Source**: `<REDACTED>/backend` (MelosViz scoring engine, 48KB)
-**Target**: `<REDACTED>/phenotype-python-sdk` as `packages/melosviz/`
+**Source**: `&lt;REDACTED&gt;/backend` (MelosViz scoring engine, 48KB)
+**Target**: `&lt;REDACTED&gt;/phenotype-python-sdk` as `packages/melosviz/`
 **Wave**: 2026-07-17-queue-refresh-2
 **Branch**: `wip/2026-07-16-0030-auto` (commit `bbeedd5`)
 **Disposition row**: `repo-backend-melosviz`
@@ -9,7 +9,7 @@
 
 ## Source identity
 
-`<REDACTED>/backend` is the MelosViz scoring engine: a Python package
+`&lt;REDACTED&gt;/backend` is the MelosViz scoring engine: a Python package
 that takes audio (or any artifact) and produces a renderable score
 spec plus an FFmpeg-backed video exporter. It bundles analysis
 models, a conductor/router, preset definitions, a CLI, and a

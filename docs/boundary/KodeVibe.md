@@ -21,19 +21,19 @@ tool directory within the phenotype-tooling collection.
 
 ## Content migrated
 
-| Item | Source path | Target path |
-|------|-------------|-------------|
-| Go source | `engine/*.go` (38 files) | `phenotype-tooling/tools/kodevibe/engine/` |
-| Binary | `kodevibe` | `phenotype-tooling/tools/kodevibe/kodevibe` |
-| Build config | `Makefile`, `.goreleaser.yaml` | `phenotype-tooling/tools/kodevibe/` |
-| Installer | `install.sh` | `phenotype-tooling/tools/kodevibe/install.sh` |
-| Docs | `docs/`, `README.md`, `AGENTS.md`, `CLAUDE.md` | `phenotype-tooling/tools/kodevibe/` |
-| Config | `.kodevibe.yaml`, charter/intent/SOTA | `phenotype-tooling/tools/kodevibe/` |
-| Governance | `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md` | `phenotype-tooling/tools/kodevibe/` |
+| Item         | Source path                                            | Target path                                   |
+| ------------ | ------------------------------------------------------ | --------------------------------------------- |
+| Go source    | `engine/*.go` (38 files)                               | `phenotype-tooling/tools/kodevibe/engine/`    |
+| Binary       | `kodevibe`                                             | `phenotype-tooling/tools/kodevibe/kodevibe`   |
+| Build config | `Makefile`, `.goreleaser.yaml`                         | `phenotype-tooling/tools/kodevibe/`           |
+| Installer    | `install.sh`                                           | `phenotype-tooling/tools/kodevibe/install.sh` |
+| Docs         | `docs/`, `README.md`, `AGENTS.md`, `CLAUDE.md`         | `phenotype-tooling/tools/kodevibe/`           |
+| Config       | `.kodevibe.yaml`, charter/intent/SOTA                  | `phenotype-tooling/tools/kodevibe/`           |
+| Governance   | `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md` | `phenotype-tooling/tools/kodevibe/`           |
 
 Total: 158 files.
 
 ## Outcome
 
-Source repo `<REDACTED>/KodeVibe` archived on GitHub.
+Source repo `&lt;REDACTED&gt;/KodeVibe` archived on GitHub.
 Registry disposition-index updated: disposition=ABSORB, target=phenotype-tooling.

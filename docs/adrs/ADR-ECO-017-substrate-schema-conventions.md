@@ -40,36 +40,35 @@ requirements** rather than prose conventions.
 
 2. **Required schema fields (per substrate entry):**
 
-   | Field | Required when | Allowed values |
-   |---|---|---|
-   | `id` | always | `^[a-z0-9-]+$` (unique slug) |
-   | `repo` | always | `^<REDACTED>/<name>$` |
-   | `name` | always | human-readable repo name |
-   | `status` | always | `active`, `archived`, `deprecated`, `absorbed` |
-   | `tier` | always | `pheno-lib`, `phenotype-sdk`, `phenotype-framework`, `federated-service` |
-   | `architecture` | tier = `phenotype-framework` | `hexagonal-l4`, `layered`, `microkernel`, `none` |
-   | `ports` | architecture = `hexagonal-l4` | list of `*Port` trait names |
-   | `adapters` | architecture = `hexagonal-l4` | list of `*Adapter` impl names |
-   | `language` | always | `rust`, `python`, `typescript`, `go`, `swift`, `zig`, `mojo` |
-   | `role` | always | domain role per DOMAIN_ROLES.md |
-   | `boundary` | optional | relative path to `docs/boundary/<id>.md` (or `null`) |
-   | `intent` | optional | relative path to `docs/intent/<id>.md` (or `null`) |
-   | `notes` | optional | free-form context |
+   | Field          | Required when                 | Allowed values                                                           |
+   | -------------- | ----------------------------- | ------------------------------------------------------------------------ |
+   | `id`           | always                        | `^[a-z0-9-]+$` (unique slug)                                             |
+   | `repo`         | always                        | `^&lt;REDACTED&gt;/<name>$`                                              |
+   | `name`         | always                        | human-readable repo name                                                 |
+   | `status`       | always                        | `active`, `archived`, `deprecated`, `absorbed`                           |
+   | `tier`         | always                        | `pheno-lib`, `phenotype-sdk`, `phenotype-framework`, `federated-service` |
+   | `architecture` | tier = `phenotype-framework`  | `hexagonal-l4`, `layered`, `microkernel`, `none`                         |
+   | `ports`        | architecture = `hexagonal-l4` | list of `*Port` trait names                                              |
+   | `adapters`     | architecture = `hexagonal-l4` | list of `*Adapter` impl names                                            |
+   | `language`     | always                        | `rust`, `python`, `typescript`, `go`, `swift`, `zig`, `mojo`             |
+   | `role`         | always                        | domain role per DOMAIN_ROLES.md                                          |
+   | `boundary`     | optional                      | relative path to `docs/boundary/<id>.md` (or `null`)                     |
+   | `intent`       | optional                      | relative path to `docs/intent/<id>.md` (or `null`)                       |
+   | `notes`        | optional                      | free-form context                                                        |
 
 3. **Tier classification (ported from monorepo ADR-013 + ADR-023):**
 
-   | Tier | Definition | Examples (canonical substrate) |
-   |---|---|---|
-   | `pheno-lib` | Pure reusable library; single concern; language-specific | `pheno-config`, `pheno-context`, `pheno-port-adapter` (and Configra's four sub-crates) |
-   | `phenotype-sdk` | Cross-language SDK; stable public API; polyglot facade | `phenotype-go-sdk`, `phenotype-python-sdk` |
-   | `phenotype-framework` | IoC framework; opinionated lifecycle; ports; adapters | `phenotype-hub`, `phenotype-bus` |
-   | `federated-service` | Stateful; long-running; independently scalable | `pheno-mcp-router`, `phenotype-otel`, `phenotype-events` |
+   | Tier                  | Definition                                               | Examples (canonical substrate)                                                         |
+   | --------------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+   | `pheno-lib`           | Pure reusable library; single concern; language-specific | `pheno-config`, `pheno-context`, `pheno-port-adapter` (and Configra's four sub-crates) |
+   | `phenotype-sdk`       | Cross-language SDK; stable public API; polyglot facade   | `phenotype-go-sdk`, `phenotype-python-sdk`                                             |
+   | `phenotype-framework` | IoC framework; opinionated lifecycle; ports; adapters    | `phenotype-hub`, `phenotype-bus`                                                       |
+   | `federated-service`   | Stateful; long-running; independently scalable           | `pheno-mcp-router`, `phenotype-otel`, `phenotype-events`                               |
 
    Every substrate entry MUST declare exactly one tier. The tier drives
    coverage gates in ADR-040 (80 % lib / 70 % framework / 60 % service).
 
 4. **Hexagonal port/adapter naming (ported from monorepo ADR-014):**
-
    - A `Port` trait name MUST end in `Port` (CamelCase): `LlmPort`,
      `CostPort`, `McpPort`, etc. No `*Provider`, `*Sink`, `*Interface`.
    - An `Adapter` impl name MUST end in `Adapter` (CamelCase):
@@ -79,7 +78,6 @@ requirements** rather than prose conventions.
      in `adapters/` (Rust) or equivalent per-language convention.
 
 5. **Validation surface:**
-
    - `scripts/validate-catalog.py` is the offline validator.
    - `.github/workflows/registry-validate.yml` runs it on every PR.
    - `catalog/registry.schema.json` is the JSON Schema document (for
@@ -104,7 +102,7 @@ requirements** rather than prose conventions.
 - **Wave 1 (this PR, T23, 2026-06-20):** 3 entries — Configra,
   pheno-tracing, pheno-mcp-router. Configra has full docs; the other
   two are `archived` so `boundary: null` is acceptable.
-- **Wave 2 (planned, T23-P2):** add remaining active pheno-* repos.
+- **Wave 2 (planned, T23-P2):** add remaining active pheno-\* repos.
 - **Wave 3 (planned, T23-P3):** add phenotype-sdk and
   phenotype-framework entries.
 

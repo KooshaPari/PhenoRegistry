@@ -61,12 +61,12 @@ The absorption-runbook failsafe clause allows skipping the `cp -r` step when
 
 ### 2. Build is heavy / conflicts exist
 
-| Action | Cost | Conflict |
-|--------|------|----------|
-| `cp -r phenotype-landing/* phenodocs/packages/landing/` | ~1.6 GB copied; tracked source ~1.5 MB after `--exclude=node_modules,dist` | Bloats `phenodocs/.git` and creates nested monorepo |
-| `bun install` at root | tries to hoist 7 sites' deps → version conflicts (astro pinned differently across sites) | breaks `phenodocs`'s existing root `bun.lock` |
-| `vitepress build` | would fail because `packages/landing/*` has no `index.md` for VitePress | conflicts with landing's Astro pages |
-| `.github/workflows/ci.yml` (root of landing) | runs Astro typecheck+build for 6 sites | duplicates `phenodocs`'s VitePress CI |
+| Action                                                  | Cost                                                                                     | Conflict                                            |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| `cp -r phenotype-landing/* phenodocs/packages/landing/` | ~1.6 GB copied; tracked source ~1.5 MB after `--exclude=node_modules,dist`               | Bloats `phenodocs/.git` and creates nested monorepo |
+| `bun install` at root                                   | tries to hoist 7 sites' deps → version conflicts (astro pinned differently across sites) | breaks `phenodocs`'s existing root `bun.lock`       |
+| `vitepress build`                                       | would fail because `packages/landing/*` has no `index.md` for VitePress                  | conflicts with landing's Astro pages                |
+| `.github/workflows/ci.yml` (root of landing)            | runs Astro typecheck+build for 6 sites                                                   | duplicates `phenodocs`'s VitePress CI               |
 
 ### 3. Concrete structural mismatch
 
@@ -82,8 +82,8 @@ These invariants conflict directly with `phenodocs`'s bun-workspace design
 
 ## What was archived instead
 
-- Source repo: `<REDACTED>/phenotype-landing` → archived on GitHub via
-  `gh repo archive <REDACTED>/phenotype-landing --yes`
+- Source repo: `&lt;REDACTED&gt;/phenotype-landing` → archived on GitHub via
+  `gh repo archive &lt;REDACTED&gt;/phenotype-landing --yes`
 - Registry row: `repo-phenotype-landing` → `disposition=ARCHIVE_ONLY`,
   `fsm=absorbed`, `archived_at=2026-07-17T15:50:00.000000Z`,
   `target="phenodocs (packages/landing/ — deferred absorption stub; no code copied)"`
@@ -117,6 +117,7 @@ forward-pointer at `phenodocs/packages/landing/` stands.
 **Reviewer:** Forge (autonomous governance audit, failsafe trigger)
 **Worklog / finding:** `audits/absorption-justifications/phenotype-landing-deferred-2026-07-17.md`
 **Decisions:**
+
 - Absorption into `phenodocs/packages/landing/` rejected.
 - Pivoted to `ARCHIVE_ONLY` (failsafe clause met).
 - Source repo archived on GitHub.

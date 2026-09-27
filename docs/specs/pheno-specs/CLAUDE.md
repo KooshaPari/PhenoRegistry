@@ -3,15 +3,17 @@
 Unified specification registry for the Phenotype ecosystem. Central source of truth for design specifications, requirements documents, ADRs, and API contracts across all Phenotype projects.
 
 ## Stack
-| Layer | Technology |
-|-------|------------|
-| Content | Markdown (CommonMark) |
-| Publishing | VitePress (GitHub Pages) |
-| CI | GitHub Actions |
+
+| Layer      | Technology                  |
+| ---------- | --------------------------- |
+| Content    | Markdown (CommonMark)       |
+| Publishing | VitePress (GitHub Pages)    |
+| CI         | GitHub Actions              |
 | Validation | markdownlint, link checking |
-| Registry | Flat file system (specs/) |
+| Registry   | Flat file system (specs/)   |
 
 ## Key Commands
+
 ```bash
 # Browse specs
 ls specs/                          # Top-level domains
@@ -27,6 +29,7 @@ cd docs && npm install && npm run docs:dev
 ```
 
 ## Key Files
+
 - `specs/` — Specification source files organized by domain
 - `specs/auth/` — Authentication domain specs
 - `specs/crypto/` — Cryptography domain specs
@@ -35,4 +38,5 @@ cd docs && npm install && npm run docs:dev
 - `.github/workflows/legacy-tooling-gate.yml` — Quality gate workflow
 
 ## Reference
-Global Phenotype rules: see `~/.claude/CLAUDE.md` or `/Users/<REDACTED>/CodeProjects/Phenotype/repos/CLAUDE.md`
+
+Global Phenotype rules: see `~/.claude/CLAUDE.md` or `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/CLAUDE.md`

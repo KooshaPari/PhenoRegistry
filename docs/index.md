@@ -6,12 +6,12 @@ and library research into one reference surface.
 
 ## Core Registries
 
-| Registry | Purpose | Canonical Surface |
-| --- | --- | --- |
-| PhenoSpecs | Product specifications, ADRs, and API contracts | [`<REDACTED>/PhenoSpecs`](https://github.com/KooshaPari/PhenoSpecs) |
-| PhenoHandbook | Patterns, anti-patterns, guidelines, and methodologies | [`<REDACTED>/PhenoHandbook`](https://github.com/KooshaPari/PhenoHandbook) |
-| HexaKit | Template and scaffold registry | [`<REDACTED>/HexaKit`](https://github.com/KooshaPari/HexaKit) |
-| Library Research | Wrap-vs-handroll evidence and dependency catalog | [`LIBRARY_RESEARCH_REGISTRY.md`](https://github.com/KooshaPari/phenotype-registry/blob/main/LIBRARY_RESEARCH_REGISTRY.md) |
+| Registry         | Purpose                                                | Canonical Surface                                                                                                         |
+| ---------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| PhenoSpecs       | Product specifications, ADRs, and API contracts        | [`&lt;REDACTED&gt;/PhenoSpecs`](https://github.com/KooshaPari/PhenoSpecs)                                                 |
+| PhenoHandbook    | Patterns, anti-patterns, guidelines, and methodologies | [`&lt;REDACTED&gt;/PhenoHandbook`](https://github.com/KooshaPari/PhenoHandbook)                                           |
+| HexaKit          | Template and scaffold registry                         | [`&lt;REDACTED&gt;/HexaKit`](https://github.com/KooshaPari/HexaKit)                                                       |
+| Library Research | Wrap-vs-handroll evidence and dependency catalog       | [`LIBRARY_RESEARCH_REGISTRY.md`](https://github.com/KooshaPari/phenotype-registry/blob/main/LIBRARY_RESEARCH_REGISTRY.md) |
 
 ## Quick Paths
 
@@ -30,18 +30,18 @@ and library research into one reference surface.
 
 ## Rationalization (2026-06)
 
-| Doc | Purpose |
-| --- | --- |
-| [boundary-shaping](./rationalization/boundary-shaping.md) | DECOMPOSE / ABSORB / DYNAMIC-KEEP disposition |
-| [STACK_POLICY](./rationalization/STACK_POLICY.md) | Language stack policy |
-| [DOMAIN_ROLES](./rationalization/DOMAIN_ROLES.md) | Domain role assignments |
-| [ZERO_LOOP_ECOSYSTEM_PLAN](./rationalization/ZERO_LOOP_ECOSYSTEM_PLAN.md) | Master plan: metrics, phases, PR fleet, spec catalog |
-| [ECOSYSTEM_DAG](./rationalization/ECOSYSTEM_DAG.md) | 20-lane parallel recipe with deps |
-| [SESSION_ARTIFACT_PROTOCOL](./rationalization/SESSION_ARTIFACT_PROTOCOL.md) | Resumable session folder contract |
-| [ADR-004 Staging](./adr/ADR-004-absorption-staging-vs-canonical.md) | Absorption staging vs canonical |
-| [ADR-005 AgilePlus](./adr/ADR-005-agileplus-governance-boundary.md) | AgilePlus governance boundary |
-| [ADR-006 Zero-Loop](./adr/ADR-006-zero-loop-agent-session.md) | Zero-loop agent sessions |
-| [BOUNDARY_OWNERS](https://github.com/KooshaPari/phenotype-registry/blob/main/BOUNDARY_OWNERS.md) | Capability SSOT (repo root) |
+| Doc                                                                                              | Purpose                                              |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| [boundary-shaping](./rationalization/boundary-shaping.md)                                        | DECOMPOSE / ABSORB / DYNAMIC-KEEP disposition        |
+| [STACK_POLICY](./rationalization/STACK_POLICY.md)                                                | Language stack policy                                |
+| [DOMAIN_ROLES](./rationalization/DOMAIN_ROLES.md)                                                | Domain role assignments                              |
+| [ZERO_LOOP_ECOSYSTEM_PLAN](./rationalization/ZERO_LOOP_ECOSYSTEM_PLAN.md)                        | Master plan: metrics, phases, PR fleet, spec catalog |
+| [ECOSYSTEM_DAG](./rationalization/ECOSYSTEM_DAG.md)                                              | 20-lane parallel recipe with deps                    |
+| [SESSION_ARTIFACT_PROTOCOL](./rationalization/SESSION_ARTIFACT_PROTOCOL.md)                      | Resumable session folder contract                    |
+| [ADR-004 Staging](./adr/ADR-004-absorption-staging-vs-canonical.md)                              | Absorption staging vs canonical                      |
+| [ADR-005 AgilePlus](./adr/ADR-005-agileplus-governance-boundary.md)                              | AgilePlus governance boundary                        |
+| [ADR-006 Zero-Loop](./adr/ADR-006-zero-loop-agent-session.md)                                    | Zero-loop agent sessions                             |
+| [BOUNDARY_OWNERS](https://github.com/KooshaPari/phenotype-registry/blob/main/BOUNDARY_OWNERS.md) | Capability SSOT (repo root)                          |
 
 ## Operating Contract
 
@@ -55,5 +55,7 @@ and library research into one reference surface.
 ## Rich Media Stubs
 
 <!-- RICH-MEDIA-STUB type="annotated-screenshot" subject="Phenotype Registry navigation hub overview" journey="" status="TODO" -->
-> **[RICH MEDIA PLACEHOLDER]** *Annotated screenshot of the registry hub showing the four registry tiles and quick-path navigation.*
+
+> **[RICH MEDIA PLACEHOLDER]** _Annotated screenshot of the registry hub showing the four registry tiles and quick-path navigation._
+
 <!-- END-RICH-MEDIA-STUB -->

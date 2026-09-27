@@ -8,9 +8,9 @@
 
 | Repo | `isArchived` | Notes |
 |------|--------------|-------|
-| `<REDACTED>/PhenoProc` | `true` | pre-archived; Agentora #79 merged |
-| `<REDACTED>/PhenoKits` | `true` | pre-archived; phenokits-commons #3 merged |
-| `<REDACTED>/Metron` | `true` | archived this session via `gh api` PATCH |
+| `&lt;REDACTED&gt;/PhenoProc` | `true` | pre-archived; Agentora #79 merged |
+| `&lt;REDACTED&gt;/PhenoKits` | `true` | pre-archived; phenokits-commons #3 merged |
+| `&lt;REDACTED&gt;/Metron` | `true` | archived this session via `gh api` PATCH |
 | ObservabilityKit | N/A | never a standalone GitHub repo; package in phenotype-python-sdk |
 
 ## Verification

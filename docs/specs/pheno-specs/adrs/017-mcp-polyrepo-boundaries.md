@@ -3,7 +3,7 @@ id: ADR-017
 title: MCP Polyrepo Boundaries (Framework / Implementations / Runtime)
 status: accepted
 date: 2026-06-17
-author: <REDACTED>
+author: &lt;REDACTED&gt;
 tags: [mcp, governance, polyrepo, architecture]
 ---
 
@@ -29,20 +29,20 @@ We need a **domain-first** boundary that agents can read once and execute withou
 
 ### Three layers
 
-| Layer | Canonical repos | Owns |
-|-------|-----------------|------|
-| **Framework** | PhenoFastMCP (py), PhenoFastMCP-go, PhenoFastMCP-rust, PhenoRMCP | Fork policy, transports, macros, CLI, upstream sync |
-| **Implementations** | PhenoMCPServers | `servers/`, `skills/`, `plugins/`, `agents/`, `catalog/registry.yaml` |
-| **Runtime** | substrate | driver-http, driver-argv, cheap-llm CLI routing, fleet mailbox — not MCP framework |
+| Layer               | Canonical repos                                                  | Owns                                                                               |
+| ------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Framework**       | PhenoFastMCP (py), PhenoFastMCP-go, PhenoFastMCP-rust, PhenoRMCP | Fork policy, transports, macros, CLI, upstream sync                                |
+| **Implementations** | PhenoMCPServers                                                  | `servers/`, `skills/`, `plugins/`, `agents/`, `catalog/registry.yaml`              |
+| **Runtime**         | substrate                                                        | driver-http, driver-argv, cheap-llm CLI routing, fleet mailbox — not MCP framework |
 
 ### Framework fork parents (normative)
 
-| Phenotype repo | Upstream parent | Role |
-|----------------|-----------------|------|
-| PhenoFastMCP | PrefectHQ/fastmcp | fastmcp binding (tier 2) |
-| PhenoFastMCP-go | mark3labs/mcp-go | fastmcp-like Go edge (tier 1, justified) |
-| PhenoFastMCP-rust | Dicklesworthstone/fastmcp_rust | fastmcp-equivalent Rust framework (tier 0) |
-| PhenoRMCP | modelcontextprotocol/rust-sdk | Official rmcp spec SDK (tier 0) — **not** PhenoFastMCP branding |
+| Phenotype repo    | Upstream parent                | Role                                                            |
+| ----------------- | ------------------------------ | --------------------------------------------------------------- |
+| PhenoFastMCP      | PrefectHQ/fastmcp              | fastmcp binding (tier 2)                                        |
+| PhenoFastMCP-go   | mark3labs/mcp-go               | fastmcp-like Go edge (tier 1, justified)                        |
+| PhenoFastMCP-rust | Dicklesworthstone/fastmcp_rust | fastmcp-equivalent Rust framework (tier 0)                      |
+| PhenoRMCP         | modelcontextprotocol/rust-sdk  | Official rmcp spec SDK (tier 0) — **not** PhenoFastMCP branding |
 
 ### Language tiers
 
@@ -56,7 +56,7 @@ Normative detail: [PhenoMCPServers/docs/LANGUAGE-TIERS-AND-ROLES.md](https://git
 ### Anti-patterns (do not create)
 
 - `phenotype-rust-sdk`, `phenotype-go-sdk` as MCP framework homes
-- McpKit as lib warehouse (framework → PhenoFastMCP* forks)
+- McpKit as lib warehouse (framework → PhenoFastMCP\* forks)
 - Mirror-push into empty repo instead of `gh repo fork`
 - Deployable MCP servers inside framework fork repos
 - cheap-llm as separate MCP server repo (substrate `driver-argv` only)

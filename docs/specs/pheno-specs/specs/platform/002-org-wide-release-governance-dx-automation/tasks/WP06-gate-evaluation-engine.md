@@ -5,20 +5,20 @@ lane: "done"
 dependencies: [WP01]
 base_branch: 002-org-wide-release-governance-dx-automation-WP01
 base_commit: 50c5fe5c522c6cec9f56b7d88f9628b7ff80b5cc
-created_at: '2026-03-01T15:30:09.801450+00:00'
+created_at: "2026-03-01T15:30:09.801450+00:00"
 subtasks: [T032, T033, T034, T035, T036, T037]
 phase: Phase 2 - CLI Commands
-assignee: ''
+assignee: ""
 agent: "wp06-agent"
 shell_pid: "11318"
 review_status: "approved"
 reviewed_by: "Koosha Paridehpour"
 history:
-- timestamp: '2026-03-01T13:00:00Z'
-  lane: planned
-  agent: system
-  shell_pid: ''
-  action: Prompt generated via /spec-kitty.tasks
+  - timestamp: "2026-03-01T13:00:00Z"
+    lane: planned
+    agent: system
+    shell_pid: ""
+    action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP06 – Gate Evaluation Engine
@@ -48,10 +48,12 @@ This work package implements the core gate evaluation engine that enforces quali
 ## Subtasks & Detailed Guidance
 
 ### Subtask T032 – Gate Criteria Data Model
+
 - **Purpose**: Define the structure for configurable quality gates that can be evaluated per channel
 - **Steps**:
   1. Create `internal/gate/criteria.go`
   2. Define the `Channel` type as a constant iota:
+
      ```go
      package gate
 
@@ -82,6 +84,7 @@ This work package implements the core gate evaluation engine that enforces quali
          }
      }
      ```
+
   3. Define the `GateCriterion` struct with fields: ID (string, unique key), Name (human-readable), Command (shell command to execute), RequiredFrom (Channel where this gate activates)
      ```go
      type GateCriterion struct {
@@ -139,6 +142,7 @@ This work package implements the core gate evaluation engine that enforces quali
      }
      ```
   5. Add a `GateSet` type to represent a collection of gates filtered for a target channel:
+
      ```go
      type GateSet struct {
          Criteria []GateCriterion
@@ -155,11 +159,12 @@ This work package implements the core gate evaluation engine that enforces quali
      }
      ```
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/criteria.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/criteria.go`
 - **Parallel?**: No (prerequisite for T033–T036)
 - **Notes**: Ensure Channel ordering is meaningful for gate filtering; GateCriterion struct must be serializable for config files (use struct tags for YAML/JSON)
 
 ### Subtask T033 – Gate Evaluator Implementation
+
 - **Purpose**: Implement the core evaluation logic that executes each gate criterion and records results
 - **Steps**:
   1. Create `internal/gate/evaluator.go`
@@ -187,6 +192,7 @@ This work package implements the core gate evaluation engine that enforces quali
      }
      ```
   4. Implement the `Evaluate` function signature (see T034 for full logic):
+
      ```go
      type RiskProfile string
 
@@ -198,6 +204,7 @@ This work package implements the core gate evaluation engine that enforces quali
 
      func Evaluate(ctx context.Context, pkg *Package, fromChannel, toChannel Channel, riskProfile RiskProfile) (*PromotionReport, error)
      ```
+
   5. Implement gate criterion execution:
      - Accept target channel, return filtered gate set
      - For each criterion, spawn `exec.CommandContext` with timeout (default 5m)
@@ -207,11 +214,12 @@ This work package implements the core gate evaluation engine that enforces quali
   6. Aggregate results into `PromotionReport` with overall `Passed` flag (true only if all required gates pass)
   7. Add helper function to retrieve a single gate result by criterion ID for error reporting
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator.go`
 - **Parallel?**: No (builds on T032; T034 refines logic)
 - **Notes**: Use context with timeout to prevent hanging gates; log each criterion execution; return error if Package is nil or channels invalid; consider stderr as non-fatal (only fail if command exits non-zero)
 
 ### Subtask T034 – Risk-Based Promotion Rules
+
 - **Purpose**: Enforce risk-profile-dependent channel traversal constraints
 - **Steps**:
   1. Add risk-based promotion validation logic to `Evaluate` function in T033
@@ -222,6 +230,7 @@ This work package implements the core gate evaluation engine that enforces quali
      // High risk: must traverse all 5 tiers in order: Alpha → Canary → Beta → RC → Prod
      ```
   3. Implement validation before gate evaluation:
+
      ```go
      func ValidateChannelTransition(from, to Channel, risk RiskProfile) error {
          // Check that 'from' < 'to' (monotonic progression)
@@ -256,19 +265,22 @@ This work package implements the core gate evaluation engine that enforces quali
          return nil
      }
      ```
+
   4. Call `ValidateChannelTransition` at the start of `Evaluate`, returning error if invalid
   5. Document the rules in code comments with examples
   6. Add integration points with `Evaluate` to check risk before running gates
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator.go` (additions)
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator.go` (additions)
 - **Parallel?**: No (part of T033 flow)
 - **Notes**: Reject invalid transitions early to fail fast; include helpful error messages; consider that "skip" means moving more than one tier; validate that risk profile is not empty string
 
 ### Subtask T035 – Structured Report Formatting
+
 - **Purpose**: Generate human-readable Lipgloss tables and machine-readable JSON output for gate evaluation results
 - **Steps**:
   1. Create `internal/gate/reporter.go`
   2. Implement `FormatLipglossTable` function to render `PromotionReport` as a Lipgloss table:
+
      ```go
      import "github.com/charmbracelet/lipgloss"
 
@@ -279,6 +291,7 @@ This work package implements the core gate evaluation engine that enforces quali
          // Summary row at end: "Overall │ PASSED   │ 3.2s    │"
      }
      ```
+
   3. Implement `FormatJSON` function to serialize `PromotionReport` as structured JSON:
      ```go
      func FormatJSON(report *PromotionReport) (string, error) {
@@ -300,11 +313,12 @@ This work package implements the core gate evaluation engine that enforces quali
   5. Handle very long output (cap at 100 chars or ellipsize)
   6. Ensure both formats are valid, parseable, and machine-consumable
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/reporter.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/reporter.go`
 - **Parallel?**: Yes (after T033 completes)
 - **Notes**: Use Lipgloss `table.New()` with style chain for borders and colors; JSON must be valid and escape special chars; ensure timestamps are RFC3339 format
 
 ### Subtask T036 – Default Gate Criterion Implementation
+
 - **Purpose**: Implement built-in handlers for each default gate criterion, including special logic for file-based gates
 - **Steps**:
   1. Extend `internal/gate/criteria.go` or create `internal/gate/builtin.go` for special handlers
@@ -328,11 +342,12 @@ This work package implements the core gate evaluation engine that enforces quali
   5. In `Evaluate`, call special handler for rollback_plan and monitoring_dashboards instead of exec
   6. Document the special handling in code comments
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/criteria.go` or `internal/gate/builtin.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/criteria.go` or `internal/gate/builtin.go`
 - **Parallel?**: Yes (after T033)
 - **Notes**: Ensure rollback and monitoring checks are robust to different file locations; use package root as base directory; if a mise task doesn't exist, exec will fail naturally and that's acceptable
 
 ### Subtask T037 – Gate Evaluation Unit Tests
+
 - **Purpose**: Comprehensive test coverage for gate evaluation logic, risk-based skipping, and invalid transitions
 - **Steps**:
   1. Create `internal/gate/evaluator_test.go`
@@ -358,18 +373,18 @@ This work package implements the core gate evaluation engine that enforces quali
      - Gate command stderr (should not fail if exit code is 0)
   8. Add benchmarks for gate evaluation with varying numbers of gates
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator_test.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/reporter_test.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/evaluator_test.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/gate/reporter_test.go`
 - **Parallel?**: Yes (after T033–T036)
 - **Notes**: Use `testing.T` and `testify/assert` for assertions; isolate mocks to avoid cross-test contamination; test both success and failure paths for each gate type
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Mitigation |
-|------|------------|-----------|
-| Gate commands hang or timeout indefinitely | Medium | Set exec context timeout (5m default, configurable), use explicit cancellation |
-| Risk-based rules are ambiguous or allow incorrect skips | Medium | Document rules clearly with examples in code; comprehensive test matrix covering all transitions |
-| Lipgloss table formatting breaks on very long output | Low | Truncate/ellipsize long output; test with realistic command output sizes |
-| Gate criteria hard-coded instead of extensible | Low | Design gate criteria as pluggable; document how to add custom criteria |
+| Risk                                                    | Likelihood | Mitigation                                                                                       |
+| ------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| Gate commands hang or timeout indefinitely              | Medium     | Set exec context timeout (5m default, configurable), use explicit cancellation                   |
+| Risk-based rules are ambiguous or allow incorrect skips | Medium     | Document rules clearly with examples in code; comprehensive test matrix covering all transitions |
+| Lipgloss table formatting breaks on very long output    | Low        | Truncate/ellipsize long output; test with realistic command output sizes                         |
+| Gate criteria hard-coded instead of extensible          | Low        | Design gate criteria as pluggable; document how to add custom criteria                           |
 
 ## Review Guidance
 

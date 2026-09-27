@@ -28,17 +28,17 @@ PhenoMCPServers/
 
 ## Proposed spine (5-role)
 
-| Role | Spine member | Status |
-|---|---|---|
-| INDEX | `phenotype-registry` | live (this repo) |
-| ADRs/contracts | `PhenoSpecs` | absorbed into `docs/specs/pheno-specs/` (spine integrity flagged) |
-| CONVENTIONS | `PhenoHandbook` | absorbed into `phenodocs/docs/handbook/` (spine integrity flagged) |
-| ENFORCEMENT | `phenotype-org-governance` | live |
-| **IMPLEMENTATIONS** | **`PhenoMCPServers`** | **proposed here** |
+| Role                | Spine member               | Status                                                             |
+| ------------------- | -------------------------- | ------------------------------------------------------------------ |
+| INDEX               | `phenotype-registry`       | live (this repo)                                                   |
+| ADRs/contracts      | `PhenoSpecs`               | absorbed into `docs/specs/pheno-specs/` (spine integrity flagged)  |
+| CONVENTIONS         | `PhenoHandbook`            | absorbed into `phenodocs/docs/handbook/` (spine integrity flagged) |
+| ENFORCEMENT         | `phenotype-org-governance` | live                                                               |
+| **IMPLEMENTATIONS** | **`PhenoMCPServers`**      | **proposed here**                                                  |
 
 ## Status
 
-- Source repo (`<REDACTED>/PhenoMCPServers`): kept live
+- Source repo (`&lt;REDACTED&gt;/PhenoMCPServers`): kept live
 - Registry row: `fsm=archived disposition=DECLARE_SPINE` (this row formally
   records the spine role; do NOT mark `fsm=absorbed` because it isn't
   absorbed)

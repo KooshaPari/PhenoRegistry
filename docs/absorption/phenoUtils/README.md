@@ -1,7 +1,7 @@
 # phenoUtils Absorption
 
 **Date**: 2026-07-17
-**Source**: `<REDACTED>/phenoUtils` (archived)
+**Source**: `&lt;REDACTED&gt;/phenoUtils` (archived)
 **Target**: `pheno` monorepo as `crates/pheno-utils-*/`
 **Branch**: `absorb/pheno-utils-2026-07-17` (pushed to origin)
 **Wave**: `2026-07-17-queue-refresh-2`
@@ -10,16 +10,16 @@
 
 phenoUtils v0.1.0 — a 7-crate workspace of substrate-utility primitives:
 
-| Source crate | Target crate | LOC | Purpose |
-|--------------|--------------|-----|---------|
-| `pheno-shell` | `pheno-utils-shell` | ~900 | tokio-based async shell exec, command builder |
-| `pheno-fs` | `pheno-utils-fs` | ~800 | async file walker, hash, fs ops |
-| `pheno-net` | `pheno-utils-net` | ~1100 | reqwest wrapper, URL utils, retry helpers |
-| `pheno-async` | `pheno-utils-async` | ~600 | async patterns (barrier, latch, pool) |
-| `pheno-crypto` | `pheno-utils-crypto` | ~1100 | AES-GCM, HMAC, base64 helpers |
-| `pheno-testing` | `pheno-utils-testing` | ~1100 | wiremock harness, fixtures |
-| `chaos-injection` | `pheno-utils-chaos` | ~1200 | `FaultInjector` chaos testing primitive |
-| **Total** | | **6781 LOC** | |
+| Source crate      | Target crate          | LOC          | Purpose                                       |
+| ----------------- | --------------------- | ------------ | --------------------------------------------- |
+| `pheno-shell`     | `pheno-utils-shell`   | ~900         | tokio-based async shell exec, command builder |
+| `pheno-fs`        | `pheno-utils-fs`      | ~800         | async file walker, hash, fs ops               |
+| `pheno-net`       | `pheno-utils-net`     | ~1100        | reqwest wrapper, URL utils, retry helpers     |
+| `pheno-async`     | `pheno-utils-async`   | ~600         | async patterns (barrier, latch, pool)         |
+| `pheno-crypto`    | `pheno-utils-crypto`  | ~1100        | AES-GCM, HMAC, base64 helpers                 |
+| `pheno-testing`   | `pheno-utils-testing` | ~1100        | wiremock harness, fixtures                    |
+| `chaos-injection` | `pheno-utils-chaos`   | ~1200        | `FaultInjector` chaos testing primitive       |
+| **Total**         |                       | **6781 LOC** |                                               |
 
 ## Changes during absorption
 

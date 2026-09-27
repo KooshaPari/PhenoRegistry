@@ -45,7 +45,7 @@ gh repo restore <REDACTED>/<name>
 ## Executed
 
 - [ ] Batch 14 reviewed and approved by Koosha
-- [ ] `gh repo delete <REDACTED>/<name> -y` for each repo
+- [ ] `gh repo delete &lt;REDACTED&gt;/<name> -y` for each repo
 - [ ] Update `registry/disposition-index.json` with deletion timestamp
 - [ ] Update `docs/audits/depletion-progress-2026-07-17.md`
 

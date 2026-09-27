@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-19  
 **Scope:** Fleet `Cargo.toml` manifests under `migration-work/` clone root  
-**Gate:** Zero **new** path dependencies on `<REDACTED>/HexaKit` evicted crate trees
+**Gate:** Zero **new** path dependencies on `&lt;REDACTED&gt;/HexaKit` evicted crate trees
 
 ## Method
 
@@ -16,10 +16,10 @@ rg 'git\s*=\s*"https://github.com/KooshaPari/HexaKit' --glob 'Cargo.toml' migrat
 
 ## Results (2026-06-19)
 
-| Check | Count | Status |
-|-------|-------|--------|
-| HexaKit repo path deps | 0 | ✅ pass |
-| HexaKit git deps | 0 | ✅ pass |
+| Check                  | Count | Status  |
+| ---------------------- | ----- | ------- |
+| HexaKit repo path deps | 0     | ✅ pass |
+| HexaKit git deps       | 0     | ✅ pass |
 
 ## Notes
 

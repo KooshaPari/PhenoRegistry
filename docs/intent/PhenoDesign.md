@@ -4,15 +4,15 @@
 
 PhenoDesign is the **creativity / design / UX spine** for the Phenotype ecosystem. It is the single canonical home for design tokens, component patterns, art direction, and UX conventions consumed by every frontend repo (phenoAI, phenoData, phenotype-landing, heliosApp). Output: a published `@phenotype/design` package, Figma-aligned token library, and fleet-wide UX governance.
 
-The **asset render pipeline** (Blender, FFmpeg, ImageMagick, Unreal) lives in the peer repo [`<REDACTED>/asset-engine`](https://github.com/KooshaPari/asset-engine), extracted from the former `engine/` subtree (2026-07-20).
+The **asset render pipeline** (Blender, FFmpeg, ImageMagick, Unreal) lives in the peer repo [`&lt;REDACTED&gt;/asset-engine`](https://github.com/KooshaPari/asset-engine), extracted from the former `engine/` subtree (2026-07-20).
 
 ## Role
 
-| Layer | Role |
-|-------|------|
-| **Spine** | `CREATIVITY_DESIGN_UX` (see `docs/spine/SPINE-DEFINITION.md`) |
-| **Ecosystem map** | `design-system` + spine member |
-| **Disposition** | `LIVE` / `DECLARE_SPINE` — absorption into phenodocs reversed 2026-07-20 |
+| Layer             | Role                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| **Spine**         | `CREATIVITY_DESIGN_UX` (see `docs/spine/SPINE-DEFINITION.md`)            |
+| **Ecosystem map** | `design-system` + spine member                                           |
+| **Disposition**   | `LIVE` / `DECLARE_SPINE` — absorption into phenodocs reversed 2026-07-20 |
 
 ## Boundary
 

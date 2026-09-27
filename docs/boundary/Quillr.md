@@ -4,12 +4,12 @@
 
 **Absorbed 2026-07-17** into two spine targets:
 
-| Half | Language | Spine Target | Path |
-|------|----------|--------------|------|
-| `crates/httpora-core` | Rust | `pheno` monorepo | `crates/httpora-core/` |
-| `src/` (`@<REDACTED>/quillts`) | TypeScript | `phenodocs` | `packages/quillts/` |
+| Half                                 | Language   | Spine Target     | Path                   |
+| ------------------------------------ | ---------- | ---------------- | ---------------------- |
+| `crates/httpora-core`                | Rust       | `pheno` monorepo | `crates/httpora-core/` |
+| `src/` (`@&lt;REDACTED&gt;/quillts`) | TypeScript | `phenodocs`      | `packages/quillts/`    |
 
-The original `<REDACTED>/Httpora` and `<REDACTED>/Quillr` repos no
+The original `&lt;REDACTED&gt;/Httpora` and `&lt;REDACTED&gt;/Quillr` repos no
 longer exist (Quillr was archived 2026-07-17; Httpora was already
 SUPERSEDED in the disposition-index).
 
@@ -34,11 +34,11 @@ The HTTP middleware boundary covers:
 
 ## Consumer surface
 
-| Consumer | Language | Pattern |
-|----------|----------|---------|
-| `pheno` monorepo Rust crates | Rust | `tower::Layer` middleware composition |
-| `phenotype-go-sdk` Go services | Go | gRPC interceptor mirroring httpora patterns |
-| `phenodocs` TS docs site | TypeScript | `@phenotype/quillts` for client-side fetches |
+| Consumer                       | Language   | Pattern                                      |
+| ------------------------------ | ---------- | -------------------------------------------- |
+| `pheno` monorepo Rust crates   | Rust       | `tower::Layer` middleware composition        |
+| `phenotype-go-sdk` Go services | Go         | gRPC interceptor mirroring httpora patterns  |
+| `phenodocs` TS docs site       | TypeScript | `@phenotype/quillts` for client-side fetches |
 
 ## Rationale
 
@@ -53,9 +53,9 @@ Quillr was chosen as the reconciliation name because:
 
 ## Replacement
 
-| Old | New | Notes |
-|-----|-----|-------|
-| `<REDACTED>/Quillr` | (archived) | Source archived 2026-07-17 |
-| `<REDACTED>/Httpora` | (already SUPERSEDED) | Was merged into Quillr in 2026-06-20 |
-| `crates/httpora-core` (in Quillr) | `pheno/crates/httpora-core` | New home in the central Rust monorepo |
-| `@<REDACTED>/quillts` (npm) | `@phenotype/quillts` (in phenodocs) | New home + org scope normalized |
+| Old                               | New                                 | Notes                                 |
+| --------------------------------- | ----------------------------------- | ------------------------------------- |
+| `&lt;REDACTED&gt;/Quillr`         | (archived)                          | Source archived 2026-07-17            |
+| `&lt;REDACTED&gt;/Httpora`        | (already SUPERSEDED)                | Was merged into Quillr in 2026-06-20  |
+| `crates/httpora-core` (in Quillr) | `pheno/crates/httpora-core`         | New home in the central Rust monorepo |
+| `@&lt;REDACTED&gt;/quillts` (npm) | `@phenotype/quillts` (in phenodocs) | New home + org scope normalized       |

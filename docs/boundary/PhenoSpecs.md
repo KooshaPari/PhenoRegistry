@@ -21,5 +21,5 @@ phenotype-router-spec.
 
 ## Outcome
 
-Source repo `<REDACTED>/PhenoSpecs` archived on GitHub.
+Source repo `&lt;REDACTED&gt;/PhenoSpecs` archived on GitHub.
 Registry disposition-index updated: disposition=ABSORB, target=phenotype-registry.

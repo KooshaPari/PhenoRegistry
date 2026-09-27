@@ -1,20 +1,20 @@
 # Absorbed boundary — template-commons
 
-This document describes the absorbed boundary of `<REDACTED>/template-commons`
+This document describes the absorbed boundary of `&lt;REDACTED&gt;/template-commons`
 after its absorption into `phenokits-commons/templates/` on 2026-07-17.
 
 ## Identity
 
-| Field | Value |
-|-------|-------|
-| Original repo | `<REDACTED>/template-commons` |
-| Original URL | https://github.com/KooshaPari/template-commons |
-| Original description | "template-commons - shared template workflows and ADR sessions (deleted remote recovery)" |
-| Original default branch | `main` |
-| Canonical home | `<REDACTED>/phenokits-commons/templates/` (selective subtree) |
-| Subset also absorbed | `<REDACTED>/phenokits-commons/docs/template-kitty-specs/` |
-| Absorption date | 2026-07-17 |
-| Final state | GitHub archived (terminal) |
+| Field                   | Value                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------- |
+| Original repo           | `&lt;REDACTED&gt;/template-commons`                                                       |
+| Original URL            | https://github.com/KooshaPari/template-commons                                            |
+| Original description    | "template-commons - shared template workflows and ADR sessions (deleted remote recovery)" |
+| Original default branch | `main`                                                                                    |
+| Canonical home          | `&lt;REDACTED&gt;/phenokits-commons/templates/` (selective subtree)                       |
+| Subset also absorbed    | `&lt;REDACTED&gt;/phenokits-commons/docs/template-kitty-specs/`                           |
+| Absorption date         | 2026-07-17                                                                                |
+| Final state             | GitHub archived (terminal)                                                                |
 
 ## What this boundary now covers
 
@@ -32,20 +32,20 @@ language/framework combination. Each template is responsible for:
 
 Templates that were carried over from template-commons:
 
-| Path | Language | Idiom |
-|------|----------|-------|
-| `phenotype-config` | Python | pydantic config loader |
-| `phenotype-id` | Python | deterministic ID generator |
-| `phenotype-logging` | Python | structlog bootstrap |
-| `phenotype-py-kit` | Python | kit superset (api+config+logging+testing) |
-| `phenotype-testing` | Python | pytest harness + property-based testing fixtures |
-| `phenotype-toolkit` | (multi) | tool index |
-| `plugin-typescript` | TypeScript | Vite plugin idiom |
-| `phenotype-go-kit` | Go | kit super-template |
-| `phenotype-go-auth` | Go | OAuth + token primitives |
-| `phenotype-go-cli` | Go | cobra scaffold |
-| `phenotype-go-config` | Go | viper-based config loader |
-| `phenotype-go-middleware` | Go | http middleware patterns |
+| Path                      | Language   | Idiom                                            |
+| ------------------------- | ---------- | ------------------------------------------------ |
+| `phenotype-config`        | Python     | pydantic config loader                           |
+| `phenotype-id`            | Python     | deterministic ID generator                       |
+| `phenotype-logging`       | Python     | structlog bootstrap                              |
+| `phenotype-py-kit`        | Python     | kit superset (api+config+logging+testing)        |
+| `phenotype-testing`       | Python     | pytest harness + property-based testing fixtures |
+| `phenotype-toolkit`       | (multi)    | tool index                                       |
+| `plugin-typescript`       | TypeScript | Vite plugin idiom                                |
+| `phenotype-go-kit`        | Go         | kit super-template                               |
+| `phenotype-go-auth`       | Go         | OAuth + token primitives                         |
+| `phenotype-go-cli`        | Go         | cobra scaffold                                   |
+| `phenotype-go-config`     | Go         | viper-based config loader                        |
+| `phenotype-go-middleware` | Go         | http middleware patterns                         |
 
 ### Layer B — kitty-spec for commons conventions (`phenokits-commons/docs/template-kitty-specs/001-commons/`)
 

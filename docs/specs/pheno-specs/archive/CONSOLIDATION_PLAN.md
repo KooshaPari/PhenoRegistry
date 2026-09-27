@@ -2,8 +2,8 @@
 
 **Objective:** Consolidate `scripts/categories/` into `tools/` and formalize as CLI commands.
 
-**Source:** `/Users/<REDACTED>/CodeProjects/Phenotype/repos/phenoSDK/scripts/categories/` (51 files)
-**Target:** `/Users/<REDACTED>/CodeProjects/Phenotype/repos/phenoSDK/tools/` (existing + merged)
+**Source:** `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/phenoSDK/scripts/categories/` (51 files)
+**Target:** `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/phenoSDK/tools/` (existing + merged)
 
 ---
 

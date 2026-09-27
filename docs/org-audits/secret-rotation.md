@@ -6,11 +6,11 @@ the rotation policy and the audit log.
 
 ## Where the webhook is stored
 
-| Layer              | Path                                                                                  | Mode   |
-| :----------------- | :------------------------------------------------------------------------------------ | :----- |
-| Heavy-runner       | `/etc/phenotype-fleet.env` (env-var-only file, sourced by `~/.bashrc` / `~/.zshrc`)   | 0600   |
-| GitHub Actions     | Repo → Settings → Secrets → `SLACK_FLEET_WEBHOOK` (in `<REDACTED>/phenotype-tooling`) | secret |
-| Env-var name       | `SLACK_FLEET_WEBHOOK`                                                                  | n/a    |
+| Layer          | Path                                                                                        | Mode   |
+| :------------- | :------------------------------------------------------------------------------------------ | :----- |
+| Heavy-runner   | `/etc/phenotype-fleet.env` (env-var-only file, sourced by `~/.bashrc` / `~/.zshrc`)         | 0600   |
+| GitHub Actions | Repo → Settings → Secrets → `SLACK_FLEET_WEBHOOK` (in `&lt;REDACTED&gt;/phenotype-tooling`) | secret |
+| Env-var name   | `SLACK_FLEET_WEBHOOK`                                                                       | n/a    |
 
 The webhook URL is **never** committed to git, never written to a `WORKLOG.md`,
 never pasted in a PR description, never stored in 1Password/Keychain entries
@@ -40,7 +40,7 @@ orchestrator.
    sudo chmod 0600 /etc/phenotype-fleet.env
    cat /etc/phenotype-fleet.env   # verify
    ```
-4. **Update the GitHub Actions secret** in `<REDACTED>/phenotype-tooling`:
+4. **Update the GitHub Actions secret** in `&lt;REDACTED&gt;/phenotype-tooling`:
    `Settings → Secrets and variables → Actions → SLACK_FLEET_WEBHOOK → Update`.
 5. **Force a re-run** of the workflow `fleet-substrate-tools-backup.yml`
    via `gh workflow run` to verify the new webhook posts.
@@ -50,9 +50,9 @@ orchestrator.
 
 ## Audit log
 
-| Date (UTC) | Rotated by        | New webhook suffix | Reason                                            |
-| :--------- | :---------------- | :----------------- | :------------------------------------------------ |
-| 2026-06-18 | orchestrator (KP) | `XXXX` (initial)   | First install (ADR-044 T27.1)                     |
+| Date (UTC) | Rotated by        | New webhook suffix | Reason                                                  |
+| :--------- | :---------------- | :----------------- | :------------------------------------------------------ |
+| 2026-06-18 | orchestrator (KP) | `XXXX` (initial)   | First install (ADR-044 T27.1)                           |
 | _next_     | _on-call_         | _tbd_              | Quarterly rotation (1st Tue of next quarter, 09:00 PDT) |
 
 > The webhook suffix is the 4-character string after the last `/` in the

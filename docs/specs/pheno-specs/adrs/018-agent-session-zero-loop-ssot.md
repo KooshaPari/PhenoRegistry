@@ -3,7 +3,7 @@ id: ADR-018
 title: Agent Session Zero-Loop SSOT for MCP Fleet Work
 status: accepted
 date: 2026-06-17
-author: <REDACTED>
+author: &lt;REDACTED&gt;
 tags: [agents, mcp, governance, dogfood]
 ---
 
@@ -30,22 +30,22 @@ mirror-to-empty, tier confusion). **Goal:** zero correction loops per session.
 
 ### Skills (PhenoMCPServers)
 
-| Skill | Purpose |
-|-------|---------|
-| `mcp-boundary-guard` | Framework vs spec vs runtime vs implementations |
-| `github-fork-policy` | `gh repo fork` only; never mirror-to-empty |
-| `language-tier-picker` | Tier 0–3 placement |
-| `catalog-wiring` | registry.yaml + mcp.json consistency |
-| `phenodag-claim` | Avoid duplicate parallel lanes |
-| `substrate-vs-servers` | Runtime vs MCP tool ownership |
+| Skill                  | Purpose                                         |
+| ---------------------- | ----------------------------------------------- |
+| `mcp-boundary-guard`   | Framework vs spec vs runtime vs implementations |
+| `github-fork-policy`   | `gh repo fork` only; never mirror-to-empty      |
+| `language-tier-picker` | Tier 0–3 placement                              |
+| `catalog-wiring`       | registry.yaml + mcp.json consistency            |
+| `phenodag-claim`       | Avoid duplicate parallel lanes                  |
+| `substrate-vs-servers` | Runtime vs MCP tool ownership                   |
 
 ### KPIs
 
-| Metric | Target |
-|--------|--------|
-| User correction loops per session | 0 |
-| SSOT files cited before first edit | 100% |
-| Fork parent matches catalog | 100% |
+| Metric                             | Target |
+| ---------------------------------- | ------ |
+| User correction loops per session  | 0      |
+| SSOT files cited before first edit | 100%   |
+| Fork parent matches catalog        | 100%   |
 
 ### Session log schema (optional telemetry)
 
@@ -65,13 +65,13 @@ Pilot schema SSOT: [`specs/mcp/session-metrics/schema.yaml`](../specs/mcp/sessio
 
 ## Appendix A — Loop catalog (session 40d15363)
 
-| Loop | Root cause | Preventive SSOT |
-|------|------------|-----------------|
-| rmcp as PhenoFastMCP-rust | Wrong framework analogue | ADR-017 + mcp-boundary-guard |
-| mirror-to-empty breaks fork | Wrong bootstrap procedure | github-fork-policy skill |
-| Go as tier-0 core | Missing tier rule | LANGUAGE-TIERS + language-tier-picker |
-| McpKit as framework | Pre-rationalization doc | DOMAIN_ROLES + ADR-017 |
-| cheap-llm separate repo | Duplicate capability | ADR-019 substrate argv |
+| Loop                        | Root cause                | Preventive SSOT                       |
+| --------------------------- | ------------------------- | ------------------------------------- |
+| rmcp as PhenoFastMCP-rust   | Wrong framework analogue  | ADR-017 + mcp-boundary-guard          |
+| mirror-to-empty breaks fork | Wrong bootstrap procedure | github-fork-policy skill              |
+| Go as tier-0 core           | Missing tier rule         | LANGUAGE-TIERS + language-tier-picker |
+| McpKit as framework         | Pre-rationalization doc   | DOMAIN_ROLES + ADR-017                |
+| cheap-llm separate repo     | Duplicate capability      | ADR-019 substrate argv                |
 
 ## Related
 

@@ -3,7 +3,7 @@
 ## Status
 
 **Absorbed 2026-07-17** into `phenotype-registry/scripts/audit.py`.
-Source repo `<REDACTED>/audit-tool` archived.
+Source repo `&lt;REDACTED&gt;/audit-tool` archived.
 
 ## Boundary
 
@@ -46,10 +46,10 @@ The audit-tool provides:
 
 ## Replacement
 
-| Old | New |
-|-----|-----|
-| `<REDACTED>/audit-tool` | (archived) |
-| Standalone audit.py | `phenotype-registry/scripts/audit.py` |
+| Old                           | New                                   |
+| ----------------------------- | ------------------------------------- |
+| `&lt;REDACTED&gt;/audit-tool` | (archived)                            |
+| Standalone audit.py           | `phenotype-registry/scripts/audit.py` |
 
 ## Consumer pattern
 

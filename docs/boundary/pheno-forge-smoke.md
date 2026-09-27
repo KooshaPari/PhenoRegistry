@@ -17,8 +17,8 @@ tags: [rust, smoke-test, forgecode, ffi, cdylib, dlopen]
 
 ## Identity
 
-- **Source:** `<REDACTED>/pheno-forge-smoke` (Rust single-purpose CLI; lib + bin; 1 branch; v0.1.0)
-- **Canonical home:** `<REDACTED>/pheno` (`crates/pheno-forge-smoke/`)
+- **Source:** `&lt;REDACTED&gt;/pheno-forge-smoke` (Rust single-purpose CLI; lib + bin; 1 branch; v0.1.0)
+- **Canonical home:** `&lt;REDACTED&gt;/pheno` (`crates/pheno-forge-smoke/`)
 - **Crate name:** `pheno-forge-smoke`
 - **Library output:** `libpheno_forge_smoke.rlib` (thin Rust facade over the bridge)
 - **Binary output:** `pheno-forge-smoke` (CLI smoke binary)
@@ -57,7 +57,7 @@ Two halves in one crate:
    `libloading`, and stores typed `unsafe extern "C" fn(...)` pointers.
 
 2. **`pheno-forge-smoke` (bin)** — Tokio-driven CLI in `src/main.rs`. Runs 7
-   checks (bridge_load, bridge_version, sidecar_health*, scope_episodic,
+   checks (bridge_load, bridge_version, sidecar_health\*, scope_episodic,
    scope_identity, scope_project_knowledge, scope_fallback, composite_construct)
    and emits a JSONL or human-readable report.
 
@@ -74,12 +74,13 @@ Two halves in one crate:
 
 ## Modes
 
-| Mode | What it does | Use case |
-|---|---|---|
-| `--mode=mock` *(default)* | Loads the bridge; route calls are expected to fail (no sidecars running); passes if errors surface correctly. | CI dry-runs, dev machines without sidecars. |
-| `--mode=sidecar` | Loads the bridge; probes sidecar health; route calls must succeed. | Pre-flight check before a real forge session. |
+| Mode                      | What it does                                                                                                  | Use case                                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `--mode=mock` _(default)_ | Loads the bridge; route calls are expected to fail (no sidecars running); passes if errors surface correctly. | CI dry-runs, dev machines without sidecars.   |
+| `--mode=sidecar`          | Loads the bridge; probes sidecar health; route calls must succeed.                                            | Pre-flight check before a real forge session. |
 
 Exit codes:
+
 - `0` — all required checks passed.
 - `1` — one or more required checks failed.
 - `2` — bridge not loadable (cdylib missing).
@@ -116,4 +117,4 @@ Exit codes:
 - ADR: **ADR-096** (forgecode improvement — the locked stack this smoke tests)
 - Related: **ADR-097** (eval harness, consumes this smoke), **ADR-098** (additional adapters)
 - Sibling crate: `crates/pheno-cdylib-bridge` (the cdylib this binary dlopens)
-- Upstream: `<REDACTED>/pheno-forge-smoke` (now archived)
+- Upstream: `&lt;REDACTED&gt;/pheno-forge-smoke` (now archived)

@@ -1,8 +1,8 @@
 # Boundary — &lt;REDACTED&gt;/agent-user-status (ABSORBED 2026-07-17)
 
 **Boundary status:** `absorbed`
-**Absorbing repo:** `<REDACTED>/phenotype-tooling` (`crates/agent-user-status/`)
-**Source repo:** `<REDACTED>/agent-user-status` (archived on GitHub 2026-07-17)
+**Absorbing repo:** `&lt;REDACTED&gt;/phenotype-tooling` (`crates/agent-user-status/`)
+**Source repo:** `&lt;REDACTED&gt;/agent-user-status` (archived on GitHub 2026-07-17)
 
 ## Role
 
@@ -25,16 +25,16 @@ handhold, or defer.
 
 ## Surface that the absorbing repo exposes
 
-`<REDACTED>/phenotype-tooling/crates/agent-user-status/`:
+`&lt;REDACTED&gt;/phenotype-tooling/crates/agent-user-status/`:
 
-| Capability             | Entry point                                          |
-|------------------------|------------------------------------------------------|
+| Capability             | Entry point                                                       |
+| ---------------------- | ----------------------------------------------------------------- |
 | Bootstrap / installer  | `agent-user-status install\|uninstall\|doctor\|setup-eye-tracker` |
-| Local status backend   | `agent-user-statusd` (`statusd.py`)                  |
-| iMessage / sessions    | `agent-imessage ...`                                  |
-| Cursor tracker (macOS) | `agent-user-status-cursor-tracker`                    |
-| Webcam eye tracker     | `agent-user-status-webcam-eye-tracker` (`eye` extra)  |
-| stdio MCP server       | `agent-imessage-mcp`                                  |
+| Local status backend   | `agent-user-statusd` (`statusd.py`)                               |
+| iMessage / sessions    | `agent-imessage ...`                                              |
+| Cursor tracker (macOS) | `agent-user-status-cursor-tracker`                                |
+| Webcam eye tracker     | `agent-user-status-webcam-eye-tracker` (`eye` extra)              |
+| stdio MCP server       | `agent-imessage-mcp`                                              |
 
 ## Boundary inheritance
 

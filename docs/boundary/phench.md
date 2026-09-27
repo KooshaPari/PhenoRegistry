@@ -6,8 +6,8 @@ reassigned — see absorption record for rationale.)
 
 ## Identity
 
-- **Source:** `<REDACTED>/phench` (Python CLI, 1 branch, v0.1.0)
-- **Canonical home:** `<REDACTED>/phenotype-tooling`
+- **Source:** `&lt;REDACTED&gt;/phench` (Python CLI, 1 branch, v0.1.0)
+- **Canonical home:** `&lt;REDACTED&gt;/phenotype-tooling`
   (`crates/phench/`)
 - **Python package:** `phench` (entry point: `phench = phench.cli:main`)
 - **Layout:** src-layout (`src/phench/*.py`, `tests/test_*.py`)
@@ -23,8 +23,8 @@ when a developer needs to swap multiple checkout configurations
 in/out of a working tree.
 
 This is a **runtime developer tool** that operates on developer
-machines. It is *not* a documentation tool, *not* an SDK, and
-*not* an AI agent — it sits in the tooling layer alongside
+machines. It is _not_ a documentation tool, _not_ an SDK, and
+_not_ an AI agent — it sits in the tooling layer alongside
 `phenotype-cli`, `policystack`, and the `bin/*.py` glue scripts.
 
 ## Command surface (v0.1.0)

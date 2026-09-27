@@ -1,6 +1,6 @@
 ---
 id: configra
-repo: <REDACTED>/Configra
+repo: &lt;REDACTED&gt;/Configra
 name: Configra
 status: active
 tier: pheno-lib
@@ -33,12 +33,12 @@ all unique content into Configra and deprecated the sources.
 
 ## What it is
 
-| Sub-crate | Concern | Tier-2 artifact set |
-| --- | --- | --- |
-| `pheno-config` | Typed runtime `Config` + `ConfigBuilder` | README · CHANGELOG · AGENTS · llms.txt |
-| `settly` | Settings lifecycle (validation, migration) | README · CHANGELOG · AGENTS |
-| `config-schema` | JSON-schema field-shape validator | README · CHANGELOG · AGENTS |
-| `phenotype-config-loader` | Generic JSON/TOML file loaders | README · CHANGELOG · AGENTS |
+| Sub-crate                 | Concern                                    | Tier-2 artifact set                    |
+| ------------------------- | ------------------------------------------ | -------------------------------------- |
+| `pheno-config`            | Typed runtime `Config` + `ConfigBuilder`   | README · CHANGELOG · AGENTS · llms.txt |
+| `settly`                  | Settings lifecycle (validation, migration) | README · CHANGELOG · AGENTS            |
+| `config-schema`           | JSON-schema field-shape validator          | README · CHANGELOG · AGENTS            |
+| `phenotype-config-loader` | Generic JSON/TOML file loaders             | README · CHANGELOG · AGENTS            |
 
 ## What it is NOT
 

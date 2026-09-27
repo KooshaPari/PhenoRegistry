@@ -2,14 +2,14 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/PolicyStack` |
-| Target repo | `<REDACTED>/phenotype-python-sdk` |
-| Target path | `packages/policystack/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent (batch absorption) |
-| Verification | File count match: 1,350 files (8.0 MB) |
+| Field         | Value                                   |
+| ------------- | --------------------------------------- |
+| Source repo   | `&lt;REDACTED&gt;/PolicyStack`          |
+| Target repo   | `&lt;REDACTED&gt;/phenotype-python-sdk` |
+| Target path   | `packages/policystack/`                 |
+| Absorbed date | 2026-07-17                              |
+| Absorbed by   | forge agent (batch absorption)          |
+| Verification  | File count match: 1,350 files (8.0 MB)  |
 
 ## What was absorbed
 

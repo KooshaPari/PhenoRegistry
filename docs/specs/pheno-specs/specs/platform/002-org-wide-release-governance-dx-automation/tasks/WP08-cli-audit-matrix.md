@@ -3,23 +3,23 @@ work_package_id: WP08
 title: CLI Audit & Matrix Commands
 lane: "done"
 dependencies:
-- WP01
+  - WP01
 base_branch: 002-org-wide-release-governance-dx-automation-WP01
 base_commit: 50c5fe5c522c6cec9f56b7d88f9628b7ff80b5cc
-created_at: '2026-03-01T18:23:09.101661+00:00'
+created_at: "2026-03-01T18:23:09.101661+00:00"
 subtasks: [T044, T045, T046, T047, T048]
 phase: Phase 2 - CLI Commands
-assignee: ''
+assignee: ""
 agent: "wp08-audit"
 shell_pid: "18552"
 review_status: "approved"
 reviewed_by: "Koosha Paridehpour"
 history:
-- timestamp: '2026-03-01T13:00:00Z'
-  lane: planned
-  agent: system
-  shell_pid: ''
-  action: Prompt generated via /spec-kitty.tasks
+  - timestamp: "2026-03-01T13:00:00Z"
+    lane: planned
+    agent: system
+    shell_pid: ""
+    action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP08 – CLI Audit & Matrix Commands
@@ -50,9 +50,11 @@ This work package implements discovery, visibility, and reporting tools for mult
 ## Subtasks & Detailed Guidance
 
 ### Subtask T044 – Audit Command Implementation
+
 - **Purpose**: Create the `pheno audit` command to discover packages and query their registry status
 - **Steps**:
   1. Create `cmd/audit.go` with Cobra command definition:
+
      ```go
      var auditCmd = &cobra.Command{
          Use:   "audit [flags]",
@@ -68,6 +70,7 @@ This work package implements discovery, visibility, and reporting tools for mult
          rootCmd.AddCommand(auditCmd)
      }
      ```
+
   2. Implement `runAudit` function flow:
      - Determine scan root (use --repo if provided, else --repos-dir or config.repos_dir)
      - Call `discover.FindRepositories(reposDir)` to list all repos (see T047)
@@ -82,15 +85,17 @@ This work package implements discovery, visibility, and reporting tools for mult
   4. Output success: show table or JSON depending on format flag
   5. Support progress indicator for long scans (spinner per repo being scanned)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/cmd/audit.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/cmd/audit.go`
 - **Parallel?**: No (prerequisite for T045)
 - **Notes**: Reuse config system from WP07; handle missing repos gracefully; ensure registry queries use caching (see T048)
 
 ### Subtask T045 – Audit Status Table Formatting
+
 - **Purpose**: Implement Lipgloss table and alternate format renderers for audit results
 - **Steps**:
   1. Create `internal/audit/formatter.go` to define output structures
   2. Define AuditResult struct to capture per-package status:
+
      ```go
      type AuditResult struct {
          Package        *Package
@@ -112,6 +117,7 @@ This work package implements discovery, visibility, and reporting tools for mult
          Duration   time.Duration
      }
      ```
+
   3. Implement `FormatLipglossTable` function:
      ```go
      func FormatLipglossTable(report *AuditReport) string {
@@ -146,14 +152,16 @@ This work package implements discovery, visibility, and reporting tools for mult
      - Published (prod): N, Staged (beta/rc): N, Alpha (alpha/canary): N, Unpublished: N
      - Scan duration
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/audit/formatter.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/audit/formatter.go`
 - **Parallel?**: Yes (after T044)
 - **Notes**: Use consistent color palette from WP07; ensure CSV escaping is RFC 4180 compliant; truncate long URLs with ellipsis in table view
 
 ### Subtask T046 – Release Matrix Generation
+
 - **Purpose**: Generate markdown-formatted release governance matrix matching org template
 - **Steps**:
   1. Create `cmd/matrix.go` with Cobra command definition:
+
      ```go
      var matrixCmd = &cobra.Command{
          Use:   "matrix [flags]",
@@ -168,6 +176,7 @@ This work package implements discovery, visibility, and reporting tools for mult
          rootCmd.AddCommand(matrixCmd)
      }
      ```
+
   2. Implement `runMatrix` function flow:
      - Load spec from spec file or auto-detect (look for `*-spec.md` in current dir)
      - Parse spec to extract work packages and initiatives (if not already in structured format)
@@ -178,10 +187,10 @@ This work package implements discovery, visibility, and reporting tools for mult
      - Write to file or stdout
   3. Markdown table structure matching RELEASE_MATRIX_TEMPLATE.md:
      ```markdown
-     | Initiative | Channel | Layer | PR | Depends-On | Owner | Rollback Plan | Risk | Acceptance Criteria | Status | Blockers |
-     |---|---|---|---|---|---|---|---|---|---|---|
-     | WP01 - Package Model | alpha | core | | | @user | | low | model complete, tests pass | in progress | none |
-     | WP02 - Registry Adapters | alpha | core | #123 | WP01 | @user | | medium | 4 adapters, integration tests pass | pending | none |
+     | Initiative               | Channel | Layer | PR   | Depends-On | Owner | Rollback Plan | Risk   | Acceptance Criteria                | Status      | Blockers |
+     | ------------------------ | ------- | ----- | ---- | ---------- | ----- | ------------- | ------ | ---------------------------------- | ----------- | -------- |
+     | WP01 - Package Model     | alpha   | core  |      |            | @user |               | low    | model complete, tests pass         | in progress | none     |
+     | WP02 - Registry Adapters | alpha   | core  | #123 | WP01       | @user |               | medium | 4 adapters, integration tests pass | pending     | none     |
      ```
   4. Auto-populate fields from config and discovery:
      - Initiative: from spec WP/phase
@@ -194,14 +203,16 @@ This work package implements discovery, visibility, and reporting tools for mult
      - Status: from audit (published/pending)
   5. Support manual overrides via config file (allow editing matrix before final render)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/cmd/matrix.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/matrix/generator.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/cmd/matrix.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/matrix/generator.go`
 - **Parallel?**: Yes (after T044)
 - **Notes**: Auto-detect spec file by scanning cwd and parent dirs; support both `.md` and `.json` spec formats; document template column meanings in inline comments
 
 ### Subtask T047 – Repository Discovery Engine
+
 - **Purpose**: Implement filesystem scanning to locate repositories and filter them based on rules
 - **Steps**:
   1. Create `internal/discover/repos.go` with discovery logic:
+
      ```go
      type RepositoryInfo struct {
          Path     string  // Absolute path to repo root
@@ -215,6 +226,7 @@ This work package implements discovery, visibility, and reporting tools for mult
          // Return list of RepositoryInfo
      }
      ```
+
   2. Implement repo detection heuristics:
      - Must contain one of: `.git`, `package.json`, `setup.py`, `Cargo.toml`, `go.mod`, `.gitignore`
      - May be single repo (has manifest) or monorepo (subdirs have manifests)
@@ -230,14 +242,16 @@ This work package implements discovery, visibility, and reporting tools for mult
   5. Handle symlinks: follow them (configurable)
   6. Caching: memoize results per session to avoid re-scanning
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/discover/repos.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/discover/repos.go`
 - **Parallel?**: No (prerequisite for T044)
 - **Notes**: Use `filepath.WalkDir` for efficient directory traversal; respect `.gitignore` patterns if available; ensure symlink handling is safe (prevent infinite loops)
 
 ### Subtask T048 – Audit Tests & Caching
+
 - **Purpose**: Comprehensive tests for discovery, audit formatting, and registry query caching
 - **Steps**:
   1. Create `internal/discover/repos_test.go`:
+
      ```go
      func TestFindRepositories(t *testing.T) {
          // Create temp dir with nested repos
@@ -252,7 +266,9 @@ This work package implements discovery, visibility, and reporting tools for mult
          // Test that .git is detected correctly
      }
      ```
+
   2. Create `internal/audit/formatter_test.go`:
+
      ```go
      func TestFormatLipglossTable(t *testing.T) {
          // Create sample AuditReport with mixed statuses
@@ -270,6 +286,7 @@ This work package implements discovery, visibility, and reporting tools for mult
          // Test escaping of special chars
      }
      ```
+
   3. Create `cmd/audit_test.go`:
      ```go
      func TestAuditCommand(t *testing.T) {
@@ -280,6 +297,7 @@ This work package implements discovery, visibility, and reporting tools for mult
      }
      ```
   4. Implement registry query caching:
+
      ```go
      type QueryCache struct {
          mu    sync.RWMutex
@@ -303,21 +321,22 @@ This work package implements discovery, visibility, and reporting tools for mult
          return result, nil
      }
      ```
+
   5. Test caching behavior: verify cache hits and misses
   6. Ensure tests run in <10 seconds (mock all registry calls)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/discover/repos_test.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/audit/formatter_test.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/cmd/audit_test.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/discover/repos_test.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/audit/formatter_test.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/cmd/audit_test.go`
 - **Parallel?**: Yes (after T044–T046)
 - **Notes**: Use testutil package for common fixtures; mock `registry.Adapter` to return predictable results; isolate cache between tests; test both hit and miss paths
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Mitigation |
-|------|------------|-----------|
-| Repo discovery too slow for large directory trees | Medium | Implement caching, max depth limit, and early termination; add progress spinner for long scans |
-| Registry queries cause timeout and block audit | Medium | Implement query timeout (5s default), cache results, mark failed queries as "unknown" and continue |
-| Audit output table too wide for terminal | Low | Truncate columns intelligently, wrap long text, test at 80/120/160 char widths |
-| Matrix generation has incomplete or incorrect data | Medium | Validate that all matrix columns are populated; provide manual override mechanism via config |
+| Risk                                               | Likelihood | Mitigation                                                                                         |
+| -------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| Repo discovery too slow for large directory trees  | Medium     | Implement caching, max depth limit, and early termination; add progress spinner for long scans     |
+| Registry queries cause timeout and block audit     | Medium     | Implement query timeout (5s default), cache results, mark failed queries as "unknown" and continue |
+| Audit output table too wide for terminal           | Low        | Truncate columns intelligently, wrap long text, test at 80/120/160 char widths                     |
+| Matrix generation has incomplete or incorrect data | Medium     | Validate that all matrix columns are populated; provide manual override mechanism via config       |
 
 ## Review Guidance
 

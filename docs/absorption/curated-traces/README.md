@@ -1,19 +1,19 @@
 # Absorption Record: curated-traces
 
 **Date**: 2026-07-17
-**Source**: `<REDACTED>/curated-traces`
+**Source**: `&lt;REDACTED&gt;/curated-traces`
 **Target**: `PhenoObservability/curated-traces/`
 **Wave**: `2026-07-17-queue-refresh-2`
 **Disposition**: `ABSORB`
 
 ## Transfer Summary
 
-| Metric | Value |
-| --- | --- |
+| Metric            | Value                                       |
+| ----------------- | ------------------------------------------- |
 | Files transferred | 5 .py + 2 .csv + 1 manifest.json + 1 README |
-| Total LOC | 1488 |
-| CSV rows | 1259 (full) + 34 (lite) |
-| Source archived | yes |
+| Total LOC         | 1488                                        |
+| CSV rows          | 1259 (full) + 34 (lite)                     |
+| Source archived   | yes                                         |
 
 ## What was absorbed
 
@@ -29,4 +29,4 @@
 ## Verification
 
 - Branch: `PhenoObservability:overlay/logify-2026-07-17` (commit `5ec1646`)
-- Source `<REDACTED>/curated-traces` archived 2026-07-17
+- Source `&lt;REDACTED&gt;/curated-traces` archived 2026-07-17

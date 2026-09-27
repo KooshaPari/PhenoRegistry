@@ -5,11 +5,13 @@
 **Branch**: main
 
 ## Decision
-Finalized archive of `<REDACTED>/settly`. No code in any other phenodocs
+
+Finalized archive of `&lt;REDACTED&gt;/settly`. No code in any other phenodocs
 crate or external consumer depends on it. Per ADR-017, we close the
 deprecation loop rather than leaving it as a tombstone.
 
 ## Work
+
 - Added `Settly` row to `ARCHITECTURE.md` deprecated-crates table
 - Grep across `phenoData/`, `phenoShared/`, `phenoDesign/`,
   `phenoAI/`, `phenoRuntime/`, `pheno-mcp-router/`: zero references
@@ -19,10 +21,12 @@ deprecation loop rather than leaving it as a tombstone.
   recommendations
 
 ## Verification
+
 ```
 $ rg -l "settly" phenoData phenoShared phenoDesign phenoAI phenoRuntime pheno-mcp-router 2>&1 | head
 (no output)
 ```
 
 ## Follow-up
+
 - No follow-up. ADR-017 supersedes the deprecation-with-no-archive plan.

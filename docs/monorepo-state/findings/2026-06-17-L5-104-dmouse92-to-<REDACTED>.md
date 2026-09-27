@@ -13,28 +13,28 @@
 
 ### 1.1 Phenotype-related (20) — IN SCOPE
 
-| # | Repo | Dmouse92 HEAD | KP HEAD | KP state | Unmerged branches |
-|---|---|---|---|---|---|
-| 1 | **dispatch-mcp** | 2026-06-15T07:58Z (`a050e06`) | 2026-06-18 (pushed_at for chore branch) | active | `chore/w2-1-dispatch-mcp-2026-06-15` (6 unique commits, ~5000 LOC, NOT on KP main) |
-| 2 | **pheno** | 2026-06-15 (`7a803dd`) | 2026-06-18 (pushed_at) | active | `chore/adr-012-config-consolidation-2026-06-15` (7 unique commits, 127 files; NOT on KP main; PRs #130/#131/#132 do NOT contain this work) |
-| 3 | **AgilePlus** | 2026-06-16 | 2026-06-18 | active | `dependabot/*` only; 1 unique Dmouse92 commit (`2a8cb6d`) |
-| 4 | **phenodocs** | 2026-02-26 | 2026-06-17 | active | `chore/stacked-prs-governance` (stale, 2026-02); main is 4 months behind |
-| 5 | **forgecode** | 2026-06-15T05:35:50Z | 2026-06-18T01:39Z | active | 378 branches, 100% mirror of upstream `tailcallhq/forgecode` (NOT `aaronfagan/forgecode`); 364 byte-identical, 13 auto-generated, 1 already on KP (`feat/session-viewer`), 0 unique Phenotype work |
-| 6 | **PhenoCompose** | empty (0 KB) | 2026-06-15 | active | 0 branches, 0 commits, 127 KP-ahead commits → archive DM92 |
-| 7 | **PhenoPlugins** | empty | 2026-06-16 | active | 0 branches, 0 commits, 94 KP-ahead commits → archive DM92 |
-| 8 | **PhenoProc** | empty | 2026-06-13 | **archived** | KP archived; Dmouse92 still active → archive DM92 with note |
-| 9 | **HeliosCLI** | empty | 2026-06-16 | active | 0 branches, 0 commits, 292 KP-ahead commits → archive DM92 |
-| 10 | **Pyron** | empty | 2026-06-18 | active | 0 branches, 0 commits, 56 KP-ahead commits → archive DM92 |
-| 11 | **HexaKit** | empty | 2026-06-18 | active | 0 branches, 0 commits, 504 KP-ahead commits → archive DM92 |
-| 12 | **Tracera** | empty | 2026-06-18 | active | 0 branches, 0 commits, 553 KP-ahead commits → archive DM92 |
-| 13 | **Civis** | empty | 2026-06-18 | active | 0 branches, 0 commits, KP main thousands of commits (full fetch timed out; depth=1 used) → archive DM92 |
-| 14 | **OmniRoute** | empty | 2026-06-17 | active | 0 branches, 0 commits, 209 KP-ahead commits → archive DM92 |
-| 15 | **KWatch** | empty | 2026-06-17 | active | 0 branches, 0 commits, 60 KP-ahead commits → archive DM92 |
-| 16 | **phenotype-ops** | `a24997f` (32 KB) | 2026-06-18 | active | bit-identical to KP (same SHA) → archive DM92 |
-| 17 | **phenotype-otel** | empty | 2026-06-17 | active | 0 branches, 0 commits, 10 KP-ahead commits → archive DM92 |
-| 18 | **Nanovms** | empty | 2026-06-16 | **archived** | KP archived; Dmouse92 still active → archive DM92 with note |
-| 19 | **PhenoContracts** | empty | 2026-06-16 | active | 0 branches, 0 commits, 16 KP-ahead commits → archive DM92 |
-| 20 | **phenotype-teamcomm** | `732e532` (120 KB) | 2026-06-18 | active | bit-identical to KP (same SHA) → archive DM92 |
+| #   | Repo                   | Dmouse92 HEAD                 | KP HEAD                                 | KP state     | Unmerged branches                                                                                                                                                                                  |
+| --- | ---------------------- | ----------------------------- | --------------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **dispatch-mcp**       | 2026-06-15T07:58Z (`a050e06`) | 2026-06-18 (pushed_at for chore branch) | active       | `chore/w2-1-dispatch-mcp-2026-06-15` (6 unique commits, ~5000 LOC, NOT on KP main)                                                                                                                 |
+| 2   | **pheno**              | 2026-06-15 (`7a803dd`)        | 2026-06-18 (pushed_at)                  | active       | `chore/adr-012-config-consolidation-2026-06-15` (7 unique commits, 127 files; NOT on KP main; PRs #130/#131/#132 do NOT contain this work)                                                         |
+| 3   | **AgilePlus**          | 2026-06-16                    | 2026-06-18                              | active       | `dependabot/*` only; 1 unique Dmouse92 commit (`2a8cb6d`)                                                                                                                                          |
+| 4   | **phenodocs**          | 2026-02-26                    | 2026-06-17                              | active       | `chore/stacked-prs-governance` (stale, 2026-02); main is 4 months behind                                                                                                                           |
+| 5   | **forgecode**          | 2026-06-15T05:35:50Z          | 2026-06-18T01:39Z                       | active       | 378 branches, 100% mirror of upstream `tailcallhq/forgecode` (NOT `aaronfagan/forgecode`); 364 byte-identical, 13 auto-generated, 1 already on KP (`feat/session-viewer`), 0 unique Phenotype work |
+| 6   | **PhenoCompose**       | empty (0 KB)                  | 2026-06-15                              | active       | 0 branches, 0 commits, 127 KP-ahead commits → archive DM92                                                                                                                                         |
+| 7   | **PhenoPlugins**       | empty                         | 2026-06-16                              | active       | 0 branches, 0 commits, 94 KP-ahead commits → archive DM92                                                                                                                                          |
+| 8   | **PhenoProc**          | empty                         | 2026-06-13                              | **archived** | KP archived; Dmouse92 still active → archive DM92 with note                                                                                                                                        |
+| 9   | **HeliosCLI**          | empty                         | 2026-06-16                              | active       | 0 branches, 0 commits, 292 KP-ahead commits → archive DM92                                                                                                                                         |
+| 10  | **Pyron**              | empty                         | 2026-06-18                              | active       | 0 branches, 0 commits, 56 KP-ahead commits → archive DM92                                                                                                                                          |
+| 11  | **HexaKit**            | empty                         | 2026-06-18                              | active       | 0 branches, 0 commits, 504 KP-ahead commits → archive DM92                                                                                                                                         |
+| 12  | **Tracera**            | empty                         | 2026-06-18                              | active       | 0 branches, 0 commits, 553 KP-ahead commits → archive DM92                                                                                                                                         |
+| 13  | **Civis**              | empty                         | 2026-06-18                              | active       | 0 branches, 0 commits, KP main thousands of commits (full fetch timed out; depth=1 used) → archive DM92                                                                                            |
+| 14  | **OmniRoute**          | empty                         | 2026-06-17                              | active       | 0 branches, 0 commits, 209 KP-ahead commits → archive DM92                                                                                                                                         |
+| 15  | **KWatch**             | empty                         | 2026-06-17                              | active       | 0 branches, 0 commits, 60 KP-ahead commits → archive DM92                                                                                                                                          |
+| 16  | **phenotype-ops**      | `a24997f` (32 KB)             | 2026-06-18                              | active       | bit-identical to KP (same SHA) → archive DM92                                                                                                                                                      |
+| 17  | **phenotype-otel**     | empty                         | 2026-06-17                              | active       | 0 branches, 0 commits, 10 KP-ahead commits → archive DM92                                                                                                                                          |
+| 18  | **Nanovms**            | empty                         | 2026-06-16                              | **archived** | KP archived; Dmouse92 still active → archive DM92 with note                                                                                                                                        |
+| 19  | **PhenoContracts**     | empty                         | 2026-06-16                              | active       | 0 branches, 0 commits, 16 KP-ahead commits → archive DM92                                                                                                                                          |
+| 20  | **phenotype-teamcomm** | `732e532` (120 KB)            | 2026-06-18                              | active       | bit-identical to KP (same SHA) → archive DM92                                                                                                                                                      |
 
 ### 1.2 Personal — OUT OF SCOPE
 
@@ -58,18 +58,19 @@
 
 **Dmouse92 unique commits (6) in `chore/w2-1-dispatch-mcp-2026-06-15` (verified NOT on KP main):**
 
-| SHA | Subject | LOC | KP branch (unmerged) |
-|---|---|---|---|
-| `dc4f1a3` | docs(dispatch-mcp): deprecate cheap-llm-mcp (W1.1) | +22 | `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` (clean cherry-pick) |
-| `9486edb` | test: add protocol compliance mock backend harness (W2.1) | +108 | bundled in `feat/openai-compat-2026-06-15`, `wip/migrate-from-dmouse-w2-1-2026-06-17`, `feat/openai-compat-provider-2026-06-15` |
-| `f46e356` | test: add mock backend harness for protocol compliance (W2.1) | +106 | bundled in same branches; likely duplicate of #2 |
-| `6aad7fa` | feat(core): cost tracking, budget, quota, audit trail | +6,641 / -47 | bundled in `feat/openai-compat-2026-06-15` @ `977cd43` |
-| `874a023` | W2.1 (empty marker commit) | 0 | every W2-1 branch |
-| `a1aaef2` | feat(W2-1): dispatch-mcp protocol compliance + provider guides | +866 / -6 | identical tree in `feat/openai-compat-2026-06-15`, `wip/migrate-from-dmouse-w2-1-2026-06-17` |
+| SHA       | Subject                                                        | LOC          | KP branch (unmerged)                                                                                                            |
+| --------- | -------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| `dc4f1a3` | docs(dispatch-mcp): deprecate cheap-llm-mcp (W1.1)             | +22          | `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` (clean cherry-pick)                                                      |
+| `9486edb` | test: add protocol compliance mock backend harness (W2.1)      | +108         | bundled in `feat/openai-compat-2026-06-15`, `wip/migrate-from-dmouse-w2-1-2026-06-17`, `feat/openai-compat-provider-2026-06-15` |
+| `f46e356` | test: add mock backend harness for protocol compliance (W2.1)  | +106         | bundled in same branches; likely duplicate of #2                                                                                |
+| `6aad7fa` | feat(core): cost tracking, budget, quota, audit trail          | +6,641 / -47 | bundled in `feat/openai-compat-2026-06-15` @ `977cd43`                                                                          |
+| `874a023` | W2.1 (empty marker commit)                                     | 0            | every W2-1 branch                                                                                                               |
+| `a1aaef2` | feat(W2-1): dispatch-mcp protocol compliance + provider guides | +866 / -6    | identical tree in `feat/openai-compat-2026-06-15`, `wip/migrate-from-dmouse-w2-1-2026-06-17`                                    |
 
-**Substrate state (CRITICAL):** `<REDACTED>/pheno-mcp-router` does NOT exist on GitHub (404). Substrate is local-only at `repos/pheno-mcp-router/`, no `origin` remote, 8 commits, uncommitted working tree (3 modified + 2 untracked). **Step 1 of migration plan = publish substrate first.**
+**Substrate state (CRITICAL):** `&lt;REDACTED&gt;/pheno-mcp-router` does NOT exist on GitHub (404). Substrate is local-only at `repos/pheno-mcp-router/`, no `origin` remote, 8 commits, uncommitted working tree (3 modified + 2 untracked). **Step 1 of migration plan = publish substrate first.**
 
 **Per-file migration action (from sub-agent plan):**
+
 - 6 modules → substrate (`tiers.py`, `cost.py`, `budget.py`, `quota.py`, `audit.py`, `cost_middleware.py`) — ~2,000 LOC + ~2,400 LOC tests
 - 2 adapters → substrate (`LlamaAdapter` from `llama_cpp.py` + `OpenAICompatAdapter` from KP-authored `openai_compat.py`)
 - 1 doc → substrate (`PROVIDER_GUIDE.md`)
@@ -89,21 +90,22 @@
 
 **Dmouse92 unique commits (7) in `chore/adr-012-config-consolidation-2026-06-15` (verified NOT on KP main):**
 
-| SHA | Subject |
-|---|---|
-| `7a803dd` | chore(pheno): remove phenotype-config-core (moved to phenotype-config-loader) |
+| SHA       | Subject                                                                                               |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| `7a803dd` | chore(pheno): remove phenotype-config-core (moved to phenotype-config-loader)                         |
 | `af0d5d5` | chore(workflows+docs+go): pin workflow actions to SHAs, add SLSA + governance docs, CANONICAL markers |
-| `9bf8816` | chore(workflows): pin remaining tag-based action references to SHAs |
-| `f83e362` | chore(workflows): standardize to ci/audit/deny/scorecard/release |
-| `f6398a6` | chore: add phenotype-migrations to workspace and implement in-tree migration framework |
-| `fa19377` | chore: create working Cargo.toml workspace for AgilePlus Rust CLI |
-| `e71a4fd` | chore(governance): add missing governance files |
+| `9bf8816` | chore(workflows): pin remaining tag-based action references to SHAs                                   |
+| `f83e362` | chore(workflows): standardize to ci/audit/deny/scorecard/release                                      |
+| `f6398a6` | chore: add phenotype-migrations to workspace and implement in-tree migration framework                |
+| `fa19377` | chore: create working Cargo.toml workspace for AgilePlus Rust CLI                                     |
+| `e71a4fd` | chore(governance): add missing governance files                                                       |
 
 **W5 PRs #130/#131/#132 verification:** All 3 are pre-existing **action-SHA pinning PRs** (merged 2026-04-30 / 2026-05-01), 2-7 weeks BEFORE the Dmouse92 ADR-012 work window of 2026-06-12 → 2026-06-15. **None contain the ADR-012 config consolidation content.** Initial parent-doc claim that "PR #130 (W5 ADR-012 config consolidation PR-1/2/3)" is incorrect — the "W5 ADR-012" label was mis-attributed.
 
 **KP/pheno state:** HEAD = `a109d9c` (2026-06-13T01:10:33Z), dormant on ADR-012 files for 4+ days. 0 of 19 sampled Dmouse92 ADR-012 file paths has any KP/main commit since 2026-06-15.
 
 **4 files do NOT exist on KP/main at all** (Dmouse92-unique additions):
+
 - `docs/slsa.md`
 - `.github/workflows/release-attestation.yml`
 - `crates/phenotype-config-loader/CANONICAL.md`
@@ -134,7 +136,7 @@
   - `f868d18 fix(audit): apply W4 SOTA findings across 12 crates` — duplicate of KP `ad01a98` (same subject, divergent SHA)
   - `2a8cb6d feat(domain+hook): add FeatureState::is_shippable() + chrono dev-dep` — possibly unique
 - &lt;REDACTED&gt; is significantly ahead (W4 governance rollout, shared-core traceability spine, consolidate all branches)
-- **Action:** Cherry-pick `2a8cb6d` if not present on &lt;REDACTED&gt; (verify with `gh api repos/<REDACTED>/AgilePlus/commits?path=crates/agileplus/domain&per_page=5`), then archive Dmouse92 AgilePlus.
+- **Action:** Cherry-pick `2a8cb6d` if not present on &lt;REDACTED&gt; (verify with `gh api repos/&lt;REDACTED&gt;/AgilePlus/commits?path=crates/agileplus/domain&per_page=5`), then archive Dmouse92 AgilePlus.
 
 ### 2.5 forgecode
 
@@ -146,13 +148,13 @@
 
 **Branch matrix:**
 
-| Category | Count | Action |
-|---|---|---|
-| **A** Same name + same SHA on KP | 1 (`feat/session-viewer` @ `7065903a…`) | Already absorbed |
-| **B** Same name, divergent SHA | 1 (`main` — DM92 10 behind upstream, KP 39 ahead + 79 behind) | Resolved (KP is the active fork) |
-| **C** Only on DM92 — mirror of upstream | 364 | No migration; fetch from upstream if needed |
-| **C** Only on DM92 — auto-generated (Dependabot, Renovate, PR bots) | 13 | Ignore |
-| **C** Only on DM92 — unique Phenotype work | **0** | **None** |
+| Category                                                            | Count                                                         | Action                                      |
+| ------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------- |
+| **A** Same name + same SHA on KP                                    | 1 (`feat/session-viewer` @ `7065903a…`)                       | Already absorbed                            |
+| **B** Same name, divergent SHA                                      | 1 (`main` — DM92 10 behind upstream, KP 39 ahead + 79 behind) | Resolved (KP is the active fork)            |
+| **C** Only on DM92 — mirror of upstream                             | 364                                                           | No migration; fetch from upstream if needed |
+| **C** Only on DM92 — auto-generated (Dependabot, Renovate, PR bots) | 13                                                            | Ignore                                      |
+| **C** Only on DM92 — unique Phenotype work                          | **0**                                                         | **None**                                    |
 
 **Verdict:** 0 of 378 Dmouse92/forgecode branches need migration to &lt;REDACTED&gt;/forgecode. **Action: archive `Dmouse92/forgecode` entirely.**
 
@@ -268,38 +270,38 @@
 
 ### Phase 1 — Analysis (2026-06-17, complete)
 
-| Time | Step | Result |
-|---|---|---|
-| 19:00 | `gh auth status` → &lt;REDACTED&gt; active | OK |
-| 19:05 | `gh repo list Dmouse92` → 26 repos | OK |
-| 19:08 | `gh repo list <REDACTED>` → 138 repos | OK |
-| 19:12 | Cross-reference matrix — 20 Phenotype-related DM92 repos | OK |
-| 19:18 | Subagent A: dispatch-mcp migration plan (527 lines) | OK |
-| 19:18 | Subagent B: pheno ADR-012 migration plan (414 lines) | OK |
-| 19:18 | Subagent C: 14-repo bulk migration plan (999 lines) | OK |
-| 19:18 | Subagent D: forgecode migration analysis (305 lines) | OK |
-| 19:25 | Update parent audit doc with corrections | OK |
+| Time  | Step                                                     | Result |
+| ----- | -------------------------------------------------------- | ------ |
+| 19:00 | `gh auth status` → &lt;REDACTED&gt; active               | OK     |
+| 19:05 | `gh repo list Dmouse92` → 26 repos                       | OK     |
+| 19:08 | `gh repo list &lt;REDACTED&gt;` → 138 repos              | OK     |
+| 19:12 | Cross-reference matrix — 20 Phenotype-related DM92 repos | OK     |
+| 19:18 | Subagent A: dispatch-mcp migration plan (527 lines)      | OK     |
+| 19:18 | Subagent B: pheno ADR-012 migration plan (414 lines)     | OK     |
+| 19:18 | Subagent C: 14-repo bulk migration plan (999 lines)      | OK     |
+| 19:18 | Subagent D: forgecode migration analysis (305 lines)     | OK     |
+| 19:25 | Update parent audit doc with corrections                 | OK     |
 
 ### Phase 2 — Execution (2026-06-17 20:55 PDT, COMPLETE)
 
-| Time | Step | Result | PR / Action |
-|---|---|---|---|
-| 20:35 | `gh auth switch --user Dmouse92` | OK | (read-only-collaborator becomes owner) |
-| 20:36 | Archive `Dmouse92/dispatch-mcp` | OK | (Dmouse92 W2-1 absorbed in 3 substrate PRs) |
-| 20:36 | Archive `Dmouse92/pheno` | OK | (Dmouse92 ADR-012 absorbed in 1 phenotype-config PR) |
-| 20:36 | Archive `Dmouse92/AgilePlus` + 16 others (PhenoCompose, PhenoPlugins, PhenoProc, HeliosCLI, Pyron, HexaKit, Tracera, Civis, OmniRoute, KWatch, phenotype-ops, phenotype-otel, Nanovms, PhenoContracts, phenotype-teamcomm, forgecode, phenodocs) | OK | (all empty/bit-identical/KP-archived) |
-| 20:37 | `gh auth switch --user <REDACTED>` | OK | (back to KP for PR work) |
-| 20:40 | Push `feat/port-cost-budget-quota-audit-tiers-2026-06-17` to `pheno-mcp-router` | OK | PR #1: https://github.com/KooshaPari/pheno-mcp-router/pull/1 |
-| 20:40 | Push `feat/llama-adapter-2026-06-17` to `pheno-mcp-router` | OK | PR #2: https://github.com/KooshaPari/pheno-mcp-router/pull/2 |
-| 20:40 | Push `feat/openai-compat-adapter-2026-06-17` to `pheno-mcp-router` | OK | PR #3: https://github.com/KooshaPari/pheno-mcp-router/pull/3 |
-| 20:41 | Push `feat/l5-104-canonical-markers-2026-06-17` to `phenotype-config` | OK | PR #1: https://github.com/KooshaPari/phenotype-config/pull/1 |
-| 20:41 | Push `feat/llama-cpp-devops-2026-06-17` to `phenotype-ops` | OK | PR #2: https://github.com/KooshaPari/phenotype-ops/pull/2 |
-| 20:45 | Push `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` to `dispatch-mcp` | OK | PR #1: https://github.com/KooshaPari/dispatch-mcp/pull/1 |
-| 20:50 | Verify all 6 PRs created + branches on origin | OK | 6/6 PRs OPEN, 6/6 branches on `origin` |
-| 20:55 | Commit audit doc + governance refresh | OK | This commit |
-| TBD | Repoint `phenotype-config-core/CANONICAL.md` from `phenoShared` to `phenotype-config` on KP/pheno | TODO | separate PR to `<REDACTED>/pheno` |
-| TBD | Update AGENTS.md / STATUS.md / SSOT.md (governance refresh) | TODO | this commit batch |
-| TBD | v7 DAG stable | TODO | `plans/2026-06-17-v7-dag-stable.md` |
+| Time  | Step                                                                                                                                                                                                                                             | Result | PR / Action                                                  |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ | ------------------------------------------------------------ |
+| 20:35 | `gh auth switch --user Dmouse92`                                                                                                                                                                                                                 | OK     | (read-only-collaborator becomes owner)                       |
+| 20:36 | Archive `Dmouse92/dispatch-mcp`                                                                                                                                                                                                                  | OK     | (Dmouse92 W2-1 absorbed in 3 substrate PRs)                  |
+| 20:36 | Archive `Dmouse92/pheno`                                                                                                                                                                                                                         | OK     | (Dmouse92 ADR-012 absorbed in 1 phenotype-config PR)         |
+| 20:36 | Archive `Dmouse92/AgilePlus` + 16 others (PhenoCompose, PhenoPlugins, PhenoProc, HeliosCLI, Pyron, HexaKit, Tracera, Civis, OmniRoute, KWatch, phenotype-ops, phenotype-otel, Nanovms, PhenoContracts, phenotype-teamcomm, forgecode, phenodocs) | OK     | (all empty/bit-identical/KP-archived)                        |
+| 20:37 | `gh auth switch --user &lt;REDACTED&gt;`                                                                                                                                                                                                         | OK     | (back to KP for PR work)                                     |
+| 20:40 | Push `feat/port-cost-budget-quota-audit-tiers-2026-06-17` to `pheno-mcp-router`                                                                                                                                                                  | OK     | PR #1: https://github.com/KooshaPari/pheno-mcp-router/pull/1 |
+| 20:40 | Push `feat/llama-adapter-2026-06-17` to `pheno-mcp-router`                                                                                                                                                                                       | OK     | PR #2: https://github.com/KooshaPari/pheno-mcp-router/pull/2 |
+| 20:40 | Push `feat/openai-compat-adapter-2026-06-17` to `pheno-mcp-router`                                                                                                                                                                               | OK     | PR #3: https://github.com/KooshaPari/pheno-mcp-router/pull/3 |
+| 20:41 | Push `feat/l5-104-canonical-markers-2026-06-17` to `phenotype-config`                                                                                                                                                                            | OK     | PR #1: https://github.com/KooshaPari/phenotype-config/pull/1 |
+| 20:41 | Push `feat/llama-cpp-devops-2026-06-17` to `phenotype-ops`                                                                                                                                                                                       | OK     | PR #2: https://github.com/KooshaPari/phenotype-ops/pull/2    |
+| 20:45 | Push `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` to `dispatch-mcp`                                                                                                                                                                    | OK     | PR #1: https://github.com/KooshaPari/dispatch-mcp/pull/1     |
+| 20:50 | Verify all 6 PRs created + branches on origin                                                                                                                                                                                                    | OK     | 6/6 PRs OPEN, 6/6 branches on `origin`                       |
+| 20:55 | Commit audit doc + governance refresh                                                                                                                                                                                                            | OK     | This commit                                                  |
+| TBD   | Repoint `phenotype-config-core/CANONICAL.md` from `phenoShared` to `phenotype-config` on KP/pheno                                                                                                                                                | TODO   | separate PR to `&lt;REDACTED&gt;/pheno`                      |
+| TBD   | Update AGENTS.md / STATUS.md / SSOT.md (governance refresh)                                                                                                                                                                                      | TODO   | this commit batch                                            |
+| TBD   | v7 DAG stable                                                                                                                                                                                                                                    | TODO   | `plans/2026-06-17-v7-dag-stable.md`                          |
 
 **Net result:** 6 PRs opened (3 substrate ports + 1 config substrate port + 1 ops port + 1 dispatch-mcp doc cherry-pick); 18 Dmouse92 repos archived; ~5,000 LOC of Dmouse92 work absorbed to canonical substrates.
 
@@ -307,28 +309,28 @@
 
 ## 4. Decision matrix (FINAL)
 
-| # | Repo | Cat | Action | Target | Owner | PR |
-|---|---|---|---|---|---|---|
-| 1 | dispatch-mcp | B (unique W2-1) | Port 6 modules + 2 adapters + 1 doc + 2 docker to substrate | `pheno-mcp-router` + `phenotype-ops` | subagent E | [dispatch-mcp#1](https://github.com/KooshaPari/dispatch-mcp/pull/1) (deprecation doc) + [pheno-mcp-router#1-3](https://github.com/KooshaPari/pheno-mcp-router/pulls) + [phenotype-ops#2](https://github.com/KooshaPari/phenotype-ops/pull/2) |
-| 2 | pheno | B (unique ADR-012) | Cherry-pick 2 commits + port `docs/slsa.md` + re-point markers | `phenotype-config` + `Conft` | subagent F | [phenotype-config#1](https://github.com/KooshaPari/phenotype-config/pull/1) + pending repoint PR to `pheno` |
-| 3 | AgilePlus | B (1 unique) | Verify `2a8cb6d` cherry-pick | `AgilePlus` | self | (deferred — see §5) |
-| 4 | phenodocs | A (stale) | Archive DM92 | — | self | archived |
-| 5 | forgecode | C (mirror) | Archive DM92 | — | self | archived |
-| 6 | PhenoCompose | A | Archive DM92 | — | self | archived |
-| 7 | PhenoPlugins | A | Archive DM92 | — | self | archived |
-| 8 | PhenoProc | D (KP archived) | Archive DM92 with note | — | self | archived |
-| 9 | HeliosCLI | A | Archive DM92 | — | self | archived |
-| 10 | Pyron | A | Archive DM92 | — | self | archived |
-| 11 | HexaKit | A | Archive DM92 | — | self | archived |
-| 12 | Tracera | A | Archive DM92 | — | self | archived |
-| 13 | Civis | A | Archive DM92 | — | self | archived |
-| 14 | OmniRoute | A | Archive DM92 | — | self | archived |
-| 15 | KWatch | A | Archive DM92 | — | self | archived |
-| 16 | phenotype-ops | E (identical) | Archive DM92 | — | self | archived |
-| 17 | phenotype-otel | A | Archive DM92 | — | self | archived |
-| 18 | Nanovms | D (KP archived) | Archive DM92 with note | — | self | archived |
-| 19 | PhenoContracts | A | Archive DM92 | — | self | archived |
-| 20 | phenotype-teamcomm | E (identical) | Archive DM92 | — | self | archived |
+| #   | Repo               | Cat                | Action                                                         | Target                               | Owner      | PR                                                                                                                                                                                                                                           |
+| --- | ------------------ | ------------------ | -------------------------------------------------------------- | ------------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | dispatch-mcp       | B (unique W2-1)    | Port 6 modules + 2 adapters + 1 doc + 2 docker to substrate    | `pheno-mcp-router` + `phenotype-ops` | subagent E | [dispatch-mcp#1](https://github.com/KooshaPari/dispatch-mcp/pull/1) (deprecation doc) + [pheno-mcp-router#1-3](https://github.com/KooshaPari/pheno-mcp-router/pulls) + [phenotype-ops#2](https://github.com/KooshaPari/phenotype-ops/pull/2) |
+| 2   | pheno              | B (unique ADR-012) | Cherry-pick 2 commits + port `docs/slsa.md` + re-point markers | `phenotype-config` + `Conft`         | subagent F | [phenotype-config#1](https://github.com/KooshaPari/phenotype-config/pull/1) + pending repoint PR to `pheno`                                                                                                                                  |
+| 3   | AgilePlus          | B (1 unique)       | Verify `2a8cb6d` cherry-pick                                   | `AgilePlus`                          | self       | (deferred — see §5)                                                                                                                                                                                                                          |
+| 4   | phenodocs          | A (stale)          | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 5   | forgecode          | C (mirror)         | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 6   | PhenoCompose       | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 7   | PhenoPlugins       | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 8   | PhenoProc          | D (KP archived)    | Archive DM92 with note                                         | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 9   | HeliosCLI          | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 10  | Pyron              | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 11  | HexaKit            | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 12  | Tracera            | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 13  | Civis              | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 14  | OmniRoute          | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 15  | KWatch             | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 16  | phenotype-ops      | E (identical)      | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 17  | phenotype-otel     | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 18  | Nanovms            | D (KP archived)    | Archive DM92 with note                                         | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 19  | PhenoContracts     | A                  | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
+| 20  | phenotype-teamcomm | E (identical)      | Archive DM92                                                   | —                                    | self       | archived                                                                                                                                                                                                                                     |
 
 **Totals:** 2 substantive migrations (dispatch-mcp → substrate, pheno → substrate), 18 archives, 1 verification (AgilePlus). 6 PRs opened on &lt;REDACTED&gt;; 0 net content loss; all Dmouse92 work fully absorbed or discarded.
 
@@ -344,16 +346,17 @@ After user's request to "guarantee 100% migr" via per-repo codex exec, codex exe
 
 **Absorption paths (verified via `git ls-remote` + `git rev-list --count`):**
 
-| Commit | Subject | Absorbed into | Branch | +commits vs base |
-|---|---|---|---|---|
-| `dc4f1a3` | deprecate cheap-llm-mcp (W1.1) | `<REDACTED>/dispatch-mcp` | `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` | +1 |
-| `874a023` | W2.1 marker | `<REDACTED>/dispatch-mcp` | `wip/close-out-w2-1-from-dmouse-2026-06-17` (subagent-cherry-picked) | +7 |
-| `6aad7fa` | cost/budget/quota/audit/tiers core | `<REDACTED>/pheno-mcp-router` | `feat/port-cost-budget-quota-audit-tiers-2026-06-17` | +13 |
-| `9486edb`, `f46e356` | protocol compliance mock backend harness | `<REDACTED>/pheno-mcp-router` | `feat/openai-compat-adapter-2026-06-17` (KP-authored test adapter) | +15 |
-| `a1aaef2` | protocol compliance + provider guides | `<REDACTED>/pheno-mcp-router` | `feat/llama-adapter-2026-06-17` (LlamaAdapter port) | +15 |
-| `a1aaef2` part | docker/Dockerfile.llama + docker/llama-compose.yml | `<REDACTED>/phenotype-ops` | `feat/llama-cpp-devops-2026-06-17` | +3 |
+| Commit               | Subject                                            | Absorbed into                       | Branch                                                               | +commits vs base |
+| -------------------- | -------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------- | ---------------- |
+| `dc4f1a3`            | deprecate cheap-llm-mcp (W1.1)                     | `&lt;REDACTED&gt;/dispatch-mcp`     | `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15`               | +1               |
+| `874a023`            | W2.1 marker                                        | `&lt;REDACTED&gt;/dispatch-mcp`     | `wip/close-out-w2-1-from-dmouse-2026-06-17` (subagent-cherry-picked) | +7               |
+| `6aad7fa`            | cost/budget/quota/audit/tiers core                 | `&lt;REDACTED&gt;/pheno-mcp-router` | `feat/port-cost-budget-quota-audit-tiers-2026-06-17`                 | +13              |
+| `9486edb`, `f46e356` | protocol compliance mock backend harness           | `&lt;REDACTED&gt;/pheno-mcp-router` | `feat/openai-compat-adapter-2026-06-17` (KP-authored test adapter)   | +15              |
+| `a1aaef2`            | protocol compliance + provider guides              | `&lt;REDACTED&gt;/pheno-mcp-router` | `feat/llama-adapter-2026-06-17` (LlamaAdapter port)                  | +15              |
+| `a1aaef2` part       | docker/Dockerfile.llama + docker/llama-compose.yml | `&lt;REDACTED&gt;/phenotype-ops`    | `feat/llama-cpp-devops-2026-06-17`                                   | +3               |
 
 **File-level absorption check (DM92 6aad7fa vs KP PR branch):**
+
 - DM92 file structure: `src/pheno_mcp_router/core/{audit,budget,cost,cost_middleware,port,protocol,quota,tiers,types}.py`
 - KP PR branch file structure: `src/pheno_mcp_router/{audit,budget,cost,cost_middleware,quota,tiers}.py` (flattened to top-level per ADR-013)
 - **Match (after path normalization):** 6 of 6 core files (audit.py, budget.py, cost.py, cost_middleware.py, quota.py, tiers.py) ✓
@@ -366,11 +369,11 @@ After user's request to "guarantee 100% migr" via per-repo codex exec, codex exe
 
 **DM92 unique commits (7) on `chore/adr-012-config-consolidation-2026-06-15` (vs KP `pheno` main @ `a109d9c`):**
 
-| Commit | Subject | Decision | Absorbed into |
-|---|---|---|---|
-| `7a803dd` | remove phenotype-config-core | ✓ cherry-pick | `<REDACTED>/phenotype-config` via `feat/l5-104-canonical-markers-2026-06-17` (commit `2e94458`) |
-| `af0d5d5` | pin workflow actions to SHAs + SLSA + CANONICAL markers | ✓ cherry-pick | `<REDACTED>/phenotype-config` via `feat/l5-104-canonical-markers-2026-06-17` (commits `d9bb720`, `eab64bd`) |
-| `9bf8816`, `f83e362`, `f6398a6`, `fa19377`, `e71a4fd` | 5 workflow/consolidation commits | ✗ discard | Already obsolete or divergent on KP/main per plan §2.2 (correct decision) |
+| Commit                                                | Subject                                                 | Decision      | Absorbed into                                                                                                     |
+| ----------------------------------------------------- | ------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `7a803dd`                                             | remove phenotype-config-core                            | ✓ cherry-pick | `&lt;REDACTED&gt;/phenotype-config` via `feat/l5-104-canonical-markers-2026-06-17` (commit `2e94458`)             |
+| `af0d5d5`                                             | pin workflow actions to SHAs + SLSA + CANONICAL markers | ✓ cherry-pick | `&lt;REDACTED&gt;/phenotype-config` via `feat/l5-104-canonical-markers-2026-06-17` (commits `d9bb720`, `eab64bd`) |
+| `9bf8816`, `f83e362`, `f6398a6`, `fa19377`, `e71a4fd` | 5 workflow/consolidation commits                        | ✗ discard     | Already obsolete or divergent on KP/main per plan §2.2 (correct decision)                                         |
 
 **Net result: 2 of 7 commits cherry-picked (the substrate-worthy ones); 5 of 7 explicitly discarded per plan (correct decision). 100% decision coverage.**
 
@@ -384,14 +387,14 @@ DM92 forgecode is a stale 1:1 mirror of upstream `tailcallhq/forgecode` (NOT `aa
 
 ### 4.5.5 Aggregate migration guarantee
 
-| Metric | Value |
-|---|---|
-| Unique DM92 commits identified across all 20 repos | 6 (dispatch-mcp W2-1) + 7 (pheno ADR-012) = **13** |
-| Unique DM92 commits absorbed to KP substrate/canonical | 6 + 2 cherry-picked = **8** (62%) |
-| Unique DM92 commits explicitly discarded (correct per plan) | 5 (37%, pheno ADR-012 workflow/agileplus commits) |
-| Empty/bit-identical repos (no unique commits possible) | 14/20 |
-| Repos with unmerged branches that had non-substrate work | 0 (all work was either absorbed or correctly discarded) |
-| **Net content loss** | **0** |
+| Metric                                                      | Value                                                   |
+| ----------------------------------------------------------- | ------------------------------------------------------- |
+| Unique DM92 commits identified across all 20 repos          | 6 (dispatch-mcp W2-1) + 7 (pheno ADR-012) = **13**      |
+| Unique DM92 commits absorbed to KP substrate/canonical      | 6 + 2 cherry-picked = **8** (62%)                       |
+| Unique DM92 commits explicitly discarded (correct per plan) | 5 (37%, pheno ADR-012 workflow/agileplus commits)       |
+| Empty/bit-identical repos (no unique commits possible)      | 14/20                                                   |
+| Repos with unmerged branches that had non-substrate work    | 0 (all work was either absorbed or correctly discarded) |
+| **Net content loss**                                        | **0**                                                   |
 
 ---
 
@@ -399,11 +402,11 @@ DM92 forgecode is a stale 1:1 mirror of upstream `tailcallhq/forgecode` (NOT `aa
 
 - **Archive ≠ delete** — initial action is archive (read-only marker). Delete only after 90-day archive retention (GitHub policy). 18 Dmouse92 repos are archived 2026-06-17 20:36 PDT.
 - **Dmouse92 auth switch required** — `gh` is currently &lt;REDACTED&gt;. Archive commands against Dmouse92 repos require `gh auth switch --user Dmouse92`. KP push target remains &lt;REDACTED&gt;.
-- **pheno-mcp-router substrate publication done** — substrate was local-only at start of session; subagent E created `<REDACTED>/pheno-mcp-router` and pushed initial commit. Default branch = `chore/l3-57-pheno-plugin-registry-2026-06-11`. 3 substrate PRs (#1-#3) base on this default.
+- **pheno-mcp-router substrate publication done** — substrate was local-only at start of session; subagent E created `&lt;REDACTED&gt;/pheno-mcp-router` and pushed initial commit. Default branch = `chore/l3-57-pheno-plugin-registry-2026-06-11`. 3 substrate PRs (#1-#3) base on this default.
 - **Bulk archive required care** — 18 repos archived in a single batch via `gh auth switch --user Dmouse92` + per-repo `gh repo archive`; safe because Dmouse92 is the owner of those repos.
 - **Civis full fetch timed out** — KP/Civis main is too large to clone within 90s; used `--depth=1` for verdict; full clone deferred.
 - **AgilePlus 2a8cb6d verification deferred** — 1 unique Dmouse92 AgilePlus commit needs review by AgilePlus team before cherry-pick; not in L5-104 scope.
-- **phenotype-config-core/CANONICAL.md repoint** — needs a separate PR to `<REDACTED>/pheno` (out of scope for L5-104; deferred to v7).
+- **phenotype-config-core/CANONICAL.md repoint** — needs a separate PR to `&lt;REDACTED&gt;/pheno` (out of scope for L5-104; deferred to v7).
 - **pheno ADR-012 commits #1-5 discard** — 5 of 7 Dmouse92 commits are workflow consolidation, agileplus scaffolding, or version skew; verified KP/main already has the canonical version. Discard is correct per plan §2.2.
 
 ---

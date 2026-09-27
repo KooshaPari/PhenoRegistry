@@ -15,17 +15,17 @@ are likely until `v0.3.0`.
 
 ## Files
 
-| File | Purpose |
-|---|---|
-| [`schema/router-dispatch.json`](./schema/router-dispatch.json) | JSON Schema for RouterDispatch + RouterRequest + RouterDispatchResponse |
-| [`schema/router-mailbox.json`](./schema/router-mailbox.json) | JSON Schema for RouterMailbox envelope (used over SSE / WS / stdin) |
-| [`schema/router-trace.json`](./schema/router-trace.json) | JSON Schema for RouterTrace (OTLP/JSON resourceLogs compatible) |
-| [`schema/router-artifact.json`](./schema/router-artifact.json) | JSON Schema for RouterArtifact |
-| [`docs/dispatch.md`](./docs/dispatch.md) | Dispatch protocol semantics — how a Task becomes a routed Engine invocation |
-| [`docs/mailbox.md`](./docs/mailbox.md) | Mailbox/event-stream protocol — how engines and supervisors exchange mid-flight events |
-| [`docs/trace.md`](./docs/trace.md) | Trace protocol — OTLP-flavored trace event format, substrate-trace compatible |
-| [`docs/lanes.md`](./docs/lanes.md) | Sync / fanout / tree execution lanes |
-| [`examples/`](./examples/) | Reference JSON payloads for each schema |
+| File                                                           | Purpose                                                                                |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [`schema/router-dispatch.json`](./schema/router-dispatch.json) | JSON Schema for RouterDispatch + RouterRequest + RouterDispatchResponse                |
+| [`schema/router-mailbox.json`](./schema/router-mailbox.json)   | JSON Schema for RouterMailbox envelope (used over SSE / WS / stdin)                    |
+| [`schema/router-trace.json`](./schema/router-trace.json)       | JSON Schema for RouterTrace (OTLP/JSON resourceLogs compatible)                        |
+| [`schema/router-artifact.json`](./schema/router-artifact.json) | JSON Schema for RouterArtifact                                                         |
+| [`docs/dispatch.md`](./docs/dispatch.md)                       | Dispatch protocol semantics — how a Task becomes a routed Engine invocation            |
+| [`docs/mailbox.md`](./docs/mailbox.md)                         | Mailbox/event-stream protocol — how engines and supervisors exchange mid-flight events |
+| [`docs/trace.md`](./docs/trace.md)                             | Trace protocol — OTLP-flavored trace event format, substrate-trace compatible          |
+| [`docs/lanes.md`](./docs/lanes.md)                             | Sync / fanout / tree execution lanes                                                   |
+| [`examples/`](./examples/)                                     | Reference JSON payloads for each schema                                                |
 
 ## Scope
 
@@ -68,22 +68,23 @@ This protocol follows semver.
 - The `version` field on every envelope is the contract — consumers MUST
   reject envelopes with a major version they don't support.
 
-| Version | Status | Notes |
-|---|---|---|
-| 0.1.0 | draft | current |
+| Version | Status | Notes   |
+| ------- | ------ | ------- |
+| 0.1.0   | draft  | current |
 
 ## Reference implementation
 
 The canonical Rust implementation lives at
-[`<REDACTED>/substrate/crates/substrate-core`](https://github.com/KooshaPari/substrate/tree/main/crates/substrate-core).
+[`&lt;REDACTED&gt;/substrate/crates/substrate-core`](https://github.com/KooshaPari/substrate/tree/main/crates/substrate-core).
 
 Specifically:
+
 - `domain.rs` — Task, Conversation, Session, Message, StructuredResult, RoutingDecision, EngineCapabilities, TaskState
 - `ports.rs` — EnginePort, RoutingPort, TransportPort, StorePort, DispatchApi
 - `trace.rs` — TracePort + TraceEvent + TaskRegistered/TaskCompleted/TaskFailed variants
 
 The agent-facing **wire** is published separately at
-[`<REDACTED>/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle).
+[`&lt;REDACTED&gt;/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle).
 
 ## License
 
@@ -101,6 +102,6 @@ reporting issues, and validating schemas.
 
 ## Related repos
 
-- [`<REDACTED>/substrate`](https://github.com/KooshaPari/substrate) — Rust hexagonal spine, reference implementations
-- [`<REDACTED>/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle) — meta-repo of standalone adapter crates
-- [`<REDACTED>/phenotype-registry`](https://github.com/KooshaPari/phenotype-registry) — registry of phenotype-related projects
+- [`&lt;REDACTED&gt;/substrate`](https://github.com/KooshaPari/substrate) — Rust hexagonal spine, reference implementations
+- [`&lt;REDACTED&gt;/substrate-adapters-bundle`](https://github.com/KooshaPari/substrate-adapters-bundle) — meta-repo of standalone adapter crates
+- [`&lt;REDACTED&gt;/phenotype-registry`](https://github.com/KooshaPari/phenotype-registry) — registry of phenotype-related projects

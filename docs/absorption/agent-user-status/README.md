@@ -1,8 +1,8 @@
 # Absorption — &lt;REDACTED&gt;/agent-user-status → phenotype-tooling/crates/agent-user-status
 
 **Status:** ABSORBED 2026-07-17
-**Source repo:** `<REDACTED>/agent-user-status` @ `112287548359ba5c18ff1e7b047c8334f050532f` (2026-06-20)
-**Absorbing repo:** `<REDACTED>/phenotype-tooling`
+**Source repo:** `&lt;REDACTED&gt;/agent-user-status` @ `112287548359ba5c18ff1e7b047c8334f050532f` (2026-06-20)
+**Absorbing repo:** `&lt;REDACTED&gt;/phenotype-tooling`
 **Absorbing branch:** `salvage/phenotype-tooling-workspace-2026-07-15`
 **Absorbing commit:** `29ce5dd4d7baecd4920e5ccedca744eee5422a10`
 **Registry row:** `repo-agent-user-status` flipped `AFFIRM/active` → `ABSORB/absorbed`
@@ -21,7 +21,7 @@
 
 ## Why phenotype-tooling
 
-The original auto-generated audit pointed at `<REDACTED>/Agentora` (Rust agent-orchestration
+The original auto-generated audit pointed at `&lt;REDACTED&gt;/Agentora` (Rust agent-orchestration
 workspace), but the Python source cannot embed in Agentora without breaking its `[workspace]`
 semantics. `phenotype-tooling` already hosts Python subpackages via the `crates/phench`
 precedent — Python package embedded under `crates/` WITHOUT registering in
@@ -32,7 +32,7 @@ runtime for coding agents) is a developer-tooling concern.
 
 - `python3 -m compileall -q src/` → exit 0
 - `python3 -c "import agent_user_status.bootstrap, agent_user_status.statusd,
-  agent_user_status.agent_imessage"` → OK on Python 3.14.6
+agent_user_status.agent_imessage"` → OK on Python 3.14.6
 - `python3 -m pytest tests/ -q` → **91 passed in 6.40s**
 - `agent_user_status.cursor_tracker` correctly fails on non-macOS hosts because
   `pyobjc-framework-Cocoa` is macOS-only (listed under `[eye]` optional extra)

@@ -1,17 +1,17 @@
 # RFC 001 — Traceon hexagonal core → `observe` role
 
-| Field | Value |
-|-------|-------|
-| **Status** | Proposed |
-| **Role** | `observe` |
-| **Canonical owner** | **PhenoObservability** (workspace) |
-| **Thin OTLP bridge** | **phenotype-otel** (unchanged scope) |
-| **Supersedes** | HexaKit absorption of Traceon as genesis `crates/` |
-| **Authority** | [DOMAIN_ROLES.md](../../DOMAIN_ROLES.md), [LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md) |
+| Field                | Value                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------------- |
+| **Status**           | Proposed                                                                                       |
+| **Role**             | `observe`                                                                                      |
+| **Canonical owner**  | **PhenoObservability** (workspace)                                                             |
+| **Thin OTLP bridge** | **phenotype-otel** (unchanged scope)                                                           |
+| **Supersedes**       | HexaKit absorption of Traceon as genesis `crates/`                                             |
+| **Authority**        | [DOMAIN_ROLES.md](../../DOMAIN_ROLES.md), [LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md) |
 
 ## Summary
 
-Move the **Traceon hexagonal tracing core** (`tracingkit` crate, formerly `<REDACTED>/Traceon`) out of HexaKit `crates/` into the **`observe` role workspace** owned by **PhenoObservability**. **phenotype-otel** remains a **thin OTLP init bridge** — it must not absorb domain tracing logic.
+Move the **Traceon hexagonal tracing core** (`tracingkit` crate, formerly `&lt;REDACTED&gt;/Traceon`) out of HexaKit `crates/` into the **`observe` role workspace** owned by **PhenoObservability**. **phenotype-otel** remains a **thin OTLP init bridge** — it must not absorb domain tracing logic.
 
 This RFC explicitly rejects:
 
@@ -25,22 +25,22 @@ Traceon was subtree-merged into HexaKit as transitional `Traceon/` → `tracingk
 
 Current chokepoints ([RATIONALIZATION_EXECUTION.md](../../RATIONALIZATION_EXECUTION.md)):
 
-| Consumer | Today | Blocker |
-|----------|-------|---------|
-| PhenoObservability | HexaKit `tracingkit` git/path dep | Must repoint to observe-role workspace |
-| phenotype-otel | Standalone thin init | Must stay thin; may depend on observe core optionally |
+| Consumer           | Today                             | Blocker                                               |
+| ------------------ | --------------------------------- | ----------------------------------------------------- |
+| PhenoObservability | HexaKit `tracingkit` git/path dep | Must repoint to observe-role workspace                |
+| phenotype-otel     | Standalone thin init              | Must stay thin; may depend on observe core optionally |
 
 PhenoObservability already hosts a partial `tracingkit` tree (~15 paths vs Traceon’s 18). The observe role needs one canonical Rust hexagonal core, not two divergent copies.
 
 ## Decision
 
-| Layer | Repo / crate | Responsibility |
-|-------|--------------|----------------|
-| **Role workspace** | `PhenoObservability` | Observe role home: tracing/metrics domain crates, dashboards, higher-level exporters |
-| **Hexagonal core** | `crates/tracingkit` (name retained) | Traceon domain: Span, Tracer port, processors, propagators, exporter adapters |
-| **Thin init** | `phenotype-otel` (`pheno_otel::init`) | OTLP HTTP exporter + `tracing-subscriber` registry + global `TracerProvider` |
-| **Python edge** | `phenotype-python-sdk` `[observe]` extra | ObservabilityKit facade (Tier 2) |
-| **Genesis** | HexaKit | Templates only — **no** Traceon/tracing domain code after migration |
+| Layer              | Repo / crate                             | Responsibility                                                                       |
+| ------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Role workspace** | `PhenoObservability`                     | Observe role home: tracing/metrics domain crates, dashboards, higher-level exporters |
+| **Hexagonal core** | `crates/tracingkit` (name retained)      | Traceon domain: Span, Tracer port, processors, propagators, exporter adapters        |
+| **Thin init**      | `phenotype-otel` (`pheno_otel::init`)    | OTLP HTTP exporter + `tracing-subscriber` registry + global `TracerProvider`         |
+| **Python edge**    | `phenotype-python-sdk` `[observe]` extra | ObservabilityKit facade (Tier 2)                                                     |
+| **Genesis**        | HexaKit                                  | Templates only — **no** Traceon/tracing domain code after migration                  |
 
 **Owner rationale:** PhenoObservability already consumes tracingkit, hosts Metron-adjacent observability stacks, and is the fleet’s observe-role application workspace. phenotype-otel is intentionally minimal (single-crate OTLP bootstrap) and should remain installable without pulling the full hexagonal framework.
 
@@ -48,13 +48,13 @@ PhenoObservability already hosts a partial `tracingkit` tree (~15 paths vs Trace
 
 Per [LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md):
 
-| Component | Lang | Tier | Rationale |
-|-----------|------|------|-----------|
-| Traceon hexagonal core (`tracingkit`) | Rust | **1** | Long-lived tracing domain, correctness-critical propagation |
-| Metron / metrics crates (same workspace) | Rust | **1** | Co-located observe core |
-| phenotype-otel init | Rust | **1** | Thin OTLP bridge; no domain logic |
-| ObservabilityKit | Python 3.14 / uv | **2** | SDK edge, rapid iteration |
-| Dashboards / CLI adjacency | TS / Bun | **2** | Product edge where applicable |
+| Component                                | Lang             | Tier  | Rationale                                                   |
+| ---------------------------------------- | ---------------- | ----- | ----------------------------------------------------------- |
+| Traceon hexagonal core (`tracingkit`)    | Rust             | **1** | Long-lived tracing domain, correctness-critical propagation |
+| Metron / metrics crates (same workspace) | Rust             | **1** | Co-located observe core                                     |
+| phenotype-otel init                      | Rust             | **1** | Thin OTLP bridge; no domain logic                           |
+| ObservabilityKit                         | Python 3.14 / uv | **2** | SDK edge, rapid iteration                                   |
+| Dashboards / CLI adjacency               | TS / Bun         | **2** | Product edge where applicable                               |
 
 Document final choices in PhenoObservability `docs/sota/technical.md` using the policy template.
 
@@ -105,7 +105,7 @@ Optional dependency edge: `phenotype-otel` may depend on `tracingkit` for shared
 - [ ] Remove `Traceon/` from HexaKit workspace `Cargo.toml`.
 - [ ] Remove tracing domain from HexaKit `crates/` (genesis-only enforcement).
 - [ ] HexaKit CI green; update charter transitional note.
-- [ ] Archive `<REDACTED>/Traceon` if not already archived (verify zero external deps).
+- [ ] Archive `&lt;REDACTED&gt;/Traceon` if not already archived (verify zero external deps).
 
 ### Phase 4 — Python edge & docs
 

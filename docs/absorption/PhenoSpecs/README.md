@@ -2,14 +2,14 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/PhenoSpecs` |
-| Target repo | `<REDACTED>/phenotype-registry` |
-| Target path | `docs/specs/pheno-specs/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent (batch absorption) |
-| Verification | File count match: 492 files |
+| Field         | Value                                 |
+| ------------- | ------------------------------------- |
+| Source repo   | `&lt;REDACTED&gt;/PhenoSpecs`         |
+| Target repo   | `&lt;REDACTED&gt;/phenotype-registry` |
+| Target path   | `docs/specs/pheno-specs/`             |
+| Absorbed date | 2026-07-17                            |
+| Absorbed by   | forge agent (batch absorption)        |
+| Verification  | File count match: 492 files           |
 
 ## What was absorbed
 

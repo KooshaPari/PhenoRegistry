@@ -40,19 +40,21 @@ The cross-language contract (common field names: `url`, `port`, `db_path`, `log_
    - 12-factor cascade via `settings_customise_sources` (init > env > .env > defaults).
    - Tests: 14 in `tests/test_v020_parity.py` (v0.1.0 regression + v0.2.0 parity + cache semantics).
 4. **DELETE**: `pheno/crates/phenotype-config-core`, `pheno/crates/phenotype-config-loader`, `pheno/libs/phenotype-config-core`, `crates/phenotype-config` (Settly fork). All have `CANONICAL.md` / `ARCHIVED.md` redirects; zero consumers found.
-5. **DEPRECATE** (not delete) `pheno-config` Settly fork via GitHub `archived` flag (blocked on `Dmouse92 ≠ <REDACTED>` auth gap).
+5. **DEPRECATE** (not delete) `pheno-config` Settly fork via GitHub `archived` flag (blocked on `Dmouse92 ≠ &lt;REDACTED&gt;` auth gap).
 6. **PUBLISH** `pheno-config` to crates.io as the canonical Rust service-config crate.
 
 ## Consequences
 
-*Positive:*
+_Positive:_
+
 - 9-crate sprawl → 3-crate canonical surface (Rust service, Rust lib, Python service).
 - Cross-language parity: porting a service between Rust and Python no longer requires renaming config keys.
 - 1,801 LoC of legacy code removed (275 + 64 + 142 + 1,320 = 1,801).
 - One set of env-var conventions per language (`PHENO_<SERVICE>_*` for Rust; `PHENOTYPE_CONFIG_V020_*` for Python; documented in respective READMEs).
 - 12-factor path is the documented default: `combine('config.toml', 'PHENO_SERVICE')` in Rust; `MySettings()` with Pydantic-settings in Python.
 
-*Negative:*
+_Negative:_
+
 - Consumers that used the deleted `pheno/config-loader` or `pheno/libs/phenotype-config-core` APIs must migrate to `phenoShared/phenotype-config-core::FileConfig` / `CascadeLoader` (documented in `pheno-config/docs/twelve-factor.md`).
 - Settly GitHub archive is a public, irreversible step (mitigated by history preservation on the archived repo).
 - Cross-language parity requires both repos to update the canonical field list together; future fields are added to a coordination doc (`pheno-config/docs/twelve-factor.md`).
@@ -62,7 +64,7 @@ The cross-language contract (common field names: `url`, `port`, `db_path`, `log_
 - **Single mega-crate** that handles both use cases (A) and (B) — rejected: violates the existing repo layout; would force `pheno-config` consumers to take a `serde_yaml` + `thiserror` dependency for what is supposed to be a lightweight settings crate.
 - **One canonical crate per language (no cross-language parity)** — rejected: defeats the purpose of a polyglot fleet; the canonical 12-factor pattern requires field-name alignment.
 - **Keep all 9 crates and add a registry** — rejected: the audit showed zero consumers for 4 of them; keeping them is pure maintenance debt.
-- **Rename `pheno-config` to `pheno-settings`** — rejected: `pheno-config` is the established name in the 22 pheno-* repos; renaming would break consumers with no functional benefit.
+- **Rename `pheno-config` to `pheno-settings`** — rejected: `pheno-config` is the established name in the 22 pheno-\* repos; renaming would break consumers with no functional benefit.
 
 ## Verification
 

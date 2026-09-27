@@ -3,23 +3,23 @@ work_package_id: WP09
 title: CLI Bootstrap Command
 lane: "done"
 dependencies:
-- WP01
+  - WP01
 base_branch: 002-org-wide-release-governance-dx-automation-WP01
 base_commit: 50c5fe5c522c6cec9f56b7d88f9628b7ff80b5cc
-created_at: '2026-03-01T18:23:09.121447+00:00'
+created_at: "2026-03-01T18:23:09.121447+00:00"
 subtasks: [T049, T050, T051, T052, T053, T054, T055, T056]
 phase: Phase 3 - DX Tooling
-assignee: ''
+assignee: ""
 agent: "wp09-bootstrap"
 shell_pid: "18560"
 review_status: "approved"
 reviewed_by: "Koosha Paridehpour"
 history:
-- timestamp: '2026-03-01T13:00:00Z'
-  lane: planned
-  agent: system
-  shell_pid: ''
-  action: Prompt generated via /spec-kitty.tasks
+  - timestamp: "2026-03-01T13:00:00Z"
+    lane: planned
+    agent: system
+    shell_pid: ""
+    action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP09 – CLI Bootstrap Command
@@ -45,16 +45,18 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
 - Templates use Go `text/template` with embedded files (no external file dependencies)
 - Task definitions must match mise task syntax and be idempotent
 - Pre-commit/pre-push hooks are shell scripts with minimal dependencies (only git and installed tools)
-- CI workflows reference `<REDACTED>/phenotypeActions` repository reusable workflows
+- CI workflows reference `&lt;REDACTED&gt;/phenotypeActions` repository reusable workflows
 - Should support overwriting existing files with `--force` flag
 - Dry-run mode must show all files that would be created without modifying filesystem
 
 ## Subtasks & Detailed Guidance
 
 ### Subtask T049 – Bootstrap Command Implementation
+
 - **Purpose**: Create the `pheno bootstrap` command with language detection and artifact generation
 - **Steps**:
   1. Create `cmd/bootstrap.go` with Cobra command definition:
+
      ```go
      var bootstrapCmd = &cobra.Command{
          Use:   "bootstrap [flags]",
@@ -71,6 +73,7 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
          rootCmd.AddCommand(bootstrapCmd)
      }
      ```
+
   2. Implement `runBootstrap` function flow:
      - Detect languages in current directory (or use --language override)
      - For each language: generate language-specific templates (see T051–T055)
@@ -93,14 +96,16 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
      - File write fails: error with path and reason
   5. Support interactive mode (future): prompt for choices if ambiguous
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/cmd/bootstrap.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/cmd/bootstrap.go`
 - **Parallel?**: No (prerequisite for T050–T055)
 - **Notes**: Use `os.Stat` to check if files exist before writing; provide clear error messages; respect existing configurations when possible (merge rather than overwrite)
 
 ### Subtask T050 – Template System with Embedded Files
+
 - **Purpose**: Implement Go template system with embedded template files
 - **Steps**:
   1. Create `internal/templates/templates.go` to manage template loading and rendering:
+
      ```go
      package templates
 
@@ -131,6 +136,7 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
          return buf.String(), err
      }
      ```
+
   2. Create `internal/templates/files/` directory for template files:
      - `files/mise.toml.tpl` (see T051)
      - `files/pre-commit.sh.tpl` (see T052)
@@ -150,14 +156,16 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
      - <code>&#123;&#123; eq .Language "go" &#125;&#125;</code> → conditional rendering per language
   5. Error handling: wrap template errors with file name and context
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/templates.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/*.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/templates.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/*.tpl`
 - **Parallel?**: No (prerequisite for T051–T055)
 - **Notes**: Use `//go:embed` to embed files at compile time; ensure template files are valid Go templates; test template rendering with sample contexts
 
 ### Subtask T051 – Mise Task Templates
+
 - **Purpose**: Generate language-specific mise task definitions
 - **Steps**:
   1. Create `internal/templates/files/mise.toml.tpl` with common tasks:
+
      ```toml
      [tasks.format]
      description = "Format code"
@@ -265,19 +273,22 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
      description = "Show release status"
      run = "pheno audit --repo ."
      ```
+
   2. Ensure all tasks are language-appropriate and use standard tooling
   3. Include common tasks: format, lint, test, build, audit, docs:build
   4. Include release tasks: release:promote, release:status
   5. Validate that tasks are idempotent (can run multiple times without issues)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/mise.toml.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/mise.toml.tpl`
 - **Parallel?**: Yes (after T050)
 - **Notes**: Use conditional rendering (if/else) to generate language-specific tasks; ensure all referenced tools are either built-in or commonly installed; test generated file is valid TOML
 
 ### Subtask T052 – Pre-Commit Hook Template
+
 - **Purpose**: Generate shell script that enforces conventional commit format and runs fast formatting checks
 - **Steps**:
   1. Create `internal/templates/files/pre-commit.sh.tpl`:
+
      ```bash
      #!/bin/bash
      # Pre-commit hook: Enforce conventional commit format and fast linting
@@ -306,20 +317,23 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
      echo "✓ Commit message valid"
      exit 0
      ```
+
   2. Ensure regex pattern matches common conventional commit types (feat, fix, chore, docs, refactor, test, perf, ci, build, style, revert)
   3. Support optional scope in parentheses: `feat(api): add endpoint`
   4. Support breaking change indicator (!): `feat!: breaking change`
   5. Ensure hook is executable and has proper shebang
   6. Test with sample commit messages (both valid and invalid)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/pre-commit.sh.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/pre-commit.sh.tpl`
 - **Parallel?**: Yes (after T050)
 - **Notes**: Use basic POSIX shell commands to avoid dependencies; handle quoted commit messages correctly; be lenient on format check failure (don't block commit)
 
 ### Subtask T053 – Pre-Push Hook Template
+
 - **Purpose**: Generate shell script that enforces linting and testing based on branch pattern
 - **Steps**:
   1. Create `internal/templates/files/pre-push.sh.tpl`:
+
      ```bash
      #!/bin/bash
      # Pre-push hook: Run tests and linting based on branch pattern
@@ -368,6 +382,7 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
      echo "✓ Lint check passed"
      exit 0
      ```
+
   2. Detect branch name and apply rules:
      - `feature/*` → run lint only
      - `beta/*` or `rc/*` → run full test suite
@@ -376,14 +391,16 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
   3. Ensure hook is executable and has proper shebang
   4. Handle case where mise tasks don't exist (graceful fallback)
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/pre-push.sh.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/pre-push.sh.tpl`
 - **Parallel?**: Yes (after T050)
 - **Notes**: Use POSIX-compatible regex syntax; handle missing tasks gracefully (warn but don't fail); ensure hook doesn't interfere with automated pushes (CI/CD systems)
 
 ### Subtask T054 – CI Workflow Templates
+
 - **Purpose**: Generate GitHub Actions workflow files that integrate with phenotypeActions reusable workflows
 - **Steps**:
   1. Create `internal/templates/files/ci.yml.tpl`:
+
      ```yaml
      name: CI
 
@@ -401,19 +418,21 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
            - uses: actions/checkout@v4
            - uses: <REDACTED>/phenotypeActions/.github/workflows/gate-check.yml@v1
              with:
-               language: {{ .Language }}
+               language: { { .Language } }
                channel: alpha
-               risk_profile: {{ .RiskProfile }}
+               risk_profile: { { .RiskProfile } }
              secrets: inherit
      ```
+
   2. Create `internal/templates/files/release.yml.tpl`:
+
      ```yaml
      name: Release
 
      on:
        push:
          tags:
-           - 'v*'
+           - "v*"
 
      jobs:
        promote:
@@ -423,11 +442,11 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
            - uses: actions/checkout@v4
            - uses: <REDACTED>/phenotypeActions/.github/workflows/promote.yml@v1
              with:
-               language: {{ .Language }}
-               registry: {{ .Registry }}
+               language: { { .Language } }
+               registry: { { .Registry } }
                from_channel: alpha
                to_channel: beta
-               risk_profile: {{ .RiskProfile }}
+               risk_profile: { { .RiskProfile } }
                version: ${{ github.ref_name }}
              secrets: inherit
 
@@ -441,18 +460,21 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
              with:
                version: ${{ github.ref_name }}
      ```
+
   3. Ensure workflows reference correct phenotypeActions workflows (from WP10)
   4. Support language variable substitution
   5. Include necessary secrets and inputs
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/ci.yml.tpl`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/release.yml.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/ci.yml.tpl`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/release.yml.tpl`
 - **Parallel?**: Yes (after T050)
 - **Notes**: Use v4 of actions/checkout; reference phenotypeActions with semantic versioning; support language and registry variable substitution
 
 ### Subtask T055 – Changelog Template (cliff.toml)
+
 - **Purpose**: Generate git-cliff configuration for automatic changelog generation
 - **Steps**:
   1. Create `internal/templates/files/cliff.toml.tpl`:
+
      ```toml
      [changelog]
      # git-cliff configuration for changelog generation
@@ -498,19 +520,22 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
          {message_regex = "^test", group = "Testing"},
      ]
      ```
+
   2. Configure conventional commit parsing
   3. Group commits by type (feat, fix, chore, etc.)
   4. Include breaking changes in output
   5. Ensure output format matches semantic versioning
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/cliff.toml.tpl`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/files/cliff.toml.tpl`
 - **Parallel?**: Yes (after T050)
 - **Notes**: Use valid TOML and git-cliff template syntax; test template with sample commits; ensure changelog output is readable and follows organization standards
 
 ### Subtask T056 – Bootstrap Integration Test
+
 - **Purpose**: End-to-end test creating a temp repo and verifying all expected files
 - **Steps**:
   1. Create `cmd/bootstrap_test.go`:
+
      ```go
      func TestBootstrapGoProject(t *testing.T) {
          // Create temp dir
@@ -555,24 +580,25 @@ This work package implements the `pheno bootstrap` command to automate DX scaffo
          // Invalid: "add feature", "feat : extra space"
      }
      ```
+
   2. Use temp directories that are cleaned up after test
   3. Verify generated files are valid (parse TOML, YAML, shell syntax)
   4. Verify template substitution works (check for &#123;&#123; .Language &#125;&#125; is replaced)
   5. Test both dry-run and actual file generation
   6. Ensure test runs in <5 seconds
 
-- **Files**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/cmd/bootstrap_test.go`, `/Users/<REDACTED>/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/templates_test.go`
+- **Files**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/cmd/bootstrap_test.go`, `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/AgilePlus/internal/templates/templates_test.go`
 - **Parallel?**: Yes (after T049–T055)
 - **Notes**: Use `ioutil.TempDir` for safe temp directory creation; verify file permissions with `os.Stat`; use `bytes.Buffer` to capture command output; mock language detection if needed
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Mitigation |
-|------|------------|-----------|
-| Generated tasks don't work on user's system (missing tools) | Medium | Document tool requirements per language; add warnings during bootstrap; suggest fallback commands |
-| Pre-commit/push hooks break due to shell differences | Medium | Use POSIX-compatible syntax only; test on multiple shells (bash, zsh, sh) |
-| Template substitution leaves unresolved variables | Low | Validate all template variables are present in context; add test to catch unreplaced variables |
-| Generated CI workflows fail due to missing secrets | Medium | Document required secrets (NPM_TOKEN, etc.) in generated files; provide setup instructions |
+| Risk                                                        | Likelihood | Mitigation                                                                                        |
+| ----------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| Generated tasks don't work on user's system (missing tools) | Medium     | Document tool requirements per language; add warnings during bootstrap; suggest fallback commands |
+| Pre-commit/push hooks break due to shell differences        | Medium     | Use POSIX-compatible syntax only; test on multiple shells (bash, zsh, sh)                         |
+| Template substitution leaves unresolved variables           | Low        | Validate all template variables are present in context; add test to catch unreplaced variables    |
+| Generated CI workflows fail due to missing secrets          | Medium     | Document required secrets (NPM_TOKEN, etc.) in generated files; provide setup instructions        |
 
 ## Review Guidance
 

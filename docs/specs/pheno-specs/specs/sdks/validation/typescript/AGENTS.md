@@ -4,7 +4,7 @@
 
 - **Name**: phenotype-validation-ts
 - **Description**: TypeScript implementation of Phenotype validation framework
-- **Location**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/phenotype-validation-ts`
+- **Location**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/phenotype-validation-ts`
 - **Language Stack**: TypeScript
 - **Published**: Internal (Phenotype ecosystem)
 
@@ -30,6 +30,7 @@ phenotype-validation-ts/
 ## Quality Standards
 
 ### TypeScript Standards
+
 - **Line length**: 100 characters
 - **Formatter**: `prettier`
 - **Linter**: `eslint`
@@ -39,9 +40,11 @@ phenotype-validation-ts/
 ## Git Workflow
 
 ### Branch Naming
+
 Format: `validation-ts/<type>/<description>`
 
 Examples:
+
 - `validation-ts/feat/json-schema`
 - `validation-ts/fix/type-guards`
 
@@ -66,10 +69,10 @@ npx tsc --noEmit
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
+| Issue           | Solution                       |
+| --------------- | ------------------------------ |
 | No package.json | Project is minimal/placeholder |
-| Type errors | Check tsconfig.json |
+| Type errors     | Check tsconfig.json            |
 
 ## Dependencies
 
@@ -80,6 +83,7 @@ npx tsc --noEmit
 ## Agent Notes
 
 When working in phenotype-validation-ts:
+
 1. TypeScript equivalent of validation framework
 2. Coordinate with other validation projects
 3. Align with PhenoProc validation work

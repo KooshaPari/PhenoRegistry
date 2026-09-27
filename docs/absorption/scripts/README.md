@@ -1,19 +1,19 @@
 # Absorption Record: scripts
 
 **Date**: 2026-07-17
-**Source**: `<REDACTED>/scripts`
+**Source**: `&lt;REDACTED&gt;/scripts`
 **Target**: `phenotype-tooling/bin/legacy-scripts/`
 **Wave**: `2026-07-17-queue-refresh-2`
 **Disposition**: `ABSORB`
 
 ## Transfer Summary
 
-| Metric | Value |
-| --- | --- |
+| Metric            | Value               |
+| ----------------- | ------------------- |
 | Files transferred | 18 `.sh` + 1 README |
-| Total LOC | ~1200 |
-| Source archived | yes |
-| Source size | ~20KB |
+| Total LOC         | ~1200               |
+| Source archived   | yes                 |
+| Source size       | ~20KB               |
 
 ## What was absorbed
 
@@ -29,7 +29,7 @@
 ## Verification
 
 - `git push` succeeded: branch `salvage/phenotype-tooling-workspace-2026-07-15` on `phenotype-tooling`
-- Source repo `<REDACTED>/scripts` archived 2026-07-17
+- Source repo `&lt;REDACTED&gt;/scripts` archived 2026-07-17
 
 ## Branch
 

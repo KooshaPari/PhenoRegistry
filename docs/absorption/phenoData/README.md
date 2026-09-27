@@ -1,24 +1,24 @@
 # phenoData Absorption
 
-| Property | Value |
-|----------|-------|
-| Source | `<REDACTED>/phenoData` |
-| Target | `pheno/crates/pheno-data-*` (5 crates) |
-| Branch | `absorb/pheno-data-2026-07-17` |
-| Status | absorbed (2026-07-17) |
-| LOC | ~1,937 |
+| Property | Value                                  |
+| -------- | -------------------------------------- |
+| Source   | `&lt;REDACTED&gt;/phenoData`           |
+| Target   | `pheno/crates/pheno-data-*` (5 crates) |
+| Branch   | `absorb/pheno-data-2026-07-17`         |
+| Status   | absorbed (2026-07-17)                  |
+| LOC      | ~1,937                                 |
 
 ## What was absorbed
 
-The full 5-crate workspace contents of `<REDACTED>/phenoData`:
+The full 5-crate workspace contents of `&lt;REDACTED&gt;/phenoData`:
 
-| Source crate | Target crate | Notes |
-|---|---|---|
-| `phenoData/crates/core` | `pheno/crates/pheno-data-core` | `pheno-data-core` — core dataset traits/records |
-| `phenoData/crates/pheno-query` | `pheno/crates/pheno-data-query` | `pheno-data-query` — unified query builder, SurrealQueryPlanner + PostgresQueryPlanner |
-| `phenoData/crates/surreal-bridge` | `pheno/crates/pheno-data-surreal` | `pheno-data-surreal` — SurrealDB embedded with Pheno extensions |
-| `phenoData/crates/pg-bridge` | `pheno/crates/pheno-data-pg` | `pheno-data-pg` — PostgreSQL/pgvector bridge |
-| `phenoData/crates/smoke-tests` | `pheno/crates/pheno-data-smoke-tests` | `pheno-data-smoke-tests` — smoke test binary |
+| Source crate                      | Target crate                          | Notes                                                                                  |
+| --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
+| `phenoData/crates/core`           | `pheno/crates/pheno-data-core`        | `pheno-data-core` — core dataset traits/records                                        |
+| `phenoData/crates/pheno-query`    | `pheno/crates/pheno-data-query`       | `pheno-data-query` — unified query builder, SurrealQueryPlanner + PostgresQueryPlanner |
+| `phenoData/crates/surreal-bridge` | `pheno/crates/pheno-data-surreal`     | `pheno-data-surreal` — SurrealDB embedded with Pheno extensions                        |
+| `phenoData/crates/pg-bridge`      | `pheno/crates/pheno-data-pg`          | `pheno-data-pg` — PostgreSQL/pgvector bridge                                           |
+| `phenoData/crates/smoke-tests`    | `pheno/crates/pheno-data-smoke-tests` | `pheno-data-smoke-tests` — smoke test binary                                           |
 
 ## Changes applied
 
@@ -44,16 +44,16 @@ Total: 16 files added, ~1,174 lines.
 
 ## Verification
 
-| Check | Result |
-|-------|--------|
-| Files copied identically | ✅ (16 files) |
-| Cross-crate paths rewritten | ✅ |
-| Crate names renamed | ✅ |
-| Workspace members registered | ✅ |
-| Source `cargo check` (original repo) | ✅ — passed through `Checking pg-bridge` |
+| Check                                    | Result                                                                                          |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Files copied identically                 | ✅ (16 files)                                                                                   |
+| Cross-crate paths rewritten              | ✅                                                                                              |
+| Crate names renamed                      | ✅                                                                                              |
+| Workspace members registered             | ✅                                                                                              |
+| Source `cargo check` (original repo)     | ✅ — passed through `Checking pg-bridge`                                                        |
 | Pheno workspace `cargo check` (deferred) | 🟡 Heavy deps (surrealdb + kv-rocksdb, tokio-postgres-rustls) cause >5min build; deferred to CI |
 
-The historical archival statement is stale: `<REDACTED>/phenoData` currently
+The historical archival statement is stale: `&lt;REDACTED&gt;/phenoData` currently
 reports `archived=false` and has active maintenance refs. See
 [`ACTIVE_SOURCE_REVALIDATION_20260807.md`](ACTIVE_SOURCE_REVALIDATION_20260807.md)
 for exact current refs and the unresolved target decision. This evidence update

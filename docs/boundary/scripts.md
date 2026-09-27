@@ -9,7 +9,7 @@ Future cleanup may relocate individual scripts out of `legacy-scripts/` as neede
 
 ## Provenance
 
-- Source: `<REDACTED>/scripts` (archived 2026-07-17)
-- Target: `<REDACTED>/phenotype-tooling` (bin/legacy-scripts/)
+- Source: `&lt;REDACTED&gt;/scripts` (archived 2026-07-17)
+- Target: `&lt;REDACTED&gt;/phenotype-tooling` (bin/legacy-scripts/)
 - Wave: `2026-07-17-queue-refresh-2`
 - Disposition: `ABSORB`

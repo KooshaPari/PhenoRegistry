@@ -6,15 +6,15 @@ last_boundary_review: 2026-07-17
 review_cadence: never (archived)
 archive_reason: absorbed-into-phenodocs
 canonical_source: phenodocs/docs/specs/parpoura/
-absorbing_repo: <REDACTED>/phenodocs
+absorbing_repo: &lt;REDACTED&gt;/phenodocs
 ---
 
 # Boundary — Parpoura (ABSORBED → phenodocs)
 
 ## Disposition
 
-**ABSORB** on 2026-07-17. Source repo `<REDACTED>/Parpoura` subsequently
-**archived** on GitHub via `gh repo archive <REDACTED>/Parpoura -y` and verified
+**ABSORB** on 2026-07-17. Source repo `&lt;REDACTED&gt;/Parpoura` subsequently
+**archived** on GitHub via `gh repo archive &lt;REDACTED&gt;/Parpoura -y` and verified
 `isArchived=true` via `gh repo view`.
 
 Parpoura is a **spec-first planning/architecture** repository that served as a
@@ -33,18 +33,18 @@ spine is `phenodocs`, the canonical documentation hub.
 
 ## Audit summary
 
-| Aspect | Finding |
-|--------|---------|
-| Domain | Spec-first planning/architecture / venture control-plane design |
-| Languages | Markdown (primary) + Python stubs (skipped) |
-| Remote size | 84KB (main only) |
-| Local clone size | 27MB (15MB is rendered HTML mirrors) |
-| Last push | 2026-02-23T11:17:23Z |
-| Branches | 1 remote branch (`main`) |
-| Phenotype substrate alignment | None at the code level (pure spec); complements PhenoSpecs at the doc-plane level |
-| Pillar | None directly; provides planning/architecture documentation |
-| Reuse potential | The 80-file / 2.7MB spec bundle (PRD, FR, ADR, PLAN, USER_JOURNEYS, TECHNICAL_SPEC + 3 track specs + DATA_MODEL_DB/API_EVENTS/ARTIFACT_COMPILER/OPS_COMPLIANCE/SCHEMA_PACK/ROLE_TOOL/USER_SPEC) is valuable as canonical planning reference material |
-| Decision | ABSORB into phenodocs/docs/specs/parpoura/; archive source |
+| Aspect                        | Finding                                                                                                                                                                                                                                              |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Domain                        | Spec-first planning/architecture / venture control-plane design                                                                                                                                                                                      |
+| Languages                     | Markdown (primary) + Python stubs (skipped)                                                                                                                                                                                                          |
+| Remote size                   | 84KB (main only)                                                                                                                                                                                                                                     |
+| Local clone size              | 27MB (15MB is rendered HTML mirrors)                                                                                                                                                                                                                 |
+| Last push                     | 2026-02-23T11:17:23Z                                                                                                                                                                                                                                 |
+| Branches                      | 1 remote branch (`main`)                                                                                                                                                                                                                             |
+| Phenotype substrate alignment | None at the code level (pure spec); complements PhenoSpecs at the doc-plane level                                                                                                                                                                    |
+| Pillar                        | None directly; provides planning/architecture documentation                                                                                                                                                                                          |
+| Reuse potential               | The 80-file / 2.7MB spec bundle (PRD, FR, ADR, PLAN, USER_JOURNEYS, TECHNICAL_SPEC + 3 track specs + DATA_MODEL_DB/API_EVENTS/ARTIFACT_COMPILER/OPS_COMPLIANCE/SCHEMA_PACK/ROLE_TOOL/USER_SPEC) is valuable as canonical planning reference material |
+| Decision                      | ABSORB into phenodocs/docs/specs/parpoura/; archive source                                                                                                                                                                                           |
 
 ## What was absorbed
 
@@ -71,38 +71,38 @@ spine is `phenodocs`, the canonical documentation hub.
 
 ## What was deliberately NOT absorbed
 
-| Category | Reason |
-|----------|--------|
-| Rendered HTML mirrors (`index.html`, `404.html`, every `.html` sibling) | Markdown sources are canonical |
-| ChatGPT provenance dumps (550KB root conversation + 88 `docs/context/conv2/chunk_*.md` files) | LLM-conversation provenance, not spec content |
-| Governance boilerplate (`AGENTS.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS`, `CONTRIBUTING.md`, `CHANGELOG.md`, `FUNDING.yml`, `SECURITY.md`, `SUPPORT.md`, `LICENSE*`, `CITATION.cff`) | Canonical governance lives in `phenotype-registry/` and `phenodocs/` |
-| Build/tooling/lockfiles (`package*.json`, `bun.lock`, `uv.lock`, `Taskfile.yml`, `justfile`, etc.) | Build artifacts, not docs |
-| CI/IDE/dotfiles (`.github/`, `.airlock/`, `.devcontainer/`, `.gemini/`, etc.) | Repo configuration |
-| Localization stubs (`fa/`, `fa-Latn/`, `zh-CN/`, `zh-TW/`) | Empty placeholders |
-| Scripts/hooks/checks (`scripts/`, `hooks/`, `worklogs/`, `tests/`) | Governance/build helpers |
-| Duplicates (`docs/fragemented/` — typo for "fragmented") | Stale snapshots already preserved elsewhere |
-| Assets (`assets/`, `Joule-based Technocratic Economy_files/`) | Binary artifacts tied to excluded rendered HTML |
-| **Runtime code (`venture/` and `tests/`)** | Dormant Python/pytest stubs tied to a venture concept that never reached implementation. If revived, these belong in `phenotype-apps` or a dedicated repo, not in a docs site |
+| Category                                                                                                                                                                            | Reason                                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rendered HTML mirrors (`index.html`, `404.html`, every `.html` sibling)                                                                                                             | Markdown sources are canonical                                                                                                                                                |
+| ChatGPT provenance dumps (550KB root conversation + 88 `docs/context/conv2/chunk_*.md` files)                                                                                       | LLM-conversation provenance, not spec content                                                                                                                                 |
+| Governance boilerplate (`AGENTS.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS`, `CONTRIBUTING.md`, `CHANGELOG.md`, `FUNDING.yml`, `SECURITY.md`, `SUPPORT.md`, `LICENSE*`, `CITATION.cff`) | Canonical governance lives in `phenotype-registry/` and `phenodocs/`                                                                                                          |
+| Build/tooling/lockfiles (`package*.json`, `bun.lock`, `uv.lock`, `Taskfile.yml`, `justfile`, etc.)                                                                                  | Build artifacts, not docs                                                                                                                                                     |
+| CI/IDE/dotfiles (`.github/`, `.airlock/`, `.devcontainer/`, `.gemini/`, etc.)                                                                                                       | Repo configuration                                                                                                                                                            |
+| Localization stubs (`fa/`, `fa-Latn/`, `zh-CN/`, `zh-TW/`)                                                                                                                          | Empty placeholders                                                                                                                                                            |
+| Scripts/hooks/checks (`scripts/`, `hooks/`, `worklogs/`, `tests/`)                                                                                                                  | Governance/build helpers                                                                                                                                                      |
+| Duplicates (`docs/fragemented/` — typo for "fragmented")                                                                                                                            | Stale snapshots already preserved elsewhere                                                                                                                                   |
+| Assets (`assets/`, `Joule-based Technocratic Economy_files/`)                                                                                                                       | Binary artifacts tied to excluded rendered HTML                                                                                                                               |
+| **Runtime code (`venture/` and `tests/`)**                                                                                                                                          | Dormant Python/pytest stubs tied to a venture concept that never reached implementation. If revived, these belong in `phenotype-apps` or a dedicated repo, not in a docs site |
 
 ## What lives where now
 
-| Capability | Lives in |
-|------------|----------|
-| Spec-first planning/architecture documentation | `phenodocs/docs/specs/parpoura/` (canonical) |
-| Parpoura runtime Python stubs (auth, database, eventbus, ledger, api) | `<REDACTED>/Parpoura` (archived) — recoverable for forensic reference |
-| Parpoura pytest stubs | `<REDACTED>/Parpoura` (archived) — recoverable for forensic reference |
-| Shared spec library (canonical specs across Phenotype) | `<REDACTED>/PhenoSpecs` (separate spine member) |
-| Doc hub / pattern handbook / research | `<REDACTED>/phenodocs` (other subtrees) |
+| Capability                                                            | Lives in                                                                    |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Spec-first planning/architecture documentation                        | `phenodocs/docs/specs/parpoura/` (canonical)                                |
+| Parpoura runtime Python stubs (auth, database, eventbus, ledger, api) | `&lt;REDACTED&gt;/Parpoura` (archived) — recoverable for forensic reference |
+| Parpoura pytest stubs                                                 | `&lt;REDACTED&gt;/Parpoura` (archived) — recoverable for forensic reference |
+| Shared spec library (canonical specs across Phenotype)                | `&lt;REDACTED&gt;/PhenoSpecs` (separate spine member)                       |
+| Doc hub / pattern handbook / research                                 | `&lt;REDACTED&gt;/phenodocs` (other subtrees)                               |
 
 ## Outcome
 
 - 80 files / 2.7MB absorbed into `phenodocs/docs/specs/parpoura/`.
-- Source repo `<REDACTED>/Parpoura` archived on GitHub (read-only tombstone).
+- Source repo `&lt;REDACTED&gt;/Parpoura` archived on GitHub (read-only tombstone).
 - Registry row `repo-Parpoura`: disposition `AFFIRM` → `ABSORB`,
   fsm `active` → `absorbed`, target `phenodocs (docs/specs/parpoura/)`.
 - Audit artifact: `phenotype-registry/audits/absorption-justifications/Parpoura-2026-07-17.md`.
 - Provenance: `phenodocs/docs/specs/parpoura/ABSORPTION.md`.
 - Branch: `absorb/parpoura-2026-07-17` at commit `8901287` on
-  `<REDACTED>/phenodocs`.
+  `&lt;REDACTED&gt;/phenodocs`.
 
 **Next review:** never (archived; tombstone state).

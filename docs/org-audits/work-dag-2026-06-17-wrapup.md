@@ -1,12 +1,14 @@
 # Phenotype Wrap-Up Work DAG (2026-06-17)
+
 **Status:** All completed tasks green; 4 strands documented for follow-up
 **Format:** Topological DAG with explicit dependencies and parallel streams
 
 ---
 
 ## Legend
+
 - ✅ DONE — work landed on &lt;REDACTED&gt;
-- 🟡 PUSHED_AS_WIP — work preserved as wip/* branch awaiting follow-up PR
+- 🟡 PUSHED_AS_WIP — work preserved as wip/\* branch awaiting follow-up PR
 - 🟠 STRANDED — work in local worktree, no working remote (ARCHIVE_ONLY)
 - 🔵 SKIPPED — explicitly de-scoped by user (Dmouse92)
 - ⬜ PENDING — follow-up action for next session
@@ -139,64 +141,66 @@
 
 ### Stream A: AgilePlus wrap-up (T1, T4, T7, T8)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T1 | Survey AgilePlus state (2 stashes found) | ✅ DONE | `git stash list` showed 2 stashes |
-| T4 | Fix AgilePlus origin (`helios-cli` → &lt;REDACTED&gt;/AgilePlus) | ✅ DONE | `git remote -v` shows correct origin |
-| T7 | Push `wip/stash-2026-06-14-spdx-license-headers-2026-06-17` | 🟡 PUSHED_AS_WIP | `git ls-remote --heads origin` confirms `4ebef382d` |
-| T8 | Drop `stash@{1}` (code() superseded by to_envelope()) | ✅ DONE | `git stash list` empty |
+| Task | Description                                                      | Status           | Evidence                                            |
+| ---- | ---------------------------------------------------------------- | ---------------- | --------------------------------------------------- |
+| T1   | Survey AgilePlus state (2 stashes found)                         | ✅ DONE          | `git stash list` showed 2 stashes                   |
+| T4   | Fix AgilePlus origin (`helios-cli` → &lt;REDACTED&gt;/AgilePlus) | ✅ DONE          | `git remote -v` shows correct origin                |
+| T7   | Push `wip/stash-2026-06-14-spdx-license-headers-2026-06-17`      | 🟡 PUSHED_AS_WIP | `git ls-remote --heads origin` confirms `4ebef382d` |
+| T8   | Drop `stash@{1}` (code() superseded by to_envelope())            | ✅ DONE          | `git stash list` empty                              |
 
 ### Stream B: pheno wrap-up (T2, T5, T9)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T2 | Survey pheno state (2 stashes, 1 Dmouse92-only branch) | ✅ DONE | stash list + ls-remote |
-| T5 | Push `wip/stash-2026-05-02-pheno-cli-adapter-refactor-2026-06-17` | 🟡 PUSHED_AS_WIP | `e942953de` on origin |
-| T9 | Drop `stash@{1}` (Taskfile.yml already on main @ 9589c61) | ✅ DONE | `git stash list` empty |
+| Task | Description                                                       | Status           | Evidence               |
+| ---- | ----------------------------------------------------------------- | ---------------- | ---------------------- |
+| T2   | Survey pheno state (2 stashes, 1 Dmouse92-only branch)            | ✅ DONE          | stash list + ls-remote |
+| T5   | Push `wip/stash-2026-05-02-pheno-cli-adapter-refactor-2026-06-17` | 🟡 PUSHED_AS_WIP | `e942953de` on origin  |
+| T9   | Drop `stash@{1}` (Taskfile.yml already on main @ 9589c61)         | ✅ DONE          | `git stash list` empty |
 
 ### Stream C: dispatch-mcp wrap-up (T3, T6, T10, T11)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T3 | Survey dispatch-mcp (no &lt;REDACTED&gt; repo existed; Dmouse92 was origin) | ✅ DONE | `gh repo view <REDACTED>/dispatch-mcp` failed |
-| T6 | Fix origin + CREATE new &lt;REDACTED&gt;/dispatch-mcp | ✅ DONE | `gh repo create <REDACTED>/dispatch-mcp` |
-| T10 | Push all 4 local branches (main, chore/w2-1, feat/openai-compat) | ✅ DONE | `git push origin --all` |
-| T11 | Migrate Dmouse92 W2-1 work to `wip/migrate-from-dmouse-w2-1-2026-06-17` | 🟡 PUSHED_AS_WIP | `a1aaef2d` migrated to &lt;REDACTED&gt;/dispatch-mcp |
+| Task | Description                                                                 | Status           | Evidence                                             |
+| ---- | --------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------- |
+| T3   | Survey dispatch-mcp (no &lt;REDACTED&gt; repo existed; Dmouse92 was origin) | ✅ DONE          | `gh repo view &lt;REDACTED&gt;/dispatch-mcp` failed  |
+| T6   | Fix origin + CREATE new &lt;REDACTED&gt;/dispatch-mcp                       | ✅ DONE          | `gh repo create &lt;REDACTED&gt;/dispatch-mcp`       |
+| T10  | Push all 4 local branches (main, chore/w2-1, feat/openai-compat)            | ✅ DONE          | `git push origin --all`                              |
+| T11  | Migrate Dmouse92 W2-1 work to `wip/migrate-from-dmouse-w2-1-2026-06-17`     | 🟡 PUSHED_AS_WIP | `a1aaef2d` migrated to &lt;REDACTED&gt;/dispatch-mcp |
 
 ### Stream D: phenotype-ops wrap-up (T12, T13)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T12 | Fix phenotype-ops origin (Dmouse92 → &lt;REDACTED&gt;) | ✅ DONE | `git remote -v` shows &lt;REDACTED&gt;/phenotype-ops |
-| T13 | Verify `chore/sha-pin-2026-06-16` in sync | ✅ DONE | `8dd8631` matches origin |
+| Task | Description                                            | Status  | Evidence                                             |
+| ---- | ------------------------------------------------------ | ------- | ---------------------------------------------------- |
+| T12  | Fix phenotype-ops origin (Dmouse92 → &lt;REDACTED&gt;) | ✅ DONE | `git remote -v` shows &lt;REDACTED&gt;/phenotype-ops |
+| T13  | Verify `chore/sha-pin-2026-06-16` in sync              | ✅ DONE | `8dd8631` matches origin                             |
 
 ### Stream E: Strands (T15-T18)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T15 | monorepo 3 governance commits (chore/w5-adrs-sota) | 🟠 STRANDED | `git log argis/main..HEAD` shows 3 ahead; no &lt;REDACTED&gt;/repos |
-| T16 | l4-80-wt 1 worklog commit (FocalPoint) | 🟠 STRANDED | `git push` → "Repository not archived" |
-| T17 | l4-68 3 commits including 286-line pheno-context crate | 🟠 STRANDED | LFS reject + submodule remotes missing |
-| T18 | audit-30pillar 484 commits | 🟠 STRANDED | `merge-base --all` empty (divergent history) |
+| Task | Description                                            | Status      | Evidence                                                            |
+| ---- | ------------------------------------------------------ | ----------- | ------------------------------------------------------------------- |
+| T15  | monorepo 3 governance commits (chore/w5-adrs-sota)     | 🟠 STRANDED | `git log argis/main..HEAD` shows 3 ahead; no &lt;REDACTED&gt;/repos |
+| T16  | l4-80-wt 1 worklog commit (FocalPoint)                 | 🟠 STRANDED | `git push` → "Repository not archived"                              |
+| T17  | l4-68 3 commits including 286-line pheno-context crate | 🟠 STRANDED | LFS reject + submodule remotes missing                              |
+| T18  | audit-30pillar 484 commits                             | 🟠 STRANDED | `merge-base --all` empty (divergent history)                        |
 
 ### Stream F: Documentation (T19, T20, T21)
 
-| Task | Description | Status | Evidence |
-|---|---|---|---|
-| T19 | Build 71-pillar audit at `audit-71-pillar-2026-06-17-wrapup.md` | ✅ DONE | 479 lines, 30+3+13+13+15+1 = 71 pillars |
-| T20 | Build this DAG at `work-dag-2026-06-17-wrapup.md` | ✅ DONE | This file |
-| T21 | Final report to user | ✅ DONE | This conversation |
+| Task | Description                                                     | Status  | Evidence                                |
+| ---- | --------------------------------------------------------------- | ------- | --------------------------------------- |
+| T19  | Build 71-pillar audit at `audit-71-pillar-2026-06-17-wrapup.md` | ✅ DONE | 479 lines, 30+3+13+13+15+1 = 71 pillars |
+| T20  | Build this DAG at `work-dag-2026-06-17-wrapup.md`               | ✅ DONE | This file                               |
+| T21  | Final report to user                                            | ✅ DONE | This conversation                       |
 
 ---
 
 ## Parallelism notes
 
 The 4 wrap-up streams (AgilePlus, pheno, dispatch-mcp, phenotype-ops) are **fully independent** and could have been parallelized across subagents. In this session they were executed sequentially because:
+
 1. The user-priority was speed-to-completion, not peak parallelism
 2. The shell tool's `cwd` parameter required sequential re-anchoring per call
 3. The `Task` tool was failing in this session (JSON error)
 
 **Next-session improvement**: For wrap-up of this size, dispatch one `forge` subagent per repo (4 in parallel) with explicit instructions:
+
 - "Fix origin, push WIP branches, drop obsolete stashes"
 - "Do NOT touch Dmouse92 remote — user has scoped that out"
 - "Report back when done; do not push force-with-lease without confirmation"
@@ -205,13 +209,13 @@ The 4 wrap-up streams (AgilePlus, pheno, dispatch-mcp, phenotype-ops) are **full
 
 ## Risk register
 
-| # | Risk | Mitigation |
-|---|---|---|
-| 1 | Stranded monorepo commits lost if worktree is deleted | Documented in audit; next session must decide &lt;REDACTED&gt;/repos vs cherry-pick |
-| 2 | Submodule LFS cache missing | Re-run `git lfs fetch --all` once argis-extensions submodule remotes are configured |
-| 3 | dispatch-mcp repo creation accidental default settings | `gh repo create --public --description "..." --clone=false` (we used --clone=false, no source push) |
-| 4 | WIP branches never landed | Tagged in audit as `PUSHED_AS_WIP` for follow-up PR cycle |
-| 5 | HOOKS_SKIP=1 bypassed pre-push checks | Acceptable risk for wrap-up; land via real PRs (which will run hooks) |
+| #   | Risk                                                   | Mitigation                                                                                          |
+| --- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| 1   | Stranded monorepo commits lost if worktree is deleted  | Documented in audit; next session must decide &lt;REDACTED&gt;/repos vs cherry-pick                 |
+| 2   | Submodule LFS cache missing                            | Re-run `git lfs fetch --all` once argis-extensions submodule remotes are configured                 |
+| 3   | dispatch-mcp repo creation accidental default settings | `gh repo create --public --description "..." --clone=false` (we used --clone=false, no source push) |
+| 4   | WIP branches never landed                              | Tagged in audit as `PUSHED_AS_WIP` for follow-up PR cycle                                           |
+| 5   | HOOKS_SKIP=1 bypassed pre-push checks                  | Acceptable risk for wrap-up; land via real PRs (which will run hooks)                               |
 
 ---
 

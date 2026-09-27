@@ -4,8 +4,8 @@
 
 ## Identity
 
-- **Source:** `<REDACTED>/pheno-cdylib-bridge` (Rust cdylib, 3 branches, v0.1.0)
-- **Canonical home:** `<REDACTED>/pheno` (`crates/pheno-cdylib-bridge/`)
+- **Source:** `&lt;REDACTED&gt;/pheno-cdylib-bridge` (Rust cdylib, 3 branches, v0.1.0)
+- **Canonical home:** `&lt;REDACTED&gt;/pheno` (`crates/pheno-cdylib-bridge/`)
 - **Crate name:** `pheno-cdylib-bridge`
 - **Library output:** `libpheno_bridge.{so,dylib,dll}` (cdylib) + `libpheno_bridge.a` (staticlib)
 - **Workspace member:** yes (Rust monorepo `pheno`)
@@ -18,9 +18,10 @@ the sibling `thegent` workspace under `crates/thegent-memory`) to
 Go (forgecode), Python (ctypes), C (dlopen), and any other FFI-capable
 language — **without requiring them to compile the Rust toolchain**.
 
-This is the *embedder* surface. Memory *storage backends* (Supermemory,
+This is the _embedder_ surface. Memory _storage backends_ (Supermemory,
 Letta, Cognee, Mem0, Graphiti, Hippo, Zep) live in `thegent-memory` itself.
 The bridge is purely a serialization layer that:
+
 1. Wraps `Box<dyn MemoryPort>` as `*mut c_void` opaque handles
 2. Marshals `*const c_char` ↔ Rust `String`/`&str` (CString round-trip)
 3. Returns ownership-clean errors via `pheno_last_error()`

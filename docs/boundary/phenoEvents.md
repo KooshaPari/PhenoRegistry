@@ -2,13 +2,13 @@
 
 **Status:** `KEEP_CANONICAL_STANDALONE`
 
-| Field | Current evidence |
-| --- | --- |
-| Canonical owner | `<REDACTED>/phenoEvents` |
-| Default branch | `main` |
-| Verified main | `be6573c68797cc611a99533bca6dc1c3dcdb0c88` |
-| Remote state | public and unarchived (verified 2026-08-05) |
-| Boundary | durable SQLite outbox, retries, DLQ, idempotency, projections, schema registry, and OTLP tracing |
+| Field           | Current evidence                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Canonical owner | `&lt;REDACTED&gt;/phenoEvents`                                                                   |
+| Default branch  | `main`                                                                                           |
+| Verified main   | `be6573c68797cc611a99533bca6dc1c3dcdb0c88`                                                       |
+| Remote state    | public and unarchived (verified 2026-08-05)                                                      |
+| Boundary        | durable SQLite outbox, retries, DLQ, idempotency, projections, schema registry, and OTLP tracing |
 
 ## Current ownership
 
@@ -23,7 +23,7 @@ material for absorption.
 ## Historical pheno claim
 
 The 2026-07-17 records claimed that `phenoEvents` was absorbed into
-`<REDACTED>/pheno`. That claim is **historical and unverified**. At recheck,
+`&lt;REDACTED&gt;/pheno`. That claim is **historical and unverified**. At recheck,
 pheno main `81d850837848800aa7a3e6a6f007b91b6555ef07` contains no
 `crates/pheno-events`, `crates/phenoevents-observability`, or
 `crates/phenotype-event-bus` path. The registry preserves the old claim as

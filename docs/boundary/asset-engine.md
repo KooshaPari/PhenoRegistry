@@ -2,8 +2,8 @@
 
 **Status**: `LIVE` / `DECLARE_BOUNDARY_OWNER` (2026-07-20)  
 **Source**: `github.com/KooshaPari/asset-engine`  
-**Extracted from**: `<REDACTED>/phenoDesign/engine/`  
-**Spine peer**: `<REDACTED>/phenoDesign` (creativity / design / UX spine)
+**Extracted from**: `&lt;REDACTED&gt;/phenoDesign/engine/`  
+**Spine peer**: `&lt;REDACTED&gt;/phenoDesign` (creativity / design / UX spine)
 
 ## Description
 
@@ -11,14 +11,14 @@ asset-engine is the **canonical boundary owner** for the Phenotype multi-tool as
 
 ## Tool legs
 
-| Leg | Purpose | Entry |
-|-----|---------|-------|
-| Blender | 3D icons, heroes | `blender/*.py` |
-| ImageMagick | Raster ops, favicons | `imagemagick/*.sh` |
-| FFmpeg | Video transcode | `ffmpeg/*.sh` |
-| Unreal | Cinematics (stub) | `unreal/` |
-| Adobe | CC automation (gated) | `adobe/` |
-| Orchestrator | Manifest dispatch | `orchestrator/driver.py` |
+| Leg          | Purpose               | Entry                    |
+| ------------ | --------------------- | ------------------------ |
+| Blender      | 3D icons, heroes      | `blender/*.py`           |
+| ImageMagick  | Raster ops, favicons  | `imagemagick/*.sh`       |
+| FFmpeg       | Video transcode       | `ffmpeg/*.sh`            |
+| Unreal       | Cinematics (stub)     | `unreal/`                |
+| Adobe        | CC automation (gated) | `adobe/`                 |
+| Orchestrator | Manifest dispatch     | `orchestrator/driver.py` |
 
 ## In scope
 
@@ -28,11 +28,11 @@ asset-engine is the **canonical boundary owner** for the Phenotype multi-tool as
 
 ## Out of scope
 
-| Slice | Owner |
-|-------|-------|
-| Design tokens SSOT | `phenoDesign` |
+| Slice                           | Owner         |
+| ------------------------------- | ------------- |
+| Design tokens SSOT              | `phenoDesign` |
 | UX patterns / component library | `phenoDesign` |
-| Docs site theme | `phenoDesign` |
+| Docs site theme                 | `phenoDesign` |
 
 ## Migration
 

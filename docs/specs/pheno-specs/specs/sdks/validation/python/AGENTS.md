@@ -4,7 +4,7 @@
 
 - **Name**: phenotype-validation-python
 - **Description**: Python implementation of Phenotype validation framework
-- **Location**: `/Users/<REDACTED>/CodeProjects/Phenotype/repos/phenotype-validation-python`
+- **Location**: `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/phenotype-validation-python`
 - **Language Stack**: Python
 - **Published**: Internal (Phenotype ecosystem)
 
@@ -30,6 +30,7 @@ phenotype-validation-python/
 ## Quality Standards
 
 ### Python Standards
+
 - **Line length**: 100 characters
 - **Formatter**: `ruff format` or `black`
 - **Linter**: `ruff check`
@@ -39,9 +40,11 @@ phenotype-validation-python/
 ## Git Workflow
 
 ### Branch Naming
+
 Format: `validation-py/<type>/<description>`
 
 Examples:
+
 - `validation-py/feat/schema-validation`
 - `validation-py/fix/rule-engine`
 
@@ -66,10 +69,10 @@ mypy .
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
+| Issue             | Solution                       |
+| ----------------- | ------------------------------ |
 | No pyproject.toml | Project is minimal/placeholder |
-| Import errors | Check package structure |
+| Import errors     | Check package structure        |
 
 ## Dependencies
 
@@ -80,6 +83,7 @@ mypy .
 ## Agent Notes
 
 When working in phenotype-validation-python:
+
 1. Python equivalent of validation framework
 2. Coordinate with other validation projects
 3. Align with PhenoProc validation work

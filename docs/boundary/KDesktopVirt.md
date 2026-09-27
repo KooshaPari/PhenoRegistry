@@ -15,7 +15,7 @@ absorbing_repo: phenotype-registry (boundary record only)
 
 **ARCHIVED** on GitHub 2026-07-17 (verified `isArchived=true` via `gh repo view`).
 
-`<REDACTED>/KDesktopVirt` is a **non-Phenotype** project — an AI agent desktop
+`&lt;REDACTED&gt;/KDesktopVirt` is a **non-Phenotype** project — an AI agent desktop
 automation platform built around KDE / Kubuntu / X11 / Wayland containerized
 desktops with Docker + Kubernetes orchestration. It targets a Playwright-style
 API for full Linux desktop sessions and is unrelated to the Phenotype substrate,
@@ -26,16 +26,16 @@ why the repo was retired. No source was migrated into the phenotype monorepo.
 
 ## Audit summary
 
-| Aspect | Finding |
-|--------|---------|
-| Domain | KDE desktop virtualization / AI agent UI automation |
-| Languages | Rust + Go + Python + TypeScript + shell |
-| Size | ~1.2 MB source (excluding `target/`, `node_modules/`) |
-| Branches | 1 remote branch (long-stale `main`, last push 2025-07-14) |
-| Phenotype substrate alignment | None |
-| Pillar | None — falls outside `DOMAIN_ROLES.md` taxonomy |
-| Reuse potential | None — Playwright-for-desktop scope not part of Phenotype charter |
-| Decision | Archive on GitHub; record in registry; no fork, no transfer |
+| Aspect                        | Finding                                                           |
+| ----------------------------- | ----------------------------------------------------------------- |
+| Domain                        | KDE desktop virtualization / AI agent UI automation               |
+| Languages                     | Rust + Go + Python + TypeScript + shell                           |
+| Size                          | ~1.2 MB source (excluding `target/`, `node_modules/`)             |
+| Branches                      | 1 remote branch (long-stale `main`, last push 2025-07-14)         |
+| Phenotype substrate alignment | None                                                              |
+| Pillar                        | None — falls outside `DOMAIN_ROLES.md` taxonomy                   |
+| Reuse potential               | None — Playwright-for-desktop scope not part of Phenotype charter |
+| Decision                      | Archive on GitHub; record in registry; no fork, no transfer       |
 
 ## Why archive (not absorb)
 
@@ -52,15 +52,15 @@ why the repo was retired. No source was migrated into the phenotype monorepo.
 
 ## What lives where now
 
-| Capability | Lives in |
-|------------|----------|
-| KDE desktop automation / containerized X11 sessions | N/A — retired |
-| Phenotype substrate / LLM routing / contracts | `phenotype-router`, `phenotype-contracts` |
-| Mobile device automation contracts | future eco-011 port surface (not this repo) |
+| Capability                                          | Lives in                                    |
+| --------------------------------------------------- | ------------------------------------------- |
+| KDE desktop automation / containerized X11 sessions | N/A — retired                               |
+| Phenotype substrate / LLM routing / contracts       | `phenotype-router`, `phenotype-contracts`   |
+| Mobile device automation contracts                  | future eco-011 port surface (not this repo) |
 
 ## Outcome
 
-- Source repo `<REDACTED>/KDesktopVirt` archived on GitHub (read-only tombstone).
+- Source repo `&lt;REDACTED&gt;/KDesktopVirt` archived on GitHub (read-only tombstone).
 - Registry row `repo-KDesktopVirt`: disposition `AFFIRM` → `ARCHIVE_ONLY`,
   fsm `active` → `absorbed`, target pinned to this boundary doc.
 - No PR, no fork, no physical transfer. Registry disposition-index.json carries

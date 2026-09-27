@@ -35,27 +35,27 @@ The `pheno-utils-*` crate family provides substrate-utility primitives:
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| Business logic | feature crates (`phenotype-*`) | Different layer |
-| Language SDKs | `phenotype-{python,go,ts}-sdk` | Cross-language boundary |
-| Observability primitives | `PhenoObservability` | Distinct domain |
-| Workspace orchestration | `pheno` root | Different abstraction |
+| Not here                 | Lives in                       | Reason                  |
+| ------------------------ | ------------------------------ | ----------------------- |
+| Business logic           | feature crates (`phenotype-*`) | Different layer         |
+| Language SDKs            | `phenotype-{python,go,ts}-sdk` | Cross-language boundary |
+| Observability primitives | `PhenoObservability`           | Distinct domain         |
+| Workspace orchestration  | `pheno` root                   | Different abstraction   |
 
 ## Boundary Crossings
 
-| Crossing | Direction | Surface | Status |
-| -------- | --------- | ------- | ------ |
-| `tokio` deps | external→pheno | Cargo.toml | green |
-| `reqwest` wrapper | external→pheno | Cargo.toml | green |
-| `wiremock` test harness | external→pheno (test-only) | Cargo.toml dev-deps | green |
-| Chaos injection API | internal pheno crates | `pheno_utils_chaos::FaultInjector` | green |
+| Crossing                | Direction                  | Surface                            | Status |
+| ----------------------- | -------------------------- | ---------------------------------- | ------ |
+| `tokio` deps            | external→pheno             | Cargo.toml                         | green  |
+| `reqwest` wrapper       | external→pheno             | Cargo.toml                         | green  |
+| `wiremock` test harness | external→pheno (test-only) | Cargo.toml dev-deps                | green  |
+| Chaos injection API     | internal pheno crates      | `pheno_utils_chaos::FaultInjector` | green  |
 
 ## Last Boundary Review
 
 **Date:** 2026-07-17
 **Reviewer:** forge subagent (wave 2026-07-17-queue-refresh-2)
 **Decision:** ABSORBED into `pheno/crates/pheno-utils-*/`
-**Source repo:** `<REDACTED>/phenoUtils` archived 2026-07-17
+**Source repo:** `&lt;REDACTED&gt;/phenoUtils` archived 2026-07-17
 
 **Next review:** 2026-08-17

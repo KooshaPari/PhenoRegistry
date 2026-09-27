@@ -2,15 +2,15 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/phench` |
-| Target repo | `<REDACTED>/phenotype-tooling` |
-| Target paths | `crates/phench/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent |
+| Field            | Value                                            |
+| ---------------- | ------------------------------------------------ |
+| Source repo      | `&lt;REDACTED&gt;/phench`                        |
+| Target repo      | `&lt;REDACTED&gt;/phenotype-tooling`             |
+| Target paths     | `crates/phench/`                                 |
+| Absorbed date    | 2026-07-17                                       |
+| Absorbed by      | forge agent                                      |
 | Branch on target | `salvage/phenotype-tooling-workspace-2026-07-15` |
-| Verification | `python -m unittest discover` 17/17 OK |
+| Verification     | `python -m unittest discover` 17/17 OK           |
 
 ## Target reassignment
 
@@ -18,7 +18,7 @@ Originally queued (by the previous agent) with target
 `phenodocs`. Reassigned at absorption time to
 `phenotype-tooling` for the following reasons:
 
-1. **phench is a *runtime* CLI** for project-state orchestration
+1. **phench is a _runtime_ CLI** for project-state orchestration
    (git ops, env doctor, target init / materialize). It executes
    developer machine actions, not documentation builds.
 2. **phenodocs is a VitePress hub** with no runtime CLI surface
@@ -76,5 +76,5 @@ All 17 tests pass.
 ## Provenance
 
 Branch: `origin/salvage/phenotype-tooling-workspace-2026-07-15`
-on `<REDACTED>/phenotype-tooling`. Source repo
-`<REDACTED>/phench` archived via `gh repo archive`.
+on `&lt;REDACTED&gt;/phenotype-tooling`. Source repo
+`&lt;REDACTED&gt;/phench` archived via `gh repo archive`.

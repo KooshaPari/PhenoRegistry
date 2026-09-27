@@ -29,18 +29,18 @@ Draft (stub) — **defer implementation** until rmcp superset gate clears.
 
 ## Gates (summary)
 
-| ID | Gate |
-|----|------|
-| G1 | PhenoRMCP rmcp superset stable on `phenotype/superset` |
-| G2 | PhenoFastMCP-rust integration RC (2026-07-28 target) |
-| G3 | ADR-020 Accepted in PhenoSpecs |
-| G4 | Verified native upstream fork parent (not rust-sdk placeholder) |
-| G5 | CI `validate_fork_parents.py` extended for zig/mojo |
-| G6 | Registry sync + PhenoHandbook tier-0 page |
+| ID  | Gate                                                            |
+| --- | --------------------------------------------------------------- |
+| G1  | PhenoRMCP rmcp superset stable on `phenotype/superset`          |
+| G2  | PhenoFastMCP-rust integration RC (2026-07-28 target)            |
+| G3  | ADR-020 Accepted in PhenoSpecs                                  |
+| G4  | Verified native upstream fork parent (not rust-sdk placeholder) |
+| G5  | CI `validate_fork_parents.py` extended for zig/mojo             |
+| G6  | Registry sync + PhenoHandbook tier-0 page                       |
 
 ## Consequences
 
-- No `<REDACTED>/PhenoFastMCP-zig` or `-mojo` repos until gates clear.
+- No `&lt;REDACTED&gt;/PhenoFastMCP-zig` or `-mojo` repos until gates clear.
 - `validate_fork_parents.py` continues to skip zig/mojo future entries.
 
 ## References

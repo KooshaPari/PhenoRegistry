@@ -2,17 +2,17 @@
 
 ## Source
 
-| Field | Value |
-| --- | --- |
-| Source repo | &lt;REDACTED&gt;/PlusForges |
-| Source size | 76 LOC (README-only) |
-| Source branches | 1 |
-| Absorbed on | 2026-07-17 |
-| Target | `docs/ecosystem-map/plus-forks.md` |
+| Field           | Value                              |
+| --------------- | ---------------------------------- |
+| Source repo     | &lt;REDACTED&gt;/PlusForges        |
+| Source size     | 76 LOC (README-only)               |
+| Source branches | 1                                  |
+| Absorbed on     | 2026-07-17                         |
+| Target          | `docs/ecosystem-map/plus-forks.md` |
 
 ## Why absorbed
 
-PlusForges is a README-only meta-repo cataloging every `<REDACTED>/*` "Plus"
+PlusForges is a README-only meta-repo cataloging every `&lt;REDACTED&gt;/*` "Plus"
 fork of router/agent/gateway upstreams (cliproxyapi++, context-mode++,
 OmniRoute, agentapi++, substrate, phenoAI, PhenoFastMCP, PhenoMCPServers,
 phenotype-router-spec, substrate-adapters-bundle). It is a curated discovery

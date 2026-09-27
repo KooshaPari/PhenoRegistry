@@ -1,32 +1,32 @@
 # Push Auth Gap — re-auth as &lt;REDACTED&gt; done; structural issue confirmed (2026-06-15 18:42 PDT)
 
-**Status update:** `gh auth switch --user <REDACTED>` re-auth completed 2026-06-15
+**Status update:** `gh auth switch --user &lt;REDACTED&gt;` re-auth completed 2026-06-15
 18:40 PDT. The 4 previously-unreachable remotes (origin, github, worklogs, dmouse)
-are now reachable from `<REDACTED>`'s account.
+are now reachable from `&lt;REDACTED&gt;`'s account.
 
 ## Post-auth diagnosis (2026-06-15 18:42)
 
-| Remote | URL | Pre-auth | Post-auth | Reach from &lt;REDACTED&gt; |
-|---|---|---|---|---|
-| `argis` | `git@github.com:<REDACTED>/argis-extensions.git` | ✅ | ✅ | ✅ (wrong repo) |
-| `pheno` | `https://github.com/KooshaPari/phenoShared.git` | ✅ | ✅ | ✅ (wrong repo) |
-| `voxel` | `git@github.com:<REDACTED>/phenotype-voxel.git` | ✅ | ✅ | ✅ (wrong repo) |
-| `dmouse` | `https://github.com/Dmouse92/AgilePlus.git` | ❌ 404 | ❌ 404 | ❌ (Dmouse92 is a CLIENT account; never push there) |
-| `github` | `https://github.com/Phenotype/Phenotype.git` | ❌ 404 | ❌ 404 | ❌ (org doesn't exist) |
-| `origin` | `https://github.com/KooshaPari/FocalPoint.git` | ❌ 404 | ❌ 404 | ❌ (iOS app, wrong repo for monorepo changes) |
-| `worklogs` | `https://github.com/KooshaPari/worklogs.git` | ❌ 404 | ❌ 404 | ❌ (separate worklogs repo, not the monorepo) |
+| Remote     | URL                                                    | Pre-auth | Post-auth | Reach from &lt;REDACTED&gt;                         |
+| ---------- | ------------------------------------------------------ | -------- | --------- | --------------------------------------------------- |
+| `argis`    | `git@github.com:&lt;REDACTED&gt;/argis-extensions.git` | ✅       | ✅        | ✅ (wrong repo)                                     |
+| `pheno`    | `https://github.com/KooshaPari/phenoShared.git`        | ✅       | ✅        | ✅ (wrong repo)                                     |
+| `voxel`    | `git@github.com:&lt;REDACTED&gt;/phenotype-voxel.git`  | ✅       | ✅        | ✅ (wrong repo)                                     |
+| `dmouse`   | `https://github.com/Dmouse92/AgilePlus.git`            | ❌ 404   | ❌ 404    | ❌ (Dmouse92 is a CLIENT account; never push there) |
+| `github`   | `https://github.com/Phenotype/Phenotype.git`           | ❌ 404   | ❌ 404    | ❌ (org doesn't exist)                              |
+| `origin`   | `https://github.com/KooshaPari/FocalPoint.git`         | ❌ 404   | ❌ 404    | ❌ (iOS app, wrong repo for monorepo changes)       |
+| `worklogs` | `https://github.com/KooshaPari/worklogs.git`           | ❌ 404   | ❌ 404    | ❌ (separate worklogs repo, not the monorepo)       |
 
 ## Structural finding: the `repos/` directory has NO upstream remote
 
 `Phenotype/Phenotype` org does not exist (404 from `gh api orgs/Phenotype`).
-`<REDACTED>/Phenotype` does not exist (the `origin` URL is wrong — it points to
-`<REDACTED>/FocalPoint`, which is the iOS app, not the monorepo).
-`<REDACTED>/repos` does not exist (the directory name "repos" is a local
+`&lt;REDACTED&gt;/Phenotype` does not exist (the `origin` URL is wrong — it points to
+`&lt;REDACTED&gt;/FocalPoint`, which is the iOS app, not the monorepo).
+`&lt;REDACTED&gt;/repos` does not exist (the directory name "repos" is a local
 convention, not a GitHub repo name).
 
 This means the **`repos/` directory is local-only**. It contains ~280 sub-repos
 (submodules, worktrees, or just directories) that each have their own remote
-(`<REDACTED>/AgilePlus`, `<REDACTED>/pheno`, `<REDACTED>/PhenoCompose`, etc.) —
+(`&lt;REDACTED&gt;/AgilePlus`, `&lt;REDACTED&gt;/pheno`, `&lt;REDACTED&gt;/PhenoCompose`, etc.) —
 but the `repos/` container itself is not on GitHub.
 
 **Implication:** The 37 commits on `chore/w5-adrs-sota-2026-06-15` (worklogs,
@@ -45,14 +45,14 @@ working tree and can be:
 
 The 4 GitHub API operations that were blocked:
 
-| # | Operation | Status |
-|---|---|---|
-| 1 | NetScript DEPRECATED.md push (`<REDACTED>/NetScript`) | UNBLOCKED |
-| 2 | NetScript GitHub archive flag | UNBLOCKED |
-| 3 | Settly GitHub archive flag (ADR-012 PR-8) | UNBLOCKED |
-| 4 | Any future pushes to sub-repos (AgilePlus, PhenoMCP, etc.) | UNBLOCKED |
+| #   | Operation                                                   | Status    |
+| --- | ----------------------------------------------------------- | --------- |
+| 1   | NetScript DEPRECATED.md push (`&lt;REDACTED&gt;/NetScript`) | UNBLOCKED |
+| 2   | NetScript GitHub archive flag                               | UNBLOCKED |
+| 3   | Settly GitHub archive flag (ADR-012 PR-8)                   | UNBLOCKED |
+| 4   | Any future pushes to sub-repos (AgilePlus, PhenoMCP, etc.)  | UNBLOCKED |
 
-These can now proceed from `<REDACTED>`'s account.
+These can now proceed from `&lt;REDACTED&gt;`'s account.
 
 ## Auth scope confirmation
 
@@ -67,15 +67,15 @@ github.com
   - Active account: false
 ```
 
-**Active account is now `<REDACTED>`.** `Dmouse92` is a client account
+**Active account is now `&lt;REDACTED&gt;`.** `Dmouse92` is a client account
 that should never be pushed to (per the user's 2026-06-15 18:40 PDT
 directive).
 
 ## Action items for the next 5 minutes
 
-1. **Push NetScript `chore/adr-001-archive-2026-06-15`** to `<REDACTED>/NetScript`
-2. **Archive `<REDACTED>/NetScript`** via `gh api -X PATCH ... -f archived=true`
-3. **Archive `<REDACTED>/Settly`** (ADR-012 PR-8)
+1. **Push NetScript `chore/adr-001-archive-2026-06-15`** to `&lt;REDACTED&gt;/NetScript`
+2. **Archive `&lt;REDACTED&gt;/NetScript`** via `gh api -X PATCH ... -f archived=true`
+3. **Archive `&lt;REDACTED&gt;/Settly`** (ADR-012 PR-8)
 4. **Bundle the 37-commit W5 branch** to a `.bundle` file as a recovery artifact
 
 ## v6 + W5 commit trail (still local)
@@ -90,7 +90,7 @@ All commits reachable from `HEAD` on `chore/w5-adrs-sota-2026-06-15`:
 - `90cbfa053b` docs(pheno-config): README + twelve-factor
 - `b3d215c889` feat(pheno-config): v0.2.0
 - `c39437cf3d` docs(findings): ADR-012 PR-4 done
-- `a5c03c6054` docs(health): L6 pheno-* evening delta
+- `a5c03c6054` docs(health): L6 pheno-\* evening delta
 - `c542b210d4` chore(root): bump helios-router
 - `d516bee625` chore: delete crates/phenotype-config (PR-4)
 - `52bae896c5` chore(root): delete duplicate top-level pheno-tracing/

@@ -1,19 +1,19 @@
 # Wave 15 — agentapi-plusplus merge execution — 2026-06-17
 
 **Predecessor:** [wave14-gateway-ssot-2026-06-17.md](./wave14-gateway-ssot-2026-06-17.md)  
-**Canonical owner:** `<REDACTED>/agentapi-plusplus`  
-**Supersedes:** archived `<REDACTED>/agentapi`
+**Canonical owner:** `&lt;REDACTED&gt;/agentapi-plusplus`  
+**Supersedes:** archived `&lt;REDACTED&gt;/agentapi`
 
 ## Branch taxonomy (34 branches)
 
-| Class | Branches | Action |
-|-------|----------|--------|
-| upstream sync | `sync/upstream-v0.12.2`, `fix/pull-request-target` | Merge to `main` first after CI |
-| backup | `backup/20260426-*` (2) | Diff vs main; cherry-pick unique or delete |
-| governance chore | 21× `chore/*`, `ci/*` (2026-06-08 batch) | Batch-merge if green |
-| docs | `docs/agentapi-plusplus-sladge-*` (2) | Merge or fold into `docs/` |
-| dependabot | 5 npm branches | Merge security updates |
-| complete-sync | 1 | Review as superset candidate |
+| Class            | Branches                                           | Action                                     |
+| ---------------- | -------------------------------------------------- | ------------------------------------------ |
+| upstream sync    | `sync/upstream-v0.12.2`, `fix/pull-request-target` | Merge to `main` first after CI             |
+| backup           | `backup/20260426-*` (2)                            | Diff vs main; cherry-pick unique or delete |
+| governance chore | 21× `chore/*`, `ci/*` (2026-06-08 batch)           | Batch-merge if green                       |
+| docs             | `docs/agentapi-plusplus-sladge-*` (2)              | Merge or fold into `docs/`                 |
+| dependabot       | 5 npm branches                                     | Merge security updates                     |
+| complete-sync    | 1                                                  | Review as superset candidate               |
 
 ## Merge sequence
 
@@ -47,13 +47,13 @@ flowchart LR
 - No org manifest points at archived `agentapi`
 - Branch count before/after recorded below
 
-| Metric | Before | After |
-|--------|--------|-------|
-| Remote branches | 34 | TBD |
-| Upstream tag sync | — | TBD |
+| Metric            | Before | After |
+| ----------------- | ------ | ----- |
+| Remote branches   | 34     | TBD   |
+| Upstream tag sync | —      | TBD   |
 
 ## PR tracker
 
-| PR | Repo | Status |
-|----|------|--------|
+| PR  | Repo              | Status  |
+| --- | ----------------- | ------- |
 | TBD | agentapi-plusplus | pending |

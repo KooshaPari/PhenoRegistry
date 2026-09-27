@@ -2,14 +2,14 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/grapheon-bindings` |
-| Target repo | `<REDACTED>/phenotype-go-sdk` |
-| Target paths | `packages/graphclient/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent |
-| Verification | `go build ./packages/graphclient/...` clean; `go vet` clean |
+| Field         | Value                                                       |
+| ------------- | ----------------------------------------------------------- |
+| Source repo   | `&lt;REDACTED&gt;/grapheon-bindings`                        |
+| Target repo   | `&lt;REDACTED&gt;/phenotype-go-sdk`                         |
+| Target paths  | `packages/graphclient/`                                     |
+| Absorbed date | 2026-07-17                                                  |
+| Absorbed by   | forge agent                                                 |
+| Verification  | `go build ./packages/graphclient/...` clean; `go vet` clean |
 
 ## What was absorbed
 
@@ -45,5 +45,5 @@ locally for testing).
 ## Provenance
 
 Branch: `origin/absorb/grapheon-bindings-2026-07-17` on
-`<REDACTED>/phenotype-go-sdk`. Source repo
-`<REDACTED>/grapheon-bindings` archived via `gh repo archive`.
+`&lt;REDACTED&gt;/phenotype-go-sdk`. Source repo
+`&lt;REDACTED&gt;/grapheon-bindings` archived via `gh repo archive`.

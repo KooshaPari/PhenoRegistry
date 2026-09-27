@@ -1,18 +1,18 @@
 # Absorption Record: Sidekick
 
 **Date**: 2026-07-17
-**Source**: `<REDACTED>/Sidekick`
+**Source**: `&lt;REDACTED&gt;/Sidekick`
 **Target**: `PhenoObservability/crates/{sidekick-messaging,sidekick-obs-core,sidekick-observability}/`
 **Wave**: `2026-07-17-queue-refresh-2`
 **Disposition**: `ABSORB`
 
 ## Transfer Summary
 
-| Metric | Value |
-| --- | --- |
+| Metric            | Value                |
+| ----------------- | -------------------- |
 | Files transferred | 9 .rs + 3 Cargo.toml |
-| Total LOC | 997 |
-| Sub-crates | 3 |
+| Total LOC         | 997                  |
+| Sub-crates        | 3                    |
 
 ## What was absorbed
 
@@ -31,4 +31,4 @@ logkit, helix-logging, tracingkit).
 
 - Branch: `PhenoObservability:overlay/logify-2026-07-17` (commit `8347113`)
 - Source compiles cleanly: `Finished in 0.51s`
-- Source `<REDACTED>/Sidekick` archived 2026-07-17
+- Source `&lt;REDACTED&gt;/Sidekick` archived 2026-07-17

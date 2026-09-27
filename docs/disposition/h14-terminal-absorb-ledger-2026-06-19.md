@@ -6,36 +6,36 @@
 
 ## Verification summary
 
-| Item | Status | Evidence |
-|------|--------|----------|
-| phenotype-config-loader → phenotype-config | **done** | [phenotype-config#2](https://github.com/KooshaPari/phenotype-config/pull/2) merged 2026-06-18 — `crates/phenotype-config-loader` |
+| Item                                            | Status   | Evidence                                                                                                                                               |
+| ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| phenotype-config-loader → phenotype-config      | **done** | [phenotype-config#2](https://github.com/KooshaPari/phenotype-config/pull/2) merged 2026-06-18 — `crates/phenotype-config-loader`                       |
 | phenotype-errors + error-core → phenotype-types | **done** | [phenotype-types#1](https://github.com/KooshaPari/phenotype-types/pull/1) merged 2026-06-18 — `crates/phenotype-errors`, `crates/phenotype-error-core` |
-| HexaKit git pin repoint | **done** | [HexaKit#267](https://github.com/KooshaPari/HexaKit/pull/267) merged 2026-06-18 |
-| `components.lock` phenotype-types SHA | **done** | `dd14f735` on main |
-| Agentora W18b unblock | **done** | [Agentora#90](https://github.com/KooshaPari/Agentora/pull/90) merged 2026-06-18 |
+| HexaKit git pin repoint                         | **done** | [HexaKit#267](https://github.com/KooshaPari/HexaKit/pull/267) merged 2026-06-18                                                                        |
+| `components.lock` phenotype-types SHA           | **done** | `dd14f735` on main                                                                                                                                     |
+| Agentora W18b unblock                           | **done** | [Agentora#90](https://github.com/KooshaPari/Agentora/pull/90) merged 2026-06-18                                                                        |
 
 ## Terminal owner crate inventory
 
-### phenotype-config (`<REDACTED>/phenotype-config`)
+### phenotype-config (`&lt;REDACTED&gt;/phenotype-config`)
 
-| Crate | Source | PR |
-|-------|--------|-----|
-| `phenotype-config-loader` | phenoShared interim | phenotype-config#2 |
-| `settly` | HexaKit wave 8 (prior) | HexaKit#245 |
+| Crate                     | Source                 | PR                 |
+| ------------------------- | ---------------------- | ------------------ |
+| `phenotype-config-loader` | phenoShared interim    | phenotype-config#2 |
+| `settly`                  | HexaKit wave 8 (prior) | HexaKit#245        |
 
-### phenotype-types (`<REDACTED>/phenotype-types`)
+### phenotype-types (`&lt;REDACTED&gt;/phenotype-types`)
 
-| Crate | Source | PR |
-|-------|--------|-----|
-| `phenotype-errors` | phenoShared interim | phenotype-types#1 |
+| Crate                  | Source              | PR                |
+| ---------------------- | ------------------- | ----------------- |
+| `phenotype-errors`     | phenoShared interim | phenotype-types#1 |
 | `phenotype-error-core` | phenoShared interim | phenotype-types#1 |
 
 ## Disposition-index rows (unchanged FSM)
 
-| Row | Path | Target | FSM | PR |
-|-----|------|--------|-----|-----|
-| #9 | `crates/phenotype-config-loader` | phenotype-config | `done` | phenotype-config#2, HexaKit#267 |
-| #18 | `crates/phenotype-errors` | phenotype-types | `done` | phenotype-types#1, HexaKit#267 |
+| Row | Path                             | Target           | FSM    | PR                              |
+| --- | -------------------------------- | ---------------- | ------ | ------------------------------- |
+| #9  | `crates/phenotype-config-loader` | phenotype-config | `done` | phenotype-config#2, HexaKit#267 |
+| #18 | `crates/phenotype-errors`        | phenotype-types  | `done` | phenotype-types#1, HexaKit#267  |
 
 ## Closeout
 

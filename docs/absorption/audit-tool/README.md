@@ -7,7 +7,7 @@
 ## What was absorbed
 
 **audit-tool v2** (single-file Python repo-quality audit scorecard)
-absorbed from `<REDACTED>/audit-tool` into
+absorbed from `&lt;REDACTED&gt;/audit-tool` into
 `phenotype-registry/scripts/audit.py` on branch
 `absorb/audit-tool-2026-07-17`.
 
@@ -44,7 +44,7 @@ $ python3 scripts/audit.py /Users/<REDACTED>/CodeProjects/Phenotype/repos/phenot
 
 ## Source repo
 
-`<REDACTED>/audit-tool` archived on GitHub 2026-07-17.
+`&lt;REDACTED&gt;/audit-tool` archived on GitHub 2026-07-17.
 
 ## Disposition
 

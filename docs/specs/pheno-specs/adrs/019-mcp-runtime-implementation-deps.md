@@ -3,7 +3,7 @@ id: ADR-019
 title: MCP Runtime and Implementation Dependency Graph
 status: accepted
 date: 2026-06-17
-author: <REDACTED>
+author: &lt;REDACTED&gt;
 tags: [mcp, substrate, architecture]
 ---
 
@@ -36,7 +36,7 @@ substrate (runtime)
 1. **cheap-llm:** substrate `driver-argv` only; no `cheap-llm-mcp` repo
 2. **MCP tools:** defined in PhenoMCPServers; substrate runtime calls HTTP/argv edges
 3. **Version pin:** bump `registry_version` when wiring between layers changes
-4. **No framework code** in substrate or PhenoMCPServers — use PhenoFastMCP* deps
+4. **No framework code** in substrate or PhenoMCPServers — use PhenoFastMCP\* deps
 
 ## Consequences
 

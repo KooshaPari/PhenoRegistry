@@ -11,11 +11,11 @@ the cron is healthy and what to do when it is not.
 
 Each tool writes 2 things per weekly run:
 
-| Tool                  | Wrapper log (per run)                              | Output file (per run)                              |
-| :-------------------- | :------------------------------------------------- | :------------------------------------------------- |
-| pheno-predict         | `~/.fleet-cron/pheno-predict-<YYYY-MM-DD>.log`     | `findings/predict-candidates-<YYYY-MM-DD>.md`      |
-| pheno-drift-detector  | `~/.fleet-cron/pheno-drift-detector-<YYYY-MM-DD>.log` | `findings/drift-hits-<YYYY-MM-DD>.md`           |
-| pheno-framework-lint  | `~/.fleet-cron/pheno-framework-lint-<YYYY-MM-DD>.log` | `findings/framework-lint-aggregate-<YYYY-MM-DD>.md` |
+| Tool                 | Wrapper log (per run)                                 | Output file (per run)                               |
+| :------------------- | :---------------------------------------------------- | :-------------------------------------------------- |
+| pheno-predict        | `~/.fleet-cron/pheno-predict-<YYYY-MM-DD>.log`        | `findings/predict-candidates-<YYYY-MM-DD>.md`       |
+| pheno-drift-detector | `~/.fleet-cron/pheno-drift-detector-<YYYY-MM-DD>.log` | `findings/drift-hits-<YYYY-MM-DD>.md`               |
+| pheno-framework-lint | `~/.fleet-cron/pheno-framework-lint-<YYYY-MM-DD>.log` | `findings/framework-lint-aggregate-<YYYY-MM-DD>.md` |
 
 The `~/.fleet-cron/` directory is local to the heavy-runner; the
 `findings/*.md` files are committed to the monorepo's `main` branch (via the
@@ -78,7 +78,7 @@ gh issue list \
 ### pheno-predict (`findings/predict-candidates-*.md`)
 
 A markdown table. **Empty header + "No candidates above threshold"** is a
-*clean run* (success). Non-empty rows are predictive-DRY candidates the
+_clean run_ (success). Non-empty rows are predictive-DRY candidates the
 orchestrator triages in the weekly Wave Plan sweep.
 
 ### pheno-drift-detector (`findings/drift-hits-*.md`)
@@ -102,14 +102,14 @@ acceptable, false negatives are not.
 
 ## Alerts
 
-| Symptom                                                | Alert threshold              | Action                                                                          |
-| :----------------------------------------------------- | :--------------------------- | :------------------------------------------------------------------------------ |
-| No `~/.fleet-cron/*.log` for 7+ days                   | **Critical** (cron is dead)  | Check `crontab -l`; check host is up; check `flock` installed                   |
-| No `findings/*-<date>.md` for 7+ days                  | **Critical** (output missing) | Check wrapper logs for `EXIT=1`; check `$REPOS_ROOT`; check `git push` creds    |
-| No `phenotype-tooling` Actions runs for 7+ days      | **Warning** (backup is dead) | Check workflow file present; check `<REDACTED>/phenotype-tooling` not archived  |
-| Drift detector hasn't filed any issues in 4+ weeks     | **Warning** (threshold drift) | Threshold may be too high; review `pheno-drift-detector` `--score-min` default  |
-| Output file is empty / only header                    | **Info** (clean run)          | This is success — no candidates / hits / violations above the threshold        |
-| Wrapper exits 2 (candidates / hits / violations found) | **Info** (expected)           | Triage the output; auto-filed issue (drift) or weekly review (predict / lint)  |
+| Symptom                                                | Alert threshold               | Action                                                                               |
+| :----------------------------------------------------- | :---------------------------- | :----------------------------------------------------------------------------------- |
+| No `~/.fleet-cron/*.log` for 7+ days                   | **Critical** (cron is dead)   | Check `crontab -l`; check host is up; check `flock` installed                        |
+| No `findings/*-<date>.md` for 7+ days                  | **Critical** (output missing) | Check wrapper logs for `EXIT=1`; check `$REPOS_ROOT`; check `git push` creds         |
+| No `phenotype-tooling` Actions runs for 7+ days        | **Warning** (backup is dead)  | Check workflow file present; check `&lt;REDACTED&gt;/phenotype-tooling` not archived |
+| Drift detector hasn't filed any issues in 4+ weeks     | **Warning** (threshold drift) | Threshold may be too high; review `pheno-drift-detector` `--score-min` default       |
+| Output file is empty / only header                     | **Info** (clean run)          | This is success — no candidates / hits / violations above the threshold              |
+| Wrapper exits 2 (candidates / hits / violations found) | **Info** (expected)           | Triage the output; auto-filed issue (drift) or weekly review (predict / lint)        |
 
 ---
 

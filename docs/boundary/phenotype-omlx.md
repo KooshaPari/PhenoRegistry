@@ -5,7 +5,7 @@ status: archived
 last_boundary_review: 2026-07-17
 review_cadence: 90d
 disposition: ARCHIVE_ONLY
-absorbing_repo: "<REDACTED>/phenotype-registry"
+absorbing_repo: "&lt;REDACTED&gt;/phenotype-registry"
 target: "phenotype-registry (docs/boundary/phenotype-omlx.md)"
 archived_at: 2026-07-17
 archive_reason: failsafe-platform-specific-mlx-stack
@@ -21,38 +21,38 @@ out_of_scope:
 
 This repo is archived. No source code migration performed. Local clone at
 `repos/phenotype-omlx/` preserved per container-policy ("preserve dirty child
-repositories and linked worktrees"). GitHub remote `<REDACTED>/phenotype-omlx`
-set to read-only via `gh repo archive <REDACTED>/phenotype-omlx -y` on
+repositories and linked worktrees"). GitHub remote `&lt;REDACTED&gt;/phenotype-omlx`
+set to read-only via `gh repo archive &lt;REDACTED&gt;/phenotype-omlx -y` on
 2026-07-17.
 
 ## In Scope (informational only)
 
-Source repository `<REDACTED>/phenotype-omlx` (266KB source, 2.3GB on disk
+Source repository `&lt;REDACTED&gt;/phenotype-omlx` (266KB source, 2.3GB on disk
 incl. target/ + .venv), a fork of OMLX (`/Applications/oMLX.app`) extending
 the upstream MLX research stack with:
 
-| Tier | Path | Original purpose |
-| --- | --- | --- |
-| Rust perf-core | `perf-core/` (11-crate workspace) | spec-decode, concurrent-exec + CUDA variant, turbo-quant + Mojo/Zig variants, tree-attention + SPIR-V variant, fleet-proto + ZeroMQ variant, hwledger-core |
-| Python | `python/omlx_research/` | Multi-backend LLM research (MLX/Metal/vLLM/TensorRT/SGLang/llama.cpp + HybridDispatch policy) + concurrent research agents (LatentMAS, TiDAR, SSD, JetSpec) |
-| CLI | `cli/bin/omlx-cli`, `cli/bin/omlx-research` | Pass-through proxy + unified launcher (`repl`, `cli`, `gui`, `web`, `doctor`, `status`, `inference`, `spec-decode`, `latentmas`, `tidar`, `bench`, `fleet`) |
-| Web admin | `python/omlx_research/web.py`, `gui/admin-extensions/` | Local HTTP server with research panel + REST endpoints; oMLX.app admin extension surface |
-| Platform clients | `linux-client/`, `windows-client/`, macOS `/Applications/oMLX.app` | PowerShell launcher (Win) + bash launcher (Linux) + macOS desktop (upstream) |
-| Bindings | `python/ffi/src/lib.rs`, `python-bindings-jni/` | pyo3 extension module `_phenotype_omlx_core` + JNI |
-| Research docs | `docs/adr/`, `docs/boundary/`, `docs/intent/`, `ARCHITECTURE.md` | ADR-035A (hwledger reclassification), omlx-inference-split decision provenance |
+| Tier             | Path                                                               | Original purpose                                                                                                                                            |
+| ---------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rust perf-core   | `perf-core/` (11-crate workspace)                                  | spec-decode, concurrent-exec + CUDA variant, turbo-quant + Mojo/Zig variants, tree-attention + SPIR-V variant, fleet-proto + ZeroMQ variant, hwledger-core  |
+| Python           | `python/omlx_research/`                                            | Multi-backend LLM research (MLX/Metal/vLLM/TensorRT/SGLang/llama.cpp + HybridDispatch policy) + concurrent research agents (LatentMAS, TiDAR, SSD, JetSpec) |
+| CLI              | `cli/bin/omlx-cli`, `cli/bin/omlx-research`                        | Pass-through proxy + unified launcher (`repl`, `cli`, `gui`, `web`, `doctor`, `status`, `inference`, `spec-decode`, `latentmas`, `tidar`, `bench`, `fleet`) |
+| Web admin        | `python/omlx_research/web.py`, `gui/admin-extensions/`             | Local HTTP server with research panel + REST endpoints; oMLX.app admin extension surface                                                                    |
+| Platform clients | `linux-client/`, `windows-client/`, macOS `/Applications/oMLX.app` | PowerShell launcher (Win) + bash launcher (Linux) + macOS desktop (upstream)                                                                                |
+| Bindings         | `python/ffi/src/lib.rs`, `python-bindings-jni/`                    | pyo3 extension module `_phenotype_omlx_core` + JNI                                                                                                          |
+| Research docs    | `docs/adr/`, `docs/boundary/`, `docs/intent/`, `ARCHITECTURE.md`   | ADR-035A (hwledger reclassification), omlx-inference-split decision provenance                                                                              |
 
 ## Out of Scope (under Phenotype governance)
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| MLX/Metal perf-cores | none (no Phenotype substrate owns MLX/Metal) | Platform-specific Apple Silicon tier has no canonical Phenotype home |
-| oMLX research agents (LatentMAS/TiDAR/SSD/JetSpec) | `repos/jundot/omlx` upstream (read-only reference) | Phenotype governance boundary is upstream at jundot/omlx, not inside the polyrepo |
-| Multi-platform launchers | none | Phenotype CLI/MCP surfaces exposed via `ports/` not via per-platform shells |
+| Not here                                                      | Lives in                                                            | Reason                                                                                    |
+| ------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| MLX/Metal perf-cores                                          | none (no Phenotype substrate owns MLX/Metal)                        | Platform-specific Apple Silicon tier has no canonical Phenotype home                      |
+| oMLX research agents (LatentMAS/TiDAR/SSD/JetSpec)            | `repos/jundot/omlx` upstream (read-only reference)                  | Phenotype governance boundary is upstream at jundot/omlx, not inside the polyrepo         |
+| Multi-platform launchers                                      | none                                                                | Phenotype CLI/MCP surfaces exposed via `ports/` not via per-platform shells               |
 | AGENTS.md polyglot policy (Mojo/CUDA/Zig/Swift on perf-cores) | superseded by repo-specific AGENTS.md files (only this doc remains) | Phenotype default is Rust-first polyrepo; this policy was scoped to the now-archived fork |
 
 ## Audit decision (2026-07-17)
 
-**Task:** Absorb `<REDACTED>/phenotype-omlx` (OML phenotyping) into `phenoAI`.
+**Task:** Absorb `&lt;REDACTED&gt;/phenotype-omlx` (OML phenotyping) into `phenoAI`.
 **Failsafe:** `ARCHIVE_ONLY` if no clear home.
 
 ### Why failsafe engaged
@@ -96,9 +96,9 @@ phenotype-omlx is incompatible with this home on six axes:
    - `crates/pheno-embedding`: OpenAI embedding client; out of scope.
 4. **AGENTS.md conflict:** phenotype-omlx's local AGENTS.md explicitly
    nulls Rust-only markers (`"Do not reintroduce 'Rust only' / 'use only
-   [...]' markers anywhere in this repo"`); phenoAI's AGENTS.md points
+[...]' markers anywhere in this repo"`); phenoAI's AGENTS.md points
    to the Phenotype default Rust-first policy via `repos/docs/governance/
-   scripting_policy.md`. Two governing documents cannot coexist on one
+scripting_policy.md`. Two governing documents cannot coexist on one
    repo root.
 5. **Existing G18 DROP entry** (registry row `gw-phenotype-omlx` in
    `registry/disposition-index.json`): already declared ARCHIVED with
@@ -111,7 +111,7 @@ phenotype-omlx is incompatible with this home on six axes:
 
 ### Preflight (not executed because failsafe engaged)
 
-The task instruction Step 5 was *"`cargo check` or `python import`"* to
+The task instruction Step 5 was _"`cargo check` or `python import`"_ to
 verify the absorption. The failsafe clause authorizes skipping this step
 when no clear home exists. For completeness:
 
@@ -123,20 +123,21 @@ when no clear home exists. For completeness:
 
 ## Boundary Crossings
 
-| Crossing | Direction | Surface | Status |
-| -------- | --------- | ------- | ------ |
-| Upstream OMLX | external (jundot/omlx) | git | red (read-only archival reference) |
+| Crossing                              | Direction                   | Surface   | Status                                           |
+| ------------------------------------- | --------------------------- | --------- | ------------------------------------------------ |
+| Upstream OMLX                         | external (jundot/omlx)      | git       | red (read-only archival reference)               |
 | Polyglot policy (Mojo/CUDA/Zig/Swift) | this-repo→phenotype-default | AGENTS.md | red (superseded; only this boundary doc remains) |
-| perf-core → phenoAI | one-way | none | green (no cross; not absorbed) |
-| omlx_research → phenoResearchEngine | none | none | green (orthogonal concerns) |
+| perf-core → phenoAI                   | one-way                     | none      | green (no cross; not absorbed)                   |
+| omlx_research → phenoResearchEngine   | none                        | none      | green (orthogonal concerns)                      |
 
 ## Last Boundary Review
 
 **Date:** 2026-07-17
 **Reviewer:** forge subagent (2026-07-17 absorption pass)
 **Decisions:**
+
 - ARCHIVE_ONLY via failsafe clause (no clear home in phenoAI).
-- GitHub repo archived via `gh repo archive <REDACTED>/phenotype-omlx -y`.
+- GitHub repo archived via `gh repo archive &lt;REDACTED&gt;/phenotype-omlx -y`.
 - Local clone preserved under `repos/phenotype-omlx/` per container policy.
 - Registry `projects/phenotype-omlx.json` flipped `disposition`:
   DROP/absorbed_into=hwledger → ARCHIVE_ONLY/target=phenotype-registry.

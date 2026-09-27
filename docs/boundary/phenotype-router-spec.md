@@ -22,21 +22,21 @@ canonical ecosystem INDEX (phenotype-registry).
 
 ## Content migrated
 
-| Source path | Target path |
-|-------------|-------------|
+| Source path                   | Target path                                              |
+| ----------------------------- | -------------------------------------------------------- |
 | `schema/router-dispatch.json` | `docs/specs/router-protocol/schema/router-dispatch.json` |
-| `schema/router-mailbox.json` | `docs/specs/router-protocol/schema/router-mailbox.json` |
-| `schema/router-trace.json` | `docs/specs/router-protocol/schema/router-trace.json` |
+| `schema/router-mailbox.json`  | `docs/specs/router-protocol/schema/router-mailbox.json`  |
+| `schema/router-trace.json`    | `docs/specs/router-protocol/schema/router-trace.json`    |
 | `schema/router-artifact.json` | `docs/specs/router-protocol/schema/router-artifact.json` |
-| `docs/dispatch.md` | `docs/specs/router-protocol/docs/dispatch.md` |
-| `docs/lanes.md` | `docs/specs/router-protocol/docs/lanes.md` |
-| `docs/mailbox.md` | `docs/specs/router-protocol/docs/mailbox.md` |
-| `docs/threat-model.md` | `docs/specs/router-protocol/docs/threat-model.md` |
-| `docs/trace.md` | `docs/specs/router-protocol/docs/trace.md` |
-| `examples/*.json` | `docs/specs/router-protocol/examples/*.json` |
-| `README.md` | `docs/specs/router-protocol/README.md` |
+| `docs/dispatch.md`            | `docs/specs/router-protocol/docs/dispatch.md`            |
+| `docs/lanes.md`               | `docs/specs/router-protocol/docs/lanes.md`               |
+| `docs/mailbox.md`             | `docs/specs/router-protocol/docs/mailbox.md`             |
+| `docs/threat-model.md`        | `docs/specs/router-protocol/docs/threat-model.md`        |
+| `docs/trace.md`               | `docs/specs/router-protocol/docs/trace.md`               |
+| `examples/*.json`             | `docs/specs/router-protocol/examples/*.json`             |
+| `README.md`                   | `docs/specs/router-protocol/README.md`                   |
 
 ## Outcome
 
-Source repo `<REDACTED>/phenotype-router-spec` archived on GitHub.
+Source repo `&lt;REDACTED&gt;/phenotype-router-spec` archived on GitHub.
 Registry disposition-index updated: disposition=ABSORB, target=phenotype-registry.

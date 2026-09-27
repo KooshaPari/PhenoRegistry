@@ -7,33 +7,33 @@
 
 ## Legend
 
-| Symbol | Meaning |
-|--------|---------|
-| **G** | Gate — blocks downstream lanes |
-| **P** | Parallel — safe to run concurrently |
-| **NB** | Non-blocker — registry/docs only |
+| Symbol | Meaning                             |
+| ------ | ----------------------------------- |
+| **G**  | Gate — blocks downstream lanes      |
+| **P**  | Parallel — safe to run concurrently |
+| **NB** | Non-blocker — registry/docs only    |
 
 ---
 
 ## Lane table
 
-| Wave | Lane ID | Owner repo | Work package | Deps | Blocker? |
-|------|---------|------------|--------------|------|----------|
-| 14a | W14-G | phenotype-registry | ADR-ECO-007, ECOSYSTEM_MAP/DOMAIN_ROLES fix, disposition + chokepoints | — | **G** |
-| 15 | W15-P | agentapi-plusplus | Branch inventory, upstream sync merge, prune ≤5 branches | W14-G | P |
-| 16 | W16-P | cliproxyapi-plusplus | Boundary Option B; branch prune; vibeproxy redirect | W14-G | P |
-| 16b | W16b-NB | bifrost | Vendor sync policy + VENDOR_PATCHES.md | W14-G | NB |
-| 17 | W17-P | phenotype-omlx | FINISH vs DROP decision + ADR appendix execution | W14-G | P |
-| 17b | W17b-P | PhenoCompose | BOUNDARY_OWNERS affirm; pheno dep repoint | W14-G | P |
-| 18 | W18-NB | phenotype-registry | `projects/*.json` archived redirects | W14-G | NB |
-| 18b | W18b-G | fleet | pheno fleet manifest scan + per-consumer repoint PRs | W17b-P | **G** |
-| 19 | W19-NB | phenotype-journeys | phenotype-e2e-base absorption | W14-G | NB |
+| Wave | Lane ID | Owner repo           | Work package                                                           | Deps   | Blocker? |
+| ---- | ------- | -------------------- | ---------------------------------------------------------------------- | ------ | -------- |
+| 14a  | W14-G   | phenotype-registry   | ADR-ECO-007, ECOSYSTEM_MAP/DOMAIN_ROLES fix, disposition + chokepoints | —      | **G**    |
+| 15   | W15-P   | agentapi-plusplus    | Branch inventory, upstream sync merge, prune ≤5 branches               | W14-G  | P        |
+| 16   | W16-P   | cliproxyapi-plusplus | Boundary Option B; branch prune; vibeproxy redirect                    | W14-G  | P        |
+| 16b  | W16b-NB | bifrost              | Vendor sync policy + VENDOR_PATCHES.md                                 | W14-G  | NB       |
+| 17   | W17-P   | phenotype-omlx       | FINISH vs DROP decision + ADR appendix execution                       | W14-G  | P        |
+| 17b  | W17b-P  | PhenoCompose         | BOUNDARY_OWNERS affirm; pheno dep repoint                              | W14-G  | P        |
+| 18   | W18-NB  | phenotype-registry   | `projects/*.json` archived redirects                                   | W14-G  | NB       |
+| 18b  | W18b-G  | fleet                | pheno fleet manifest scan + per-consumer repoint PRs                   | W17b-P | **G**    |
+| 19   | W19-NB  | phenotype-journeys   | phenotype-e2e-base absorption                                          | W14-G  | NB       |
 
 ### Parallel (non-blocking)
 
-| Lane | Owner | Work package |
-|------|-------|--------------|
-| H14 | HexaKit + role owners | Decompose phenoShared staging → DOMAIN_ROLES owners (ADR-ECO-014) |
+| Lane | Owner                 | Work package                                                      |
+| ---- | --------------------- | ----------------------------------------------------------------- |
+| H14  | HexaKit + role owners | Decompose phenoShared staging → DOMAIN_ROLES owners (ADR-ECO-014) |
 
 ---
 
@@ -84,9 +84,9 @@ flowchart TD
 - [x] Agentora consumer repoint — [#90](https://github.com/KooshaPari/Agentora/pull/90) merged; stub crates → phenotype-types/phenotype-config
 - [x] TestingKit phenotype-health repoint — [#8](https://github.com/KooshaPari/TestingKit/pull/8) merged → PhenoObservability
 - [x] Fleet tail verified-clean — phenotype-gfx, Civis, phenotype-teamcomm, phenotype-go-sdk (manifest scan 2026-06-19)
-- [x] Org scan: 0 external `<REDACTED>/pheno` git manifest refs (gh search + fleet Cargo.toml/go.mod scan; excl. pheno self + audit docs)
+- [x] Org scan: 0 external `&lt;REDACTED&gt;/pheno` git manifest refs (gh search + fleet Cargo.toml/go.mod scan; excl. pheno self + audit docs)
 - [x] PhenoCompose verified-clean — in-repo path deps only (chokepoints 2026-06-18)
-- [x] `gh repo archive <REDACTED>/pheno` — executed 2026-06-19 post gate (registry closeout PR)
+- [x] `gh repo archive &lt;REDACTED&gt;/pheno` — executed 2026-06-19 post gate (registry closeout PR)
 
 ---
 

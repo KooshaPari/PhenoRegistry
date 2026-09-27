@@ -2,14 +2,14 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/KodeVibe` |
-| Target repo | `<REDACTED>/phenotype-tooling` |
-| Target path | `tools/kodevibe/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent (batch absorption) |
-| Verification | File count match: 158 files |
+| Field         | Value                                |
+| ------------- | ------------------------------------ |
+| Source repo   | `&lt;REDACTED&gt;/KodeVibe`          |
+| Target repo   | `&lt;REDACTED&gt;/phenotype-tooling` |
+| Target path   | `tools/kodevibe/`                    |
+| Absorbed date | 2026-07-17                           |
+| Absorbed by   | forge agent (batch absorption)       |
+| Verification  | File count match: 158 files          |
 
 ## What was absorbed
 

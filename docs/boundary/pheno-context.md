@@ -2,8 +2,8 @@
 
 ## Status: ABSORBED (2026-07-17)
 
-**Source:** `<REDACTED>/pheno-context`
-**Target:** `<REDACTED>/pheno` → `crates/pheno-context/`
+**Source:** `&lt;REDACTED&gt;/pheno-context`
+**Target:** `&lt;REDACTED&gt;/pheno` → `crates/pheno-context/`
 **Wave:** `2026-07-17-absorption`
 **Archive:** https://github.com/KooshaPari/pheno-context (archived)
 

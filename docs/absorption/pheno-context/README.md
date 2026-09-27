@@ -1,20 +1,20 @@
 # Absorption Record: pheno-context
 
-**Source:** `<REDACTED>/pheno-context`
-**Target:** `<REDACTED>/pheno` → `crates/pheno-context/`
+**Source:** `&lt;REDACTED&gt;/pheno-context`
+**Target:** `&lt;REDACTED&gt;/pheno` → `crates/pheno-context/`
 **Date:** 2026-07-17
 **Wave:** `2026-07-17-absorption`
 **Executed by:** forge agent (automated)
 
 ## Files Transferred
 
-| Source | Target | Notes |
-|--------|--------|-------|
-| `crates/pheno-context/Cargo.toml` | `pheno/crates/pheno-context/Cargo.toml` | Deps adjusted to workspace (thiserror) |
-| `crates/pheno-context/src/lib.rs` | `pheno/crates/pheno-context/src/lib.rs` | No changes needed |
-| `crates/pheno-context/tests/` | `pheno/crates/pheno-context/tests/` | 5 integration test files |
-| `crates/pheno-context/README.md` | `pheno/crates/pheno-context/README.md` | Copied as-is |
-| `crates/pheno-context/CHANGELOG.md` | `pheno/crates/pheno-context/CHANGELOG.md` | Copied as-is |
+| Source                              | Target                                    | Notes                                  |
+| ----------------------------------- | ----------------------------------------- | -------------------------------------- |
+| `crates/pheno-context/Cargo.toml`   | `pheno/crates/pheno-context/Cargo.toml`   | Deps adjusted to workspace (thiserror) |
+| `crates/pheno-context/src/lib.rs`   | `pheno/crates/pheno-context/src/lib.rs`   | No changes needed                      |
+| `crates/pheno-context/tests/`       | `pheno/crates/pheno-context/tests/`       | 5 integration test files               |
+| `crates/pheno-context/README.md`    | `pheno/crates/pheno-context/README.md`    | Copied as-is                           |
+| `crates/pheno-context/CHANGELOG.md` | `pheno/crates/pheno-context/CHANGELOG.md` | Copied as-is                           |
 
 ## Workspace Changes
 

@@ -4,13 +4,13 @@ role: absorbed
 status: archived
 last_boundary_review: 2026-07-17
 review_cadence: 30d
-absorbed_into: <REDACTED>/pheno
+absorbed_into: &lt;REDACTED&gt;/pheno
 absorbed_on: 2026-07-17
 ---
 
 # Boundary — PhenoPlugins (absorbed)
 
-PhenoPlugins has been absorbed into `<REDACTED>/pheno` as
+PhenoPlugins has been absorbed into `&lt;REDACTED&gt;/pheno` as
 `crates/pheno-plugins-{core,git,sqlite,vessel,examples}/`.
 
 The plugin system is now exposed as workspace members of the
@@ -27,18 +27,18 @@ subcrates directly, not PhenoPlugins (which is archived).
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
+| Not here                   | Lives in  | Reason                            |
+| -------------------------- | --------- | --------------------------------- |
 | Plugin binary/distribution | pheno-cli | The CLI frontend lives separately |
-| Plugin marketplace | TBD | Not yet designed |
+| Plugin marketplace         | TBD       | Not yet designed                  |
 
 ## Boundary Crossings
 
-| Crossing | Direction | Surface | Status |
-| -------- | --------- | ------- | ------ |
-| Plugin manifest validation | this→pheno-cli | serde_json schema | green |
-| Plugin registry init | this→pheno-runtime | trait impl | green |
-| Plugin git ops | this→pheno-context | trait call | green |
+| Crossing                   | Direction          | Surface           | Status |
+| -------------------------- | ------------------ | ----------------- | ------ |
+| Plugin manifest validation | this→pheno-cli     | serde_json schema | green  |
+| Plugin registry init       | this→pheno-runtime | trait impl        | green  |
+| Plugin git ops             | this→pheno-context | trait call        | green  |
 
 ## Last Boundary Review
 
@@ -46,6 +46,7 @@ subcrates directly, not PhenoPlugins (which is archived).
 **Reviewer:** forge subagent (wave 2026-07-17-queue-refresh-2)
 **Absorption commit:** see `docs/absorption/PhenoPlugins/README.md`
 **Decisions:**
+
 - PhenoPlugins absorbed into pheno monorepo as 5 sub-crates
 - Crate names renamed `pheno-plugin-*` → `pheno-plugins-*`
 - pheno-plugins-sqlite downgraded rusqlite 0.40 → 0.32 (workspace

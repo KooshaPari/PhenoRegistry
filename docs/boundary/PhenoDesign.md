@@ -16,20 +16,20 @@ phenoDesign is the **canonical spine** for creativity, art, design, and UX acros
 
 ## In scope
 
-| Slice | Location | Notes |
-|-------|----------|-------|
-| Design tokens | package root / `tokens/` | Published as `@phenotype/design` |
-| VitePress theme | theme integration files | Consumed by phenodocs and fleet docsites |
-| UX / art direction docs | `docs/` | Spine-level conventions |
-| Brand consistency hooks | token generators, CSS | Teal/midnight palette SSOT |
+| Slice                   | Location                 | Notes                                    |
+| ----------------------- | ------------------------ | ---------------------------------------- |
+| Design tokens           | package root / `tokens/` | Published as `@phenotype/design`         |
+| VitePress theme         | theme integration files  | Consumed by phenodocs and fleet docsites |
+| UX / art direction docs | `docs/`                  | Spine-level conventions                  |
+| Brand consistency hooks | token generators, CSS    | Teal/midnight palette SSOT               |
 
 ## Out of scope (owned elsewhere)
 
-| Slice | Owner | Notes |
-|-------|-------|-------|
-| Asset render pipeline | **`asset-engine`** | Blender/FFmpeg/ImageMagick/Unreal legs |
-| Docs site hosting | `phenodocs` | May consume tokens; does not own design spine |
-| Graphics SDK (voxel/terrain) | `phenotype-gfx` | 3D substrate, not design tokens |
+| Slice                        | Owner              | Notes                                         |
+| ---------------------------- | ------------------ | --------------------------------------------- |
+| Asset render pipeline        | **`asset-engine`** | Blender/FFmpeg/ImageMagick/Unreal legs        |
+| Docs site hosting            | `phenodocs`        | May consume tokens; does not own design spine |
+| Graphics SDK (voxel/terrain) | `phenotype-gfx`    | 3D substrate, not design tokens               |
 
 ## Absorption reversal (2026-07-20)
 
@@ -41,16 +41,16 @@ A 2026-07-17 absorption copied token files into `phenodocs/packages/design/` and
 
 ## Verification
 
-| Check | Result |
-|-------|--------|
-| GitHub repo LIVE | unarchived 2026-07-20 |
-| CODEOWNERS | `@<REDACTED>` |
-| Asset pipeline split | `asset-engine` seeded from `engine/` |
+| Check                 | Result                                         |
+| --------------------- | ---------------------------------------------- |
+| GitHub repo LIVE      | unarchived 2026-07-20                          |
+| CODEOWNERS            | `@&lt;REDACTED&gt;`                            |
+| Asset pipeline split  | `asset-engine` seeded from `engine/`           |
 | Registry SSOT updated | `projects/phenoDesign.json`, disposition-index |
 
 ## Cleanup
 
 - [x] Absorption reversed in registry SSOT
 - [x] GitHub unarchived
-- [x] Asset engine extracted to `<REDACTED>/asset-engine`
+- [x] Asset engine extracted to `&lt;REDACTED&gt;/asset-engine`
 - [ ] Fleet consumers repoint token deps to phenoDesign canonical (follow-up)

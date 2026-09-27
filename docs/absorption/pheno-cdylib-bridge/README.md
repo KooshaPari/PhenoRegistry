@@ -2,20 +2,20 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/pheno-cdylib-bridge` |
-| Target repo | `<REDACTED>/pheno` (monorepo) |
-| Target paths | `crates/pheno-cdylib-bridge/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent |
-| Branch on target | `origin/absorb/pheno-cdylib-bridge-2026-07-17` |
-| Commit on target | `26ec806` |
-| Verification | `cargo check -p pheno-cdylib-bridge` clean; `cargo test -p pheno-cdylib-bridge` 4/4 pass |
+| Field            | Value                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| Source repo      | `&lt;REDACTED&gt;/pheno-cdylib-bridge`                                                   |
+| Target repo      | `&lt;REDACTED&gt;/pheno` (monorepo)                                                      |
+| Target paths     | `crates/pheno-cdylib-bridge/`                                                            |
+| Absorbed date    | 2026-07-17                                                                               |
+| Absorbed by      | forge agent                                                                              |
+| Branch on target | `origin/absorb/pheno-cdylib-bridge-2026-07-17`                                           |
+| Commit on target | `26ec806`                                                                                |
+| Verification     | `cargo check -p pheno-cdylib-bridge` clean; `cargo test -p pheno-cdylib-bridge` 4/4 pass |
 
 ## What was absorbed
 
-C-ABI cdylib exposing the pheno-* fleet's `thegent-memory` MemoryPort
+C-ABI cdylib exposing the pheno-\* fleet's `thegent-memory` MemoryPort
 trait to Go, Python, and any other C-callable FFI consumer. The
 primary consumer is `antinomyhq/forgecode` (the CLI-side Rust agent
 that we feed memory to via `cgo`).
@@ -72,5 +72,5 @@ itself was not absorbed; it remains in the GitHub archive).
 ## Provenance
 
 Branch: `origin/absorb/pheno-cdylib-bridge-2026-07-17` on
-`<REDACTED>/pheno`. Source repo `<REDACTED>/pheno-cdylib-bridge`
+`&lt;REDACTED&gt;/pheno`. Source repo `&lt;REDACTED&gt;/pheno-cdylib-bridge`
 archived via `gh repo archive`.

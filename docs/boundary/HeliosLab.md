@@ -17,7 +17,7 @@ out_of_scope:
 
 **TOO_LARGE_RETIRE** (per fleet-absorption-eligibility-2026-07-17 policy).
 
-`<REDACTED>/HeliosLab` is a sprawling experimental/lab repo (55 remote branches, multi-language). Per the boundary correction 2026-07-17, it has been marked as **not absorption-eligible** because:
+`&lt;REDACTED&gt;/HeliosLab` is a sprawling experimental/lab repo (55 remote branches, multi-language). Per the boundary correction 2026-07-17, it has been marked as **not absorption-eligible** because:
 
 - Scope is too sprawling to consolidate into a single spine target.
 - Lab/experimentation content is not a candidate for permanent absorption; it should remain a standalone playground.
@@ -31,12 +31,12 @@ out_of_scope:
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| Production-ready crates | `pheno/crates/*` | pheno workspace is the canonical Rust home |
-| MCP server implementations | `PhenoMCPServers/` | implementations registry is the canonical home |
-| Boundary contracts | `phenotype-contracts/` | 7th spine role (CONTRACTS) |
-| Reusable journey harness | `phenotype-journeys/` | 6th spine role (JOURNEYS) |
+| Not here                   | Lives in               | Reason                                         |
+| -------------------------- | ---------------------- | ---------------------------------------------- |
+| Production-ready crates    | `pheno/crates/*`       | pheno workspace is the canonical Rust home     |
+| MCP server implementations | `PhenoMCPServers/`     | implementations registry is the canonical home |
+| Boundary contracts         | `phenotype-contracts/` | 7th spine role (CONTRACTS)                     |
+| Reusable journey harness   | `phenotype-journeys/`  | 6th spine role (JOURNEYS)                      |
 
 ## Boundary Crossings
 
@@ -53,6 +53,7 @@ gh repo unarchive <REDACTED>/HeliosLab -y
 **Date:** 2026-07-17
 **Reviewer:** registry steward (this session, batch boundary-corrections)
 **Decisions:**
+
 - Marked `TOO_LARGE_RETIRE` (55 branches, sprawling lab scope)
 - GitHub-side: archived 2026-07-17
 

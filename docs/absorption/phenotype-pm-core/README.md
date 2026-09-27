@@ -2,18 +2,19 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/phenotype-pm-core` |
-| Target repo | `<REDACTED>/phenotype-tooling` |
-| Target paths | `crates/traceability-core/`, `crates/traceability-decorators/`, `crates/trace-gate/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent (batch absorption) |
-| Verification | `cargo check` passes (doc warnings only) |
+| Field         | Value                                                                                |
+| ------------- | ------------------------------------------------------------------------------------ |
+| Source repo   | `&lt;REDACTED&gt;/phenotype-pm-core`                                                 |
+| Target repo   | `&lt;REDACTED&gt;/phenotype-tooling`                                                 |
+| Target paths  | `crates/traceability-core/`, `crates/traceability-decorators/`, `crates/trace-gate/` |
+| Absorbed date | 2026-07-17                                                                           |
+| Absorbed by   | forge agent (batch absorption)                                                       |
+| Verification  | `cargo check` passes (doc warnings only)                                             |
 
 ## What was absorbed
 
 3 Rust crates (22 source files + tests):
+
 - `traceability-core` — core data model, matrix, contract, progress, impact
 - `traceability-decorators` — decorator patterns for link assertions
 - `trace-gate` — governance gate binary with tests

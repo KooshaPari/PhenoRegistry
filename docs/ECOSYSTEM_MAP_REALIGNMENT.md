@@ -3,20 +3,20 @@
 > **Authority:** `phenotype-registry` (INDEX / boundary SSOT)
 > **Scope:** P1 of the Phenotype Ownership Program — audit the registry and
 > realign the ecosystem map to current owned-repo reality.
-> **Ground truth:** `gh repo list <REDACTED>` (142 repos: 102 live, 40 archived)
+> **Ground truth:** `gh repo list &lt;REDACTED&gt;` (142 repos: 102 live, 40 archived)
 > reconciled against the 88 OWNED repos in the Ownership Program.
 
 ## Summary
 
-| Metric | Before | After |
-|--------|-------:|------:|
-| `catalog/registry.yaml` substrate entries | 5 | **88** |
-| Owned repos covered by the catalog | 5 / 88 (6%) | **88 / 88 (100%)** |
-| Excluded/other-owner repos in the map | several (see below) | **0** |
-| Catalog entries with stale `archived` status (repo actually live) | 2 | **0** |
-| Dangling repo refs (entries) | 0 | 0 |
-| `validate-catalog.py` result | pass (5) | **pass (88)** |
-| Strict JSON-schema (`jsonschema` Draft7) | pass (5) | **pass (88)** |
+| Metric                                                            |              Before |              After |
+| ----------------------------------------------------------------- | ------------------: | -----------------: |
+| `catalog/registry.yaml` substrate entries                         |                   5 |             **88** |
+| Owned repos covered by the catalog                                |         5 / 88 (6%) | **88 / 88 (100%)** |
+| Excluded/other-owner repos in the map                             | several (see below) |              **0** |
+| Catalog entries with stale `archived` status (repo actually live) |                   2 |              **0** |
+| Dangling repo refs (entries)                                      |                   0 |                  0 |
+| `validate-catalog.py` result                                      |            pass (5) |      **pass (88)** |
+| Strict JSON-schema (`jsonschema` Draft7)                          |            pass (5) |      **pass (88)** |
 
 The machine-readable catalog (`catalog/registry.yaml`) was the canonical SSOT
 but covered only **5 of 88 owned repos**. It is now complete and correct. The
@@ -29,40 +29,44 @@ source.
 
 - **All 88 owned repos exist on GitHub and are LIVE** (none archived, no typos /
   renames). Verified by set-diff of the owned list against
-  `gh repo list <REDACTED>`.
+  `gh repo list &lt;REDACTED&gt;`.
 - Languages, fork-status, and last-push dates were pulled from `gh` and encoded
   per entry (`language`, plus `archetype: fork-tool` where `isFork`).
 
 ## Corrections applied to `catalog/registry.yaml`
 
 ### A. Added (83 missing owned repos)
+
 Only `Configra`, `pheno-tracing`, `pheno-mcp-router`, `phenotype-sdk`,
 `phenotype-infra` were present before. **83 owned repos were missing** and are
 now added with `tier`, `architecture`, `archetype`, `language`, and `role`.
 
 ### B. Removed / not-carried-forward
-| Old entry | Reason |
-|-----------|--------|
-| `pheno-mcp-router` (&lt;REDACTED&gt;/pheno-mcp-router) | Repo **archived** on GitHub AND not in the owned-88; not a current owned substrate. Its substrate classification lives in absorption history, not the active owned catalog. |
-| `phenotype-sdk` (&lt;REDACTED&gt;/phenotype-sdk) | **No such live repo** in `gh repo list`. The real owned SDKs are `phenotype-go-sdk` and `phenotype-python-sdk` (both present and active). Replaced by those two concrete entries. |
+
+| Old entry                                              | Reason                                                                                                                                                                            |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pheno-mcp-router` (&lt;REDACTED&gt;/pheno-mcp-router) | Repo **archived** on GitHub AND not in the owned-88; not a current owned substrate. Its substrate classification lives in absorption history, not the active owned catalog.       |
+| `phenotype-sdk` (&lt;REDACTED&gt;/phenotype-sdk)       | **No such live repo** in `gh repo list`. The real owned SDKs are `phenotype-go-sdk` and `phenotype-python-sdk` (both present and active). Replaced by those two concrete entries. |
 
 ### C. Status corrections
-| Repo | Old status | Corrected | Evidence |
-|------|-----------|-----------|----------|
+
+| Repo            | Old status | Corrected    | Evidence                                                                   |
+| --------------- | ---------- | ------------ | -------------------------------------------------------------------------- |
 | `pheno-tracing` | `archived` | **`active`** | `gh` shows live, pushed 2026-06-28; still consumed by `pheno` via git dep. |
 
 ### D. Archetype / tier (re-)classification
+
 Every owned repo received an explicit `archetype` (new field, schema-backed) and
 a verified `tier`. Notable role/tier corrections vs. the stale narrative map:
 
-| Repo | Stale map said | Corrected | Why |
-|------|----------------|-----------|-----|
-| `OmniRoute` | "fork" (lumped with excludes) | `federated-service` / `fork-tool` / role `route` | Flagship SOTA router, canonical routing framework (ADR-001). |
-| `forgecode` | "fork" | `federated-service` / `fork-tool` / role `agentic-cli` | Flagship SOTA agentic coding CLI. |
-| `substrate` | not in catalog | `federated-service` / `monorepo` / role `connect` | 44-crate Rust workspace; internal crates (omniroute-adapter, phenotype-mcp, engine-*) are NOT separate repos. |
-| `pheno` | not in catalog | `phenotype-framework` / `monorepo` | ~40 internal `phenotype-*` crates. |
-| `HexaKit` | SDK | `phenotype-framework` / `sdk` / role `genesis` | Genesis owner + dependency HUB (see edges below). |
-| `phenotype-infra` | infra | kept `federated-service`, federation members documented | nanovms + PhenoCompose are now its workspace members (ADR-049). |
+| Repo              | Stale map said                | Corrected                                               | Why                                                                                                            |
+| ----------------- | ----------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `OmniRoute`       | "fork" (lumped with excludes) | `federated-service` / `fork-tool` / role `route`        | Flagship SOTA router, canonical routing framework (ADR-001).                                                   |
+| `forgecode`       | "fork"                        | `federated-service` / `fork-tool` / role `agentic-cli`  | Flagship SOTA agentic coding CLI.                                                                              |
+| `substrate`       | not in catalog                | `federated-service` / `monorepo` / role `connect`       | 44-crate Rust workspace; internal crates (omniroute-adapter, phenotype-mcp, engine-\*) are NOT separate repos. |
+| `pheno`           | not in catalog                | `phenotype-framework` / `monorepo`                      | ~40 internal `phenotype-*` crates.                                                                             |
+| `HexaKit`         | SDK                           | `phenotype-framework` / `sdk` / role `genesis`          | Genesis owner + dependency HUB (see edges below).                                                              |
+| `phenotype-infra` | infra                         | kept `federated-service`, federation members documented | nanovms + PhenoCompose are now its workspace members (ADR-049).                                                |
 
 ## Dependency-graph corrections (verified from manifests)
 
@@ -139,8 +143,9 @@ owned-88 set exactly (no dangling refs, no missing owned repos), all archetypes
 in the schema enum.
 
 ### Schema note
+
 `catalog/registry.schema.json` gained an `archetype` enum property. An
 explicit `architecture` is now set on **every** entry (not just framework tier):
-the draft-07 `if/then` that gates `hexagonal-l4` treats an *absent* `architecture`
+the draft-07 `if/then` that gates `hexagonal-l4` treats an _absent_ `architecture`
 as a vacuous match and would otherwise force `ports`/`adapters` on plain libs.
 Setting `architecture: layered` makes the conditional correctly false.

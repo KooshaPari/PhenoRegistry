@@ -1,7 +1,7 @@
 # PhenoPlugins Absorption Record
 
-**Source repo**: `<REDACTED>/PhenoPlugins` (archived 2026-07-17)
-**Target**: `<REDACTED>/pheno` monorepo
+**Source repo**: `&lt;REDACTED&gt;/PhenoPlugins` (archived 2026-07-17)
+**Target**: `&lt;REDACTED&gt;/pheno` monorepo
 **Path**: `crates/pheno-plugins-{core,git,sqlite,vessel,examples}/`
 **Branch**: `absorb/pheno-plugins-2026-07-17`
 **Wave**: `2026-07-17-queue-refresh-2`
@@ -14,13 +14,13 @@ with traits, manifest, registry, lifecycle, guardrails).
 
 ### Member mapping
 
-| Source                          | Target                          |
-|---------------------------------|---------------------------------|
-| `crates/pheno-plugin-core`      | `crates/pheno-plugins-core`     |
-| `crates/pheno-plugin-git`       | `crates/pheno-plugins-git`      |
-| `crates/pheno-plugin-sqlite`    | `crates/pheno-plugins-sqlite`   |
-| `crates/pheno-plugin-vessel`    | `crates/pheno-plugins-vessel`   |
-| `crates/pheno-plugin-examples`  | `crates/pheno-plugins-examples` |
+| Source                         | Target                          |
+| ------------------------------ | ------------------------------- |
+| `crates/pheno-plugin-core`     | `crates/pheno-plugins-core`     |
+| `crates/pheno-plugin-git`      | `crates/pheno-plugins-git`      |
+| `crates/pheno-plugin-sqlite`   | `crates/pheno-plugins-sqlite`   |
+| `crates/pheno-plugin-vessel`   | `crates/pheno-plugins-vessel`   |
+| `crates/pheno-plugin-examples` | `crates/pheno-plugins-examples` |
 
 ## Changes made during absorption
 

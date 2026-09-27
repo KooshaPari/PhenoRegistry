@@ -2,14 +2,14 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/phenoResearchEngine` |
-| Target repo | `<REDACTED>/pheno` |
-| Target path | `phenotype-research-engine/` |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent (batch absorption) |
-| Verification | File count match: 140 files (175 items incl. dirs) |
+| Field         | Value                                              |
+| ------------- | -------------------------------------------------- |
+| Source repo   | `&lt;REDACTED&gt;/phenoResearchEngine`             |
+| Target repo   | `&lt;REDACTED&gt;/pheno`                           |
+| Target path   | `phenotype-research-engine/`                       |
+| Absorbed date | 2026-07-17                                         |
+| Absorbed by   | forge agent (batch absorption)                     |
+| Verification  | File count match: 140 files (175 items incl. dirs) |
 
 ## What was absorbed
 

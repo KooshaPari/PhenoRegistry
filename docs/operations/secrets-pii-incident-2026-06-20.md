@@ -1,6 +1,6 @@
 # Secrets and PII Incident Command Sheet - 2026-06-20
 
-Repository: `<REDACTED>/phenotype-registry`
+Repository: `&lt;REDACTED&gt;/phenotype-registry`
 
 This document is intentionally sanitized. Do not add secret values, token
 prefixes beyond provider type names, raw alert payloads, personal data, or
@@ -8,17 +8,17 @@ provider console screenshots.
 
 ## Current Incident State
 
-| Control | State |
-| --- | --- |
-| Repository visibility | Private |
-| GitHub Pages | Disabled / not configured |
-| GitHub Actions | Disabled at repository level |
-| Repository Actions secrets | None listed during incident triage |
-| Repository Actions variables | None listed during incident triage |
-| Repository environments | None listed during incident triage |
-| Secret scanning while private | Unavailable for this repository |
-| Changed-file guardrails | Landed on `main` in PR #318 |
-| Workflow action pinning | Guard landed on `main`; required before Actions restore |
+| Control                       | State                                                   |
+| ----------------------------- | ------------------------------------------------------- |
+| Repository visibility         | Private                                                 |
+| GitHub Pages                  | Disabled / not configured                               |
+| GitHub Actions                | Disabled at repository level                            |
+| Repository Actions secrets    | None listed during incident triage                      |
+| Repository Actions variables  | None listed during incident triage                      |
+| Repository environments       | None listed during incident triage                      |
+| Secret scanning while private | Unavailable for this repository                         |
+| Changed-file guardrails       | Landed on `main` in PR #318                             |
+| Workflow action pinning       | Guard landed on `main`; required before Actions restore |
 
 ## Alert Inventory Captured Before Privatization
 
@@ -26,25 +26,25 @@ GitHub secret scanning showed 23 open alerts before the repository was made
 private. The private repository state hides the alerts from the REST API, so
 this table is the working incident inventory until scanning is available again.
 
-| Provider / secret type | Alert numbers | Rotation status | Owner | Evidence link |
-| --- | ---: | --- | --- | --- |
-| GitHub personal access token | 23, 21 | pending | account owner | pending |
-| Cloudflare account API token | 16 | pending | account owner | pending |
-| Cloudflare user API token | 15 | pending | account owner | pending |
-| npm access token | 19, 9 | pending | account owner | pending |
-| OpenAI API key | 18 | pending | account owner | pending |
-| Supabase secret key | 17, 12 | pending | account owner | pending |
-| Supabase service key | 1 | pending | account owner | pending |
-| Google API key | 13 | pending | account owner | pending |
-| Google OAuth refresh token | 7 | pending | account owner | pending |
-| Sentry personal token | 8 | pending | account owner | pending |
-| Tailscale API key | 22 | pending | account owner | pending |
-| Discord bot token | 20, 2 | pending | account owner | pending |
-| Vercel API key | 14 | pending | account owner | pending |
-| crates.io API token | 6 | pending | account owner | pending |
-| Stripe API key | 5 | pending | account owner | pending |
-| WorkOS staging API key | 11, 4 | pending | account owner | pending |
-| Highnote test key | 10, 3 | pending | account owner | pending |
+| Provider / secret type       | Alert numbers | Rotation status | Owner         | Evidence link |
+| ---------------------------- | ------------: | --------------- | ------------- | ------------- |
+| GitHub personal access token |        23, 21 | pending         | account owner | pending       |
+| Cloudflare account API token |            16 | pending         | account owner | pending       |
+| Cloudflare user API token    |            15 | pending         | account owner | pending       |
+| npm access token             |         19, 9 | pending         | account owner | pending       |
+| OpenAI API key               |            18 | pending         | account owner | pending       |
+| Supabase secret key          |        17, 12 | pending         | account owner | pending       |
+| Supabase service key         |             1 | pending         | account owner | pending       |
+| Google API key               |            13 | pending         | account owner | pending       |
+| Google OAuth refresh token   |             7 | pending         | account owner | pending       |
+| Sentry personal token        |             8 | pending         | account owner | pending       |
+| Tailscale API key            |            22 | pending         | account owner | pending       |
+| Discord bot token            |         20, 2 | pending         | account owner | pending       |
+| Vercel API key               |            14 | pending         | account owner | pending       |
+| crates.io API token          |             6 | pending         | account owner | pending       |
+| Stripe API key               |             5 | pending         | account owner | pending       |
+| WorkOS staging API key       |         11, 4 | pending         | account owner | pending       |
+| Highnote test key            |         10, 3 | pending         | account owner | pending       |
 
 ## Rotation Order
 

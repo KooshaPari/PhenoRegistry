@@ -26,12 +26,12 @@ purposes only.
 
 ## Repositories
 
-| Repo | Language | Size | Last push | Purpose | Disposition |
-|------|----------|------|-----------|---------|-------------|
-| `<REDACTED>/UnityDoorstop-NexusPatched` | C | 1.5MB | 2026-06-22 | Unity Doorstop 4 rewrite (NeighTools fork) — tool to inject managed .NET into Unity | ARCHIVED |
-| `<REDACTED>/Compound-Spheres-3D-Backup` | C# | 1.2MB | 2026-06-25 | Backup of Unity GPU/water/spheres rendering engine (used by WorldSphere3D) | ARCHIVED |
-| `<REDACTED>/WorldSphereMod` | C# | 177MB | 2026-07-03 | WSM3D — hard fork of MelvinShwuaner/WorldSphereMod (WorldBox 3D conversion mod, 10 phases) | ARCHIVED |
-| `<REDACTED>/Dino` | C# | 657MB | 2026-07-16 | DINOForge general-purpose mod platform for "Diplomacy is Not an Option" (Steam) | ARCHIVED |
+| Repo                                          | Language | Size  | Last push  | Purpose                                                                                    | Disposition |
+| --------------------------------------------- | -------- | ----- | ---------- | ------------------------------------------------------------------------------------------ | ----------- |
+| `&lt;REDACTED&gt;/UnityDoorstop-NexusPatched` | C        | 1.5MB | 2026-06-22 | Unity Doorstop 4 rewrite (NeighTools fork) — tool to inject managed .NET into Unity        | ARCHIVED    |
+| `&lt;REDACTED&gt;/Compound-Spheres-3D-Backup` | C#       | 1.2MB | 2026-06-25 | Backup of Unity GPU/water/spheres rendering engine (used by WorldSphere3D)                 | ARCHIVED    |
+| `&lt;REDACTED&gt;/WorldSphereMod`             | C#       | 177MB | 2026-07-03 | WSM3D — hard fork of MelvinShwuaner/WorldSphereMod (WorldBox 3D conversion mod, 10 phases) | ARCHIVED    |
+| `&lt;REDACTED&gt;/Dino`                       | C#       | 657MB | 2026-07-16 | DINOForge general-purpose mod platform for "Diplomacy is Not an Option" (Steam)            | ARCHIVED    |
 
 ## Why archive (not absorb)
 
@@ -48,8 +48,9 @@ into a Phenotype repo would:
 
 ## Outcome
 
-All 4 source repos archived on GitHub (`gh repo archive <REDACTED>/<repo> -y`).
+All 4 source repos archived on GitHub (`gh repo archive &lt;REDACTED&gt;/<repo> -y`).
 Registry disposition-index updated:
+
 - `repo-UnityDoorstop-NexusPatched`: fsm=archived, target=phenotype-registry (this doc)
 - `repo-Compound-Spheres-3D-Backup`: fsm=archived, target=phenotype-registry (this doc)
 - `repo-WorldSphereMod`: fsm=archived, target=phenotype-registry (this doc)

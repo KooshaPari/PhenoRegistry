@@ -21,19 +21,19 @@ directory in the `pheno` monorepo, which was pre-allocated for this purpose.
 
 ## Content migrated
 
-| Category | Count | Target path |
-|----------|-------|-------------|
-| Python source | 6 modules + 7 crawlers + MCP | `pheno/phenotype-research-engine/src/research_engine/` |
-| Tests | 5 test files + BDD | `pheno/phenotype-research-engine/tests/` |
-| Docs | SSOT, journeys, operations, retrieval, sessions | `pheno/phenotype-research-engine/docs/` |
-| Config | pyproject.toml, setup.py, Justfile, etc. | `pheno/phenotype-research-engine/` |
-| GitHub workflows | CI, coverage, SAST, release, scorecard | `pheno/phenotype-research-engine/.github/workflows/` |
-| AgilePlus specs | Specs, tasks, ADRs | `pheno/phenotype-research-engine/.agileplus/` |
-| Ports (TS) | Retriever, search backend, adapters | `pheno/phenotype-research-engine/ports/` |
+| Category         | Count                                           | Target path                                            |
+| ---------------- | ----------------------------------------------- | ------------------------------------------------------ |
+| Python source    | 6 modules + 7 crawlers + MCP                    | `pheno/phenotype-research-engine/src/research_engine/` |
+| Tests            | 5 test files + BDD                              | `pheno/phenotype-research-engine/tests/`               |
+| Docs             | SSOT, journeys, operations, retrieval, sessions | `pheno/phenotype-research-engine/docs/`                |
+| Config           | pyproject.toml, setup.py, Justfile, etc.        | `pheno/phenotype-research-engine/`                     |
+| GitHub workflows | CI, coverage, SAST, release, scorecard          | `pheno/phenotype-research-engine/.github/workflows/`   |
+| AgilePlus specs  | Specs, tasks, ADRs                              | `pheno/phenotype-research-engine/.agileplus/`          |
+| Ports (TS)       | Retriever, search backend, adapters             | `pheno/phenotype-research-engine/ports/`               |
 
 Total: 140 files, 175 items (incl. directories).
 
 ## Outcome
 
-Source repo `<REDACTED>/phenoResearchEngine` archived on GitHub.
+Source repo `&lt;REDACTED&gt;/phenoResearchEngine` archived on GitHub.
 Registry disposition-index updated: disposition=ABSORB, target=pheno (monorepo).

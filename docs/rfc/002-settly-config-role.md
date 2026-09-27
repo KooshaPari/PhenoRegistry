@@ -1,15 +1,15 @@
 # RFC 002 — Settly → `config` role (`phenotype-config` workspace)
 
-| Field | Value |
-|-------|-------|
-| **Status** | Proposed |
-| **Role** | `config` |
-| **Canonical owner** | **phenotype-config** (new workspace — repo or multi-root workspace proposal) |
-| **Rust core** | `settly` crate |
-| **TS edge** | **Conft** |
-| **Python edge** | **phenotype-config** (Py 3.14 / uv package) |
-| **Supersedes** | HexaKit `crates/settly` as permanent home |
-| **Authority** | [DOMAIN_ROLES.md](../../DOMAIN_ROLES.md), [LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md) |
+| Field               | Value                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| **Status**          | Proposed                                                                                       |
+| **Role**            | `config`                                                                                       |
+| **Canonical owner** | **phenotype-config** (new workspace — repo or multi-root workspace proposal)                   |
+| **Rust core**       | `settly` crate                                                                                 |
+| **TS edge**         | **Conft**                                                                                      |
+| **Python edge**     | **phenotype-config** (Py 3.14 / uv package)                                                    |
+| **Supersedes**      | HexaKit `crates/settly` as permanent home                                                      |
+| **Authority**       | [DOMAIN_ROLES.md](../../DOMAIN_ROLES.md), [LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md) |
 
 ## Summary
 
@@ -27,12 +27,12 @@ This RFC rejects:
 
 Settly was absorbed into HexaKit (`crates/settly`) during the consolidation wave. HexaKit is now **genesis-only**; config domain code belongs under the `config` role ([DOMAIN_ROLES.md](../../DOMAIN_ROLES.md)).
 
-| Artifact | Current location | Target |
-|----------|------------------|--------|
-| `settly` Rust crate | HexaKit `crates/settly` | phenotype-config workspace |
-| Conft | Standalone TS repo | TS edge of phenotype-config role |
-| Python config SDK | Scattered / HexaKit `phenotype-config-core` | `phenotype-config` Py package |
-| Pyron | HexaKit `settly` (+ stashly/pheno) | phenotype-config / workspace `settly` |
+| Artifact            | Current location                            | Target                                |
+| ------------------- | ------------------------------------------- | ------------------------------------- |
+| `settly` Rust crate | HexaKit `crates/settly`                     | phenotype-config workspace            |
+| Conft               | Standalone TS repo                          | TS edge of phenotype-config role      |
+| Python config SDK   | Scattered / HexaKit `phenotype-config-core` | `phenotype-config` Py package         |
+| Pyron               | HexaKit `settly` (+ stashly/pheno)          | phenotype-config / workspace `settly` |
 
 [RATIONALIZATION_EXECUTION.md](../../RATIONALIZATION_EXECUTION.md) marks Settly as **blocked** until Pyron repoints.
 
@@ -42,29 +42,29 @@ Settly was absorbed into HexaKit (`crates/settly`) during the consolidation wave
 
 Create **phenotype-config** as the `config` role owner. Two acceptable shapes (pick one in Phase 0):
 
-| Option | Shape | When to choose |
-|--------|-------|----------------|
-| **A — New repo** | `<REDACTED>/phenotype-config` git repo with Rust workspace + `packages/` for Py | Clean boundary, independent CI |
+| Option                    | Shape                                                                                     | When to choose                               |
+| ------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **A — New repo**          | `&lt;REDACTED&gt;/phenotype-config` git repo with Rust workspace + `packages/` for Py     | Clean boundary, independent CI               |
 | **B — Virtual workspace** | Rust root in new repo; Conft + Py packages linked via manifest docs and shared versioning | Minimize repo count; accept multi-repo edges |
 
 Edges stay in their publish targets:
 
-| Component | Repo | Lang | Tier |
-|-----------|------|------|------|
-| `settly` | phenotype-config | Rust | 1 |
-| Conft | Conft (linked role edge) | TS / Bun | 2 |
-| `phenotype-config` | phenotype-config `packages/python/` or phenotype-python-sdk extra | Python 3.14 / uv | 2 |
+| Component          | Repo                                                              | Lang             | Tier |
+| ------------------ | ----------------------------------------------------------------- | ---------------- | ---- |
+| `settly`           | phenotype-config                                                  | Rust             | 1    |
+| Conft              | Conft (linked role edge)                                          | TS / Bun         | 2    |
+| `phenotype-config` | phenotype-config `packages/python/` or phenotype-python-sdk extra | Python 3.14 / uv | 2    |
 
 Conft is **not** subtree-merged into Settly — it is the npm/Bun publish surface for TS consumers ([LANGUAGE_PLACEMENT.md](../../LANGUAGE_PLACEMENT.md)).
 
 ## Language placement
 
-| Component | Lang | Tier | Rationale |
-|-----------|------|------|-----------|
-| settly core | Rust | **1** | Layered config, validation, env — correctness-critical |
-| Conft | TS / Bun | **2** | npm publish surface, CLI adjacency |
-| phenotype-config (Py) | Python 3.14 / uv | **2** | SDK scripting, Pyron integration |
-| HexaKit config templates | genesis templates | — | Scaffold only, no runtime config domain |
+| Component                | Lang              | Tier  | Rationale                                              |
+| ------------------------ | ----------------- | ----- | ------------------------------------------------------ |
+| settly core              | Rust              | **1** | Layered config, validation, env — correctness-critical |
+| Conft                    | TS / Bun          | **2** | npm publish surface, CLI adjacency                     |
+| phenotype-config (Py)    | Python 3.14 / uv  | **2** | SDK scripting, Pyron integration                       |
+| HexaKit config templates | genesis templates | —     | Scaffold only, no runtime config domain                |
 
 ## Target layout (Option A — recommended)
 
@@ -121,7 +121,7 @@ Conft/
 - [ ] Remove `crates/settly` from HexaKit workspace.
 - [ ] Remove `phenotype-config-core` if fully absorbed.
 - [ ] Update HexaKit charter transitional note; CI green.
-- [ ] Archive `<REDACTED>/Settly` source repo when zero external deps confirmed.
+- [ ] Archive `&lt;REDACTED&gt;/Settly` source repo when zero external deps confirmed.
 
 ### Phase 5 — Registry & governance
 
@@ -156,11 +156,11 @@ Do **not** archive HexaKit settly until Pyron is green on the new path.
 
 ## Open questions
 
-| # | Question | Default if unresolved |
-|---|----------|------------------------|
-| 1 | New repo vs virtual workspace | **Option A** — new `phenotype-config` repo |
-| 2 | Py package in same repo vs python-sdk extra | Same repo `packages/python/` |
-| 3 | crates.io publish vs git-only deps | Match fleet dep-guard policy (document in SOTA) |
+| #   | Question                                    | Default if unresolved                           |
+| --- | ------------------------------------------- | ----------------------------------------------- |
+| 1   | New repo vs virtual workspace               | **Option A** — new `phenotype-config` repo      |
+| 2   | Py package in same repo vs python-sdk extra | Same repo `packages/python/`                    |
+| 3   | crates.io publish vs git-only deps          | Match fleet dep-guard policy (document in SOTA) |
 
 ## References
 

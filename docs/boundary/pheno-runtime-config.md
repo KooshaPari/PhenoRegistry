@@ -1,16 +1,16 @@
 # Boundary: pheno-runtime-config
 
 **Status**: ABSORBED (recorded 2026-07-17, registry v1.6.30)
-**Source**: `<REDACTED>/pheno-runtime-config`
-**Target**: `<REDACTED>/pheno` monorepo `crates/pheno-runtime-config/`
+**Source**: `&lt;REDACTED&gt;/pheno-runtime-config`
+**Target**: `&lt;REDACTED&gt;/pheno` monorepo `crates/pheno-runtime-config/`
 
 ## Type
 
-| Field  | Value |
-| ------ | ----- |
-| Kind   | Rust library (src-layout) |
-| Edition | 2021  |
-| MSRV   | 1.82   |
+| Field   | Value                     |
+| ------- | ------------------------- |
+| Kind    | Rust library (src-layout) |
+| Edition | 2021                      |
+| MSRV    | 1.82                      |
 
 ## Surface
 
@@ -29,20 +29,20 @@
 
 ## Failure modes
 
-| Mode               | Behavior |
-| ------------------ | -------- |
-| File unreadable    | Log + retain previous good state |
-| Parse error        | Log + retain previous good state |
-| Schema drift       | Compile-time error (typed Reloadable&lt;T&gt;) |
-| Watcher absent     | Falls back to SIGHUP-only |
-| SIGHUP on Windows  | No-op (cfg-gated) |
+| Mode              | Behavior                                       |
+| ----------------- | ---------------------------------------------- |
+| File unreadable   | Log + retain previous good state               |
+| Parse error       | Log + retain previous good state               |
+| Schema drift      | Compile-time error (typed Reloadable&lt;T&gt;) |
+| Watcher absent    | Falls back to SIGHUP-only                      |
+| SIGHUP on Windows | No-op (cfg-gated)                              |
 
 ## Consumers
 
 - `pheno-observability` (reloader for log sinks)
 - `PhenotypeRuntime` (per-process config)
 - `phenoAI` (LLM router configs at runtime)
-- All agileplus-* binaries with hot-reloadable state
+- All agileplus-\* binaries with hot-reloadable state
 
 ## Migration / sunset
 

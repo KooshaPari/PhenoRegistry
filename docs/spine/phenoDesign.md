@@ -1,16 +1,16 @@
 # PhenoDesign — CREATIVITY / DESIGN / UX Spine
 
 **Status**: LIVE spine member (2026-07-20)  
-**GitHub**: `<REDACTED>/phenoDesign`  
+**GitHub**: `&lt;REDACTED&gt;/phenoDesign`  
 **Registry row**: `projects/phenoDesign.json`, disposition-index `repo-phenoDesign`
 
 ## Spine role
 
-| Field | Value |
-|-------|-------|
-| **Role** | `CREATIVITY_DESIGN_UX` |
-| **Tier** | Tier 2: Operational (creativity stack) |
-| **Owns** | Design tokens, UX patterns, art direction, `@phenotype/design` |
+| Field    | Value                                                             |
+| -------- | ----------------------------------------------------------------- |
+| **Role** | `CREATIVITY_DESIGN_UX`                                            |
+| **Tier** | Tier 2: Operational (creativity stack)                            |
+| **Owns** | Design tokens, UX patterns, art direction, `@phenotype/design`    |
 | **Peer** | `asset-engine` — asset render pipeline (extracted from `engine/`) |
 
 ## Structure

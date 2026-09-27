@@ -2,8 +2,8 @@
 
 **Date:** 2026-06-20
 **Wave:** P5 (agent-runtime)
-**Sources:** `<REDACTED>/phenoRouterMonitor` (archived), `<REDACTED>/phenoAI` (active)
-**Target:** `<REDACTED>/phenoAI`
+**Sources:** `&lt;REDACTED&gt;/phenoRouterMonitor` (archived), `&lt;REDACTED&gt;/phenoAI` (active)
+**Target:** `&lt;REDACTED&gt;/phenoAI`
 **Registry rows:** `gate-phenoroutermonitor`, `lib-llm-router` (implicit)
 
 ---
@@ -29,30 +29,30 @@ absorption:
 
 ## 2. Evidence (read from upstream)
 
-### `<REDACTED>/phenoRouterMonitor` (archived, `isArchived: true`)
+### `&lt;REDACTED&gt;/phenoRouterMonitor` (archived, `isArchived: true`)
 
 - Root has 111 entries (mostly 0-byte placeholders for subprojects)
 - No Rust source (`Cargo.toml` absent at root)
 - Streamlit dashboard is the only concrete asset and lives outside this repo
 - Repo URL: https://github.com/KooshaPari/phenoRouterMonitor
 
-### `<REDACTED>/phenoAI` (active, `isArchived: false`)
+### `&lt;REDACTED&gt;/phenoAI` (active, `isArchived: false`)
 
 Canonical crate lives at `crates/llm-router/`:
 
-| File | Size | Notes |
-|---|---|---|
-| `crates/llm-router/Cargo.toml` | 473 B | tokio, anyhow, serde, reqwest, async-trait, dashmap, tracing |
+| File                           | Size    | Notes                                                                                           |
+| ------------------------------ | ------- | ----------------------------------------------------------------------------------------------- |
+| `crates/llm-router/Cargo.toml` | 473 B   | tokio, anyhow, serde, reqwest, async-trait, dashmap, tracing                                    |
 | `crates/llm-router/src/lib.rs` | 7,998 B | `LlmProvider` trait, `OpenAiProvider`, `LlmRouter` with prefix routing + fallback, 7 unit tests |
 
 Canonical port + adapters under `ports/`:
 
-| File | Size | Purpose |
-|---|---|---|
-| `ports/model_loader.py` | n/a (unread) | `ModelLoader` ABC with `ModelRef`, `InferenceRequest`, `InferenceResponse` (frozen dataclasses) |
-| `ports/adapters/huggingface.py` | 1,419 B | `HuggingFaceLoader` (transformers) |
-| `ports/adapters/local.py` | 1,140 B | `LocalLoader` (safetensors stub) |
-| `ports/tests/test_model_loader.py` | 1,921 B | 8 black-box smoke tests across port + adapters + registry |
+| File                               | Size         | Purpose                                                                                         |
+| ---------------------------------- | ------------ | ----------------------------------------------------------------------------------------------- |
+| `ports/model_loader.py`            | n/a (unread) | `ModelLoader` ABC with `ModelRef`, `InferenceRequest`, `InferenceResponse` (frozen dataclasses) |
+| `ports/adapters/huggingface.py`    | 1,419 B      | `HuggingFaceLoader` (transformers)                                                              |
+| `ports/adapters/local.py`          | 1,140 B      | `LocalLoader` (safetensors stub)                                                                |
+| `ports/tests/test_model_loader.py` | 1,921 B      | 8 black-box smoke tests across port + adapters + registry                                       |
 
 ### Behavior verified in `lib.rs`
 
@@ -65,13 +65,13 @@ Canonical port + adapters under `ports/`:
 
 ## 3. P5-4 task ledger (proposed)
 
-| ID | Task | Source | Target | Status | Action |
-|---|---|---|---|---|---|
-| P5-4.1 | Verify no `phenoRouterMonitor` callers outside the archived repo | external | n/a | **NEW** | `gh search code` sweep — expect 0 hits |
-| P5-4.2 | Mark `gate-phenoroutermonitor` row `done` with provenance link | registry | registry | **NEW** | one-line edit to `disposition-index.json` |
-| P5-4.3 | Add `phenoAI/crates/llm-router/` to ABSORPTION_MANIFEST | Agentora | Agentora | **NEW** | one-line edit |
-| P5-4.4 | Add traceability row in `TRACEABILITY.md` for FR-CIV-* → llm-router | Agentora | Agentora | **NEW** | one-line edit |
-| P5-4.5 | PhenoAI archive gate (deferred — repo active, Streamlit dash retained) | phenoAI | archive | **DEFER** | stays open, no code |
+| ID     | Task                                                                   | Source   | Target   | Status    | Action                                    |
+| ------ | ---------------------------------------------------------------------- | -------- | -------- | --------- | ----------------------------------------- |
+| P5-4.1 | Verify no `phenoRouterMonitor` callers outside the archived repo       | external | n/a      | **NEW**   | `gh search code` sweep — expect 0 hits    |
+| P5-4.2 | Mark `gate-phenoroutermonitor` row `done` with provenance link         | registry | registry | **NEW**   | one-line edit to `disposition-index.json` |
+| P5-4.3 | Add `phenoAI/crates/llm-router/` to ABSORPTION_MANIFEST                | Agentora | Agentora | **NEW**   | one-line edit                             |
+| P5-4.4 | Add traceability row in `TRACEABILITY.md` for FR-CIV-\* → llm-router   | Agentora | Agentora | **NEW**   | one-line edit                             |
+| P5-4.5 | PhenoAI archive gate (deferred — repo active, Streamlit dash retained) | phenoAI  | archive  | **DEFER** | stays open, no code                       |
 
 Total diff budget: **≤ 4 files, ≤ 8 lines, 0 deletions.** Anti-wipe gate PASS.
 
@@ -123,7 +123,7 @@ dash retained on upstream).
 | FR-LLM-004 | Smoke-test conformance | `phenoAI/ports/tests/test_model_loader.py` (8 black-box tests) |
 ```
 
-(FR-LLM-* are placeholders — adjust to match your registry's ID scheme when applying.)
+(FR-LLM-\* are placeholders — adjust to match your registry's ID scheme when applying.)
 
 ---
 
@@ -139,21 +139,21 @@ Doing a manual `git mv` of placeholder files would **add** code without removing
 
 ## 6. Verification plan (post-apply)
 
-1. `gh search code 'org:<REDACTED> phenoRouterMonitor filename:Cargo.toml'` → expect 0 hits (or self-hits only)
+1. `gh search code 'org:&lt;REDACTED&gt; phenoRouterMonitor filename:Cargo.toml'` → expect 0 hits (or self-hits only)
 2. `grep -R 'phenoRouterMonitor' Agentora/docs/ Agentora/registry/` → only matches in registry rows / ledger docs, no code
 3. `git diff main...HEAD` → ≤ 4 files, ≤ 8 lines, **0 deletions**
 4. `bun run docs:build` (or equivalent registry validator) → green
-5. Open PR against `<REDACTED>/Agentora` → wait for Self-Merge Gate + Required Checks Bridge
+5. Open PR against `&lt;REDACTED&gt;/Agentora` → wait for Self-Merge Gate + Required Checks Bridge
 
 ---
 
 ## 7. Decision needed
 
-| Choice | Outcome |
-|---|---|
-| `p5-4 approve` | Apply the 4 edits above; open PR on Agentora |
-| `p5-4 wider` | Also do the deferred archive gate on `phenoRouterMonitor` (repo is already archived; only paperwork matters) |
-| `p5-4 narrow` | Just flip the registry row, skip the manifest/traceability updates |
-| `p5-4 hold` | Defer; the absorption is effectively done, registry reflects that |
+| Choice         | Outcome                                                                                                      |
+| -------------- | ------------------------------------------------------------------------------------------------------------ |
+| `p5-4 approve` | Apply the 4 edits above; open PR on Agentora                                                                 |
+| `p5-4 wider`   | Also do the deferred archive gate on `phenoRouterMonitor` (repo is already archived; only paperwork matters) |
+| `p5-4 narrow`  | Just flip the registry row, skip the manifest/traceability updates                                           |
+| `p5-4 hold`    | Defer; the absorption is effectively done, registry reflects that                                            |
 
 No code will be touched until you greenlight.

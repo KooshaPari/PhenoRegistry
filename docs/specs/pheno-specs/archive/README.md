@@ -5,13 +5,13 @@ This directory contains documentation from deprecated/archived repositories that
 ## Contents
 
 ### agent-wave/
-Documentation from `<REDACTED>/agent-wave` - an AI-powered agentic workflow system.
+Documentation from `&lt;REDACTED&gt;/agent-wave` - an AI-powered agentic workflow system.
 - **Status**: Archived on GitHub
 - **Content**: AGENTS.md (110KB), SPEC.md, ADR.md, CLAUDE.md, docs/
 - **Preserved**: 2026-04-05
 
 ### Flowra
-Documentation from `<REDACTED>/Flowra` - a workflow automation platform concept.
+Documentation from `&lt;REDACTED&gt;/Flowra` - a workflow automation platform concept.
 - **Status**: ✅ **MOVED** to [HexaKit/Flowra/](https://github.com/KooshaPari/HexaKit/tree/main/Flowra)
 - **Content**: SPEC.md (96KB), PLAN.md (45KB), CHARTER.md, ADR.md, PRD.md
 - **Integrated**: 2026-04-05 (removed from archive, now in HexaKit proper)

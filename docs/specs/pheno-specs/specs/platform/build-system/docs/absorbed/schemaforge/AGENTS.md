@@ -14,14 +14,14 @@ Extends: `phenotype-governance/AGENTS.md`
 
 ## Project Identity
 
-| Field | Value |
-|-------|-------|
-| **Name** | PROJECT_NAME |
-| **Description** | PROJECT_DESCRIPTION |
-| **Language** | PRIMARY_LANGUAGE |
-| **Location** | `/Users/<REDACTED>/CodeProjects/Phenotype/repos/PROJECT_NAME` |
-| **Language Stack** | Rust/Python/Go/TypeScript (edition 2021) |
-| **Published** | Internal / crates.io / npm |
+| Field              | Value                                                               |
+| ------------------ | ------------------------------------------------------------------- |
+| **Name**           | PROJECT_NAME                                                        |
+| **Description**    | PROJECT_DESCRIPTION                                                 |
+| **Language**       | PRIMARY_LANGUAGE                                                    |
+| **Location**       | `/Users/&lt;REDACTED&gt;/CodeProjects/Phenotype/repos/PROJECT_NAME` |
+| **Language Stack** | Rust/Python/Go/TypeScript (edition 2021)                            |
+| **Published**      | Internal / crates.io / npm                                          |
 
 ---
 
@@ -47,15 +47,15 @@ agileplus <command>
 
 ### Primary Agent Selection
 
-| Task type | Primary agent |
-|-----------|---------------|
-| Feature implementation | Forge |
-| Code review | Muse |
-| Bug investigation | Sage |
-| Testing/runtime | Helios |
-| Cross-project architecture | Forge + Sage |
-| Research/investigation | Sage |
-| Documentation | Forge (with Muse review) |
+| Task type                  | Primary agent            |
+| -------------------------- | ------------------------ |
+| Feature implementation     | Forge                    |
+| Code review                | Muse                     |
+| Bug investigation          | Sage                     |
+| Testing/runtime            | Helios                   |
+| Cross-project architecture | Forge + Sage             |
+| Research/investigation     | Sage                     |
+| Documentation              | Forge (with Muse review) |
 
 ### Session Naming
 
@@ -141,13 +141,13 @@ cargo doc --serve
 
 This project uses the following tools (from `phenotype-governance/configs/tools.toml`):
 
-| Tool | Purpose | Config |
-|------|---------|--------|
-| clippy | Rust linter | `clippy.toml` |
-| rustfmt | Rust formatter | `rustfmt.toml` |
-| cargo-deny | Security advisories | `deny.toml` |
-| typos | Spell checking | `_typos.toml` |
-| semgrep | Security scanning | `.semgrep-rules/` |
+| Tool       | Purpose             | Config            |
+| ---------- | ------------------- | ----------------- |
+| clippy     | Rust linter         | `clippy.toml`     |
+| rustfmt    | Rust formatter      | `rustfmt.toml`    |
+| cargo-deny | Security advisories | `deny.toml`       |
+| typos      | Spell checking      | `_typos.toml`     |
+| semgrep    | Security scanning   | `.semgrep-rules/` |
 
 ---
 

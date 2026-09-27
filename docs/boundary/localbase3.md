@@ -1,7 +1,7 @@
 # localbase3 boundary / disposition
 
 **Status**: AFFIRMED (canonical, NOT absorbed)
-**Source**: `<REDACTED>/localbase3`
+**Source**: `&lt;REDACTED&gt;/localbase3`
 **Air-record**: 2026-07-17, registry v1.6.30
 **Disposition**: AFFIRM (canonical full-stack project)
 
@@ -10,18 +10,18 @@
 localbase3 is a multi-service full-stack project with **its own
 production identity**:
 
-| Subsystem        | bytes | Role |
-| ---------------- | ----- | ---- |
-| localbase/       |  ~7K  | core domain |
-| localbase-api/   | ~14K  | Express/Node.js backend |
-| localbase-chain/ |  ~1K  | blockchain adapter |
-| localbase-docs/  |  ~2K  | project docs |
-| localbase-frontend/ | ~4K | UI |
-| localbase-provider/ | ~2K | external provider adapters |
-| localbase-tests/ |  ~3K  | integration tests |
-| src/services/    |  ~2K  | shared services |
-| amp/             |  ~3K  | agent orchestration |
-| ~87000 LOC       | total | TS/JS/HTML/CSS/Python/shell |
+| Subsystem           | bytes | Role                        |
+| ------------------- | ----- | --------------------------- |
+| localbase/          | ~7K   | core domain                 |
+| localbase-api/      | ~14K  | Express/Node.js backend     |
+| localbase-chain/    | ~1K   | blockchain adapter          |
+| localbase-docs/     | ~2K   | project docs                |
+| localbase-frontend/ | ~4K   | UI                          |
+| localbase-provider/ | ~2K   | external provider adapters  |
+| localbase-tests/    | ~3K   | integration tests           |
+| src/services/       | ~2K   | shared services             |
+| amp/                | ~3K   | agent orchestration         |
+| ~87000 LOC          | total | TS/JS/HTML/CSS/Python/shell |
 
 Absorbing this into the registry or any other monorepo would lose its
 product identity, break deployment topologies, and create cross-tenant

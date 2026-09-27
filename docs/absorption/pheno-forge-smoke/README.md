@@ -1,7 +1,7 @@
 # Absorption Record: pheno-forge-smoke
 
-**Source:** `<REDACTED>/pheno-forge-smoke`
-**Target:** `<REDACTED>/pheno` (monorepo) → `crates/pheno-forge-smoke/`
+**Source:** `&lt;REDACTED&gt;/pheno-forge-smoke`
+**Target:** `&lt;REDACTED&gt;/pheno` (monorepo) → `crates/pheno-forge-smoke/`
 **Date:** 2026-07-17
 **Wave:** `2026-07-17-queue-refresh-batch4`
 **Disposition:** ABSORB (fsm: active → absorbed)
@@ -10,42 +10,42 @@
 
 ## Transfer Record
 
-| Field | Value |
-|-------|-------|
-| Source repo | `<REDACTED>/pheno-forge-smoke` |
-| Target repo | `<REDACTED>/pheno` (monorepo) |
-| Target paths | `crates/pheno-forge-smoke/` |
-| Source last commit | `66815e4` (wip: auto-commit daemon 2026-07-16T10:38:10Z) |
-| Absorbed date | 2026-07-17 |
-| Absorbed by | forge agent |
-| Branch on target | `absorb/pheno-forge-smoke-2026-07-17` |
-| Commit on target | (see `git log` on `absorb/pheno-forge-smoke-2026-07-17`) |
-| Verification | `cargo check -p pheno-forge-smoke` clean; `cargo build -p pheno-forge-smoke --release` clean; `cargo test -p pheno-forge-smoke` 0 tests (smoke binary — runtime checks only); runtime `--help` + bridge-missing graceful-fail verified |
+| Field              | Value                                                                                                                                                                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source repo        | `&lt;REDACTED&gt;/pheno-forge-smoke`                                                                                                                                                                                                   |
+| Target repo        | `&lt;REDACTED&gt;/pheno` (monorepo)                                                                                                                                                                                                    |
+| Target paths       | `crates/pheno-forge-smoke/`                                                                                                                                                                                                            |
+| Source last commit | `66815e4` (wip: auto-commit daemon 2026-07-16T10:38:10Z)                                                                                                                                                                               |
+| Absorbed date      | 2026-07-17                                                                                                                                                                                                                             |
+| Absorbed by        | forge agent                                                                                                                                                                                                                            |
+| Branch on target   | `absorb/pheno-forge-smoke-2026-07-17`                                                                                                                                                                                                  |
+| Commit on target   | (see `git log` on `absorb/pheno-forge-smoke-2026-07-17`)                                                                                                                                                                               |
+| Verification       | `cargo check -p pheno-forge-smoke` clean; `cargo build -p pheno-forge-smoke --release` clean; `cargo test -p pheno-forge-smoke` 0 tests (smoke binary — runtime checks only); runtime `--help` + bridge-missing graceful-fail verified |
 
 ## Files Transferred
 
-| Source | Target | Notes |
-|--------|--------|-------|
-| `Cargo.toml` | `pheno/crates/pheno-forge-smoke/Cargo.toml` | Pinned deps converted to `workspace = true` where possible (`tokio`, `serde`, `serde_json`, `anyhow`, `chrono`, `clap`, `tracing`, `tracing-subscriber`, `reqwest`). `libloading` and `colored` not in workspace.dependencies; pinned concrete versions. Added `tracing-subscriber` `env-filter` feature (needed by `EnvFilter`). Removed `[profile.release]` (workspace root owns it). Added `publish = false`. `repository` updated to `<REDACTED>/pheno`. |
-| `src/lib.rs` | `pheno/crates/pheno-forge-smoke/src/lib.rs` | No changes needed (self-contained; references `libloading::Library` directly) |
-| `src/main.rs` | `pheno/crates/pheno-forge-smoke/src/main.rs` | No changes needed (imports `pheno_forge_smoke::{Bridge, default_bridge_path, ...}` from sibling lib) |
-| `README.md` | `pheno/crates/pheno-forge-smoke/README.md` | Copied as-is; references `../pheno-cdylib-bridge` which is now a sibling path under `crates/` |
-| `CHANGELOG.md` | `pheno/crates/pheno-forge-smoke/CHANGELOG.md` | Copied as-is |
-| `.gitignore` | `pheno/crates/pheno-forge-smoke/.gitignore` | Copied as-is (excludes `/target/`, `/bin/*-sidecar`, IDE/OS noise). |
-| `scripts/run-smoke.sh` | (NOT transferred — out of scope per monorepo policy) | Helper script that builds the bridge and sets `DYLD_LIBRARY_PATH` / `LD_LIBRARY_PATH`. The pheno monorepo root `.gitignore` line 146 has a blanket `scripts/` exclusion; absorbed crates do not carry `scripts/` directories. The script remains in the GitHub archive of the source repo. |
-| `sidecars/Cargo.toml` + `sidecars/src/main.rs` | `pheno/crates/pheno-forge-smoke/sidecars/` | Copied as a non-workspace sub-crate. The smoke binary spawns `pheno-sidecar-stub` as an external process in `--mode=sidecar`, so it does not need to be a workspace member. Cargo treats it as a separate package but does not build it as part of `cargo build -p pheno-forge-smoke`. |
-| `sidecars/pheno-sidecar-stub.cdx.json` | (NOT transferred — generated SBOM) | CycloneDX BOM artifact; regenerated on build. |
-| `pheno-forge-smoke.cdx.json` (source root) | (NOT transferred — generated SBOM) | CycloneDX BOM artifact; regenerated on build. |
+| Source                                         | Target                                               | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Cargo.toml`                                   | `pheno/crates/pheno-forge-smoke/Cargo.toml`          | Pinned deps converted to `workspace = true` where possible (`tokio`, `serde`, `serde_json`, `anyhow`, `chrono`, `clap`, `tracing`, `tracing-subscriber`, `reqwest`). `libloading` and `colored` not in workspace.dependencies; pinned concrete versions. Added `tracing-subscriber` `env-filter` feature (needed by `EnvFilter`). Removed `[profile.release]` (workspace root owns it). Added `publish = false`. `repository` updated to `&lt;REDACTED&gt;/pheno`. |
+| `src/lib.rs`                                   | `pheno/crates/pheno-forge-smoke/src/lib.rs`          | No changes needed (self-contained; references `libloading::Library` directly)                                                                                                                                                                                                                                                                                                                                                                                      |
+| `src/main.rs`                                  | `pheno/crates/pheno-forge-smoke/src/main.rs`         | No changes needed (imports `pheno_forge_smoke::{Bridge, default_bridge_path, ...}` from sibling lib)                                                                                                                                                                                                                                                                                                                                                               |
+| `README.md`                                    | `pheno/crates/pheno-forge-smoke/README.md`           | Copied as-is; references `../pheno-cdylib-bridge` which is now a sibling path under `crates/`                                                                                                                                                                                                                                                                                                                                                                      |
+| `CHANGELOG.md`                                 | `pheno/crates/pheno-forge-smoke/CHANGELOG.md`        | Copied as-is                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `.gitignore`                                   | `pheno/crates/pheno-forge-smoke/.gitignore`          | Copied as-is (excludes `/target/`, `/bin/*-sidecar`, IDE/OS noise).                                                                                                                                                                                                                                                                                                                                                                                                |
+| `scripts/run-smoke.sh`                         | (NOT transferred — out of scope per monorepo policy) | Helper script that builds the bridge and sets `DYLD_LIBRARY_PATH` / `LD_LIBRARY_PATH`. The pheno monorepo root `.gitignore` line 146 has a blanket `scripts/` exclusion; absorbed crates do not carry `scripts/` directories. The script remains in the GitHub archive of the source repo.                                                                                                                                                                         |
+| `sidecars/Cargo.toml` + `sidecars/src/main.rs` | `pheno/crates/pheno-forge-smoke/sidecars/`           | Copied as a non-workspace sub-crate. The smoke binary spawns `pheno-sidecar-stub` as an external process in `--mode=sidecar`, so it does not need to be a workspace member. Cargo treats it as a separate package but does not build it as part of `cargo build -p pheno-forge-smoke`.                                                                                                                                                                             |
+| `sidecars/pheno-sidecar-stub.cdx.json`         | (NOT transferred — generated SBOM)                   | CycloneDX BOM artifact; regenerated on build.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `pheno-forge-smoke.cdx.json` (source root)     | (NOT transferred — generated SBOM)                   | CycloneDX BOM artifact; regenerated on build.                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Files NOT Transferred (out of scope)
 
-| Source | Reason |
-|--------|--------|
-| `scripts/run-smoke.sh` | Pheno monorepo `.gitignore` line 146 has a blanket `scripts/` exclusion. The script remains in the GitHub archive of the source repo. |
-| `docs/`, `examples/` | Empty in source. |
-| `AGENTS.md`, `SSOT.md`, `WORKLOG.md`, `llms.txt`, `LICENSE-*`, `cliff.toml` | Single-repo governance meta-bundle. Lives in the GitHub archive. The monorepo `pheno` repo has its own governance bundle. |
-| `Cargo.lock` (source root) | Workspace root `pheno/Cargo.lock` will be updated by `cargo` on first build (no need to copy). The `sidecars/` sub-crate has its own `Cargo.lock` (also not transferred — it would be regenerated if/when the sidecar is built). |
-| `tests/` | Empty in source. The smoke binary is a CLI; its tests are end-to-end (running the binary against a live bridge), not unit tests. |
+| Source                                                                      | Reason                                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scripts/run-smoke.sh`                                                      | Pheno monorepo `.gitignore` line 146 has a blanket `scripts/` exclusion. The script remains in the GitHub archive of the source repo.                                                                                            |
+| `docs/`, `examples/`                                                        | Empty in source.                                                                                                                                                                                                                 |
+| `AGENTS.md`, `SSOT.md`, `WORKLOG.md`, `llms.txt`, `LICENSE-*`, `cliff.toml` | Single-repo governance meta-bundle. Lives in the GitHub archive. The monorepo `pheno` repo has its own governance bundle.                                                                                                        |
+| `Cargo.lock` (source root)                                                  | Workspace root `pheno/Cargo.lock` will be updated by `cargo` on first build (no need to copy). The `sidecars/` sub-crate has its own `Cargo.lock` (also not transferred — it would be regenerated if/when the sidecar is built). |
+| `tests/`                                                                    | Empty in source. The smoke binary is a CLI; its tests are end-to-end (running the binary against a live bridge), not unit tests.                                                                                                 |
 
 ## Workspace Changes (pheno monorepo)
 
@@ -61,8 +61,8 @@
   serde_json, anyhow, chrono, clap, tracing, tracing-subscriber, reqwest).
 - **Feature enable**: `tracing-subscriber` `env-filter` feature enabled (workspace
   dep has no features enabled; needed for `tracing_subscriber::EnvFilter`).
-- **Repo URL**: `repository` updated from `<REDACTED>/pheno-forge-smoke` →
-  `<REDACTED>/pheno`.
+- **Repo URL**: `repository` updated from `&lt;REDACTED&gt;/pheno-forge-smoke` →
+  `&lt;REDACTED&gt;/pheno`.
 - **Publish**: `publish = false` added (it's an internal CLI; matches pattern from
   `pheno-cdylib-bridge`).
 - **`[profile.release]` removed**: workspace root owns release profile.
@@ -112,8 +112,8 @@ The 0/0/0 test result is correct for this crate: the source repo had no unit tes
 
 ## Provenance
 
-Branch: `absorb/pheno-forge-smoke-2026-07-17` on `<REDACTED>/pheno`.
-Source repo `<REDACTED>/pheno-forge-smoke` to be archived via `gh repo archive`.
+Branch: `absorb/pheno-forge-smoke-2026-07-17` on `&lt;REDACTED&gt;/pheno`.
+Source repo `&lt;REDACTED&gt;/pheno-forge-smoke` to be archived via `gh repo archive`.
 
 ## Notes for follow-up PRs
 

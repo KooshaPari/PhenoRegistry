@@ -8,17 +8,17 @@ the wave completed)
 ## What was absorbed
 
 **Quillr v1.0.1** (the merged identity that subsumes Httpora)
-absorbed from `<REDACTED>/Quillr` into two spine targets:
+absorbed from `&lt;REDACTED&gt;/Quillr` into two spine targets:
 
-| Half | Language | Target | Path | Status |
-|------|----------|--------|------|--------|
-| `crates/httpora-core` | Rust | `pheno` monorepo | `crates/httpora-core/` | ✅ absorbed (commit `absorb/httpora-core-2026-07-17`) |
-| `src/` (`@<REDACTED>/quillts`) | TypeScript | `phenodocs` | `packages/quillts/` | ✅ absorbed (commit `absorb/quillts-2026-07-17`) |
+| Half                                 | Language   | Target           | Path                   | Status                                                |
+| ------------------------------------ | ---------- | ---------------- | ---------------------- | ----------------------------------------------------- |
+| `crates/httpora-core`                | Rust       | `pheno` monorepo | `crates/httpora-core/` | ✅ absorbed (commit `absorb/httpora-core-2026-07-17`) |
+| `src/` (`@&lt;REDACTED&gt;/quillts`) | TypeScript | `phenodocs`      | `packages/quillts/`    | ✅ absorbed (commit `absorb/quillts-2026-07-17`)      |
 
 ## Identity reconciliation
 
 `Httpora` was already SUPERSEDED by `Quillr` per disposition-index
-row `history` (2026-06-20). The `<REDACTED>/Httpora` repo no longer
+row `history` (2026-06-20). The `&lt;REDACTED&gt;/Httpora` repo no longer
 exists — its content was merged into Quillr as `crates/httpora-core`.
 The "Quillr + Httpora reconcile identity/name" decision in
 `RATIONALIZATION_PLAN.md` is therefore resolved by absorbing Quillr
@@ -29,7 +29,7 @@ Final naming:
 - **Rust crate**: `httpora-core` (kept name; descriptive of the HTTP
   middleware responsibilities it implements)
 - **TypeScript package**: `@phenotype/quillts` (renamed from
-  `@<REDACTED>/quillts` for the Phenotype org; "quill" hints at the
+  `@&lt;REDACTED&gt;/quillts` for the Phenotype org; "quill" hints at the
   'trace/quill' branding)
 
 ## Content
@@ -60,15 +60,15 @@ Final naming:
 
 ## Verification
 
-| Crate / Package | Command | Result |
-|-----------------|---------|--------|
-| `httpora-core` | `cargo check` | Finished in 10.28s, clean |
-| `httpora-core` | `cargo test` | 60 tests passing, 1 ignored |
-| `quillts` | (test wiring pending — to be added once `@phenotype/quillts` is wired into phenodocs workspace deps) | n/a |
+| Crate / Package | Command                                                                                              | Result                      |
+| --------------- | ---------------------------------------------------------------------------------------------------- | --------------------------- |
+| `httpora-core`  | `cargo check`                                                                                        | Finished in 10.28s, clean   |
+| `httpora-core`  | `cargo test`                                                                                         | 60 tests passing, 1 ignored |
+| `quillts`       | (test wiring pending — to be added once `@phenotype/quillts` is wired into phenodocs workspace deps) | n/a                         |
 
 ## Source repo
 
-`<REDACTED>/Quillr` archived on GitHub 2026-07-17.
+`&lt;REDACTED&gt;/Quillr` archived on GitHub 2026-07-17.
 
 ## Disposition
 

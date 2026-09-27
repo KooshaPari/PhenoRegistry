@@ -41,16 +41,16 @@ project structure.
 
 Deleted or absorbed source repos retain history in `projects/*.json` with `absorbed_into` and `absorption_note`. Resolve capabilities at the canonical owner:
 
-| Retired source | Canonical owner |
-|----------------|-----------------|
-| phenoVessel | [PhenoPlugins/pheno-plugin-vessel](https://github.com/KooshaPari/PhenoPlugins) |
-| phenoTypes | [phenotype-types](https://github.com/KooshaPari/phenotype-types) |
-| phenoPatch, Diffuse | [phenotype-tooling/phenotype-diff](https://github.com/KooshaPari/phenotype-tooling) |
-| Servion | [phenotype-tooling/phenotype-service-registry](https://github.com/KooshaPari/phenotype-tooling) |
-| Guardrail | [phenotype-tooling/phenotype-resilience](https://github.com/KooshaPari/phenotype-tooling) |
-| Cryptora | [phenoUtils/pheno-crypto](https://github.com/KooshaPari/phenoUtils) |
-| forge, phenoForge | [Tasken](https://github.com/KooshaPari/Tasken) |
-| router-docs | [OmniRoute/docs/research/archive/router-docs/](https://github.com/KooshaPari/OmniRoute/tree/main/docs/research/archive/router-docs) |
+| Retired source      | Canonical owner                                                                                                                     |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| phenoVessel         | [PhenoPlugins/pheno-plugin-vessel](https://github.com/KooshaPari/PhenoPlugins)                                                      |
+| phenoTypes          | [phenotype-types](https://github.com/KooshaPari/phenotype-types)                                                                    |
+| phenoPatch, Diffuse | [phenotype-tooling/phenotype-diff](https://github.com/KooshaPari/phenotype-tooling)                                                 |
+| Servion             | [phenotype-tooling/phenotype-service-registry](https://github.com/KooshaPari/phenotype-tooling)                                     |
+| Guardrail           | [phenotype-tooling/phenotype-resilience](https://github.com/KooshaPari/phenotype-tooling)                                           |
+| Cryptora            | [phenoUtils/pheno-crypto](https://github.com/KooshaPari/phenoUtils)                                                                 |
+| forge, phenoForge   | [Tasken](https://github.com/KooshaPari/Tasken)                                                                                      |
+| router-docs         | [OmniRoute/docs/research/archive/router-docs/](https://github.com/KooshaPari/OmniRoute/tree/main/docs/research/archive/router-docs) |
 
 ## phenotype-registry (this repo) — Capability & Intent SSOT
 
@@ -71,7 +71,7 @@ Contracts and templates:
 Scripts that maintain the SSOT:
 
 - [`scripts/scrape.py`](./scripts/scrape.py) — scrape the curated prompt corpus from each source agent's local store
-- [`scripts/run-windows.sh`](./scripts/run-windows.sh) — driver for the Windows-side scrape (run over Tailscale SSH from `<REDACTED>-desk`)
+- [`scripts/run-windows.sh`](./scripts/run-windows.sh) — driver for the Windows-side scrape (run over Tailscale SSH from `&lt;REDACTED&gt;-desk`)
 - [`scripts/render-per-repo.py`](./scripts/render-per-repo.py) — render `docs/intent/<repo>.md` and `docs/boundary/<repo>.md` from the curated corpus + ALIASES
 - [`scripts/propagate-intent-to-repos.py`](./scripts/propagate-intent-to-repos.py) — push the rendered per-repo intent + boundary files into every implementation repo
 - [`scripts/resolve-collision.py`](./scripts/resolve-collision.py) — detect and resolve canonical-name collisions across legacy names
@@ -80,7 +80,7 @@ Scripts that maintain the SSOT:
 Coverage:
 
 - Per-repo `docs/intent/<repo>.md` and `docs/boundary/<repo>.md` exist for every repo bound by the L7-001 sweep. **122 per-repo intent + 121 per-repo boundary files committed.**
-- Curated corpus: **45,091 records** bound to **108 repos** (Mac + Windows via Tailscale SSH to `<REDACTED>-desk`). Sources: `claude-code`, `codex`, `cursor-agent`, `forge`, `droid`, `aider`, `other`.
+- Curated corpus: **45,091 records** bound to **108 repos** (Mac + Windows via Tailscale SSH to `&lt;REDACTED&gt;-desk`). Sources: `claude-code`, `codex`, `cursor-agent`, `forge`, `droid`, `aider`, `other`.
 
 ## Boundary owners and rationalization
 
@@ -99,5 +99,7 @@ Use phenotype-registry when the question is **who owns this capability** or **wh
 ## Rich Media Stubs
 
 <!-- RICH-MEDIA-STUB type="recording-gif" subject="Registry lookup workflow — finding a canonical source of truth" journey="" status="TODO" -->
-> **[RICH MEDIA PLACEHOLDER]** *GIF walkthrough of navigating from Registry Reference to the correct canonical repo.*
+
+> **[RICH MEDIA PLACEHOLDER]** _GIF walkthrough of navigating from Registry Reference to the correct canonical repo._
+
 <!-- END-RICH-MEDIA-STUB -->

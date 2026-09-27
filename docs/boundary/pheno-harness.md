@@ -35,16 +35,16 @@ Three failsafe conditions from the absorption runbook were met:
 
 ### 1. The task's premise (Rust crate, single-session absorbable) does not match reality
 
-The queued task said: *"Absorb &lt;REDACTED&gt;/pheno-harness (Rust, integration testing harness per registry) into phenotype-tooling as crates/pheno-harness/."*
+The queued task said: _"Absorb &lt;REDACTED&gt;/pheno-harness (Rust, integration testing harness per registry) into phenotype-tooling as crates/pheno-harness/."_
 
 Live verification of the source repo:
 
-| Check | Task assumption | Reality |
-| --- | --- | --- |
-| Primary language | Rust | **Python** (974 KB Python vs 53 KB Rust) |
-| Repo layout | Single crate at `pheno-harness/Cargo.toml` + `src/lib.rs` | No `Cargo.toml` anywhere; root is `agileplus-specs/`, `bench/`, `config/`, `eval/`, `harbor/`, `harness/`, `kernels/`, `pheno/`, `scripts/`, `verifier/` |
-| `cargo check -p pheno-harness` after copy | passes | **`error: package ID specification 'pheno-harness' did not match any packages`** (no such member in the workspace) |
-| `cp -r pheno-harness/* phenotype-tooling/crates/pheno-harness/` | safe single-crate copy | Would copy `.git/`, `.gitmodules`, the `agileplus-specs/` submodule, `requirements.txt`, and 28.6 MB of YAML/JSON/PowerShell into a Rust workspace — corrupts both VCS metadata and the `crates/` convention |
+| Check                                                           | Task assumption                                           | Reality                                                                                                                                                                                                      |
+| --------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Primary language                                                | Rust                                                      | **Python** (974 KB Python vs 53 KB Rust)                                                                                                                                                                     |
+| Repo layout                                                     | Single crate at `pheno-harness/Cargo.toml` + `src/lib.rs` | No `Cargo.toml` anywhere; root is `agileplus-specs/`, `bench/`, `config/`, `eval/`, `harbor/`, `harness/`, `kernels/`, `pheno/`, `scripts/`, `verifier/`                                                     |
+| `cargo check -p pheno-harness` after copy                       | passes                                                    | **`error: package ID specification 'pheno-harness' did not match any packages`** (no such member in the workspace)                                                                                           |
+| `cp -r pheno-harness/* phenotype-tooling/crates/pheno-harness/` | safe single-crate copy                                    | Would copy `.git/`, `.gitmodules`, the `agileplus-specs/` submodule, `requirements.txt`, and 28.6 MB of YAML/JSON/PowerShell into a Rust workspace — corrupts both VCS metadata and the `crates/` convention |
 
 The 53 KB of Rust in the source lives entirely at
 `pheno-harness/kernels/qwen3.5-0.8b/rust/` — a generated FFI crate for one
@@ -86,43 +86,43 @@ cannot be collapsed into a single `phenotype-tooling/crates/pheno-harness/`
 Rust crate without losing the cross-repo invariant. The canonical homes
 remain:
 
-- `<REDACTED>/phenodag` — eval/bench coordination (absorbs the
+- `&lt;REDACTED&gt;/phenodag` — eval/bench coordination (absorbs the
   `datasets/ref-pr-diff/registry.json` fixture set)
-- `<REDACTED>/BytePort` — hygiene bundle (P22 + P25)
-- `<REDACTED>/nanovms` — mod-hygiene (P25)
-- `<REDACTED>/PhenoCompose` — cargo-hygiene (P22 + P25)
-- `<REDACTED>/portage` — Harbor task schema (canonical source)
-- `<REDACTED>/PhenoMCPServers` + `<REDACTED>/substrate` — cross-repo test
+- `&lt;REDACTED&gt;/BytePort` — hygiene bundle (P22 + P25)
+- `&lt;REDACTED&gt;/nanovms` — mod-hygiene (P25)
+- `&lt;REDACTED&gt;/PhenoCompose` — cargo-hygiene (P22 + P25)
+- `&lt;REDACTED&gt;/portage` — Harbor task schema (canonical source)
+- `&lt;REDACTED&gt;/PhenoMCPServers` + `&lt;REDACTED&gt;/substrate` — cross-repo test
   runtime
 
 ## What lives where now
 
-| pheno-harness capability | Canonical home | Status |
-| --- | --- | --- |
-| Cross-repo adapter (P20) — `adapters/portage_adapter.py` | `<REDACTED>/phenodag` (presets) + `<REDACTED>/BytePort` (hygiene) | SUPERSEDED_PARITY |
-| CI hygiene (P22+P25) — `.github/workflows/ci.yml` | `<REDACTED>/BytePort` + `<REDACTED>/nanovms` + `<REDACTED>/PhenoCompose` | SUPERSEDED_BETTER |
-| Eval dataset registry — `datasets/ref-pr-diff/registry.json` | `<REDACTED>/phenodag/presets/v3-180.yaml` (120-core + 60-side tasks) | SUPERSEDED_PARITY |
-| Harbor task schema — `HARBOR.md` | `<REDACTED>/portage/src/harbor/tasks/client.py` (canonical) | SUPERSEDED_BETTER |
-| Cross-repo test runtime | `<REDACTED>/PhenoMCPServers` + `<REDACTED>/substrate` | DYNAMIC-KEEP |
-| `dyn-rlvr` runtime metrics | (not absorbed — requires Cloud GPU + runtime secrets) | OUT_OF_FLEET |
-| Local-only commit `a38a6fa` | `repos/pheno-harness/` (local checkout, forensic retention only) | STRANDED (source repo now archived) |
-| Rust FFI for Qwen3.5-0.8B kernels | `pheno-harness/kernels/qwen3.5-0.8b/rust/` | OUT_OF_SCOPE (Apple Silicon only; codegen from `arch.yaml`) |
+| pheno-harness capability                                     | Canonical home                                                                             | Status                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| Cross-repo adapter (P20) — `adapters/portage_adapter.py`     | `&lt;REDACTED&gt;/phenodag` (presets) + `&lt;REDACTED&gt;/BytePort` (hygiene)              | SUPERSEDED_PARITY                                           |
+| CI hygiene (P22+P25) — `.github/workflows/ci.yml`            | `&lt;REDACTED&gt;/BytePort` + `&lt;REDACTED&gt;/nanovms` + `&lt;REDACTED&gt;/PhenoCompose` | SUPERSEDED_BETTER                                           |
+| Eval dataset registry — `datasets/ref-pr-diff/registry.json` | `&lt;REDACTED&gt;/phenodag/presets/v3-180.yaml` (120-core + 60-side tasks)                 | SUPERSEDED_PARITY                                           |
+| Harbor task schema — `HARBOR.md`                             | `&lt;REDACTED&gt;/portage/src/harbor/tasks/client.py` (canonical)                          | SUPERSEDED_BETTER                                           |
+| Cross-repo test runtime                                      | `&lt;REDACTED&gt;/PhenoMCPServers` + `&lt;REDACTED&gt;/substrate`                          | DYNAMIC-KEEP                                                |
+| `dyn-rlvr` runtime metrics                                   | (not absorbed — requires Cloud GPU + runtime secrets)                                      | OUT_OF_FLEET                                                |
+| Local-only commit `a38a6fa`                                  | `repos/pheno-harness/` (local checkout, forensic retention only)                           | STRANDED (source repo now archived)                         |
+| Rust FFI for Qwen3.5-0.8B kernels                            | `pheno-harness/kernels/qwen3.5-0.8b/rust/`                                                 | OUT_OF_SCOPE (Apple Silicon only; codegen from `arch.yaml`) |
 
 ## Out of Scope
 
-| Not here | Lives in | Reason |
-| -------- | -------- | ------ |
-| `phenotype-tooling/crates/pheno-harness/` | (does not exist) | This absorption was rejected under failsafe; no crate was created. |
-| Rust port of pheno-harness scripts | (does not exist) | Source is Python + Shell + YAML; no production equivalent needed in tooling layer. |
-| Cross-repo integration test runner | (unchanged) | `PhenoMCPServers` + `substrate` remain the canonical test runtime; pheno-harness was one operator's bespoke harness on top of them. |
-| Qwen3.5-0.8B kernel FFI | (does not exist outside `kernels/qwen3.5-0.8b/rust/`) | Apple-Silicon-only kernel binding; not a tooling concern. |
-| dyn-rlvr runtime eval | (not absorbed) | Requires Cloud GPU + runtime secrets; not a tooling concern. |
+| Not here                                  | Lives in                                              | Reason                                                                                                                              |
+| ----------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `phenotype-tooling/crates/pheno-harness/` | (does not exist)                                      | This absorption was rejected under failsafe; no crate was created.                                                                  |
+| Rust port of pheno-harness scripts        | (does not exist)                                      | Source is Python + Shell + YAML; no production equivalent needed in tooling layer.                                                  |
+| Cross-repo integration test runner        | (unchanged)                                           | `PhenoMCPServers` + `substrate` remain the canonical test runtime; pheno-harness was one operator's bespoke harness on top of them. |
+| Qwen3.5-0.8B kernel FFI                   | (does not exist outside `kernels/qwen3.5-0.8b/rust/`) | Apple-Silicon-only kernel binding; not a tooling concern.                                                                           |
+| dyn-rlvr runtime eval                     | (not absorbed)                                        | Requires Cloud GPU + runtime secrets; not a tooling concern.                                                                        |
 
 ## Boundary Crossings
 
 | Crossing | Direction | Surface | Status |
 | -------- | --------- | ------- | ------ |
-| (none) | — | — | — |
+| (none)   | —         | —       | —      |
 
 No live edges into or out of pheno-harness remain. The repo is archived
 on GitHub (read-only). All functionality that was nominally in
@@ -151,7 +151,7 @@ the local-only checkout at `repos/pheno-harness/` for forensic retention.
 - Did not push a commit to `phenotype-tooling` on
   `salvage/phenotype-tooling-workspace-2026-07-15`; its working tree is
   unchanged.
-- Executed `gh repo archive <REDACTED>/pheno-harness -y` to seal the
+- Executed `gh repo archive &lt;REDACTED&gt;/pheno-harness -y` to seal the
   source repo read-only.
 
 **Source of truth for the rejected absorption:**

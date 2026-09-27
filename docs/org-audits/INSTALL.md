@@ -1,7 +1,7 @@
 # Heavy-runner cron — Install guide
 
 **Target host:** Phenotype heavy-runner (a Linux box; **not** the MacBook).
-**Target user:** `<REDACTED>` (sudo not required for the install itself).
+**Target user:** `&lt;REDACTED&gt;` (sudo not required for the install itself).
 **Reference:** ADR-044 § "Migration sequence" — T27.1 (heavy-runner install) + T27.2 (GitHub Actions backup) + T27.3 (AGENTS.md Wave Plan v9 update).
 
 This is the one-time install. Total wall-clock: ~15 min. The cron itself runs 3 weekly jobs (pheno-predict, pheno-drift-detector, pheno-framework-lint); the GitHub Actions backup fires when the heavy-runner is down.
@@ -169,16 +169,16 @@ bash ops/heavy-runner-cron/dry-run.sh
 
 ## 7. Troubleshooting
 
-| Symptom                                              | Cause                                              | Fix                                                                              |
-| :--------------------------------------------------- | :------------------------------------------------- | :------------------------------------------------------------------------------- |
-| `flock: command not found`                          | `util-linux` not installed                         | `apt install util-linux` / `dnf install util-linux`                             |
-| Cron line in `crontab -l` but no log files appear    | `SLACK_FLEET_WEBHOOK` missing → wrapper exits 1 → silent failure | `sudo cat /etc/phenotype-fleet.env`; re-source from `~/.bashrc`               |
-| `cron: can't open display: ...` or auth errors       | `gh` not authenticated                            | `gh auth login` (re-auth as &lt;REDACTED&gt;)                                          |
-| `python3: can't open file 'pheno-predict/...'`       | `$REPOS_ROOT` wrong / not in cron env              | Hard-code the absolute path in `crontab` (the install script already does this)  |
-| Cron runs but exits 2 every week                     | Tool found candidates/hits (this is normal)        | Read `~/.fleet-cron/<tool>-<date>.log`; auto-filed GitHub issue should be in `phenotype-org-audits` |
-| `install-cron.sh` exits 2 (refuses)                  | Hostname is MacBook or contains `mac`              | **This is correct** — cron is for `device:heavy-runner` only (ADR-023)          |
-| Output file is empty / only header                   | No candidates/hits above threshold — clean run     | Expected; this is success                                                       |
-| Cron runs but `findings/*.md` never shows up         | Wrong `$REPOS_ROOT` / wrong `--out` path           | Check `~/.fleet-cron/<tool>-<date>.log`; the path is `$REPOS_ROOT/findings/`    |
+| Symptom                                           | Cause                                                            | Fix                                                                                                 |
+| :------------------------------------------------ | :--------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| `flock: command not found`                        | `util-linux` not installed                                       | `apt install util-linux` / `dnf install util-linux`                                                 |
+| Cron line in `crontab -l` but no log files appear | `SLACK_FLEET_WEBHOOK` missing → wrapper exits 1 → silent failure | `sudo cat /etc/phenotype-fleet.env`; re-source from `~/.bashrc`                                     |
+| `cron: can't open display: ...` or auth errors    | `gh` not authenticated                                           | `gh auth login` (re-auth as &lt;REDACTED&gt;)                                                       |
+| `python3: can't open file 'pheno-predict/...'`    | `$REPOS_ROOT` wrong / not in cron env                            | Hard-code the absolute path in `crontab` (the install script already does this)                     |
+| Cron runs but exits 2 every week                  | Tool found candidates/hits (this is normal)                      | Read `~/.fleet-cron/<tool>-<date>.log`; auto-filed GitHub issue should be in `phenotype-org-audits` |
+| `install-cron.sh` exits 2 (refuses)               | Hostname is MacBook or contains `mac`                            | **This is correct** — cron is for `device:heavy-runner` only (ADR-023)                              |
+| Output file is empty / only header                | No candidates/hits above threshold — clean run                   | Expected; this is success                                                                           |
+| Cron runs but `findings/*.md` never shows up      | Wrong `$REPOS_ROOT` / wrong `--out` path                         | Check `~/.fleet-cron/<tool>-<date>.log`; the path is `$REPOS_ROOT/findings/`                        |
 
 For monitoring cron output over time, see `MONITORING.md` in this directory.
 For Slack webhook rotation, see `secret-rotation.md` in this directory.
