@@ -22,21 +22,21 @@ implementation, and this one does not.
 
 `test:e2e` was never written, and nothing it would run exists either:
 
-| Requirement | Status |
-|---|---|
-| `test:e2e` script in `package.json` | absent |
+| Requirement                             | Status |
+| --------------------------------------- | ------ |
+| `test:e2e` in `package.json`            | absent |
 | `@playwright/test` in `devDependencies` | absent |
 | `playwright.config.ts` at the repo root | absent |
-| Any `*.spec.ts` | absent |
-| `playwright-report/` produced by anything | absent |
+| Any `*.spec.ts`                         | absent |
+| `playwright-report/` output             | absent |
 
 The only Playwright files in the repository are archived copies of other
 projects' test suites, e.g.
 `docs/specs/pheno-specs/archive/agent-wave/docs/tests/e2e/docsite.spec.ts`.
-They are documentation of another repo, not a suite for this site.
+They document another repo, and are not a suite for this site.
 
 The workflow still runs `bunx playwright install --with-deps chromium` before
-the failing step, so CI downloads a ~150 MB browser and then never uses it.
+the failing step, so CI downloads a browser and then never uses it.
 
 ## Why this was not simply made to pass
 
@@ -54,8 +54,8 @@ Three options were considered.
    once would mean pushing unverified code to fix a red check.
 
 3. **Fail loudly with an explanation.** Ship `scripts/test-e2e-stub.sh`, which
-   exits 1 and prints why. The check stays red, but the log now names the
-   actual problem instead of a bare "Script not found".
+   exits non-zero and prints why. The check stays red, but the log now names
+   the actual problem instead of a bare missing-script error.
 
 Option 3 is what is committed. The failure is unchanged in colour and
 strictly better in content.
@@ -74,6 +74,6 @@ Either:
 
 ## To activate real coverage later
 
-Replace `scripts/test-e2e-stub.sh` with a direct `playwright test` call and
-delete the stub. The stub documents the three prerequisites inline so the
-next person does not have to rediscover them.
+Point `test:e2e` at `playwright test` and delete
+`scripts/test-e2e-stub.sh`. The file documents the three prerequisites inline
+so the next person does not have to rediscover them.
