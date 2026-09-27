@@ -40,11 +40,6 @@ jobs:
       - name: Copy handbook dist into docs dist
         run: cp -r handbook/docs/.vitepress/dist docs/.vitepress/dist/handbook
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
-        with:
-          # The site was never enabled on the repository, so the default
-          # GET /pages call 404s and the job fails before uploading.
-          # enablement asks the API to turn Pages on instead.
-          enablement: true
       - uses: actions/upload-pages-artifact@98ef48e41587a300b82de4cf298aa98b57b2faae # v-latest
         with:
           path: docs/.vitepress/dist
