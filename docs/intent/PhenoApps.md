@@ -64,8 +64,10 @@ rows — 9 as `target:` fields, 5 as `absorbed_into:` (`:2354` conft,
 `:2588`/`:4730` apisync, `:5229` subject, `:5257` melosviz) — (tracely ×2 on
 **two** rows id=59 `:1068` + id=918 `:6032`; conft ×2 the only one-row pair;
 apisync ×4 across **two** rows — `repo-Apisync-batch4` + `repo-Apisync`;
-subject ×2 and melosviz ×2 one of each kind; testing-kit; tracera; plus
-exactly 196 rows targeting bare `phenotype-apps`).
+subject ×2 and melosviz ×2 one of each kind; testing-kit; tracera —
+template `[/]`: 5 of the 14 omit the trailing slash (apisync `:4730`,
+subject `:5229`/`:5240`, melosviz `:5257`/`:5268`); plus exactly 196 rows
+targeting bare `phenotype-apps`).
 
 ## Open Questions
 

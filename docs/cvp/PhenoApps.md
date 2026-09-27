@@ -72,12 +72,7 @@ The PhenoApps CVP is **a verifier who can**:
   `phenotype-python-sdk/packages/data-kit`], `planify` [rejected — extract-
   only recommendation, ARCHIVE_ONLY], `melosviz` [card: independent
   application boundary; `FINAL-Melosviz` archived 2026-07-18 = historical
-  evidence only], `testing-kit` [row id=912 `TOO_LARGE_RETIRE`, `fsm: live`,
-  target `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into
-  its apps submodule); card: retired into
-  `phenotype-python-sdk/packages/testing-kit` — row and card conflict (live
-  registry target vs retired card), so `testing-kit` scope is **UNRESOLVED
-  pending reconciliation** (Open Questions below), not excluded]. `phenoData` is **excluded with
+  evidence only]. `phenoData` is **excluded with
   row evidence**: `repo-phenoData` (`disposition-index.json:2830-2833`,
   `fsm: live` `:2827`) targets `pheno (crates/pheno-data-*)` with
   `absorbed_at: 2026-07-18` (`:2817`; the row also carries
@@ -89,6 +84,13 @@ The PhenoApps CVP is **a verifier who can**:
   is mirror evidence, not an unclassified child. What does not exist is a row
   targeting `apps/phenoData` (earlier "no disposition row" wording corrected
   this round — see Open Questions).
+- **UNRESOLVED scope — not excluded**: `testing-kit` [row id=912
+  `TOO_LARGE_RETIRE`, `fsm: live`, target
+  `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into its
+  apps submodule); card: retired into
+  `phenotype-python-sdk/packages/testing-kit` — row and card conflict, live
+  registry target vs retired card]. Not in either the required-scope or the
+  excluded list until reconciled (Open Questions below).
 - **`apps/<name>` tree location proven** — the verification gate below:
   child paths after the 2026-09-16 pivot must be located before this CVP
   counts as met.
@@ -165,7 +167,9 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
   **two** rows (id=59 `:1068`, id=918 `:6032`), conft ×2 the only pair on one
   row, apisync ×4 across **two** rows
   — `repo-Apisync-batch4` and `repo-Apisync`, two fields each — subject
-  ×2 and melosviz ×2 one field of each kind, testing-kit, tracera; exactly 196 further rows target bare
+  ×2 and melosviz ×2 one field of each kind, testing-kit, tracera (template `[/]`: 5 of the 14 — apisync `:4730`,
+  subject `:5229`/`:5240`, melosviz `:5257`/`:5268` — omit the trailing
+  slash); exactly 196 further rows target bare
   `phenotype-apps`) still use the old
   name (rename redirects keep old links working; the strings are stale).
 - **Default branch root was `archive/` only** (1 dir, 0 files at root;
