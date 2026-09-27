@@ -48,7 +48,7 @@ stays reachable and CI-backed (see registry reality below).
   cargo-mutants config, fuzz targets, CI config.
 - **Boundary documentation**: `docs/` + `specs/` in-repo, cross-linked to
   `docs/boundary/AuthKit.md` and `docs/intent/AuthKit.md` in the registry.
-- **Registry triad**: this CVP + intent + boundary, kept verified against the
+- **Registry triad**: this CVP + intent + boundary, kept checked against the
   actual tree (not the stale card description).
 
 ## Post-CVP (defer until CVP is live)
@@ -76,7 +76,7 @@ stays reachable and CI-backed (see registry reality below).
 
 ## Registry reality (as of 2026-09-27)
 
-- **GitHub `KooshaPari/AuthKit` returns 404** — verified via `gh api
+- **GitHub `KooshaPari/AuthKit` returns 404** — checked via `gh api
 repos/KooshaPari/AuthKit` and `git ls-remote` (both not-found) with a
   full-`repo`-scope owner token. The repo is deleted, private-beyond-token, or
   renamed.

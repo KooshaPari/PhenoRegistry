@@ -93,7 +93,7 @@ Canonical auth-runtime boundary: `projects/AuthKit.json` disposition `AFFIRM` wi
 
 ## Open Questions
 
-- **GitHub reachability**: `KooshaPari/AuthKit` returns 404 (verified 2026-09-27 via `gh api` + `git ls-remote` with a full-repo-scope token) while the registry marks the repo canonical and a local mirror (last commit 2026-08-24, `chore: add genuine files + scorecard CI`) survives. Deleted, made private, or renamed — reconcile before the next boundary review.
+- **GitHub reachability**: `KooshaPari/AuthKit` returns 404 (checked 2026-09-27 via `gh api` + `git ls-remote` with a full-repo-scope token) while the registry marks the repo canonical and a local mirror (last commit 2026-08-24, `chore: add genuine files + scorecard CI`) survives. Deleted, made private, or renamed — reconcile before the next boundary review.
 - **GAP-009 / GAP-010 migration** from Authvault (RS256/ES256 alg-confusion defense + middleware adapter docs) — schedule or explicitly defer.
 - **TypeScript surface ownership**: `AuthKit/typescript/packages/auth-ts` (ECOSYSTEM absorption note) vs `libs/auth-ts` — pick one canonical home.
 - **Card discrepancy**: `projects/AuthKit-2026-06-25.json` describes a "Go SDK + server / Large Go+proto codebase" while the actual tree is a Rust workspace — correct or merge the cards.

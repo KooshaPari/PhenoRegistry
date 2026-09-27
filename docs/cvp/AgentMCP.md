@@ -93,7 +93,7 @@ the retirement of the standalone repo.
 ## Open Questions
 
 - **Tombstone or re-point**: should the AgentMCP disposition rows be given an
-  explicit tombstone (as done for `repo-phenotype-config` / `repo-kvirtualdesktop-core`)
+  explicit tombstone (as with `repo-phenotype-config` / `repo-kvirtualdesktop-core`)
   now that neither AgentMCP nor Agentora is on GitHub?
 - **Where do the MCP patterns live?** Agentora was the routed target
   (`queue-repo-agentora` row says canonical, `repo-Agentora` row says
