@@ -34,9 +34,8 @@ Evaluating all 37 assertions against the current tree, 20 fail:
   `METHODOLOGY-001: TDD`, `METHODOLOGY-002: BDD`,
   `CHECKLIST-001: Pre-Deployment`, `### Authentication Patterns`,
   `### Caching Patterns`, `### Observability Patterns`,
-  `### Database Patterns`, any of the four ``` language fences,
-  `## Code Quality`, `## Security`, `## Performance`, `## Deployment`,
-  or `## Migration Guide`.
+  `### Database Patterns`, any of the four ```language fences,`## Code Quality`, `## Security`, `## Performance`, `## Deployment`,
+or `## Migration Guide`.
 - `docs/.vitepress/config.mts` does not contain
   `{ text: "Patterns", link: "/patterns/" }`.
 
