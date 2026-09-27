@@ -73,8 +73,8 @@ substrates:
   archetype: sdk
   language: rust
   role: auth
-  boundary: null
-  intent: null
+  boundary: docs/boundary/AuthKit.md
+  intent: docs/intent/AuthKit.md
   notes: 'Auth SDK (Rust core). TS auth-ts absorbed phenotype-auth-ts (PR#120).
 
     '
@@ -921,14 +921,14 @@ substrates:
 - id: phenotype-apps
   repo: <REDACTED>/phenotype-apps
   name: phenotype-apps
-  status: archived
+  status: active  # corrected 2026-09-27 (PR #585): was 'archived' (2026-07-18 retirement); GitHub archived:false + card status active + disposition KEEP_CANONICAL_PARENT
   tier: phenotype-framework
   architecture: layered
   archetype: app
   language: typescript
   role: apps
-  boundary: null
-  intent: null
+  boundary: docs/boundary/PhenoApps.md
+  intent: docs/intent/PhenoApps.md
   notes: 'App aggregation (gh lang=HTML).
 
     '

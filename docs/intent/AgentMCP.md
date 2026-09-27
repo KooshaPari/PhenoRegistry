@@ -1,7 +1,7 @@
 ---
 repo: "AgentMCP"
 aliases: ["agentmcp"]
-role: absorbed-mcp-client-hub
+role: extracted-python-package
 status: active
 last_verified: 2026-09-27
 bound_prompts: 21
@@ -14,7 +14,7 @@ device: macbook
 
 ## Intent Statement
 
-Preserve the fleet's extracted MCP-side package as the hexagonal `agentmcp-hex` package inside `phenotype-python-sdk` — scoped by the package triad as the deterministic hex-grid testing harness (exact-decimal math, 16-task fleet, CI integration), extracted with "hexagonal DDD pattern preserved" from `McpKit/python/agentmcp/` v0.x.x → 0.3.0 as a P1 patch per the McpKit absorption audit (disposition row id=54, `phenotype-python-sdk#21` merged 2026-06-19) — while the higher-level MCP _patterns_ were routed to Agentora during the ADR-017/019 retirement wave (2026-06-17/18). The standalone AgentMCP repository is retired; what the fleet must not lose is the extracted package and its provenance chain. Whether MCP client ports (the pre-extraction surface) survived inside the package is an open question: the package records define the harness scope only.
+Preserve the fleet's extracted MCP-side package as the hexagonal `agentmcp-hex` package inside `phenotype-python-sdk` — scoped by the package triad as the deterministic hex-grid testing harness (exact-decimal math, 16-task fleet, CI integration), extracted with "hexagonal DDD pattern preserved" from `McpKit/python/agentmcp/` v0.x.x → 0.3.0 as a P1 patch per the McpKit absorption audit (disposition row id=54, `phenotype-python-sdk#21` merged 2026-06-19) — while the higher-level MCP _patterns_ were routed to Agentora during the ADR-017/019 retirement wave (vendored `docs/specs/pheno-specs/adrs/017-mcp-polyrepo-boundaries.md` + `019-mcp-runtime-implementation-deps.md`, both 2026-06-17; absorption-audit merge / `relocated_date` 2026-06-18 per `disposition-index.json:899`). The standalone AgentMCP repository is retired; what the fleet must not lose is the extracted package and its provenance chain. Whether MCP client ports (the pre-extraction surface) survived inside the package is an open question: the package records define the harness scope only.
 
 ## Bound Prompts
 
@@ -58,19 +58,20 @@ See: [`docs/boundary/AgentMCP.md`](../boundary/AgentMCP.md)
 
 ## Ecosystem Role
 
-Legacy MCP client hub, retired 2026-06-17/18 per ADR-017/019: Py package lives on as `phenotype-python-sdk/packages/agentmcp-hex` (extraction row in `registry/disposition-index.json`, PR `phenotype-python-sdk#21`); MCP patterns routed to Agentora (ECOSYSTEM_MAP note; also listed in the superseded cohort). No standalone repository exists: `KooshaPari/AgentMCP` returns 404 and there is no `projects/AgentMCP.json` card — the disposition notes plus `docs/intent/agentmcp-hex.md` / `docs/boundary/agentmcp-hex.md` are the system of record.
+Legacy MCP-side package, retired in the vendored-ADR-017/019 wave (dates: ADRs 2026-06-17, absorption-audit merge 2026-06-18): Py package lives on as `phenotype-python-sdk/packages/agentmcp-hex` (extraction row in `registry/disposition-index.json`, PR `phenotype-python-sdk#21`); MCP patterns routed to Agentora (`ECOSYSTEM_MAP.md:393`, Cluster L legacy paragraph — note AgentMCP has **no** entry in the §1 role tables nor in the Retirements/Merges cohort; the earlier "also listed in the superseded cohort" claim in this file was unsupported and is removed). No standalone repository exists: `KooshaPari/AgentMCP` returns 404 and there is no `projects/AgentMCP.json` card — the system of record is the disposition extraction row + the `ECOSYSTEM_MAP.md:393` note; the `agentmcp-hex` package triad (`docs/intent/agentmcp-hex.md`, `docs/boundary/agentmcp-hex.md`) scopes the package as a hex-grid harness and does **not** evidence MCP client capability (see Open Questions below).
 
 ## Open Questions
 
 - **Package scope contradiction**: `docs/intent/agentmcp-hex.md` and `docs/boundary/agentmcp-hex.md` (the package triad) scope `agentmcp-hex` as a hex-grid testing harness, while the disposition extraction row frames the lift as an MCP client extraction with "hexagonal DDD pattern preserved." Port-level claims (agent / directory / tools) are not evidenced by package records — verify against the `phenotype-python-sdk` source before asserting MCP client capability.
-- **Pattern target unreachable**: Agentora (`KooshaPari/Agentora`) also returns 404 as of 2026-09-27, and the disposition rows contradict each other (`queue-repo-agentora` says canonical; `repo-Agentora` says `TOO_LARGE_RETIRE` targeting `pheno (crates/agentora)`). Resolve before the next boundary review.
-- **Tombstone or re-point**: should the AgentMCP disposition rows get an explicit tombstone (as `repo-phenotype-config` did) now that neither AgentMCP nor Agentora is on GitHub?
+- **Pattern target unreachable**: Agentora (`KooshaPari/Agentora`) also returns 404 as of 2026-09-27, and the disposition rows diverge on `fsm` (`live` vs `archived`) and `target` (`KooshaPari/Agentora` vs `pheno (crates/agentora)`) while both carry `disposition: TOO_LARGE_RETIRE` (`disposition-index.json:14153-14161`; "canonical" appears only in the row note) — plus `projects/Agentora.json:19-21` = `KEEP_STANDALONE_PENDING_BOUNDARY_REVIEW`. Resolve before the next boundary review.
+- **Tombstone or re-point**: should the AgentMCP disposition rows get an explicit tombstone — model = `repo-mcpkit-superseded` (verified-404 tombstone, `:1306-1310`), not the `NEVER_EXISTED` phantom rows — now that neither AgentMCP nor Agentora is on GitHub?
 - **Does `agentmcp-hex` get its own first-class CVP?** It already has its own intent/boundary triad.
 
 ## Change Log
 
-| Date       | Change                                                                                               | Worklog                                                    |
-| ---------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 2026-06-17 | Initial binding (L7-001 sweep)                                                                       | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
-| 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AgentMCP.md`) | PHENOREG-FORWARD-WBS A3.2 / C3.3                           |
-| 2026-09-27 | Review fixes: port-name claims removed; package scope contradiction added as Open Question           | PR #585 review round                                       |
+| Date       | Change                                                                                                                                                                                                                          | Worklog                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| 2026-06-17 | Initial binding (L7-001 sweep)                                                                                                                                                                                                  | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
+| 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AgentMCP.md`)                                                                                                                            | PHENOREG-FORWARD-WBS A3.2 / C3.3                           |
+| 2026-09-27 | Review fixes: port-name claims removed; package scope contradiction added as Open Question                                                                                                                                      | PR #585 review round                                       |
+| 2026-09-27 | Kilo round 2: frontmatter role → `extracted-python-package` (no capability claim), unsupported cohort citation removed, system-of-record claim aligned with Open Questions, Agentora divergence + tombstone precedent corrected | PR #585 review round                                       |

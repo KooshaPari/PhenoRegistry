@@ -14,7 +14,7 @@ device: macbook
 
 ## Intent Statement
 
-Own the fleet's authentication runtime boundary as a single Rust crate: enforce the PKCE state ↔ session invariant at the middleware for every PhenoService (`enforce_pkce_state_session`, FR-AUTHV-018, 11 unit tests), store sessions behind the hexagonal `SessionStore` port, and grow through the documented AUT-SOTA series (key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate limiting). AuthKit supersedes Authvault (card status `archived-superseded`) and is designated the standalone canonical WorkOS-themed auth hub by USER-DECISION 2026-07-19. Services authenticate through AuthKit; each service keeps its own authorization policy.
+Own the fleet's authentication runtime boundary as a single Rust crate: enforce the PKCE state ↔ session invariant at the middleware for every PhenoService (`enforce_pkce_state_session`, FR-AUTHV-018, 11 unit tests as reported by the card — no run artifact, CI unconfigured), store sessions behind the hexagonal `SessionStore` port, and grow through the documented AUT-SOTA series (key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate limiting; aggregate list in `projects/AuthKit.json:26` — no per-item records, numeric ids positional). AuthKit supersedes Authvault (card status `archived-superseded`) and is designated the standalone canonical WorkOS-themed auth hub by USER-DECISION 2026-07-19 (the `default: standalone` entry is fleet-wide boilerplate with an AuthKit gloss — see Ecosystem Role for the counter-records). Services authenticate through AuthKit; each service keeps its own authorization policy.
 
 ## Bound Prompts
 
@@ -89,19 +89,20 @@ See: [`docs/boundary/AuthKit.md`](../boundary/AuthKit.md)
 
 ## Ecosystem Role
 
-Canonical auth-runtime boundary: `projects/AuthKit.json` disposition `AFFIRM` with `canonical_routing: true`; `q20260718-AuthKit` row `fsm: live` ("canonical hub kept alive"). Supersedes Authvault; superseded_by: none. Neighbor surfaces: `libs/auth-ts` and the absorbed `phenotype-auth-ts` (ECOSYSTEM_MAP note 2026-06-18). `ECOSYSTEM_MAP.md` currently lists AuthKit under **SDK** while also naming it in the superseded/archived row — contradiction tracked for the A4.4 consistency pass.
+Canonical auth-runtime boundary: `projects/AuthKit.json` disposition `AFFIRM` with `canonical_routing: true`; `q20260718-AuthKit` row `fsm: live` ("canonical hub kept alive"). Supersedes Authvault (card `superseded_by: null`) — but two registry records run the other way: `registry/disposition-index.json:1381` records `resolved 2026-07-17: AuthKit source absorbed into Authvault per SupSUPERSEDE-2026-06-20. Source repo archived.`, and `ECOSYSTEM_MAP.md:347` routes the Rust core to **Authvault** ("Python → `packages/auth-kit/python`; Rust core → **Authvault**"). Both counter-records are carried in the CVP; the supersession direction is an Open Question, not settled fact. Neighbor surfaces: `libs/auth-ts` (recorded GitHub-404 in `.kilo/audits/org-absorption-2026-06-18.md:121,265`) and the absorbed `phenotype-auth-ts` (ECOSYSTEM_MAP note 2026-06-18). `ECOSYSTEM_MAP.md` currently lists AuthKit under **SDK** while also naming it in the superseded/archived row — contradiction tracked for the A4.4 consistency pass.
 
 ## Open Questions
 
 - **GitHub reachability**: `KooshaPari/AuthKit` returns 404 (checked 2026-09-27 via `gh api` + `git ls-remote` with a full-repo-scope token) while the registry marks the repo canonical and a local mirror (last commit 2026-08-24, `chore: add genuine files + scorecard CI`) survives. Deleted, made private, or renamed — reconcile before the next boundary review.
-- **GAP-009 / GAP-010 migration** from Authvault (RS256/ES256 alg-confusion defense + middleware adapter docs) — schedule or explicitly defer.
-- **TypeScript surface ownership**: `AuthKit/typescript/packages/auth-ts` (ECOSYSTEM absorption note) vs `libs/auth-ts` — pick one canonical home.
-- **Card discrepancy**: `projects/AuthKit-2026-06-25.json` describes a "Go SDK + server / Large Go+proto codebase" while the actual tree is a Rust workspace — correct or merge the cards.
+- **GAP-009 (rate-limiting) gap**: the card's `absorption_note` mislabeled GAP-009 as the RS256/ES256 work — per the definition table (`archives/zz-archive-phenotype-registry/patches/authkit-absorption.patch:1817-1820`), GAP-007 (RS256/ES256 → FR-AUTHV-017) and GAP-010 (middleware adapter) are SHIPPED, while GAP-009 (rate-limiting on failed auth attempts) is PLANNED. Card corrected this round; schedule the rate-limiting gap or explicitly defer.
+- **TypeScript surface ownership**: `AuthKit/typescript/packages/auth-ts` (ECOSYSTEM absorption note) vs `libs/auth-ts` — the latter is recorded GitHub-404 (`.kilo/audits/org-absorption-2026-06-18.md:121,265`); establish it exists, then pick one canonical home.
+- **Card collision (do not merge)**: `projects/AuthKit-2026-06-25.json` = 25,149 KB Go repo created 2025-04-18 (8 branches; audit Go | 91%) vs `projects/AuthKit.json` = 17 KB Rust crate created 2026-06-24 (1 branch) — two different repos sharing one `gh_url`. Reconcile the collision (which is canonical, what happened to the other, why both carry the same path); merging would collapse the Go repo's record into the Rust crate's. Mirrored at `docs/cvp/AuthKit.md` Open Questions.
 
 ## Change Log
 
-| Date       | Change                                                                                              | Worklog                                                    |
-| ---------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 2026-06-17 | Initial binding (L7-001 sweep)                                                                      | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
-| 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AuthKit.md`) | PHENOREG-FORWARD-WBS A3.1 / C3.3                           |
-| 2026-09-27 | Review fixes: authentication-only boundary wording (services own authorization policy)              | PR #585 review round                                       |
+| Date       | Change                                                                                                                                                | Worklog                                                    |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| 2026-06-17 | Initial binding (L7-001 sweep)                                                                                                                        | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
+| 2026-09-27 | Intent statement, ecosystem role, and open questions filled (authored triad: `docs/cvp/AuthKit.md`)                                                   | PHENOREG-FORWARD-WBS A3.1 / C3.3                           |
+| 2026-09-27 | Review fixes: authentication-only boundary wording (services own authorization policy)                                                                | PR #585 review round                                       |
+| 2026-09-27 | Kilo round 2: supersession counter-records added (disposition `:1381`, ECOSYSTEM_MAP `:347`), GAP-009 corrected, card collision replaces merge advice | PR #585 review round                                       |
