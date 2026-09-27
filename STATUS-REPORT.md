@@ -170,7 +170,7 @@ Local `main` HEAD: `ea31bc43` — `docs: LOCAL_WORKSTATION.md and H14-H17 hygien
 
 ---
 
-## 4. Outstanding Human-Judgment Tasks
+## 4. Outstanding Human-Judgment Tasks (as-of 2026-06-18/19 — historical state)
 
 These require human review or coordinated pushes that the L7 sweep is explicitly not allowed to perform unattended.
 
@@ -210,7 +210,7 @@ These require human review or coordinated pushes that the L7 sweep is explicitly
 
 ---
 
-## 5. Next 3 Actionable Items
+## 5. Next 3 Actionable Items (as-of 2026-06-18/19 — historical state)
 
 In priority order. Each item is sized for the macbook (`device: macbook` per worklog v2.1).
 
@@ -258,6 +258,11 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
 - **Local main is behind remote main.** Local HEAD `ea31bc43` (PR #174); remote HEAD `65cca990` (PR #198). Pull or rebase before any `main` push.
 - **Working tree has uncommitted boundary files.** 100+ `A docs/boundary/<repo>.md` entries are staged. These are likely the L7-002 collision-resolution wave that was not committed before the L7-003 worktree shift. Either commit and push on the orphan branch, or `git restore --staged docs/boundary/` if they are duplicates.
 - **Subagent model in effect.** Per L7-003 2026-06-19 status block: "manager delegates work to task/forge subagents, audits only". This report is consistent with that model — synthesis only, no code edits, no pushes.
+- **Imperative items (§4, §5):** written at authoring time against June
+  SHAs; re-derive every step against current SHAs before acting — in
+  particular the §5 Item 1 cherry-pick range is keyed to two June commits
+  that no longer describe the repo's divergence. §1.4 is a labelled
+  snapshot block and is likewise historical.
 - **Commit/push state:** at authoring time this report was not committed or
   pushed (a synthesis artifact for the user); it was later committed as an
   archival snapshot under the retention decision in the banner. The §3 branch
