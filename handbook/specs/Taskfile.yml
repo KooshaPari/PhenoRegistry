@@ -221,7 +221,7 @@ tasks:
   clean:
     desc: Remove generated build, test, and cache artifacts
     cmds:
-      - rm -rf node_modules docs/.vitepress/dist docs/.vitepress/cache \        docs/.vitepress/.temp coverage .turbo .task .pytest_cache .ruff_cache \        dist build target *.tsbuildinfo
+      - rm -rf node_modules docs/.vitepress/dist docs/.vitepress/cache docs/.vitepress/.temp coverage .turbo .task .pytest_cache .ruff_cache dist build target *.tsbuildinfo
   coverage:
     desc: 'Measure code coverage (SSOT: see grade.sh for the canonical command).'
     cmds:
