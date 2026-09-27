@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vitepress build docs",
+    "check": "bash ./scripts/conventions-lint.sh .",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
