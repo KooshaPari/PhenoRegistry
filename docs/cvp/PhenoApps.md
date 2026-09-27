@@ -57,8 +57,10 @@ The PhenoApps CVP is **a verifier who can**:
   required scope from disposition rows, each with its row state: `conft`
   (`repo-Conft`, `fsm: live`), `apisync` (`repo-Apisync-batch4` `fsm: live`;
   `repo-Apisync` ABSORB absorbed), `tracera` (row id=922,
-  `disposition: TOO_LARGE_RETIRE` + `fsm: live` (`disposition-index.json:6478-6479`),
-  `target: phenotype-apps (apps/tracera/)` — newly accounted this round), plus
+  `disposition: TOO_LARGE_RETIRE` (`:6076`) + `fsm: live` (`:6077`), note
+  `[FIXED 2026-07-19: done->live, canonical disposition]` (`:6081`),
+  `target: phenotype-apps (apps/tracera/)` (`:6084`) — newly accounted this
+  round), plus
   target-of-record `tracely` (rows id=59/id=918, `fsm: deleted`) and `subject`
   (`FINAL-subject-app`, `fsm: archived`, resolved 2026-07-18). **Excluded from
   required scope** (disposition/card evidence): `helios-app` [no `apps/*`
@@ -88,9 +90,13 @@ The PhenoApps CVP is **a verifier who can**:
 
   > **Verification gate (UNRESOLVED — source branches deleted, decision
   > pending):** tree-level diff captured 2026-09-27 (Git Trees API, before
-  > deletion): parent `be419459` root held the full monorepo incl. `apps/`
-  > (16,868 files: `.github, apisync, conft, helios-app, ios, tracely,
-web`); the pivot commit’s root holds exactly one entry — `archive/`
+  > deletion): parent `be419459` **root** held the full monorepo incl.
+  > `apps/`; the recorded **`apps/` children list** (previously conflated
+  > with the root in this sentence) = `.github, apisync, conft, helios-app,
+ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
+  > omits required-scope children `tracera`, `subject`, `phenoData` (landed
+  > later or elsewhere in the tree; not re-verifiable post-deletion). The
+  > pivot commit’s root holds exactly one entry — `archive/`
   > (containing only `FocalPoint`). All of `apps/` was **deleted from that
   > tree**, not relocated under `archive/` (subtree-sha match: none).
   > Recorded children then verified on `absorb-sessionledger` +

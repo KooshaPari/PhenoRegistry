@@ -55,6 +55,6 @@ out_of_scope:
 - Standalone repository recorded as retired; capability lives in `agentmcp-hex` (own triad exists).
 - Port-name claims removed from this triad (2026-09-27 review round): package records scope a hex-grid testing harness; whether MCP client ports survived is an Open Question, not an in-scope fact.
 - Agentora pattern target recorded as red/unreachable pending disposition reconciliation.
-- Frontmatter role set to `extracted-python-package` (kilo round 2, 2026-09-27): it replaces an earlier `absorbed-mcp-client-hub` draft — both that draft and the current value were killed by the same review round (the capability the role names is marked unresolved above), so the file's operative role value is `absorbed-mcp-client-hub` per the governance script, with this line recording why neither form asserts verified fact.
+- Frontmatter role set to `extracted-python-package` (kilo round 2, 2026-09-27). It replaces an earlier `absorbed-mcp-client-hub` value that only ever existed in this PR's uncommitted intermediate state (committed base at `976f30c` had `role: unknown`) — recorded here so a future reader does not hunt for a revert on `main`; the capability such a role name would assert is marked unresolved above.
 
 **Next review:** 2026-10-27

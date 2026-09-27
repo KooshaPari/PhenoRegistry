@@ -49,7 +49,7 @@ out_of_scope:
   spines. (The card’s `rationale` labels this “ADR-023”, but the ADR-023
   **source file** (`docs/adr/2026-06-15/ADR-023-agent-effort-governance.md`)
   is absent — `docs/adr/` holds ADR-004..007 only; the label maps to
-  agent-effort governance via `docs/monorepo-state/AGENTS.md:119`, while
+  agent-effort governance via `docs/monorepo-state/AGENTS.md:119` (and `:169` = the app-level triage / app-substrate section under that ADR), while
   `docs/adrs/ADR-ECO-023-sdk-consolidation.md` is SDK consolidation — pointer
   gap tracked as an Open Question in `docs/cvp/PhenoApps.md`.)
 - **Preservation**: local recovery ref
