@@ -6,8 +6,8 @@ status: active
 last_boundary_review: 2026-09-27
 review_cadence: 30d
 in_scope:
-  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), testing-kit (id=912 TOO_LARGE_RETIRE, fsm live, target phenotype-apps (apps/testing-kit/), content absorbed into its apps submodule), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row)"
-  - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row and lives in its own archived repo; shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
+  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), testing-kit (id=912 TOO_LARGE_RETIRE, fsm live, target phenotype-apps (apps/testing-kit/), content absorbed into its apps submodule — row/card conflict: scope UNRESOLVED pending reconciliation), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row)"
+  - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row; live gh api probe 2026-09-27 reports archived: true (no in-repo record otherwise); shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
   - "application-collection policy enforcement per card absorption_note (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
 out_of_scope:
@@ -33,7 +33,7 @@ out_of_scope:
   **absent** — and `subject` (`:5228-5241`) cites no artifact at all: recorded
   as registry data gaps, not silently claimed). `phenoData` is **excluded**
   with row evidence: `repo-phenoData` (`:2830-2833`, `fsm: live` `:2827`,
-  `target: pheno (crates/pheno-data-*)`, `absorbed_at: 2026-07-18`) — the
+  `target: pheno (crates/pheno-data-*)`, `absorbed_at: 2026-07-18` `:2817`, row also `absorbed_on: 2026-07-17` `:2819`) — the
   source content's canonical home is the `pheno` crates; the mirror
   (`docs/absorption/phenoData/ACTIVE_SOURCE_REVALIDATION_20260807.md:12,23-25`,
   identical blob SHAs at the cited preservation sha) is revalidation

@@ -19,10 +19,11 @@ BLOCK-A application lives at `apps/<name>` behind an explicit child boundary,
 arriving only through a verifiable lift — source lift, build verification,
 and a named audit artifact — and the parent **never absorbs runtime,
 governance, or library spines** (those stay in their own canonical repos).
-The parent's second duty is retirement custody: the default branch
-(`apps-extract`) is the fleet's sunset shelf where retired, paused, and
-archived apps are kept labeled and bounded (`archive/`), while `main` retains
-the legacy monorepo content until it is explicitly sorted. If you swap
+The parent's second duty was retirement custody: at the recorded 2026-09
+pivot the default branch (`apps-extract`) was the fleet's sunset shelf where
+retired, paused, and archived apps were kept labeled and bounded (`archive/`),
+while `main` held the legacy monorepo content. That branch was deleted
+2026-09-27; the current shelf location is unresolved. If you swap
 PhenoApps out, the fleet loses the one place where absorbed apps and retired
 apps are provably accounted for instead of silently scattered.
 
@@ -58,11 +59,13 @@ there as “ADR-023”; pointer gap in Open Questions).
 GitHub: `KooshaPari/PhenoApps` (renamed from `phenotype-apps`), default
 branch `apps-extract` (recorded pre-deletion — branch deleted 2026-09-27,
 current default unverified), not archived, last push 2026-09-18. 14
-occurrences of `target: phenotype-apps (apps/<name>/)` across 9
-disposition-index rows (tracely ×2 and conft ×2 one row each, apisync ×4
-across **two** rows — `repo-Apisync-batch4` + `repo-Apisync` — subject ×2,
-melosviz ×2, testing-kit, tracera; plus exactly 196 rows targeting bare
-`phenotype-apps`).
+occurrences of `phenotype-apps (apps/<name>/)` across 9 disposition-index
+rows — 9 as `target:` fields, 5 as `absorbed_into:` (`:2354` conft,
+`:2588`/`:4730` apisync, `:5229` subject, `:5257` melosviz) — (tracely ×2 on
+**two** rows id=59 `:1068` + id=918 `:6032`; conft ×2 the only one-row pair;
+apisync ×4 across **two** rows — `repo-Apisync-batch4` + `repo-Apisync`;
+subject ×2 and melosviz ×2 one of each kind; testing-kit; tracera; plus
+exactly 196 rows targeting bare `phenotype-apps`).
 
 ## Open Questions
 
@@ -90,3 +93,4 @@ melosviz ×2, testing-kit, tracera; plus exactly 196 rows targeting bare
 | 2026-09-27 | Initial binding — first intent doc for this repo (authored triad, WBS A3.3)                                                                                                                                                                                | `docs/cvp/PhenoApps.md`   |
 | 2026-09-27 | Kilo round 2: ADR-023 re-attributed to the card (+ pointer-gap OQ), children question answered, row count corrected, `device: windows` annotated                                                                                                           | PR #585 review round      |
 | 2026-09-27 | Kilo round 3: gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z; commits 422), row-coverage arithmetic fixed (apisync spans two rows; 196 exact), ADR-023 cite path qualified, `device:` comment cites the define-the-vocabulary lines | PR #584/#585 review round |
+| 2026-09-27 | Kilo round 4: shelf statement past-tense + current location unresolved; arithmetic split into 9 `target` + 5 `absorbed_into` fields with tracely on two rows (id=59/918), conft named the only one-row pair                                                | PR #584 review round      |

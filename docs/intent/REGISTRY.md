@@ -4,13 +4,18 @@ This index is the master list of every repo bound to a `docs/intent/<repo>.md` a
 
 > **L7-001 sweep — 2026-06-17:** 45,091 curated records bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
 >
-> **CVP triad registration — 2026-09-27:** the same sweep's 82-repo population
-> counts bindings only. The `AuthKit` / `AgentMCP` / `PhenoApps` CVP triads
-> (`docs/cvp/` + `docs/intent/` + `docs/boundary/`, PR #585) are authored
-> curation with zero bindings, so they are indexed in `docs/cvp/README.md`
-> and deliberately absent from this sweep table — the two counts are
-> different populations, not a discrepancy (heading below = rows in this
-> table).
+> **CVP triad registration — 2026-09-27:** the `AuthKit` / `AgentMCP` /
+> `PhenoApps` CVP triads (`docs/cvp/` + `docs/intent/` + `docs/boundary/`,
+> PR #585) are authored curation with zero bindings: they are indexed in
+> `docs/cvp/README.md` and are absent from this table entirely — they explain
+> nothing about the count gap below.
+>
+> **82 vs 86 — open reconciliation:** the L7-001 sweep line above binds 82
+> repos (2026-06-17); the heading below reads 86 rows, and all 86 carry
+> `First seen 2025-08`, so the 4-row delta is not derivable from this table.
+> Reconcile by diffing the sweep's input repo list against the table (or
+> re-running L7-001); until then both numbers stand as recorded for their
+> respective populations (sweep-bound vs table rows).
 
 ## Canonical bound repos (86)
 

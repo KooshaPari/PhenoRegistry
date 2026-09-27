@@ -22,10 +22,12 @@ child with explicit child-level boundaries and lift provenance — source lift,
 build verification, and an audit artifact for each absorbed app. The thing it
 does that no other fleet repo does is **hold absorbed apps without ever
 absorbing spines**: runtimes, governance, and libraries stay in their own
-repos; this one is only applications. As of the 2026-09 sunset pivot its
-default branch (`apps-extract`) presents as a **"Sunset shelf: retired,
-paused, and archived app repos"** while `main` retains the large legacy Go
-monorepo — the identity is the _parent_, the shelf is the current face of it.
+repos; this one is only applications. At the 2026-09 sunset pivot its
+default branch (`apps-extract`) presented as a **"Sunset shelf: retired,
+paused, and archived app repos"** while `main` retained the large legacy Go
+monorepo — the identity is the _parent_, and at that recorded moment the shelf
+was the face of it. That branch has since been deleted (2026-09-27); the current
+shelf location is unresolved (gate below).
 
 ## Closest Viable Product
 
@@ -73,10 +75,13 @@ The PhenoApps CVP is **a verifier who can**:
   evidence only], `testing-kit` [row id=912 `TOO_LARGE_RETIRE`, `fsm: live`,
   target `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into
   its apps submodule); card: retired into
-  `phenotype-python-sdk/packages/testing-kit`]. `phenoData` is **excluded with
+  `phenotype-python-sdk/packages/testing-kit` — row and card conflict (live
+  registry target vs retired card), so `testing-kit` scope is **UNRESOLVED
+  pending reconciliation** (Open Questions below), not excluded]. `phenoData` is **excluded with
   row evidence**: `repo-phenoData` (`disposition-index.json:2830-2833`,
   `fsm: live` `:2827`) targets `pheno (crates/pheno-data-*)` with
-  `absorbed_at: 2026-07-18`, and its row cites
+  `absorbed_at: 2026-07-18` (`:2817`; the row also carries
+  `absorbed_on: 2026-07-17` `:2819` — two fields, both dates as recorded), and its row cites
   `audits/absorption-justifications/phenoData-2026-07-17.md` (`:2822` —
   **absent on disk**: registry data gap) — the source content's canonical home
   is the `pheno` crates; the mirror revalidation
@@ -94,7 +99,8 @@ The PhenoApps CVP is **a verifier who can**:
   > `apps/`; the recorded **`apps/` children list** (previously conflated
   > with the root in this sentence) = `.github, apisync, conft, helios-app,
 ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
-  > omits required-scope children `tracera`, `subject`, `phenoData` (landed
+  > omits required-scope children `tracera` and `subject` (phenoData is
+  > excluded per row evidence above, not required scope; all three landed
   > later or elsewhere in the tree; not re-verifiable post-deletion). The
   > pivot commit’s root holds exactly one entry — `archive/`
   > (containing only `FocalPoint`). All of `apps/` was **deleted from that
@@ -116,7 +122,9 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
 - **`archive/` shelf** for retired/paused/archived content — pivot-tree
   contents: `FocalPoint` only; current home unresolved (shelf branches
   deleted 2026-09-27 — gate below). `PhenoInfra` dropped from this claim: no
-  disposition row exists for it, and it lives in its own archived repo.
+  disposition row exists for it, and a live
+  `gh api repos/KooshaPari/PhenoInfra` probe (2026-09-27) reports
+  `archived: true` — no in-repo record of the archive otherwise.
 - **Application-collection policy stated and enforced in the card**:
   boundaries explicit per child; no absorption of unrelated runtime,
   governance, or library spines (`projects/phenotype-apps.json`
@@ -151,10 +159,13 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
   `pushed_at: 2026-09-18`, default branch `apps-extract` (recorded before that
   branch's deletion on 2026-09-27 — current default branch unverified).
   Registry `gh_url`
-  and the `target: phenotype-apps (apps/...)` strings (14 occurrences across 9
-  rows: tracely ×2 and conft ×2 each on one row, apisync ×4 across **two**
-  rows — `repo-Apisync-batch4` and `repo-Apisync`, two fields each — subject
-  ×2, melosviz ×2, testing-kit, tracera; exactly 196 further rows target bare
+  and the `phenotype-apps (apps/<name>/)` strings (14 occurrences across 9
+  rows: 9 are `target:` fields, 5 are `absorbed_into:` (`:2354` conft,
+  `:2588`/`:4730` apisync, `:5229` subject, `:5257` melosviz) — tracely ×2 on
+  **two** rows (id=59 `:1068`, id=918 `:6032`), conft ×2 the only pair on one
+  row, apisync ×4 across **two** rows
+  — `repo-Apisync-batch4` and `repo-Apisync`, two fields each — subject
+  ×2 and melosviz ×2 one field of each kind, testing-kit, tracera; exactly 196 further rows target bare
   `phenotype-apps`) still use the old
   name (rename redirects keep old links working; the strings are stale).
 - **Default branch root was `archive/` only** (1 dir, 0 files at root;
@@ -191,6 +202,11 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
   them), then (2) restore `apps/` on the default branch or scope children to
   the recovered branches (maintainer USER-DECISION). Gate in “In CVP” stays
   UNRESOLVED until both clear.
+- **`testing-kit` scope unresolved**: row id=912 says `TOO_LARGE_RETIRE` /
+  `fsm: live` with `target: phenotype-apps (apps/testing-kit/)` while the
+  card records retirement into `phenotype-python-sdk/packages/testing-kit`.
+  Until row and card are reconciled, `testing-kit` is neither confirmed
+  required-scope nor confirmed excluded (maintainer call).
 - **Where is the application-collection ADR-023?** The card’s `rationale`
   cites “ADR-023 application-collection policy”, but `docs/adr/` holds only
   ADR-004..007, `docs/adrs/ADR-ECO-023-sdk-consolidation.md` is an SDK-
@@ -222,9 +238,10 @@ effort-governance.md`, not present here). The policy text itself lives in
 
 ## Change Log
 
-| Date       | Change                                                                                                                                                                                                                                                                                                                    | Worklog                   |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| 2026-09-27 | Initial CVP + first intent/boundary pair for this repo (WBS A3.3); rename + sunset-pivot recorded                                                                                                                                                                                                                         | PHENOREG-FORWARD-WBS A3   |
-| 2026-09-27 | Review fixes: exclusions split from required children; verification gate (CVP UNRESOLVED); typo fix                                                                                                                                                                                                                       | PR #585 review round      |
-| 2026-09-27 | Kilo round 2: gate evidence completed (tree diff — `apps/` deleted, restore source = `absorb-*` branches), required/excluded children re-derived from row states (+tracera, −helios-app, phenoData gap), row-901 same-repo correction, ADR-023 citations re-attributed to the card                                        | PR #585 review round      |
-| 2026-09-27 | Kilo round 3: shelf claim narrowed (FocalPoint only; PhenoInfra no row), gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z, commits 422), phenoData given row evidence + moved to excluded, apisync two-row arithmetic + 196 exact, catalog-status divergence OQ (sync_catalog.py reverts hand flips) | PR #584/#585 review round |
+| Date       | Change                                                                                                                                                                                                                                                                                                                                                                                                    | Worklog                   |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 2026-09-27 | Initial CVP + first intent/boundary pair for this repo (WBS A3.3); rename + sunset-pivot recorded                                                                                                                                                                                                                                                                                                         | PHENOREG-FORWARD-WBS A3   |
+| 2026-09-27 | Review fixes: exclusions split from required children; verification gate (CVP UNRESOLVED); typo fix                                                                                                                                                                                                                                                                                                       | PR #585 review round      |
+| 2026-09-27 | Kilo round 2: gate evidence completed (tree diff — `apps/` deleted, restore source = `absorb-*` branches), required/excluded children re-derived from row states (+tracera, −helios-app, phenoData gap), row-901 same-repo correction, ADR-023 citations re-attributed to the card                                                                                                                        | PR #585 review round      |
+| 2026-09-27 | Kilo round 3: shelf claim narrowed (FocalPoint only; PhenoInfra no row), gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z, commits 422), phenoData given row evidence + moved to excluded, apisync two-row arithmetic + 196 exact, catalog-status divergence OQ (sync_catalog.py reverts hand flips)                                                                                 | PR #584/#585 review round |
+| 2026-09-27 | Kilo/CR round 4: shelf statement past-tense + unresolved (CR), testing-kit marked scope UNRESOLVED pending row/card reconciliation (CR), `absorbed_at` cite `:2817` + `absorbed_on` cross-note, PhenoInfra archived claim → dated live probe, 14-string arithmetic split (9 `target` + 5 `absorbed_into`; tracely rows id=59/918), caveat drops phenoData from required scope, REGISTRY 82-vs-86 restated | PR #584 review round      |
