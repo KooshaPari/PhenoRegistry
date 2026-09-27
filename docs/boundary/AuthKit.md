@@ -38,13 +38,13 @@ out_of_scope:
 
 ## Boundary Crossings
 
-| Crossing                                | Direction               | Surface             | Status                                                              |
-| --------------------------------------- | ----------------------- | ------------------- | ------------------------------------------------------------------- |
-| `enforce_pkce_state_session` middleware | AuthKit → PhenoServices | tower Layer/Service | green                                                               |
-| `SessionStore` port                     | PhenoServices → AuthKit | Rust trait          | green (in-memory impl)                                              |
-| Authvault GAP-009 rate-limiting gap     | Authvault → AuthKit     | code migration      | amber (GAP-009 planned; GAP-007/010 shipped)                        |
-| OIDC/JWKS config ingestion              | IdP → AuthKit           | HTTP (post-CVP)     | red (not yet implemented)                                           |
-| TS surface (`auth-ts`) parity           | AuthKit ↔ libs/auth-ts | package dependency  | amber (`libs/auth-ts` recorded 404 — establish target exists first) |
+| Crossing                                | Direction               | Surface             | Status                                                                                                                                                                         |
+| --------------------------------------- | ----------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `enforce_pkce_state_session` middleware | AuthKit → PhenoServices | tower Layer/Service | amber (unverified local mirror — no run artifact: CI unconfigured, GitHub 404; card `ci_state` = `newly-created; CI not yet configured (SOTA-001 unit)`)                       |
+| `SessionStore` port                     | PhenoServices → AuthKit | Rust trait          | amber (unverified local mirror — no run artifact: CI unconfigured, GitHub 404)                                                                                                 |
+| Authvault GAP-009 rate-limiting gap     | Authvault → AuthKit     | code migration      | amber — **RISK-ACCEPTED 2026-09-27** (owner: Authvault main; re-review 2026-10-27; interim: no brute-force protection on verifier/state/bearer endpoints; GAP-007/010 shipped) |
+| OIDC/JWKS config ingestion              | IdP → AuthKit           | HTTP (post-CVP)     | red (not yet implemented)                                                                                                                                                      |
+| TS surface (`auth-ts`) parity           | AuthKit ↔ libs/auth-ts | package dependency  | amber (`libs/auth-ts` recorded 404 — establish target exists first)                                                                                                            |
 
 ## Last Boundary Review
 

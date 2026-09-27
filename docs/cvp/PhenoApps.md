@@ -31,8 +31,14 @@ monorepo — the identity is the _parent_, the shelf is the current face of it.
 
 The PhenoApps CVP is **a verifier who can**:
 
-1. Open the default branch and reach `archive/` (today: `FocalPoint`,
-   `PhenoInfra`) — retired content is present, labeled, and bounded.
+1. Open the shelf and reach `archive/` — retired content present, labeled,
+   and bounded. **Shelf state captured 2026-09-27 (Git Trees diff of the
+   pivot):** `archive/` held **`FocalPoint` only**; `PhenoInfra` has no
+   disposition row anywhere in `registry/disposition-index.json` and lives in
+   its own archived repo. The shelf branch itself was then deleted (enumeration
+   of 37 branches as of 22:04Z holds no archive holder; `main-focalpoint-archive`
+   and `apps-extract` both gone), so verifier step 1 now begins with locating
+   the shelf's current home (blocked — gate below).
 2. Trace any absorbed app cited by the registry (for example
    `apps/tracely/`, lifted 2026-07-17 with cargo-check verification and audit
    artifact `audits/absorption-justifications/Tracely-2026-07-17.md`) back to
@@ -50,7 +56,8 @@ The PhenoApps CVP is **a verifier who can**:
 - **`apps/<name>` children with provenance** for absorbed BLOCK-A apps —
   required scope from disposition rows, each with its row state: `conft`
   (`repo-Conft`, `fsm: live`), `apisync` (`repo-Apisync-batch4` `fsm: live`;
-  `repo-Apisync` ABSORB absorbed), `tracera` (row id=922, `fsm: live`,
+  `repo-Apisync` ABSORB absorbed), `tracera` (row id=922,
+  `disposition: TOO_LARGE_RETIRE` + `fsm: live` (`disposition-index.json:6478-6479`),
   `target: phenotype-apps (apps/tracera/)` — newly accounted this round), plus
   target-of-record `tracely` (rows id=59/id=918, `fsm: deleted`) and `subject`
   (`FINAL-subject-app`, `fsm: archived`, resolved 2026-07-18). **Excluded from
@@ -61,33 +68,49 @@ The PhenoApps CVP is **a verifier who can**:
   `phenotype-python-sdk/packages/data-kit`], `planify` [rejected — extract-
   only recommendation, ARCHIVE_ONLY], `melosviz` [card: independent
   application boundary; `FINAL-Melosviz` archived 2026-07-18 = historical
-  evidence only], `testing-kit` [row id=912 `TOO_LARGE_RETIRE`; card: retired
-  into `phenotype-python-sdk/packages/testing-kit`]. A sixth child,
-  `phenoData`, is evidenced by mirror revalidation
-  (`docs/absorption/phenoData/ACTIVE_SOURCE_REVALIDATION_20260807.md:12,23-25`
-  — identical blob SHAs at the preservation sha) but has no disposition row —
-  data gap recorded at the boundary (see `docs/boundary/PhenoApps.md`).
+  evidence only], `testing-kit` [row id=912 `TOO_LARGE_RETIRE`, `fsm: live`,
+  target `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into
+  its apps submodule); card: retired into
+  `phenotype-python-sdk/packages/testing-kit`]. `phenoData` is **excluded with
+  row evidence**: `repo-phenoData` (`disposition-index.json:2830-2833`,
+  `fsm: live` `:2827`) targets `pheno (crates/pheno-data-*)` with
+  `absorbed_at: 2026-07-18`, and its row cites
+  `audits/absorption-justifications/phenoData-2026-07-17.md` (`:2822` —
+  **absent on disk**: registry data gap) — the source content's canonical home
+  is the `pheno` crates; the mirror revalidation
+  (`docs/absorption/phenoData/ACTIVE_SOURCE_REVALIDATION_20260807.md:12,23-25`)
+  is mirror evidence, not an unclassified child. What does not exist is a row
+  targeting `apps/phenoData` (earlier "no disposition row" wording corrected
+  this round — see Open Questions).
 - **`apps/<name>` tree location proven** — the verification gate below:
   child paths after the 2026-09-16 pivot must be located before this CVP
   counts as met.
 
-  > **Verification gate (UNRESOLVED — evidence complete, decision pending):**
-  > the tree-level diff of `355016f8` (Git Trees API, 2026-09-27) answers
-  > “deleted or moved”: parent `be419459` root held the full monorepo incl.
-  > `apps/` (16,868 files: `.github, apisync, conft, helios-app, ios, tracely,
+  > **Verification gate (UNRESOLVED — source branches deleted, decision
+  > pending):** tree-level diff captured 2026-09-27 (Git Trees API, before
+  > deletion): parent `be419459` root held the full monorepo incl. `apps/`
+  > (16,868 files: `.github, apisync, conft, helios-app, ios, tracely,
 web`); the pivot commit’s root holds exactly one entry — `archive/`
   > (containing only `FocalPoint`). All of `apps/` was **deleted from that
-  > tree**, not relocated under `archive/` (subtree-sha match: none). The
-  > children survive intact on branches `absorb-sessionledger` and
-  > `absorb-researchledger` (verified via `contents/apps?ref=…`) and in
-  > history (`be419459`); neither `apps-extract` (default) nor `main` has an
-  > `apps/` directory. Remaining blocker = maintainer USER-DECISION: restore
-  > `apps/` on the default branch from `absorb-*`, or scope children to those
-  > branches. Verifier journey steps 2-3 stay uncheckable on the default
-  > branches until then.
+  > tree**, not relocated under `archive/` (subtree-sha match: none).
+  > Recorded children then verified on `absorb-sessionledger` +
+  > `absorb-researchledger` (via `contents/apps?ref=…`) and in history
+  > (`be419459`); neither `apps-extract` (default) nor `main` held an
+  > `apps/` directory. **Update 2026-09-27 22:04Z:** those holder branches
+  > (`absorb-sessionledger`, `absorb-researchledger`,
+  > `main-focalpoint-archive`, `apps-extract`) have been **deleted**, and
+  > both pivot commits now return HTTP 422 on the commits API (unreachable) —
+  > the tree evidence above was captured pre-deletion and is no longer
+  > re-runnable from live refs. Two blockers now stand: (1) locate or
+  > recreate the restore source (re-derive from a clone that still has
+  > `absorb-*`, or restore the branches), and (2) maintainer USER-DECISION —
+  > restore `apps/` on the default branch or scope children to the recovered
+  > branches. Verifier steps 2-3 stay uncheckable until both clear.
 
-- **`archive/` shelf** on the default branch for retired/paused/archived
-  content (`FocalPoint`, `PhenoInfra`).
+- **`archive/` shelf** for retired/paused/archived content — pivot-tree
+  contents: `FocalPoint` only; current home unresolved (shelf branches
+  deleted 2026-09-27 — gate below). `PhenoInfra` dropped from this claim: no
+  disposition row exists for it, and it lives in its own archived repo.
 - **Application-collection policy stated and enforced in the card**:
   boundaries explicit per child; no absorption of unrelated runtime,
   governance, or library spines (`projects/phenotype-apps.json`
@@ -113,18 +136,24 @@ web`); the pivot commit’s root holds exactly one entry — `archive/`
 | Planify `upstream/` Plane fork                                                               | `upstream/` subtree (AGPL, DO NOT MODIFY) | Only Phenotype-specific layers may ever be extracted.                                                                                                                                                                                  |
 | Superseded classification of this very repo (row id=901, `KooshaPari/phenotype-apps`, 1.7GB) | `_retire/phenotype-apps/` shelf           | Same repository, not a foreign artifact: `disposition: B:WORKING` / `fsm: archived`, note carries `[TOO_INCOMPLETE_RETIRE 2026-07-17 per ADR-007 §3]`, `resolved_at: 2026-07-18` — direct evidence for the sunset-shelf Open Question. |
 | Archived source repos' products                                                              | their own archived/deleted repos          | The parent stores the _lifted content_, not the repo lifecycle.                                                                                                                                                                        |
-| FocalPoint / PhenoInfra products                                                             | `archive/` (content only)                 | Those repos are archived; the shelf keeps history, not a live product.                                                                                                                                                                 |
+| FocalPoint products                                                                          | `archive/` (content only)                 | FocalPoint is archived and was shelf-held at the pivot (tree evidence); PhenoInfra dropped from this claim — no disposition row, its own archived repo.                                                                                |
 
 ## Registry reality (as of 2026-09-27)
 
 - **Renamed**: `gh api repos/KooshaPari/phenotype-apps` resolves to
   `full_name: KooshaPari/PhenoApps`, `name: PhenoApps`, `archived: false`,
-  `pushed_at: 2026-09-18`, default branch `apps-extract`. Registry `gh_url`
+  `pushed_at: 2026-09-18`, default branch `apps-extract` (recorded before that
+  branch's deletion on 2026-09-27 — current default branch unverified).
+  Registry `gh_url`
   and the `target: phenotype-apps (apps/...)` strings (14 occurrences across 9
-  rows: tracely ×2, conft ×2, apisync ×4, subject ×2, melosviz ×2, testing-kit,
-  tracera; a further ~196 rows target bare `phenotype-apps`) still use the old
+  rows: tracely ×2 and conft ×2 each on one row, apisync ×4 across **two**
+  rows — `repo-Apisync-batch4` and `repo-Apisync`, two fields each — subject
+  ×2, melosviz ×2, testing-kit, tracera; exactly 196 further rows target bare
+  `phenotype-apps`) still use the old
   name (rename redirects keep old links working; the strings are stale).
-- **Default branch root is `archive/` only** (1 dir, 0 files at root);
+- **Default branch root was `archive/` only** (1 dir, 0 files at root;
+  recorded pre-deletion — `apps-extract` deleted 2026-09-27, current default
+  branch unverified);
   `main` holds a 126-entry legacy Go monorepo (`go.mod`, `cmd/`, `server/`,
   `services/`, `slm/`, …) with **no `apps/` directory**.
 - **`apps/` removed from the tree at the 2026-09-16 pivot** (commit
@@ -132,7 +161,10 @@ web`); the pivot commit’s root holds exactly one entry — `archive/`
   parent `be419459` shows the root reduced to `archive/` (FocalPoint only) —
   all 16,868 `apps/` files deleted from that tree, with no subtree-sha copy
   under `archive/`. Children verified present on `absorb-sessionledger` and
-  `absorb-researchledger`; absent from `apps-extract` and `main`. (The old
+  `absorb-researchledger`; absent from `apps-extract` and `main`. _(All four
+  branches named here were deleted 2026-09-27 after this capture; both commits
+  now return HTTP 422 on the commits API — evidence stands as a pre-deletion
+  capture, not re-runnable from live refs.)_ (The old
   “`files[]` truncated at 300 entries” limitation does not apply to the Trees
   API and is superseded by this diff.)
 - **Disposition**: `projects/phenotype-apps.json` =
@@ -142,12 +174,17 @@ web`); the pivot commit’s root holds exactly one entry — `archive/`
 
 ## Open Questions
 
-- **Verification gate — ANSWERED (2026-09-27); decision pending**: the tree
-  diff of `355016f8` shows `apps/<name>` was deleted from that branch’s tree
-  (not moved under `archive/`); children survive on `absorb-sessionledger` +
-  `absorb-researchledger` (and history `be419459`). Open decision: restore
-  `apps/` on the default branch or scope children to the `absorb-*` branches
-  (maintainer USER-DECISION; gate in “In CVP” stays UNRESOLVED until then).
+- **Verification gate — evidence captured, source branches deleted; decision
+  pending**: the pre-deletion tree diff of `355016f8` shows `apps/<name>`
+  deleted from that branch’s tree (not moved under `archive/`) with children
+  recorded on `absorb-sessionledger` + `absorb-researchledger` (and history
+  `be419459`); those branches — plus `main-focalpoint-archive`,
+  `apps-extract` — were deleted 2026-09-27 after the capture, and the pivot
+  commits return HTTP 422 (unreachable). Open decisions: (1) locate or
+  recreate the child-bearing branches (re-derive from a clone that still has
+  them), then (2) restore `apps/` on the default branch or scope children to
+  the recovered branches (maintainer USER-DECISION). Gate in “In CVP” stays
+  UNRESOLVED until both clear.
 - **Where is the application-collection ADR-023?** The card’s `rationale`
   cites “ADR-023 application-collection policy”, but `docs/adr/` holds only
   ADR-004..007, `docs/adrs/ADR-ECO-023-sdk-consolidation.md` is an SDK-
@@ -166,12 +203,22 @@ effort-governance.md`, not present here). The policy text itself lives in
   riding the redirect forever?
 - **`main` vs `apps-extract`**: which branch is authoritative for the
   legacy monorepo content (default branch is `apps-extract`, but `main`
-  holds the bulk)?
+  holds the bulk)? (`apps-extract` deleted 2026-09-27 — the question now
+  includes where the default branch went.)
+- **Catalog status vs card/GitHub (generator authority)**:
+  `catalog/registry.yaml` `phenotype-apps.status` stays `archived` because
+  `scripts/sync_catalog.py` regenerates it from frozen row id=901
+  (`fsm: archived`, `frozen: true`) — a hand flip to `active` (earlier in
+  this PR) is reverted on the next sync. The card (`KEEP_CANONICAL_PARENT`,
+  `status: active`) and GitHub (`archived: false`) disagree with the frozen
+  index; resolving needs the unfreeze decision. README + this CVP describe
+  card/GitHub reality; the catalog reflects the frozen index.
 
 ## Change Log
 
-| Date       | Change                                                                                                                                                                                                                                                                             | Worklog                 |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| 2026-09-27 | Initial CVP + first intent/boundary pair for this repo (WBS A3.3); rename + sunset-pivot recorded                                                                                                                                                                                  | PHENOREG-FORWARD-WBS A3 |
-| 2026-09-27 | Review fixes: exclusions split from required children; verification gate (CVP UNRESOLVED); typo fix                                                                                                                                                                                | PR #585 review round    |
-| 2026-09-27 | Kilo round 2: gate evidence completed (tree diff — `apps/` deleted, restore source = `absorb-*` branches), required/excluded children re-derived from row states (+tracera, −helios-app, phenoData gap), row-901 same-repo correction, ADR-023 citations re-attributed to the card | PR #585 review round    |
+| Date       | Change                                                                                                                                                                                                                                                                                                                    | Worklog                   |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 2026-09-27 | Initial CVP + first intent/boundary pair for this repo (WBS A3.3); rename + sunset-pivot recorded                                                                                                                                                                                                                         | PHENOREG-FORWARD-WBS A3   |
+| 2026-09-27 | Review fixes: exclusions split from required children; verification gate (CVP UNRESOLVED); typo fix                                                                                                                                                                                                                       | PR #585 review round      |
+| 2026-09-27 | Kilo round 2: gate evidence completed (tree diff — `apps/` deleted, restore source = `absorb-*` branches), required/excluded children re-derived from row states (+tracera, −helios-app, phenoData gap), row-901 same-repo correction, ADR-023 citations re-attributed to the card                                        | PR #585 review round      |
+| 2026-09-27 | Kilo round 3: shelf claim narrowed (FocalPoint only; PhenoInfra no row), gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z, commits 422), phenoData given row evidence + moved to excluded, apisync two-row arithmetic + 196 exact, catalog-status divergence OQ (sync_catalog.py reverts hand flips) | PR #584/#585 review round |

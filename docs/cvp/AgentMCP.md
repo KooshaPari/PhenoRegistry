@@ -56,9 +56,10 @@ the retirement of the standalone repo.
 - **Provenance chain**: disposition-index extraction row (source
   `McpKit/python/agentmcp/`, target package, PR reference) + the
   `agentmcp-hex` intent/boundary triad in the registry.
-- **Pattern hand-off documented**: which MCP patterns went to Agentora and
-  which stayed in the package (see Open Questions — Agentora is currently
-  unreachable).
+- **Pattern hand-off disposition recorded**: the conflicting registry records
+  over where MCP patterns live are enumerated and flagged (see Open
+  Questions); the hand-off itself remains unresolved — Agentora is 404
+  (crossing red).
 
 ## Post-CVP (defer until CVP is live)
 
@@ -108,18 +109,26 @@ the retirement of the standalone repo.
   from registry records; check the `phenotype-python-sdk` source before
   claiming MCP client capability anywhere.
 - **Tombstone or re-point**: should the AgentMCP disposition rows be given an
-  explicit tombstone — model = `repo-mcpkit-superseded`
-  (`disposition-index.json:1306-1310`: "Tombstone closed 2026-06-23 (verified
-  via gh api 404 + git clone --bare Repository not found)") — now that neither
-  AgentMCP nor Agentora is on GitHub? (The `repo-phenotype-config` /
-  `repo-kvirtualdesktop-core` rows are `NEVER_EXISTED` phantom demotions,
-  `:3577-3582` / `:3561-3566` — not a precedent for "existed, absorbed, now
-  404s".)
+  explicit tombstone? **No usable model exists.** The nearest candidate,
+  `repo-mcpkit-superseded` (`disposition-index.json:1299-1310`), records a
+  verified-404 tombstone **only in its note** (`:1306-1310`, "Tombstone
+  closed 2026-06-23 (verified via gh api 404 + git clone --bare Repository not
+  found)") while its machine fields read `disposition: NEVER_EXISTED` /
+  `final_classification: J:NEVER_EXISTED` / `fsm: never_existed`
+  (`:1302-1304`) — a note-only artifact directly contradicted by its own
+  machine fields, same phantom class as `repo-phenotype-config` (`:3577-3582`)
+  and `repo-kvirtualdesktop-core` (`:3561-3566`, both `J:NEVER_EXISTED`
+  despite historical refs). AgentMCP needs a predecessor → absorbed → now-404
+  row model that none of these express; adopting one is a maintainer decision
+  (disposition-index is frozen) — not a citation to an existing row. Now that
+  neither AgentMCP nor Agentora is on GitHub, an explicit tombstone or
+  `gh_url` re-point remains the open choice.
 - **Where do the MCP patterns live?** Both registry rows carry disposition
   `TOO_LARGE_RETIRE`; the real divergence is `fsm: live` vs `archived` and
-  `target: KooshaPari/Agentora` vs `target: pheno (crates/agentora)`
-  (`disposition-index.json:14153-14161` — "canonical" appears only inside the
-  row note, not as a competing disposition). A third record is in tension:
+  `target: KooshaPari/Agentora` vs `target: pheno (crates/agentora)` —
+  `queue-repo-agentora` at `disposition-index.json:14153-14161` vs
+  `repo-Agentora` at `:3486-3502` (both rows; "canonical" appears only inside
+  the queue-row note, not as a competing disposition). A third record is in tension:
   `projects/Agentora.json:19-21` = `KEEP_STANDALONE_PENDING_BOUNDARY_REVIEW`
   ("Historic ABSORB -> pheno (crates/agentora) claims are not supported by
   source-level migration proof") — the best current evidence for where MCP
@@ -129,8 +138,9 @@ the retirement of the standalone repo.
 
 ## Change Log
 
-| Date       | Change                                                                                                                                                                                              | Worklog                 |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| 2026-09-27 | Initial CVP (WBS A3.2). Documents shipped `agentmcp-hex` slice + standalone-repo retirement                                                                                                         | PHENOREG-FORWARD-WBS A3 |
-| 2026-09-27 | Review fixes: port-name claims removed (package records scope a hex-grid harness); scope contradiction added as Open Question                                                                       | PR #585 review round    |
-| 2026-09-27 | Kilo round 2: vendored ADR-017/019 paths + date split, tombstone precedent → `repo-mcpkit-superseded`, Agentora divergence stated precisely (+ card `:19-21`), PhenoMCPServers contested-owner note | PR #585 review round    |
+| Date       | Change                                                                                                                                                                                                                                            | Worklog                   |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 2026-09-27 | Initial CVP (WBS A3.2). Documents shipped `agentmcp-hex` slice + standalone-repo retirement                                                                                                                                                       | PHENOREG-FORWARD-WBS A3   |
+| 2026-09-27 | Review fixes: port-name claims removed (package records scope a hex-grid harness); scope contradiction added as Open Question                                                                                                                     | PR #585 review round      |
+| 2026-09-27 | Kilo round 2: vendored ADR-017/019 paths + date split, tombstone precedent → `repo-mcpkit-superseded`, Agentora divergence stated precisely (+ card `:19-21`), PhenoMCPServers contested-owner note                                               | PR #585 review round      |
+| 2026-09-27 | Kilo round 3: tombstone OQ reframed (no usable model — note vs machine fields contradiction), both Agentora row ranges cited, SPINE citation split (note prose vs DSPI-13 fields; card `:7`/`:11`/`:14`), pattern-hand-off wording matches record | PR #584/#585 review round |

@@ -6,8 +6,8 @@ status: active
 last_boundary_review: 2026-09-27
 review_cadence: 30d
 in_scope:
-  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922 live), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18); phenoData evidenced by mirror revalidation but has no row (data gap). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz independent, testing-kit (id=912 TOO_LARGE_RETIRE -> python-sdk)"
-  - "archive/ retirement shelf on the default branch (FocalPoint, PhenoInfra)"
+  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), testing-kit (id=912 TOO_LARGE_RETIRE, fsm live, target phenotype-apps (apps/testing-kit/), content absorbed into its apps submodule), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row)"
+  - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row and lives in its own archived repo; shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
   - "application-collection policy enforcement per card absorption_note (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
 out_of_scope:
@@ -23,24 +23,35 @@ out_of_scope:
 
 - **Application children**: BLOCK-A apps under `apps/<name>`, each with an
   explicit boundary and lift provenance — source lift + build verification +
-  a named audit artifact **where one exists** (`Tracely-2026-07-17.md` is the
-  only file actually present in `audits/absorption-justifications/`; the rows
-  for `conft` (`disposition-index.json:2356`) and `apisync` (`:2590`) reference
-  `Conft-2026-07-17.md` / `Apisync-2026-07-17.md`, which are **absent**, and
-  `subject` (`:5228-5241`) cites no artifact at all — recorded as registry data
-  gaps, not silently claimed). A sixth child, `phenoData`, is evidenced by
-  `docs/absorption/phenoData/ACTIVE_SOURCE_REVALIDATION_20260807.md:12,23-25`
-  (mirror with identical blob SHAs at the cited preservation sha) but has no
-  disposition row — in neither the required nor the excluded list until a row
-  exists.
-- **Retirement shelf**: `archive/` on the default branch (`apps-extract`)
-  holding retired/paused/archived content, labeled and bounded.
+  a named audit artifact **where one exists** (directory fact:
+  `audits/absorption-justifications/` holds 92 `.md` manifests; claim: of the
+  artifacts these rows cite, `Tracely-2026-07-17.md` and required-child
+  `Tracera-2026-06-25.md` are present, while `conft`
+  (`disposition-index.json:2356`) and `apisync` (`:2590`) reference
+  `Conft-2026-07-17.md` / `Apisync-2026-07-17.md`, which are **absent**,
+  `phenoData`'s row cites `phenoData-2026-07-17.md` (`:2822`) — also
+  **absent** — and `subject` (`:5228-5241`) cites no artifact at all: recorded
+  as registry data gaps, not silently claimed). `phenoData` is **excluded**
+  with row evidence: `repo-phenoData` (`:2830-2833`, `fsm: live` `:2827`,
+  `target: pheno (crates/pheno-data-*)`, `absorbed_at: 2026-07-18`) — the
+  source content's canonical home is the `pheno` crates; the mirror
+  (`docs/absorption/phenoData/ACTIVE_SOURCE_REVALIDATION_20260807.md:12,23-25`,
+  identical blob SHAs at the cited preservation sha) is revalidation
+  evidence. No row targets `apps/phenoData` (earlier "no disposition row"
+  wording corrected this round).
+- **Retirement shelf**: `archive/` holding retired/paused/archived content,
+  labeled and bounded — pivot-tree contents `FocalPoint` only; shelf branches
+  `main-focalpoint-archive` + `apps-extract` deleted 2026-09-27, current home
+  unresolved (see cvp gate).
 - **Collection policy**: as stated in `projects/phenotype-apps.json`
   (`absorption_note`): keep application boundaries explicit under
   `apps/<name>`; do not absorb unrelated runtime, governance, or library
-  spines. (The card’s `rationale` labels this “ADR-023”, but no
-  application-collection ADR-023 resolves in this repo — pointer gap tracked
-  as an Open Question in `docs/cvp/PhenoApps.md`.)
+  spines. (The card’s `rationale` labels this “ADR-023”, but the ADR-023
+  **source file** (`docs/adr/2026-06-15/ADR-023-agent-effort-governance.md`)
+  is absent — `docs/adr/` holds ADR-004..007 only; the label maps to
+  agent-effort governance via `docs/monorepo-state/AGENTS.md:119`, while
+  `docs/adrs/ADR-ECO-023-sdk-consolidation.md` is SDK consolidation — pointer
+  gap tracked as an Open Question in `docs/cvp/PhenoApps.md`.)
 - **Preservation**: local recovery ref
   (`recovery/phenotype-apps-local-20260726`, sha
   `5a0672024b798f852b6a36eaa83820c424d0b5aa`) + audit artifact
@@ -48,23 +59,23 @@ out_of_scope:
 
 ## Out of Scope
 
-| Not here                                            | Lives in                            | Reason                                                                                                                                                                                             |
-| --------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Runtime / governance / library spines               | each spine's own canonical repo     | Explicit registry rule: the parent never absorbs non-application content.                                                                                                                          |
-| Planify `upstream/` (Plane fork, AGPL)              | `upstream/` subtree (DO NOT MODIFY) | Verbatim vendor subtree; only Phenotype layers may be extracted (post-CVP).                                                                                                                        |
-| Superseded classification of this repo (row id=901) | `_retire/phenotype-apps/` shelf     | Same repo `KooshaPari/phenotype-apps`: `B:WORKING`/`fsm: archived`, note `TOO_INCOMPLETE_RETIRE 2026-07-17`, resolved 2026-07-18 — evidence for the sunset-shelf question, not a foreign artifact. |
-| Source repos' archive/delete lifecycle              | the source repos themselves         | The parent stores lifted content, never the repo lifecycle.                                                                                                                                        |
-| FocalPoint / PhenoInfra as live products            | `archive/` (content only)           | Those repos are archived; the shelf keeps history, not a product.                                                                                                                                  |
+| Not here                                                                                 | Lives in                            | Reason                                                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Runtime / governance / library spines                                                    | each spine's own canonical repo     | Explicit registry rule: the parent never absorbs non-application content.                                                                                                                          |
+| Planify `upstream/` (Plane fork, AGPL)                                                   | `upstream/` subtree (DO NOT MODIFY) | Verbatim vendor subtree; only Phenotype layers may be extracted (post-CVP).                                                                                                                        |
+| Superseded classification of this repo (row id=901)                                      | `_retire/phenotype-apps/` shelf     | Same repo `KooshaPari/phenotype-apps`: `B:WORKING`/`fsm: archived`, note `TOO_INCOMPLETE_RETIRE 2026-07-17`, resolved 2026-07-18 — evidence for the sunset-shelf question, not a foreign artifact. |
+| Source repos' archive/delete lifecycle                                                   | the source repos themselves         | The parent stores lifted content, never the repo lifecycle.                                                                                                                                        |
+| FocalPoint as a live product (PhenoInfra dropped: no disposition row, own archived repo) | `archive/` (content only)           | FocalPoint archived; the shelf keeps history, not a product.                                                                                                                                       |
 
 ## Boundary Crossings
 
-| Crossing                                                                                                                                                      | Direction                             | Surface                   | Status                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Absorbed app lift (conft, apisync, tracera live rows; tracely, subject target-of-record; phenoData evidenced; excluded cohorts per card/disposition evidence) | source repo → PhenoApps `apps/<name>` | git lift + build verify   | amber (registry-cited July lifts; tree location answered but restore decision pending — see cvp gate)                                                                                                                |
-| FocalPoint / PhenoInfra retirement move                                                                                                                       | source repo → `archive/`              | git archive move          | amber (PR #169 2026-09-17 cited, but no in-repo artifact corroborates it — only `disposition-index.json:1013` source-repo archive + `audits/absorption-justifications/FocalPoint-2026-07-17.md` for the July action) |
-| `apps/<name>` children reachable at default-branch root                                                                                                       | PhenoApps → verifiers                 | git tree                  | amber (root now `archive/` only; post-2026-09-16 location unverified)                                                                                                                                                |
-| Planify upstream sync                                                                                                                                         | upstream Plane → `upstream/`          | vendored subtree          | amber (read-only; do not modify)                                                                                                                                                                                     |
-| Services consuming absorbed apps                                                                                                                              | PhenoServices → PhenoApps             | package / repo dependency | amber (depends on children location question)                                                                                                                                                                        |
+| Crossing                                                                                                                                                                       | Direction                             | Surface                   | Status                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Absorbed app lift (conft, apisync, tracera live rows; tracely, subject target-of-record; phenoData excluded with row evidence; excluded cohorts per card/disposition evidence) | source repo → PhenoApps `apps/<name>` | git lift + build verify   | amber (registry-cited July lifts; tree location answered but restore decision pending — see cvp gate)                                                                                                                |
+| FocalPoint / PhenoInfra retirement move                                                                                                                                        | source repo → `archive/`              | git archive move          | amber (PR #169 2026-09-17 cited, but no in-repo artifact corroborates it — only `disposition-index.json:1013` source-repo archive + `audits/absorption-justifications/FocalPoint-2026-07-17.md` for the July action) |
+| `apps/<name>` children reachable at default-branch root                                                                                                                        | PhenoApps → verifiers                 | git tree                  | amber (root now `archive/` only; post-2026-09-16 location unverified)                                                                                                                                                |
+| Planify upstream sync                                                                                                                                                          | upstream Plane → `upstream/`          | vendored subtree          | amber (read-only; do not modify)                                                                                                                                                                                     |
+| Services consuming absorbed apps                                                                                                                                               | PhenoServices → PhenoApps             | package / repo dependency | amber (depends on children location question)                                                                                                                                                                        |
 
 ## Last Boundary Review
 
@@ -85,5 +96,10 @@ disposition-index absorption rows.
 - Row id=901 re-classified as this repo’s superseded classification (same
   `gh_url`), not a separate artifact; `helios-app` removed from required scope
   (no `apps/*` row; `do-not-absorb` record) and `tracera` added (live row).
+- Post-capture update (2026-09-27 22:04Z): the `absorb-sessionledger`,
+  `absorb-researchledger`, `main-focalpoint-archive`, and `apps-extract`
+  branches were deleted after the tree evidence above was recorded, and both
+  pivot commits return HTTP 422 — the evidence stands as a pre-deletion
+  capture; the gate remains open with branch restoration as blocker (1).
 
 **Next review:** 2026-10-27

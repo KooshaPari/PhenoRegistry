@@ -86,13 +86,13 @@ owner: "<primary maintainer / agent>"
 
 ## CVP status
 
-| Repo      | Status                                                                                                      | CVP doc                        |
-| --------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| Tracera   | active (build-deploy pending)                                                                               | [Tracera.md](./Tracera.md)     |
-| BytePort  | active — canonical, CVP shipping (atlas qualification: NOT_CERTIFIED, 2026-09-16)                           | [BytePort.md](./BytePort.md)   |
-| AuthKit   | active — canonical auth boundary (GitHub repo 404 as of 2026-09-27; local mirror only)                      | [AuthKit.md](./AuthKit.md)     |
-| AgentMCP  | shipped — absorbed into `phenotype-python-sdk/packages/agentmcp-hex`; standalone repo retired (ADR-017/019) | [AgentMCP.md](./AgentMCP.md)   |
-| PhenoApps | active — canonical application parent (renamed `phenotype-apps` → `PhenoApps`; sunset-shelf default branch) | [PhenoApps.md](./PhenoApps.md) |
+| Repo      | Status                                                                                                                                                                                                                                           | CVP doc                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
+| Tracera   | active (build-deploy pending)                                                                                                                                                                                                                    | [Tracera.md](./Tracera.md)     |
+| BytePort  | active — canonical, CVP shipping (atlas qualification: NOT_CERTIFIED, 2026-09-16)                                                                                                                                                                | [BytePort.md](./BytePort.md)   |
+| AuthKit   | active — canonical auth boundary (GitHub repo 404 as of 2026-09-27; local mirror only)                                                                                                                                                           | [AuthKit.md](./AuthKit.md)     |
+| AgentMCP  | shipped — absorbed into `phenotype-python-sdk/packages/agentmcp-hex`; standalone repo retired (ADR-017/019)                                                                                                                                      | [AgentMCP.md](./AgentMCP.md)   |
+| PhenoApps | active — canonical application parent (rename `phenotype-apps` → `PhenoApps` verified on GitHub; **registry propagation pending** — `gh_url`/card/target strings still old, per cvp Open Questions; shelf-branch state unresolved, see cvp gate) | [PhenoApps.md](./PhenoApps.md) |
 
 ## See also
 

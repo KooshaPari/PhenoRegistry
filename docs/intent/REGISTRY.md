@@ -3,8 +3,16 @@
 This index is the master list of every repo bound to a `docs/intent/<repo>.md` and `docs/boundary/<repo>.md` in this registry.
 
 > **L7-001 sweep — 2026-06-17:** 45,091 curated records bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
+>
+> **CVP triad registration — 2026-09-27:** the same sweep's 82-repo population
+> counts bindings only. The `AuthKit` / `AgentMCP` / `PhenoApps` CVP triads
+> (`docs/cvp/` + `docs/intent/` + `docs/boundary/`, PR #585) are authored
+> curation with zero bindings, so they are indexed in `docs/cvp/README.md`
+> and deliberately absent from this sweep table — the two counts are
+> different populations, not a discrepancy (heading below = rows in this
+> table).
 
-## Canonical bound repos (83)
+## Canonical bound repos (86)
 
 | Repo                    | Intents | Plans | Responses | First seen | Last seen |
 | ----------------------- | ------- | ----- | --------- | ---------- | --------- |
@@ -94,7 +102,6 @@ This index is the master list of every repo bound to a `docs/intent/<repo>.md` a
 | thegent-landing         | 2       | 0     | 0         | 2025-08    | 2026-06   |
 | cheaptalk               | 1       | 0     | 0         | 2025-08    | 2026-06   |
 | sharecli                | 1       | 0     | 0         | 2025-08    | 2026-06   |
-| PhenoApps               | 0       | 0     | 0         | 2026-09    | 2026-09   |
 
 ## Curation sources
 

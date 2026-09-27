@@ -7,7 +7,7 @@ last_verified: 2026-09-27
 bound_prompts: 0
 bound_plans: 0
 bound_responses: 0
-device: windows # authored on the Windows registry workstation; STATUS.md:251 sanctions macbook|heavy-runner as the runtime values
+device: windows # authored on the Windows registry workstation (workstation fact recorded here as provenance for the non-macbook value); device vocabulary: root STATUS.md:5 (Author device), gate docs/monorepo-state/STATUS.md:251 (macbook|heavy-runner), ADR-023 policy STATUS.md:290,395
 ---
 
 # Intent — PhenoApps
@@ -56,19 +56,26 @@ disposition `KEEP_CANONICAL_PARENT`, `canonical_routing: true`, card
 provenance, not repository deletion or broad workspace flattening" — phrased
 there as “ADR-023”; pointer gap in Open Questions).
 GitHub: `KooshaPari/PhenoApps` (renamed from `phenotype-apps`), default
-branch `apps-extract`, not archived, last push 2026-09-18. 14 occurrences of
-`target: phenotype-apps (apps/<name>/)` across 9 disposition-index rows (plus
-~196 rows targeting bare `phenotype-apps`).
+branch `apps-extract` (recorded pre-deletion — branch deleted 2026-09-27,
+current default unverified), not archived, last push 2026-09-18. 14
+occurrences of `target: phenotype-apps (apps/<name>/)` across 9
+disposition-index rows (tracely ×2 and conft ×2 one row each, apisync ×4
+across **two** rows — `repo-Apisync-batch4` + `repo-Apisync` — subject ×2,
+melosviz ×2, testing-kit, tracera; plus exactly 196 rows targeting bare
+`phenotype-apps`).
 
 ## Open Questions
 
 - Where did the `apps/<name>` children go after the 2026-09-16 pivot commit
-  `355016f8`? **Answered 2026-09-27**: deleted from that tree (root reduced
-  to `archive/`); children survive on `absorb-sessionledger` +
-  `absorb-researchledger` — decision pending on restoring them to the default
-  branch (see [`docs/cvp/PhenoApps.md`](../cvp/PhenoApps.md)).
+  `355016f8`? **Evidence captured 2026-09-27, source since deleted**: the
+  pre-deletion tree diff shows `apps/` deleted from that tree (root reduced
+  to `archive/`) with children recorded on `absorb-sessionledger` +
+  `absorb-researchledger` — those branches (plus `main-focalpoint-archive`,
+  `apps-extract`) were then deleted and both commits return HTTP 422, so the
+  open sequence is: recover the branches, then decide restore-vs-scope
+  (see [`docs/cvp/PhenoApps.md`](../cvp/PhenoApps.md)).
 - Where is the application-collection ADR-023 the card cites? (`docs/adr/`
-  has ADR-004..007; `ADR-ECO-023` = SDK consolidation; `AGENTS.md:119` ADR-023
+  has ADR-004..007; `ADR-ECO-023` = SDK consolidation; `docs/monorepo-state/AGENTS.md:119` ADR-023
   = agent-effort governance, source not present.)
 - Does the "Sunset shelf" GitHub description change the
   `KEEP_CANONICAL_PARENT` disposition, or is it a temporary face of the same
@@ -78,7 +85,8 @@ branch `apps-extract`, not archived, last push 2026-09-18. 14 occurrences of
 
 ## Change Log
 
-| Date       | Change                                                                                                                                           | Worklog                 |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
-| 2026-09-27 | Initial binding — first intent doc for this repo (authored triad, WBS A3.3)                                                                      | `docs/cvp/PhenoApps.md` |
-| 2026-09-27 | Kilo round 2: ADR-023 re-attributed to the card (+ pointer-gap OQ), children question answered, row count corrected, `device: windows` annotated | PR #585 review round    |
+| Date       | Change                                                                                                                                                                                                                                                     | Worklog                   |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 2026-09-27 | Initial binding — first intent doc for this repo (authored triad, WBS A3.3)                                                                                                                                                                                | `docs/cvp/PhenoApps.md`   |
+| 2026-09-27 | Kilo round 2: ADR-023 re-attributed to the card (+ pointer-gap OQ), children question answered, row count corrected, `device: windows` annotated                                                                                                           | PR #585 review round      |
+| 2026-09-27 | Kilo round 3: gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z; commits 422), row-coverage arithmetic fixed (apisync spans two rows; 196 exact), ADR-023 cite path qualified, `device:` comment cites the define-the-vocabulary lines | PR #584/#585 review round |

@@ -921,7 +921,7 @@ substrates:
 - id: phenotype-apps
   repo: <REDACTED>/phenotype-apps
   name: phenotype-apps
-  status: active  # corrected 2026-09-27 (PR #585): was 'archived' (2026-07-18 retirement); GitHub archived:false + card status active + disposition KEEP_CANONICAL_PARENT
+  status: archived  # generator-stable: scripts/sync_catalog.py derives this from frozen disposition row id=901 (fsm: archived); card status active + GitHub archived:false diverge — tracked in docs/cvp/PhenoApps.md Open Questions. Do not hand-flip to active: sync_catalog.py reverts it.
   tier: phenotype-framework
   architecture: layered
   archetype: app
