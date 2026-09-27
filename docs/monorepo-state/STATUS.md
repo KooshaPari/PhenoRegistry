@@ -109,7 +109,7 @@ This file supersedes the 2026-06-15 17:35 PDT index that lived here 2026-06-15 �
 | **ADR-024** | **71-pillar industry-standard audit framework (L1-L71, 9 domains)**                                  | **Accepted 2026-06-17** — see `findings/71-pillar-2026-06-17-schema.md`                                                                        |
 | **ADR-025** | **ADR-015 v2.1 worklog schema bump (11th column `device:`)**                                         | **Accepted 2026-06-17** — deprecation 2026-06-22 (5 days)                                                                                      |
 | **ADR-026** | **Factory AI Agent Readiness Model as cross-cutting external standard**                              | **Accepted 2026-06-17** — see <https://docs.factory.ai/web/agent-readiness/overview>; crosswalk in `audit-71-pillar-2026-06-17-wrapup.md` § 10 |
-| **ADR-029** | **Dmouse92 → &lt;REDACTED&gt; migration — absorb all DM92 work to substrate, archive emptied repos** | **Accepted 2026-06-17** — see `findings/2026-06-17-L5-104-dmouse92-to-redacted.md`; 6 PRs opened, 18 Dmouse92 repos archived           |
+| **ADR-029** | **Dmouse92 → &lt;REDACTED&gt; migration — absorb all DM92 work to substrate, archive emptied repos** | **Accepted 2026-06-17** — see `findings/2026-06-17-L5-104-dmouse92-to-redacted.md`; 6 PRs opened, 18 Dmouse92 repos archived                   |
 
 ---
 
