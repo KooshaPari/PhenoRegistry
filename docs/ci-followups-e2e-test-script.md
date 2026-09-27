@@ -53,7 +53,7 @@ Three options were considered.
    port and no test could be executed. Shipping a suite that has never run
    once would mean pushing unverified code to fix a red check.
 
-3. **Fail loudly with an explanation.** Ship `scripts/test-e2e-stub.sh`, which
+3. **Fail loudly with an explanation.** Ship `scripts/e2e-missing-runner.sh`, which
    exits non-zero and prints why. The check stays red, but the log now names
    the actual problem instead of a bare missing-script error.
 
@@ -75,5 +75,5 @@ Either:
 ## To activate real coverage later
 
 Point `test:e2e` at `playwright test` and delete
-`scripts/test-e2e-stub.sh`. The file documents the three prerequisites inline
+`scripts/e2e-missing-runner.sh`. The file documents the three prerequisites inline
 so the next person does not have to rediscover them.
