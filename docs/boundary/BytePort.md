@@ -9,7 +9,7 @@ in_scope:
   - Pure-Rust S3 presigner crate (`crates/byteport-transport/`)
   - Go 1.25 backend (`backend/byteport/`) — healthz + presign endpoints on port 8081
   - Astro docs frontend (marketing site)
-  - Tightly-scoped asset protocol (Tauri-side, only APPDATA scopes)
+  - Tightly-scoped asset protocol (Tauri-side, APPDATA + APPLOCALDATA scopes only)
 out_of_scope:
   - Multi-cloud transport abstraction (lives in `pheno-transport`)
   - MCP server (lives in `PhenoMCPServers`)

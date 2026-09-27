@@ -46,9 +46,9 @@ See [`docs/cvp/Tracera.md`](../cvp/Tracera.md) for the CVP definition
 
 ## Bound Responses (specs, ideas, plans from agents)
 
-| Date | Source | File                  | Kind |
-| ---- | ------ | --------------------- | ---- |
-| ?    | ?      | `e4047b4c9e4816f6.md` | ?    |
+| Date | Source | File                                     | Kind |
+| ---- | ------ | ---------------------------------------- | ---- |
+| ?    | ?      | `e4047b4c9e4816f6.md` (not materialized) | ?    |
 
 ## Boundary
 
