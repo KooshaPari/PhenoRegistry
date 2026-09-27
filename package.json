@@ -6,9 +6,10 @@
   "scripts": {
     "build": "vitepress build docs",
     "check": "bash ./scripts/conventions-lint.sh .",
-    "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:preview": "vitepress preview docs",
+    "test:e2e": "bash ./scripts/e2e-missing-runner.sh"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"
