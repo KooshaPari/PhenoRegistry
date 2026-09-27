@@ -110,8 +110,9 @@ Trust model — two gates, two script origins:
 3. **Pre-flight locally** (fast, no CI round-trip) — **run from the
    repository root**. Paths are anchored at the current working directory
    (`Path.cwd()`): invoked from a subdirectory, the default argument
-   resolves to nothing and prints `checked 0 workflow file(s)` — a silent
-   pass, not an error.
+   resolves to a path that does not exist and the guard **fails** with
+   `missing workflow file` (exit 1) — the `checked 0 workflow file(s)` form
+   appears only for an existing directory containing no `*.yml`/`*.yaml`.
 
    ```bash
    python scripts/workflow-action-guard.py .github/workflows
@@ -133,13 +134,13 @@ Trust model — two gates, two script origins:
 
 ## Failure triage
 
-| Symptom (check output)                     | Cause                                                                                                                                                                                      | Fix                                                                                                                  |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `unpinned action reference` at `file:line` | tag/branch ref or missing `@sha`                                                                                                                                                           | resolve full SHA (step 2), re-pin                                                                                    |
-| `unpinned` on a short SHA                  | < 40 hex chars                                                                                                                                                                             | use the full commit SHA                                                                                              |
-| `workflow path must be inside <repo>`      | path resolved outside the current working directory — the dominant cause is running the script from a subdirectory (the anchor is `cwd`, not the repo root), not a genuinely escaping path | **run the guard from the repository root**; re-passing a relative path does not help when the anchor itself is wrong |
-| `missing workflow file`                    | wrong path argument                                                                                                                                                                        | check the filename (case-sensitive in CI)                                                                            |
-| Guard passes locally, fails in CI          | drift between base and head                                                                                                                                                                | re-run step 3 on your exact branch                                                                                   |
+| Symptom (check output)                     | Cause                                                                                                                                                                                                                                                                                           | Fix                                                                           |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `unpinned action reference` at `file:line` | tag/branch ref or missing `@sha`                                                                                                                                                                                                                                                                | resolve full SHA (step 2), re-pin                                             |
+| `unpinned` on a short SHA                  | < 40 hex chars                                                                                                                                                                                                                                                                                  | use the full commit SHA                                                       |
+| `workflow path must be inside <repo>`      | absolute path outside the current working directory, or a `..` escape — the anchor is `Path.cwd()`, so a repo-root absolute path fails when run from a subdirectory or through a symlink (`/tmp` → `/private/...`); a relative path from a subdirectory stays contained and cannot trigger this | **cd to the repository root**, then re-pass a relative path                   |
+| `missing workflow file`                    | wrong path argument, **or a wrong CWD** (a subdirectory run resolves the default there — this is where the subdirectory case lands)                                                                                                                                                             | check the filename (case-sensitive in CI), or re-run from the repository root |
+| Guard passes locally, fails in CI          | drift between base and head                                                                                                                                                                                                                                                                     | re-run step 3 on your exact branch                                            |
 
 ## Editing the guard itself
 
@@ -170,5 +171,7 @@ Trust model — two gates, two script origins:
   which executes the PR's own copy of the script, so a `--no-verify` change
   that also edits the script has no remaining gate on that branch.
 - Lefthook `pre-push` runs the separate `grade` task (`just grade` /
-  `task grade`) — not part of `pre-commit`, unrelated to this guard, and
-  equally skipped by `--no-verify`.
+  `task grade`, or `./grade.sh` when neither a `Justfile` nor a
+  `Taskfile.yml` exists — `lefthook.yml:78-86`) — not part of
+  `pre-commit`, unrelated to this guard, and equally skipped by
+  `--no-verify`.
