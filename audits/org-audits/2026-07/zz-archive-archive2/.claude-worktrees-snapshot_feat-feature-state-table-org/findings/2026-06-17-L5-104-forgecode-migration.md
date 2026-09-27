@@ -1,7 +1,7 @@
 # L5-104.5 — Dmouse92/forgecode → <REDACTED>/forgecode Migration Analysis (2026-06-17)
 
 **Status:** COMPLETE (analysis only — no migration required)
-**Parent document:** `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` § 2.5
+**Parent document:** `2026-06-17-L5-104-dmouse92-to-redacted.md` § 2.5
 **Auth:** `gh` is **<REDACTED>** (active). Dmouse92 is read-only collaborator.
 **Date:** 2026-06-17
 **Method:** `gh api` (read-only); `gh auth status` confirmed before any call.

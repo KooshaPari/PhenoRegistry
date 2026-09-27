@@ -5,7 +5,7 @@
 **Status:** ANALYSIS COMPLETE — pending reviewer (<REDACTED>) approval to execute archives
 **Auth context:** `gh` is **<REDACTED>** (active per `gh auth status`). Dmouse92 is read-only collaborator. NO pushes performed in this analysis.
 **Working dir:** `/tmp/dmouse92-migration/<repo>/` (14 fresh clones, `kp-main` branch populated from `https://github.com/<REDACTED>/<repo>.git`)
-**Parent audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` (this plan covers §2.6–2.20 in that doc)
+**Parent audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` (this plan covers §2.6–2.20 in that doc)
 **Related:** `findings/2026-06-17-L5-104-dispatch-mcp-migration-plan.md` (subagent A, separate), `findings/2026-06-17-L5-104-pheno-adr012-migration-plan.md` (subagent B, separate)
 
 ---
@@ -310,7 +310,7 @@ done
 ### Step 6 — Update monorepo governance docs (single branch + PR)
 
 **Files to touch (read-only cross-references — per non-negotiable rule "ALWAYS prefer editing an existing file"):**
-- `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` — append a "Section 2.x — subagent D (14 bulk repos)" line referencing this plan file (the reviewer said "I'll integrate your findings" — leave this for the reviewer; if the reviewer accepts the plan, the parent audit doc gets one new bullet).
+- `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` — append a "Section 2.x — subagent D (14 bulk repos)" line referencing this plan file (the reviewer said "I'll integrate your findings" — leave this for the reviewer; if the reviewer accepts the plan, the parent audit doc gets one new bullet).
 - `AGENTS.md` — no change needed (the 14 repos are listed under "Sub-repos at a Glance"; if any should be removed from the list, do it in this PR).
 - `SSOT.md` — no change needed.
 - `STATUS.md` — add a one-line note: "2026-06-17: 14 Dmouse92 mirrors archived per L5-104.x plan (no content loss)."
@@ -339,7 +339,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
 - `branch`: `chore/l5-104-bulk-archive-2026-06-17`
 - `device`: `macbook` (per ADR-023; archive is a low-CPU git operation, no `heavy-runner` needed)
 - `source_decision_doc`: `findings/2026-06-17-L5-104-bulk-rust-ts-migration.md`
-- `parent_audit`: `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md`
+- `parent_audit`: `findings/2026-06-17-L5-104-dmouse92-to-redacted.md`
 - `summary.status`: `archived` (all 14 land here; no `cherry_picked`, `substrate_moved`, etc.)
 
 ### 5.1 PhenoCompose (L5-104.1) — `worklogs/L5-104-PhenoCompose-archive-2026-06-17.json`
@@ -352,7 +352,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -387,7 +387,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -418,7 +418,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "D",
     "action": "archive_DM92_kp_already_archived",
@@ -454,7 +454,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -486,7 +486,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -518,7 +518,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -550,7 +550,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -583,7 +583,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -617,7 +617,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -649,7 +649,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -681,7 +681,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "E",
     "action": "archive_DM92_identical_to_kp",
@@ -719,7 +719,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -751,7 +751,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "D",
     "action": "archive_DM92_kp_already_archived",
@@ -788,7 +788,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "A",
     "action": "archive_DM92",
@@ -820,7 +820,7 @@ Per `worklogs/L5-101-app-governance-2026-06-15.json` schema (worklog v2.1 with `
   "branch": "chore/l5-104-bulk-archive-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-bulk-rust-ts-migration.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "summary": {
     "category": "E",
     "action": "archive_DM92_identical_to_kp",
