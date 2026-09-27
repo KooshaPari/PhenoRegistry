@@ -4,7 +4,7 @@ This index is the master list of every repo bound to a `docs/intent/<repo>.md` a
 
 > **L7-001 sweep — 2026-06-17:** 45,091 curated records bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
 
-## Canonical bound repos (82)
+## Canonical bound repos (83)
 
 | Repo                    | Intents | Plans | Responses | First seen | Last seen |
 | ----------------------- | ------- | ----- | --------- | ---------- | --------- |
@@ -94,6 +94,7 @@ This index is the master list of every repo bound to a `docs/intent/<repo>.md` a
 | thegent-landing         | 2       | 0     | 0         | 2025-08    | 2026-06   |
 | cheaptalk               | 1       | 0     | 0         | 2025-08    | 2026-06   |
 | sharecli                | 1       | 0     | 0         | 2025-08    | 2026-06   |
+| PhenoApps               | 0       | 0     | 0         | 2026-09    | 2026-09   |
 
 ## Curation sources
 
