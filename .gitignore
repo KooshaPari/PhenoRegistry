@@ -100,3 +100,9 @@ grade.sh
 
 # Cargo build environment config (machine-specific)
 .cargo/config.toml
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
