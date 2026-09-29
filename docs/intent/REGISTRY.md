@@ -1,6 +1,6 @@
 # Bound Repos
 
-This index is the master list of every repo bound to a `docs/intent/<repo>.md` and `docs/boundary/<repo>.md` in this registry.
+This index is the master list of the **sweep-bound** repositories — those the L7-001 sweep bound to a `docs/intent/<repo>.md` and a `docs/boundary/<repo>.md` in this registry (row-vs-sweep deltas are tracked in the Open reconciliation note below); doc-only CVP triads are indexed by `docs/cvp/README.md` instead.
 
 > **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
 >

@@ -66,6 +66,11 @@ owner: "<primary maintainer / agent>"
 
 <Bulleted list of capabilities.>
 
+## Unresolved scope (non-gating)
+
+<Optional — only for scope items whose row/card state is contested: listed
+in neither In CVP nor Post-CVP, explicitly non-gating.>
+
 ## Post-CVP (defer until CVP is live)
 
 <Bulleted list of what's explicitly out.>

@@ -10,13 +10,12 @@ in_scope:
   - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row; live gh api probe 2026-09-27 reports archived: true (no in-repo record otherwise); shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
   - "application-collection policy enforcement per card absorption_note (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
-unresolved_scope:
-  - "testing-kit — row id=912 TOO_LARGE_RETIRE, fsm live, target phenotype-apps (apps/testing-kit/) vs card retirement into phenotype-python-sdk/packages/testing-kit; conflict unreconciled, cvp Open Question (non-gating)"
 out_of_scope:
   - "runtime / governance / library spines — each in its own canonical repo"
   - "Planify upstream/ AGPL subtree (verbatim fork, DO NOT MODIFY)"
   - "row id=901 = superseded classification of this same repo (KooshaPari/phenotype-apps, 1.7GB; disposition B:WORKING / fsm archived; note: TOO_INCOMPLETE_RETIRE 2026-07-17, resolved 2026-07-18) — evidence for the sunset-shelf question, out of in-scope contract"
   - "archived source repos' lifecycle (archive/delete happens at the source repo)"
+  - "testing-kit — UNRESOLVED row/card conflict (row id=912 live target vs retired card); pointer only, NOT an exclusion, non-gating — see `## Unresolved scope (non-gating)`"
 ---
 
 # Boundary — PhenoApps
