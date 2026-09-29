@@ -92,7 +92,7 @@ def parse_canons_from_ecosystem(ecosystem_md: Path) -> dict[str, str]:
         r"^\|\s*\*\*(.+?)\*\*\s*\|\s*(\d+)\s*\|\s*(.+?)\s*\|\s*$",
         clean, re.MULTILINE
     )
-    EXCLUDED_ROLES = {"superseded / archived", "monorepo (multi-domain)"}
+    EXCLUDED_ROLES = {"superseded / archived", "monorepo (multi-domain)", "phantom / 404"}
     out: dict[str, str] = {}
     for role, _n, repos_str in rows:
         if role in EXCLUDED_ROLES:
