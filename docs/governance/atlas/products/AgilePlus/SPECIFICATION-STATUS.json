@@ -1,0 +1,15 @@
+{
+  "product_id": "PRD-AGILEPLUS",
+  "repository": "KooshaPari/AgilePlus",
+  "record_type": "specification_correction_not_runtime_grade",
+  "status": "invalidated_requires_source_backed_replacement",
+  "specification_pass_complete": false,
+  "accepted_contract": null,
+  "derived_requirement_count": null,
+  "grading_eligible": false,
+  "test_generation_ready": false,
+  "count_policy": "derived_only_no_target_floor_ceiling_or_range",
+  "repository_correction_commit": "588b38df84853e6293b0c4631141ca8f46519e35",
+  "repository_branch": "spec/mature-product-contract-v1",
+  "default_branch_merged": false
+}

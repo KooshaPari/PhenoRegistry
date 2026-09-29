@@ -1,34 +1,21 @@
-# AgilePlus Mature-Contract Registry Record
+# AgilePlus specification correction — NOT a completed contract
 
-**Product:** PRD-AGILEPLUS  
-**Repository:** KooshaPari/AgilePlus  
-**Contract:** AGP-MATURE-V1  
-**Source snapshot:** `f4deadab516293651398fb69b6f5cc38d621d069`
+**Product:** PRD-AGILEPLUS. **Repository:** KooshaPari/AgilePlus. **Recorded:** September 29, 2026.
 
-## Working contract
-- 25 pillars
-- 200 features
-- 1,000 atomic FRs
-- 14 first-class execution journeys
-- test generation deferred
-- verification/oracle intent specified
-- implementation/evidence mapping pending
+## Disposition
 
-## Canonical role
+The first AGP-MATURE-V1 catalogue is invalidated. Its fixed 25 x 8 x 5 expansion did not establish independently derived atomic requirements. Stage selection used array positions; generic oracle text and reserved test IDs did not establish test-generation readiness. Counts and compatibility assertions were not proof.
 
-Repository-scoped governed specification and work-execution engine.
+The rejected source remains at AgilePlus commit `3382beb9ee599c9a9f91ea7e440fda9371c695ab`, path `spec/product/mature-contract.v1.json`. The correction is on branch `spec/mature-product-contract-v1`, commit `588b38df84853e6293b0c4631141ca8f46519e35`, PR #1088. No default-branch merge is claimed.
 
-## Reciprocal boundary
+## Current status
 
-AgilePlus owns execution/work truth. Tracera owns product truth/assessment. Neither substitutes for the other's state machine.
+Comprehensive specification: incomplete. Accepted replacement baseline and derived count: unavailable. Product/stage/shape and transition grades: unassessed. Concrete verification design: incomplete. Product-test generation remains deferred by the user.
 
-## Current grade
+An invalidated catalogue is not zero product scope or a passing denominator. Existing PRD, source-native FR/NFR definitions, ADRs, code and tests remain intact.
 
-Mature completeness, VP readiness, structural shape, journey closure, survivability and transition burden are intentionally **unassessed** until the mature FR baseline is mapped to actual current implementation and admissible evidence.
+## Next work
 
-## Next frontier
-1. map AGP-MATURE-V1 FRs to current crates/CLI/API/MCP/dashboard;
-2. reconcile existing tests to reserved test identities without mass-generating missing tests;
-3. bind the 14 journeys to exact FR subsets;
-4. derive evidence-backed CVP/MVP readiness and structural shape;
-5. classify current stubs/duplicate surfaces and transition debt.
+Reconcile the actual source-native requirements, work-state/claim/governance contracts, interfaces, supported journeys and documented gaps. Independently derive distinct obligations and concrete oracles, map work surfaces and growth costs, and justify stage/journey dependency closure. Review coverage and duplication before calculating counts. Do not merely reword/remap the rejected generic rows.
+
+See [count-independent specification](../../COUNT-INDEPENDENT-SPECIFICATION.md).

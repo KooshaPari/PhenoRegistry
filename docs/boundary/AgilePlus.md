@@ -2,43 +2,17 @@
 repo: "AgilePlus"
 product_id: "PRD-AGILEPLUS"
 role: governed-specification-and-work-execution-engine
-status: active
 last_boundary_review: 2026-09-29
-contract: AGP-MATURE-V1
+specification_status: incomplete
+accepted_contract: null
 ---
 
 # Boundary — AgilePlus
 
-## In scope
+AgilePlus owns repository/project work identity, intake/triage, working specifications and research, plans/work-package dependencies, execution lifecycle, claims/leases/worktrees, dispatch and receipts, bounded review, governance/evidence gates, shipping, rollback and execution history. CLI/API/MCP/dashboard and external sync support this execution domain.
 
-- repository/project work identity and scope;
-- intake, triage and backlog;
-- specification/research/planning;
-- work-package DAGs and lifecycle;
-- resource claims, leases, worktrees and execution isolation;
-- agent dispatch, monitoring, retry and receipts;
-- review loops and escalation;
-- governance contracts, evidence requirements and progression gates;
-- validation, shipping, rollback and retrospectives;
-- immutable execution/audit history;
-- CLI/API/gRPC/MCP/dashboard execution surfaces;
-- external PM/source sync where configured;
-- reciprocal Tracera product-context federation.
+Tracera retains mature product identity/intent, product graph, dissatisfaction and product-state assessment. Source repositories retain source authority; verifiers retain measurement provenance. Work completion cannot silently advance product acceptance.
 
-## Out of scope
+Physical workspace size and the existence of an integration do not determine product scope. The July 17 workspace/disposition snapshot is historical context, not a substitute for current source and intent review.
 
-| Fact/capability | Canonical owner |
-|---|---|
-| Mature product identity/intent/hierarchy | Tracera |
-| Product dissatisfaction and product-stage assessment | Tracera |
-| Source content and Git object truth | source repository/Git |
-| Measurement/test result truth | producing verifier |
-| Generic agent runtime identity | agent-runtime owner |
-
-## Key rule
-
-**Work completion is not product acceptance.** AgilePlus reports what work was specified, attempted, reviewed, gated and completed. Tracera decides what that means for accepted product state using independently admissible evidence.
-
-## Stale prior boundary
-
-The July 17 registry boundary described AgilePlus primarily as a 94-crate mega-workspace with ARCHIVE_ONLY/proposed spine disposition. That snapshot is retained as historical evidence but is not the current product boundary.
+The fabricated fixed-size AGP-MATURE-V1 and positional stage projections are invalidated. This correction does not retire existing source-native requirements or weaken runtime governance. Reconcile actual obligations before deriving new stages or completeness claims. See [the count-independent method](../governance/atlas/COUNT-INDEPENDENT-SPECIFICATION.md).

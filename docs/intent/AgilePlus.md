@@ -3,29 +3,21 @@ repo: "AgilePlus"
 product_id: "PRD-AGILEPLUS"
 role: governed-specification-and-work-execution-engine
 status: active
-last_verified: 2026-09-29
-contract: AGP-MATURE-V1
-contract_repo_path: spec/product/mature-contract.v1.json
+last_intent_review: 2026-09-29
+specification_status: incomplete_count_driven_draft_invalidated
+accepted_contract: null
 ---
 
 # Intent — AgilePlus
 
-AgilePlus is the **repository-scoped governed specification and work-execution engine**.
+AgilePlus is the repository-scoped governed specification and work-execution engine. It turns incoming work into bounded working specifications, plans and packages, coordinates claims/worktrees and execution, runs review and governance, and preserves attributable work receipts and history.
 
-It turns incoming work into bounded specifications, plans and work packages; coordinates claims/worktrees and agent execution; runs review loops; enforces governance/evidence gates; ships accepted work; and preserves attributable execution/audit history.
+AgilePlus owns working-change intent and execution state. Tracera owns accepted product intent, product hierarchy, dissatisfaction and product-state assessment. A completed work item is an observation, not automatic product acceptance.
 
-## Canonical authority
+## Mature-first, count-independent specification
 
-AgilePlus owns working change intent, specs, plans, work packages, execution transitions, claims/leases/checkpoints, agent dispatch/review and work completion.
+Build a comprehensive mature horizon from actual intent, source-native requirements, ADRs, interfaces and product journeys; derive usable stages and actionable frontiers from that horizon. Stub breadth behind mature-shaped boundaries while keeping selected journeys real. Numerical counts are outputs only.
 
-Tracera owns canonical product identity, mature product intent, product hierarchy, product assessment, dissatisfaction and product-stage interpretation.
+The generated AGP-MATURE-V1 and its claimed atomic totals are invalidated. Generic oracle text did not make it test-generation ready. No accepted comprehensive replacement is established yet; existing source-native obligations remain intact.
 
-A completed AgilePlus work item can be evidence observed by Tracera but is never automatically product acceptance.
-
-## Mature-first program
-
-`AGP-MATURE-V1` defines a 25-pillar / 200-feature / 1,000-FR working baseline. CVP/MVP/GA are projections over the same mature execution contract. Counts are not implementation grades.
-
-## Product doctrine
-
-Stub breadth where necessary, but mature the execution spine. Early stages should preserve stable identity/state/authority boundaries and grow primarily by addition/enrichment rather than stage-by-stage rewrites.
+See [the controlling method](../governance/atlas/COUNT-INDEPENDENT-SPECIFICATION.md) and [the correction record](../governance/atlas/products/AgilePlus/MATURE-CONTRACT.md). Earlier bindings and historical decisions remain available in this file's Git history and must be reconciled rather than treated as already reviewed.
