@@ -1,0 +1,20 @@
+{
+  "program": "HARNESS-MATURE-20260929",
+  "product": "KooshaPari/HeliosLite",
+  "source_snapshot": "536a25cac1dc21ac97bbc86c7e9af74bd5932780",
+  "canonical_contract_path": "docs/product-contract/20260929-harness-recovery/CONTRACT-AND-ORACLES.md",
+  "canonical_gate_path": "docs/product-contract/20260929-harness-recovery/CURRENT-STATE.json",
+  "specification_branch": "spec/harness-mature-recovery-20260929",
+  "initial_spec_commit": "6dd2cb423ac44eca6bfc6aebc4497852a8dd742a",
+  "status": "BLOCKED_INCOMPLETE",
+  "source_denominator_closed": false,
+  "specification_design_percent": null,
+  "mature_product_percent": null,
+  "native_product_tests": "NOT_RUN",
+  "architecture_frozen": false,
+  "existence_gate": "OPEN",
+  "blocking_findings": ["H-F001", "H-F002", "H-F003", "H-F004"],
+  "sota": "PARTIAL",
+  "independent_fresh_review": "NOT_RUN",
+  "acceptance_warning": "Inherited benchmark and diagnostic-model greens do not qualify the product."
+}

@@ -1,0 +1,20 @@
+{
+  "program": "HARNESS-MATURE-20260929",
+  "product": "KooshaPari/KCode",
+  "source_snapshot": "046ea2af5e01e84449f65d086510b51152360215",
+  "canonical_contract_path": "docs/product-contract/20260929-harness-recovery/CONTRACT-AND-ORACLES.md",
+  "canonical_gate_path": "docs/product-contract/20260929-harness-recovery/CURRENT-STATE.json",
+  "specification_branch": "spec/harness-mature-recovery-20260929",
+  "initial_spec_commit": "b058a2d00b9a10cb03a901e46dfe4aed213551a8",
+  "status": "BLOCKED_INCOMPLETE",
+  "source_denominator_closed": false,
+  "specification_design_percent": null,
+  "mature_product_percent": null,
+  "native_product_tests": "NOT_RUN",
+  "architecture_frozen": false,
+  "existence_gate": "OPEN",
+  "blocking_design_unknowns": ["K-F001", "K-F002", "K-F003", "K-F007"],
+  "sota": "PARTIAL",
+  "independent_fresh_review": "NOT_RUN",
+  "acceptance_warning": "Historical fractions, transcript heuristics, marketing and synthetic identity controls do not qualify the product."
+}
