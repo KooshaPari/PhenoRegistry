@@ -1,10 +1,28 @@
 # Bound Repos
 
-This index is the master list of every repo bound to a `docs/intent/<repo>.md` and `docs/boundary/<repo>.md` in this registry.
+This index is the master list of the **sweep-bound** repositories — those the L7-001 sweep bound to a `docs/intent/<repo>.md` and a `docs/boundary/<repo>.md` in this registry (row-vs-sweep deltas are tracked in the Open reconciliation note below); doc-only CVP triads are indexed by `docs/cvp/README.md` instead.
 
-> **L7-001 sweep — 2026-06-17:** 45,091 curated records bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
+> **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
+>
+> **CVP triad registration — 2026-09-27:** the `AuthKit` / `AgentMCP` /
+> `PhenoApps` CVP doc triads (`docs/cvp/` + `docs/intent/` + `docs/boundary/`,
+> PR #585) are authored curation, separate from this sweep table. Only
+> `PhenoApps` lacks a table row; `AuthKit` (`:38`, 139 intents) and `AgentMCP`
+> (`:96`, 2 intents) are sweep-derived rows with real bindings — the zero-
+> binding property applies to the `PhenoApps` CVP docs only.
+>
+> **Open reconciliation (both deltas):** (1) **82 vs 86 rows** — L7-001 above
+> binds 82 repos (2026-06-17); the heading below reads 86 rows, and all 86
+> carry `First seen 2025-08`, so the 4-row delta is not derivable from this
+> table: diff the sweep's input repo list against the table (or re-run
+> L7-001). (2) **45,091 vs 24,213 records** — L7-001's 45,091 is the merged-
+> unique corpus figure (`:124`, 41,263 Mac + 3,829 Win), while the 86 rows
+> below sum to 24,213 (24,135 intents + 28 plans + 50 responses) at time of
+> writing: different bases (corpus-unique vs per-repo attribution), and
+> whether every corpus record is attributable to one of these rows is the
+> open question. Both numbers stand as recorded until reconciled.
 
-## Canonical bound repos (82)
+## Canonical bound repos (86)
 
 | Repo                    | Intents | Plans | Responses | First seen | Last seen |
 | ----------------------- | ------- | ----- | --------- | ---------- | --------- |

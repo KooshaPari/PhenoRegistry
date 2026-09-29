@@ -1,8 +1,6 @@
 {
   "name": "Authvault",
-  "languages": [
-    "rust"
-  ],
+  "languages": ["rust"],
   "primary_language": "rust",
   "status": "archived-superseded",
   "has_readme": true,
@@ -24,12 +22,10 @@
   "superseded_by": "AuthKit",
   "absorbed_into": "AuthKit",
   "archive_marker_commit": "c7994b9",
-  "absorption_note": "Upstream commit c7994b9 (2026-06-20) marks Authvault as archived. AuthKit (<REDACTED>/AuthKit) was created 2026-06-24 to receive the unmerged GAP work. FR-AUTHV-018 (originally GAP-008 PKCE state binding) landed in AuthKit commit 064b310. GAP-009 (RS256/ES256 alg-confusion defense) and GAP-010 (middleware adapter docs) were already merged into Authvault main as #39 and a docs PR respectively; they remain canonical on Authvault. The 3 GAP worktrees are tagged gap-final as historical artifacts.",
+  "absorption_note": "Upstream commit c7994b9 (2026-06-20) marks Authvault as archived. AuthKit (<REDACTED>/AuthKit) was created 2026-06-24 to receive the unmerged GAP work. FR-AUTHV-018 (originally GAP-008 PKCE state binding) landed in AuthKit commit 064b310. GAP-009 (rate-limiting on failed auth attempts — PLANNED, per authkit-absorption.patch:1819) and GAP-010 (middleware adapter docs) were recorded as merged into Authvault main as #39 and a docs PR respectively; they remain canonical on Authvault. [Correction 2026-09-27, kilo round: this note previously described GAP-009 as 'RS256/ES256 alg-confusion defense' — that is GAP-007 (FR-AUTHV-017); per the absorption definition table GAP-009 is rate-limiting and still PLANNED, so the '#39' attribution is the original absorption record's and should be re-checked against the Authvault PR before relying on it.] The 3 GAP worktrees are tagged gap-final as historical artifacts.",
   "disposition": "AFFIRM",
   "rationale": "Canonical Rust auth boundary (historical). Upstream archived 2026-06-20 (c7994b9). AuthKit supersession is now verified — <REDACTED>/AuthKit created 2026-06-24 with FR-AUTHV-018 landed in commit 064b310. New auth work goes to AuthKit. Rust canonical here is read-only mirror.",
-  "workspace_members": [
-    "authvault"
-  ],
+  "workspace_members": ["authvault"],
   "gap_worktrees": [
     "feat/gap008-pkce-session-binding (d38f503)",
     "feat/gap009-brute-force-ratelimit (56c19aa)",

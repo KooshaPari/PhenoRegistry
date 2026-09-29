@@ -43,6 +43,7 @@ permissions:
 jobs:
   fan-out:
     name: auditors
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
@@ -79,7 +80,7 @@ jobs:
           REPO: ${{ matrix.repo.name }}
         run: |
           echo "::group::workflows in $REPO"
-          gh api repos/<REDACTED>/$REPO/contents/.github/workflows --jq '.[].name' | tee workflows.txt
+          gh api "repos/<REDACTED>/$REPO/contents/.github/workflows" --jq '.[].name' | tee workflows.txt
           echo "::endgroup::"
 
       - name: cargo-deny (Rust repos only)
@@ -141,10 +142,10 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           gh issue create \
-            --repo <REDACTED>/$REPO \
+            --repo "<REDACTED>/$REPO" \
             --title "compute-infra-auditors: ${{ matrix.repo.name }} audit failed (${{ github.run_id }})" \
             --label compute-infra,audit,automated \
             --body "Daily audit failed. See run: $RUN_URL
 
           This issue is auto-opened by the compute-infra-auditors workflow.
-          Add to the DAG plan (${{ matrix.plan }}) and resolve before next run."
+          Add to the DAG plan (${{ matrix.repo.plan }}) and resolve before next run."

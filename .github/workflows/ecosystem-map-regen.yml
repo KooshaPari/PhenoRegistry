@@ -59,13 +59,16 @@ jobs:
           python-version: "3.12"
 
       - name: checkout sibling phenotype-registry-curation-data
-        # The regen script reads the sibling repo's `_bindings.json` by
-        # default. We check it out under a stable relative path so the
-        # script's default-lookup heuristic works without flags.
+        # The regen script reads the sibling repo's `_bindings.json`.
+        # actions/checkout requires `path` to stay inside $GITHUB_WORKSPACE,
+        # so we check it out under a nested path and point the script at it
+        # with --bindings (see the step below). A `../` path is rejected:
+        #   Repository path '.../phenotype-registry-curation-data' is not
+        #   under '.../PhenoRegistry'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: <REDACTED>/phenotype-registry-curation-data
-          path: ../phenotype-registry-curation-data
+          path: _sibling/phenotype-registry-curation-data
           fetch-depth: 1
           # Curation-data is an unfiltered mirror; only the bindings file
           # is read by the regen script, so plain credentials are fine.
@@ -73,20 +76,28 @@ jobs:
 
       - name: regen-ecosystem-map --check
         # Exits 1 on drift. The job fails on non-zero, which is the
-        # desired gate behaviour.
-        run: python3 scripts/regen-ecosystem-map.py --check
+        # desired gate behaviour. --bindings replaces the script's default
+        # `../phenotype-registry-curation-data/_bindings.json` lookup, which
+        # cannot be used here because the sibling now lives inside the
+        # workspace.
+        run: >-
+          python3 scripts/regen-ecosystem-map.py --check
+          --bindings _sibling/phenotype-registry-curation-data/_bindings.json
 
       - name: summary
         if: always()
+        # Grouped redirects (actionlint/shellcheck SC2129).
         run: |
-          echo "### ecosystem-map-regen summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "- commit: ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- event:  ${{ github.event_name }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- result: ${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "To re-run locally:" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          echo "task regen-ecosystem-map:check" >> "$GITHUB_STEP_SUMMARY"
-          echo "# or" >> "$GITHUB_STEP_SUMMARY"
-          echo "python3 scripts/regen-ecosystem-map.py --check" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "### ecosystem-map-regen summary"
+            echo "- commit: ${{ github.sha }}"
+            echo "- event:  ${{ github.event_name }}"
+            echo "- result: ${{ job.status }}"
+            echo ""
+            echo "To re-run locally:"
+            echo '```'
+            echo "task regen-ecosystem-map:check"
+            echo "# or"
+            echo "python3 scripts/regen-ecosystem-map.py --check"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

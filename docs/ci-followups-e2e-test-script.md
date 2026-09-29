@@ -1,11 +1,12 @@
-# E2E Tests workflow runs a script that does not exist
+# E2E Tests workflow ran a script that did not exist
 
-Status: open, needs an owner decision
+Status: resolved
 Observed: 2026-09-27, PhenoRegistry `main` at `7fda71c`
+Resolved: 2026-09-28, by wiring `test:e2e` to a real Playwright suite
 
-## What CI reports
+## What CI originally reported
 
-The `E2E Tests` workflow (`Playwright E2E` job) fails on every push:
+The `E2E Tests` workflow (`Playwright E2E` job) failed on every push:
 
 ```
 Run E2E tests
@@ -15,65 +16,68 @@ error: Script not found "test:e2e"
 ```
 
 This is the same class of defect as the missing `check` script that broke the
-Quality Gate. The difference is that `check` had an obvious correct
-implementation, and this one does not.
+Quality Gate, except that `check` had an obvious correct implementation and
+this one did not.
 
-## Why there is no obvious fix
+## Corrections to the earlier analysis
 
-`test:e2e` was never written, and nothing it would run exists either:
+Two claims in the first version of this note were wrong.
 
-| Requirement                             | Status |
-| --------------------------------------- | ------ |
-| `test:e2e` in `package.json`            | absent |
-| `@playwright/test` in `devDependencies` | absent |
-| `playwright.config.ts` at the repo root | absent |
-| Any `*.spec.ts`                         | absent |
-| `playwright-report/` output             | absent |
+| Claim                                                  | Reality                                                                                                                                         |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Any `*.spec.ts`: absent"                              | **Wrong.** `tests/e2e/smoke.spec.ts` was tracked on `main` all along. It was not found because the search excluded `tests/`.                    |
+| "Local port binding is restricted, so no test can run" | **Overstated.** Only binding a _local_ port was blocked. Pointing the suite at the published site needs no local port, and every test then ran. |
 
-The only Playwright files in the repository are archived copies of other
-projects' test suites, e.g.
-`docs/specs/pheno-specs/archive/agent-wave/docs/tests/e2e/docsite.spec.ts`.
-They document another repo, and are not a suite for this site.
+The suite was therefore not unbuildable, only awkward to verify locally. That
+distinction matters: the first note framed this as needing an owner decision
+between writing tests and deleting the workflow, when the honest reading was
+that it was solvable in-session.
 
-The workflow still runs `bunx playwright install --with-deps chromium` before
-the failing step, so CI downloads a browser and then never uses it.
+## What the pre-existing spec got wrong
 
-## Why this was not simply made to pass
+`tests/e2e/smoke.spec.ts` asserted the home page title matched
+`/PhenoHandbook/`. The site has always been titled `Phenotype Registry`, as
+declared in `docs/.vitepress/config.mts`. That assertion could never have
+passed, which is consistent with the check having been red for a long time
+rather than newly broken.
 
-Three options were considered.
+The other two tests in that file were correct and pass unchanged.
 
-1. **Add `"test:e2e": "echo ok"`.** Turns a red check green. The workflow then
-   appears to run browser tests while running none, and the wasted browser
-   download stays. This converts a visible gap into an invisible one.
+## A real bug this surfaced
 
-2. **Add a real Playwright suite.** This is the actual fix, and it is worth
-   doing. It was attempted: `@playwright/test` resolves and installs cleanly.
-   The blocker is verification, not feasibility. Local port binding is
-   restricted in the authoring sandbox, so `vitepress preview` never bound a
-   port and no test could be executed. Shipping a suite that has never run
-   once would mean pushing unverified code to fix a red check.
+With `baseURL` set to a project-scoped Pages URL
+(`https://kooshapari.github.io/PhenoRegistry`, no trailing slash), every
+absolute path in a spec resolved against the **domain root**:
 
-3. **Fail loudly with an explanation.** Ship `scripts/e2e-missing-runner.sh`, which
-   exits non-zero and prints why. The check stays red, but the log now names
-   the actual problem instead of a bare missing-script error.
+| `baseURL`            | spec path    | resolves to                                    |
+| -------------------- | ------------ | ---------------------------------------------- |
+| `.../PhenoRegistry`  | `/SSOT.html` | `https://kooshapari.github.io/SSOT.html` → 404 |
+| `.../PhenoRegistry/` | `SSOT.html`  | `.../PhenoRegistry/SSOT.html` → 200            |
 
-Option 3 is what is committed. The failure is unchanged in colour and
-strictly better in content.
+A leading slash discards the base path entirely. `curl` returned 200 for the
+same URLs, so the first symptom of this was a test suite that appeared to
+prove the published site was broken when it was healthy. `playwright.config.ts`
+keeps the trailing slash and `tests/e2e/site.spec.ts` uses relative paths so
+sub-path deployments work.
 
-## What the owner should decide
+## What is committed now
 
-Either:
+| Requirement                             | Status            |
+| --------------------------------------- | ----------------- |
+| `test:e2e` in `package.json`            | `playwright test` |
+| `@playwright/test` in `devDependencies` | 1.63.0            |
+| `playwright.config.ts` at the repo root | present           |
+| Any `*.spec.ts`                         | 2 files, 8 tests  |
+| `scripts/e2e-missing-runner.sh`         | deleted           |
 
-- **Implement it.** Add `@playwright/test`, commit `playwright.config.ts` and
-  a smoke spec, then set `"test:e2e": "playwright test"`. A useful first
-  target is asserting the built site serves `/` and that no page renders a
-  literal `<REDACTED>` tag, which is the defect class that broke both
-  VitePress builds (see `d0466c7`).
-- **Disable it.** Delete `.github/workflows/e2e.yml` until there are specs, so
-  the failure stops being noise on every push.
+The suite runs against the published site in CI by setting `E2E_BASE_URL`,
+and against a local `vitepress preview` otherwise. Locally, 8/8 pass against
+`https://kooshapari.github.io/PhenoRegistry/`.
 
-## To activate real coverage later
+## Deliberate non-fix
 
-Point `test:e2e` at `playwright test` and delete
-`scripts/e2e-missing-runner.sh`. The file documents the three prerequisites inline
-so the next person does not have to rediscover them.
+An `echo ok` placeholder was rejected throughout, because it would have made
+the check green while testing nothing. Every assertion here is one that has
+actually been observed to fail, including a regression guard that no page
+renders a bare `<REDACTED>` element, which is the defect class that broke both
+VitePress builds (see `d0466c7`).
