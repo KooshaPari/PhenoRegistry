@@ -96,7 +96,9 @@ REPOS=(
   # Owned scope (added 2026-06-23 — validator-loop S9)
   "Eyetracker|eyetracker|owned: interaction boundary (Rust + UniFFI)"
   "Eventra|Eventra|owned: event-bus runtime boundary (Rust CQRS+ES)"
-  "Configra|Configra|owned: config boundary (Rust, ADR-031 canonical)"
+  # Configra removed 2026-09-29 (PR #586): live probe returns 404 — it is a
+  # phantom entry per ECOSYSTEM_MAP §9; the config boundary's canonical
+  # ownership lives with Conft + phenoShared (map §9 note).
   "Benchora|Benchora|owned: perf-harness boundary (Rust criterion)"
   "Authvault|Authvault|owned (archived-superseded 2026-06-20 -> AuthKit; secrets domain historical)"
   "AuthKit|AuthKit|owned: auth-runtime boundary (Rust successor to Authvault; FR-AUTHV-018 landed)"
