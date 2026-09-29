@@ -1,95 +1,48 @@
 ---
 repo: "Tracera"
+product_id: "PRD-TRACERA"
 aliases: ["tracera-server", "tracera-edge", "tracera-events"]
-role: trace-and-observability-ledger
+role: canonical-product-system-model
 status: active
-last_verified: 2026-09-20
-bound_prompts: 2
-bound_plans: 0
-bound_responses: 1
-device: homelab-koosh + macbook
+last_verified: 2026-09-29
+contract: TRC-MATURE-V1
+contract_repo_path: spec/product/mature-contract.v1.json
 ---
 
 # Intent — Tracera
 
-## Intent Statement
+## Canonical intent
 
-Tracera exists to give the user (or another agent) the ability to look
-across past agentic and LLM workflow runs and reason about what depends on
-what. Concretely:
+Tracera is the **persistent canonical product/system model** for accepted product intent, product hierarchy, relations to implementation and evidence, bounded traversal, deterministic assessment, dissatisfaction discovery, and truthful product-state projection.
 
-- If the user changes a spec, Tracera answers "which past sessions assumed
-  this spec was in force?"
-- If the user wants to learn from prior runs, Tracera distills a stable
-  long-term memory entry the next session can load as context.
-- If the user needs to audit who ran what and when, Tracera's ledger gives
-  a per-workspace answer without needing a multi-tenant billing system.
+It should answer questions such as:
+- What is this product ultimately supposed to be?
+- Which pillar/feature/sub-feature/requirement does an implementation artifact serve?
+- What is required for CVP, MVP, GA, or the mature product?
+- Is the current partial implementation a scaffold, husk, vertical slice, or usable narrowed product?
+- Which accepted obligations are verified, failed, stale, unknown, inconclusive, or blocked?
+- What dissatisfaction exists, why, and what exact evidence supports that conclusion?
+- Can the current stage grow into the next primarily through addition/enrichment, or is it accumulating rewrite debt?
 
-Tracera is local-first. The CVP runs on the user's own machine (or one
-homelab node). Cloud surfaces exist only for cross-device sync, fleet
-discovery, and public sharing — not as the primary execution tier.
+## Authority boundary
 
-See [`docs/cvp/Tracera.md`](../cvp/Tracera.md) for the CVP definition
-(this doc scopes Tracera; the CVP defines what to ship first).
+- **Tracera:** product identity, accepted intent/baselines, product graph, trace interpretation, assessment, dissatisfaction, stage/product-state projection.
+- **AgilePlus:** work planning/execution state, claims, checkpoints and work completion.
+- **Source repositories:** source content and revisions.
+- **Authenticated verifiers:** measurement/test results.
 
-## Bound Prompts
+Tracera references and interprets external facts without replacing their native owners.
 
-| Date       | Source | File                                                     | Tag                                                         |
-| ---------- | ------ | -------------------------------------------------------- | ----------------------------------------------------------- |
-| 2026-04-23 | codex  | `docs/curated-prompts/codex/2026-04/bb782500e06bf5d3.md` | bugfix                                                      |
-| 2026-09-19 | user   | this session                                             | infra-cutover (Render → Vercel + Cloudflare Tunnel + fleet) |
+## Mature-first program
 
-## Bound Plans
+The repo-local `TRC-MATURE-V1` working baseline defines 25 pillars, 200 features and 1,000 atomic FR records. CVP/MVP/GA are projections over that mature contract, not independent smaller product definitions.
 
-| Date | Source | File | Status |
-| ---- | ------ | ---- | ------ |
+The count is not a progress claim and is not a quota. Implementation/evidence mapping remains a separate grading phase.
 
-## Bound Responses (specs, ideas, plans from agents)
+## Subordinate capabilities
 
-| Date | Source | File                                     | Kind |
-| ---- | ------ | ---------------------------------------- | ---- |
-| ?    | ?      | `e4047b4c9e4816f6.md` (not materialized) | ?    |
+Trace/session observability, memory distillation, SWEE, ingestion, GraphQL, ML/RAG, fleet/edge and other existing code may support the canonical product model. They do not redefine Tracera as generic APM/observability infrastructure.
 
-## Boundary
+## Historical note
 
-See: [`docs/boundary/Tracera.md`](../boundary/Tracera.md)
-
-## Ecosystem Role
-
-Tracera sits in the **observability layer** of the Phenotype stack:
-
-```text
-   agents / runtimes  (AgentMCP, agentapi, thegent, Jcode)
-        │
-        ▼
-   trace + session ingest  (Tracera)           ← this repo
-        │
-        ▼
-   memory + audit replay   (Tracera; phenodag queue is post-CVP / gated)
-        │
-        ▼
-   cross-product dashboards (HeliosLab, PhenoObservability)
-```
-
-Tracera owns the _trace-link graph_ and _memory distillation_. It does
-not own agent execution, code search, sprint planning, or product
-analytics — those live in their respective repos.
-
-See `ECOSYSTEM_MAP.md` for the canonical ecosystem role and the
-`docs/cvp/Tracera.md` Anti-CVPs section for things that look like
-Tracera but aren't.
-
-## Open Questions
-
-- Memory distillation canonical strategy (pattern-based vs graph-input).
-- Cloudflare Tunnel Access policy for the public URL.
-- Whether the Electrobun desktop's first CVP release ships with packaging
-  polish (auto-update, code signing for distribution) or just the bare
-  desktop binary.
-
-## Change Log
-
-| Date       | Change                                                                         | Worklog                                                    |
-| ---------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| 2026-06-17 | Initial binding (L7-001 sweep)                                                 | `worklogs/L7-001-intent-boundary-curation-2026-06-17.json` |
-| 2026-09-20 | Filled intent statement + ecosystem role; added Render → Vercel cutover prompt | this doc                                                   |
+The 2026-09-20 intent described Tracera primarily as a trace-and-observability ledger. That definition is superseded by this canonical product-model intent while its concrete capabilities remain candidate/subordinate scope subject to the mature contract.
