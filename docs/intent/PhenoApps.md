@@ -65,7 +65,7 @@ rows — 9 as `target:` fields, 5 as `absorbed_into:` (`:2354` conft,
 **two** rows id=59 `:1068` + id=918 `:6032`; conft ×2 the only one-row pair;
 apisync ×4 across **two** rows — `repo-Apisync-batch4` + `repo-Apisync`;
 subject ×2 and melosviz ×2 one of each kind; testing-kit; tracera —
-template `[/]`: 5 of the 14 omit the trailing slash (apisync `:4730`,
+template `[/]`: 6 of the 14 omit the trailing slash (apisync `:4730`/`:4741`,
 subject `:5229`/`:5240`, melosviz `:5257`/`:5268`); plus exactly 196 rows
 targeting bare `phenotype-apps`).
 
@@ -96,3 +96,4 @@ targeting bare `phenotype-apps`).
 | 2026-09-27 | Kilo round 2: ADR-023 re-attributed to the card (+ pointer-gap OQ), children question answered, row count corrected, `device: windows` annotated                                                                                                           | PR #585 review round      |
 | 2026-09-27 | Kilo round 3: gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z; commits 422), row-coverage arithmetic fixed (apisync spans two rows; 196 exact), ADR-023 cite path qualified, `device:` comment cites the define-the-vocabulary lines | PR #584/#585 review round |
 | 2026-09-27 | Kilo round 4: shelf statement past-tense + current location unresolved; arithmetic split into 9 `target` + 5 `absorbed_into` fields with tracely on two rows (id=59/918), conft named the only one-row pair                                                | PR #584 review round      |
+| 2026-09-29 | Kilo round 7: slash-template count 5 → 6 (`:4741` added; 8 slash / 6 no-slash verified by script)                                                                                                                                                          | PR #584 review round      |

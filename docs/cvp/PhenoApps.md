@@ -84,13 +84,6 @@ The PhenoApps CVP is **a verifier who can**:
   is mirror evidence, not an unclassified child. What does not exist is a row
   targeting `apps/phenoData` (earlier "no disposition row" wording corrected
   this round — see Open Questions).
-- **UNRESOLVED scope — not excluded**: `testing-kit` [row id=912
-  `TOO_LARGE_RETIRE`, `fsm: live`, target
-  `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into its
-  apps submodule); card: retired into
-  `phenotype-python-sdk/packages/testing-kit` — row and card conflict, live
-  registry target vs retired card]. Not in either the required-scope or the
-  excluded list until reconciled (Open Questions below).
 - **`apps/<name>` tree location proven** — the verification gate below:
   child paths after the 2026-09-16 pivot must be located before this CVP
   counts as met.
@@ -137,6 +130,16 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
 - **Registry triad**: this CVP + intent + boundary (this repo previously had
   none).
 
+## Unresolved scope (non-gating)
+
+- **`testing-kit`** — in neither the required-scope nor the excluded list
+  until reconciled: row id=912 `TOO_LARGE_RETIRE`, `fsm: live`, target
+  `phenotype-apps (apps/testing-kit/)` (row note: content absorbed into its
+  apps submodule) vs card retirement into
+  `phenotype-python-sdk/packages/testing-kit` — row and card conflict (Open
+  Questions below). Explicitly non-gating: it is not a ship gate of this
+  slice; it blocks only its own reclassification.
+
 ## Post-CVP (defer until CVP is live)
 
 - **`planify-customisations/`**: the registry's recommendation to extract
@@ -167,7 +170,7 @@ ios, tracely, web` (16,868 files) — caveat: that recorded enumeration
   **two** rows (id=59 `:1068`, id=918 `:6032`), conft ×2 the only pair on one
   row, apisync ×4 across **two** rows
   — `repo-Apisync-batch4` and `repo-Apisync`, two fields each — subject
-  ×2 and melosviz ×2 one field of each kind, testing-kit, tracera (template `[/]`: 5 of the 14 — apisync `:4730`,
+  ×2 and melosviz ×2 one field of each kind, testing-kit, tracera (template `[/]`: 6 of the 14 — apisync `:4730`/`:4741`,
   subject `:5229`/`:5240`, melosviz `:5257`/`:5268` — omit the trailing
   slash); exactly 196 further rows target bare
   `phenotype-apps`) still use the old
@@ -249,3 +252,4 @@ effort-governance.md`, not present here). The policy text itself lives in
 | 2026-09-27 | Kilo round 2: gate evidence completed (tree diff — `apps/` deleted, restore source = `absorb-*` branches), required/excluded children re-derived from row states (+tracera, −helios-app, phenoData gap), row-901 same-repo correction, ADR-023 citations re-attributed to the card                                                                                                                        | PR #585 review round      |
 | 2026-09-27 | Kilo round 3: shelf claim narrowed (FocalPoint only; PhenoInfra no row), gate evidence re-labeled pre-deletion (holder branches deleted 22:04Z, commits 422), phenoData given row evidence + moved to excluded, apisync two-row arithmetic + 196 exact, catalog-status divergence OQ (sync_catalog.py reverts hand flips)                                                                                 | PR #584/#585 review round |
 | 2026-09-27 | Kilo/CR round 4: shelf statement past-tense + unresolved (CR), testing-kit marked scope UNRESOLVED pending row/card reconciliation (CR), `absorbed_at` cite `:2817` + `absorbed_on` cross-note, PhenoInfra archived claim → dated live probe, 14-string arithmetic split (9 `target` + 5 `absorbed_into`; tracely rows id=59/918), caveat drops phenoData from required scope, REGISTRY 82-vs-86 restated | PR #584 review round      |
+| 2026-09-29 | Kilo round 7: slash-template count 5 → 6 (`:4741` added, verified by script: 8 slash / 6 no-slash), testing-kit bullet moved out of the must-ship checklist into a non-gating `## Unresolved scope` section                                                                                                                                                                                               | PR #584 review round      |
