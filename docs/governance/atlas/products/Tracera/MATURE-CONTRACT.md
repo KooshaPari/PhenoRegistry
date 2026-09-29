@@ -1,53 +1,25 @@
-# Tracera Mature-Contract Registry Record
+# Tracera specification correction — NOT a completed contract
 
-**Product:** PRD-TRACERA  
-**Repository:** KooshaPari/Tracera  
-**Contract:** TRC-MATURE-V1  
-**Repo contract path:** `spec/product/mature-contract.v1.json`  
-**Repo branch:** `spec/mature-product-contract-v1`  
-**Source snapshot:** `17eef2379d4a673e1c8cc71ed7663fae9e94309b`
+**Product:** PRD-TRACERA. **Repository:** KooshaPari/Tracera. **Recorded:** September 29, 2026.
 
-## Contract inventory
+## Disposition
 
-| Dimension | Current working baseline |
-|---|---:|
-| Pillars | 25 |
-| Features | 200 |
-| Atomic FRs | 1,000 |
-| First-class journeys | 12 |
-| Test generation | Deferred |
-| Verification intent | Specified per FR |
-| Implementation trace mapping | Pending |
-| Evidence mapping | Pending |
+The first TRC-MATURE-V1 catalogue is invalidated. Its fixed 25 x 8 x 5 generation produced generic records, not a comprehensive independently derived atomic specification. Its stages used array positions and its oracle/test-readiness claims were unsupported. The problem was substantive, not merely a large-file read-back limitation.
 
-## Grade
+The rejected source is retained at Tracera commit `ba8f5d8ba845ee5b2b14b30ba947b9c56ef73947`, path `spec/product/mature-contract.v1.json`. The correction is on branch `spec/mature-product-contract-v1`, commit `fdfd4c5ff6ed20e2a7547d0c67e421facca7234b`, PR #1086. No default-branch merge is claimed.
 
-No implementation percentage is asserted yet.
+## Current status
 
-| Metric | State |
-|---|---|
-| Mature contract completeness | unassessed |
-| Highest achieved VP stage | unassessed |
-| Structural shape | unassessed |
-| CVP readiness | unassessed |
-| MVP readiness | unassessed |
-| GA readiness | unassessed |
-| Implementation survivability | unassessed |
-| Mature-contract compatibility | unassessed |
-| Transition burden | unassessed |
+- Comprehensive specification pass: incomplete.
+- Accepted replacement baseline and derived requirement count: unavailable.
+- Product-stage, shape and implementation grades: unassessed.
+- Test-generation readiness and autograder specification completeness: incomplete.
+- Concrete product-test generation: deferred by user.
 
-This is intentional. Specification volume is not implementation evidence.
+An invalidated catalogue is not zero product scope and cannot be used as a passing denominator. Existing source-native requirements and historical decisions remain intact.
 
-## Canonical role
+## Correct next work
 
-Persistent canonical product/system model: accepted intent, product hierarchy, trace relations, evidence interpretation, deterministic assessment, dissatisfaction discovery, bounded navigation, and truthful product/stage projection.
+Reconcile accepted intent and exact product/source surfaces; derive genuine distinct obligations and concrete acceptance cases; connect semantic hierarchy, stage/journey dependency closure, work surfaces and growth costs. Review omissions and duplication. Record unresolved coverage, then derive counts from the result. Do not perform a new fixed-size generation or simply remap the rejected rows.
 
-AgilePlus remains canonical for work execution.
-
-## Next grading frontier
-
-1. Map each FR to actual current implementation/component surfaces.
-2. Reconcile existing tests to declared future test IDs; do not mass-generate missing tests yet.
-3. Bind the 12 first-class journeys to concrete FR subsets.
-4. Derive evidence-backed feature closure, journey closure, structural shape and VP readiness.
-5. Record transition debt for temporary/stub implementations.
+See [count-independent specification](../../COUNT-INDEPENDENT-SPECIFICATION.md).
