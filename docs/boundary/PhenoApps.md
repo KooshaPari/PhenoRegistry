@@ -15,7 +15,7 @@ out_of_scope:
   - "Planify upstream/ AGPL subtree (verbatim fork, DO NOT MODIFY)"
   - "row id=901 = superseded classification of this same repo (KooshaPari/phenotype-apps, 1.7GB; disposition B:WORKING / fsm archived; note: TOO_INCOMPLETE_RETIRE 2026-07-17, resolved 2026-07-18) — evidence for the sunset-shelf question, out of in-scope contract"
   - "archived source repos' lifecycle (archive/delete happens at the source repo)"
-  - "testing-kit — UNRESOLVED row/card conflict (row id=912 live target vs retired card); pointer only, NOT an exclusion, non-gating — see `## Unresolved scope (non-gating)`"
+  # testing-kit: NOT an out_of_scope entry — neither in scope nor out of scope until the row/card conflict is reconciled; see `## Unresolved scope (non-gating)` below
 ---
 
 # Boundary — PhenoApps
