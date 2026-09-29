@@ -1,0 +1,96 @@
+{
+  "schema": "harness-recovery-diagnostic/v1",
+  "product": "KooshaPari/KCode",
+  "source_revision": "046ea2af5e01e84449f65d086510b51152360215",
+  "timestamp": "2026-09-29T18:37:05.969658+00:00",
+  "script_sha256": "a653f63a46154ff01c98ced6fe74a96a93ce97ccec4a48975678ec90162d5378",
+  "runtime": "3.13.5",
+  "scope": "synthetic identity-policy model only",
+  "diagnostic_assertions": "passed",
+  "native_product_tests": "NOT_RUN",
+  "product_acceptance": "UNKNOWN",
+  "production_verifier": false,
+  "limitations": [
+    "No daemon launched",
+    "No artifact or attestation verified",
+    "Freshness is a fixture flag, not a validated clock",
+    "Policy trust and storage immutability not implemented"
+  ],
+  "cases": [
+    {
+      "id": "matching-fixture",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "id": "reject-product",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-contract",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-configuration",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-environment",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-verifier",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-status",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-collector",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-conflict",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-fresh",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-cases",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-artifact",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-new-client-old-daemon",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-missing-candidate",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "id": "reject-skipped-required-case",
+      "observed": false,
+      "expected": false
+    }
+  ]
+}
