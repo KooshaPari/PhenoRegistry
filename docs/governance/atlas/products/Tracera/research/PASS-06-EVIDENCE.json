@@ -1,0 +1,353 @@
+{
+  "schema_version": "0.1.0",
+  "pass_id": "TRC-RESEARCH-06",
+  "status": "partial_not_design_complete",
+  "source_snapshots": {
+    "tracera": "3c289c78a76b292826f019c233f2ce1f7200c197",
+    "registry": "364006ad98c9647f5f5bb8710f03f66bb5f39c49"
+  },
+  "scope": "Tracera technical bootstrap and worker-neutral oracle; AgilePlus boundary only",
+  "sources": [
+    {
+      "id": "I1",
+      "title": "Tracera web dependency manifest",
+      "url": "https://github.com/KooshaPari/Tracera/blob/3c289c78a76b292826f019c233f2ce1f7200c197/frontend/apps/web/package.json",
+      "accessed_on": "2026-09-29",
+      "review_extent": "lines 1-235; manifest only, not runtime reachability",
+      "git_blob": "c4dec44374fc219de61f8a0302a1330656dab05b"
+    },
+    {
+      "id": "I2",
+      "title": "Tracera Store and TraceLink",
+      "url": "https://github.com/KooshaPari/Tracera/blob/3c289c78a76b292826f019c233f2ce1f7200c197/crates/tracera-server/src/store.rs",
+      "accessed_on": "2026-09-29",
+      "review_extent": "lines 1-210; interface/types, not all store implementations",
+      "git_blob": "c2a1acf2dafdaf9d45513aef54ee2c421b8f1091"
+    },
+    {
+      "id": "I3",
+      "title": "Tracera product query functions",
+      "url": "https://github.com/KooshaPari/Tracera/blob/3c289c78a76b292826f019c233f2ce1f7200c197/crates/tracera-server/src/product/queries.rs",
+      "accessed_on": "2026-09-29",
+      "review_extent": "lines 1-270; static helper inspection, callers not exhaustively checked",
+      "git_blob": "a0556329e4c96340c9dceef85439fe5c002b7522"
+    },
+    {
+      "id": "I4",
+      "title": "Previous bootstrap decision ledger",
+      "url": "https://github.com/KooshaPari/PhenoRegistry/blob/364006ad98c9647f5f5bb8710f03f66bb5f39c49/docs/governance/atlas/products/Tracera/research/BOOTSTRAP-DECISION-LEDGER.md",
+      "accessed_on": "2026-09-29",
+      "review_extent": "complete short document; previous assistant recommendations are not external proof"
+    },
+    {
+      "id": "I5",
+      "title": "Previous academic evidence matrix",
+      "url": "https://github.com/KooshaPari/PhenoRegistry/blob/364006ad98c9647f5f5bb8710f03f66bb5f39c49/docs/governance/atlas/products/Tracera/research/ACADEMIC-EVIDENCE-MATRIX.md",
+      "accessed_on": "2026-09-29",
+      "review_extent": "complete short document; historical summaries, not replicated results"
+    },
+    {
+      "id": "I6",
+      "title": "Archived June 10 user prompt on ZyBooks position and slope",
+      "url": "https://github.com/KooshaPari/PhenoRegistry/blob/364006ad98c9647f5f5bb8710f03f66bb5f39c49/handbook/specs/research/ecosystem/ChatGPT-Software%20Project%20Traceability%20Tools.md",
+      "accessed_on": "2026-09-29",
+      "review_extent": "lines 1050-1160; direct user Prompt at 2:37:24 PM distinguished from assistant Response",
+      "git_blob": "9f3c20847d60707a32f3844414920e9b82f67a83"
+    },
+    {
+      "id": "E1",
+      "title": "Kuzu repository and archive notice",
+      "url": "https://github.com/kuzudb/kuzu",
+      "accessed_on": "2026-09-29",
+      "review_extent": "repository notice/README; archived October 10, 2025, not a vulnerability audit"
+    },
+    {
+      "id": "E2",
+      "title": "LadybugDB README",
+      "url": "https://github.com/LadybugDB/ladybug/blob/f60112199f01b54571318115c6144fe3517b5dca/README.md",
+      "accessed_on": "2026-09-29",
+      "review_extent": "lines 1-100 and repository metadata; not benchmarked",
+      "git_blob": "eeb97e11f54ab10bf4ad9abf03d415e653fd10aa"
+    },
+    {
+      "id": "E3",
+      "title": "Ladybug connections and concurrency",
+      "url": "https://docs.ladybugdb.com/concurrency/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "database-object/process restrictions and multiple-connection semantics"
+    },
+    {
+      "id": "E4",
+      "title": "SCIP README",
+      "url": "https://github.com/scip-code/scip/blob/main/README.md",
+      "accessed_on": "2026-09-29",
+      "review_extent": "complete README; fetched blob recorded; not tested on Tracera",
+      "git_blob": "760ea9912f9de9ef0f79b7e16f285736cac04d05",
+      "observed_head": "08b592d981d675d46de9301b50c66ed9064dc759"
+    },
+    {
+      "id": "E5",
+      "title": "SCIP governance change",
+      "url": "https://sourcegraph.com/blog/the-future-of-scip",
+      "accessed_on": "2026-09-29",
+      "review_extent": "official March 25, 2026 announcement"
+    },
+    {
+      "id": "E6",
+      "title": "Tree-sitter introduction",
+      "url": "https://tree-sitter.github.io/tree-sitter/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "incremental parsing scope and capabilities"
+    },
+    {
+      "id": "E7",
+      "title": "React Flow performance",
+      "url": "https://reactflow.dev/learn/advanced-use/performance",
+      "accessed_on": "2026-09-29",
+      "review_extent": "memoization, state selection, collapsed trees, styling tradeoffs"
+    },
+    {
+      "id": "E8",
+      "title": "React Flow core and Pro distinction",
+      "url": "https://reactflow.dev/pro",
+      "accessed_on": "2026-09-29",
+      "review_extent": "MIT core versus paid support/examples; no commercial/legal clearance asserted"
+    },
+    {
+      "id": "E9",
+      "title": "Sigma architecture",
+      "url": "https://www.sigmajs.org/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "WebGL rendering versus graphology data/algorithms and customization tradeoffs"
+    },
+    {
+      "id": "E10",
+      "title": "ELK JavaScript layout",
+      "url": "https://github.com/kieler/elkjs",
+      "accessed_on": "2026-09-29",
+      "review_extent": "README layout scope and licensing reference; license compatibility not adjudicated"
+    },
+    {
+      "id": "E11",
+      "title": "SQLite recursive CTEs",
+      "url": "https://sqlite.org/lang_with.html",
+      "accessed_on": "2026-09-29",
+      "review_extent": "recursive traversal capability; not a graph workload benchmark"
+    },
+    {
+      "id": "E12",
+      "title": "PostgreSQL recursive CTEs",
+      "url": "https://www.postgresql.org/docs/current/queries-with.html",
+      "accessed_on": "2026-09-29",
+      "review_extent": "recursive queries and cycle/search handling; not deployment proof"
+    },
+    {
+      "id": "E13",
+      "title": "Oxigraph RDF and SPARQL toolkit",
+      "url": "https://github.com/oxigraph/oxigraph",
+      "accessed_on": "2026-09-29",
+      "review_extent": "README components and author-stated development/performance limits"
+    },
+    {
+      "id": "E14",
+      "title": "Gradescope autograder specification",
+      "url": "https://gradescope-autograders.readthedocs.io/en/latest/specs/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "JSON feedback/status/score/visibility semantics"
+    },
+    {
+      "id": "E15",
+      "title": "SWE-bench evaluation harness",
+      "url": "https://www.swebench.com/SWE-bench/guides/evaluation/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "prediction/run/environment evaluation interface; no benchmark run here"
+    },
+    {
+      "id": "E16",
+      "title": "W3C PROV-O",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "core Entity/Activity/Agent provenance semantics, not complete mapping"
+    },
+    {
+      "id": "E17",
+      "title": "W3C SHACL",
+      "url": "https://www.w3.org/TR/shacl/",
+      "accessed_on": "2026-09-29",
+      "review_extent": "shape/data validation distinction and validation reports, not behavioral correctness"
+    },
+    {
+      "id": "P1",
+      "title": "Repository Intelligence Graph",
+      "url": "https://arxiv.org/html/2601.10112v1",
+      "accessed_on": "2026-09-29",
+      "review_extent": "abstract, extraction design, evaluation protocol and validity sections",
+      "publication_date": "2026-01-15",
+      "replicated": false
+    },
+    {
+      "id": "P2",
+      "title": "Agent Retrieval Bench",
+      "url": "https://arxiv.org/html/2607.24882v1",
+      "accessed_on": "2026-09-29",
+      "review_extent": "abstract, error patterns, candidate filters and limitations",
+      "publication_date": "2026-07-27",
+      "replicated": false
+    },
+    {
+      "id": "P3",
+      "title": "TraceDev",
+      "url": "https://arxiv.org/html/2607.18886v1",
+      "accessed_on": "2026-09-29",
+      "review_extent": "trace construction, dataset/test generation, metrics and validity sections",
+      "publication_date": "2026-07-21",
+      "replicated": false
+    },
+    {
+      "id": "P4",
+      "title": "TVR automotive requirement traceability",
+      "url": "https://arxiv.org/html/2504.15427v1",
+      "accessed_on": "2026-09-29",
+      "review_extent": "abstract, practical use and threats to validity",
+      "publication_date": "2025-04-21",
+      "replicated": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "kind": "observed_source",
+      "statement": "Tracera declares React Flow, Sigma/Graphology, Cytoscape and ELK; dependency presence does not prove integration.",
+      "sources": [
+        "I1"
+      ]
+    },
+    {
+      "id": "C02",
+      "kind": "observed_source",
+      "statement": "The existing Store boundary names PostgreSQL and SQLite; TraceLink has no explicit endpoint revision, configuration or authority fields.",
+      "sources": [
+        "I2"
+      ]
+    },
+    {
+      "id": "C03",
+      "kind": "static_finding",
+      "statement": "query_intents does not use ProductQuery.product_id; invalid kind/status strings parse to None, effectively removing those filters. Caller isolation remains unverified.",
+      "sources": [
+        "I3"
+      ]
+    },
+    {
+      "id": "C04",
+      "kind": "observed_source",
+      "statement": "Kuzu upstream is archived; LadybugDB has a current non-archived repository and exposes Rust bindings, but requires concurrency and lifecycle qualification.",
+      "sources": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "id": "C05",
+      "kind": "design_proposal",
+      "statement": "Keep SQLite/PostgreSQL as the low-rewrite baseline; benchmark alternative engines behind a port instead of moving canonical truth immediately.",
+      "sources": [
+        "I2",
+        "E3",
+        "E11",
+        "E12"
+      ]
+    },
+    {
+      "id": "C06",
+      "kind": "design_proposal",
+      "statement": "Use compiler/indexer-backed SCIP for symbol references, tree-sitter for syntax, native build metadata for build topology; none establishes requirement satisfaction by itself.",
+      "sources": [
+        "E4",
+        "E6",
+        "P1"
+      ]
+    },
+    {
+      "id": "C07",
+      "kind": "design_proposal",
+      "statement": "Separate authoring, broad exploration and algorithm/layout responsibilities; do not make renderer state the product authority.",
+      "sources": [
+        "I1",
+        "E7",
+        "E9",
+        "E10"
+      ]
+    },
+    {
+      "id": "C08",
+      "kind": "design_proposal",
+      "statement": "Borrow structured visible feedback from educational graders, but do not equate a display status, score override or historical best score with current product acceptance.",
+      "sources": [
+        "I6",
+        "E14"
+      ]
+    },
+    {
+      "id": "C09",
+      "kind": "evidence_qualification",
+      "statement": "RIG findings concern structural questions and a partly manually constructed corpus; they do not establish general coding productivity or an automatic Cargo/npm adapter.",
+      "sources": [
+        "P1"
+      ]
+    },
+    {
+      "id": "C10",
+      "kind": "evidence_qualification",
+      "statement": "TraceDev is relevant prior art for trace-guided multi-agent feedback, but its generated tests and semantic LLM judging need independent oracle controls in a Tracera pilot.",
+      "sources": [
+        "P3"
+      ]
+    },
+    {
+      "id": "C11",
+      "kind": "design_proposal",
+      "statement": "Measure retrieval, patch acceptance and maintenance effort separately rather than promoting file-level recall into product success.",
+      "sources": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "C12",
+      "kind": "design_proposal",
+      "statement": "RDF/PROV/SHACL adapters may reuse Oxigraph subcrates without committing the canonical store to an RDF-only architecture.",
+      "sources": [
+        "E13",
+        "E16",
+        "E17"
+      ]
+    }
+  ],
+  "experiment": {
+    "id": "TRC-EXP-EVIDENCE-BINDING-01",
+    "source": "pass06/reference_oracle.py",
+    "results": "pass06/reference-results.json",
+    "checks": 30,
+    "mutation_controls": 7,
+    "success": true,
+    "product_verified": false
+  },
+  "unresolved": [
+    "whole-source coverage",
+    "competitor hands-on tests",
+    "complete paper replication",
+    "configuration subsumption",
+    "cross-engine performance/recovery benchmark",
+    "browser authoring/e2e benchmark",
+    "cryptographic/trusted verifier integration",
+    "Tracera Rust execution",
+    "independent semantic review",
+    "AgilePlus methodology teardown"
+  ],
+  "access_limitations": [
+    "Container outbound GitHub DNS failed; connector/web reads succeeded. No clone/build/download benchmark claimed.",
+    "Prior memory search is retrieval guidance, not primary evidence for assistant-authored historical conclusions."
+  ]
+}

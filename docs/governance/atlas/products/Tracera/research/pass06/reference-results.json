@@ -1,0 +1,266 @@
+{
+  "checks": [
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "missing proof",
+      "pass": true
+    },
+    {
+      "actual": "verified",
+      "expected": "verified",
+      "name": "exact qualifying proof",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong product",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong baseline",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong candidate",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong configuration",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong expectation",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "reject wrong evaluation",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "missing configuration is not wildcard",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "untrusted producer",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "explicit unknown",
+      "pass": true
+    },
+    {
+      "actual": "stale",
+      "expected": "stale",
+      "name": "explicit stale",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "explicit skipped",
+      "pass": true
+    },
+    {
+      "actual": "inconclusive",
+      "expected": "inconclusive",
+      "name": "explicit error",
+      "pass": true
+    },
+    {
+      "actual": "failed",
+      "expected": "failed",
+      "name": "explicit failed",
+      "pass": true
+    },
+    {
+      "actual": "stale",
+      "expected": "stale",
+      "name": "old evidence",
+      "pass": true
+    },
+    {
+      "actual": "inconclusive",
+      "expected": "inconclusive",
+      "name": "future timestamp",
+      "pass": true
+    },
+    {
+      "actual": "inconclusive",
+      "expected": "inconclusive",
+      "name": "conflicting current results",
+      "pass": true
+    },
+    {
+      "actual": "inconclusive",
+      "expected": "inconclusive",
+      "name": "collector error cannot reuse old green",
+      "pass": true
+    },
+    {
+      "actual": null,
+      "expected": null,
+      "name": "empty denominator",
+      "pass": true
+    },
+    {
+      "actual": "not_assessable",
+      "expected": "not_assessable",
+      "name": "duplicate denominator",
+      "pass": true
+    },
+    {
+      "actual": {
+        "criteria": {
+          "persist": "verified",
+          "recover": "unknown"
+        },
+        "ratio": 0.5,
+        "state": "unknown"
+      },
+      "expected": {
+        "criteria": {
+          "persist": "verified",
+          "recover": "unknown"
+        },
+        "ratio": 0.5,
+        "state": "unknown"
+      },
+      "name": "missing mandatory criterion",
+      "pass": true
+    },
+    {
+      "actual": {
+        "criteria": {
+          "persist": "verified"
+        },
+        "ratio": 1.0,
+        "state": "verified"
+      },
+      "expected": {
+        "criteria": {
+          "persist": "verified"
+        },
+        "ratio": 1.0,
+        "state": "verified"
+      },
+      "name": "worker substitution",
+      "pass": true
+    },
+    {
+      "actual": "unknown",
+      "expected": "unknown",
+      "name": "work done grants no proof",
+      "pass": true
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "name": "idempotent replay",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "conflicting replay rejected",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "retained proof append-only",
+      "pass": true
+    },
+    {
+      "actual": "verified",
+      "expected": "verified",
+      "name": "proof survives restart",
+      "pass": true
+    },
+    {
+      "actual": "verified",
+      "expected": "verified",
+      "name": "proof independent of work retention",
+      "pass": true
+    },
+    {
+      "actual": [
+        "e-good"
+      ],
+      "expected": [
+        "e-good"
+      ],
+      "name": "rollback leaves no partial observation",
+      "pass": true
+    }
+  ],
+  "experiment": "TRC-EXP-EVIDENCE-BINDING-01",
+  "limitations": [
+    "Not Tracera Rust/runtime proof",
+    "No cryptographic verifier authentication",
+    "No cross-engine, load, concurrency or migration benchmark",
+    "Exact configuration match only; safe evidence reuse/subsumption unresolved",
+    "Conservative precedence is experimental, not an accepted final oracle"
+  ],
+  "mutation_controls": [
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "product"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "baseline"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "candidate"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "configuration"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "expectation"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "evaluation"
+    },
+    {
+      "bad_state": "verified",
+      "detected": true,
+      "removed_guard": "verifier"
+    }
+  ],
+  "product_test_generation": "deferred",
+  "product_verified": false,
+  "python": "3.13.5",
+  "scope": "synthetic_reference_model_only",
+  "source_sha256": "0e37ef58168c0a5010177163b453b4c044e4d01797c50ca7d5ab92da23c1c7de",
+  "sqlite": "3.46.1",
+  "success": true
+}
