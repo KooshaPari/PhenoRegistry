@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-09-29",
+  "program": "two-product-mature-recovery",
+  "product_scope": ["KooshaPari/Khostty", "KooshaPari/Melosviz"],
+  "registry_is_product_subject": false,
+  "registry_source_snapshot": "85d7cd00cf59c379c05b740e8130a85b0d5bd31b",
+  "registry_branch": "docs/khostty-melosviz-recovery-20260929",
+  "products": {
+    "Khostty": {
+      "source": "a29aa9c6553d9f42aa68e2919116c0f6d53f329d",
+      "spec_branch": "docs/mature-recovery-20260929",
+      "initial_evidence_commit": "3ff9621eda3eca29517cf3f0aed296533ec4f44b",
+      "state": "INCOMPLETE_BLOCKED",
+      "coverage_denominator": "OPEN",
+      "existence_gate": "OPEN",
+      "implementation_candidate": null
+    },
+    "Melosviz": {
+      "source": "1aec20a2ba41a01ed557d1c7f63f9a0089f842cf",
+      "spec_branch": "docs/mature-recovery-20260929",
+      "initial_evidence_commit": "aba72705bfe8e5eebeeabe215260b84c4c6ffa9f",
+      "state": "INCOMPLETE_BLOCKED",
+      "coverage_denominator": "OPEN",
+      "existence_gate": "OPEN",
+      "implementation_candidate": null
+    }
+  },
+  "dependent_internal_repositories_inspected": [],
+  "native_product_tests_run": false,
+  "independent_fresh_review": "NOT_PERFORMED",
+  "post_build_pilot": "NOT_RUN",
+  "overall_percent": null,
+  "acceptance_policy": "Repo-local canonical contracts own product truth; registry indexes evidence. No count-based or missing-evidence greens."
+}
