@@ -64,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build artifact (for verification source)
-        # Replace with your build. The artifact is what gets verified.
+        # Replace this with your own build; the attestation covers the artifact it emits.
         run: |
           mkdir -p dist
           echo "build artifact" > dist/artifact
@@ -90,7 +90,7 @@ jobs:
 ## How to apply
 
 1. Copy the template above to your repo as `.github/workflows/verify-attestation.yml`.
-2. Pin the SHAs of all `uses:` actions. Use these known-good SHAs (verified):
+2. Pin the SHAs of all `uses:` actions rather than floating tags. Example pin:
    - `actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd`
 3. Customize the `Build artifact` step for your stack (must produce the same artifact that the S8 release-attest.yml produces).
 4. The workflow triggers on `v*` tags OR `workflow_dispatch` (manual). For PRs, the trigger is `pull_request` — adjust as needed.
