@@ -126,8 +126,9 @@ absorbed into Authvault per SupSUPERSEDE-2026-06-20. Source repo archived.` —
   `remote_branch_count: 2` and `size_kb: 17` at
   `disposition-index.json:1384-1385` — the two sources disagree on branch
   count, quoted as-is). A 25 MB Go repo and a 17 KB Rust crate cannot be the
-  same repository. The cards agree only on the path: `full_name:
-<REDACTED>/AuthKit` (`AuthKit-2026-06-25.json:3`, plus `repo_path:9`)
+  same repository. The cards agree only on the path:
+  `full_name: <REDACTED>/AuthKit` (`AuthKit-2026-06-25.json:3`, plus
+  `repo_path:9`)
   and `gh_url: .../KooshaPari/AuthKit` (`AuthKit.json:17` only) — a same-path
   collision between two repos, not one card going stale.
 
