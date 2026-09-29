@@ -171,11 +171,11 @@ Re-applied `/tmp/governance-snapshot.patch` (10 commits, `1fa5350939..f615c33c5f
 
 ### Conflict-resolution log (this attempt)
 - **patch 1/10** (`AGENTS.md` content conflict + `SSOT.md`/`STATUS.md` modify/delete): resolved with `git checkout --ours AGENTS.md && git rm -f SSOT.md STATUS.md`; `am --continue` reported "No changes"; `am --skip`.
-- **patch 2/10** (add/add on `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md`; ours has "kill-switch EXECUTED", theirs has "kill-switch→executing"): resolved with `git checkout --ours` + `git add`; "No changes"; `am --skip`.
+- **patch 2/10** (add/add on `findings/2026-06-17-L5-104-dmouse92-to-redacted.md`; ours has "kill-switch EXECUTED", theirs has "kill-switch→executing"): resolved with `git checkout --ours` + `git add`; "No changes"; `am --skip`.
 - **patch 3/10** (content conflict on `AGENTS.md`, modify/delete on `SSOT.md`/`STATUS.md`, add/add on the L5-104 finding file): kept ours on both files, `git rm` the deleted-here files; "No changes"; `am --skip`.
 - **patch 4/10**: applied auto, "No changes -- Patch already applied".
 - **patch 5/10** (content conflict on `AGENTS.md`): `git checkout --ours AGENTS.md`; "No changes"; `am --skip`.
-- **patch 6/10**: applied cleanly as `4f7625ae` (+61 lines in `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md`).
+- **patch 6/10**: applied cleanly as `4f7625ae` (+61 lines in `findings/2026-06-17-L5-104-dmouse92-to-redacted.md`).
 - **patch 7/10** (content conflict on `AGENTS.md`): `git checkout --ours AGENTS.md`; "No changes"; `am --skip`.
 - **patch 8/10** (add/add on `findings/2026-06-17-L5-104-e2e-dag.md`; ours has "kill-switch EXECUTED"): `git checkout --ours` + `git add`; "No changes"; `am --skip`.
 - **patch 9/10**: applied auto, "No changes -- Patch already applied".

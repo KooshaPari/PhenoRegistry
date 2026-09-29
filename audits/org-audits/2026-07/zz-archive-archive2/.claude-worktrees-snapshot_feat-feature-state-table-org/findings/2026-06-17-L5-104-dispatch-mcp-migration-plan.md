@@ -4,7 +4,7 @@
 **Date:** 2026-06-17
 **Status:** PLAN — DO NOT EXECUTE (reviewer: <REDACTED>)
 **Auth context:** `gh` is **<REDACTED>** (active). Dmouse92 is read-only-collaborator (must NOT push).
-**Parent audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` (do not modify)
+**Parent audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` (do not modify)
 **Substrate ADR:** `docs/adr/2026-06-15/ADR-013-pheno-mcp-router-substrate.md`
 **User directive (2026-06-17):** *"dispatch-mcp should be deleted as it needs to have all remaining work fully absorbed to substrate. The ver on <REDACTED> had this done yesterday, repeat for any dmouse additions worthwhile to migrate."*
 
@@ -12,7 +12,7 @@
 
 ## ⚠ Critical correction vs parent audit doc
 
-The parent audit doc (`findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md:17`) states:
+The parent audit doc (`findings/2026-06-17-L5-104-dmouse92-to-redacted.md:17`) states:
 > `dispatch-mcp` — KP HEAD: 2026-06-18, unmerged branch `chore/w2-1-dispatch-mcp-2026-06-15`
 
 **Verified 2026-06-17 against `gh api`:**
@@ -341,7 +341,7 @@ Per-module commit split (recommended for review):
 **Target:** `<REDACTED>/repos` (this monorepo)
 **Branch:** `chore/l5-104-dispatch-mcp-migration-2026-06-17` (cut from current branch `chore/w5-adrs-sota-2026-06-15`)
 **Files to touch (read-only cross-references — per non-negotiable rule "ALWAYS prefer editing an existing file"):**
-- `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` — append "Section 2.1 dispatch-mcp: COMPLETE" with link to this plan file (the reviewer said "I'll integrate your findings" — leave this for the reviewer; if the reviewer accepts the plan, the parent audit doc gets one new bullet).
+- `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` — append "Section 2.1 dispatch-mcp: COMPLETE" with link to this plan file (the reviewer said "I'll integrate your findings" — leave this for the reviewer; if the reviewer accepts the plan, the parent audit doc gets one new bullet).
 - `AGENTS.md` — under "Sub-repos at a Glance → pheno-* family → Python", note that `pheno-mcp-router` now owns cost/budget/quota/audit per ADR-013 (one-line update).
 - `SSOT.md` — note substrate split: dispatch-mcp is a consumer of pheno-mcp-router for tier/cost/budget/quota/audit/llama_cpp.
 - `STATUS.md` — note Dmouse92 dispatch-mcp archive complete.
@@ -449,7 +449,7 @@ grep -ri "from dispatch_mcp\|import dispatch_mcp" /Users/<REDACTED>/CodeProjects
 gh repo archive <REDACTED>/dispatch-mcp --confirm
 ```
 
-(Per parent audit doc `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md:76`, user explicitly said: *"dispatch-mcp should be deleted"*.)
+(Per parent audit doc `findings/2026-06-17-L5-104-dmouse92-to-redacted.md:76`, user explicitly said: *"dispatch-mcp should be deleted"*.)
 
 ---
 
@@ -466,7 +466,7 @@ Schema: worklog v2.1 (per ADR-015 v2.0 → v2.1 bump; ADR-023 device field).
   "branch": "chore/l5-104-dispatch-mcp-migration-2026-06-17",
   "device": "macbook",
   "source_decision_doc": "findings/2026-06-17-L5-104-dispatch-mcp-migration-plan.md",
-  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+  "parent_audit": "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
   "substrate_adr": "docs/adr/2026-06-15/ADR-013-pheno-mcp-router-substrate.md",
   "summary": {
     "plan_written": "findings/2026-06-17-L5-104-dispatch-mcp-migration-plan.md",
@@ -524,4 +524,4 @@ Schema: worklog v2.1 (per ADR-015 v2.0 → v2.1 bump; ADR-023 device field).
 
 ## Executive summary
 
-The parent audit doc (`findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md`) reports `<REDACTED>/dispatch-mcp@main` at 2026-06-18 with W2-1 absorption "yesterday", but `gh api` and local-branch inventory on 2026-06-17 19:00 PDT show main is **still at `a050e06` (2026-06-15)** and the 6 unique Dmouse92 commits sit in 6 unmerged branches. The `pheno-mcp-router` substrate is also **not on GitHub yet** (`404 Not Found`) — it exists as a local-only clone with 8 commits and a dirty working tree. Of the 6 Dmouse92 commits, 6 modules (`tiers/cost/budget/quota/audit/cost_middleware.py`, ~2,000 LOC) belong in the substrate per ADR-013's "all pheno-mcp-* servers are built on `pheno-mcp-router`" mandate, 5 files (`core/port.py`, `core/protocol.py`, `core/types.py`, `adapters/omni_http.py`, `server.py` extensions + the mock-backend test) stay in dispatch-mcp, the `LlamaAdapter` and `OpenAICompatAdapter` (the latter KP-authored on `feat/openai-compat-2026-06-15`) port to the substrate as new concrete adapters, the `PROVIDER_GUIDE.md` ports to substrate docs, the `Dockerfile.llama` + `llama-compose.yml` port to `phenotype-ops/agent-devops-setups/llama-cpp/`, and one cherry-pick (`dc4f1a3` CHEAP_LLM_MCP_DEPRECATION.md) is already done on `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` — needs merge to main. The 10-step execution sequence (publish substrate → cherry-pick deprecation doc → port 6 substrate modules → port docs → port 2 adapters → port Docker files → land dispatch-mcp W2-1 with substrate coupling → archive Dmouse92 dispatch-mcp → archive <REDACTED> dispatch-mcp → update AGENTS.md/SSOT.md/STATUS.md) gates on 8 verification commands in §5.3 before either archive can fire. Total estimate: ~2,400 LOC added to substrate, ~2,000 LOC deleted from dispatch-mcp, 0 net change to fleet functionality.
+The parent audit doc (`findings/2026-06-17-L5-104-dmouse92-to-redacted.md`) reports `<REDACTED>/dispatch-mcp@main` at 2026-06-18 with W2-1 absorption "yesterday", but `gh api` and local-branch inventory on 2026-06-17 19:00 PDT show main is **still at `a050e06` (2026-06-15)** and the 6 unique Dmouse92 commits sit in 6 unmerged branches. The `pheno-mcp-router` substrate is also **not on GitHub yet** (`404 Not Found`) — it exists as a local-only clone with 8 commits and a dirty working tree. Of the 6 Dmouse92 commits, 6 modules (`tiers/cost/budget/quota/audit/cost_middleware.py`, ~2,000 LOC) belong in the substrate per ADR-013's "all pheno-mcp-* servers are built on `pheno-mcp-router`" mandate, 5 files (`core/port.py`, `core/protocol.py`, `core/types.py`, `adapters/omni_http.py`, `server.py` extensions + the mock-backend test) stay in dispatch-mcp, the `LlamaAdapter` and `OpenAICompatAdapter` (the latter KP-authored on `feat/openai-compat-2026-06-15`) port to the substrate as new concrete adapters, the `PROVIDER_GUIDE.md` ports to substrate docs, the `Dockerfile.llama` + `llama-compose.yml` port to `phenotype-ops/agent-devops-setups/llama-cpp/`, and one cherry-pick (`dc4f1a3` CHEAP_LLM_MCP_DEPRECATION.md) is already done on `chore/w1-1-cheap-llm-mcp-deprecation-note-2026-06-15` — needs merge to main. The 10-step execution sequence (publish substrate → cherry-pick deprecation doc → port 6 substrate modules → port docs → port 2 adapters → port Docker files → land dispatch-mcp W2-1 with substrate coupling → archive Dmouse92 dispatch-mcp → archive <REDACTED> dispatch-mcp → update AGENTS.md/SSOT.md/STATUS.md) gates on 8 verification commands in §5.3 before either archive can fire. Total estimate: ~2,400 LOC added to substrate, ~2,000 LOC deleted from dispatch-mcp, 0 net change to fleet functionality.

@@ -193,7 +193,7 @@ The 4-task reclassification sequence:
 
 **Result:** 6 PRs opened on <REDACTED>, 18 Dmouse92 repos archived, 0 net content loss. ADR-029 ratified.
 
-**Audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` (364 lines) — full cross-reference matrix + decision matrix + execution log.
+**Audit doc:** `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` (364 lines) — full cross-reference matrix + decision matrix + execution log.
 
 ---
 

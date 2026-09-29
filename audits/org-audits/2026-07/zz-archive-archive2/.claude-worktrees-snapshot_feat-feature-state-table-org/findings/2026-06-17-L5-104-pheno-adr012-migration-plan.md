@@ -7,7 +7,7 @@
 **Inputs:**
 - `findings/2026-06-15-CONFIG_CONSOLIDATION-v1.md` (subagent-B v6 audit, pre-ADR-022)
 - `docs/adr/2026-06-15/ADR-022-config-consolidation-two-crate-split.md:1-72` (ratified 2026-06-15)
-- `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md:89-117` (parent L5-104 audit, this repo)
+- `findings/2026-06-17-L5-104-dmouse92-to-redacted.md:89-117` (parent L5-104 audit, this repo)
 - `findings/SESSION_STATUS_2026_06_15_0105.md` (recent context)
 
 ## Executive summary
@@ -32,7 +32,7 @@ The Dmouse92 `pheno` repo's `chore/adr-012-config-consolidation-2026-06-15` bran
 
 **File overlap with Dmouse92 ADR-012:** PR #130 touches `crates/agileplus-sqlite/src/lib/{adapter.rs,tests/*.rs}` (3 files) and 23 workflows; PR #131 touches `rust/.github/workflows/ci.yml` (1 file); PR #132 touches 28 workflows + 11 paths in `agileplus-agents/.github/workflows/`. None touch `crates/phenotype-config-*`, `Cargo.toml` workspace members, `docs/slsa.md`, `docs/index.md`, `justfile`, `Taskfile.yml`, or any `CANONICAL.md` markers. **Zero file overlap with the actual ADR-012 config consolidation scope.**
 
-**Worklog note (parent L5-104 file `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md:196`):**
+**Worklog note (parent L5-104 file `findings/2026-06-17-L5-104-dmouse92-to-redacted.md:196`):**
 > "PR #130 (W5 ADR-012 config consolidation PR-1/2/3) is OPEN on <REDACTED>/pheno and may already contain the Dmouse92 pheno ADR-012 work — verify before cherry-picking."
 
 **Resolution:** PR #130 is NOT an ADR-012 PR. The "W5 ADR-012" label was mis-attributed in the L5-104 parent note. PR #130 is purely action-SHA pinning + agileplus-sqlite deletion. The note should be corrected in the next L5-104 edit pass.
@@ -330,7 +330,7 @@ The 7 unique commits match the local analysis (§2.1) byte-for-byte.
 2. ✅ Substrate PRs (Steps 1-3) drafted or merged.
 3. ✅ pheno-side PRs (Steps 4-5) drafted or merged.
 4. ⏳ `Dmouse92/pheno` archive action (Step 6) — pending Steps 1-5 merge.
-5. ⏳ Update `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md` §2.2 from PENDING to RESOLVED after Step 6.
+5. ⏳ Update `findings/2026-06-17-L5-104-dmouse92-to-redacted.md` §2.2 from PENDING to RESOLVED after Step 6.
 
 **Archive prerequisites (no-go conditions):**
 - ❌ DO NOT archive Dmouse92/pheno if any of the 7 commits contains content not yet captured in §2.2.
@@ -375,7 +375,7 @@ Create `worklogs/L5-104-pheno-adr012-migration-2026-06-17.json` with the followi
   "device": "macbook",
   "owner": "<REDACTED>",
   "linked_findings": [
-    "findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md",
+    "findings/2026-06-17-L5-104-dmouse92-to-redacted.md",
     "findings/2026-06-15-CONFIG_CONSOLIDATION-v1.md",
     "docs/adr/2026-06-15/ADR-022-config-consolidation-two-crate-split.md"
   ],
@@ -410,5 +410,5 @@ All commands cited in this plan are reproducible from `/tmp/dmouse92-migration/p
 - File-fate diff: `git diff --name-status kp/main...chore/adr-012-config-consolidation-2026-06-15` in same
 - Substrate genesis: `gh api 'repos/<REDACTED>/phenotype-config/commits?per_page=15'` returns `599d37d feat(genesis): bootstrap config role with settly crate (RFC 002)`
 - ADR-022 source: `docs/adr/2026-06-15/ADR-022-config-consolidation-two-crate-split.md:1-72`
-- Parent L5-104 audit: `findings/2026-06-17-L5-104-dmouse92-to-<REDACTED>.md:89-117, 196`
+- Parent L5-104 audit: `findings/2026-06-17-L5-104-dmouse92-to-redacted.md:89-117, 196`
 - v6 subagent-B pre-ADR-022 audit: `findings/2026-06-15-CONFIG_CONSOLIDATION-v1.md` (substrate was `phenoShared`+`pheno-config`+Python; superseded by ADR-022 RFC 002 on 2026-06-17)
