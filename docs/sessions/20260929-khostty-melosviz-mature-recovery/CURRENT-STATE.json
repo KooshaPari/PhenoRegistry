@@ -16,13 +16,12 @@
       "source": "a29aa9c6553d9f42aa68e2919116c0f6d53f329d",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "3ff9621eda3eca29517cf3f0aed296533ec4f44b",
-      "latest_evidence_commit": "b174fe56f9c54438389b865bbaa2053c37c4fdeb",
+      "latest_evidence_commit": "a54763ab81f692f3f5159931a51110e0da26a96b",
       "draft_pr": 7,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_PARALLEL_EXPERIMENTAL_IMPLEMENTATION",
       "general_dev_handoff": false,
       "ready_work_packages": [
-        "K-E01-EMBED",
         "K-E02",
         "K-E03"
       ],
@@ -33,13 +32,14 @@
       "executed_evidence": "TRACKED_TREE_AND_OWNERSHIP_CLOSED; AGENT_SERVER_SOURCE_UNMOUNTED; CI_FALSE_GREEN_MECHANISMS_IDENTIFIED",
       "corrected_differentiation": "ABI_MANIFEST_IMPLEMENTATION_AND_HEADER_INHERITED_FROM_UPSTREAM",
       "evidence_path": "docs/specs/mature-recovery-20260929/pass5/EXPERIMENT-RECEIPT.json",
-      "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md"
+      "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md",
+      "finding_namespace": "UNIQUE_K_F01_TO_K_F17"
     },
     "Melosviz": {
       "source": "1aec20a2ba41a01ed557d1c7f63f9a0089f842cf",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "aba72705bfe8e5eebeeabe215260b84c4c6ffa9f",
-      "latest_evidence_commit": "a998b0111c945abbb9eaffd17448caa74b1a40f8",
+      "latest_evidence_commit": "ed9683bd6f1f725b3aefbc001cd905b26882b406",
       "draft_pr": 297,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_EXPERIMENTAL_IMPLEMENTATION",
@@ -66,7 +66,8 @@
       "oracle_selftests_matched": 28,
       "product_e2e_executed": false,
       "evidence_path": "docs/specs/mature-recovery-20260929/pass5/EXPERIMENT-RECEIPT.json",
-      "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md"
+      "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md",
+      "finding_namespace": "UNIQUE_M_F01_TO_M_F28"
     }
   },
   "tools": {
@@ -74,7 +75,9 @@
     "inventory_selftest": "tools/selftest_inventory.py",
     "synthetic_inventory_checks_passed": 9,
     "complete_product_tree_inventory_executed": true,
-    "product_tree_inventory_note": "Both frozen tracked trees structurally enumerated; semantic resolution remains open. Khostty fuzz corpus grouped rather than counted as obligations."
+    "product_tree_inventory_note": "Both frozen tracked trees structurally enumerated; semantic resolution remains open. Khostty fuzz corpus grouped rather than counted as obligations.",
+    "finding_id_validator": "tools/validate_finding_ids.py",
+    "finding_id_selftest": "tools/selftest_finding_ids.py"
   },
   "authority_correction": "Pass 5 memory retrieval returned prior assistant summaries, not independent primary user messages. Historical acceptance claims remain imported attributions pending the primary source.",
   "dependent_internal_repositories_inspected": [],
@@ -83,7 +86,7 @@
   "existing_ci_catalog_enforcement_changed": false,
   "post_build_pilot": "NOT_RUN",
   "overall_percent": null,
-  "acceptance_policy": "Product-local contracts own detailed truth. Registry indexes exact evidence. Diagnostic reproduction, verifier selftests, source tracing and product acceptance are separate subjects; no count-based or missing-evidence greens.",
+  "acceptance_policy": "Product-local contracts own detailed truth. Registry indexes exact evidence. Finding IDs must be unique and all blocking refs resolve. Diagnostic reproduction, verifier selftests, source tracing and product acceptance remain separate subjects; no count-based or missing-evidence greens.",
   "general_dev_handoff": false,
   "parallel_general_dev_handoff": false,
   "sota_pass6": {
