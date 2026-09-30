@@ -16,3 +16,8 @@ This is a concrete MACE negative-control success: a skipped/empty effective chec
 
 ## Gate consequence
 HeliosLite high-risk oracle experiment is partially closed on an exact candidate; KCode daemon identity remains compile-qualified but behavior-unqualified pending the corrected nonzero test. Source, existence, journey, full trace and independent-review gates remain open for both.
+## Follow-up correction on KCode targeted evidence
+Corrected run 36673339535 reached a clean cargo check but the targeted test command exited 101. Its workflow used command substitution under `set -e`, so the captured test output was lost before printing. Candidate `54b0e012734428e84479a25c2e5b2d4ed27dc754` changes the evidence harness to retain output and exit status before adjudication. A fresh run is in progress. The failed run remains a failure; no behavioral credit is awarded.
+
+## Existence-gate narrowing
+Further current-upstream source inspection falsified additional broad KCode differentiation: upstream has substantial server version/git identity and stale client/server handling, provider/subscription/account breadth, and first-class native Windows x64/ARM64 support. The Windows/Pine question is now specifically POSIX-oriented native workflow semantics without making PowerShell/CMD/WSL the normal substrate, not generic Windows support.
