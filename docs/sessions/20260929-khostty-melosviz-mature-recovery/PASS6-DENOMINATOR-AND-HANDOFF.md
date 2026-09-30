@@ -4,14 +4,14 @@ Observed 2026-09-29. Exactly two product programs remain in scope.
 
 ## Handoff state
 
-- **Khostty: READY FOR EXPERIMENTAL IMPLEMENTATION** — K-E01, K-E02 and K-E03 may now run in separate worktrees. General development remains blocked.
+- **Khostty: READY FOR EXPERIMENTAL IMPLEMENTATION** — K-E02 and K-E03 may now run in separate worktrees. General development remains blocked.
 - **Melosviz: READY FOR EXPERIMENTAL IMPLEMENTATION** — M-E01 and independent M-ESEC may run now. M-E02/M-E03 remain dependency-gated. General development remains blocked.
 
 ## Tracked source denominators
 
 Melosviz product-relevant tracked inventory: **688 unique blobs** across the inventoried product trees, zero duplicate paths between inventory parts. This is a tracked-source denominator only, not a requirements count or progress percentage.
 
-Khostty product-relevant tracked inventory: **2,055 unique blobs** after deduplicating 62 overlapping paths between inventory parts; zero object-ID conflicts. The inherited `test/` bulk is separately quantified at **4,020 blobs / 4,030 entries** and vendor at **9 blobs / 16 entries**. Those sources remain verification/dependency evidence but are excluded from product-obligation counting so inherited fixtures cannot inflate product coverage.
+Khostty product-relevant tracked inventory: **2,055 unique non-fuzz paths** from 2,117 raw A+B rows after deduplicating 62 overlapping paths; zero object-ID conflicts. The inherited `test/` bulk is separately quantified at **4,020 blobs / 4,030 entries** and vendor at **9 blobs / 16 entries**. Those sources remain verification/dependency evidence but are excluded from product-obligation counting so inherited fixtures cannot inflate product coverage.
 
 ## Semantic spine closure
 
@@ -33,7 +33,7 @@ Therefore Khostty's custom IPC cannot claim differentiation merely from child in
 
 ## Latest product evidence heads
 
-- Khostty: `1ba1aaf067834849ded0ddcc5a249dd474861bf1`
-- Melosviz: `834bf02112bdb9434f895d77094564b971c72c80`
+- Khostty: `c3d3df442c874f02770742010fec80261448a8d7`
+- Melosviz: `ed9683bd6f1f725b3aefbc001cd905b26882b406`
 
 Both canonical product branches remain draft specification/experiment branches. No product implementation candidate, merge, release, scalar completion score, or independent final review is claimed.
