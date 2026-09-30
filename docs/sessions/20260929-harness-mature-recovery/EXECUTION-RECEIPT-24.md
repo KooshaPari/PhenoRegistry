@@ -1,20 +1,15 @@
-# Execution receipt 24 — mounted-surface denominator established
+# Execution receipt 24 — Helios mounted-interface correction
 
 Date: 2026-09-30. Program remains OPEN.
 
-## HeliosLite
-A first mounted-surface ledger now separates main CLI/TUI/tool spine from DB daemon, MCP, LSP, desktop/Tauri, share transport, AgilePlus adapter, bot, Forge3D, landing app and helper/tooling binaries. Presence is not scope. Each surface must acquire accepted intent, a mounted caller and journey membership before it participates in mature completion.
+## Helios #333
+Latest candidate rerun is queued after candidate-local rustfmt repair. Prior broad macOS suite passed 765 forge_app tests including recovery tests; remaining prior platform failures were known forge_lsp watcher and Windows forge_ci release-tag failures. Recovery trace remains QUALIFIED_CANDIDATE_PRIMITIVE / REACHABILITY_OPEN.
 
-Notable correction: the repository is broader than a simple CLI fork, but that breadth is not automatically product breadth. Desktop, bot, 3D, share and adapter surfaces remain PRESENT/UNRESOLVED until lineage and reachability are proven.
+## Mounted-interface correction
+Deeper frozen-source tracing falsified an earlier broad integration assumption. HeliosLite's main CLI explicitly mounts AgilePlus command dispatch and process-lifecycle Tracera telemetry. ShareCLI also has explicit composition tests with Tracera. These are real implemented/mounted integration surfaces, not merely future adapter candidates.
 
-Latest #333 formatting-repair head `0e95f160669f1d3a786f6d38aaf73be14478d318` is fully queued again. Prior broad suite evidence supports the recovery primitive; exact-head branch acceptance awaits rerun.
+Authority remains separate: Tracera events are evidence/observation, not accepted product-state authority; AgilePlus integration is development/work-management, not automatic ownership of runtime/product truth; ShareCLI↔Tracera tests prove envelope/store composition rather than production delivery.
 
-## KCode
-A corresponding mounted-surface ledger distinguishes primary CLI/TUI/server/MCP from harness APIs/SDKs/provider runtimes, ForgeCode/HERDR adapters, phone/remote scripts, swarm/comm, memory/cache/compaction and auxiliary bench/probe binaries. Generic harness/SDK/swarm/provider breadth remains under current-upstream pressure; skeleton crate names are excluded.
+Registry `INTEGRATION-BOUNDARY-FINDING.md` records the correction. Helios source ledger H-S04 now establishes the primary CLI/integration spine and leaves per-subcommand, MCP, desktop/TUI/3d packaging and production-vs-test integration reachability open.
 
-## Denominator rule
-Accepted intent + mounted caller + journey membership is now the minimum condition for a surface to count toward mature product completion. File/crate existence alone receives no product credit.
-
-No product-existence or completion verdict.
-## Follow-up: interface denominator
-Helios H-S09 now separately records the mounted primary interface graph: AgilePlus/LSP/Share early dispatch plus the normal ForgeAPI -> UI agent path, with prompt/piped/conversation/workspace/provider/MCP/update/maintenance surfaces. Auxiliary db/helper/TUI/desktop/3D/bot/tooling binaries remain unresolved individually; source presence does not earn implementation credit.
+This is an explicit correction of earlier evidence, not a defense of the earlier assumption.
