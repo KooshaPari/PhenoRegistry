@@ -1,15 +1,16 @@
-# Execution receipt 24 — Helios mounted-interface correction
+# Execution receipt 24 — Helios mounted interface families separated
 
 Date: 2026-09-30. Program remains OPEN.
 
-## Helios #333
-Latest candidate rerun is queued after candidate-local rustfmt repair. Prior broad macOS suite passed 765 forge_app tests including recovery tests; remaining prior platform failures were known forge_lsp watcher and Windows forge_ci release-tag failures. Recovery trace remains QUALIFIED_CANDIDATE_PRIMITIVE / REACHABILITY_OPEN.
+## Recovery freeze point
+Helios #333 latest exact head `0e95f160...` is rerunning after formatting/dead-code cleanup; Cargo Deny is green and Platform Tests in progress. Recovery remains classified QUALIFIED_CANDIDATE_PRIMITIVE / REACHABILITY_OPEN pending exact-head regression evidence. No further speculative adapter API is being added without a consumer.
 
-## Mounted-interface correction
-Deeper frozen-source tracing falsified an earlier broad integration assumption. HeliosLite's main CLI explicitly mounts AgilePlus command dispatch and process-lifecycle Tracera telemetry. ShareCLI also has explicit composition tests with Tracera. These are real implemented/mounted integration surfaces, not merely future adapter candidates.
+## Mounted interfaces
+Frozen Helios `forge_main::run` proves several top-level surfaces are directly mounted before normal ForgeAPI/UI startup: AgilePlus commands, LSP commands and ShareCLI commands each dispatch and return/serve independently. The normal path separately handles config validation, accessibility audit, worktree selection and UI/ForgeAPI initialization.
 
-Authority remains separate: Tracera events are evidence/observation, not accepted product-state authority; AgilePlus integration is development/work-management, not automatic ownership of runtime/product truth; ShareCLI↔Tracera tests prove envelope/store composition rather than production delivery.
+Architecture consequence: these early-exit subcommands are distinct product journeys/authority paths. They cannot be assumed to inherit agent/tool runtime recovery, conversation persistence, evidence or hook semantics merely because they share one binary. Source ledger H-S08 now records this and requires exhaustive TopLevelCommand/MCP/noninteractive/stream-json/feature-binary reachability mapping.
 
-Registry `INTEGRATION-BOUNDARY-FINDING.md` records the correction. Helios source ledger H-S04 now establishes the primary CLI/integration spine and leaves per-subcommand, MCP, desktop/TUI/3d packaging and production-vs-test integration reachability open.
+## KCode
+KCode recovery primitive remains exact-head green; active work is retained-patch/existence reduction rather than expanding the fork.
 
-This is an explicit correction of earlier evidence, not a defense of the earlier assumption.
+No completion or merge verdict.
