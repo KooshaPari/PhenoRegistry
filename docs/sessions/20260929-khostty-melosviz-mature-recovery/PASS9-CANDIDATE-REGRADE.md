@@ -33,3 +33,12 @@ Disposition: **USEFUL PARTIAL NATIVE EVIDENCE; K-E03 STILL BLOCKED ON TWO-ARTIFA
 Melosviz can now hand a developer agent the generative backend cache/evidence-identity subproblem without reopening scene identity/assembly/UI fundamentals. Khostty K-E03 remains an active experiment; K-E02 native agent-server mounting remains separate.
 
 Neither repository is READY FOR GENERAL DEV HANDOFF.
+
+
+## Controller continuation — later exact heads
+
+The recovery controller subsequently found the same M-E02 cache-identity blocker in source and patched the experimental branch rather than awarding acceptance. Current candidate head is `65f6a5b551f9e5ca12846393c8ef44726754a9b5`: unqualified real-render evidence is not reusable, deterministic `video_export` has a stable backend identity, and explicit model/workflow identity changes invalidate generative cache evidence. Three held-out tests were added. Dedicated exact-head workflows are queued; all earlier M-E02 greens are stale for this new candidate until they execute.
+
+K-E03 later head `aeede977b78ec65aba32dc7c372f6cd19ef515d3` failed its dedicated PR experiment before native execution because `k_e03_compare.py` contained literal escaped-newline syntax corruption. The controller fixed only that syntax, producing `1e51ffcb222201d03eed2c28eb910d63d1d2903b`. New exact-head push/PR experiment workflows are queued. Main CI success does not substitute for the linked wrapper/direct-C/upstream comparison.
+
+Acceptance rule remains unchanged: exact candidate identity is part of evidence identity; results never transfer forward to a modified head.
