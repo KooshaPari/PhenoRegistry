@@ -16,5 +16,6 @@ Date: 2026-09-30. This is intentionally a skeleton over accepted/high-confidence
 | K-T04 | Deep fork must beat current upstream + overlay | retained-patch ledger | 136 divergent commit search space; fork-only crates | semantic upstream comparison + matched journeys | OPEN / historical broad claims falsified |
 | K-T05 | Windows differentiation is POSIX-oriented native semantics, not Windows checkbox | Pine adapter/native runtime boundary | current upstream Windows support + owned utilities | clean Windows command/path/env/PTY/signal suite | OPEN |
 | X-T01 | Worker attempt != durable effort != product state | adapter/evidence ontology | both runtime products | crash/replacement/effect reconciliation vertical slice | OPEN |
+| X-T02 | Uncertain external effects are reconciled before retry | external effect receipt + durable effort adapter | no obvious first-class named abstraction found in frozen primary-source searches | kill-before/after-dispatch fixture with and without downstream idempotency | DESIGN_DEFINED / IMPLEMENTATION_OPEN |
 
 Authority classes remain explicit: direct current user mission = accepted intent; historical docs = historical/proposal unless reconciled; source = deterministic implementation fact; CI/runtime = observation bound to exact candidate; assistant architecture choices = proposal until accepted/reconciled.
