@@ -200,7 +200,7 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "1091294fdf428627224ec7b0f0a0ae03e102d4a2",
+      "head": "1323e36fdd0cbce93aa3b94ac602ed4ae33cd387",
       "status": "ACTIVE_EXACT_HEAD_QUEUED",
       "evidence": [
         "heap-owned correlated request",
@@ -209,8 +209,12 @@
         "shutdown cancels pending",
         "queued context cleanup",
         "CoreApp.tick execution owner",
-        "exact pane observation projection"
-      ]
+        "exact pane observation projection",
+        "queue-full fail-closed",
+        "pane.send_input reserved distinct from pane.write",
+        "unqualified child input host_unsupported"
+      ],
+      "workflow_run": 36770576989
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -235,7 +239,7 @@
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "3317530d8a7ab5474ff836f7f86e808c72820a06",
+      "head": "9984cae480da62e06eafeeb295d6e2629057f4b2",
       "status": "ACTIVE_EXACT_HEAD_QUEUED",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
@@ -250,13 +254,17 @@
         "stale lease recovery",
         "equal-size artifact replacement blocks reuse",
         "deleted artifact blocks reuse",
-        "post-reuse corruption blocks assembly freeze"
-      ]
+        "post-reuse corruption blocks assembly freeze",
+        "failed verifier durable non-accepting",
+        "assembly execution != acceptance",
+        "wrong final digest rejected"
+      ],
+      "workflow_run": 36770605484
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
-      "policy_head": "d4a8f83ba1a1ebd8dae71ce259e75d7e3dba684e",
-      "added_control": "R2 final assembly digest must differ from R1 after declared S2 edit",
+      "policy_head": "d1895ad31011eb34882d3d45323f3cb4fe8d4a8e",
+      "added_control": "post-success final corruption must fail independent probe",
       "status": "AWAITING_RUN"
     }
   }
