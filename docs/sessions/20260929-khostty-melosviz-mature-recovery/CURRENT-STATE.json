@@ -182,5 +182,28 @@
       "id": 36706051964,
       "status": "QUEUED"
     }
+  },
+  "khostty": {
+    "k_e03": {
+      "status": "EXPERIMENTALLY_ACCEPTED_EMBEDDING_SLICE_ONLY",
+      "head": "da1fa84d9552d1a747b75ee3ab4c627267aa6b7a",
+      "workflow_run": 36762466662,
+      "evidence_artifact_digest": "sha256:1f565ad49b63ee1c13959cd7b2680b9169a9bfd7e021f944a02092153b5c0b3d",
+      "caveat": "explicit platform loader path required; packaging/general product acceptance open"
+    },
+    "k_e02": {
+      "status": "DIRECT_MOUNT_NEGATIVE_BASELINE_REJECTED",
+      "pr": 10,
+      "head": "1d456d6de0442b09f2a34caa65a96a5fffb92e11",
+      "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
+    }
+  },
+  "melosviz": {
+    "m_e02": {
+      "status": "ACTIVE_EXACT_HEAD_REGRADING",
+      "head": "cefb683c82455d065cdac914b6e34b07b252b666",
+      "change": "stored cache producer backend identity must match current identity; missing stored identity forces re-execution",
+      "acceptance": false
+    }
   }
 }
