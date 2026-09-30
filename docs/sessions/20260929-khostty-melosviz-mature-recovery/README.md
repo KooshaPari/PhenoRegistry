@@ -38,3 +38,8 @@ Read-only source access used the connected GitHub tool because container git clo
 ## Continuation rules
 
 Expand these dossiers in bounded passes; preserve source snapshots and historical records. Record scope delta independently from engineering delta. Do not repair contested product identity through silent code changes. Draft PRs should cross-link this registry branch and both product branches; a progress receipt should name exact source and spec revisions, remaining blockers and evidence limitations. No broader repository program may start while these two gates remain open.
+
+
+## Pass 6 integrity correction (2026-09-30)
+
+Khostty inventory truth is 2,117 raw A+B rows, 62 overlapping paths, 2,055 unique non-fuzz paths, zero object-ID conflicts. Experimental handoff is K-E02 + K-E03 in parallel; the redundant K-E01-EMBED node was folded into K-E03. Stable finding-ID uniqueness is machine-checked with `tools/validate_finding_ids.py`.
