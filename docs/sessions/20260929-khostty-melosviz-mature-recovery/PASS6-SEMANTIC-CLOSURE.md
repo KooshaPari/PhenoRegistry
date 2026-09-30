@@ -5,8 +5,7 @@ Observed 2026-09-30. Exactly two products remain in scope: Khostty and Melosviz.
 ## Handoff state
 
 - **Khostty: READY FOR PARALLEL EXPERIMENTAL IMPLEMENTATION. NOT READY FOR GENERAL DEV HANDOFF.**
-  - Ready now: K-E01-EMBED and K-E02 in disjoint worktrees.
-  - K-E03 remains blocked on K-E01-EMBED.
+  - Ready now: K-E02 and K-E03 in disjoint worktrees. K-E03 now includes the linked-native/CI evidence qualification previously split into redundant K-E01-EMBED.
 - **Melosviz: READY FOR EXPERIMENTAL IMPLEMENTATION. NOT READY FOR GENERAL DEV HANDOFF.**
   - M-E01 is ready/in progress.
   - M-E02/M-E03 remain dependency-blocked.
@@ -15,13 +14,13 @@ Machine-readable DAGs live in each repo at `docs/specs/mature-recovery-20260929/
 
 ## Khostty
 
-Tracked-tree enumeration is structurally closed at frozen source `a29aa9c6553d9f42aa68e2919116c0f6d53f329d`: 2,138 exact non-fuzz blob rows are persisted, plus an exact structural accounting of the test tree (`fuzz-libghostty`: 4,014 blobs, 4,002 corpus seeds). Counts are navigation only, never requirements or completion weights.
+Tracked-tree enumeration is structurally closed at frozen source `a29aa9c6553d9f42aa68e2919116c0f6d53f329d`: 2,117 raw A+B rows are persisted with 62 exact path overlaps, yielding 2,055 unique non-fuzz paths and zero object-ID conflicts, plus an exact structural accounting of the test tree (`fuzz-libghostty`: 4,014 blobs, 4,002 corpus seeds). Counts are navigation only, never requirements or completion weights.
 
 Merge-base ownership at `d4c88d8069912b653d707191388ca98e24751f12` is materially narrower than the earlier 207-ahead topology implies. At top level: 43 identical, 13 added, 6 modified, 0 removed. Entire large trees including macOS, test, include/public API, examples, pkg and vendor are tree-identical at that boundary.
 
 The exported `apprt.ipc` surface is resolved: current `src/apprt/ipc/mod.zig` becomes textually identical to merge-base `src/apprt/ipc.zig` after only correcting the two relative imports caused by its directory move. It remains the inherited three-action Ghostty IPC. Ten adjacent agent-server files are fork additions, but `src/apprt.zig` does not start/export that server stack. Fork-aware search finds no application caller for `AppHost`/`Server.bind`; the frozen protocol separately admits startup is unwired.
 
-CI evidence is not qualifying: substantive language/security jobs are advisory, several commands swallow failure with `|| echo`, macOS build is disabled, and `ci / test` only prints success after lint. Rust native wrapper integration tests are cfg-elided if `libghostty-vt` is absent. Therefore K-E02 control bake-off can start now, while K-E03 embedding acceptance remains blocked until a real linked native consumer is evidenced.
+CI evidence is not qualifying: substantive language/security jobs are advisory, several commands swallow failure with `|| echo`, macOS build is disabled, and `ci / test` only prints success after lint. Rust native wrapper integration tests are cfg-elided if `libghostty-vt` is absent. Therefore K-E02 and K-E03 can start now in parallel. K-E03 itself must produce the real linked-native sentinel and qualifying CI evidence before it can close.
 
 ## Melosviz
 
