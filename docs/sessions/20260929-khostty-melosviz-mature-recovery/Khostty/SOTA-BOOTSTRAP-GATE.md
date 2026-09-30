@@ -41,3 +41,13 @@ Every BUILD CUSTOM/FORK decision needs an accepted obligation, strongest alterna
 ## Closure blockers
 
 Still missing: exact source/releases and license texts for alternatives, project-health history, broad standards/terminal conformance survey, accessibility and human UX comparison, benchmark configurations, costs, embedding/native experiments and fresh independent attack. Marketing claims and README test counts do not close these. Avoid committing to full-fork maintenance until a narrow real journey demonstrates a reason for it.
+
+## Pass 6 — stronger thin-host comparator
+
+Ghostling is now pinned as an official-family embedding reference at `ghostty-org/ghostling@63842bf8e5e481160f81d348da9ff6fd27986798` (main observed 2026-09-30). Its root LICENSE is MIT. `main.c` is a small but real libghostty consumer that owns PTY spawn/read/write, feeds child output into `ghostty_terminal_vt_write`, maps input into Ghostty key encoding, and supplies its own window/render loop via raylib.
+
+Decision consequence: K-E03 must compare Khostty wrappers against **direct libghostty consumption plus a minimal host pattern**, not against a hypothetical raw C library. Ghostling is not a production terminal and explicitly warns it is a demo, so it is architecture prior art rather than a ready replacement.
+
+Ghoztty remains the stronger same-family control comparator for K-E02. Together these split the existence test cleanly: Ghostling attacks unnecessary embedding abstraction/fork ownership; Ghoztty attacks unnecessary agent-control breadth. A retained Khostty subsystem needs a concrete gap against the relevant comparator rather than a repository-level uniqueness claim.
+
+External sources inspected this pass: https://github.com/ghostty-org/ghostling at the pinned revision; current public Ghostty source/docs; Ghoztty pinned previously. Runtime bake-offs remain outstanding.
