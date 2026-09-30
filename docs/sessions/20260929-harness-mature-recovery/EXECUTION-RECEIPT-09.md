@@ -1,23 +1,21 @@
-# Execution receipt 9 — mountedness corrections, integration custody, and new implementation candidates
+# Execution receipt 9 — external-effect crash window promoted to blocking contract
 
 Date: 2026-09-30. Program remains OPEN.
 
-## KCode qualified/candidate work
-- #14 `effe7dcb...` remains qualified for exact main-socket daemon identity (version/git/PID/executable SHA-256).
-- #16 targets a mounted ForgeCode provider whose current subprocess flags are incompatible with pinned official ForgeCode. It now fails closed unless the executable declares a versioned `jcode-forgecode-machine-contract-v1` marker plus required structured flags. Focused native CI is queued.
-- #18 removes fork-specific unconditional macOS startup xattr stripping/ad-hoc re-signing. Native macOS `cargo check --bin jcode` plus runtime-mutation source guard passed at `f18881a...`; signed-release install/launch identity remains a separate gate.
+## Source-backed crash windows
+HeliosLite H-F008: ToolExecutor performs side-effecting service operations (Write/Patch/Remove/Shell/Fetch) inside `call_internal` before any first-class durable external-effect receipt is visible in the inspected path. ToolCallContext carries presentation/metrics/conversation metadata, not durable effect state.
 
-## Helios integration custody
-Issues #323/#324/#325 now track ShareCLI process ownership, AgilePlus canonical authority, and Tracera telemetry-vs-evidence. Accepted AgilePlus adoption does not imply Helios owns a duplicate AgilePlus engine. Tracera lifecycle telemetry is genuinely mounted at startup but explicitly best-effort/silent on failure, so it cannot qualify acceptance evidence.
+KCode K-F008: the agent persists assistant ToolUse before local execution, calls `registry.execute`, adds ToolResult afterward, and persists tool results later. This creates a concrete post-effect/pre-result crash window where transcript intent can survive but external outcome can be ambiguous.
 
-ShareCLI #328 is a real implementation candidate: one `serve` process owns the hub; `publish`, `topics`, and `attach` use the running relay instead of disconnected process-local hubs. Focused cross-process CI is queued.
+These are ambiguity findings, not claims of observed duplicate production effects.
 
-## Helios daemon corrections
-`forge_dbd` stale comments were falsified: actual frozen source wires it through `DaemonConversationRepository` when `FORGE_DBD_ENABLED` is true. It is default OFF. Its Unavailable-vs-Indeterminate delivery certainty is valuable and retained as internal prior art. The default direct path already uses WAL, 30s busy timeout, NORMAL sync and a dedicated checkpoint thread, so #326 requires a matched existence experiment before daemon-mode promotion.
+## Contract and diagnostic
+Both repositories now own `EXTERNAL-EFFECT-ADAPTER-CONTRACT.md` with INTENT_RECORDED, DISPATCHED, CONFIRMED, UNCERTAIN, RECONCILED and ABANDONED states, tool side-effect classifications and fail-closed retry policy.
 
-`forge_daemon` is different: no `forge_main`/`forge_app` caller or dependency surfaced; its consumer is the dedicated benchmark. That benchmark compares parallel fork+exec with sequential daemon dispatch on `/usr/bin/true`, so it does not establish product speedup. #327 classifies it experimental/unmounted pending a matched real-workload existence test.
+Both spec branches also contain `diagnostics/effect_recovery_probe.py` plus a targeted `External Effect Recovery Contract` workflow. The probe uses real subprocess termination, atomic/fsync'd receipt writes, a real append-only side-effect log, idempotent/queryable and non-queryable cases, and asserts that uncertain non-queryable effects are not retried. CI runs are queued at receipt time; this validates contract semantics only, not production runtime integration.
 
-## External-effect recovery
-Repo-local contracts now make tool-call identity explicitly insufficient for crash-safe external effects. KCode's process-local RAII inflight map disappears on process loss; Helios tool-call IDs may be absent/provider/generated. Durable effect states and crash-boundary reconciliation remain the next cross-product vertical slice.
+## KCode existence pressure
+Current upstream's external-provider composition root weakens `jcode-provider-forgecode-runtime` as a deep-fork justification. The owned ForgeCode runtime is now candidate `CONTRIBUTE UPSTREAM / EXTERNAL RUNTIME ADAPTER`; its translation remains subject to golden system/history/tool/cancel/resume fidelity tests.
 
-No merge, product retirement, architecture freeze or mature-product completion is authorized.
+## Gate state
+HeliosLite H-F001..H-F004 and KCode responder identity remain exact-candidate qualified. H-F008/K-F008 are new blocking findings. Product-integrated crash-boundary experiments, durable-effort adapter wiring, source/existence/journey/trace completion and independent review remain open.
