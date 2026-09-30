@@ -16,7 +16,7 @@
       "source": "a29aa9c6553d9f42aa68e2919116c0f6d53f329d",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "3ff9621eda3eca29517cf3f0aed296533ec4f44b",
-      "latest_evidence_commit": "a54763ab81f692f3f5159931a51110e0da26a96b",
+      "latest_evidence_commit": "c3d3df442c874f02770742010fec80261448a8d7",
       "draft_pr": 7,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_PARALLEL_EXPERIMENTAL_IMPLEMENTATION",
@@ -29,11 +29,17 @@
       "coverage_denominator": "TRACKED_TREE_CLOSED_SEMANTIC_OPEN",
       "existence_gate": "OPEN_SUBSYSTEM_DECISION_REQUIRED",
       "implementation_candidate": null,
-      "executed_evidence": "TRACKED_TREE_AND_OWNERSHIP_CLOSED; AGENT_SERVER_SOURCE_UNMOUNTED; CI_FALSE_GREEN_MECHANISMS_IDENTIFIED",
+      "executed_evidence": "TRACKED_TREE_UNIQUE_DENOMINATOR_2055; OWNERSHIP_CLOSED_HIGH_RISK; AGENT_SERVER_UNMOUNTED; CI_FALSE_GREEN_MECHANISMS_IDENTIFIED",
       "corrected_differentiation": "ABI_MANIFEST_IMPLEMENTATION_AND_HEADER_INHERITED_FROM_UPSTREAM",
       "evidence_path": "docs/specs/mature-recovery-20260929/pass5/EXPERIMENT-RECEIPT.json",
       "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md",
-      "finding_namespace": "UNIQUE_K_F01_TO_K_F17"
+      "finding_namespace": "UNIQUE_K_F01_TO_K_F17",
+      "inventory": {
+        "raw_rows": 2117,
+        "overlap_paths": 62,
+        "unique_paths": 2055,
+        "object_id_conflicts": 0
+      }
     },
     "Melosviz": {
       "source": "1aec20a2ba41a01ed557d1c7f63f9a0089f842cf",
