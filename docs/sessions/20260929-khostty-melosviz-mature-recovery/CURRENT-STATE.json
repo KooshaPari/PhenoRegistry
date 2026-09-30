@@ -10,13 +10,13 @@
   "registry_is_product_subject": false,
   "registry_source_snapshot": "85d7cd00cf59c379c05b740e8130a85b0d5bd31b",
   "registry_branch": "docs/khostty-melosviz-recovery-20260929",
-  "latest_research": "PASS6-RESEARCH-AND-HANDOFF.md",
+  "latest_research": "PASS6-DENOMINATOR-AND-MOUNTING.md",
   "products": {
     "Khostty": {
       "source": "a29aa9c6553d9f42aa68e2919116c0f6d53f329d",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "3ff9621eda3eca29517cf3f0aed296533ec4f44b",
-      "latest_evidence_commit": "949c9dbc4513ead0229d23d820dc599eecf246fd",
+      "latest_evidence_commit": "06d5368d4df9044852a6487ddb1b5cc8a120dcf3",
       "draft_pr": 7,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_PARALLEL_EXPERIMENTAL_IMPLEMENTATION",
@@ -53,13 +53,18 @@
         "current_main": "882d6cd4aa7b5f9f9bffc5fb0a8b4d70460c90e6",
         "ahead_of_snapshot_by": 2,
         "classification": "release/PyPI operations only"
-      }
+      },
+      "tracked_tree": "CLOSED_TOP_LEVEL_FAMILY_BOUNDARY",
+      "exact_non_fuzz_blob_rows": 2138,
+      "fuzz_family_blobs": 4014,
+      "fork_ownership": "43_IDENTICAL_13_ADDED_6_MODIFIED_0_REMOVED",
+      "agent_ipc_mounting": "NEW_SERVER_NOT_MOUNTED_BY_PUBLIC_APPRT_IPC"
     },
     "Melosviz": {
       "source": "1aec20a2ba41a01ed557d1c7f63f9a0089f842cf",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "aba72705bfe8e5eebeeabe215260b84c4c6ffa9f",
-      "latest_evidence_commit": "4856f24c60f06bbca10b2e5983eac089df566047",
+      "latest_evidence_commit": "de8834dcbb6e85b10d07216fcc716ffae5e5cf5b",
       "draft_pr": 297,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_PARALLEL_EXPERIMENTAL_IMPLEMENTATION",
@@ -105,7 +110,15 @@
       },
       "durable_state": "M-F29_NO_AUTHORITATIVE_RESTARTABLE_PROJECT_JOB_LEDGER",
       "mounted_spine_contract": "docs/specs/mature-recovery-20260929/MOUNTED-SPINE-CONTRACT.md",
-      "durable_state_alternatives": "docs/specs/mature-recovery-20260929/DURABLE-STATE-ALTERNATIVES.md"
+      "durable_state_alternatives": "docs/specs/mature-recovery-20260929/DURABLE-STATE-ALTERNATIVES.md",
+      "tracked_tree": "CLOSED",
+      "exact_blob_rows": 688,
+      "new_blockers": [
+        "M-F13 double scene iteration",
+        "M-F14 bridge output-layout mismatch",
+        "M-F15 release shell classification"
+      ],
+      "release_desktop": "ELECTROBUN"
     }
   },
   "tools": {
