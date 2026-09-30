@@ -85,3 +85,10 @@ KCode's “upstream + thin overlay” challenger remains valid for KCode-specifi
 Likewise, HeliosLite surviving its own fork gate does not prove it should be the canonical family CLI if KCode/jcode provides a better base after accepted obligations are ported.
 
 No current implementation is presumed the winner.
+
+## Active-pair correction — 2026-09-30
+User clarified the two primary recovery products are **HeliosCLI (Codex lineage) + KCode (jcode lineage)**. HeliosLite is the Forgecode-lineage sunset/donor. Stop new HeliosLite primary implementation/specification expansion; preserve its already-gathered evidence, qualified primitives and Forgecode-specific lessons as donor/historical evidence.
+
+HeliosCLI frozen source: `KooshaPari/HeliosCLI@2adc983bbb105546127250e688774338677ff43a`; dedicated recovery draft PR #691. Initial archaeology shows its active root Cargo harness workspace is distinct from excluded vendored `codex-rs`/`codex-cli` reference trees, while propagated intent/boundary docs remain placeholders and the repo binds 50 historical prompts. This distinction is now part of the source denominator.
+
+The family-level alternatives are therefore primarily: Codex-lineage HeliosCLI + shared harness, jcode-lineage KCode + shared harness, justified segmentation of those two, or convergence/superset. HeliosLite/Forgecode can survive only as a lightweight donor/role if neither active lineage/shared harness cleanly satisfies that role.
