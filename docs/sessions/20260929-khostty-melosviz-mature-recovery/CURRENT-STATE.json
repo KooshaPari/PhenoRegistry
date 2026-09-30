@@ -16,7 +16,7 @@
       "source": "a29aa9c6553d9f42aa68e2919116c0f6d53f329d",
       "spec_branch": "docs/mature-recovery-20260929",
       "initial_evidence_commit": "3ff9621eda3eca29517cf3f0aed296533ec4f44b",
-      "latest_evidence_commit": "06d5368d4df9044852a6487ddb1b5cc8a120dcf3",
+      "latest_evidence_commit": "15f2345c03e864c49372ff1979d8cd4d92d07f27",
       "draft_pr": 7,
       "state": "INCOMPLETE_BLOCKED",
       "handoff_status": "READY_FOR_PARALLEL_EXPERIMENTAL_IMPLEMENTATION",
@@ -33,7 +33,7 @@
       "corrected_differentiation": "ABI_MANIFEST_IMPLEMENTATION_AND_HEADER_INHERITED_FROM_UPSTREAM",
       "evidence_path": "docs/specs/mature-recovery-20260929/pass5/EXPERIMENT-RECEIPT.json",
       "handoff_path": "docs/specs/mature-recovery-20260929/DEVELOPER-HANDOFF.md",
-      "finding_namespace": "UNIQUE_K_F01_TO_K_F17",
+      "finding_namespace": "UNIQUE_K_F01_TO_K_F18",
       "inventory": {
         "raw_rows": 2117,
         "overlap_paths": 62,
@@ -58,7 +58,9 @@
       "exact_non_fuzz_blob_rows": 2138,
       "fuzz_family_blobs": 4014,
       "fork_ownership": "43_IDENTICAL_13_ADDED_6_MODIFIED_0_REMOVED",
-      "agent_ipc_mounting": "NEW_SERVER_NOT_MOUNTED_BY_PUBLIC_APPRT_IPC"
+      "agent_ipc_mounting": "NEW_SERVER_NOT_MOUNTED_BY_PUBLIC_APPRT_IPC",
+      "ipc_security_research": "Khostty/IPC-SECURITY-SOTA-PASS6.md",
+      "security_scope": "shared-user-token is not per-process identity; peer-credential/capability alternatives under K-E02"
     },
     "Melosviz": {
       "source": "1aec20a2ba41a01ed557d1c7f63f9a0089f842cf",
@@ -108,7 +110,7 @@
           "limitation": "direct web/Tauri StudioConsole lacks bearer auth; release Electrobun proxy does support bearer headers"
         }
       },
-      "durable_state": "M-F29_NO_AUTHORITATIVE_RESTARTABLE_PROJECT_JOB_LEDGER",
+      "durable_state": "M-F29_NO_AUTHORITATIVE_RESTARTABLE_PRODUCT_LEDGER; SQLITE_ARCHITECTURE_TO_BEAT_NOT_SELECTED",
       "mounted_spine_contract": "docs/specs/mature-recovery-20260929/MOUNTED-SPINE-CONTRACT.md",
       "durable_state_alternatives": "docs/specs/mature-recovery-20260929/DURABLE-STATE-ALTERNATIVES.md",
       "tracked_tree": "CLOSED",
@@ -118,7 +120,9 @@
         "M-F14 bridge output-layout mismatch",
         "M-F15 release shell classification"
       ],
-      "release_desktop": "ELECTROBUN"
+      "release_desktop": "ELECTROBUN",
+      "mir_research": "Melosviz/MIR-SOTA-PASS6.md",
+      "editorial_research": "Melosviz/EDITORIAL-TIMEBASE-SOTA-PASS6.md"
     }
   },
   "tools": {
@@ -143,13 +147,31 @@
   "sota_pass6": {
     "Khostty": [
       "Ghostling pinned as minimal libghostty host comparator",
-      "Ghoztty retained as agent-control comparator"
+      "Ghoztty retained as agent-control comparator",
+      "Linux SO_PEERCRED/SCM_CREDENTIALS, macOS getpeereid, and Windows named-pipe DACL/client context researched for local peer identity"
     ],
     "Melosviz": [
       "OTIO INTEGRATE/ADAPT editorial projection candidate",
       "Temporal/Prefect COMPARE for durable recovery; no adoption freeze",
-      "ComfyUI backend execution IDs/events should be preserved"
+      "ComfyUI backend execution IDs/events should be preserved",
+      "all-in-one-infer pinned as MIR INTEGRATE SPIKE candidate",
+      "OTIO editorial RationalTime/Timeline projection spike defined",
+      "direct SQLite vs atomic-file-journal restart experiment defined"
     ]
   },
-  "parallel_experimental_handoff": true
+  "parallel_experimental_handoff": true,
+  "experimental_runs": {
+    "melosviz_security": {
+      "id": 36703022387,
+      "status": "QUEUED"
+    },
+    "melosviz_baseline": {
+      "id": 36705844469,
+      "status": "QUEUED"
+    },
+    "khostty_rust_embedding": {
+      "id": 36706051964,
+      "status": "QUEUED"
+    }
+  }
 }
