@@ -40,3 +40,17 @@ COMMODITY / CONTESTED: timeline and media composition, node-graph rendering, bas
 Every custom subsystem needs an accepted unmet obligation and evidence that USE/INTEGRATE/FORK/ADAPT/COMPOSE alternatives are insufficient. Reproducibility requires tool/model/workflow/input/environment identities; a source checkout and seed alone are not accepted guarantees.
 
 Remaining research: exact licenses/releases/health, storage and durable execution alternatives, workflow security, live clock standards, color/audio/delivery standards, commercial competitors, academic dataset/evaluator details, integration cost and high-risk prototypes. SOTA/design gate precedes the later comparative pilot; neither is complete.
+
+## Pass 6 — durable execution and editorial interchange comparators
+
+OpenTimelineIO's current release line is 0.18.x, with 0.18.1 fixing Linux wheel packaging and 0.18.0 adding schema improvements. Since 0.17, most non-native adapters are separately versioned plugins; core keeps native `.otio`/`.otiod`/`.otioz`. Its data model already provides Timeline/Track/Clip/Gap/Transition, rational time structures, metadata, media references, schema version maps and plugin adapters.
+
+**Disposition: INTEGRATE/ADAPT as an editorial projection, not the canonical Melosviz product database.** M-E02/M-E03 should spike a three-scene RenderSpec↔OTIO projection and verify exact timing, scene identity, media references and product-specific metadata survive a round trip. If lossless for accepted editorial fields, do not hand-roll another generic EDL/timeline model. Hybrid scanner/spatial/creative intent may remain product-specific metadata/projections.
+
+Durable execution alternatives were also revisited. Temporal supplies event-history replay, worker replacement, retries and durable workflow IDs, but requires a Temporal Service plus database and deterministic workflow rules; external I/O belongs in Activities. Prefect 3 provides Python-native flows/tasks, state tracking, retries, monitoring and cache policies with less workflow-determinism ceremony. Both are credible prior art for M-J-RECOVER.
+
+**Disposition: COMPARE, not adopt yet.** Melosviz is currently a local desktop/file-oriented product; bringing in a separate orchestration control plane may be excessive. M-E03 should first prove the minimal accepted durable-state need with a stable project/revision/job identity and append-only receipts. Then compare that implementation burden/failure recovery against a tiny Prefect/Temporal spike. BUILD CUSTOM is justified only if the accepted local/restart semantics are materially simpler than integrating one of these systems; adopting Temporal merely because it is more durable is not justified.
+
+ComfyUI itself already exposes prompt/job identity and execution lifecycle messages including execution_start/error/interrupted/cached/success and node progress. Melosviz should preserve those backend identities in its own receipts rather than collapse them into a generic `done` event or infer success from files.
+
+Sources inspected 2026-09-30: OTIO official docs/releases; Temporal official durable-execution/workflow docs; Prefect 3 official workflow docs; ComfyUI server message documentation. Exact integration versions/licenses/operating footprint remain to qualify before architecture freeze.
