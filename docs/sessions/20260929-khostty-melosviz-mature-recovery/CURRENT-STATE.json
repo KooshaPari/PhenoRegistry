@@ -220,20 +220,22 @@
         "thin libghostty native Windows host",
         "custom only for demonstrated residual obligations"
       ],
-      "note": "source claims require held-out native qualification"
+      "note": "source claims require held-out native qualification",
+      "research_commit": "15127489aba7e670a5b9915de878092f6e5d9e96"
     }
   },
   "melosviz": {
     "m_e02": {
       "status": "ACTIVE_EXACT_HEAD_REGRADING",
-      "head": "cefb683c82455d065cdac914b6e34b07b252b666",
-      "change": "stored cache producer backend identity must match current identity; missing stored identity forces re-execution",
+      "head": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
+      "workflow_run": 36766323723,
+      "latest_fix": "effective derived backend identity persisted; deterministic video_export reuse regression added",
       "acceptance": false
     },
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "694f55c77274b82fbe5a3c20c2f8f49fc9f7fb99",
+      "head": "3317530d8a7ab5474ff836f7f86e808c72820a06",
       "status": "ACTIVE_EXACT_HEAD_QUEUED",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
@@ -244,7 +246,11 @@
         "unchanged reuse receipts",
         "ordered assembly freeze",
         "duplicate live attempt exclusion",
-        "missing evidence blocks assembly"
+        "missing evidence blocks assembly",
+        "stale lease recovery",
+        "equal-size artifact replacement blocks reuse",
+        "deleted artifact blocks reuse",
+        "post-reuse corruption blocks assembly freeze"
       ]
     },
     "reviewer_m_e02": {
