@@ -16,3 +16,5 @@ A corresponding mounted-surface ledger distinguishes primary CLI/TUI/server/MCP 
 Accepted intent + mounted caller + journey membership is now the minimum condition for a surface to count toward mature product completion. File/crate existence alone receives no product credit.
 
 No product-existence or completion verdict.
+## Follow-up: interface denominator
+Helios H-S09 now separately records the mounted primary interface graph: AgilePlus/LSP/Share early dispatch plus the normal ForgeAPI -> UI agent path, with prompt/piped/conversation/workspace/provider/MCP/update/maintenance surfaces. Auxiliary db/helper/TUI/desktop/3D/bot/tooling binaries remain unresolved individually; source presence does not earn implementation credit.
