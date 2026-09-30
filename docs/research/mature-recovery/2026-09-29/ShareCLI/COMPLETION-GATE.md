@@ -1,13 +1,36 @@
-# ShareCLI — completion receipt, first execution cycle
+# ShareCLI — completion gate receipt, current recovery state
 
-Date2026-09-29. Source `4f01d0199e82b62bcf20399afcc102f58a10ad07`. Specification branch `spec/mature-recovery-2026-09-29`; initial specification head `4c18bbc62e2afb2fd7ede2b252b10d6ed3eed5e5`. Registry analyzed source `85d7cd00cf59c379c05b740e8130a85b0d5bd31b` is not this dossier branch.
+Date: 2026-09-30.  
+Analyzed source: `4f01d0199e82b62bcf20399afcc102f58a10ad07`.  
+Status: **INCOMPLETE / BLOCKED. No completion percentage.**
 
-**Result: INCOMPLETE / BLOCKED. No percentage.** Source-family denominator remains open. Three source-derived model counterexamples were reproduced; zero native product runs and zero safe-architecture risk closures are claimed. Full machine-readable statuses live in the product's `docs/specs/mature-recovery/2026-09-29/CURRENT-STATE.json`.
+## What is now established
 
-Recorded: exact revisions; meaningful partial source ledger; predecessor/concept map; primary-source SOTA pass; alternative composition and provisional bootstrap choices; mature ontology/journey/stage candidates; exact-evidence and adversarial oracle design; static implementation findings; local reproducible model script/raw receipt. Existing IDs and history preserved.
+- Product lineage and OS-adjacent coordination thesis substantially recovered.
+- Exact PhenoInfra and PhenoShared dependency revisions frozen.
+- Generic Git/Time/Args durable replay is natively falsified across changed bytes, workspace, external input and environment.
+- Working architecture separates observation, authority, mediation, admission, equivalence, in-flight sharing, durable reuse and filesystem capability.
+- FUSE is provisional off/optional/required capability, not universal prerequisite.
+- Admission architecture prefers native jobserver where applicable and generation-safe product leases otherwise.
+- Ontology v1.1 includes overlapping policy resolution, durable ownership, attempt disposition/result selection, external/native result provenance and filesystem coverage.
+- Four mature-obligation slices and semantic traceability slice 01 exist.
+- Legacy scorecards/generated catalogs remain quarantined from grading.
+- Developer handoff is two-tier: structural work ready; architecture-sensitive production remediation remains receipt-gated.
 
-Blocking: full source enumeration/resolution; raw conversation/donor/complete useful history recovery; exact dependency and external adoption versions/licenses/health; direct alternative experiments; accepted ontology/full distinct obligations/quality/stages; complete oracle policy and enforcement; native cache/queue/FUSE/ownership/platform risks; full mounted implementation and bidirectional trace mapping; registry/public compatibility reconciliation; catalog exclusion enforcement; orphan/contradiction resolution; fresh independent falsification review.
+## Blocking
 
-The existing ShareCLI PR876 is separate candidate work, not automatically graded at this snapshot. No source claim or model assertion authorizes merging it or this specification branch. No production code was changed by this recovery branch's initial commits.
+- source denominator pass 3 still has unresolved observation/supervision/resource/UI/API/storage/security/platform/release/support families;
+- in-flight-vs-durable exact execution pending;
+- queue aging/FIFO/PID-reuse exact execution pending;
+- native-jobserver/ProductLease comparison pending;
+- required-FUSE fail-closed prototype pending;
+- capability-truth public fixture pending;
+- cross-platform ProcessGeneration research incomplete;
+- mesh/session mature-scope final disposition open;
+- architecture decisions remain provisional;
+- implementation remediation not accepted;
+- fresh independent falsification review not run.
 
-Fresh-review challenge remains unanswered: produce a valid lifecycle/worker/configuration/failure/competing-architecture interpretation this specification cannot explain. The source ledger already contains open cases, so 100% is forbidden. A later comparative pilot is separate and has not run.
+## Gate
+
+The ontology/product thesis is materially stronger, but **architecture/specification 100% remains forbidden**. Broad mature-product implementation handoff remains closed.
