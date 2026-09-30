@@ -196,6 +196,31 @@
       "pr": 10,
       "head": "1d456d6de0442b09f2a34caa65a96a5fffb92e11",
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
+    },
+    "k_e02a": {
+      "pr": 11,
+      "branch": "experiment/mature-recovery-k-e02a-app-bridge",
+      "head": "1091294fdf428627224ec7b0f0a0ae03e102d4a2",
+      "status": "ACTIVE_EXACT_HEAD_QUEUED",
+      "evidence": [
+        "heap-owned correlated request",
+        "queued/executing/completed/canceled lifecycle",
+        "timeout cannot free executing context",
+        "shutdown cancels pending",
+        "queued context cleanup",
+        "CoreApp.tick execution owner",
+        "exact pane observation projection"
+      ]
+    },
+    "windows_comparators": {
+      "status": "EXPANDED_SOURCE_RESEARCH",
+      "families": [
+        "shiweis/ghostty-windows Zig Win32 apprt",
+        "winghostty Win32 host",
+        "thin libghostty native Windows host",
+        "custom only for demonstrated residual obligations"
+      ],
+      "note": "source claims require held-out native qualification"
     }
   },
   "melosviz": {
@@ -204,6 +229,29 @@
       "head": "cefb683c82455d065cdac914b6e34b07b252b666",
       "change": "stored cache producer backend identity must match current identity; missing stored identity forces re-execution",
       "acceptance": false
+    },
+    "durable_ledger_experiment": {
+      "pr": 304,
+      "branch": "experiment/melosviz-durable-ledger-pass10",
+      "head": "694f55c77274b82fbe5a3c20c2f8f49fc9f7fb99",
+      "status": "ACTIVE_EXACT_HEAD_QUEUED",
+      "scope": "isolated feasibility only; not M-E03 integration",
+      "controls": [
+        "R1 close/reopen R2",
+        "immutable scene revisions",
+        "execution != acceptance",
+        "exact evidence digest binding",
+        "unchanged reuse receipts",
+        "ordered assembly freeze",
+        "duplicate live attempt exclusion",
+        "missing evidence blocks assembly"
+      ]
+    },
+    "reviewer_m_e02": {
+      "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
+      "policy_head": "d4a8f83ba1a1ebd8dae71ce259e75d7e3dba684e",
+      "added_control": "R2 final assembly digest must differ from R1 after declared S2 edit",
+      "status": "AWAITING_RUN"
     }
   }
 }
