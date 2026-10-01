@@ -77,9 +77,13 @@ Trust model — two gates, two script origins:
 - **Secret Guard's inline step** (`secret-guard.yml`, every branch): a
   single checkout of the PR's tree, then
   `python scripts/workflow-action-guard.py` runs **that PR's own copy of
-  the script** — a PR can weaken or delete it and the step still reports
-  green. Base-script enforcement therefore exists **only** in the named
-  `Immutable Action References` check.
+  the script** — three distinct outcomes: *weakening* the script's logic
+  reports green (the PR's weakened copy passes its own checks), *removing
+  the invocation* from a PR-modified workflow definition reports green (the
+  step never runs), but *deleting* the script fails loudly, because
+  `python scripts/workflow-action-guard.py` exits non-zero. Base-script
+  enforcement therefore exists **only** in the named `Immutable Action
+  References` check.
 
 ## Adding or changing a workflow — checklist
 
