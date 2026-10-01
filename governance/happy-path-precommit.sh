@@ -228,22 +228,15 @@ FNR == NR { diff_lines[FNR] = $0; total_lines = FNR; next }
     }
 
     # R7 motion-without-result
-    # Path-like inline-code citations (`scripts/example.py`) are file
-    # references, not placeholder content: strip those spans before matching
-    # so citing a path that happens to contain "stub" does not fire R7.
-    # A span is path-like only when it holds a slash that is neither
-    # space-padded nor part of an assignment: `feature=false / stub` and
-    # `a=b/c` are kept (and still fire). Slash-less spans are kept too.
-    r7lc = ""
-    r7rest = lc
-    while (match(r7rest, /`[^`]*`/)) {
-      r7span = substr(r7rest, RSTART, RLENGTH)
-      r7lc = r7lc substr(r7rest, 1, RSTART - 1)
-      if (index(r7span, "/") == 0 || r7span ~ / \/ / || r7span ~ /=/)
-        r7lc = r7lc r7span
-      r7rest = substr(r7rest, RSTART + RLENGTH)
-    }
-    r7lc = r7lc r7rest
+    # Strip only path-shaped tokens (>=1 slash + a trailing .ext), e.g.
+    # scripts/fill-intent-stubs.py or src/lib.rs, so citing a file whose name
+    # happens to contain "stub" does not fire. Everything else on the line --
+    # prose, code spans like `if x { // stub out }`, or a URL segment that
+    # ends in a bare token (.../no-op) -- stays scannable. This is a single
+    # gsub (no match()+RSTART/RLENGTH round-trip), so there is no coupling to
+    # regex match-state bookkeeping either.
+    r7lc = lc
+    gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+\.[A-Za-z][A-Za-z0-9]*/, "", r7lc)
     if (r7lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
       report("r7", file, line_no, body, "feature false/placeholder introduced without result signal")
     }

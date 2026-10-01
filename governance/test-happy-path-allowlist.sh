@@ -224,21 +224,49 @@ else
   PASS=$((PASS+1))
 fi
 
-# ---- Test 8: R7 path-citation strip present in both guard copies ----
-echo "Test 8: R7 path-citation strip present in both guard copies" >&2
-if grep -q 'r7rest = lc' "$SCRIPT_DIR/../governance/happy-path-precommit.sh" \
-   && grep -q 'r7rest = lc' "$SCRIPT_DIR/../handbook/governance/happy-path-precommit.sh"; then
-  echo "  PASS (both copies strip path-like code spans before R7 match)" >&2
+# ---- Test 8: primary and mirror guards stay in sync (R7 rule + skip list) ----
+# Byte-compare the R7 rule block and the skip_pat line between this guard and
+# its mirror copy. Grepping one assignment (the old check) missed drift in the
+# rule body and in the skip lists (mirror once lacked the tests/ entry).
+case "$GUARD" in
+  */handbook/*) SIB="$SCRIPT_DIR/../../governance/happy-path-precommit.sh" ;;
+  *)            SIB="$SCRIPT_DIR/../handbook/governance/happy-path-precommit.sh" ;;
+esac
+extract_r7() {
+  awk '/# R7 motion-without-result/ { f = 1 }
+       f { print; if (/report\("r7"/) { getline; print; exit } }' "$1"
+}
+extract_skip() { awk '/skip_pat = / { print; exit }' "$1"; }
+echo "Test 8: R7 rule + skip_pat byte-identical between guard copies" >&2
+if [ ! -f "$SIB" ]; then
+  echo "  FAIL: mirror guard not found at $SIB" >&2
+  FAIL=$((FAIL+1))
+elif [ "$(extract_r7 "$GUARD")" = "$(extract_r7 "$SIB")" ] \
+  && [ "$(extract_skip "$GUARD")" = "$(extract_skip "$SIB")" ]; then
+  echo "  PASS (R7 block and skip_pat identical)" >&2
   PASS=$((PASS+1))
 else
-  echo "  FAIL: R7 strip missing from one of the guard copies (out of sync)" >&2
+  echo "  FAIL: guard copies diverged (R7 rule or skip_pat)" >&2
   FAIL=$((FAIL+1))
 fi
 
-# ---- Tests 9-10: R7 functional behavior (real engine, scratch git repo) ----
-# A backticked FILE PATH citation must not fire R7; prose placeholder
-# tokens must still fire (sensitivity retained).
+# ---- Tests 9-14: R7 functional behavior (real engine, scratch git repo) ----
+# Path citations must not fire; prose/code-span placeholders must still fire.
+# Invoked as `sh "$GUARD"` (POSIX, harness-relative) -- no bash dependency and
+# a mirrored harness would exercise its own guard automatically.
 TMPREPO=$(mktemp -d)
+trap 'rm -rf "$TMPREPO"' EXIT HUP INT TERM
+run_probe() {
+  ( cd "$TMPREPO" || exit 1
+    BASE=$(git rev-parse HEAD)
+    printf -- '%s\n' "$1" >> probe.md
+    git add probe.md
+    git commit -qm "$2"
+    HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
+      sh "$GUARD"
+  ) > "$TMPREPO/out_$2" 2>&1
+}
+
 (
   cd "$TMPREPO" || exit 1
   git init -q .
@@ -247,15 +275,11 @@ TMPREPO=$(mktemp -d)
   echo base > probe.md
   git add probe.md
   git commit -qm base
-  BASE=$(git rev-parse HEAD)
-  printf -- '- File reference: `scripts/fill-intent-stubs.py` in prose.\n' >> probe.md
-  git add probe.md
-  git commit -qm path-citation
-  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
-    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
-) > "$TMPREPO/out_path" 2>&1
-echo "Test 9: backticked file-path citation does not fire R7" >&2
-if grep -q '\[R7\]' "$TMPREPO/out_path"; then
+)
+
+run_probe '- File reference: `scripts/fill-intent-stubs.py` in prose.' path-citation
+echo "Test 9: file-path citation does not fire R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_path-citation"; then
   echo "  FAIL: R7 fired on a file-path citation" >&2
   FAIL=$((FAIL+1))
 else
@@ -263,41 +287,55 @@ else
   PASS=$((PASS+1))
 fi
 
-(
-  cd "$TMPREPO" || exit 1
-  BASE=$(git rev-parse HEAD)
-  printf -- 'This change adds a stub awaiting the updater.\n' >> probe.md
-  git add probe.md
-  git commit -qm prose-stub
-  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
-    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
-) > "$TMPREPO/out_prose" 2>&1
+run_probe 'This change adds a stub awaiting the updater.' prose-stub
 echo "Test 10: prose placeholder still fires R7" >&2
-if grep -q '\[R7\]' "$TMPREPO/out_prose"; then
-  echo "  PASS (prose 'stub' flagged)" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_prose-stub"; then
+  echo "  PASS (prose stub flagged)" >&2
   PASS=$((PASS+1))
 else
-  echo "  FAIL: R7 did not fire on prose placeholder content" >&2
+  echo "  FAIL: R7 did not fire on prose placeholder" >&2
   FAIL=$((FAIL+1))
 fi
-(
-  cd "$TMPREPO" || exit 1
-  BASE=$(git rev-parse HEAD)
-  printf -- 'Reviewers flagged `feature=false / stub` as motion.\n' >> probe.md
-  git add probe.md
-  git commit -qm padded-slash-span
-  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
-    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
-) > "$TMPREPO/out_span" 2>&1
+
+run_probe 'Reviewers flagged `feature=false / stub` as motion.' padded-slash-span
 echo "Test 11: space-padded slash content span still fires R7" >&2
-if grep -q '\[R7\]' "$TMPREPO/out_span"; then
-  echo "  PASS (content span with ' / ' kept and flagged)" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_padded-slash-span"; then
+  echo "  PASS (content span with / kept and flagged)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 escaped a non-path content span" >&2
   FAIL=$((FAIL+1))
 fi
-rm -rf "$TMPREPO"
+
+run_probe 'Keep `if x { // stub out for now }` until the real impl lands.' span-placeholder
+echo "Test 12: placeholder inside a non-path code span still fires R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_span-placeholder"; then
+  echo "  PASS (span with slash but no path token flagged)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: whole-span strip hid a real placeholder" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Mirrors live at `https://example.com/no-op` for reference.' url-noop
+echo "Test 13: URL ending in a bare segment still fires R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_url-noop"; then
+  echo "  PASS (URL no-op not swallowed by path strip)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: path strip swallowed a real no-op" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'set `a/b = c` and add a `stub` in `src/lib.rs`' three-span-mispair
+echo "Test 14: mixed spans - path stripped, prose stub still fires" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_three-span-mispair"; then
+  echo "  PASS (src/lib.rs stripped; stub in prose flagged)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: path strip leaked into adjacent prose" >&2
+  FAIL=$((FAIL+1))
+fi
 
 echo "" >&2
 echo "=== RESULTS: $PASS passed, $FAIL failed ===" >&2
