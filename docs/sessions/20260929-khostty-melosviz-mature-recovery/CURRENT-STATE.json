@@ -200,8 +200,8 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "8b7b634b8d81aa065cdcf55019702128d21a0b74",
-      "status": "SEMANTIC_FAILURE_ISOLATION_REQUEUED",
+      "head": "cbf93c87b09462ce90705bb1df510de907b61d09",
+      "status": "BRIDGE_API_OMISSION_FIXED_ALL_GATE_DIAGNOSTICS_REQUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -248,38 +248,12 @@
       "acceptance": false
     },
     "durable_ledger_experiment": {
-      "pr": 304,
-      "branch": "experiment/melosviz-durable-ledger-pass10",
+      "status": "EXPERIMENTALLY_ACCEPTED_FEASIBILITY_SLICE",
       "head": "f42320d030c3dfc11395da7fc66a4ed818349c01",
-      "status": "BEHAVIORAL_SUITE_PASS_RUNTIME_RECEIPT_REGRADING",
-      "scope": "isolated feasibility only; not M-E03 integration",
-      "controls": [
-        "R1 close/reopen R2",
-        "immutable scene revisions",
-        "execution != acceptance",
-        "exact evidence digest binding",
-        "unchanged reuse receipts",
-        "ordered assembly freeze",
-        "duplicate live attempt exclusion",
-        "missing evidence blocks assembly",
-        "stale lease recovery",
-        "equal-size artifact replacement blocks reuse",
-        "deleted artifact blocks reuse",
-        "post-reuse corruption blocks assembly freeze",
-        "failed verifier durable non-accepting",
-        "assembly execution != acceptance",
-        "wrong final digest rejected",
-        "policy revision bound to evidence/reuse",
-        "new policy invalidates old acceptance applicability",
-        "unknown policy fail-closed",
-        "evidence/reuse policy revision",
-        "SQLite integrity across reopen",
-        "runtime SQLite version receipt",
-        "acceptance-time concrete-byte integrity",
-        "failed evidence references known attempt"
-      ],
-      "workflow_run": 36821171954,
-      "behavioral_run": 36854274883
+      "workflow_run": 36854431337,
+      "pytest_artifact_digest": "sha256:e5e49d0b65ffeccdef12e7b70ebbbd74e2826d2baa17f41acc169a781400a77c",
+      "runtime_artifact_digest": "sha256:ed370bc93a734d5aaa25519c683ed711cef82268ae72ecd1e51852cd726db31c",
+      "caveat": "not M-E03 product integration"
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
