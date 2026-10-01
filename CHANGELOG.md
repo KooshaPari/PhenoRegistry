@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.1...v1.2.2) (2026-10-01)
+
+
+### Bug Fixes
+
+* **ci:** scope prettier off the release-please-generated CHANGELOG ([95112a0](https://github.com/KooshaPari/PhenoRegistry/commit/95112a04806bfcf5770a8cc008b1a673a8da44cf))
+
 ## [1.2.1](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.0...v1.2.1) (2026-10-01)
 
 
