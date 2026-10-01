@@ -200,7 +200,7 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "8d57a5cf54f9332248bdb4e4a1cb714823f3da5c",
+      "head": "14387d180430580eb654fb3cf21dd00ab7bd4a52",
       "status": "K_E02A_PLUS_SERVER_LIFECYCLE_CANDIDATE_QUEUED",
       "evidence": [
         "heap-owned correlated request",
@@ -214,7 +214,7 @@
         "pane.send_input reserved distinct from pane.write",
         "unqualified child input host_unsupported"
       ],
-      "workflow_run": 36821152465,
+      "workflow_run": 36821252873,
       "prior_red": "Zig installation failed before candidate gates"
     },
     "windows_comparators": {
@@ -230,11 +230,12 @@
       "layering": "native host and rich agent control plane are separate composition decisions"
     },
     "k_e02b": {
-      "status": "EXPERIMENTAL_UNMOUNTED",
+      "status": "EXPERIMENTAL_UNMOUNTED_EXACT_HEAD_QUEUED",
+      "head": "14387d180430580eb654fb3cf21dd00ab7bd4a52",
       "controls": [
-        "force-disconnect idle clients",
-        "zero workers before dependency teardown",
-        "no stream close under lifecycle mutex"
+        "idle client force-disconnect",
+        "zero worker invariant",
+        "close outside lifecycle mutex"
       ]
     }
   },
@@ -248,8 +249,8 @@
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "0ff97741ef00270fac2c11e2c94a3f2aee31acd8",
-      "status": "REPAIRED_REQUEUED",
+      "head": "078720bbff37c16cf7f7449396e5ab2f15fda248",
+      "status": "POLICY_BOUND_PLUS_DB_INTEGRITY_AWAITING_RUN",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
         "R1 close/reopen R2",
@@ -269,7 +270,10 @@
         "wrong final digest rejected",
         "policy revision bound to evidence/reuse",
         "new policy invalidates old acceptance applicability",
-        "unknown policy fail-closed"
+        "unknown policy fail-closed",
+        "evidence/reuse policy revision",
+        "SQLite integrity across reopen",
+        "runtime SQLite version receipt"
       ],
       "workflow_run": 36821171954
     },
