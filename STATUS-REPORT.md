@@ -79,7 +79,7 @@ Branch state at L7-003 close: orphan branch `chore/l7-001-contract-only-orphan-2
 
 ### 1.4 2026-06-19 Snapshot (L7-003, embedded status block)
 
-From `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98`:
+Recorded at authoring (2026-06-19) and first committed as `437180c6` (unchanged since); worklog backing is partial — `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98` holds the orphan SHA (`:79-80`) and subagent manifest (`:83`), while the 125 / 106 / 123 counts and manager directive appear nowhere in that file (script-checked: zero matches):
 
 - Orphan SHA: `cef45570fac3`
 - Monorepo-propagated intent: 125
@@ -270,8 +270,8 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
   state, not the present.
 - **Date basis for §2.3:** the delta row compares figures verified
   2026-06-18 against the L7-003 snapshot labeled 2026-06-19 — an embedded
-  block preserved verbatim in §1.4 (from L7-003 `worklog:79-98`; last-link:
-  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98`). The row
+  block preserved verbatim in §1.4 (first recorded `437180c6`; last-link:
+  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98` backs orphan SHA + subagents only — provenance note in §1.4). The row
   prints the baseline's date; both dates coexist in the original record and
   are not reconciled here.
 
