@@ -200,8 +200,8 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "c4db8802fd0dbbeb09c385248556d43255cd5ddb",
-      "status": "INFRA_RED_REPAIRED_REQUEUED",
+      "head": "8d57a5cf54f9332248bdb4e4a1cb714823f3da5c",
+      "status": "K_E02A_PLUS_SERVER_LIFECYCLE_CANDIDATE_QUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -214,7 +214,7 @@
         "pane.send_input reserved distinct from pane.write",
         "unqualified child input host_unsupported"
       ],
-      "workflow_run": 36820758671,
+      "workflow_run": 36821152465,
       "prior_red": "Zig installation failed before candidate gates"
     },
     "windows_comparators": {
@@ -226,7 +226,16 @@
         "custom only for demonstrated residual obligations"
       ],
       "note": "source claims require held-out native qualification",
-      "research_commit": "15127489aba7e670a5b9915de878092f6e5d9e96"
+      "research_commit": "15127489aba7e670a5b9915de878092f6e5d9e96",
+      "layering": "native host and rich agent control plane are separate composition decisions"
+    },
+    "k_e02b": {
+      "status": "EXPERIMENTAL_UNMOUNTED",
+      "controls": [
+        "force-disconnect idle clients",
+        "zero workers before dependency teardown",
+        "no stream close under lifecycle mutex"
+      ]
     }
   },
   "melosviz": {
@@ -239,7 +248,7 @@
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "799fcdfec7c9ad96a5e2535a9774ac99d5054e8b",
+      "head": "0ff97741ef00270fac2c11e2c94a3f2aee31acd8",
       "status": "REPAIRED_REQUEUED",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
@@ -257,14 +266,17 @@
         "post-reuse corruption blocks assembly freeze",
         "failed verifier durable non-accepting",
         "assembly execution != acceptance",
-        "wrong final digest rejected"
+        "wrong final digest rejected",
+        "policy revision bound to evidence/reuse",
+        "new policy invalidates old acceptance applicability",
+        "unknown policy fail-closed"
       ],
-      "workflow_run": 36820739135
+      "workflow_run": 36821171954
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
-      "policy_head": "d1895ad31011eb34882d3d45323f3cb4fe8d4a8e",
-      "added_control": "post-success final corruption must fail independent probe",
+      "policy_head": "925fda9b158b12f8ddfdbc05b4b30ac0633b0689",
+      "added_control": "R2 selective rerender must leave unselected S0 bytes unchanged",
       "status": "AWAITING_RUN"
     }
   }
