@@ -43,3 +43,24 @@ Scheduling/resource policy is separable from agent reasoning. Queueing, prioriti
 
 ## Genericity falsification
 Every proposed core abstraction must be tested against at least one non-coding workflow. Coding-only semantics belong in specialization layers unless evidence proves generality.
+
+## Event durability classes
+Events are classified as DURABLE_SEMANTIC, REPLAYABLE_DERIVED, or EPHEMERAL_PRESENTATION/TELEMETRY. Token deltas, terminal frames and UI cursor/pane state need not enter durable history unless a product contract requires them. Causal/subject ordering is specified; no global total order is assumed by default.
+
+## Runtime + workflow composition
+Agent runtime/message routing and durable workflow/orchestration are orthogonal ports and may be composed. An implementation may collapse them, but the contract does not require actor semantics to implement durability or workflow semantics to implement agent identity/routing.
+
+## Tenancy and trust domains
+Every durable effort/worker/effect/credential/evidence subject belongs to an explicit trust/tenant domain. Scheduling, quotas, secrets, approvals and event visibility enforce that boundary. Cross-domain delegation is explicit and auditable.
+
+## Local-first conformance
+Core semantics must have a fully local/self-hostable conformance path. Cloud services may provide richer implementations but cannot be required merely to preserve accepted state/evidence semantics unless a product stage explicitly chooses that dependency.
+
+## History compaction and replay
+Snapshots/compaction/continue-as-new may bound history, but must preserve authoritative state, causal provenance and references to immutable/raw evidence needed for audit. Model/tool nondeterminism is recorded as results/evidence; recovery does not silently re-invoke nondeterministic steps as though replay were equivalent.
+
+## Approval freshness
+Approval binds the exact effort, operation/effect version, policy and actor. Cancellation, replan, mutation or supersession invalidates incompatible pending approvals. Late/stale approvals are rejected.
+
+## Evidence privacy and custody
+Evidence may contain sensitive content. Contract supports access-controlled raw artifacts plus redacted/hashed attestations. A digest without retrievable/authorized custody is not automatically sufficient for criteria requiring semantic inspection; custody policy is criterion-specific.
