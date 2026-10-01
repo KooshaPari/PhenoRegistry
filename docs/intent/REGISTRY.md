@@ -2,7 +2,7 @@
 
 This index is the master list of repositories carrying L7-001 sweep bindings — row-vs-sweep deltas are open (see the Open reconciliation note below: 86 rows = 82 case-folded unique repos with same-repo alias pairs ruled case-by-case (2 ruled, candidates unruled — no settled count; see note); 12 rows match no `docs/intent/` file and 3 more only under a name variant); doc-only CVP triads are indexed by `docs/cvp/README.md` instead.
 
-> **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories (claude-code, codex, cursor-agent, forge, droid, aider). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
+> **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories from six corpus partitions (claude-code, codex, cursor-agent, forge, droid, aider; partition layout per `docs/registries.md:65`). The Curation sources table below itemizes kept records per contributing source: its four rows sum to 45,427 raw (41,585 Mac + 3,842 Win) and dedup by exactly 336 (−322 Mac, −13 Win, −1 cross-OS) onto merged_unique 45,091 — so droid/aider/other contributed no kept records (any nonzero kept set would require a fifth row for the sums to reach the total). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
 >
 > **CVP triad registration — 2026-09-27:** the `AuthKit` / `AgentMCP` /
 > `PhenoApps` CVP doc triads (`docs/cvp/` + `docs/intent/` + `docs/boundary/`,
@@ -18,8 +18,8 @@ This index is the master list of repositories carrying L7-001 sweep bindings —
 > `phenotype-terrain` (`:81`/`:84`) — but same-repo pairs beyond case folding sit in
 > the table too. Ruled: `phenoErrors` (`:87`) = `phenotype-errors` (`:74`) (alias note
 > `projects/pheno-errors.json:22`), and `HeliosCLI` (`:62`) = `helios-cli` (`:65`)
-> (disposition `registry/disposition-index.json:1175`; dated live `gh api` probe
-> 2026-10-01). Unruled candidates: `WSM` (`:120`) ~ `WorldSphereMod` (`:86`, only the
+> (disposition `registry/disposition-index.json:1175`; dated live probe 2026-10-01:
+> `gh api repos/KooshaPari/helios-cli --jq .name` → `HeliosCLI`). Unruled candidates: `WSM` (`:120`) ~ `WorldSphereMod` (`:86`, only the
 > latter has an intent doc), and `BytePort-Worktree` (`:114`) ~ `BytePort` (`:56`/`:63`).
 > No settled unique count is claimed: case-folding gives 82 and each ruled pair
 > lowers it; the delta stays open until every candidate is ruled and the table is
