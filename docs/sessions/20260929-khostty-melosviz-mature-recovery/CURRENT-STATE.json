@@ -242,14 +242,15 @@
     },
     "reviewer_m_e02": {
       "candidate": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
-      "policy_head": "cadde3290da7c25cd13cf4c6311c5f959dc6dc23",
-      "status": "MACHINE_READABLE_PROMOTION_RECEIPT_ADDED"
+      "policy_head": "b977d5de7f6d99db6d8f5a660cf286e06b49c7ec",
+      "status": "NUMERIC_REVISION_PROMOTION_RECEIPT"
     },
     "m_e03": {
-      "status": "FAIL_CLOSED_CANDIDATE_AND_REVISION_BOUND_PROMOTION_ACTIVE",
+      "status": "ATOMIC_CANDIDATE_REVISION_BOUND_REVIEWER_PROMOTION_ACTIVE",
       "pr": 305,
-      "head": "6b99df95fafc00a0319b0f9bf64ba5fe682a8cc3",
-      "scope": "reviewer promotion requires exact attempt candidate SHA + revision + observed scene digest + completed final digest; unbound attempt rejected"
+      "head": "24cc0c5e2d05529f9bfa81e9c0afa5979d3a1bde",
+      "run": 36925484921,
+      "scope": "candidate+revision+observed scene digests+completed final all validated before atomic acceptance mutation"
     }
   }
 }
