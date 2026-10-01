@@ -6,7 +6,7 @@ status: active
 last_boundary_review: 2026-09-27
 review_cadence: 30d
 in_scope:
-  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row); testing-kit (row id=912 target `apps/testing-kit/`) carved out pending row/card reconciliation — see `## Unresolved scope (non-gating)`"
+  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row); testing-kit (row id=912 target `apps/testing-kit/`) held out of this entry pending row/card reconciliation — not classified in or out until then; see `## Unresolved scope (non-gating)`"
   - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row; live gh api probe 2026-09-27 reports archived: true (no in-repo record otherwise); shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
   - "application-collection policy enforcement per card absorption_note (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
@@ -15,7 +15,7 @@ out_of_scope:
   - "Planify upstream/ AGPL subtree (verbatim fork, DO NOT MODIFY)"
   - "row id=901 = superseded classification of this same repo (KooshaPari/phenotype-apps, 1.7GB; disposition B:WORKING / fsm archived; note: TOO_INCOMPLETE_RETIRE 2026-07-17, resolved 2026-07-18) — evidence for the sunset-shelf question, out of in-scope contract"
   - "archived source repos' lifecycle (archive/delete happens at the source repo)"
-  # testing-kit: not an out_of_scope entry — unresolved row/card conflict; see `## Unresolved scope (non-gating)` below (sole pointer)
+  # testing-kit: not an out_of_scope entry — unresolved row/card conflict; see `## Unresolved scope (non-gating)` below (pointer; canonical entry is `in_scope[0]`)
 ---
 
 # Boundary — PhenoApps
