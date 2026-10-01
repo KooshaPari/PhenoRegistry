@@ -1,7 +1,7 @@
 # Phenotype Registry — STATUS REPORT
 
 > **Historical snapshot — not the current status page.**
-> Generated 2026-06-18 as the consolidated L7-001 / L7-002 / L7-003 sweep
+> Initially generated 2026-06-18 as the consolidated L7-001 / L7-002 / L7-003 sweep
 > record. For the repo's current state read `STATUS.md` (root) — the
 > canonical status document, which replaces this file. The other pointer,
 > `docs/monorepo-state/STATUS.md`, is itself a historical 2026-06-17
@@ -10,7 +10,7 @@
 > history (retention decision tracked in WBS C2, a planning artifact kept
 > outside the repo).
 
-**Generated:** 2026-06-18
+**Generated:** 2026-06-18 (initial generation date — the embedded §1.4 / §2.3 baseline snapshot is labeled 2026-06-19; see §6 date-basis note)
 **Scope:** L7-001 / L7-002 / L7-003 sweep — `phenotype-registry`
 **Author device:** macbook
 **Audience:** user (consolidated record; committed to the repo as an archival snapshot — retained because the L7 sweep history is unique)
@@ -79,7 +79,7 @@ Branch state at L7-003 close: orphan branch `chore/l7-001-contract-only-orphan-2
 
 ### 1.4 2026-06-19 Snapshot (L7-003, embedded status block)
 
-From `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-101`:
+From `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98`:
 
 - Orphan SHA: `cef45570fac3`
 - Monorepo-propagated intent: 125
@@ -270,8 +270,8 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
   state, not the present.
 - **Date basis for §2.3:** the delta row compares figures verified
   2026-06-18 against the L7-003 snapshot labeled 2026-06-19 — an embedded
-  block preserved verbatim in §1.4 (from L7-003 `worklog:79-101`; last-link:
-  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-101`). The row
+  block preserved verbatim in §1.4 (from L7-003 `worklog:79-98`; last-link:
+  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-98`). The row
   prints the baseline's date; both dates coexist in the original record and
   are not reconciled here.
 
