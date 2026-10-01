@@ -2,7 +2,7 @@
 
 This index is the master list of repositories carrying L7-001 sweep bindings — row-vs-sweep deltas are open (see the Open reconciliation note below: 86 rows = 82 case-folded unique repos with same-repo alias pairs ruled case-by-case (2 ruled, candidates unruled — no settled count; see note); 12 rows match no `docs/intent/` file and 3 more only under a name variant); doc-only CVP triads are indexed by `docs/cvp/README.md` instead.
 
-> **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories from six corpus partitions (claude-code, codex, cursor-agent, forge, droid, aider; partition layout per `docs/registries.md:65`). The Curation sources table below itemizes kept records per contributing source: its four rows sum to 45,427 raw (41,585 Mac + 3,842 Win) and dedup by exactly 336 (−322 Mac, −13 Win, −1 cross-OS) onto merged_unique 45,091 — so droid/aider/other contributed no kept records (any nonzero kept set would require a fifth row for the sums to reach the total). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
+> **L7-001 sweep — 2026-06-17:** 45,091 curated records (merged-unique corpus figure — phrasing corrected 2026-09-29, see Open reconciliation note below) bound to 82 repos across Mac + Windows prompt histories from four of the corpus's seven partitions (claude-code, codex, cursor-agent, forge; partition layout and sources list: `docs/registries.md:65`, `docs/registries.md:83` — the droid, aider, and other partitions hold zero kept records per the table reconciliation below). The Curation sources table below itemizes kept records per contributing source: its four rows sum to 45,427 raw (41,585 Mac + 3,842 Win) and dedup by exactly 336 (−322 Mac, −13 Win, −1 cross-OS) onto merged_unique 45,091 — so droid/aider/other contributed no kept records (any nonzero kept set would require a fifth row for the sums to reach the total). The previous placeholders in this file have been replaced with the actual bindings from the sweep.
 >
 > **CVP triad registration — 2026-09-27:** the `AuthKit` / `AgentMCP` /
 > `PhenoApps` CVP doc triads (`docs/cvp/` + `docs/intent/` + `docs/boundary/`,
@@ -25,7 +25,7 @@ This index is the master list of repositories carrying L7-001 sweep bindings —
 > lowers it; the delta stays open until every candidate is ruled and the table is
 > diffed against the sweep's input repo list (or a re-run of L7-001). (2) **45,091 vs 24,213
 > records** — L7-001's 45,091 is the merged-unique corpus figure (`:133`,
-> 41,263 Mac + 3,829 Win), while the 86 rows below sum to 24,213 (24,135
+> 41,263 Mac + 3,829 Win before one cross-OS dedup — 41,263 + 3,829 − 1 = 45,091), while the 86 rows below sum to 24,213 (24,135
 > intents + 28 plans + 50 responses) at time of writing: different bases
 > (corpus-unique vs per-repo attribution), and whether every corpus record is
 > attributable to one of these rows is the open question. Both numbers stand
