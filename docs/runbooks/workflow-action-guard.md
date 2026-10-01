@@ -51,12 +51,12 @@ Parsing details (so failures are never a surprise):
 
 ## When it runs
 
-| Trigger                        | Workflow / step          | What is scanned                             |
-| ------------------------------ | ------------------------ | ------------------------------------------- |
-| push to `main`                 | Workflow Action Guard    | trusted base tree workflows                 |
-| `pull_request_target` → `main` | Workflow Action Guard    | PR head workflows (scanned, never executed) |
-| `workflow_dispatch`            | Workflow Action Guard    | trusted base tree workflows                 |
-| push / PR on **any branch**    | Secret Guard → last step | full `.github/workflows` dir                |
+| Trigger                        | Workflow / step          | What is scanned                        |
+| ------------------------------ | ------------------------ | -------------------------------------- |
+| push to `main`                 | Workflow Action Guard    | trusted base tree workflows            |
+| `pull_request_target` → `main` | Workflow Action Guard    | PR head workflows (scanned, never run) |
+| `workflow_dispatch`            | Workflow Action Guard    | trusted base tree workflows            |
+| push / PR on **any branch**    | Secret Guard → last step | full `.github/workflows` dir           |
 
 The `pull_request_target` row materializes the **PR head tree inside the
 privileged job** — `ref: <head sha>` with
