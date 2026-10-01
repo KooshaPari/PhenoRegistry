@@ -198,25 +198,16 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "pr": 11,
-      "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "cbf93c87b09462ce90705bb1df510de907b61d09",
-      "status": "BRIDGE_STATE_ACCESSOR_FIXED_ALL_SEMANTIC_GATES_REQUEUED",
-      "evidence": [
-        "heap-owned correlated request",
-        "queued/executing/completed/canceled lifecycle",
-        "timeout cannot free executing context",
-        "shutdown cancels pending",
-        "queued context cleanup",
-        "CoreApp.tick execution owner",
-        "exact pane observation projection",
-        "queue-full fail-closed",
-        "pane.send_input reserved distinct from pane.write",
-        "unqualified child input host_unsupported",
-        "worker cannot execute callback until app-thread drain"
-      ],
-      "workflow_run": 36854497578,
-      "prior_red": "Zig installation failed before candidate gates"
+      "status": "SEMANTIC_SLICES_PASS_CORE_COMPILE_FORMAT_REMAIN",
+      "head": "788d266dbbd4c9d45d67ba8dedb06eb4e205ceac",
+      "semantic_run": 36854691011,
+      "bridge": "PASS",
+      "protocol": "PASS",
+      "handler": "PASS",
+      "server_lifecycle": "PASS",
+      "core_compile": "FAIL",
+      "format": "FAIL",
+      "diagnostic_artifact_digest": "sha256:eb736ba42a804397164e22bc843351daccdff2492eeda4f920f96c3039e588f5"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -262,12 +253,12 @@
       "status": "AWAITING_RUN"
     },
     "m_e03": {
-      "status": "STACKED_PRODUCT_LEDGER_SEAM_ACTIVE",
+      "status": "REVISION_BOUND_CONDUCTOR_SEAM_ACTIVE",
       "pr": 305,
-      "head": "8fed57543bd9d9c27b93320a4c1258134f0200d1",
-      "workflow_run": 36854769275,
-      "stacked_on": "M-E02 candidate",
-      "scope": "immutable canonical RenderSpec revisions + restart reconstruction only"
+      "head": "ac8d5a4af7194f966908fcdd6df52e55cb37ceae",
+      "workflow_run": 36856642904,
+      "scope": "persisted canonical RenderSpec revision + exact revision-bound conductor execution",
+      "stacked_on": "M-E02 candidate"
     }
   }
 }
