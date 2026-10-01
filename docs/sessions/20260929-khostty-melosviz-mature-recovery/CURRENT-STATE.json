@@ -198,12 +198,11 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "MOUNT_BLOCKED_ON_VALID_DEPENDENCY_AWARE_SUBSYSTEM_HARNESSES",
-      "head": "1bb53ddcc40bd71029b687a5446431ef04459800",
-      "run": 36899697150,
-      "core_compile": "PASS",
-      "format": "PASS",
-      "finding": "filtered build tests are not valid subsystem authorities in current build graph"
+      "status": "DEPENDENCY_AWARE_REPOSITORY_TEST_ROOT_QUEUED",
+      "head": "2dd4fd7c77104eb931c58d7ed38e43a3c7e56560",
+      "run": 36906989011,
+      "harness": "rich IPC modules imported by src/apprt.zig test root; graded through repository build graph",
+      "mount": "blocked pending exact green"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -248,12 +247,11 @@
       "status": "R2_REPEAT_HELPER_FIXED_RECEIPT_REQUIRED"
     },
     "m_e03": {
-      "status": "REAL_RESULT_OBSERVATION_NON_ACCEPTING_ACTIVE",
+      "status": "INDEPENDENT_SCENE_EVIDENCE_PROMOTION_ACTIVE",
       "pr": 305,
       "last_green_head": "98a51da632bf919a0ad1c7e0bd5ba767283580eb",
-      "last_green_run": 36899758153,
-      "current_head": "48087509e4d377056bdac52451407ed7d6ffaa96",
-      "scope": "revision→attempt→candidate scene-byte observation(non-accepted)→independent evidence→assembly lifecycle"
+      "current_head": "681580ef66b2c0ae53cea657d9684d96da01a42e",
+      "scope": "candidate observes concrete bytes non-accepted; verifier can promote only observed digest; assembly lifecycle already green"
     }
   }
 }
