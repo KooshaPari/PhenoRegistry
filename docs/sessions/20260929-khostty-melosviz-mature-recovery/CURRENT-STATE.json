@@ -198,10 +198,14 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "DEPENDENCY_AWARE_RICH_IPC_CONTROLS_RUNNING",
-      "head": "2dd4fd7c77104eb931c58d7ed38e43a3c7e56560",
-      "run": 36906989011,
-      "harness": "src/apprt.zig imports bridge/protocol/handler/server into repository test graph; exact checkout verified"
+      "status": "DEPENDENCY_AWARE_HARNESS_REPAIRED_REQUEUED",
+      "head": "79373c7cd74b015d4f045e156663dd1db49a2391",
+      "run": 36910495513,
+      "prior_receipt": "sha256:05cecbb6a7691fb3806f2c9ef163441fa1ec5c30975ef140095c8b7a945b4ef5",
+      "repairs": [
+        "server frame delimiter source defect",
+        "GTK/libadwaita runner dependencies"
+      ]
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -242,14 +246,14 @@
     },
     "reviewer_m_e02": {
       "candidate": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
-      "policy_head": "984d12570f0c94f2aba044a85b7b5a3ddc0f2fdc",
-      "status": "R2_REPEAT_HELPER_FIXED_RECEIPT_REQUIRED"
+      "policy_head": "cadde3290da7c25cd13cf4c6311c5f959dc6dc23",
+      "status": "MACHINE_READABLE_PROMOTION_RECEIPT_ADDED"
     },
     "m_e03": {
-      "status": "INDEPENDENT_PROMOTION_DIAGNOSTIC_REQUEUED",
+      "status": "REVIEWER_RECEIPT_TO_LEDGER_PROMOTION_ACTIVE",
       "pr": 305,
-      "head": "a2d3992b82ad78b08ad98973a04585709c636475",
-      "scope": "candidate scene observation non-accepted; exact-digest verifier promotion; receipt artifact enabled"
+      "head": "bfb30af75d6d653b81ee6fca7ed87b54d2201d8f",
+      "scope": "independent reviewer promotion receipt → exact observed scene promotion + exact completed final acceptance"
     }
   }
 }
