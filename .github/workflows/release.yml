@@ -30,15 +30,37 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
+      # NOTE: the crate `pheno-dag` was renamed to `phenotype-dag-core` on
+      # 2026-09-01, but this job kept publishing the retired name, so cargo
+      # exited 101 with: package ID specification `pheno-dag` did not match
+      # any packages. The publish steps are additionally gated on the
+      # CARGO_REGISTRY_TOKEN secret, which this repository has never had;
+      # without it cargo has no upload token. The gate reports that state as
+      # an explicit warned skip rather than a hard failure, and publishing
+      # starts on its own once the secret is added - no further edits here.
+      - name: Check crates.io credentials
+        id: creds
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: |
+          if [ -z "${CARGO_REGISTRY_TOKEN}" ]; then
+            echo "present=false" >> "${GITHUB_OUTPUT}"
+            echo "::warning title=crates.io publish skipped::CARGO_REGISTRY_TOKEN is not configured, so no crates were published for this release."
+          else
+            echo "present=true" >> "${GITHUB_OUTPUT}"
+          fi
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
 
-      - name: Publish pheno-dag
-        run: cargo publish -p pheno-dag --allow-dirty
+      - name: Publish phenotype-dag-core
+        if: steps.creds.outputs.present == 'true'
+        run: cargo publish -p phenotype-dag-core --allow-dirty
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
 
       - name: Publish phenotype-registry
+        if: steps.creds.outputs.present == 'true'
         run: cargo publish --allow-dirty
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
