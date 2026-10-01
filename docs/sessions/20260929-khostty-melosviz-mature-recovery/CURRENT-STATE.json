@@ -198,15 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "DEPENDENCY_AWARE_SECOND_REPAIR_REQUEUED",
-      "head": "05365c2c894fbe5def28369a5006c8cbff92c170",
-      "run": 36913031613,
-      "prior_receipt": "sha256:ad8508b2d7ce30f2de1fa422a15d0e1c7bb3e6616bcf8be85f7d505039eb76e5",
-      "repairs": [
-        "newline writer literal",
-        "modern blueprint compiler",
-        "gtk4-layer-shell headers"
-      ]
+      "status": "DEPENDENCY_INSTALL_PREFLIGHT_REQUEUED",
+      "head": "ef108bce3671d0885867a5dc511194c315babd17",
+      "run": 36923297919,
+      "note": "workflow serialization fixed; native dependency versions/headers now explicit preflight"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -251,12 +246,10 @@
       "status": "MACHINE_READABLE_PROMOTION_RECEIPT_ADDED"
     },
     "m_e03": {
-      "status": "REVIEWER_PROMOTION_SEAM_REPAIRED_REQUEUED",
+      "status": "FAIL_CLOSED_CANDIDATE_AND_REVISION_BOUND_PROMOTION_ACTIVE",
       "pr": 305,
-      "head": "0b1e89192ab457b6492304fffb09ce5279cc8647",
-      "prior_run": 36910611523,
-      "prior_receipt": "sha256:24bf2aade3383e6789b134866578be16d91803950e0f174a59fce2d09dd9f175",
-      "repair": "absent per_scene_results means no candidate observations, not crash"
+      "head": "6b99df95fafc00a0319b0f9bf64ba5fe682a8cc3",
+      "scope": "reviewer promotion requires exact attempt candidate SHA + revision + observed scene digest + completed final digest; unbound attempt rejected"
     }
   }
 }
