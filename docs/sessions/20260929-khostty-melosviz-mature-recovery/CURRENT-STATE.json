@@ -201,7 +201,7 @@
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
       "head": "cbf93c87b09462ce90705bb1df510de907b61d09",
-      "status": "BRIDGE_API_OMISSION_FIXED_ALL_GATE_DIAGNOSTICS_REQUEUED",
+      "status": "BRIDGE_STATE_ACCESSOR_FIXED_ALL_SEMANTIC_GATES_REQUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -215,7 +215,7 @@
         "unqualified child input host_unsupported",
         "worker cannot execute callback until app-thread drain"
       ],
-      "workflow_run": 36821252873,
+      "workflow_run": 36854497578,
       "prior_red": "Zig installation failed before candidate gates"
     },
     "windows_comparators": {
@@ -260,6 +260,14 @@
       "policy_head": "55e9358ffd331382545a7874b19e4975310fdcd9",
       "added_control": "repeat exact R2 is zero-scene-work and media-idempotent",
       "status": "AWAITING_RUN"
+    },
+    "m_e03": {
+      "status": "STACKED_PRODUCT_LEDGER_SEAM_ACTIVE",
+      "pr": 305,
+      "head": "8fed57543bd9d9c27b93320a4c1258134f0200d1",
+      "workflow_run": 36854769275,
+      "stacked_on": "M-E02 candidate",
+      "scope": "immutable canonical RenderSpec revisions + restart reconstruction only"
     }
   }
 }
