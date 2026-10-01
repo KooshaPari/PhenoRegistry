@@ -270,7 +270,8 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
   state, not the present.
 - **Date basis for §2.3:** the delta row compares figures verified
   2026-06-18 against the L7-003 snapshot labeled 2026-06-19 — an embedded
-  block preserved verbatim in §1.4 (from L7-003 `worklog:79-101`). The row
+  block preserved verbatim in §1.4 (from L7-003 `worklog:79-101`; last-link:
+  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-101`). The row
   prints the baseline's date; both dates coexist in the original record and
   are not reconciled here.
 
