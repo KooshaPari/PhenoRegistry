@@ -216,13 +216,22 @@ BEGIN {
     }
 
     # R7 motion-without-result
-    # Inline-code path citations (`dir/file.ext`, must contain a slash) are
-    # file references, not placeholder content: strip them before matching so
-    # citing e.g. `scripts/fill-intent-stubs.py` does not fire on "stub".
-    # Prose tokens and slash-less code spans still fire.
-    r7lc = lc
-    while (match(r7lc, /`[^`]*\/[^`]*`/))
-      r7lc = substr(r7lc, 1, RSTART - 1) substr(r7lc, RSTART + RLENGTH)
+    # Path-like inline-code citations (`scripts/example.py`) are file
+    # references, not placeholder content: strip those spans before matching
+    # so citing a path that happens to contain "stub" does not fire R7.
+    # A span is path-like only when it holds a slash that is neither
+    # space-padded nor part of an assignment: `feature=false / stub` and
+    # `a=b/c` are kept (and still fire). Slash-less spans are kept too.
+    r7lc = ""
+    r7rest = lc
+    while (match(r7rest, /`[^`]*`/)) {
+      r7span = substr(r7rest, RSTART, RLENGTH)
+      r7lc = r7lc substr(r7rest, 1, RSTART - 1)
+      if (index(r7span, "/") == 0 || r7span ~ / \/ / || r7span ~ /=/)
+        r7lc = r7lc r7span
+      r7rest = substr(r7rest, RSTART + RLENGTH)
+    }
+    r7lc = r7lc r7rest
     if (r7lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
       report("r7", file, line_no, body, "feature false/placeholder introduced without result signal")
     }

@@ -226,9 +226,9 @@ fi
 
 # ---- Test 8: R7 path-citation strip present in both guard copies ----
 echo "Test 8: R7 path-citation strip present in both guard copies" >&2
-if grep -q 'r7lc = lc' "$SCRIPT_DIR/../governance/happy-path-precommit.sh" \
-   && grep -q 'r7lc = lc' "$SCRIPT_DIR/../handbook/governance/happy-path-precommit.sh"; then
-  echo "  PASS (both copies strip backticked file paths before R7 match)" >&2
+if grep -q 'r7rest = lc' "$SCRIPT_DIR/../governance/happy-path-precommit.sh" \
+   && grep -q 'r7rest = lc' "$SCRIPT_DIR/../handbook/governance/happy-path-precommit.sh"; then
+  echo "  PASS (both copies strip path-like code spans before R7 match)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 strip missing from one of the guard copies (out of sync)" >&2
@@ -278,6 +278,23 @@ if grep -q '\[R7\]' "$TMPREPO/out_prose"; then
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 did not fire on prose placeholder content" >&2
+  FAIL=$((FAIL+1))
+fi
+(
+  cd "$TMPREPO" || exit 1
+  BASE=$(git rev-parse HEAD)
+  printf -- 'Reviewers flagged `feature=false / stub` as motion.\n' >> probe.md
+  git add probe.md
+  git commit -qm padded-slash-span
+  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
+    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
+) > "$TMPREPO/out_span" 2>&1
+echo "Test 11: space-padded slash content span still fires R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_span"; then
+  echo "  PASS (content span with ' / ' kept and flagged)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: R7 escaped a non-path content span" >&2
   FAIL=$((FAIL+1))
 fi
 rm -rf "$TMPREPO"
