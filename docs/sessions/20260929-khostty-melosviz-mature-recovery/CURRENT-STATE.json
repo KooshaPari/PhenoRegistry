@@ -198,11 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "DEPENDENCY_AWARE_REPOSITORY_TEST_ROOT_QUEUED",
+      "status": "DEPENDENCY_AWARE_RICH_IPC_CONTROLS_RUNNING",
       "head": "2dd4fd7c77104eb931c58d7ed38e43a3c7e56560",
       "run": 36906989011,
-      "harness": "rich IPC modules imported by src/apprt.zig test root; graded through repository build graph",
-      "mount": "blocked pending exact green"
+      "harness": "src/apprt.zig imports bridge/protocol/handler/server into repository test graph; exact checkout verified"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -247,11 +246,10 @@
       "status": "R2_REPEAT_HELPER_FIXED_RECEIPT_REQUIRED"
     },
     "m_e03": {
-      "status": "INDEPENDENT_SCENE_EVIDENCE_PROMOTION_ACTIVE",
+      "status": "INDEPENDENT_PROMOTION_DIAGNOSTIC_REQUEUED",
       "pr": 305,
-      "last_green_head": "98a51da632bf919a0ad1c7e0bd5ba767283580eb",
-      "current_head": "681580ef66b2c0ae53cea657d9684d96da01a42e",
-      "scope": "candidate observes concrete bytes non-accepted; verifier can promote only observed digest; assembly lifecycle already green"
+      "head": "a2d3992b82ad78b08ad98973a04585709c636475",
+      "scope": "candidate scene observation non-accepted; exact-digest verifier promotion; receipt artifact enabled"
     }
   }
 }
