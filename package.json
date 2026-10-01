@@ -9,9 +9,10 @@
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
-    "test:e2e": "bash ./scripts/e2e-missing-runner.sh"
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "1.63.0",
     "vitepress": "^1.6.4"
   },
   "overrides": {

@@ -1,8 +1,6 @@
 {
   "name": "AuthKit",
-  "languages": [
-    "rust"
-  ],
+  "languages": ["rust"],
   "primary_language": "rust",
   "status": "active",
   "has_readme": true,
@@ -23,12 +21,10 @@
   "supersedes": "Authvault",
   "superseded_by": null,
   "absorbed_into": null,
-  "absorption_note": "AuthKit is the successor to the archived Authvault repo (c7994b9, 2026-06-20). Created 2026-06-24 to receive the unmerged GAP work. FR-AUTHV-018 (originally GAP-008 PKCE state binding at middleware) landed in commit 064b310 with 11 unit tests. GAP-009 (RS256/ES256 alg-confusion defense) and GAP-010 (middleware adapter docs) were already merged into Authvault main; they remain canonical on Authvault. Future auth work (AUT-SOTA-001..007: key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate-limiting) lands in this crate.",
+  "absorption_note": "AuthKit is the successor to the archived Authvault repo (c7994b9, 2026-06-20). Created 2026-06-24 to receive the unmerged GAP work. FR-AUTHV-018 (originally GAP-008 PKCE state binding at middleware) landed in commit 064b310 with 11 unit tests. GAP-007 (RS256/ES256 alg-confusion defense, shipped as FR-AUTHV-017) and GAP-010 (Tracera/AgilePlus middleware adapter docs, shipped) were merged into Authvault main and remain canonical there. GAP-009 (rate-limiting on failed auth attempts — no brute-force protection) is still PLANNED on Authvault (definition table: archives/zz-archive-phenotype-registry/patches/authkit-absorption.patch:1817-1820; corrected 2026-09-27 — an earlier version of this note mislabeled GAP-009 as the alg-confusion work). Future auth work (AUT-SOTA-001..007: key rotation, OIDC discovery, WebAuthn, TOTP, KMS-backed secrets, DPoP, rate-limiting) lands in this crate.",
   "disposition": "AFFIRM",
   "rationale": "Canonical Rust auth boundary (active). New auth work goes here. Authvault is now read-only history. The crate is intentionally minimal today: one hexagonal port (SessionStore) and one tower middleware (enforce_pkce_state_session). Per-adapter expansion is the AUT-SOTA series.",
-  "workspace_members": [
-    "authkit"
-  ],
+  "workspace_members": ["authkit"],
   "single_crate": "src/lib.rs",
   "gap_worktrees": [],
   "ci_state": "newly-created; CI not yet configured (SOTA-001 unit)",

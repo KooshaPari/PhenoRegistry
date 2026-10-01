@@ -1,5 +1,13 @@
 # Q2 Quality Ratchet Template
 
+> **Relocated from `.github/workflows/ratchet.yml`.** GitHub Actions treats
+> every file in that directory as a workflow, so this Markdown document was
+> parsed as YAML and the `## What is Q2?` heading stopped the parse on every push,
+> producing a zero-job failure that could never pass. Workflows are only
+> loaded from `.github/workflows/`, so moving the template here removes the
+> failure without deleting the template. The `ratchet.yml` path named below is
+> where _you_ place the workflow in your own repository.
+
 > **Source audit:** `FLEET-AUDIT-REPORT.md` — Q2 (Quality eng ratchets) is P1 priority (9/11 audited repos at score 0).
 > **Method:** Add a CI gate that fails if the test coverage (or complexity, or lint warnings) regresses from the current baseline. The ratchet only allows improvement.
 > **How to use:** Copy the workflow below to your repo as `.github/workflows/ratchet.yml`, customize the metric (coverage / lint / complexity), commit, push. Lifts Q2 from 0 to 2 (wired).
@@ -7,6 +15,7 @@
 ## What is Q2?
 
 Q2 (Quality eng ratchets) = CI gates that prevent quality regressions. Common ratchets:
+
 - **Coverage ratchet:** coverage can only go UP. If it drops, build fails.
 - **Lint warning ratchet:** number of `#[allow(...)]` or `eslint-disable` lines can only go DOWN.
 - **Complexity ratchet:** cyclomatic complexity per function can only go DOWN (or stay under a threshold).
@@ -40,14 +49,14 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # e.g., de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # e.g., de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: Setup language
         # Adapt for your stack:
-        uses: actions/setup-node@1a4442cacd436585916f4bd0495db9b8a8a0d4d8  # e.g., 1a4442cacd436585916f4bd0495db9b8a8a0d4d8
+        uses: actions/setup-node@1a4442cacd436585916f4bd0495db9b8a8a0d4d8 # e.g., 1a4442cacd436585916f4bd0495db9b8a8a0d4d8
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install
         run: npm install --legacy-peer-deps
@@ -114,6 +123,7 @@ OmniRoute is the reference repo for Q2 (Q2=2). It has a coverage ratchet enforce
 ## How to validate
 
 After applying:
+
 1. Push a trivial change; the ratchet should pass
 2. Delete a test; commit + push; the ratchet should fail
 3. Add the test back; the ratchet should pass again
