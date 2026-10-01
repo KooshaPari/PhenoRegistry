@@ -1,35 +1,34 @@
-# BytePort — completion gate receipt, current recovery state
+# BytePort completion gate — non-code finality state
 
-Date: 2026-09-30.  
-Analyzed source: `0232cca16fedb7963a8c6f556dc5eee5c8c1674e`.  
-Status: **INCOMPLETE / BLOCKED. No completion percentage.**
+Date: 2026-10-01.
+Status: **NON-CODE CONTRACT SUBSTANTIALLY FINAL / GLOBAL DESIGN GATE BLOCKED BY ENUMERATED EXTERNAL CLOSERS**.
+Completion percentage: null.
 
-## What is now established
+## Finalized for current known authority
+- corrected generalized declarative infrastructure/deployment thesis;
+- authority/source classification;
+- mature-first stages;
+- v1.2 desired/realized infrastructure ontology;
+- source/manifest/build/operation/reconciliation/lifecycle obligations;
+- selected-app and generalized mixed-resource journey contracts;
+- SOTA graph/provider/bare-metal architecture;
+- bare-metal comparison design;
+- quality/benchmark contract;
+- evidence/trace/autograder and legacy-unverified doctrine;
+- machine work-package DAG;
+- orphan/scope and destructive lifecycle policy;
+- explicit unresolved-decision register.
 
-- Mature deployment→productization horizon is directly user-backed and substantially reconciled against later agent-generated desktop/local wording.
-- Exact PhenoInfra dependency revision frozen; NanoVMS canonical source/API revision remains explicitly unresolved.
-- BP-F03 wrong provider-resource identity and BP-F04 remote-success/local-persistence-failure window have exact native receipts.
-- Working architecture separates source snapshot, manifest, component/artifact resolution, build operation/artifact, deployment intent/generation, product/runtime operation, provider resources, observations and publication.
-- BuildEngine is capability-based; BuildKit, Buildpacks, prebuilt artifacts and external CI remain replaceable adapter candidates.
-- CLI/Desktop/API are projections over one domain operation; current web mutation vs Tauri plan-only drift is mapped.
-- Ontology v1.1 includes component graphs, non-artifact resources, rollout generations, ExternalOperationRef, multi-platform artifact identity and draft/planned/realized portfolio modes.
-- Three mature-obligation slices and semantic traceability slice 01 exist.
-- Developer handoff is two-tier: additive domain/interface work ready; lifecycle/build production merge remains experiment-gated.
+## Remaining global gate blockers
+1. Claude conversation corpus review.
+2. network-mode default/health-metrics exposure authority + threat fixture.
+3. Empirical receipts: B03 execution/integration, build provenance, generalized reconciliation provider fixture, bare-metal engine comparison, portfolio publisher.
+4. richer manifest semantics only if needed beyond recovery-v1.
+5. numeric quality targets after baseline/user objective.
+6. fresh independent falsification review after material closers.
 
-## Blocking
+## Fresh-review assignment
+Attempt to falsify DesiredResourceGraph expressiveness, desired/realized identity, update/replace/delete ordering, provider capability mismatch, restart/idempotency, destructive intent, source/artifact provenance, network/auth, interface convergence, publication truth, provisioning/configuration boundary, and provider-state ownership.
 
-- source denominator pass 3 still has unresolved source resolution, manifest, build, operation, runtime, security, schema, packaging/release/support families;
-- duplicate-deploy and operation-journal isolated receipts pending;
-- delegated portable artifact/provenance prototype pending;
-- second BuildEngine comparison pending;
-- lost-response/restart/delayed-visibility reconciliation pending;
-- selected-app RuntimeAdapter observation pending;
-- multi-resource/blue-green lifecycle pending;
-- PortfolioPublisher API + Git fallback experiment pending;
-- NanoVMS current provider source/API contract unresolved;
-- installed CLI/Desktop/API convergence pending;
-- fresh independent falsification review not run.
-
-## Gate
-
-Product identity is no longer blocked by the local-only contradiction, but **architecture/specification 100% remains forbidden**. The first complete source→artifact→runtime→observation vertical slice is still required before broad implementation promotion.
+## Verdict
+Selected-app no longer defines the product; generalized infrastructure does. Non-code work is final for current evidence except listed closers. Global 100% remains forbidden.
