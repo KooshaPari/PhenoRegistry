@@ -113,10 +113,11 @@ disposition-index absorption rows.
 
 **Date:** 2026-10-01
 **Reviewer:** jcode agent (PHENOREG-FORWARD-WBS, PR #598 `8e64c8e6`)
-**Worklog / finding:** kilo round-12 thread `PRRT_kwDOR5eICc6oFRcM` (post-merge on
-PR #586): the `testing-kit` clause was dropped from `in_scope[0]` without any
-record in this file's review metadata, so a future reviewer cannot tell the
-removal from an accidental drop.
+**Worklog / finding:** kilo round-12 thread `PRRT_kwDOR5eICc6oFRcM` (posted on
+PR #586 after its merge): the `testing-kit` clause was added to `in_scope[0]` by
+#586's squash `2cf6902` (and carved out of `out_of_scope` there), then dropped
+from `in_scope[0]` by this PR's `8e64c8e6` with no record in this file's review
+metadata, so a future reviewer cannot tell the removal from an accidental drop.
 **Decisions:**
 
 - `testing-kit` (row id=912 target `apps/testing-kit/`) removed from
@@ -125,9 +126,15 @@ removal from an accidental drop.
   in scope nor out of scope until the row/card conflict is reconciled" hold.
   The no-verdict pointer now lives only in the `#`-comment beside the lists
   and the `## Unresolved scope (non-gating)` section.
-- Validator checked: `tools/check-ecosystem.ts` (1,223 lines) contains no
-  `testing-kit` and no `in_scope` reference — no tooling requires the
-  membership entry, so removal changes prose contract only.
-- Mirrors the per-round `## Change Log` pattern in `docs/cvp/PhenoApps.md:246`.
+- Validator evidence widened: `tools/check-ecosystem.ts` (1,223 lines) and
+  `scripts/validate-ecosystem.sh` (315 lines) contain no `testing-kit` and no
+  `in_scope` reference. The only other `in_scope` hits under `scripts/` are
+  writer-side dict keys in `scripts/fill-intent-st….py` (`:13-73`, consumed at
+  `:111`) — prose defaults rendered for newly created files, not readers of
+  `docs/boundary/*.md` frontmatter. No tooling requires the membership entry,
+  so removal changes prose contract only.
+- Mirrors the per-round `## Change Log` pattern in `docs/cvp/PhenoApps.md:246`;
+  this round's row is appended at `docs/cvp/PhenoApps.md:257` so the mirror is
+  two-sided.
 
 **Next review:** 2026-10-31
