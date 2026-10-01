@@ -198,13 +198,14 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "DEPENDENCY_AWARE_HARNESS_REPAIRED_REQUEUED",
-      "head": "79373c7cd74b015d4f045e156663dd1db49a2391",
-      "run": 36910495513,
-      "prior_receipt": "sha256:05cecbb6a7691fb3806f2c9ef163441fa1ec5c30975ef140095c8b7a945b4ef5",
+      "status": "DEPENDENCY_AWARE_SECOND_REPAIR_REQUEUED",
+      "head": "05365c2c894fbe5def28369a5006c8cbff92c170",
+      "run": 36913031613,
+      "prior_receipt": "sha256:ad8508b2d7ce30f2de1fa422a15d0e1c7bb3e6616bcf8be85f7d505039eb76e5",
       "repairs": [
-        "server frame delimiter source defect",
-        "GTK/libadwaita runner dependencies"
+        "newline writer literal",
+        "modern blueprint compiler",
+        "gtk4-layer-shell headers"
       ]
     },
     "windows_comparators": {
@@ -250,10 +251,12 @@
       "status": "MACHINE_READABLE_PROMOTION_RECEIPT_ADDED"
     },
     "m_e03": {
-      "status": "REVIEWER_RECEIPT_TO_LEDGER_PROMOTION_ACTIVE",
+      "status": "REVIEWER_PROMOTION_SEAM_REPAIRED_REQUEUED",
       "pr": 305,
-      "head": "bfb30af75d6d653b81ee6fca7ed87b54d2201d8f",
-      "scope": "independent reviewer promotion receipt → exact observed scene promotion + exact completed final acceptance"
+      "head": "0b1e89192ab457b6492304fffb09ce5279cc8647",
+      "prior_run": 36910611523,
+      "prior_receipt": "sha256:24bf2aade3383e6789b134866578be16d91803950e0f174a59fce2d09dd9f175",
+      "repair": "absent per_scene_results means no candidate observations, not crash"
     }
   }
 }
