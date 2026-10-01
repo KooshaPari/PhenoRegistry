@@ -92,3 +92,52 @@ BytePort `.github/workflows/mature-recovery-contract.yml` is currently invalid o
 This is classified as **COLLECTOR/WORKFLOW FAILURE**, not product evidence.
 
 The repair is deliberately deferred until the currently registered exact **BytePort Mature Recovery Oracle** run for head `a9b0749b3146400934b09237ab625d0952692ae4` executes or otherwise terminates, because changing the BytePort head now would cancel that exact-candidate oracle again.
+
+
+## CI saturation diagnosis
+
+The exact-head qualification delay is now attributable to repository-wide GitHub Actions saturation rather than the two recovery workflows themselves.
+
+Observed via GitHub Actions run inventory:
+
+### ShareCLI
+
+- queued workflow runs: **407**
+- in-progress workflow runs: **16**
+- exact recovery-carrying CI run: `36926431574`, status `pending`
+- multiple stale recovery-branch SHAs still had long-running workflows occupying runners
+
+Representative stale active workflows inspected on the recovery branch include:
+
+- `live-pool-soft.yml`
+- `load-soft.yml`
+- `soak-soft.yml`
+- `visual-soft.yml`
+- `visual.yml`
+- `rss.yml`
+
+Their current workflow headers do not define an effective top-level concurrency/cancel policy, so newer recovery-head churn does not reliably evict older expensive runs.
+
+### BytePort
+
+- queued workflow runs: **355**
+- in-progress workflow runs: **1** at observation time
+- pending runs: **4**, including exact recovery oracle `36927029714`
+- the only active run observed was main-branch CI; the recovery oracle itself was registered correctly and pending
+
+### Consequence
+
+This is **qualification infrastructure saturation**, not product pass/fail evidence. It also explains why repeatedly advancing the product heads worsened evidence latency: each commit generated another large workflow fan-out while old expensive workflows remained active or queued.
+
+### Deferred CI remediation
+
+After the exact candidate oracle either executes or terminates, the product repos should receive a bounded CI hygiene pass:
+
+1. add stable PR/branch concurrency groups to expensive duplicate workflows;
+2. set `cancel-in-progress: true` for soft/advisory PR workflows where stale runs have no evidentiary value;
+3. keep non-cancellable behavior only where historical/soak evidence genuinely requires completion;
+4. avoid workflow-level path filters for required checks that would leave required checks permanently pending;
+5. isolate mature-recovery qualification from unrelated full-repo fan-out where possible;
+6. repair BytePort `mature-recovery-contract.yml` syntax before relying on it.
+
+No product head is being advanced solely to perform this cleanup while exact qualification runs remain pending.
