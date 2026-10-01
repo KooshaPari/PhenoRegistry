@@ -1,23 +1,28 @@
-# Capability-lineage matrix — pass 1
+# Capability lineage and mature destination matrix — pass 1
 
-Date: 2026-10-01. Deliberately incomplete; evidence-backed first-pass dispositions only.
+| Capability | Historical donor | Current stronger candidate | Mature destination hypothesis | Status |
+|---|---|---|---|---|
+| Interactive coding TUI/UX | HeliosCLI/Codex lineage | modern Codex; jcode also strong | client-specific Codex/jcode adapters; preserve best UX | compare |
+| Fast native/light headless | Forgecode/HeliosLite | jcode; Codex exec | client mode/adapter; standalone Forgecode only if measured niche survives | likely sunset |
+| Multi-provider subscriptions/models | KCode/jcode | current jcode | jcode adapter + provider port | likely upstream |
+| App/IDE/GUI protocol | modern Codex app-server | current Codex | Codex adapter informs EventProjection/ClientAdapter; do not copy wholesale | research |
+| Server-owned sessions/multi-client | jcode | current jcode | SessionPort/client projection adapter | research |
+| Generic agent lifecycle | Agentora intent | OpenAI Agents SDK/MS Agent Framework + recovered Agentora | shared Agent Kernel | design |
+| Durable effort/workflow | historical Agentora/checkpoint ideas | Temporal/Durable Task/MS AF patterns | DurableExecutionPort + canonical DurableEffort schema | design |
+| External-effect recovery | KCode/HeliosLite recovery research | shared contract | shared harness effect ledger/reconciler | accepted contract |
+| Resource scheduling | old harness_scaling/queue ideas | Ray/K8s/custom schedulers | SchedulerPort; external substrate | research |
+| Queue/cache | Helios root harness | Tokio/runtime/cache libs | commodity dependency; retire custom unless benchmarked need | likely replace |
+| Process execution | Helios runner; Codex exec-server; jcode tools | Codex exec-server/jcode/Pine/runtime adapters | Workspace/ToolRuntime port | compare |
+| Sandbox | Codex/KCode/Helios root | current Codex + platform substrate | Workspace/Policy adapters | compare |
+| Approval/policy | Codex UX; KCode permissions; Agentora intent | modern Codex/jcode + policy stack | shared Policy/Approval contract, client presentation separate | design |
+| Memory/context/compaction | KCode/jcode; Agentora intent | current jcode + research frameworks | Session/Context ports | research |
+| Multi-agent/swarm | KCode/jcode; Agentora; old RootManager | current jcode + research frameworks | WorkGraph/Agent Kernel; scheduler separate | research |
+| MCP tools | all modern lineages | MCP standard/current clients | ToolCapability adapter | integrate |
+| A2A task interoperability | none historical primary | A2A | optional adapter, Artifact/Task mapping | integrate candidate |
+| Evidence/grading | harness_verify/Tracera/MACE intent | shared recovery doctrine | independent Evidence/Grader plane | canonical |
+| Tracing/replay | Agentora intent; providers | OpenAI Agents tracing + OTEL ecosystems | TracePort/Evidence links | integrate |
+| GUI workbench | HeliosLab | modern Codex app + CMux/Herder lessons | HeliosLab ClientAdapter | product-specific |
+| Windows POSIX compatibility | Pine intent + KCode/Helios needs | research/current substrates | Workspace/runtime adapter | separate substrate |
+| Release/runtime identity | KCode recovery | shared evidence contract | client/runtime adapter invariant | canonical |
 
-| Capability / concern | HeliosCLI / Codex lineage | KCode / jcode lineage | HeliosLite / Forgecode donor | Shared harness destination hypothesis | State |
-|---|---|---|---|---|---|
-| Client/TUI interaction | historical HeliosCLI intent + modern Codex must be re-recovered; current root helios is narrow | active jcode client/runtime surfaces | lightweight CLI donor | client adapter; presentation outside kernel | OPEN |
-| Generic agent orchestration | root harness_orchestrator exists but is unmounted prototype/synthetic execution | coding-agent turn/runtime behavior, not accepted generic ontology | agent-loop donor | shared harness / Agentora-PhenoShared successor | RESEARCH_REQUIRED |
-| Durable effort vs worker attempt | historical root stateless-between-runs design conflicts with current intent | qualified effect primitive but production durable consumer absent | donor evidence | durable workflow/orchestration layer | ACCEPTED_BOUNDARY / IMPLEMENTATION_OPEN |
-| Tool/effect recovery | no mature mounted root implementation found yet | #20 qualified primitive, reachability open | qualified donor primitive from sunset work | shared effect contract + runtime adapter | PARTIAL |
-| Runtime identity/evidence | not yet mapped | #14 daemon identity qualified | donor evidence | evidence/provenance layer | PARTIAL |
-| Multi-agent scaling | scaling/orchestrator workspace crates not mounted by helios binary | current jcode concurrency/runtime must be mapped | lighter runtime donor | scheduler/fleet layer | OPEN |
-| Provider/model abstraction | root helios-ai exists; modern Codex semantics need comparison | active jcode SDK/provider work | multi-provider donor | provider runtime + capability negotiation | OPEN |
-| GUI embedding | root architecture insufficient; vendored Codex app-server is not mounted evidence | jcode protocol/server may be useful | donor | event/projection API consumed by HeliosLab | OPEN |
-| Headless/light ephemeral use | root Ask/Exec exist; benchmark absent | user generally prefers jcode | user specifically values Forgecode lightness | benchmark role before preserving separate client | UNVERIFIED_DIFFERENTIATION |
-| Checkpoint/rollback | mounted root dependencies exist; semantics need audit | session durability strong; external effect separate | donor | workspace + durable effort split | OPEN |
-| Shared SDK/runtime | harness_pyo3 excluded/broken PhenoShared path; Agentora absorption unproven | jcode SDK is active upstream surface | donor | audit Agentora/PhenoShared before new API | BLOCKING_RESEARCH |
-| Upstream lifecycle | hard-fork severed 2026-06-30; modern Codex active | active jcode; user contributor | Forgecode lineage sunset | minimize permanent fork delta | ACCEPTED |
-| macOS executable trust | not yet mapped | #22 policy primitive green; signed-release provenance open | donor | supply-chain/release policy | KCODE_OPEN |
-| Coding-specific ACI | modern Codex comparison required | current jcode behavior required | donor | coding adapter over generic harness | RESEARCH_REQUIRED |
-
-## Rule
-A row does not choose a winning repository. Mature destination follows semantic fidelity, performance, maintenance/upstream cost and generic-harness boundary tests. A capability may migrate while its source repo is sunset.
+A hypothesis is not a disposition. Final rows require source/SOTA/experiment evidence.
