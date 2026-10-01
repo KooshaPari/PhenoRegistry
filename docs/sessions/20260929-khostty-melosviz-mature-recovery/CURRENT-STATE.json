@@ -200,8 +200,8 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "3329559de550092b05fdd064931c8ef434df7a60",
-      "status": "FORMAT_RED_DIAGNOSTIC_REQUEUED",
+      "head": "8b7b634b8d81aa065cdcf55019702128d21a0b74",
+      "status": "SEMANTIC_FAILURE_ISOLATION_REQUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -250,8 +250,8 @@
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "0fdc6a1436afb79867a1e93a15dc64ff620a6bb2",
-      "status": "BEHAVIORAL_RED_REPAIRED",
+      "head": "f42320d030c3dfc11395da7fc66a4ed818349c01",
+      "status": "BEHAVIORAL_SUITE_PASS_RUNTIME_RECEIPT_REGRADING",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
         "R1 close/reopen R2",
@@ -278,7 +278,8 @@
         "acceptance-time concrete-byte integrity",
         "failed evidence references known attempt"
       ],
-      "workflow_run": 36821171954
+      "workflow_run": 36821171954,
+      "behavioral_run": 36854274883
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
