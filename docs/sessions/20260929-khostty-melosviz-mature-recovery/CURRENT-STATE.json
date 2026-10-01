@@ -198,10 +198,20 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "BUILD_GRAPH_SEMANTIC_REGRADE_ACTIVE",
-      "head": "9a0bd7e7c9bfb8675c5459b0cf595d1a8d2bd82f",
-      "run": 36874291494,
-      "correction": "prior standalone zig-test pipeline lacked authoritative module graph/pipefail; exact formatter patch applied"
+      "status": "PROTOCOL_HANDLER_ISOLATED_BUILD_GRAPH_GRADE_RUNNING",
+      "last_authoritative_head": "9a0bd7e7c9bfb8675c5459b0cf595d1a8d2bd82f",
+      "last_run": 36874291494,
+      "passed": [
+        "bridge",
+        "server lifecycle",
+        "core compile",
+        "format"
+      ],
+      "failed": [
+        "combined protocol/handler filter"
+      ],
+      "current_head": "92d448099c6cc03eb0198e7e9bf3246f8d0bc79b",
+      "current_run": 36899154761
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -247,12 +257,12 @@
       "status": "AWAITING_RUN"
     },
     "m_e03": {
-      "status": "ATTEMPT_EVIDENCE_AND_ASSEMBLY_LINEAGE_ACTIVE",
+      "status": "ACCEPTANCE_AUTHORITY_AND_ASSEMBLY_EVIDENCE_ACTIVE",
       "pr": 305,
-      "last_green_head": "92fb747bb7542728c647d980ac8936cef6343b6d",
-      "last_green_run": 36870784682,
-      "current_head": "ff870f1518ae73437a0a8afb859a7586a1d8ab12",
-      "scope": "revision-bound execution + durable attempts + evidence rows + ordered assembly freeze"
+      "last_green_head": "ff870f1518ae73437a0a8afb859a7586a1d8ab12",
+      "last_green_run": 36874338523,
+      "current_head": "7df4942052885651b096c6ac0262826b8df831cc",
+      "scope": "revision→attempt→accepted evidence→unique ordered assembly lineage"
     }
   }
 }
