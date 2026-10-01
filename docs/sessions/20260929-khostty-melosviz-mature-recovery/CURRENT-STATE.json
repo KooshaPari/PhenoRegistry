@@ -200,8 +200,8 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "14387d180430580eb654fb3cf21dd00ab7bd4a52",
-      "status": "K_E02A_PLUS_SERVER_LIFECYCLE_CANDIDATE_QUEUED",
+      "head": "3329559de550092b05fdd064931c8ef434df7a60",
+      "status": "FORMAT_RED_DIAGNOSTIC_REQUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -212,7 +212,8 @@
         "exact pane observation projection",
         "queue-full fail-closed",
         "pane.send_input reserved distinct from pane.write",
-        "unqualified child input host_unsupported"
+        "unqualified child input host_unsupported",
+        "worker cannot execute callback until app-thread drain"
       ],
       "workflow_run": 36821252873,
       "prior_red": "Zig installation failed before candidate gates"
@@ -249,8 +250,8 @@
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "078720bbff37c16cf7f7449396e5ab2f15fda248",
-      "status": "POLICY_BOUND_PLUS_DB_INTEGRITY_AWAITING_RUN",
+      "head": "0fdc6a1436afb79867a1e93a15dc64ff620a6bb2",
+      "status": "BEHAVIORAL_RED_REPAIRED",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
         "R1 close/reopen R2",
@@ -273,14 +274,16 @@
         "unknown policy fail-closed",
         "evidence/reuse policy revision",
         "SQLite integrity across reopen",
-        "runtime SQLite version receipt"
+        "runtime SQLite version receipt",
+        "acceptance-time concrete-byte integrity",
+        "failed evidence references known attempt"
       ],
       "workflow_run": 36821171954
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
-      "policy_head": "925fda9b158b12f8ddfdbc05b4b30ac0633b0689",
-      "added_control": "R2 selective rerender must leave unselected S0 bytes unchanged",
+      "policy_head": "55e9358ffd331382545a7874b19e4975310fdcd9",
+      "added_control": "repeat exact R2 is zero-scene-work and media-idempotent",
       "status": "AWAITING_RUN"
     }
   }
