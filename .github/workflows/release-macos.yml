@@ -1,8 +1,34 @@
 name: Release macOS (phenotype-registry)
 
-# Calls the reusable workflow at <REDACTED>/phenotype-fleet-ops.
-# Self-hosted runners only (zero billed minutes).
-# All Apple Developer secrets live in Infisical project 8efe392e-56a6-4c3c-89f9-8141183dd7e8.
+# TOMBSTONE - this workflow's build target no longer exists anywhere.
+#
+# The original job delegated to a reusable workflow:
+#
+#   uses: <REDACTED>/phenotype-fleet-ops/.github/workflows/macos-release.yml@34750e90190db89cdfda6b5272068d78022090fb
+#
+# The repository PII scrub removed that owner. Unreachable as observed on
+# 2026-09-29, with the raw responses recorded below:
+#
+#   gh api repos/<REDACTED>/phenotype-fleet-ops         -> 404
+#   gh api repos/KooshaPari/phenotype-fleet-ops         -> 404
+#   gh api "search/repositories?q=phenotype-fleet-ops"  -> 0 results
+#
+# A job-level `uses:` is resolved while GitHub builds the workflow graph, not
+# when a run starts. An unresolvable target therefore made GitHub emit a
+# 0-job failure run on EVERY push to main, before the `on:` block below was
+# evaluated at all - the `on:` block never listed main. Symptoms were: run
+# `name` equal to the workflow file path, `GET .../runs/<id>/jobs` returning
+# total_count 0, and run logs 404ing. This is the same signature as a job
+# missing `runs-on`, which is what previously broke compute-infra-auditors.
+#
+# The replacement job below is inline so the graph builds and main stops
+# failing on every push. It fails loudly if it is ever actually invoked (a
+# v*.*.* tag push or workflow_dispatch) rather than reporting a green macOS
+# release that never happened - no fabricated success.
+#
+# To restore the real pipeline: repoint `uses:` at a reachable fleet-ops
+# repository and delete this note. Apple Developer secrets and the notarization
+# credentials live in Infisical project 8efe392e-56a6-4c3c-89f9-8141183dd7e8.
 
 on:
   push:
@@ -20,19 +46,9 @@ permissions:
 jobs:
   macos:
     name: Build, sign, notarize phenotype-registry
-    uses: <REDACTED>/phenotype-fleet-ops/.github/workflows/macos-release.yml@34750e90190db89cdfda6b5272068d78022090fb # main
-    with:
-      app-name: phenotype-registry
-      app-bundle-id: app.phenotype.registry
-      build-cmd: |
-        cargo build --release --locked --target aarch64-apple-darwin --bin phenotype-registry
-        cargo build --release --locked --target aarch64-apple-darwin --bin eidolon-desktop
-        mkdir -p dist/macos
-        cp target/aarch64-apple-darwin/release/phenotype-registry dist/macos/
-        cp target/aarch64-apple-darwin/release/eidolon-desktop dist/macos/
-      entitlements-file: Entitlements.plist
-      artifact-dir: dist/macos
-      create-dmg: true
-      sign-identity: "Developer ID Application"
-    secrets:
-      INFISICAL_TOKEN: ${{ secrets.INFISICAL_TOKEN }}
+    runs-on: ubuntu-24.04
+    steps:
+      - name: macOS release target unreachable
+        run: |
+          echo "::error title=macOS release unavailable::The reusable workflow <REDACTED>/phenotype-fleet-ops/.github/workflows/macos-release.yml no longer exists: its owner was removed by the repository PII scrub and each endpoint returned HTTP 404 on 2026-09-29. No macOS artifact was built, signed or notarized. Restore by repointing the 'uses:' of this job at a reachable fleet-ops repository - see the comment at the top of .github/workflows/release-macos.yml."
+          exit 1

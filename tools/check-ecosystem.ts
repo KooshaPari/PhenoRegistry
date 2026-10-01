@@ -88,7 +88,9 @@ const CANONICAL_REPOS: ReadonlyArray<{ display: string; slug: string; role: stri
   // Owned scope (added 2026-06-23 — validator-loop S9)
   { display: "Eyetracker",         slug: "eyetracker",         role: "owned: interaction boundary (Rust + UniFFI)" },
   { display: "Eventra",            slug: "Eventra",            role: "owned: event-bus runtime boundary (Rust CQRS+ES)" },
-  { display: "Configra",           slug: "Configra",           role: "owned: config boundary (Rust, ADR-031 canonical)" },
+  // Configra removed 2026-09-29 (PR #586): live probe returns 404 — it is a
+  // phantom entry per ECOSYSTEM_MAP §9; the config boundary's canonical
+  // ownership lives with Conft + phenoShared (map §9 note).
   { display: "Benchora",           slug: "Benchora",           role: "owned: perf-harness boundary (Rust criterion)" },
   { display: "Authvault",          slug: "Authvault",          role: "owned (archived-superseded 2026-06-20 -> AuthKit; secrets domain historical)" },
   { display: "AuthKit",            slug: "AuthKit",            role: "owned: auth-runtime boundary (Rust successor to Authvault; FR-AUTHV-018 landed)" },

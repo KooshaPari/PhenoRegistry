@@ -73,8 +73,8 @@ substrates:
   archetype: sdk
   language: rust
   role: auth
-  boundary: null
-  intent: null
+  boundary: docs/boundary/AuthKit.md
+  intent: docs/intent/AuthKit.md
   notes: 'Auth SDK (Rust core). TS auth-ts absorbed phenotype-auth-ts (PR#120).
 
     '
@@ -921,14 +921,14 @@ substrates:
 - id: phenotype-apps
   repo: <REDACTED>/phenotype-apps
   name: phenotype-apps
-  status: archived
+  status: archived  # generator-stable: scripts/sync_catalog.py derives this from frozen disposition row id=901 (fsm: archived); card status active + GitHub archived:false diverge — tracked in docs/cvp/PhenoApps.md Open Questions. Do not hand-flip to active: sync_catalog.py reverts it.
   tier: phenotype-framework
   architecture: layered
   archetype: app
   language: typescript
   role: apps
-  boundary: null
-  intent: null
+  boundary: docs/boundary/PhenoApps.md
+  intent: docs/intent/PhenoApps.md
   notes: 'App aggregation (gh lang=HTML).
 
     '

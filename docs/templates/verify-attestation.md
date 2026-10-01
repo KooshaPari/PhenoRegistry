@@ -1,5 +1,13 @@
 # SC3 Attestation Verification Template
 
+> **Relocated from `.github/workflows/verify-attestation.yml`.** GitHub Actions treats
+> every file in that directory as a workflow, so this Markdown document was
+> parsed as YAML and the `## What is SC3?` heading stopped the parse on every push,
+> producing a zero-job failure that could never pass. Workflows are only
+> loaded from `.github/workflows/`, so moving the template here removes the
+> failure without deleting the template. The `verify-attestation.yml` path named below is
+> where _you_ place the workflow in your own repository.
+
 > **Source audit:** `FLEET-AUDIT-REPORT.md` — SC3 (SLSA Build attestation verification) is part of the supply-chain P0 block (SC3/SC4 are 10/11 zero; S8 only covers the production side, not the verification side).
 > **Method:** Add a CI gate that runs `gh attestation verify` on every PR — fails the build if a release artifact lacks a valid signature.
 > **How to use:** Copy the workflow below to your repo as `.github/workflows/verify-attestation.yml`. Lifts SC3 from 0 to 2 (wired). Combine with the S8 (release-attest.yml) workflow for SC4=3.
@@ -12,11 +20,11 @@ SC3 (SLSA Build attestation verification) = a CI gate that verifies the SLSA Bui
 
 ## Tooling
 
-| Tool | Purpose |
-|------|---------|
-| `actions/checkout` | Standard checkout |
-| `actions/download-artifact` | Downloads the SBOM from the SBOM workflow |
-| `gh attestation verify` | Verifies the SLSA Build provenance signature |
+| Tool                        | Purpose                                                |
+| --------------------------- | ------------------------------------------------------ |
+| `actions/checkout`          | Standard checkout                                      |
+| `actions/download-artifact` | Downloads the SBOM from the SBOM workflow              |
+| `gh attestation verify`     | Verifies the SLSA Build provenance signature           |
 | `sigstore/cosign-installer` | Installs cosign for additional verification (optional) |
 
 ## Template: `.github/workflows/verify-attestation.yml`
@@ -45,7 +53,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # e.g., de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # e.g., de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: Install gh
         run: type gh >/dev/null 2>&1 || (apt-get update && apt-get install -y gh)
@@ -56,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build artifact (for verification source)
-        # Replace with your build. The artifact is what gets verified.
+        # Replace this with your own build; the attestation covers the artifact it emits.
         run: |
           mkdir -p dist
           echo "build artifact" > dist/artifact
@@ -82,7 +90,7 @@ jobs:
 ## How to apply
 
 1. Copy the template above to your repo as `.github/workflows/verify-attestation.yml`.
-2. Pin the SHAs of all `uses:` actions. Use these known-good SHAs (verified):
+2. Pin the SHAs of all `uses:` actions rather than floating tags. Example pin:
    - `actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd`
 3. Customize the `Build artifact` step for your stack (must produce the same artifact that the S8 release-attest.yml produces).
 4. The workflow triggers on `v*` tags OR `workflow_dispatch` (manual). For PRs, the trigger is `pull_request` — adjust as needed.
@@ -101,6 +109,7 @@ OmniRoute is the reference repo for SC3 (SC3=3). Its `release.yml` has `id-token
 ## How to validate
 
 After applying:
+
 1. `git tag v0.0.1-test && git push --tags` to trigger the S8 release workflow
 2. After it completes, trigger the SC3 verify workflow manually
 3. `gh attestation verify dist/artifact` locally should pass
