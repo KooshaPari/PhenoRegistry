@@ -79,3 +79,16 @@ For both products:
 `PENDING`, `QUEUED`, `CANCELLED`, stale-candidate green, invalid-workflow runs, and unrelated repository CI are not acceptance evidence.
 
 The next promotion event is an exact-head executed oracle for the new candidate semantics.
+
+
+## Deferred qualification-infrastructure repair
+
+BytePort `.github/workflows/mature-recovery-contract.yml` is currently invalid on the product branch:
+
+- its A07 `go test` command is truncated before the closing quote/options;
+- a standalone `-count=1 -v` fragment follows on the next line;
+- GitHub reports the resulting push run under the workflow filename with conclusion `failure`.
+
+This is classified as **COLLECTOR/WORKFLOW FAILURE**, not product evidence.
+
+The repair is deliberately deferred until the currently registered exact **BytePort Mature Recovery Oracle** run for head `a9b0749b3146400934b09237ab625d0952692ae4` executes or otherwise terminates, because changing the BytePort head now would cancel that exact-candidate oracle again.
