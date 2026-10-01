@@ -198,20 +198,17 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "PROTOCOL_HANDLER_ISOLATED_BUILD_GRAPH_GRADE_RUNNING",
-      "last_authoritative_head": "9a0bd7e7c9bfb8675c5459b0cf595d1a8d2bd82f",
-      "last_run": 36874291494,
+      "status": "INDIVIDUAL_PREMOUNT_AUTHORITIES_GREEN_RERUN_QUEUED",
+      "last_head": "92d448099c6cc03eb0198e7e9bf3246f8d0bc79b",
       "passed": [
         "bridge",
-        "server lifecycle",
-        "core compile",
-        "format"
+        "protocol",
+        "handler",
+        "server lifecycle"
       ],
-      "failed": [
-        "combined protocol/handler filter"
-      ],
-      "current_head": "92d448099c6cc03eb0198e7e9bf3246f8d0bc79b",
-      "current_run": 36899154761
+      "current_head": "1bb53ddcc40bd71029b687a5446431ef04459800",
+      "current_run": 36899697150,
+      "note": "broken aggregate continue-on-error meta-gate removed"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -251,18 +248,17 @@
       "caveat": "not M-E03 product integration"
     },
     "reviewer_m_e02": {
-      "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
-      "policy_head": "55e9358ffd331382545a7874b19e4975310fdcd9",
-      "added_control": "repeat exact R2 is zero-scene-work and media-idempotent",
-      "status": "AWAITING_RUN"
+      "candidate": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
+      "policy_head": "984d12570f0c94f2aba044a85b7b5a3ddc0f2fdc",
+      "status": "R2_REPEAT_HELPER_FIXED_RECEIPT_REQUIRED"
     },
     "m_e03": {
-      "status": "ACCEPTANCE_AUTHORITY_AND_ASSEMBLY_EVIDENCE_ACTIVE",
+      "status": "ASSEMBLY_EXECUTION_ACCEPTANCE_SEPARATION_ACTIVE",
       "pr": 305,
-      "last_green_head": "ff870f1518ae73437a0a8afb859a7586a1d8ab12",
-      "last_green_run": 36874338523,
-      "current_head": "7df4942052885651b096c6ac0262826b8df831cc",
-      "scope": "revision→attempt→accepted evidence→unique ordered assembly lineage"
+      "last_green_head": "7df4942052885651b096c6ac0262826b8df831cc",
+      "current_head": "98a51da632bf919a0ad1c7e0bd5ba767283580eb",
+      "current_run": 36899758153,
+      "scope": "revision→attempt→accepted scene evidence→frozen assembly→completed final→accepted final evidence"
     }
   }
 }
