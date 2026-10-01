@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.0...v1.2.1) (2026-10-01)
+
+
+### Bug Fixes
+
+* **ci:** publish the renamed crate and gate crates.io on its token ([b88f3b3](https://github.com/KooshaPari/PhenoRegistry/commit/b88f3b335f047dcb319d7e29265176b0880f238d))
+
 ## [1.2.0](https://github.com/KooshaPari/PhenoRegistry/compare/v1.1.0...v1.2.0) (2026-10-01)
 
 
