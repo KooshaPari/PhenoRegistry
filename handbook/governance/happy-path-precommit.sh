@@ -216,15 +216,30 @@ BEGIN {
     }
 
     # R7 motion-without-result
-    # Strip only path-shaped tokens (>=1 slash + a trailing .ext), e.g.
-    # scripts/fill-intent-stubs.py or src/lib.rs, so citing a file whose name
-    # happens to contain "stub" does not fire. Everything else on the line --
-    # prose, code spans like `if x { // stub out }`, or a URL segment that
-    # ends in a bare token (.../no-op) -- stays scannable. This is a single
-    # gsub (no match()+RSTART/RLENGTH round-trip), so there is no coupling to
-    # regex match-state bookkeeping either.
-    r7lc = lc
-    gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+\.[A-Za-z][A-Za-z0-9]*/, "", r7lc)
+    # Backticked citations only: strip path-shaped tokens (one or more
+    # slash-separated segments; extension optional so directory references
+    # like scripts/fill-intent-stubs/ are exempt too) from inline-code spans
+    # before matching. URL spans (containing ://) are kept whole so a no-op
+    # in a URL path stays visible. Unbackticked prose is never touched, so a
+    # placeholder in prose fires as before. Offsets are saved right after
+    # match() so no RSTART/RLENGTH is read after any later regex test.
+    r7lc = ""
+    r7rest = lc
+    while (match(r7rest, /`[^`]*`/)) {
+      s7 = RSTART
+      l7 = RLENGTH
+      r7pre = substr(r7rest, 1, s7 - 1)
+      r7span = substr(r7rest, s7, l7)
+      if (r7span ~ /:\/\//)
+        r7lc = r7lc r7pre r7span
+      else {
+        r7body = substr(r7span, 2, l7 - 2)
+        gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+/, "", r7body)
+        r7lc = r7lc r7pre "`" r7body "`"
+      }
+      r7rest = substr(r7rest, s7 + l7)
+    }
+    r7lc = r7lc r7rest
     if (r7lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
       report("r7", file, line_no, body, "feature false/placeholder introduced without result signal")
     }
