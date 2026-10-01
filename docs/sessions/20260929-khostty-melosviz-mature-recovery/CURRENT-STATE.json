@@ -200,8 +200,8 @@
     "k_e02a": {
       "pr": 11,
       "branch": "experiment/mature-recovery-k-e02a-app-bridge",
-      "head": "1323e36fdd0cbce93aa3b94ac602ed4ae33cd387",
-      "status": "ACTIVE_EXACT_HEAD_QUEUED",
+      "head": "c4db8802fd0dbbeb09c385248556d43255cd5ddb",
+      "status": "INFRA_RED_REPAIRED_REQUEUED",
       "evidence": [
         "heap-owned correlated request",
         "queued/executing/completed/canceled lifecycle",
@@ -214,7 +214,8 @@
         "pane.send_input reserved distinct from pane.write",
         "unqualified child input host_unsupported"
       ],
-      "workflow_run": 36770576989
+      "workflow_run": 36820758671,
+      "prior_red": "Zig installation failed before candidate gates"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -230,17 +231,16 @@
   },
   "melosviz": {
     "m_e02": {
-      "status": "ACTIVE_EXACT_HEAD_REGRADING",
+      "status": "CANDIDATE_CONTROLLED_STRUCTURAL_PASS__REVIEWER_MEDIA_PENDING",
       "head": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
       "workflow_run": 36766323723,
-      "latest_fix": "effective derived backend identity persisted; deterministic video_export reuse regression added",
       "acceptance": false
     },
     "durable_ledger_experiment": {
       "pr": 304,
       "branch": "experiment/melosviz-durable-ledger-pass10",
-      "head": "9984cae480da62e06eafeeb295d6e2629057f4b2",
-      "status": "ACTIVE_EXACT_HEAD_QUEUED",
+      "head": "799fcdfec7c9ad96a5e2535a9774ac99d5054e8b",
+      "status": "REPAIRED_REQUEUED",
       "scope": "isolated feasibility only; not M-E03 integration",
       "controls": [
         "R1 close/reopen R2",
@@ -259,7 +259,7 @@
         "assembly execution != acceptance",
         "wrong final digest rejected"
       ],
-      "workflow_run": 36770605484
+      "workflow_run": 36820739135
     },
     "reviewer_m_e02": {
       "candidate": "cefb683c82455d065cdac914b6e34b07b252b666",
