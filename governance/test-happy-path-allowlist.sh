@@ -224,6 +224,64 @@ else
   PASS=$((PASS+1))
 fi
 
+# ---- Test 8: R7 path-citation strip present in both guard copies ----
+echo "Test 8: R7 path-citation strip present in both guard copies" >&2
+if grep -q 'r7lc = lc' "$SCRIPT_DIR/../governance/happy-path-precommit.sh" \
+   && grep -q 'r7lc = lc' "$SCRIPT_DIR/../handbook/governance/happy-path-precommit.sh"; then
+  echo "  PASS (both copies strip backticked file paths before R7 match)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: R7 strip missing from one of the guard copies (out of sync)" >&2
+  FAIL=$((FAIL+1))
+fi
+
+# ---- Tests 9-10: R7 functional behavior (real engine, scratch git repo) ----
+# A backticked FILE PATH citation must not fire R7; prose placeholder
+# tokens must still fire (sensitivity retained).
+TMPREPO=$(mktemp -d)
+(
+  cd "$TMPREPO" || exit 1
+  git init -q .
+  git config user.email ci@test
+  git config user.name ci
+  echo base > probe.md
+  git add probe.md
+  git commit -qm base
+  BASE=$(git rev-parse HEAD)
+  printf -- '- File reference: `scripts/fill-intent-stubs.py` in prose.\n' >> probe.md
+  git add probe.md
+  git commit -qm path-citation
+  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
+    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
+) > "$TMPREPO/out_path" 2>&1
+echo "Test 9: backticked file-path citation does not fire R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_path"; then
+  echo "  FAIL: R7 fired on a file-path citation" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (path citation not flagged)" >&2
+  PASS=$((PASS+1))
+fi
+
+(
+  cd "$TMPREPO" || exit 1
+  BASE=$(git rev-parse HEAD)
+  printf -- 'This change adds a stub awaiting the updater.\n' >> probe.md
+  git add probe.md
+  git commit -qm prose-stub
+  HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
+    bash "$SCRIPT_DIR/../governance/happy-path-precommit.sh"
+) > "$TMPREPO/out_prose" 2>&1
+echo "Test 10: prose placeholder still fires R7" >&2
+if grep -q '\[R7\]' "$TMPREPO/out_prose"; then
+  echo "  PASS (prose 'stub' flagged)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: R7 did not fire on prose placeholder content" >&2
+  FAIL=$((FAIL+1))
+fi
+rm -rf "$TMPREPO"
+
 echo "" >&2
 echo "=== RESULTS: $PASS passed, $FAIL failed ===" >&2
 if [ $FAIL -eq 0 ]; then

@@ -216,7 +216,14 @@ BEGIN {
     }
 
     # R7 motion-without-result
-    if (lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
+    # Inline-code path citations (`dir/file.ext`, must contain a slash) are
+    # file references, not placeholder content: strip them before matching so
+    # citing e.g. `scripts/fill-intent-stubs.py` does not fire on "stub".
+    # Prose tokens and slash-less code spans still fire.
+    r7lc = lc
+    while (match(r7lc, /`[^`]*\/[^`]*`/))
+      r7lc = substr(r7lc, 1, RSTART - 1) substr(r7lc, RSTART + RLENGTH)
+    if (r7lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
       report("r7", file, line_no, body, "feature false/placeholder introduced without result signal")
     }
 
