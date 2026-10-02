@@ -423,3 +423,45 @@ The fixture asserts one CREATE across restart and one exact sandbox stop.
 Destructive ambiguity is also first-class: if Stop may have reached the provider but its response is lost, the adapter returns UNKNOWN plus exact sandbox reconciliation identity rather than a generic retryable error.
 
 Live `/deploy` remains on the legacy route. This experiment does not authorize production destructive execution.
+
+
+## Queue/B06 defect closure + generalized HTTP lifecycle — 2026-10-02 21:10 CEST
+
+### ShareCLI
+
+Exact oracle `37042130429` reached native tests and produced actionable defects:
+
+- B05 queue aging wrapped after 256 one-second decay steps;
+- equal-priority queue FIFO compared ticket filenames lexicographically, so sequence 10 could beat sequence 2;
+- dead waiter PIDs remained ordering participants;
+- B06 ordinary-cache-hit negative control was incorrectly made explicitly eligible;
+- native pressure sampling could race process teardown;
+- FR-008 collector's direct Zig probe produced COLLECTOR_FAILURE even though exact Cargo compilation is the authoritative test build boundary.
+
+Current candidate repairs:
+
+- aging decay saturates monotonically;
+- FIFO tie-break parses numeric sequence;
+- Unix waiter liveness uses non-mutating PID existence probing and removes dead tickets;
+- ordinary cache hits are ineligible;
+- later ineligible classification revokes earlier read-only speculation authority;
+- expired windows remove both hit evidence and request authority;
+- missing VmRSS remains unknown;
+- negative-oracle Zig version is diagnostic while exact Cargo build remains authoritative;
+- all recovery tests are explicitly FR-008 annotated.
+
+B06 pressure policy is now selected by the exact recovery oracle and fails closed on invalid thresholds. Observation-only control providers can defer admissions but cannot claim OS enforcement. Pause, CPU-weight reduction and termination remain capability/authority gated.
+
+### BytePort
+
+The generalized HTTP transport is already qualified on `55512980de366cfdfc4803d924d4d873d3b2b93d`, oracle `37041079674`.
+
+Current follow-on composes the complete generalized adapter+HTTP lifecycle through a real local HTTP boundary and adds destructive ambiguity semantics:
+
+- exact artifact -> CREATE;
+- exact OBSERVE;
+- restart -> NOOP with no duplicate CREATE;
+- explicit destruction intent -> exact sandbox stop;
+- ambiguous Stop -> UNKNOWN with exact sandbox reconciliation identity rather than generic retry.
+
+Live `/deploy` remains unchanged.
