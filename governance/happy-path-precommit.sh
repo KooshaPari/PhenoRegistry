@@ -228,14 +228,15 @@ FNR == NR { diff_lines[FNR] = $0; total_lines = FNR; next }
     }
 
     # R7 motion-without-result
-    # Inline-code citations only: within backtick runs of any length, strip
-    # path-shaped tokens whose ending looks like a file (trailing .ext) or a
-    # directory (trailing slash), so scripts/fill-intent-stubs.py and
-    # scripts/fill-intent-stubs/ are exempt while refs/heads/no-op-fix or
-    # feature/stub stay scannable. URL-looking words (containing :// or
-    # starting with //) are kept whole, word by word, so scheme-less and
-    # protocol-relative URL paths still show their placeholder. Unbackticked
-    # prose is never touched. Offsets are saved right after each match().
+    # Inline-code citations only, word by word: URL-looking words (containing
+    # :// or starting with //) are kept whole; domain-shaped words
+    # (host.tld/...) are kept whole so scheme-less URLs stay scannable;
+    # absolute filesystem paths (leading /) have their segments removed as
+    # citations; relative words are stripped only when the token ends like a
+    # file (.ext) or a directory (trailing /), anchored at the token boundary
+    # so an internal slash cannot hide a placeholder. Backtick runs of any
+    # length are recognized. Unbackticked prose is never touched. Offsets are
+    # saved right after each match().
     r7lc = ""
     r7rest = lc
     while (match(r7rest, /`+[^`]*`+/)) {
@@ -248,13 +249,17 @@ FNR == NR { diff_lines[FNR] = $0; total_lines = FNR; next }
       sub(/`+$/, "", r7body)
       r7new = ""
       r7words = r7body
-      while (match(r7words, /[^ 	]+/)) {
+      while (match(r7words, /[^[:space:]]+/)) {
         r7w1 = RSTART
         r7w2 = RLENGTH
         r7new = r7new substr(r7words, 1, r7w1 - 1)
         r7w = substr(r7words, r7w1, r7w2)
-        if (r7w !~ /:\/\// && r7w !~ /^\//)
-          gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)/, "", r7w)
+        if (r7w !~ /:\/\// && r7w !~ /^\/\//) {
+          if (r7w ~ /^\//)
+            gsub(/(\/[A-Za-z0-9._-]+)+/, "", r7w)
+          else if (r7w !~ /^[A-Za-z0-9.-]+\.[A-Za-z]{2,}(\/|:|$)/)
+            gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)$/, "", r7w)
+        }
         r7new = r7new r7w
         r7words = substr(r7words, r7w1 + r7w2)
       }

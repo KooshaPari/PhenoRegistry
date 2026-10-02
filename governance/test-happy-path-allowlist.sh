@@ -253,7 +253,7 @@ else
   FAIL=$((FAIL+1))
 fi
 
-# ---- Tests 9-21: R7 functional behavior (real engine, scratch git repo) ----
+# ---- Tests 9-24: R7 functional behavior (real engine, scratch git repo) ----
 # Path citations must not fire; prose/code-span placeholders must still fire.
 # Invoked as `sh "$GUARD"` (POSIX, harness-relative) -- no bash dependency.
 # Probes rely only on the staged diff (`git diff --cached`), the code path
@@ -464,6 +464,48 @@ elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_double-backtick"; then
 else
   echo "  PASS (double-backtick citation not flagged, rc=0)" >&2
   PASS=$((PASS+1))
+fi
+
+run_probe 'Cite `/src/no-op.rs` and `/opt/stubgen/run` in prose.' absolute-path
+echo "Test 22: absolute filesystem citations do not fire R7 (rc=0)" >&2
+if ! probe_ran absolute-path; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_absolute-path"; then
+  echo "  FAIL: R7 fired on absolute-path citations" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_absolute-path"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (absolute citations not flagged, rc=0)" >&2
+  PASS=$((PASS+1))
+fi
+
+run_probe 'Kept `feature/stub/implementation` as a branch note.' internal-slash
+echo "Test 23: internal-slash token without file/dir ending still fires (rc=1)" >&2
+if ! probe_ran internal-slash; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_internal-slash" && grep -q 'PROBE_RC=1' "$TMPREPO/out_internal-slash"; then
+  echo "  PASS (internal-slash placeholder flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: strip hid a placeholder behind an internal slash" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Docs at `www.example.com/no-op/index.html` and `docs.example.com/stub/guide.md`.' scheme-less-file-url
+echo "Test 24: scheme-less URL with file extension keeps placeholder (rc=1)" >&2
+if ! probe_ran scheme-less-file-url; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_scheme-less-file-url" && grep -q 'PROBE_RC=1' "$TMPREPO/out_scheme-less-file-url"; then
+  echo "  PASS (scheme-less file-shaped URL flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: file-shaped scheme-less URL swallowed by strip" >&2
+  FAIL=$((FAIL+1))
 fi
 
 echo "" >&2
