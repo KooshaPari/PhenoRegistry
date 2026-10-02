@@ -93,7 +93,10 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          # Colon-free and dot-free UTC stamp: upload-artifact rejects ':' in paths,
+          # and the earlier dotted/colon format could not be reconstructed by the
+          # failure handler, which now consumes the shared step output instead.
+          DATE=$(date -u +"%Y-%m-%dT%H%M%SZ")
           SOURCES=$(cat audit-sources.json 2>/dev/null || echo "[]")
           REGISTRY=$(cat audit-registry.json 2>/dev/null || echo "[]")
           REPORT=$(jq -n \
@@ -108,7 +111,11 @@ jobs:
               source_repo_404_check: $sources,
               registry_row_archived_check: $registry
             }')
-          echo "$REPORT" > "l5-114-services-re-audit-${DATE}.json"
+          FILENAME="l5-114-services-re-audit-${DATE}.json"
+          echo "$REPORT" > "$FILENAME"
+          # Single source of truth for the report filename, shared by the
+          # upload-artifact step and the failure handler via step output.
+          echo "filename=$FILENAME" >> "$GITHUB_OUTPUT"
           echo "$REPORT" | jq .
 
       - name: Upload audit artifact
@@ -116,21 +123,22 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: l5-114-services-re-audit
-          path: l5-114-services-re-audit-*.json
+          path: ${{ steps.report.outputs.filename }}
           if-no-files-found: warn
           retention-days: 90
 
       - name: Fail and post issue if any check failed
         if: failure()
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v7
+        env:
+          REPORT_FILE: ${{ steps.report.outputs.filename }}
         with:
           script: |
             const fs = require('fs');
-            const report = fs.readFileSync(
-              'l5-114-services-re-audit-' +
-              new Date().toISOString().replace(/[:.]/g,'-') + '.json',
-              'utf8'
-            );
+            // Consume the exact filename emitted by the report step; rebuilding
+            // the name here with new Date() produced a different timestamp and
+            // separator scheme than the shell-created file (ENOENT in the log).
+            const report = fs.readFileSync(process.env.REPORT_FILE, 'utf8');
             const title = 'L5-114 services re-audit FAILURE — ' +
               new Date().toISOString().slice(0,10);
             const body = 'Weekly L5-114 services retirement re-audit detected ' +
