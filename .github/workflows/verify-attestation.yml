@@ -1,0 +1,69 @@
+# SC3 release attestation gate. Source: FLEET-AUDIT-REPORT.md, SC3.
+name: Verify Release Attestation
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  attestations: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: gh attestation verify
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.0
+
+      - name: Resolve release tag
+        id: tag
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            echo "tag=${GITHUB_REF_NAME}" >> "${GITHUB_OUTPUT}"
+          else
+            TAG=$(gh release view --json tagName --jq .tagName 2>/dev/null || true)
+            echo "tag=${TAG}" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Check release assets
+        id: assets
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          if [ -z "${TAG}" ]; then
+            echo "present=false" >> "${GITHUB_OUTPUT}"
+            echo "::warning title=attestation verification skipped::This repository has no published release, so there is no artifact to verify."
+            exit 0
+          fi
+          COUNT=$(gh release view "${TAG}" --json assets --jq '.assets | length' 2>/dev/null || true)
+          if [ -z "${COUNT}" ] || [ "${COUNT}" = "0" ]; then
+            echo "present=false" >> "${GITHUB_OUTPUT}"
+            echo "::warning title=attestation verification skipped::Release ${TAG} has no attached artifacts, so there is no artifact to verify."
+            exit 0
+          fi
+          echo "present=true" >> "${GITHUB_OUTPUT}"
+
+      - name: Download release assets
+        if: steps.assets.outputs.present == 'true'
+        run: |
+          mkdir -p dist
+          gh release download "${{ steps.tag.outputs.tag }}" --dir dist
+
+      - name: Verify provenance
+        if: steps.assets.outputs.present == 'true'
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          if ! find dist -type f -print0 | xargs -0 -r -n1 gh attestation verify --repo "${GITHUB_REPOSITORY}"; then
+            echo "::error::Attestation verification failed for one or more artifacts on release ${TAG}"
+            exit 1
+          fi
+          echo "Attestation verification succeeded for all artifacts on release ${TAG}"
