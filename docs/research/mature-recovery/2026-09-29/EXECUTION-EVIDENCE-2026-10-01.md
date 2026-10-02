@@ -170,3 +170,34 @@ This was machine-contract/schema drift, not a B05/B06 scheduler failure.
 The four Tier-B packages now have substantive `critical` invariant lists on candidate `653f3d37f03a5a758869791c020f394f9d1f71e6`. New CI run `36981940615` is active; mature-recovery job `110758197550` is queued.
 
 The same older ShareCLI run also showed a separate Cargo Deny source-policy failure: exact-revision PhenoInfra git dependencies are present while `deny.toml` disallows git sources. This is classified separately from mature-recovery qualification and has not been weakened as part of scheduler recovery.
+
+
+## Qualification update — 2026-10-02 11:28 CEST
+
+### ShareCLI runtime-oracle failure localized
+
+Exact run `36981940615` on candidate `653f3d37f03a5a758869791c020f394f9d1f71e6` passed the work-package schema after the Tier-B repair and progressed through the recovery semantic tests.
+
+The first product-candidate failure was in the newly added real-subprocess runtime fixture:
+
+- `recovery_scheduling_runtime_vertical.rs` contained an invalid Rust string around the shell command;
+- the adjacent `recovery_jobserver_hypervisor.rs` fixture had the same quoting class.
+
+Both are test-fixture compile defects, not evidence that scheduling semantics failed. They were corrected using raw Rust strings on candidate `fe05a23dcf2b655dbb307a0982508fcc0dad5de5`. New CI run `36990039958` is pending.
+
+The same run also emitted duplicate-key errors from a transitive PhenoShared/AgilePlus checkout, but the direct failure that terminated the mature-recovery job was the ShareCLI runtime fixture compile error. Treat transitive manifest corruption as separate dependency health debt unless it becomes the next blocking exit.
+
+### BytePort post-qualification adapter step
+
+After B03/A07/B08 reference+fixture qualification, BytePort added a non-live NanoVMS infrastructure adapter boundary.
+
+It is intentionally not wired into `/deploy`. The adapter:
+
+- requires a typed `BuildArtifactID` and resolves it through an artifact resolver;
+- refuses CREATE if the artifact is missing or lacks an immutable reference;
+- preserves target/provider/external sandbox identity;
+- does not claim UPDATE or REPLACE;
+- requires exact provider/target/sandbox identity before DELETE;
+- represents missing provider observation as non-fresh UNKNOWN.
+
+This is a candidate production-adapter boundary under fixture qualification, not production-provider acceptance.
