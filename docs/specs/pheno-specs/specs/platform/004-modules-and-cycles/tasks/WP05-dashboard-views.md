@@ -23,6 +23,7 @@ WP02 must be merged. WP05 can run in parallel with WP03, WP04, and WP06.
 ## Objectives
 
 Add Module and Cycle views to the `agileplus-api` dashboard crate. This includes:
+
 - REST API routes for serving Module tree and Cycle data as JSON (for programmatic access).
 - Askama HTML templates for the Module tree sidebar, Cycle kanban board, and Cycle detail page.
 - SSE event type extensions to push Module/Cycle change events to connected browser clients.
@@ -199,24 +200,26 @@ Add Module and Cycle views to the `agileplus-api` dashboard crate. This includes
    ```html
    <!DOCTYPE html>
    <html>
-   <head><title>Modules</title></head>
-   <body>
-   <nav class="module-tree">
-     <h2>Modules</h2>
-     <ul>
-     {% for node in nodes %}
-       <li style="padding-left: {{ node.depth * 16 }}px">
-         <a href="/modules/{{ node.module.id }}">
-           {{ node.module.friendly_name }}
-         </a>
-         <span class="counts">
-           ({{ node.owned_count }} owned, {{ node.tagged_count }} tagged)
-         </span>
-       </li>
-     {% endfor %}
-     </ul>
-   </nav>
-   </body>
+   	<head>
+   		<title>Modules</title>
+   	</head>
+   	<body>
+   		<nav class="module-tree">
+   			<h2>Modules</h2>
+   			<ul>
+   				{% for node in nodes %}
+   				<li style="padding-left: {{ node.depth * 16 }}px">
+   					<a href="/modules/{{ node.module.id }}">
+   						{{ node.module.friendly_name }}
+   					</a>
+   					<span class="counts">
+   						({{ node.owned_count }} owned, {{ node.tagged_count }} tagged)
+   					</span>
+   				</li>
+   				{% endfor %}
+   			</ul>
+   		</nav>
+   	</body>
    </html>
    ```
 
@@ -281,22 +284,26 @@ Add Module and Cycle views to the `agileplus-api` dashboard crate. This includes
    ```html
    <!DOCTYPE html>
    <html>
-   <head><title>Cycles</title></head>
-   <body>
-   <div class="kanban">
-     <div class="column">
-       <h3>Draft ({{ draft|length }})</h3>
-       {% for entry in draft %}
-         <div class="card">
-           <a href="/cycles/{{ entry.cycle.id }}">{{ entry.cycle.name }}</a>
-           <div>{{ entry.cycle.start_date }} - {{ entry.cycle.end_date }}</div>
-           <div>{{ entry.feature_count }} features</div>
-         </div>
-       {% endfor %}
-     </div>
-     {# Repeat for active, review, shipped, archived #}
-   </div>
-   </body>
+   	<head>
+   		<title>Cycles</title>
+   	</head>
+   	<body>
+   		<div class="kanban">
+   			<div class="column">
+   				<h3>Draft ({{ draft|length }})</h3>
+   				{% for entry in draft %}
+   				<div class="card">
+   					<a href="/cycles/{{ entry.cycle.id }}">{{ entry.cycle.name }}</a>
+   					<div>
+   						{{ entry.cycle.start_date }} - {{ entry.cycle.end_date }}
+   					</div>
+   					<div>{{ entry.feature_count }} features</div>
+   				</div>
+   				{% endfor %}
+   			</div>
+   			{# Repeat for active, review, shipped, archived #}
+   		</div>
+   	</body>
    </html>
    ```
 
@@ -335,6 +342,7 @@ Add Module and Cycle views to the `agileplus-api` dashboard crate. This includes
 
 3. Write the template:
 
+   <!-- prettier-ignore -->
    ```html
    <!DOCTYPE html>
    <html>
@@ -369,8 +377,8 @@ Add Module and Cycle views to the `agileplus-api` dashboard crate. This includes
    </html>
    ```
 
-   Note: Askama `{% if let Some(...) %}` syntax -- verify with crate version. If unavailable, use
-   `{% if scope_module_name.is_some() %}{{ scope_module_name.as_deref().unwrap_or("") }}{% endif %}`.
+   {% raw %}Note: Askama `{% if let Some(...) %}` syntax -- verify with crate version. If unavailable, use
+   `{% if scope_module_name.is_some() %}{{ scope_module_name.as_deref().unwrap_or("") }}{% endif %}`.{% endraw %}
 
 **Validation**: `GET /cycles/{id}` renders full detail with burndown table.
 
