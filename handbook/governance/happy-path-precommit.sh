@@ -219,12 +219,14 @@ BEGIN {
     # Inline-code citations only, word by word: URL-looking words (containing
     # :// or starting with //) are kept whole; domain-shaped words
     # (host.tld/...) are kept whole so scheme-less URLs stay scannable;
-    # absolute filesystem paths (leading /) have their segments removed as
-    # citations; relative words are stripped only when the token ends like a
-    # file (.ext) or a directory (trailing /), anchored at the token boundary
-    # so an internal slash cannot hide a placeholder. Backtick runs of any
-    # length are recognized. Unbackticked prose is never touched. Offsets are
-    # saved right after each match().
+    # absolute filesystem paths (leading /) have their path segments removed
+    # as citations; relative words are normalized first (a #L12 / ?query /
+    # :line suffix after the extension and any trailing punctuation are
+    # trimmed) and stripped only when the cleaned token ends like a file
+    # (.ext) or a directory (trailing /), anchored at the token boundary so
+    # an internal slash cannot hide a placeholder. Backtick runs of any
+    # length are recognized. Unbackticked prose is never touched. Offsets
+    # are saved right after each match().
     r7lc = ""
     r7rest = lc
     while (match(r7rest, /`+[^`]*`+/)) {
@@ -245,8 +247,14 @@ BEGIN {
         if (r7w !~ /:\/\// && r7w !~ /^\/\//) {
           if (r7w ~ /^\//)
             gsub(/(\/[A-Za-z0-9._-]+)+/, "", r7w)
-          else if (r7w !~ /^[A-Za-z0-9.-]+\.[A-Za-z]{2,}(\/|:|$)/)
-            gsub(/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)$/, "", r7w)
+          else if (r7w !~ /^[A-Za-z0-9.-]+\.[A-Za-z]{2,}(\/|:|$)/) {
+            r7c = r7w
+            if (match(r7c, /\.[A-Za-z][A-Za-z0-9]*[#?:]/))
+              r7c = substr(r7c, 1, RSTART + RLENGTH - 2)
+            if (r7c !~ /\/$/) sub(/[[:punct:]]+$/, "", r7c)
+            if (match(r7c, /[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)$/))
+              r7w = ""
+          }
         }
         r7new = r7new r7w
         r7words = substr(r7words, r7w1 + r7w2)

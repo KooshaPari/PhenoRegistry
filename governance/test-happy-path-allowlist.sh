@@ -253,7 +253,7 @@ else
   FAIL=$((FAIL+1))
 fi
 
-# ---- Tests 9-24: R7 functional behavior (real engine, scratch git repo) ----
+# ---- Tests 9-28: R7 functional behavior (real engine, scratch git repo) ----
 # Path citations must not fire; prose/code-span placeholders must still fire.
 # Invoked as `sh "$GUARD"` (POSIX, harness-relative) -- no bash dependency.
 # Probes rely only on the staged diff (`git diff --cached`), the code path
@@ -466,8 +466,8 @@ else
   PASS=$((PASS+1))
 fi
 
-run_probe 'Cite `/src/no-op.rs` and `/opt/stubgen/run` in prose.' absolute-path
-echo "Test 22: absolute filesystem citations do not fire R7 (rc=0)" >&2
+run_probe 'Cite `/src/no-op.rs` in prose.' absolute-path
+echo "Test 22: file-shaped absolute path does not fire R7 (rc=0)" >&2
 if ! probe_ran absolute-path; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
@@ -506,6 +506,67 @@ elif grep -q '\[R7\]' "$TMPREPO/out_scheme-less-file-url" && grep -q 'PROBE_RC=1
 else
   echo "  FAIL: file-shaped scheme-less URL swallowed by strip" >&2
   FAIL=$((FAIL+1))
+fi
+
+run_probe 'Cite `/opt/stubgen/run` in prose.' absolute-extless
+echo "Test 25: extension-less absolute path does not fire R7 (rc=0)" >&2
+if ! probe_ran absolute-extless; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_absolute-extless"; then
+  echo "  FAIL: R7 fired on extension-less absolute path" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_absolute-extless"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (extension-less absolute path not flagged, rc=0)" >&2
+  PASS=$((PASS+1))
+fi
+
+run_probe 'Cite `/no-op` in prose.' absolute-single-segment
+echo "Test 26: single-segment absolute path does not fire R7 (rc=0)" >&2
+if ! probe_ran absolute-single-segment; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_absolute-single-segment"; then
+  echo "  FAIL: R7 fired on single-segment absolute path" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_absolute-single-segment"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (single-segment absolute path not flagged, rc=0)" >&2
+  PASS=$((PASS+1))
+fi
+
+run_probe 'Cite `/#no-op` in prose.' absolute-nonsegment
+echo "Test 27: slash-leading non-segment token still fires R7 (rc=1)" >&2
+if ! probe_ran absolute-nonsegment; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_absolute-nonsegment" && grep -q 'PROBE_RC=1' "$TMPREPO/out_absolute-nonsegment"; then
+  echo "  PASS (non-segment slash token flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: absolute branch exempted a non-segment token" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Cite `crates/no-op.rs,`, `**src/no-op.rs**`, `path/to/no-op.rs#L12`, `dir/no-op.md?raw=1`, `src/no-op.rs:42`, and `~/src/no-op.rs` in prose.' suffixed-citations
+echo "Test 28: suffixed/home-relative file citations do not fire R7 (rc=0)" >&2
+if ! probe_ran suffixed-citations; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_suffixed-citations"; then
+  echo "  FAIL: R7 fired on a suffixed file citation" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_suffixed-citations"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (suffixed citations not flagged, rc=0)" >&2
+  PASS=$((PASS+1))
 fi
 
 echo "" >&2
