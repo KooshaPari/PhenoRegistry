@@ -379,3 +379,47 @@ B06 implementation work began only after separating B05 collector failure from p
 - the hit window no longer refreshes its origin on every hit.
 
 No default speculation routing is promoted. Cancellation and wasted-work accounting remain open.
+
+
+## Native-defect closure and HTTP lifecycle advance — 2026-10-02 21:00 CEST
+
+### ShareCLI exact defects observed on c1835aea
+
+The dedicated recovery oracle reached native tests and exposed product defects:
+
+- queue aging cast elapsed steps to `u8` before saturation, so 256 steps wrapped an ancient Critical waiter back to rank 0;
+- equal-priority FIFO used lexicographic ticket filenames, so sequence 10 could beat sequence 2;
+- dead-PID waiter tickets still participated in ordering;
+- B06 ordinary-cache-hit negative control was accidentally converted into an explicitly eligible positive fixture;
+- speculation eligibility was stored from the first request and could become sticky rather than reflecting current authority;
+- expired frequency windows did not remove request/replay authority;
+- the native pressure fixture could race process teardown and fail when `/proc/<pid>/status` temporarily lacked VmRSS;
+- FR-008 negative-oracle collection rejected the environment solely because a direct `zig version` probe failed, even though exact Cargo compilation is the authoritative verifier boundary.
+
+Current ShareCLI candidate repairs those defects:
+
+- monotonic saturating aging;
+- numeric FIFO sequence ordering;
+- Unix PID liveness filtering with dead-ticket cleanup;
+- ordinary cache hits remain ineligible;
+- later ineligible classification revokes prior speculation authority;
+- expired windows remove both hit evidence and request authority;
+- missing VmRSS is UNKNOWN, never zero;
+- Cargo compilation determines whether transitive Zig availability is actually required;
+- all ten recovery test files now carry explicit FR-008 trace annotations.
+
+No result is promoted until the new exact oracle executes.
+
+### BytePort generalized HTTP lifecycle
+
+The generalized NanoVMS HTTP transport itself qualified on exact candidate `55512980de366cfdfc4803d924d4d873d3b2b93d`, Mature Recovery Oracle run `37041079674`, job `110951073565`.
+
+Post-qualification candidate work now composes the full generalized stack through a real httptest HTTP boundary:
+
+`DesiredResourceGraph + exact BuildArtifact -> generalized reconciler -> NanoVMSInfrastructureAdapter -> NanoVMSHTTPTransport -> CREATE -> OBSERVE -> process restart -> NOOP -> exact authorized DELETE`.
+
+The fixture asserts one CREATE across restart and one exact sandbox stop.
+
+Destructive ambiguity is also first-class: if Stop may have reached the provider but its response is lost, the adapter returns UNKNOWN plus exact sandbox reconciliation identity rather than a generic retryable error.
+
+Live `/deploy` remains on the legacy route. This experiment does not authorize production destructive execution.
