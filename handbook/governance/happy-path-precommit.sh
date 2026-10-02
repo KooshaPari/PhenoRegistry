@@ -130,7 +130,7 @@ BEGIN {
     # source naturally contain the words we lint for (e.g. literal "flag=true"
     # as an example, or the regex pattern /fixed|works|done|.../ itself).
     # Extending the skip-list: HAPPY_PATH_POLICY_SKIP (comma-sep glob substrings).
-    skip_pat = "^(governance/|docs/governance/|docs/ai-dd-pitfalls|/ai-dd-pitfalls|/feedback_aidd_hardening|/CLAUDE\\.md)"
+    skip_pat = "^(tests/governance-enforcement\\.test\\.ts$|governance/|handbook/governance/|docs/governance/|docs/ai-dd-pitfalls|/ai-dd-pitfalls|/feedback_aidd_hardening|/CLAUDE\\.md)"
     extra = ENVIRON["HAPPY_PATH_POLICY_SKIP"]
     if (extra != "") {
       n = split(extra, arr, ",")
@@ -216,7 +216,55 @@ BEGIN {
     }
 
     # R7 motion-without-result
-    if (lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
+    # Inline-code citations only, word by word: URL-looking words (containing
+    # :// or starting with //) are kept whole; domain-shaped words
+    # (host.tld/...) are kept whole so scheme-less URLs stay scannable;
+    # absolute filesystem paths (leading /) have their path segments removed
+    # as citations; relative words are normalized (trailing punctuation
+    # trimmed) and stripped only when the cleaned token contains at least
+    # one / and ENDS like a file (.ext) or a directory (trailing /),
+    # optionally followed by / and a #anchor, ?query or :line suffix. The
+    # test is end-anchored with a free-position start, so leading ** or ~/
+    # markup is tolerated; the end anchor is what blocks an internal slash
+    # from hiding a placeholder. Backtick runs of any length are recognized.
+    # Unbackticked prose is never touched. Offsets are saved right after
+    # each match().
+    r7lc = ""
+    r7rest = lc
+    while (match(r7rest, /`+[^`]*`+/)) {
+      s7 = RSTART
+      l7 = RLENGTH
+      r7pre = substr(r7rest, 1, s7 - 1)
+      r7span = substr(r7rest, s7, l7)
+      r7body = r7span
+      sub(/^`+/, "", r7body)
+      sub(/`+$/, "", r7body)
+      r7new = ""
+      r7words = r7body
+      while (match(r7words, /[^[:space:]]+/)) {
+        r7w1 = RSTART
+        r7w2 = RLENGTH
+        r7new = r7new substr(r7words, 1, r7w1 - 1)
+        r7w = substr(r7words, r7w1, r7w2)
+        if (r7w !~ /:\/\// && r7w !~ /^\/\//) {
+          if (r7w ~ /^\//)
+            gsub(/(\/[A-Za-z0-9._-]+)+/, "", r7w)
+          else if (r7w !~ /^[A-Za-z0-9.-]+\.[A-Za-z]{2,}(\/|:|$)/) {
+            r7c = r7w
+            if (r7c !~ /\/$/) sub(/[[:punct:]]+$/, "", r7c)
+            if (match(r7c, /[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)\/?([#?:][^[:space:]]*)?$/))
+              r7w = ""
+          }
+        }
+        r7new = r7new r7w
+        r7words = substr(r7words, r7w1 + r7w2)
+      }
+      r7new = r7new r7words
+      r7lc = r7lc r7pre "`" r7new "`"
+      r7rest = substr(r7rest, s7 + l7)
+    }
+    r7lc = r7lc r7rest
+    if (r7lc ~ /(enabled[[:space:]]*=[[:space:]]*false|featureflag[[:space:]]*=[[:space:]]*false|flag[[:space:]]*=[[:space:]]*false|experimental[[:space:]]*=[[:space:]]*false|verbose[[:space:]]*=[[:space:]]*false|# todo|no-op|stub|proposed only)/) {
       report("r7", file, line_no, body, "feature false/placeholder introduced without result signal")
     }
 

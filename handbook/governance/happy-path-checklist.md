@@ -49,6 +49,19 @@ This checklist prevents AI-DD happy-path collapse. Any claim in code, PR text, t
 - Motion-without-result rule:
   - Pass when feature flags are shipped only after measured outcome evidence.
   - Fail when `flag=false` / `enabled=false` / `TODO` gating is shipped as final state.
+  - Citation exemption: R7 exempts a backticked token when it is path-shaped:
+    a relative token must contain at least one `/` and end in a file
+    extension or a trailing slash (`scripts/fill-intent-stubs.py`,
+    `scripts/fill-intent-stubs/`); a `#L12` anchor (also after a trailing
+    slash, as in `src/no-op.rs/#L12`), `?query`, `:line`, or punctuation
+    suffix after that ending is ignored. Single-segment tokens such as
+    `no-op.rs` fire by design. Absolute filesystem paths (leading `/`) are
+    exempt regardless of ending (e.g. `/opt/stubgen/run`), and
+    home-relative paths (`~/src/no-op.rs`) are exempt via the free-position
+    start of the path test. A host-shaped token is never exempt:
+    `docs.example.com/stub/guide.md` keeps its placeholder and fires. A
+    bare prose mention - or a backticked token with neither ending, such as
+    `scripts/fill-intent-stubs` - fires R7 by design.
 
 ## FAIL patterns ⇄ PASS evidence
 
