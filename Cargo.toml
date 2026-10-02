@@ -7,7 +7,7 @@ members = [
 
 [package]
 name = "phenotype-registry"
-version = "1.2.5"
+version = "1.2.6"
 edition = "2021"
 
 [lib]
