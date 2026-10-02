@@ -402,7 +402,7 @@ dependencies = [
 
 [[package]]
 name = "pheno-registry-python"
-version = "1.2.2"
+version = "1.2.3"
 dependencies = [
  "phenotype-registry",
  "pyo3",
@@ -410,7 +410,7 @@ dependencies = [
 
 [[package]]
 name = "phenotype-dag-core"
-version = "1.2.2"
+version = "1.2.3"
 dependencies = [
  "serde",
  "serde_json",
@@ -420,7 +420,7 @@ dependencies = [
 
 [[package]]
 name = "phenotype-registry"
-version = "1.2.2"
+version = "1.2.3"
 dependencies = [
  "criterion",
  "proptest",

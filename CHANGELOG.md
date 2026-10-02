@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.3](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.2...v1.2.3) (2026-10-02)
+
+
+### Bug Fixes
+
+* R7 skips backticked file-path citations ([#600](https://github.com/KooshaPari/PhenoRegistry/issues/600)) ([6a27c6a](https://github.com/KooshaPari/PhenoRegistry/commit/6a27c6ab1b2970d5d3b858769179026daead1592))
+
 ## [1.2.2](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.1...v1.2.2) (2026-10-01)
 
 
