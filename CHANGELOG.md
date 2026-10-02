@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.6](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.5...v1.2.6) (2026-10-02)
+
+
+### Bug Fixes
+
+* **docs:** escape unbalanced Liquid tags in WP05 dashboard spec ([0888970](https://github.com/KooshaPari/PhenoRegistry/commit/08889705e1f788004f341ef29230ccb7758dce5d))
+
 ## [1.2.5](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.4...v1.2.5) (2026-10-02)
 
 
