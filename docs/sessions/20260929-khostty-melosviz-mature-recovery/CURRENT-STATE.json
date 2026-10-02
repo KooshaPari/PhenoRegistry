@@ -198,9 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "CRLF_HARNESS_AND_NATIVE_SETUP_REPAIRED_REGRADING",
-      "head": "7b88fd8f020ffa73f94e393ed964e668c5d39699",
-      "run": 36993053366,
+      "status": "ALL_RAW_NEWLINE_HARNESS_ESCAPES_REMOVED_REGRADING",
+      "head": "0a4d99783308db72d66568cd4efb19028c5e9e84",
+      "run": 36995559605,
+      "prior_receipt": "sha256:8ba1738d14af26d3e082fa95811afe7adcb95119e2c427cef466cadfacc06625",
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -259,8 +260,8 @@
       "status": "REAL_RECEIPT_REPLAY_PLUS_UI_CACHE_TRUTH_ACTIVE",
       "pr": 305,
       "head": "cb8469e178c268ac7e8e01da6ac97efe1d0fbe2e",
-      "prior_green_cross_authority": 36990563759,
-      "scope": "actual reviewer receipt restart promotion + cache provenance projected to web UI without acceptance inflation"
+      "run": 36993999779,
+      "scope": "actual held-out receipt restart promotion + web cache provenance shown as verification pending"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
