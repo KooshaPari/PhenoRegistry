@@ -15,10 +15,21 @@
 # Permissions: contents: write + pull-requests: write (for the auto-PR).
 name: ecosystem-map-weekly
 
+# ============================================================================
+# DISABLED 2026-10-02 (operator decision, option (b)) — reversible.
+# Sibling repo PhenotypeEcosystem/phenotype-registry-curation-data is destroyed:
+# repo 404, org 404, 0 global search hits, 0 forks/mirrors found anywhere.
+# scripts/regen-ecosystem-map.py requires its _bindings.json (556 KB, 108 keys):
+# never committed into this repo's history, no local copy, and no legitimate
+# in-repo substitute (0 of ~178 projects/*.json carry plan/prompt/response keys;
+# ECOSYSTEM_MAP.md is the script's OUTPUT, not an input). Re-enabling requires
+# restoring _bindings.json from a real source — re-deriving it would be
+# fabrication. Independent defect to correct before any restore: the sibling
+# checkout `path: ../phenotype-registry-curation-data` is rejected by
+# actions/checkout (path not under the workspace root), failing even if the
+# sibling repo returns. Schedule trigger removed; workflow_dispatch retained.
+# ============================================================================
 on:
-  schedule:
-    # 16:00 UTC = 09:00 PDT (standard) / 08:00 PST. Monday.
-    - cron: "0 16 * * 1"
   workflow_dispatch:
     inputs:
       force:

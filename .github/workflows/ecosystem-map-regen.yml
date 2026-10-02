@@ -15,24 +15,19 @@
 # fails on the weekly schedule.
 name: ecosystem-map-regen
 
+# ==========================================================================
+# DISABLED 2026-10-02 (operator decision, option (b)) — reversible.
+# Sibling repo PhenotypeEcosystem/phenotype-registry-curation-data is destroyed:
+# repo 404, org 404, 0 global search hits, 0 forks/mirrors found anywhere.
+# scripts/regen-ecosystem-map.py requires its _bindings.json (556 KB, 108 keys):
+# never committed into this repo's history, no local copy, and no legitimate
+# in-repo substitute (0 of ~178 projects/*.json carry plan/prompt/response keys;
+# ECOSYSTEM_MAP.md is the script's OUTPUT, not an input). Re-enabling requires
+# restoring _bindings.json from a real source — re-deriving it would be
+# fabrication. Automatic triggers (pull_request, push) removed; workflow_dispatch
+# retained for deliberate manual runs.
+# ==========================================================================
 on:
-  pull_request:
-    paths:
-      - "ECOSYSTEM_MAP.md"
-      - "SPEC.md"
-      - "docs/registries.md"
-      - "scripts/regen-ecosystem-map.py"
-      - "Taskfile.yml"
-      - ".github/workflows/ecosystem-map-regen.yml"
-  push:
-    branches: [main]
-    paths:
-      - "ECOSYSTEM_MAP.md"
-      - "SPEC.md"
-      - "docs/registries.md"
-      - "scripts/regen-ecosystem-map.py"
-      - "Taskfile.yml"
-      - ".github/workflows/ecosystem-map-regen.yml"
   workflow_dispatch:
 
 permissions:
