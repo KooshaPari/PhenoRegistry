@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.4](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.3...v1.2.4) (2026-10-02)
+
+
+### Bug Fixes
+
+* **ci:** repair the cargo-deny schedule gate ([d991ca7](https://github.com/KooshaPari/PhenoRegistry/commit/d991ca790fdeb13be75b12994129f3186fb07336))
+
 ## [1.2.3](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.2...v1.2.3) (2026-10-02)
 
 
