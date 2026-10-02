@@ -1,10 +1,19 @@
 name: cargo-deny
 
 on:
-  # push/PR disabled — this repo only has markdown files
-  # cargo-deny requires Rust workspace which doesn't exist here
+  # push/PR disabled so this stays a weekly gate rather than a per-commit one.
+  # The check runs at the repository root, which is the Rust workspace that
+  # carries deny.toml and a Cargo.lock resolvable against crates.io.
+  # Two defects cleared here on 2026-10-02, both reproduced locally:
+  #   1. `cargo deny check --all-features` -- cargo-deny 0.20.2 moved
+  #      --all-features to the top level, so the old order exited 2 with
+  #      "unexpected argument '--all-features' found" (run 36409415048).
+  #   2. working-directory pointed at audits/org-audits/2026-04-24/aggregator,
+  #      whose Cargo.lock checksums disagree with crates.io for every package
+  #      sampled, so `cargo metadata` exited 101 before any check ran. The
+  #      root lock matched crates.io on 10 of 10 sampled packages.
   schedule:
-    - cron: '0 4 * * 1'  # Weekly Monday 4am UTC
+    - cron: "0 4 * * 1" # Weekly Monday 4am UTC
   workflow_dispatch:
 
 permissions:
@@ -30,27 +39,28 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             target
-          key: ${{ runner.os }}-cargo-deny-${{ hashFiles('audits/org-audits/2026-04-24/aggregator/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-deny-${{ hashFiles('Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-deny-
 
       - name: Install cargo-deny
         uses: taiki-e/install-action@26e9283f268b880168bdbd2c545dfcd60ec2c6ab # v2
         with:
-            tool: cargo-deny
+          tool: cargo-deny
 
       - name: Run cargo-deny check (block-release)
-        working-directory: audits/org-audits/2026-04-24/aggregator
-        run: cargo deny check --all-features
+        run: cargo deny --all-features check
 
       - name: Run cargo-deny advisories (log-only on PRs)
-        if: github.event_name == 'pull_request'
-        working-directory: audits/org-audits/2026-04-24/aggregator
+        if: ${{ github.event_name == 'pull_request' }}
+        # Grouped redirect + quoted target keep shellcheck SC2086/SC2129 quiet.
         run: |
-          cargo deny check advisories --all-features 2>&1 | tee deny-advisories.txt || true
+          cargo deny --all-features check advisories 2>&1 | tee deny-advisories.txt || true
           if [ -s deny-advisories.txt ]; then
-            echo "## cargo-deny advisories" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            cat deny-advisories.txt >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
+            {
+              echo "## cargo-deny advisories"
+              echo '```'
+              cat deny-advisories.txt
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
           fi
