@@ -234,3 +234,54 @@ A follow-up delayed-visibility fixture now models:
 4. deploy count remains exactly one.
 
 This is still fake-transport/provider-adapter evidence. Production `/deploy` remains untouched.
+
+
+## Execution-slice advance — 2026-10-02 late morning CEST
+
+### ShareCLI current execution slice
+
+Product branch candidate contains all of the following pending exact qualification:
+
+- reference dependency/device/fairness/backfill scheduling;
+- true externally supplied GNU-make jobserver discovery/reuse;
+- same-workload naive vs FIFO vs fit-scan benchmark with planner-item-check accounting;
+- native Linux pressure comparison;
+- 50-real-process same-workload admission-envelope comparison;
+- RAII multidimensional resource reservations across CPU/RAM/GPU/VRAM/disk/I/O/capabilities;
+- opt-in Hypervisor queued execution that holds the resource lease across the actual subprocess lifetime;
+- rejected admission proven not to spawn;
+- CI Success Gate now directly depends on the mature-recovery qualification job, closing the prior false-green aggregate path.
+
+The admission/runtime integration remains **opt-in**. Default `Hypervisor::run` has not been silently switched to the new scheduler.
+
+Exact recovery evidence is still pending because GitHub Actions has not assigned the decisive job.
+
+### BytePort current execution slice
+
+Product branch candidate now extends the previously qualified B03/A07/B08 reference/provider-fixture model with:
+
+- `RuntimeOperationID` separated from `DesiredResourceID` on mutation actions;
+- execution-time operation binding rather than planner-fabricated identity;
+- generic `BuildArtifactResolver` in the build domain;
+- graph-to-artifact manifest-lineage validation before provider mutation;
+- NanoVMS observation carrying exact config digest for restart reconciliation;
+- explicit apply outcomes `REALIZED` vs `UNKNOWN`;
+- typed unknown-after-send NanoVMS transport error;
+- ambiguous CREATE returning UNKNOWN + reconciliation identity, with no fabricated realized resource;
+- contradictory/missing apply outcomes rejected by the generic executor;
+- disposable lifecycle fixture:
+  `SourceSnapshot -> ManifestRevision -> DesiredResourceGraph -> BuildArtifact -> CREATE -> OBSERVE -> restart NOOP -> exact authorized DELETE`;
+- the lifecycle asserts one and only one provider CREATE across restart reconciliation.
+
+Live `/deploy` remains untouched. Production destructive authority, network/security policy, and real NanoVMS HTTP wiring remain separate gates.
+
+### CI infrastructure state
+
+Latest observed queue pressure:
+
+- ShareCLI: 253 queued, 10 in progress, 3 pending.
+- BytePort: 233 queued, 5 in progress, 6 pending.
+
+The GitHub connector exposes rerun operations but no cancel-workflow-run action, so stale-run queue cleanup cannot be performed directly from this session without modifying workflow concurrency behavior and thereby advancing/cancelling the exact product candidates.
+
+Both product heads are therefore intentionally frozen until the registered exact recovery runs execute.
