@@ -8,7 +8,7 @@
   "supersedes_claims": [
     {
       "claim": "A successful NanoVMS Stop is evidence of completed DELETE",
-      "correction": "Withdrawn. The adapter called Stop, and its fixture removed the mock resource on Stop. Neither proved resource deletion. Existing transport/read/create evidence remains bounded to the actual cases and checkouts; deletion capability and live-provider acceptance remain open."
+      "correction": "Withdrawn. The adapter called Stop, and its fixture removed the mock resource on Stop. Neither proved resource deletion. Existing transport/read/create evidence remains bounded to the actual cases and checkouts; real provider deletion capability and live-provider acceptance remain open."
     },
     {
       "claim": "The HTTP lifecycle fixture demonstrated a durable process restart",
@@ -82,7 +82,27 @@
       "baseline_raw_sha256": "98fd0cf4d15d6fcbd01342ab72218bcff4851385cb3898fe2fe86d91dc373abe",
       "repaired_raw_sha256": "ff925224e3021648994abf6e050dfa346703a475697884ce37cac5fb2a8bd429"
     },
-    "full_model_integration": {"result": "PENDING", "run": 37064061993, "workflow": "Mature Recovery Deletion Safety", "candidate": "61e8e5b017c6724540bf640e9b8545706aa19a22"},
+    "full_model_integration": {
+      "result": "PASS",
+      "run": 37064061993,
+      "job": 111027383394,
+      "attempt": 1,
+      "workflow": "Mature Recovery Deletion Safety",
+      "candidate": "61e8e5b017c6724540bf640e9b8545706aa19a22",
+      "tested_checkout": "61e8e5b017c6724540bf640e9b8545706aa19a22",
+      "timestamp": "2026-10-02T21:03:37Z",
+      "environment": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "go": "go version go1.25.0 linux/amd64",
+      "selected_named_tests_passed": 33,
+      "race_detector": true,
+      "whole_backend_suite": false,
+      "live_provider_accepted": false,
+      "verifier_sha256": "6a52008f70f14531ed06058b665153f4296a61d6f1d8648f3ad74c1030281d50",
+      "artifact_id": 11252106595,
+      "artifact_sha256": "016aeb7ae6274704ce06c12ab8e401238d83b3ffa7c38ccc07315ea78ad714f0",
+      "raw_log_sha256": "525d437ecff8e460c3e0f1ddf84675bbf0ea4053f95fc15e5d58ff5260d4ba67",
+      "raw_archive_and_source_hashes_checked_locally": true
+    },
     "not_qualified": ["real NanoVMS deletion API", "live provider deployment", "durable process/database restart", "verified build provenance", "production destructive authority", "whole-product acceptance"]
   }
 }
