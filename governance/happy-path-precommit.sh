@@ -232,13 +232,15 @@ FNR == NR { diff_lines[FNR] = $0; total_lines = FNR; next }
     # :// or starting with //) are kept whole; domain-shaped words
     # (host.tld/...) are kept whole so scheme-less URLs stay scannable;
     # absolute filesystem paths (leading /) have their path segments removed
-    # as citations; relative words are normalized first (a #L12 / ?query /
-    # :line suffix after the extension and any trailing punctuation are
-    # trimmed) and stripped only when the cleaned token ends like a file
-    # (.ext) or a directory (trailing /), anchored at the token boundary so
-    # an internal slash cannot hide a placeholder. Backtick runs of any
-    # length are recognized. Unbackticked prose is never touched. Offsets
-    # are saved right after each match().
+    # as citations; relative words are normalized (trailing punctuation
+    # trimmed) and stripped only when the cleaned token contains at least
+    # one / and ENDS like a file (.ext) or a directory (trailing /),
+    # optionally followed by / and a #anchor, ?query or :line suffix. The
+    # test is end-anchored with a free-position start, so leading ** or ~/
+    # markup is tolerated; the end anchor is what blocks an internal slash
+    # from hiding a placeholder. Backtick runs of any length are recognized.
+    # Unbackticked prose is never touched. Offsets are saved right after
+    # each match().
     r7lc = ""
     r7rest = lc
     while (match(r7rest, /`+[^`]*`+/)) {
@@ -261,10 +263,8 @@ FNR == NR { diff_lines[FNR] = $0; total_lines = FNR; next }
             gsub(/(\/[A-Za-z0-9._-]+)+/, "", r7w)
           else if (r7w !~ /^[A-Za-z0-9.-]+\.[A-Za-z]{2,}(\/|:|$)/) {
             r7c = r7w
-            if (match(r7c, /\.[A-Za-z][A-Za-z0-9]*[#?:]/))
-              r7c = substr(r7c, 1, RSTART + RLENGTH - 2)
             if (r7c !~ /\/$/) sub(/[[:punct:]]+$/, "", r7c)
-            if (match(r7c, /[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)$/))
+            if (match(r7c, /[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+(\.[A-Za-z][A-Za-z0-9]*|\/)\/?([#?:][^[:space:]]*)?$/))
               r7w = ""
           }
         }
