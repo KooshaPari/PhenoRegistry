@@ -198,10 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "THIRD_PARSER_DEFECT_FIXED_HEADLESS_REGRADING",
-      "head": "3c383f7d47f3710594d1f182519cf1fe355a49ae",
-      "run": 36990256074,
-      "prior_finding": "raw newline in harness diagnostic string"
+      "status": "SEMANTIC_PLUS_NATIVE_AUTHORITIES_REGRADING",
+      "head": "e236d7fd4a51706ed1e785326a9234ccc988679c",
+      "note": "prior GTK compile green withdrawn: tee masked nonzero; new gate uses pipefail + native prerequisites",
+      "mount": "blocked"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -228,13 +228,10 @@
   "melosviz": {
     "m_e02": {
       "status": "CANDIDATE_GATES_GREEN_HELD_OUT_CACHE_TRUTH_REGRADING",
-      "last_green_candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
-      "contract_run": 36982048818,
-      "main_ci": 36982048895,
-      "studio": 36982048964,
       "current_candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
-      "reviewer": "feeb9ed212fdb4652d901c8252849d4043d4d1b7",
-      "acceptance": false
+      "reviewer": "c15ad7b9b24a3cb8c9d7a69c7b96c1a7322f118f",
+      "acceptance": false,
+      "note": "reviewer now persists red receipts rather than losing evidence on assertion"
     },
     "durable_ledger_experiment": {
       "status": "EXPERIMENTALLY_ACCEPTED_FEASIBILITY_SLICE",
@@ -252,9 +249,9 @@
     },
     "m_e03": {
       "status": "LEDGER_SEAM_GREEN_CROSS_AUTHORITY_REBOUND_REGRADING",
-      "last_seam_run": 36982081075,
-      "current_head": "0ddb238aeeb87f790e095394275f7da95684a94b",
-      "current_run": 36990216966
+      "head": "8e1171126cd5d6e1f13ad5a4d8691751d749cbf7",
+      "candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
+      "reviewer": "c15ad7b9b24a3cb8c9d7a69c7b96c1a7322f118f"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
