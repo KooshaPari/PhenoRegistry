@@ -253,23 +253,23 @@ else
   FAIL=$((FAIL+1))
 fi
 
-# ---- Tests 9-16: R7 functional behavior (real engine, scratch git repo) ----
+# ---- Tests 9-21: R7 functional behavior (real engine, scratch git repo) ----
 # Path citations must not fire; prose/code-span placeholders must still fire.
-# Invoked as `sh "$GUARD"` (POSIX, harness-relative) -- no bash dependency and
-# a mirrored harness would exercise its own guard automatically.
-# probe_ran: every probe must leave the guard Summary line behind. An empty or
+# Invoked as `sh "$GUARD"` (POSIX, harness-relative) -- no bash dependency.
+# Probes rely only on the staged diff (`git diff --cached`), the code path
+# shared by both guard copies: no HAPPY_PATH_BASE/HEAD env and no commit per
+# probe, so a mirrored harness exercises its own guard with the same input.
+# probe_ran: every probe must leave the guard Summary line behind; an empty or
 # truncated output file (guard crashed, git step failed) fails loudly instead
-# of letting a negative assertion pass vacuously.
+# of letting a negative assertion pass vacuously. PROBE_RC is asserted too:
+# positive probes must exit 1 (block), negative probes must exit 0.
 TMPREPO=$(mktemp -d)
 trap 'rm -rf "$TMPREPO"' EXIT HUP INT TERM
 run_probe() {
   ( cd "$TMPREPO" || exit 1
-    BASE=$(git rev-parse HEAD)
-    printf -- '%s\n' "$1" >> probe.md
+    printf -- '%s\n' "$1" > probe.md
     git add probe.md
-    git commit -qm "$2"
-    HAPPY_PATH_FAIL_ON=block HAPPY_PATH_BASE=$BASE HAPPY_PATH_HEAD=$(git rev-parse HEAD) \
-      sh "$GUARD"
+    HAPPY_PATH_FAIL_ON=block sh "$GUARD"
     echo "PROBE_RC=$?"
   ) > "$TMPREPO/out_$2" 2>&1
 }
@@ -293,8 +293,11 @@ if ! probe_ran path-citation; then
 elif grep -q '\[R7\]' "$TMPREPO/out_path-citation"; then
   echo "  FAIL: R7 fired on a file-path citation" >&2
   FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_path-citation"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
 else
-  echo "  PASS (path citation not flagged)" >&2
+  echo "  PASS (path citation not flagged, rc=0)" >&2
   PASS=$((PASS+1))
 fi
 
@@ -303,8 +306,8 @@ echo "Test 10: prose placeholder still fires R7" >&2
 if ! probe_ran prose-stub; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_prose-stub"; then
-  echo "  PASS (prose stub flagged)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_prose-stub" && grep -q 'PROBE_RC=1' "$TMPREPO/out_prose-stub"; then
+  echo "  PASS (prose stub flagged, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 did not fire on prose placeholder" >&2
@@ -316,8 +319,8 @@ echo "Test 11: space-padded slash content span still fires R7" >&2
 if ! probe_ran padded-slash-span; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_padded-slash-span"; then
-  echo "  PASS (content span with / kept and flagged)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_padded-slash-span" && grep -q 'PROBE_RC=1' "$TMPREPO/out_padded-slash-span"; then
+  echo "  PASS (content span with / kept and flagged, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 escaped a non-path content span" >&2
@@ -329,8 +332,8 @@ echo "Test 12: placeholder inside a non-path code span still fires R7" >&2
 if ! probe_ran span-placeholder; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_span-placeholder"; then
-  echo "  PASS (span with slash but no path token flagged)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_span-placeholder" && grep -q 'PROBE_RC=1' "$TMPREPO/out_span-placeholder"; then
+  echo "  PASS (span with slash but no path token flagged, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: whole-span strip hid a real placeholder" >&2
@@ -342,8 +345,8 @@ echo "Test 13: URL span still fires R7" >&2
 if ! probe_ran url-noop; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_url-noop"; then
-  echo "  PASS (URL no-op not swallowed by path strip)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_url-noop" && grep -q 'PROBE_RC=1' "$TMPREPO/out_url-noop"; then
+  echo "  PASS (URL no-op not swallowed, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: path strip swallowed a real no-op" >&2
@@ -355,8 +358,8 @@ echo "Test 14: mixed spans - path stripped, prose stub still fires" >&2
 if ! probe_ran three-span-mispair; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_three-span-mispair"; then
-  echo "  PASS (src/lib.rs stripped; stub in prose flagged)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_three-span-mispair" && grep -q 'PROBE_RC=1' "$TMPREPO/out_three-span-mispair"; then
+  echo "  PASS (src/lib.rs stripped; stub in prose flagged, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: path strip leaked into adjacent prose" >&2
@@ -368,8 +371,8 @@ echo "Test 15: unbackticked prose placeholder (CR probe) still fires R7" >&2
 if ! probe_ran cr-unbackticked; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
-elif grep -q '\[R7\]' "$TMPREPO/out_cr-unbackticked"; then
-  echo "  PASS (unbackticked placeholder flagged)" >&2
+elif grep -q '\[R7\]' "$TMPREPO/out_cr-unbackticked" && grep -q 'PROBE_RC=1' "$TMPREPO/out_cr-unbackticked"; then
+  echo "  PASS (unbackticked placeholder flagged, rc=1)" >&2
   PASS=$((PASS+1))
 else
   echo "  FAIL: R7 did not fire on unbackticked prose placeholder" >&2
@@ -377,15 +380,89 @@ else
 fi
 
 run_probe 'Now citing `scripts/fill-intent-stubs/` in prose.' dir-citation
-echo "Test 16: directory citation (no extension) does not fire R7" >&2
+echo "Test 16: directory citation (trailing slash) does not fire R7" >&2
 if ! probe_ran dir-citation; then
   echo "  FAIL: probe did not complete (no Summary line)" >&2
   FAIL=$((FAIL+1))
 elif grep -q '\[R7\]' "$TMPREPO/out_dir-citation"; then
   echo "  FAIL: R7 fired on a directory-path citation" >&2
   FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_dir-citation"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
 else
-  echo "  PASS (directory citation not flagged)" >&2
+  echo "  PASS (directory citation not flagged, rc=0)" >&2
+  PASS=$((PASS+1))
+fi
+
+run_probe 'Rebase onto `refs/heads/no-op-fix` and rework `feature/stub`.' ref-branch
+echo "Test 17: git ref/branch citation still fires R7 (file/dir ending rule)" >&2
+if ! probe_ran ref-branch; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_ref-branch" && grep -q 'PROBE_RC=1' "$TMPREPO/out_ref-branch"; then
+  echo "  PASS (refs/heads/no-op-fix and feature/stub flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: strip hid a placeholder in a ref/branch token" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Docs at `www.example.com/no-op` here.' scheme-less-url
+echo "Test 18: scheme-less URL keeps its placeholder (rc=1)" >&2
+if ! probe_ran scheme-less-url; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_scheme-less-url" && grep -q 'PROBE_RC=1' "$TMPREPO/out_scheme-less-url"; then
+  echo "  PASS (www.example.com/no-op flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: path strip ate a scheme-less URL placeholder" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Assets at `//cdn.example.com/no-op/page` here.' protocol-relative-url
+echo "Test 19: protocol-relative URL keeps its placeholder (rc=1)" >&2
+if ! probe_ran protocol-relative-url; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_protocol-relative-url" && grep -q 'PROBE_RC=1' "$TMPREPO/out_protocol-relative-url"; then
+  echo "  PASS (cdn URL no-op flagged, rc=1)" >&2
+  PASS=$((PASS+1))
+else
+  echo "  FAIL: path strip ate a protocol-relative URL placeholder" >&2
+  FAIL=$((FAIL+1))
+fi
+
+run_probe 'Mixed `see https://example.com and docs/no-op.md` span.' mixed-span
+echo "Test 20: mixed URL+path span strips only the path (rc=0)" >&2
+if ! probe_ran mixed-span; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_mixed-span"; then
+  echo "  FAIL: mixed span fired despite exempt path cite" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_mixed-span"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (path cite exempted inside mixed span, rc=0)" >&2
+  PASS=$((PASS+1))
+fi
+
+run_probe 'Cited ``scripts/fill-intent-stubs.py`` with double ticks.' double-backtick
+echo "Test 21: double-backtick citation does not fire R7 (rc=0)" >&2
+if ! probe_ran double-backtick; then
+  echo "  FAIL: probe did not complete (no Summary line)" >&2
+  FAIL=$((FAIL+1))
+elif grep -q '\[R7\]' "$TMPREPO/out_double-backtick"; then
+  echo "  FAIL: R7 fired on a double-backtick citation" >&2
+  FAIL=$((FAIL+1))
+elif ! grep -q 'PROBE_RC=0' "$TMPREPO/out_double-backtick"; then
+  echo "  FAIL: guard exit code not 0 on negative probe" >&2
+  FAIL=$((FAIL+1))
+else
+  echo "  PASS (double-backtick citation not flagged, rc=0)" >&2
   PASS=$((PASS+1))
 fi
 
