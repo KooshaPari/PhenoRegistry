@@ -129,7 +129,7 @@ metadata, so a future reviewer cannot tell the removal from an accidental drop.
 - Validator evidence widened: `tools/check-ecosystem.ts` (1,223 lines) and
   `scripts/validate-ecosystem.sh` (315 lines) contain no `testing-kit` and no
   `in_scope` reference. The only other `in_scope` hits under `scripts/` are
-  writer-side dict keys in `scripts/fill-intent-st….py` (`:13-73`, consumed at
+  writer-side dict keys in `scripts/fill-intent-stubs.py` (`:13-73`, consumed at
   `:111`) — prose defaults rendered for newly created files, not readers of
   `docs/boundary/*.md` frontmatter. No tooling requires the membership entry,
   so removal changes prose contract only.
