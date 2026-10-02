@@ -198,10 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "DELIMITER_AND_NATIVE_GI_REPAIRS_REGRADING",
-      "head": "b7f1fd42fe4fbe96671b8f7ed31483b581034376",
-      "run": 37039707831,
-      "mount": "blocked pending semantic+native+format exact green"
+      "status": "FRAME_DELIMITER_LITERALS_FIXED_NATIVE_ENV_STILL_BLOCKED",
+      "head": "69b87749211a36fff7daf0acaf00139e15626152",
+      "prior_run": 37039707831,
+      "mount": "blocked"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -269,11 +269,14 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "ACCEPTED_EXPERIMENTAL_BRIDGE_RESTART_TRUTH",
-      "head": "e358aa9e4d9ecd9b8716d070606a84d18486f7b6",
-      "m_e03": 37037958871,
-      "studio": 37037958528,
-      "next": "generate-to-ledger authority then Electrobun restart witness"
+      "status": "GENERATE_WRITE_THROUGH_RESTART_TRUTH_ACTIVE",
+      "head": "5ee234e48b1fffa92a9212a7fe7b314d82b5c214",
+      "last_green": {
+        "m_e03": 37037958871,
+        "studio": 37037958528,
+        "ci": 37037958488
+      },
+      "scope": "bridge generate persists candidate-bound revision/attempt; later status request reopens and recovers truth"
     }
   }
 }
