@@ -154,8 +154,20 @@ fn extract_dimension_status(content: &str, dimension: &str, keywords: &[&str]) -
     // Strategy 3: Simple text search for dimension headers followed by status
     let text_lower = content.to_lowercase();
     for kw in keywords {
-        if let Some(idx) = text_lower.find(&kw.to_lowercase()) {
-            let section = &content[idx..std::cmp::min(idx + 500, content.len())];
+        if let Some(raw_idx) = text_lower.find(&kw.to_lowercase()) {
+            // `raw_idx` indexes the lowercased copy, but slicing targets the
+            // original. Unicode case mapping is not length preserving, and a
+            // hard-coded 500-byte window can end mid-character, so clamp the start
+            // and snap both ends to char boundaries before slicing.
+            let mut start = raw_idx.min(content.len());
+            while start < content.len() && !content.is_char_boundary(start) {
+                start += 1;
+            }
+            let mut end = (start + 500).min(content.len());
+            while end > start && !content.is_char_boundary(end) {
+                end -= 1;
+            }
+            let section = &content[start..end];
             let status = extract_status(section);
             if status != "UNKNOWN" {
                 return status;
