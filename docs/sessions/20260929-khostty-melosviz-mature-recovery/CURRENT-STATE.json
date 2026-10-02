@@ -198,10 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "NATIVE_AND_HARNESS_REPAIRS_REGRADING",
+      "status": "SEMANTIC_AND_NATIVE_AUTHORITY_STILL_RED_REPAIRED_REGRADING",
       "head": "86d7b5f0d5313a0fd33a03324ea1dec37025ab2b",
-      "prior_run": 36999910839,
-      "mount": "blocked pending exact green"
+      "prior_run": 37019541023,
+      "mount": "blocked"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -267,6 +267,18 @@
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
+    },
+    "m_e03a": {
+      "status": "BRIDGE_RESTART_TRUTH_TEST_FIXTURES_REPAIRED_REGRADING",
+      "head": "e358aa9e4d9ecd9b8716d070606a84d18486f7b6",
+      "prior_m_e03_run": 37019915245,
+      "prior_m_e03": "PASS",
+      "prior_studio_red": "new project-status test omitted client fixture",
+      "prior_ci_red": "UI cache provenance test suite brace placement",
+      "repairs": [
+        "explicit TestClient fixture",
+        "StudioConsole late tests restored inside suite"
+      ]
     }
   }
 }
