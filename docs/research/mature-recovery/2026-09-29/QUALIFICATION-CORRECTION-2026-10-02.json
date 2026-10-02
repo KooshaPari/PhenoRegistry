@@ -1,0 +1,88 @@
+{
+  "schema": "recovery-qualification-correction/v1",
+  "date": "2026-10-02",
+  "products": ["KooshaPari/ShareCLI", "KooshaPari/BytePort"],
+  "supporting_registry_only": true,
+  "product_accepted": false,
+  "merge_authorized": false,
+  "supersedes_claims": [
+    {
+      "claim": "A successful NanoVMS Stop is evidence of completed DELETE",
+      "correction": "Withdrawn. The adapter called Stop, and its fixture removed the mock resource on Stop. Neither proved resource deletion. Existing transport/read/create evidence remains bounded to the actual cases and checkouts; deletion capability and live-provider acceptance remain open."
+    },
+    {
+      "claim": "The HTTP lifecycle fixture demonstrated a durable process restart",
+      "correction": "It reconstructed or reused in-memory adapter state. No database durability or separate-process restart was demonstrated."
+    },
+    {
+      "claim": "Every earlier PR workflow tested the branch head recorded in its run metadata",
+      "correction": "Default checkout jobs often tested a synthetic PR merge. The new focused oracles explicitly check out and verify the branch SHA; prior evidence must retain its actual checkout/configuration."
+    }
+  ],
+  "sharecli": {
+    "reviewed_head": "fd0fcb7eb86e068dc86949bd5bf67930bb46ce99",
+    "repair_commit": "906b6a50ed0b8694d7bcefd5cc54097e1ee39134",
+    "pr": 878,
+    "scope": "Linux local-filesystem queue ownership and recovery; not complete B03/B05/B06 acceptance",
+    "implementation": [
+      "A waiter requires a held exclusive kernel file lock; a live/reused PID does not prove ownership.",
+      "A waiter is locked before unique no-clobber publication; shared probes do not create phantom exclusive owners.",
+      "Per-lane sequence allocation and publication are serialized across processes; FIFO does not use PID or wall-clock ties.",
+      "Old unleased files are ignored, not attributed or unlinked by peers. Torn ordering-journal tails fail closed.",
+      "The previous 28 queue test contracts are retained with real held-lease positive fixtures; ten ownership/journal tests and a real child-death integration test are added."
+    ],
+    "native_qualification": {
+      "result": "PASS",
+      "candidate": "906b6a50ed0b8694d7bcefd5cc54097e1ee39134",
+      "tested_checkout": "906b6a50ed0b8694d7bcefd5cc54097e1ee39134",
+      "run": 37063087593,
+      "job": 111024182170,
+      "attempt": 1,
+      "timestamp": "2026-10-02T20:51:37Z",
+      "environment": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
+      "zig": "0.14.1",
+      "unit_tests_passed": 38,
+      "integration_tests_passed": 3,
+      "integration_cases": [
+        "stale_ticket_with_reused_live_pid_must_not_block_new_waiter",
+        "panicking_owner_releases_slot_and_lane_remains_usable",
+        "killed_waiter_releases_ownership_without_ticket_deletion"
+      ],
+      "verifier_sha256": "7b93220b668b5e90a5fb6c9a4bfef7a4d7b627ecbe3126854230654b1584747d",
+      "artifact_id": 11251203521,
+      "artifact_sha256": "a072a1e8b342d4a9462ea79a966a228663222c90518d90435ffdd6122f63d9e2",
+      "raw_archive_and_source_hashes_checked_locally": true
+    },
+    "not_qualified": ["mixed-version queue clients", "remote-filesystem locking", "power-loss persistence", "mature scheduler quality or full product acceptance"]
+  },
+  "byteport": {
+    "reviewed_head": "56dc6ba28a150c8ff8fac7d58f2e7f3a7ce644b9",
+    "repair_commit": "61e8e5b017c6724540bf640e9b8545706aa19a22",
+    "pr": 427,
+    "scope": "adapter capability, action/resource identity, lifecycle authority and deletion outcome",
+    "implementation": [
+      "NanoVMSDeletionTransport is distinct from Stop. Ordinary NanoVMSHTTPTransport does not implement Delete and no longer advertises it.",
+      "A deletion-capable adapter requires exact action/operation/desired/realized/provider/target/sandbox identity, calls Delete rather than Stop, and observes absence before reporting completion.",
+      "Retained resources, ambiguous acknowledgement and failed observation remain UNKNOWN.",
+      "CREATE rejects mismatched action identity, observe-only/unknown lifecycle, blank operations and cancelled contexts before transport I/O.",
+      "Positive lifecycle removal is now a clearly named test-only provider API; Stop retains a stopped resource. A separate negative HTTP test checks that Stop cannot satisfy Delete."
+    ],
+    "local_native_evidence": {
+      "environment": "go1.23.2 linux/amd64; isolated real source package; fixture transports",
+      "baseline_production_blob": "7c87d935bf3406ac92706a1a9a6a754dd34f0874",
+      "candidate_production_blob": "e40881cc2d9d7bf5e11afbe79d714200589d8776",
+      "safety_test_blob": "476076972fd2177b994001533db1e25181948ab5",
+      "retained_adapter_test_blob": "4dbba38259f6b66c792f8461429eead92e1630bf",
+      "new_tests_against_original": {"failed": 15, "passed": 3},
+      "new_tests_against_repair": {"passed": 18},
+      "expanded_regression_suite": {"tests": 26, "shuffle_repetitions": 10, "passing_executions": 260, "race_detector": true, "skipped": 0},
+      "go_vet": "PASS for isolated package",
+      "baseline_raw_sha256": "98fd0cf4d15d6fcbd01342ab72218bcff4851385cb3898fe2fe86d91dc373abe",
+      "repaired_raw_sha256": "ff925224e3021648994abf6e050dfa346703a475697884ce37cac5fb2a8bd429"
+    },
+    "full_model_integration": {"result": "PENDING", "run": 37064061993, "workflow": "Mature Recovery Deletion Safety", "candidate": "61e8e5b017c6724540bf640e9b8545706aa19a22"},
+    "not_qualified": ["real NanoVMS deletion API", "live provider deployment", "durable process/database restart", "verified build provenance", "production destructive authority", "whole-product acceptance"]
+  }
+}
