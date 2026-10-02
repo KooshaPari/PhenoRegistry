@@ -336,3 +336,46 @@ The happy-path-collapse guard still reports substantive/heuristic failures in ma
 ### Current evidence status
 
 The new ShareCLI and BytePort exact recovery workflows are registered but waiting on GitHub runner allocation. Pending/queued state remains non-evidence.
+
+
+## Exact qualification and next-slice advance — 2026-10-02 evening CEST
+
+### BytePort B08 qualification
+
+Exact candidate `f2d07a3408521ec18e0b62c0d31b952ddef3fd8c` produced:
+
+- BytePort Mature Recovery Oracle run `37020430727`: PASS;
+- Mature Recovery Contract Integrity `37020429356`: PASS;
+- Mature Recovery Artifact Chain `37020430210`: PASS;
+- BytePort Mature Recovery Build Prototype `37020429529`: PASS;
+- Quality Gate `37020429634`: PASS;
+- Benchmarks `37020429469`: PASS.
+
+Ordinary CI run `37020429789` also passed Go test, Go build, Go vet, golangci-lint and cargo-machete. Its red state came from gofmt/pre-commit hygiene jobs and is not promoted as product qualification.
+
+This qualifies the B08 reference/provider-fixture slice described in machine state. It does **not** qualify production `/deploy` replacement, real destructive authority, or network/security policy.
+
+Post-qualification work adds a generalized NanoVMS HTTP transport candidate. It remains disconnected from live `/deploy` and is pending its own exact oracle.
+
+### ShareCLI B05 evidence correction
+
+Exact Mature Recovery Oracle run `37020262698` is not a B05 product failure. Most Rust recovery jobs failed during build because the workflow omitted Zig required by `spawn-core-sys`. This is classified as collector failure for those criteria.
+
+The FR-008 job did provision Zig and executed the native negative controls. Those controls reproduced the already-known unsafe legacy durable-cache behavior. The workflow had incorrectly treated one expected negative control as an ordinary must-pass test.
+
+Collector repairs:
+- every Rust recovery job now provisions Zig 0.14.1;
+- the in-flight-vs-durable FR-008 test is explicitly encoded as an expected-failure negative oracle;
+- B05 remains pending exact rerun rather than being marked failed or passed.
+
+### ShareCLI B06 candidate start
+
+B06 implementation work began only after separating B05 collector failure from product evidence:
+
+- ordinary cache hits no longer authorize speculation;
+- explicit read-only eligibility is required;
+- per-cycle speculative execution budget is explicit;
+- attempted/completed/failed/budget-skipped speculation is counted;
+- the hit window no longer refreshes its origin on every hit.
+
+No default speculation routing is promoted. Cancellation and wasted-work accounting remain open.
