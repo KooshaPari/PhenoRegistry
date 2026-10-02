@@ -198,12 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "HEADLESS_DEPENDENCY_AWARE_AUTHORITY_QUEUED",
-      "head": "16400e5679813d752c2311455ad3cbe983c53b8a",
-      "run": 36927684059,
-      "semantic_runtime": "none",
-      "native_compile_runtime": "gtk",
-      "reason": "separate IPC semantics from desktop packaging dependencies"
+      "status": "SECOND_SOURCE_DEFECT_FIXED_HEADLESS_REGRADING",
+      "head": "0965b6c558f0ec682532a62b610b087263c59b9b",
+      "run": 36982142767,
+      "prior_finding": "raw newline literal at server.zig:463"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -229,9 +227,12 @@
   },
   "melosviz": {
     "m_e02": {
-      "status": "CANDIDATE_CONTROLLED_STRUCTURAL_PASS__REVIEWER_MEDIA_PENDING",
-      "head": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
-      "workflow_run": 36766323723,
+      "status": "HELD_OUT_R2_FALSIFICATION_REPAIRED_REGRADING",
+      "prior_candidate": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
+      "prior_run": 36927843686,
+      "falsification": "R2 final digest == R1 final digest",
+      "current_candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
+      "reviewer": "3499ee72ce05e9ac6716e9480b0cffb9f85d05df",
       "acceptance": false
     },
     "durable_ledger_experiment": {
@@ -249,10 +250,12 @@
       "caveat": "runner workflow belongs to M-E03 candidate; not full independent authority"
     },
     "m_e03": {
-      "status": "SCHEMA_MIGRATION_AND_CROSS_AUTHORITY_REVIEW_ACTIVE",
+      "status": "REBOUND_TO_REPAIRED_M_E02_CROSS_AUTHORITY_GRADE",
       "pr": 305,
-      "head": "7a85869c110acc651642781c34e289526c4018f2",
-      "scope": "atomic reviewer promotion + full storyboard denominator + durable schema migration + actual reviewer-promotion tests"
+      "head": "e3b82bec4dc3c95b8d65bb4f012576858495602e",
+      "run": 36982081075,
+      "candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
+      "reviewer": "3499ee72ce05e9ac6716e9480b0cffb9f85d05df"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
