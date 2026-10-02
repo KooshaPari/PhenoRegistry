@@ -198,10 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "SECOND_SOURCE_DEFECT_FIXED_HEADLESS_REGRADING",
-      "head": "0965b6c558f0ec682532a62b610b087263c59b9b",
-      "run": 36982142767,
-      "prior_finding": "raw newline literal at server.zig:463"
+      "status": "THIRD_PARSER_DEFECT_FIXED_HEADLESS_REGRADING",
+      "head": "3c383f7d47f3710594d1f182519cf1fe355a49ae",
+      "run": 36990256074,
+      "prior_finding": "raw newline in harness diagnostic string"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -227,12 +227,13 @@
   },
   "melosviz": {
     "m_e02": {
-      "status": "HELD_OUT_R2_FALSIFICATION_REPAIRED_REGRADING",
-      "prior_candidate": "2102db05ec5f5c77c3e1772fc1f9bbc7e261dda0",
-      "prior_run": 36927843686,
-      "falsification": "R2 final digest == R1 final digest",
-      "current_candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
-      "reviewer": "3499ee72ce05e9ac6716e9480b0cffb9f85d05df",
+      "status": "CANDIDATE_GATES_GREEN_HELD_OUT_CACHE_TRUTH_REGRADING",
+      "last_green_candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
+      "contract_run": 36982048818,
+      "main_ci": 36982048895,
+      "studio": 36982048964,
+      "current_candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
+      "reviewer": "feeb9ed212fdb4652d901c8252849d4043d4d1b7",
       "acceptance": false
     },
     "durable_ledger_experiment": {
@@ -250,12 +251,10 @@
       "caveat": "runner workflow belongs to M-E03 candidate; not full independent authority"
     },
     "m_e03": {
-      "status": "REBOUND_TO_REPAIRED_M_E02_CROSS_AUTHORITY_GRADE",
-      "pr": 305,
-      "head": "e3b82bec4dc3c95b8d65bb4f012576858495602e",
-      "run": 36982081075,
-      "candidate": "1c694905bda41d04887e9f2321927591dbaf4e36",
-      "reviewer": "3499ee72ce05e9ac6716e9480b0cffb9f85d05df"
+      "status": "LEDGER_SEAM_GREEN_CROSS_AUTHORITY_REBOUND_REGRADING",
+      "last_seam_run": 36982081075,
+      "current_head": "0ddb238aeeb87f790e095394275f7da95684a94b",
+      "current_run": 36990216966
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
