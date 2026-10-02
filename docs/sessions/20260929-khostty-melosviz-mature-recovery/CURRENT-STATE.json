@@ -198,13 +198,9 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "FOURTH_PARSER_DEFECT_FIXED_NATIVE_SETUP_REPAIRED_REGRADING",
+      "status": "CRLF_HARNESS_AND_NATIVE_SETUP_REPAIRED_REGRADING",
       "head": "7b88fd8f020ffa73f94e393ed964e668c5d39699",
-      "prior_run": 36990531615,
-      "findings": [
-        "raw newline in pane.write CRLF harness fragment",
-        "Ubuntu runner lacks libgtk4-layer-shell-dev package"
-      ],
+      "run": 36993053366,
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -260,10 +256,11 @@
       "caveat": "runner workflow belongs to M-E03 candidate; not full independent authority"
     },
     "m_e03": {
-      "status": "REAL_REVIEWER_RECEIPT_RESTART_PROMOTION_WITNESS_ACTIVE",
-      "head": "9ff96e3da378de3deec097b4d7ac1dedb740d4e2",
-      "last_green_run": 36990563759,
-      "scope": "pinned held-out receipt must replay after ledger restart into exact candidate+R2+scene+final acceptance"
+      "status": "REAL_RECEIPT_REPLAY_PLUS_UI_CACHE_TRUTH_ACTIVE",
+      "pr": 305,
+      "head": "cb8469e178c268ac7e8e01da6ac97efe1d0fbe2e",
+      "prior_green_cross_authority": 36990563759,
+      "scope": "actual reviewer receipt restart promotion + cache provenance projected to web UI without acceptance inflation"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
