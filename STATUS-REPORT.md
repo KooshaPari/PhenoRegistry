@@ -1,9 +1,19 @@
 # Phenotype Registry — STATUS REPORT
 
-**Generated:** 2026-06-18
+> **Historical snapshot — not the current status page.**
+> Initially generated 2026-06-18 as the consolidated L7-001 / L7-002 / L7-003 sweep
+> record. For the repo's current state read `STATUS.md` (root) — the
+> canonical status document, which replaces this file. The other pointer,
+> `docs/monorepo-state/STATUS.md`, is itself a historical 2026-06-17
+> monorepo snapshot, not current state; for per-task history read `WORKLOG.md`.
+> Kept rather than deleted: this L7 sweep record is unique June-2026
+> history (retention decision tracked in WBS C2, a planning artifact kept
+> outside the repo).
+
+**Generated:** 2026-06-18 (initial generation date — the embedded §1.4 / §2.3 baseline snapshot is labeled 2026-06-19; see §6 date-basis note)
 **Scope:** L7-001 / L7-002 / L7-003 sweep — `phenotype-registry`
 **Author device:** macbook
-**Audience:** user (consolidated, not committed, not pushed)
+**Audience:** user (consolidated record; committed to the repo as an archival snapshot — retained because the L7 sweep history is unique)
 
 ---
 
@@ -15,11 +25,11 @@ authoring contract (`docs/intent/` + `docs/boundary/`) with a curation pipeline
 that scrapes LLM interaction history from Mac + Windows workstations and renders
 per-repo artifacts.
 
-| Turn | ID    | Date       | Theme                                                       | Status   | Headline artifact |
-| :--- | :---- | :--------- | :---------------------------------------------------------- | :------- | :---------------- |
-| 1    | L7-001 | 2026-06-17 | Contract + full Mac+Windows prompt/plan/response curation | complete | 82 intent + 123 boundary files rendered; 45,091 unique records |
-| 2    | L7-002 | 2026-06-18 | Collision resolution (alias → canonical rebinding)          | complete (per L7-003 cross-ref) | 15 merges + 6 drops → 108 canonical repos bound; branch tip `f5b6d7d6` |
-| 3    | L7-003 | 2026-06-18 | Ecosystem reconciliation (ECOSYSTEM_MAP ↔ L7-002 _bindings) | complete (orphan LIVE; main PUSH-PENDING) | 0 merge conflicts; +SSOT layer; 8 stubs; orphan @ `cef45570` |
+| Turn | ID     | Date       | Theme                                                          | Status                                    | Headline artifact                                                                                             |
+| :--- | :----- | :--------- | :------------------------------------------------------------- | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| 1    | L7-001 | 2026-06-17 | Contract + full Mac+Windows prompt/plan/response curation      | complete                                  | 82 intent + 123 boundary files rendered; 45,091 unique records                                                |
+| 2    | L7-002 | 2026-06-18 | Collision resolution (alias → canonical rebinding)             | complete (per L7-003 cross-ref)           | 15 merges + 6 drops → 108 canonical repos bound; branch tip `f5b6d7d6`                                        |
+| 3    | L7-003 | 2026-06-18 | Ecosystem reconciliation (ECOSYSTEM_MAP ↔ `L7-002 _bindings`) | complete (orphan LIVE; main PUSH-PENDING) | 0 merge conflicts; +SSOT layer; 8 skeleton docs (renamed — original term quoted in §1.3); orphan @ `cef45570` |
 
 ### 1.1 L7-001 (2026-06-17) — Intent + Boundary Contract + Curation Sweep
 
@@ -69,7 +79,7 @@ Branch state at L7-003 close: orphan branch `chore/l7-001-contract-only-orphan-2
 
 ### 1.4 2026-06-19 Snapshot (L7-003, embedded status block)
 
-From `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:79-101`:
+Recorded at authoring (2026-06-19) and first committed as `437180c6` (unchanged since); worklog backing is partial — `phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:65-98` holds the orphan SHA (`:79-80`) and subagent manifest (`:65-78`, prose re-list at `:83` — the bullet's names are this report's normalization of worklog spellings `alises-update`/`worklog-updater`, and `(redirected)` is an authoring annotation with no worklog source), while the 125 / 106 / 123 counts and manager directive appear nowhere in that file (script-checked: zero matches):
 
 - Orphan SHA: `cef45570fac3`
 - Monorepo-propagated intent: 125
@@ -86,42 +96,42 @@ All numbers verified 2026-06-18.
 
 ### 2.1 Curation corpus
 
-| Metric                          | Value         | Source |
-| :------------------------------ | :------------ | :----- |
-| Total merged unique records     | **45,091**    | L7-001 `merged_unique_records` |
-| Mac kept records                | 41,263        | L7-001 `mac_kept_records` |
-| Windows kept records            | 3,829         | L7-001 `win_kept_records` |
-| Sources covered                 | 7 (claude-code, codex, cursor-agent, forge, droid, aider, other) | L7-001 `sources_scraped` |
+| Metric                      | Value                                                            | Source                         |
+| :-------------------------- | :--------------------------------------------------------------- | :----------------------------- |
+| Total merged unique records | **45,091**                                                       | L7-001 `merged_unique_records` |
+| Mac kept records            | 41,263                                                           | L7-001 `mac_kept_records`      |
+| Windows kept records        | 3,829                                                            | L7-001 `win_kept_records`      |
+| Sources covered             | 7 (claude-code, codex, cursor-agent, forge, droid, aider, other) | L7-001 `sources_scraped`       |
 
 ### 2.2 Repository bindings
 
-| Metric                          | Value         | Source |
-| :------------------------------ | :------------ | :----- |
-| Repos bound (L7-002 output)     | **108**       | L7-003 `l7_002_bound_count` |
-| Repos in registry canon         | 82            | L7-003 `registry_canon_count` |
-| Canon-not-bound (pre L7-003)    | 24            | L7-003 `metric_deltas` |
-| Canon-not-bound (post L7-003)   | **16**        | L7-003 `metric_deltas` |
-| Stubs rendered (L7-003 final)   | 8             | L7-003 final-pass delta |
+| Metric                                                                        | Value   | Source                        |
+| :---------------------------------------------------------------------------- | :------ | :---------------------------- |
+| Repos bound (L7-002 output)                                                   | **108** | L7-003 `l7_002_bound_count`   |
+| Repos in registry canon                                                       | 82      | L7-003 `registry_canon_count` |
+| Canon-not-bound (pre L7-003)                                                  | 24      | L7-003 `metric_deltas`        |
+| Canon-not-bound (post L7-003)                                                 | **16**  | L7-003 `metric_deltas`        |
+| Skeleton docs rendered (L7-003 final; renamed — original term quoted in §1.3) | 8       | L7-003 final-pass delta       |
 
 ### 2.3 File propagation
 
 Verified live (2026-06-18) via `find /Users/<REDACTED>/CodeProjects/Phenotype/repos -path "*/docs/intent/*.md" -not -path "*phenotype-registry*" ...` (and equivalent for boundary).
 
-| Location                                       | Intent | Boundary |
-| :--------------------------------------------- | -----: | -------: |
-| `phenotype-registry/docs/{intent,boundary}/` (registry itself) | 128 | 122 |
-| Monorepo (other repos, propagated)             | **181** | **107** |
-| **Total artifacts across fleet**               | **309** | **229** |
-| Delta vs 2026-06-19 snapshot (L7-003: 125 / 106) | +56 propagated intent | +1 propagated boundary |
+| Location                                                       |                Intent |               Boundary |
+| :------------------------------------------------------------- | --------------------: | ---------------------: |
+| `phenotype-registry/docs/{intent,boundary}/` (registry itself) |                   128 |                    122 |
+| Monorepo (other repos, propagated)                             |               **181** |                **107** |
+| **Total artifacts across fleet**                               |               **309** |                **229** |
+| Delta vs 2026-06-19 snapshot (L7-003: 125 / 106)               | +56 propagated intent | +1 propagated boundary |
 
 ### 2.4 Substrate
 
-| Layer                | L7-001 | L7-003 close |
-| :------------------- | :----: | :----------: |
-| Specs                | yes    | yes          |
-| Handbook             | yes    | yes          |
-| HexaKit              | yes    | yes          |
-| **Capability & Intent SSOT** | no | **yes (new)** |
+| Layer                        | L7-001 | L7-003 close  |
+| :--------------------------- | :----: | :-----------: |
+| Specs                        |  yes   |      yes      |
+| Handbook                     |  yes   |      yes      |
+| HexaKit                      |  yes   |      yes      |
+| **Capability & Intent SSOT** |   no   | **yes (new)** |
 
 ---
 
@@ -131,13 +141,14 @@ Verified via `https://api.github.com/repos/<REDACTED>/phenotype-registry/branche
 
 ### 3.1 Orphan branch — `chore/l7-001-contract-only-orphan-2026-06-17`
 
-| Field     | Value |
-| :-------- | :---- |
-| **SHA**   | `cef45570fac35f8cefbcae40e5f702fc1af5d9cd` |
-| Protected | false |
+| Field       | Value                                                                                    |
+| :---------- | :--------------------------------------------------------------------------------------- |
+| **SHA**     | `cef45570fac35f8cefbcae40e5f702fc1af5d9cd`                                               |
+| Protected   | false                                                                                    |
 | Tip message | `docs(worklog): L7-003 FINAL — orphan @ fcf30c3c LIVE w/ 8 stubs + PhenoDesign case-fix` |
 
 Local branch tip history (last 5, all on orphan):
+
 - `cef45570` — docs(worklog): L7-003 FINAL
 - `46e73eac` — fix(registry): add canonical PhenoDesign.md files
 - `63d46c65` — fix(registry): remove lowercase phenoDesign.md duplicates
@@ -146,20 +157,20 @@ Local branch tip history (last 5, all on orphan):
 
 ### 3.2 Main branch — `main`
 
-| Field     | Value |
-| :-------- | :---- |
-| **SHA**   | `65cca990b1aa5a6de3fbd93b52156db02efbce2a` |
+| Field       | Value                                                                                                                                                                  |
+| :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **SHA**     | `65cca990b1aa5a6de3fbd93b52156db02efbce2a`                                                                                                                             |
 | Tip message | `docs(registry): mark gw-* H9 smoke gates fixed (#198) — Update disposition notes after agentapi-plusplus#540/#541, cliproxyapi-plusplus#1031, and argis-extension...` |
 
 Local `main` HEAD: `ea31bc43` — `docs: LOCAL_WORKSTATION.md and H14-H17 hygiene ledger. (#174)` — **local is behind remote; the L7-003 work has not been pushed to `main`**.
 
-### 3.3 Local working tree (macbook)
+### 3.3 Local working tree (macbook, as-of 2026-06-18)
 
 `git status --short` shows 100+ `A docs/boundary/<repo>.md` entries — boundary files staged for a new commit. They are not yet committed and not yet pushed.
 
 ---
 
-## 4. Outstanding Human-Judgment Tasks
+## 4. Outstanding Human-Judgment Tasks (as-of 2026-06-18/19 — historical state)
 
 These require human review or coordinated pushes that the L7 sweep is explicitly not allowed to perform unattended.
 
@@ -167,7 +178,7 @@ These require human review or coordinated pushes that the L7 sweep is explicitly
 
 - **What:** Each `docs/intent/<repo>.md` has a placeholder `## Intent Statement` paragraph; each `docs/boundary/<repo>.md` has placeholder `## In Scope` / `## Out of Scope` lists. These need human-authored prose so they reflect intentional design, not auto-derived inference.
 - **Scope:** Per L7-003 2026-06-19 snapshot (`phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:99`): 108 intent + 108 boundary files. Per current `find` (2026-06-18): 128 + 122 = **250 files** total — the gap between 108 and 128 is the L7-003 final-pass stub wave (8 stubs) plus subsequent additions.
-- **Why human-only:** Intent + boundary are *commitments*, not data. Auto-rendering cannot tell the user what a repo is *for*; only the maintainer can.
+- **Why human-only:** Intent + boundary are _commitments_, not data. Auto-rendering cannot tell the user what a repo is _for_; only the maintainer can.
 - **Source:** L7-001 `next_steps` (`phenotype-registry/worklogs/L7-001-intent-boundary-curation-2026-06-17.json:71-72`), L7-003 `remaining` (`phenotype-registry/worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:99`).
 
 ### 4.2 Cherry-pick L7-003 onto `main`
@@ -184,7 +195,7 @@ These require human review or coordinated pushes that the L7 sweep is explicitly
 - **What:** Push the full `docs/curated-prompts/`, `docs/curated-plans/`, `docs/curated-responses/` corpus to remote. Estimated size: **3.2 GB** (45,091 records × ~70 KB markdown average).
 - **Trigger:** kilo task #144 left a placeholder to push `curated_corpus_3_2_gb` per the ADR-024 weekly cadence.
 - **Blockers / considerations:**
-  1. Git LFS tier (per ADR-027) — 3.2 GB is on-demand tier; needs `.gitattributes` LFS ruleset for the curated-*/**/*.md pattern
+  1. Git LFS tier (per ADR-027) — 3.2 GB is on-demand tier; needs `.gitattributes` LFS ruleset for the `docs/curated-*/**/*.md` pattern (the `docs/` prefix is required: `.gitattributes` patterns containing a slash are root-anchored, so a bare `curated-*/**/*.md` misses the actual corpus paths listed below)
   2. Push window: must be off-peak; a 3.2 GB push will block other git operations on this network
   3. Verification: the 3 directories (`docs/curated-prompts/`, `docs/curated-plans/`, `docs/curated-responses/`) are **currently empty in the registry repo** (verified via `ls`, 2026-06-18); the corpus lives in the worktree or has not yet been rendered into the registry
 - **Why human-only:** LFS tier decision, push scheduling, and corpus-vs-worktree reconciliation are governance calls.
@@ -199,7 +210,7 @@ These require human review or coordinated pushes that the L7 sweep is explicitly
 
 ---
 
-## 5. Next 3 Actionable Items
+## 5. Next 3 Actionable Items (as-of 2026-06-18/19 — historical state)
 
 In priority order. Each item is sized for the macbook (`device: macbook` per worklog v2.1).
 
@@ -231,7 +242,7 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
 - **Size:** 1-2 hours push time + 30 min setup
 - **Steps:**
   1. Confirm corpus exists in registry worktree: `find docs/curated-prompts docs/curated-plans docs/curated-responses -name "*.md" | wc -l` should approach 45,091 × 3 = ~135,000 files. **Currently 0** — corpus is not in the registry worktree; it lives elsewhere (likely in `phenotype-registry-curation-data` or a worktree).
-  2. Reconcile: decide whether corpus is shipped *into* the registry repo or *referenced from* the registry (L7-003 `open_questions` line 44 hints at the thin-wrapper pattern)
+  2. Reconcile: decide whether corpus is shipped _into_ the registry repo or _referenced from_ the registry (L7-003 `open_questions` line 44 hints at the thin-wrapper pattern)
   3. Apply `.gitattributes` LFS ruleset per ADR-027 tier 2 (on-demand) for `docs/curated-*/**/*.md`
   4. `git add docs/curated-* && git commit -m "feat(registry): ship 3.2GB curated corpus (45,091 records × {prompts,plans,responses})"`
   5. `git config lfs.allowincompletepush=true && git push origin main --no-verify` (per ADR-027 tier 2 strategy)
@@ -241,13 +252,29 @@ In priority order. Each item is sized for the macbook (`device: macbook` per wor
 
 ---
 
-## 6. Notes & Caveats
+## 6. Notes & Caveats (as-of 2026-06-18/19 — historical state)
 
 - **L7-002 worklog file is missing on disk.** Only L7-001 and L7-003 are present in `phenotype-registry/worklogs/`. The L7-002 state in this report is reconstructed from cross-references in the other two worklogs. Author should recreate `worklogs/L7-002-collision-resolution-2026-06-18.json` from git history (`git log chore/l7-001-contract-only-orphan-2026-06-17 -- docs/curated-*` around `f5b6d7d6`).
 - **Local main is behind remote main.** Local HEAD `ea31bc43` (PR #174); remote HEAD `65cca990` (PR #198). Pull or rebase before any `main` push.
 - **Working tree has uncommitted boundary files.** 100+ `A docs/boundary/<repo>.md` entries are staged. These are likely the L7-002 collision-resolution wave that was not committed before the L7-003 worktree shift. Either commit and push on the orphan branch, or `git restore --staged docs/boundary/` if they are duplicates.
 - **Subagent model in effect.** Per L7-003 2026-06-19 status block: "manager delegates work to task/forge subagents, audits only". This report is consistent with that model — synthesis only, no code edits, no pushes.
-- **This report is not committed and not pushed.** It is a synthesis artifact for the user.
+- **Imperative items (§4, §5):** written at authoring time against June
+  SHAs; re-derive every step against current SHAs before acting — in
+  particular the §5 Item 1 cherry-pick range is keyed to two June commits
+  that no longer describe the repo's divergence. §1.4 is a labelled
+  snapshot block and is likewise historical.
+- **Commit/push state:** at authoring time this report was not committed or
+  pushed (a synthesis artifact for the user); it was later committed as an
+  archival snapshot under the retention decision in the banner. The §3 branch
+  SHAs and the local-tree caveats in this section reflect **2026-06-18/19**
+  state, not the present.
+- **Date basis for §2.3:** the delta row compares figures verified
+  2026-06-18 against the L7-003 snapshot labeled 2026-06-19 — an embedded
+  block preserved verbatim in §1.4 (first recorded `437180c6`; last-link:
+  `worklogs/L7-003-ecosystem-reconciliation-2026-06-18.json:65-98` backs
+  orphan SHA + subagents only — provenance note in §1.4). The row
+  prints the baseline's date; both dates coexist in the original record and
+  are not reconciled here.
 
 ---
 
