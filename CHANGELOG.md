@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.7](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.6...v1.2.7) (2026-10-02)
+
+
+### Bug Fixes
+
+* **ci:** treat deleted as terminal and enforce the L5-114 re-audit ([67d0596](https://github.com/KooshaPari/PhenoRegistry/commit/67d05966113d64b0aacee4fae57934ae6dc5aa95))
+
 ## [1.2.6](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.5...v1.2.6) (2026-10-02)
 
 
