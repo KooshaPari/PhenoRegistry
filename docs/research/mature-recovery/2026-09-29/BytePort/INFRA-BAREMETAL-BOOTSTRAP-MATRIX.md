@@ -1,6 +1,6 @@
-# BytePort infrastructure / bare-metal bootstrap matrix — v0.1
+# BytePort infrastructure / bare-metal bootstrap matrix — v0.2
 
-Date: 2026-09-30.
+Date: 2026-10-02.
 Scope: generalized repository+manifest → heterogeneous infrastructure lifecycle.
 
 | System | Strong primitives | Constraints / risks | BytePort decision |
@@ -67,3 +67,100 @@ BytePort references provider/config receipts rather than copying their internal 
 - integration code required.
 
 No provider winner is frozen before this experiment.
+
+
+## 2026-10-02 current-docs evidence update
+
+### Ironic standalone
+
+Current Ironic documentation continues to support direct standalone operation without Nova/Keystone/Neutron/Glance. Standalone automation can drive the Bare Metal API directly; authentication can be noauth or HTTP Basic, and current deployment-scenario guidance also documents JSON-RPC as an option to avoid a full message-queue dependency. Ironic retains the strongest explicit bare-metal state machine of the candidates: enrollment/preparation, allocation, deploy/undeploy, rescue, servicing, and driver-specific BMC control.
+
+Implication for BytePort:
+- strongest candidate for an exact provider-state / exact host-identity adapter;
+- BytePort should reference Ironic node/allocation/provision state rather than copy its internal state machine;
+- standalone mode is suitable for a disposable adapter experiment without making OpenStack itself part of BytePort identity.
+
+Sources:
+- https://docs.openstack.org/ironic/latest/install/standalone.html
+- https://docs.openstack.org/ironic/latest/install/deployment-scenarios.html
+- https://docs.openstack.org/ironic/2026.2/user/index.html
+
+### Bifrost
+
+Current Bifrost documentation still positions it as Ansible automation for installing standalone Ironic and deploying base images to known hardware. This reinforces the earlier boundary: Bifrost is an excellent **bootstrap/test harness** for an Ironic adapter, but it should not become BytePort's target lifecycle abstraction.
+
+Source:
+- https://docs.openstack.org/bifrost/2026.1/
+
+### MAAS
+
+Current MAAS documentation makes its lifecycle semantics more compelling than the earlier shorthand suggested:
+
+- commissioning discovers and validates hardware and transitions a machine toward Ready;
+- allocation reserves a machine so another process cannot deploy it concurrently;
+- deploy installs the selected OS/configuration;
+- machine identity is exposed as a stable `system_id`;
+- observation includes machine status/power state and optional deployed-hardware synchronization;
+- release returns the machine to the pool and may perform explicit disk erase.
+
+Implication for BytePort:
+- MAAS is a serious adapter candidate, not merely an operationally easier Ironic alternative;
+- its explicit allocation boundary maps well to BytePort operation/admission identity;
+- release/erase must remain an exact destructive action and cannot be inferred from desired-state absence;
+- integrated networking/storage/inventory may reduce BytePort hand-rolling, but BytePort must avoid inheriting MAAS's whole control-plane identity.
+
+Sources:
+- https://canonical.com/maas/docs/latest/explanation/commissioning-machines/
+- https://canonical.com/maas/docs/latest/explanation/deploying-machines/
+- https://canonical.com/maas/docs/latest/how-to-guides/manage-machines/
+- https://canonical.com/maas/docs/latest/reference/cli-reference/machine/
+- https://canonical.com/maas/docs/latest/reference/api-reference/api-v2-generated/
+
+### Tinkerbell
+
+Current Tinkerbell documentation models a Workflow as a Kubernetes CRD combining a Hardware reference with a Template reference plus a hardware map. That is attractive for custom provisioning workflows and explicit hardware-template binding, but it also means BytePort would be adopting a Kubernetes/controller-shaped provider surface.
+
+Implication for BytePort:
+- retain as the strongest workflow-flexibility comparator;
+- explicitly test how stable hardware identity, restart reconciliation, workflow status, and cleanup behave;
+- do not let Workflow/Template CRDs become BytePort's canonical product graph.
+
+Source:
+- https://tinkerbell.org/docs/v0.22/concepts/workflows/
+
+### Crossplane lifecycle lesson retained
+
+Current Crossplane managed-resource documentation still separates Observe/Create/Update/Delete/LateInitialize policies and explicitly avoids automatically deleting/recreating an external resource merely because an immutable field changes. This supports BytePort's current design:
+- observation and mutation authority are separate;
+- replacement is an explicit action;
+- desired-state drift alone does not authorize destruction.
+
+Source:
+- https://docs.crossplane.io/latest/managed-resources/managed-resources/
+
+## B09 executable evaluation order
+
+The research-only ordering remains:
+
+1. **Ironic standalone bootstrapped with Bifrost**
+2. **MAAS**
+3. **Tinkerbell**
+
+But this is an experiment order, not a frozen provider winner.
+
+For each candidate, the disposable fixture must prove the same BytePort-owned contract:
+
+`discover/adopt exact host -> capabilities -> provision -> observe -> restart/reconcile -> immutable-change behavior -> exact authorized release/undeploy/destroy`
+
+Required evidence for comparison:
+- exact provider host/resource identifier survives restart;
+- ambiguous create/provision outcome does not duplicate provisioning;
+- stale/unknown observation cannot trigger cleanup;
+- provider lifecycle state is referenced, not copied as BytePort authority;
+- destructive release/undeploy requires explicit exact identity;
+- provider restart/controller restart does not lose operation reconciliation;
+- clean/erase semantics are separately visible from ordinary release;
+- target capability gaps remain explicit rather than emulated silently;
+- disposable VM or nested-virtualization fixture is reproducible enough for CI/lab automation.
+
+The first implementation experiment should therefore remain **Ironic standalone + Bifrost**, with MAAS immediately behind it as the operational/integrated-control-plane comparator.
