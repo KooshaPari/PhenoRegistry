@@ -75,8 +75,11 @@ jobs:
                         block-c-phenotype-water block-c-phenotype-postfx; do
             fsm=$(jq -r --arg id "$row_id" \
               '.rows[] | select(.id == $id) | .fsm' "$REGISTRY")
-            if [ "$fsm" = "archived" ]; then
-              status="ok_archived"
+            # archived and deleted both pass: water is `deleted` by deliberate
+            # commit ea3e28d2 (2026-07-18), all four source repos are 404 today,
+            # and `deleted` is a terminal fsm; any other value still fails.
+            if [ "$fsm" = "archived" ] || [ "$fsm" = "deleted" ]; then
+              status="ok_${fsm}"
             else
               status="FAIL_${fsm:-missing}"
             fi
@@ -117,6 +120,40 @@ jobs:
           # upload-artifact step and the failure handler via step output.
           echo "filename=$FILENAME" >> "$GITHUB_OUTPUT"
           echo "$REPORT" | jq .
+
+      - name: Fail the job if any audit entry has FAIL status
+        if: always()
+        run: |
+          set -euo pipefail
+          # auth_required (the HTTP 401/403 case) stays recorded but does not
+          # fail the job: an unknown auth state is not a confirmed regression.
+          # Only FAIL_ statuses, and files that should exist but do not, fail.
+          scan () {
+            local f="$1"
+            if [ ! -r "$f" ]; then
+              echo "::error::expected audit file $f is missing or unreadable; treated as absent, never as success"
+              return 1
+            fi
+            if ! jq -e 'type == "array"' "$f" >/dev/null 2>&1; then
+              echo "::error::audit file $f is unreadable or is not a JSON array; treated as absent, never as success"
+              return 1
+            fi
+            local failing
+            failing=$(jq '[.[] | select((.status // "") | startswith("FAIL_"))] | length' "$f")
+            if [ "$failing" -gt 0 ]; then
+              jq -r --arg f "$f" \
+                '.[] | select((.status // "") | startswith("FAIL_")) | "::error::L5-114 re-audit FAIL entry in \($f): \(tojson)"' "$f"
+              return 1
+            fi
+            return 0
+          }
+          rc=0
+          scan audit-sources.json || rc=1
+          scan audit-registry.json || rc=1
+          if [ "$rc" -ne 0 ]; then
+            exit 1
+          fi
+          echo "audit enforcement: zero FAIL_ entries in both audit files"
 
       - name: Upload audit artifact
         if: always()
