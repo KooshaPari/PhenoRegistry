@@ -198,9 +198,13 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "SEMANTIC_PLUS_NATIVE_AUTHORITIES_REGRADING",
-      "head": "e236d7fd4a51706ed1e785326a9234ccc988679c",
-      "note": "prior GTK compile green withdrawn: tee masked nonzero; new gate uses pipefail + native prerequisites",
+      "status": "FOURTH_PARSER_DEFECT_FIXED_NATIVE_SETUP_REPAIRED_REGRADING",
+      "head": "7b88fd8f020ffa73f94e393ed964e668c5d39699",
+      "prior_run": 36990531615,
+      "findings": [
+        "raw newline in pane.write CRLF harness fragment",
+        "Ubuntu runner lacks libgtk4-layer-shell-dev package"
+      ],
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -227,11 +231,19 @@
   },
   "melosviz": {
     "m_e02": {
-      "status": "CANDIDATE_GATES_GREEN_HELD_OUT_CACHE_TRUTH_REGRADING",
-      "current_candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
+      "status": "ACCEPTED_EXPERIMENTAL_STRUCTURAL",
+      "candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
+      "contract": 36990193075,
+      "ci": 36990193090,
+      "studio": 36990193121,
+      "held_out": 36990563759,
       "reviewer": "c15ad7b9b24a3cb8c9d7a69c7b96c1a7322f118f",
-      "acceptance": false,
-      "note": "reviewer now persists red receipts rather than losing evidence on assertion"
+      "receipt_digest": "sha256:290145496dc60ad3c3aa24bde8674b6ea8562e26c24253ec561ed1437f675aec",
+      "limits": [
+        "not generative qualification",
+        "not artistic acceptance",
+        "not live qualification"
+      ]
     },
     "durable_ledger_experiment": {
       "status": "EXPERIMENTALLY_ACCEPTED_FEASIBILITY_SLICE",
@@ -248,10 +260,10 @@
       "caveat": "runner workflow belongs to M-E03 candidate; not full independent authority"
     },
     "m_e03": {
-      "status": "LEDGER_SEAM_GREEN_CROSS_AUTHORITY_REBOUND_REGRADING",
-      "head": "8e1171126cd5d6e1f13ad5a4d8691751d749cbf7",
-      "candidate": "9bf917ed10b125edcfb81600ecdd4549a503357c",
-      "reviewer": "c15ad7b9b24a3cb8c9d7a69c7b96c1a7322f118f"
+      "status": "REAL_REVIEWER_RECEIPT_RESTART_PROMOTION_WITNESS_ACTIVE",
+      "head": "9ff96e3da378de3deec097b4d7ac1dedb740d4e2",
+      "last_green_run": 36990563759,
+      "scope": "pinned held-out receipt must replay after ledger restart into exact candidate+R2+scene+final acceptance"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
