@@ -201,3 +201,36 @@ It is intentionally not wired into `/deploy`. The adapter:
 - represents missing provider observation as non-fresh UNKNOWN.
 
 This is a candidate production-adapter boundary under fixture qualification, not production-provider acceptance.
+
+
+## Runtime qualification advance — 2026-10-02
+
+### ShareCLI
+
+On exact candidate `fe05a23dcf2b655dbb307a0982508fcc0dad5de5`, mature-recovery run `36990039958` executed both newly added real runtime oracles successfully:
+
+- `planned_dependency_ready_work_reaches_real_hypervisor_execution`: PASS;
+- `unknown_resource_demand_never_reaches_spawn`: PASS;
+- `native_jobserver_token_and_child_propagation_compose_with_hypervisor`: PASS.
+
+The job then failed in the native memory-pressure fixture because a child exited between `poll()` and reading `/proc/<pid>/status`. The collector raised `VmRSS unavailable`; this is a measurement race, not an envelope counterexample.
+
+The sampler now returns an explicit no-sample result only when `/proc/<pid>` disappeared after the process-exit race; a live process without `VmRSS` still fails. Missing observation is not converted into zero.
+
+Additional next-gate work now on branch:
+
+- externally inherited GNU-make jobserver oracle (`make -j2` owns the provider);
+- same-workload benchmark records naive/FIFO/fit-scan makespan, envelope violations, completion, and planner item-check cost without inventing an optimality threshold.
+
+### BytePort
+
+The non-live NanoVMS adapter recovery oracle passed on candidate `e17b4c0cf4f251e342e75d8e9ee133dd0b34d690`, alongside the already-green recovery contract/build/artifact chains.
+
+A follow-up delayed-visibility fixture now models:
+
+1. exactly one NanoVMS CREATE;
+2. first observation not yet visible => non-fresh UNKNOWN;
+3. later observation converges to the same sandbox identity;
+4. deploy count remains exactly one.
+
+This is still fake-transport/provider-adapter evidence. Production `/deploy` remains untouched.
