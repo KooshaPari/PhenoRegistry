@@ -198,9 +198,9 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "FRAME_DELIMITER_LITERALS_FIXED_NATIVE_ENV_STILL_BLOCKED",
-      "head": "69b87749211a36fff7daf0acaf00139e15626152",
-      "prior_run": 37039707831,
+      "status": "TRANSPORT_LITERALS_FIXED_NATIVE_PREREQ_BUILD_HARDENED_REGRADING",
+      "head": "da83134fabc5a9616b5144fdf40836648326a791",
+      "prior_run": 37052466159,
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -269,14 +269,14 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "GENERATE_WRITE_THROUGH_RESTART_TRUTH_ACTIVE",
-      "head": "5ee234e48b1fffa92a9212a7fe7b314d82b5c214",
-      "last_green": {
-        "m_e03": 37037958871,
-        "studio": 37037958528,
-        "ci": 37037958488
+      "status": "WRITE_THROUGH_GREEN_EXCEPT_PREEXISTING_BRIDGE_NEWLINE_SYNTAX_REPAIRED_REGRADING",
+      "head": "239d17c634d46b513ef86c7c0f7be879f283b795",
+      "last_grade": {
+        "m_e03": 37059232210,
+        "ci": 37059232381,
+        "studio": 37059232310
       },
-      "scope": "bridge generate persists candidate-bound revision/attempt; later status request reopens and recovers truth"
+      "detail": "M-E03 + CI green; studio import exposed metrics raw-newline syntax defect; repaired"
     }
   }
 }
