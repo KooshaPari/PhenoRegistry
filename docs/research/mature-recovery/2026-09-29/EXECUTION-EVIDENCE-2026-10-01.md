@@ -141,3 +141,32 @@ After the exact candidate oracle either executes or terminates, the product repo
 6. repair BytePort `mature-recovery-contract.yml` syntax before relying on it.
 
 No product head is being advanced solely to perform this cleanup while exact qualification runs remain pending.
+
+
+## Qualification update — 2026-10-02
+
+### BytePort exact green
+
+Exact recovery oracle run `36927029714` completed **SUCCESS** on candidate `a9b0749b3146400934b09237ab625d0952692ae4`.
+
+Successful jobs include B03 source/manifest, A07 generalized infrastructure graph, B08 reconciliation reference/provider-fixture execution, B01 exact provider stop, B02 journal/reconciliation, operation-journal model, duplicate-deploy/persistence probes, and session expiry.
+
+Machine work-package state was updated so:
+
+- B03 is qualified for immutable source + strict manifest + inert BUILD/ENV graph projection;
+- A07 is qualified;
+- B08 is qualified at **reference + provider-fixture** level only.
+
+This does **not** qualify production provider adapters, production destructive execution, or unresolved network/security authority.
+
+The previously broken `mature-recovery-contract.yml` A07 command has now been repaired on the post-qualification branch head.
+
+### ShareCLI exact failure and repair
+
+Run `36926431574` completed with ordinary Rust/lint/test gates green, but mature-recovery qualification failed **before Rust recovery tests executed** because `validate_work_packages.py` rejected missing `critical` lists on SC-WP-B01 through SC-WP-B04.
+
+This was machine-contract/schema drift, not a B05/B06 scheduler failure.
+
+The four Tier-B packages now have substantive `critical` invariant lists on candidate `653f3d37f03a5a758869791c020f394f9d1f71e6`. New CI run `36981940615` is active; mature-recovery job `110758197550` is queued.
+
+The same older ShareCLI run also showed a separate Cargo Deny source-policy failure: exact-revision PhenoInfra git dependencies are present while `deny.toml` disallows git sources. This is classified separately from mature-recovery qualification and has not been weakened as part of scheduler recovery.
