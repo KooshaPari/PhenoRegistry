@@ -3,10 +3,10 @@ repo: "PhenoApps"
 aliases: ["phenotype-apps", "PhenotypeApps"]
 role: application-parent
 status: active
-last_boundary_review: 2026-09-27
+last_boundary_review: 2026-10-01
 review_cadence: 30d
 in_scope:
-  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row); testing-kit (row id=912 target `apps/testing-kit/`) held out of this entry pending row/card reconciliation — not classified in or out until then; see `## Unresolved scope (non-gating)`"
+  - "apps/<name> BLOCK-A application children with lift provenance — required per disposition rows: conft (repo-Conft live), apisync (batch4 live + ABSORB), tracera (id=922: disposition TOO_LARGE_RETIRE + fsm live — both fields stated), tracely (id=59/918 deleted — target-of-record), subject (FINAL-subject-app archived 2026-07-18). Excluded: helios-app (no apps/* row; heliosApp id=904 TOO_INCOMPLETE -> _retire/ + boundary/heliosApp.md TOO_LARGE_RETIRE do-not-absorb), datakit voided, planify rejected, melosviz (card: independent; FINAL-Melosviz fsm archived, target phenotype-apps (apps/melosviz)), phenoData (row exists: repo-phenoData fsm live, target pheno (crates/pheno-data-*), cited artifact phenoData-2026-07-17.md absent — no apps/phenoData-targeted row)"
   - "archive/ retirement shelf (pivot-tree contents: FocalPoint only; PhenoInfra has no disposition row; live gh api probe 2026-09-27 reports archived: true (no in-repo record otherwise); shelf branches main-focalpoint-archive + apps-extract deleted 2026-09-27 — current home unresolved, see cvp gate)"
   - "application-collection policy enforcement per card absorption_note (child boundaries, no spine absorption)"
   - "preservation chain (recovery/phenotype-apps-local-20260726 + gap-cohort audit artifact)"
@@ -15,7 +15,7 @@ out_of_scope:
   - "Planify upstream/ AGPL subtree (verbatim fork, DO NOT MODIFY)"
   - "row id=901 = superseded classification of this same repo (KooshaPari/phenotype-apps, 1.7GB; disposition B:WORKING / fsm archived; note: TOO_INCOMPLETE_RETIRE 2026-07-17, resolved 2026-07-18) — evidence for the sunset-shelf question, out of in-scope contract"
   - "archived source repos' lifecycle (archive/delete happens at the source repo)"
-  # testing-kit: not an out_of_scope entry — unresolved row/card conflict; see `## Unresolved scope (non-gating)` below (pointer; canonical entry is `in_scope[0]`)
+  # testing-kit (row id=912 target `apps/testing-kit/`): not classified in or out — unresolved row/card conflict; see `## Unresolved scope (non-gating)` below
 ---
 
 # Boundary — PhenoApps
@@ -111,4 +111,30 @@ disposition-index absorption rows.
   pivot commits return HTTP 422 — the evidence stands as a pre-deletion
   capture; the gate remains open with branch restoration as blocker (1).
 
-**Next review:** 2026-10-27
+**Date:** 2026-10-01
+**Reviewer:** jcode agent (PHENOREG-FORWARD-WBS, PR #598 `8e64c8e6`)
+**Worklog / finding:** kilo round-12 thread `PRRT_kwDOR5eICc6oFRcM` (posted on
+PR #586 after its merge): the `testing-kit` clause was added to `in_scope[0]` by
+#586's squash `2cf6902` (and carved out of `out_of_scope` there), then dropped
+from `in_scope[0]` by this PR's `8e64c8e6` with no record in this file's review
+metadata, so a future reviewer cannot tell the removal from an accidental drop.
+**Decisions:**
+
+- `testing-kit` (row id=912 target `apps/testing-kit/`) removed from
+  `in_scope[0]` membership **deliberately**: a YAML sequence item asserts
+  in-scope no matter how its scalar ends, contradicting the prose's "neither
+  in scope nor out of scope until the row/card conflict is reconciled" hold.
+  The no-verdict pointer now lives only in the `#`-comment beside the lists
+  and the `## Unresolved scope (non-gating)` section.
+- Validator evidence widened: `tools/check-ecosystem.ts` (1,223 lines) and
+  `scripts/validate-ecosystem.sh` (315 lines) contain no `testing-kit` and no
+  `in_scope` reference. The only other `in_scope` hits under `scripts/` are
+  writer-side dict keys in `scripts/fill-intent-stubs.py` (`:13-73`, consumed at
+  `:111`) — prose defaults rendered for newly created files, not readers of
+  `docs/boundary/*.md` frontmatter. No tooling requires the membership entry,
+  so removal changes prose contract only.
+- Mirrors the per-round `## Change Log` pattern in `docs/cvp/PhenoApps.md:246`;
+  this round's row is appended at `docs/cvp/PhenoApps.md:257` so the mirror is
+  two-sided.
+
+**Next review:** 2026-10-31
