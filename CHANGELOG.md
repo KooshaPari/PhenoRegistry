@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.5](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.4...v1.2.5) (2026-10-02)
+
+
+### Bug Fixes
+
+* **ci:** make the L5-114 re-audit report filename safe and shared ([c614542](https://github.com/KooshaPari/PhenoRegistry/commit/c614542178189154feebeef9b21df89eb34561ae))
+* **ci:** rewrite ratchet/verify-attestation as valid workflow YAML ([150c381](https://github.com/KooshaPari/PhenoRegistry/commit/150c381f82823396f5a9da9f6fd9ac03f01d31b0))
+
 ## [1.2.4](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.3...v1.2.4) (2026-10-02)
 
 
