@@ -285,3 +285,54 @@ Latest observed queue pressure:
 The GitHub connector exposes rerun operations but no cancel-workflow-run action, so stale-run queue cleanup cannot be performed directly from this session without modifying workflow concurrency behavior and thereby advancing/cancelling the exact product candidates.
 
 Both product heads are therefore intentionally frozen until the registered exact recovery runs execute.
+
+
+## Deep execution hardening — 2026-10-02 afternoon CEST
+
+### ShareCLI
+
+The current recovery branch now includes a substantially tighter B05 execution chain:
+
+- both dedicated recovery workflow files were repaired so Rust module filters containing `::` are valid YAML scalars;
+- the in-flight-vs-durable native oracle's embedded shell quoting compile failure was repaired;
+- reference scheduling and execution-time admission now agree that non-finite or negative CPU/I/O values are invalid rather than schedulable;
+- all six scalar resource dimensions participate in unknown-resource semantics;
+- Linux PSI rejects NaN, infinite and negative pressure averages;
+- the B05 plan-to-Hypervisor vertical now executes admitted placements through `ResourceAdmissionPool`, not plain `run_queued`;
+- a stale plan that fit an older envelope is rechecked against the current runtime envelope and cannot spawn if current capacity is tighter;
+- admission arithmetic rejects positive float increments that cannot be represented without losing accounting precision;
+- lease release recomputes aggregate usage from surviving reservations instead of subtracting floating-point snapshots;
+- blank WorkItem identity is rejected before reservation;
+- `CI Success Gate` already depends on mature-recovery qualification, preventing aggregate false-green when the recovery job is red.
+
+These are candidate semantics pending exact current-head CI; they are not promoted merely because the code exists.
+
+### BytePort
+
+The current B08 candidate now adds production-route and generalized-executor safety beyond the previously qualified provider fixture:
+
+- legacy `/deploy` keeps a successful-but-malformed NanoVMS response in UNKNOWN rather than leaving ambiguous state as ordinary progress;
+- HTTP success without sandbox identity remains UNKNOWN and cannot persist a fake realized project;
+- all realized identities for a generalized plan are preflighted before the first provider mutation;
+- execution receipts distinguish `Attempted` from `Applied`;
+- provider UNKNOWN is attempted but not applied;
+- a dependent resource cannot mutate while its prerequisite remains unresolved/UNKNOWN;
+- a later provider failure returns the earlier execution history rather than discarding it;
+- one explicit reconciliation root operation deterministically derives a distinct stable operation identity per provider mutation, avoiding multi-resource idempotency collisions.
+
+The B08 oracle now selects adversarial tests for malformed provider success, dependency blocking, partial receipts, preflight identity safety and per-mutation operation identity.
+
+### PhenoRegistry collector repairs
+
+Supporting registry tooling was repaired without changing product acceptance:
+
+- PR title changed from unsupported `research:` to Conventional Commit-compatible `docs(recovery):`;
+- Gitleaks workflow now receives the required Actions token;
+- benchmark workflow no longer passes the unsupported stable-Rust `--output-format bencher` flag;
+- benchmark comparison now uses a shell heredoc Python parser and understands standard libtest benchmark output.
+
+The happy-path-collapse guard still reports substantive/heuristic failures in mature-recovery research prose. Those failures have not been disabled or reclassified as green.
+
+### Current evidence status
+
+The new ShareCLI and BytePort exact recovery workflows are registered but waiting on GitHub runner allocation. Pending/queued state remains non-evidence.
