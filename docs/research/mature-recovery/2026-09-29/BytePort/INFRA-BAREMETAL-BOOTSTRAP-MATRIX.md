@@ -164,3 +164,90 @@ Required evidence for comparison:
 - disposable VM or nested-virtualization fixture is reproducible enough for CI/lab automation.
 
 The first implementation experiment should therefore remain **Ironic standalone + Bifrost**, with MAAS immediately behind it as the operational/integrated-control-plane comparator.
+
+
+## B09 executable experiment contract — Ironic + Bifrost testenv
+
+Current Bifrost documentation provides a concrete disposable VM route suitable for BytePort's first B09 adapter experiment:
+
+1. create virtual bare-metal nodes with `bifrost-cli testenv`;
+2. install standalone Ironic into the test environment with `bifrost-cli install --testenv`;
+3. select an emulated BMC path:
+   - IPMI via VirtualBMC; or
+   - Redfish via sushy-tools;
+4. enroll the generated node inventory;
+5. drive provisioning through Ironic/Bare Metal API identity;
+6. verify the node reaches an explicit `active` provision state;
+7. restart the BytePort adapter/control process and re-observe the same node;
+8. reconcile without provisioning a second machine;
+9. undeploy/unprovision the exact node;
+10. delete the test node and destroy the libvirt test environment.
+
+Bifrost's own local CI/test flow already creates VMs, provisions them, connects to them, unprovisions them, and deletes them from Ironic. This makes it a strong substrate for a BytePort adapter fixture rather than a hypothetical integration.
+
+### Required BytePort identities
+
+The experiment must persist and distinguish:
+
+- BytePort `RuntimeOperationID`;
+- BytePort desired host/resource ID;
+- Ironic node UUID;
+- provider allocation/provision operation identity where exposed;
+- libvirt test-VM identity only as fixture infrastructure, never as product resource identity;
+- observed provision state + timestamp/freshness;
+- image/artifact identity used for deploy;
+- exact destruction/undeploy intent.
+
+### Required counterexamples
+
+The fixture is not green unless it demonstrates:
+
+1. **lost deploy response**
+   - provider mutation may have succeeded;
+   - BytePort records UNKNOWN/reconciling;
+   - restart observes the existing Ironic node;
+   - no second deploy is issued.
+
+2. **delayed provider visibility**
+   - first observation may be incomplete;
+   - absence/unknown does not authorize a second provision or cleanup.
+
+3. **wrong node identity**
+   - a valid Ironic node UUID belonging to another desired resource cannot satisfy the operation.
+
+4. **immutable-image change**
+   - provider capability determines replace/redeploy behavior;
+   - BytePort must not invent in-place UPDATE.
+
+5. **undeploy without explicit intent**
+   - desired absence by itself cannot undeploy/release the node.
+
+6. **exact authorized undeploy**
+   - explicit destruction intent + exact desired/realized/provider identity performs one undeploy.
+
+7. **controller restart**
+   - BytePort process restart during deployment retains sufficient operation/provider identity to reconcile.
+
+8. **BMC driver parity**
+   - run the same core identity/reconciliation checks with VirtualBMC/IPMI and sushy-tools/Redfish where practical;
+   - driver-specific capability differences remain explicit.
+
+### Fixture resource expectations
+
+Current Bifrost troubleshooting guidance says test VMs are typically about 1 vCPU, ~3 GB RAM and ~11 GB virtual storage each. Current 2026.1 release notes also note increased test-VM memory requirements due to larger DIB-based IPA ramdisks. The first BytePort experiment should therefore use **one disposable VM**, not a multi-node cluster, until the lifecycle semantics are proven.
+
+Sources:
+- https://docs.openstack.org/bifrost/latest/contributor/testenv.html
+- https://docs.openstack.org/bifrost/latest/install/index.html
+- https://docs.openstack.org/releasenotes/bifrost/2026.1.html
+
+## Tinkerbell disposable comparator note
+
+Tinkerbell also has a current Vagrant/libvirt playground that provisions an Ubuntu VM and supports full cleanup with `vagrant destroy`. Its Workflow state exposes PREPARING/PENDING/RUNNING/POST and terminal SUCCESS/FAILED/TIMEOUT states, making it suitable for the *same* ambiguity/restart comparison after Ironic/MAAS.
+
+The key distinction is architectural: Tinkerbell binds Hardware + Template in a Workflow CRD and requires its Kubernetes-shaped control plane (although current docs also describe an embedded standalone binary). That should be measured as provider footprint, not treated as a disqualifier by assumption.
+
+Sources:
+- https://tinkerbell.org/docs/v0.22/setup/getting_started/
+- https://tinkerbell.org/docs/v0.22/concepts/workflows/
+- https://tinkerbell.org/docs/v0.22/setup/install/
