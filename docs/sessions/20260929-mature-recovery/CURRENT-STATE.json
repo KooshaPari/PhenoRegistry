@@ -1,0 +1,20 @@
+{
+  "schema": "recovery-registry-pass/1",
+  "pass_id": "REC-20260929-TRIO-01",
+  "observed_on": "2026-09-29",
+  "registry_source": "85d7cd00cf59c379c05b740e8130a85b0d5bd31b",
+  "registry_branch": "research/mature-recovery-trio-20260929",
+  "supporting_dependency_refs": {"KooshaPari/PhenoShared": {"sha": "d24b13edbb76741b8063f4f7f3369d1b7310ca5b", "extent": "REF_ONLY"}},
+  "authorized_product_count": 3,
+  "additional_product_programs": false,
+  "products": [
+    {"repository": "KooshaPari/Portage", "id": 1165351720, "source": "7593f02f9b370edbbbf447d44c17645db3d19316", "specification_commit": "e0b3f7121f9fbba7ce16596a6fa22f7bd0aa746c", "draft_pr": 579, "status": "INCOMPLETE_BLOCKED", "accepted_contract": null, "completion_percent": null, "source_denominator": "OPEN", "sota": "PASS_1_ONLY", "independent_review": "NOT_RUN"},
+    {"repository": "KooshaPari/PhenoMLX", "id": 1214745478, "source": "1ab4ed250e6b3a1ed9025a674d4814339d32fcd3", "specification_commit": "6ce6eff8b5274054c047f9bf3bab3c9cd060d063", "draft_pr": 233, "status": "INCOMPLETE_BLOCKED", "accepted_contract": null, "completion_percent": null, "source_denominator": "OPEN", "sota": "PASS_1_ONLY", "independent_review": "NOT_RUN"},
+    {"repository": "KooshaPari/PhenoLab", "id": 1269695199, "source": "cb8d4abd329526f8fab2419c695ed00520c373b4", "specification_commit": "264e4965e496d9ee98c5656a57b590185b5cae5d", "draft_pr": 184, "status": "INCOMPLETE_BLOCKED", "accepted_contract": null, "completion_percent": null, "source_denominator": "OPEN", "sota": "PASS_1_ONLY", "independent_review": "NOT_RUN"}
+  ],
+  "evidence_policy": {"missing_is_green": false, "skipped_is_green": false, "collector_failure_is_green": false, "wrong_candidate_is_green": false, "generated_catalog_eligible": false, "fragment_probe_is_native_test": false},
+  "registry_repo_semantic_agreement": "OPEN",
+  "post_build_pilot": "NOT_RUN",
+  "production_changes": false,
+  "merges": false
+}
