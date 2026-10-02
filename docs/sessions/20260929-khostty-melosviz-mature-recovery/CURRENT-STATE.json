@@ -198,11 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "ALL_DISCOVERED_RAW_NEWLINE_HARNESS_DEFECTS_FIXED_REGRADING",
-      "head": "0a4d99783308db72d66568cd4efb19028c5e9e84",
-      "run": 36995559605,
-      "source_scan": "zero backslash+physical-newline sequences",
-      "mount": "blocked"
+      "status": "NATIVE_AND_HARNESS_REPAIRS_REGRADING",
+      "head": "86d7b5f0d5313a0fd33a03324ea1dec37025ab2b",
+      "prior_run": 36999910839,
+      "mount": "blocked pending exact green"
     },
     "windows_comparators": {
       "status": "EXPANDED_SOURCE_RESEARCH",
@@ -257,12 +256,13 @@
       "caveat": "runner workflow belongs to M-E03 candidate; not full independent authority"
     },
     "m_e03": {
-      "status": "REAL_RECEIPT_REPLAY_WORKFLOW_PATH_FIXED_REGRADING",
-      "pr": 305,
+      "status": "ACCEPTED_EXPERIMENTAL_DURABLE_STRUCTURAL_CHAIN",
       "head": "dfa42862e4a49863d4fb32183b0f2dbfb8c16493",
-      "prior_run": 36993999779,
-      "prior_result": "reviewer PASS; receipt present; replay tool path wrong",
-      "repair": "separate M-E03 witness checkout"
+      "run": 36999850630,
+      "seam": "PASS",
+      "reviewer": "PASS",
+      "receipt_restart_replay": "PASS",
+      "next": "shipping application restart and canonical truth projection"
     },
     "m_e03_grader": {
       "status": "TRIGGER_REPAIRED_DISPATCHABLE",
