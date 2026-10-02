@@ -1,0 +1,33 @@
+{
+  "scope": "research_artifact_integrity_not_product_completeness",
+  "source_count": 27,
+  "claim_count": 12,
+  "checks_passed": true,
+  "artifacts": {
+    "PASS-06-EVIDENCE.json": {
+      "bytes": 13213,
+      "sha256": "53d4865bbabd1da2b25a20b7630386ee0b706f030b13475a5873632267a12518",
+      "git_blob": "557247247ead723b0049294b81971aa6c589efe5"
+    },
+    "PASS-06-PAPER-APPRAISAL.md": {
+      "bytes": 3947,
+      "sha256": "517f2b92d355c6a6f59962640039db09b5204e6ed28026da071cf5686ddbc624",
+      "git_blob": "8f26120a04cd4d86ccee0153978c78e5e9a4e61e"
+    },
+    "PASS-06-TECHNICAL-CONFORMANCE.md": {
+      "bytes": 13626,
+      "sha256": "4ad2f9b6ded0d121b82a03c772ab75c686c63a663a6f8e8a8193079a4690528c",
+      "git_blob": "e8ba522ce2379c57a4cbe185b8bd0c569d1d8b17"
+    },
+    "pass06/reference-results.json": {
+      "bytes": 5827,
+      "sha256": "16b42f0a080c9313d44fb07c69ffe577df653d95c72ce9e6f0e3e67075fb6640",
+      "git_blob": "e5fe9904cd2206fccb9f3cb070548c4a3062f065"
+    },
+    "pass06/reference_oracle.py": {
+      "bytes": 10143,
+      "sha256": "0e37ef58168c0a5010177163b453b4c044e4d01797c50ca7d5ab92da23c1c7de",
+      "git_blob": "60589b23c6a458aa99a6570f2499097205aec09d"
+    }
+  }
+}

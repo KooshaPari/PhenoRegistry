@@ -1,0 +1,33 @@
+{
+  "pass_id": "TRC-RESEARCH-06",
+  "status": "partial_not_design_complete",
+  "registry_research_commit": "f36565172c2b9640273dc4ad6a30516c769225b0",
+  "tracera_conformance_commit": "cc4cba87e049932e837df65a5cec04baeb363815",
+  "tracera_conformance_path": "spec/product/research/PASS-06-TECHNICAL-CONFORMANCE.md",
+  "tracera_conformance_blob": "4ced861e30d5677dbffeabac9d06e993da23ad9a",
+  "source_records": 27,
+  "source_linked_claims": 12,
+  "paper_appraisals": 4,
+  "research_experiment": {
+    "id": "TRC-EXP-EVIDENCE-BINDING-01",
+    "checks_passed": 30,
+    "binding_mutants_detected": 7,
+    "source_sha256": "0e37ef58168c0a5010177163b453b4c044e4d01797c50ca7d5ab92da23c1c7de",
+    "results_path": "pass06/reference-results.json",
+    "product_verified": false,
+    "not_tested": ["Tracera runtime", "cryptographic producer authentication", "concurrent writers", "cross-engine performance", "configuration subsumption"]
+  },
+  "integrity": {
+    "five_uploaded_research_blobs_match_locally_validated_bytes": true,
+    "tracera_conformance_readback_matches_local_blob": true,
+    "results_readback_matches_local_blob": true,
+    "independent_semantic_validation": false
+  },
+  "comparison_basis_clarification": "Each evaluation binds its own candidate. Across-candidate progress intentionally varies the candidate while keeping the requirement projection, weighting, target configuration, evaluator, workload and freshness policy comparable. Scope/evaluator/target changes require a new segment or common-basis re-evaluation. This clarifies PASS-06-TECHNICAL-CONFORMANCE.md section 4; candidate equality is not required across an engineering progress series.",
+  "authorization_boundary": "Tracera and AgilePlus only; no third repository. AgilePlus methodology pass not advanced here. Mass product-test generation remains deferred.",
+  "completion": {
+    "research_complete": false,
+    "specification_complete": false,
+    "product_maturity_percent": null
+  }
+}
