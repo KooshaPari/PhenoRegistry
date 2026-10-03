@@ -198,9 +198,9 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "CURRENT_BRANCH_ERROR_DIAGNOSTIC_FIXED_REGRADING",
-      "head": "8696f632b15167e96c0e75ff3096c071940d3295",
-      "prior_run": 37063703473,
+      "status": "PANE_WRITE_CRLF_FIXED_INCLUDE_PATH_EXPOSED_REGRADING",
+      "head": "c207a5e65760f675f6f3d289a5138b864b6c5c29",
+      "prior_run": 37111728554,
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -269,12 +269,11 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "BRIDGE_R1_RESTART_R2_LINEAGE_ACTIVE",
-      "head": "9cbcc3ef40d347d2f502137bd4b1212f236ed574",
-      "last_m_e03": 37063669464,
-      "last_ci": 37063669321,
-      "last_studio": 37063669448,
-      "scope": "generate R1→reopen→edit→generate R2(parent R1)→reopen; both revisions durable"
+      "status": "R2_LINEAGE_GREEN_EVIDENCE_ASSEMBLY_TRUTH_ACTIVE",
+      "head": "97f39147c5a496567c36341b0672067d77b2aeb9",
+      "m_e03": 37111738903,
+      "studio": 37111739014,
+      "scope": "R1→restart→R2(parent R1)→restart green; project status now includes exact evidence and assembly state without acceptance inference"
     }
   }
 }
