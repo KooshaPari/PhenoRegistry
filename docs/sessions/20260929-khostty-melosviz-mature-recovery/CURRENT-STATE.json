@@ -198,8 +198,8 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "PANE_WRITE_CRLF_FIXED_INCLUDE_PATH_EXPOSED_REGRADING",
-      "head": "c207a5e65760f675f6f3d289a5138b864b6c5c29",
+      "status": "PANE_WRITE_CRLF_FRAGMENT_REPAIRED_REGRADING",
+      "head": "a2a563c2501a9908eecd44f9af6835c88abd81be",
       "prior_run": 37111728554,
       "mount": "blocked"
     },
@@ -269,11 +269,13 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "R2_LINEAGE_GREEN_EVIDENCE_ASSEMBLY_TRUTH_ACTIVE",
-      "head": "97f39147c5a496567c36341b0672067d77b2aeb9",
-      "m_e03": 37111738903,
-      "studio": 37111739014,
-      "scope": "R1→restart→R2(parent R1)→restart green; project status now includes exact evidence and assembly state without acceptance inference"
+      "status": "R2_LINEAGE_GREEN_SCENE_EVIDENCE_RESTART_PROJECTION_ACTIVE",
+      "head": "60a591dea5e259ca76dc34bd2cf2b8ec8a81f0f5",
+      "last_green": {
+        "m_e03": 37111738903,
+        "studio": 37111739014
+      },
+      "scope": "R1→reopen→R2(parent R1)→reopen plus accepted scene/assembly evidence projection"
     }
   }
 }
