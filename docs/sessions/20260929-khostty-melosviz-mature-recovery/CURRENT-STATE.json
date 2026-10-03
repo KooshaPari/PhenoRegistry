@@ -198,9 +198,9 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "TRANSPORT_LITERALS_FIXED_NATIVE_PREREQ_BUILD_HARDENED_REGRADING",
-      "head": "da83134fabc5a9616b5144fdf40836648326a791",
-      "prior_run": 37052466159,
+      "status": "CURRENT_BRANCH_ERROR_DIAGNOSTIC_FIXED_REGRADING",
+      "head": "8696f632b15167e96c0e75ff3096c071940d3295",
+      "prior_run": 37063703473,
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -269,14 +269,12 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "WRITE_THROUGH_GREEN_EXCEPT_PREEXISTING_BRIDGE_NEWLINE_SYNTAX_REPAIRED_REGRADING",
-      "head": "239d17c634d46b513ef86c7c0f7be879f283b795",
-      "last_grade": {
-        "m_e03": 37059232210,
-        "ci": 37059232381,
-        "studio": 37059232310
-      },
-      "detail": "M-E03 + CI green; studio import exposed metrics raw-newline syntax defect; repaired"
+      "status": "BRIDGE_R1_RESTART_R2_LINEAGE_ACTIVE",
+      "head": "9cbcc3ef40d347d2f502137bd4b1212f236ed574",
+      "last_m_e03": 37063669464,
+      "last_ci": 37063669321,
+      "last_studio": 37063669448,
+      "scope": "generate R1→reopen→edit→generate R2(parent R1)→reopen; both revisions durable"
     }
   }
 }
