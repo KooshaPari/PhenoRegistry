@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.8](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.7...v1.2.8) (2026-10-04)
+
+
+### Bug Fixes
+
+* **ci:** pass GITHUB_TOKEN to gitleaks so PR scans can run ([bbecda4](https://github.com/KooshaPari/PhenoRegistry/commit/bbecda46117a26e13809749f2015f412f155a9d3))
+
 ## [1.2.7](https://github.com/KooshaPari/PhenoRegistry/compare/v1.2.6...v1.2.7) (2026-10-02)
 
 
