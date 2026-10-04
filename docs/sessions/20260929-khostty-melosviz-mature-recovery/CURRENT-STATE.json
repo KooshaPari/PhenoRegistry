@@ -198,9 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "PANE_WRITE_CRLF_FRAGMENT_REPAIRED_REGRADING",
-      "head": "a2a563c2501a9908eecd44f9af6835c88abd81be",
-      "run": 37112390660,
+      "status": "CRLF_FRAGMENT_REPAIRED_AUTHORITY_TRIGGER_SURFACE_FIXED",
+      "head": "5bd586632096ada6fabe411e3786c5e678945a2f",
+      "prior_run": 37112390660,
+      "workflow": "push paths now include protocol/handler/server + explicit dispatch",
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -269,14 +270,14 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "R2_LINEAGE_GREEN_EVIDENCE_STATUS_SHAPE_REPAIRED_REGRADING",
-      "head": "c1f5bb0b139fd08ed33b392fbdcd36f428dbfb4b",
+      "status": "SCENE_EVIDENCE_RESTART_PROJECTION_REGRADING",
+      "head": "8bc214b8c6d5659f462baec50561171727817681",
       "last_green": {
         "m_e03": 37112417684,
         "ci": 37112417667
       },
-      "studio_red": "legacy exact-dict assertion omitted newly added evidence/assembly fields",
-      "repair": "fixture now expects expanded canonical status"
+      "studio_red": "legacy exact-attempt assertion did not include newly added evidence/assembly fields",
+      "repair": "assert stable core fields plus empty evidence/assembly"
     }
   }
 }
