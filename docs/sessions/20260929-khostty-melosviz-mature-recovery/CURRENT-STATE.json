@@ -198,10 +198,10 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "CRLF_FRAGMENT_REPAIRED_AUTHORITY_TRIGGER_SURFACE_FIXED",
-      "head": "5bd586632096ada6fabe411e3786c5e678945a2f",
-      "prior_run": 37112390660,
-      "workflow": "push paths now include protocol/handler/server + explicit dispatch",
+      "status": "ALL_BACKSLASH_PHYSICAL_NEWLINES_ELIMINATED_REGRADING",
+      "head": "67a404a5ec8bf068e00f2cacaa94672d377da537",
+      "run": 37228749258,
+      "source_scan": "0 remaining backslash+physical-newline sequences in server.zig",
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -270,14 +270,14 @@
       "note": "combined path entry had suppressed expected workflow triggering; corrected and workflow_dispatch added"
     },
     "m_e03a": {
-      "status": "SCENE_EVIDENCE_RESTART_PROJECTION_REGRADING",
+      "status": "ACCEPTED_EXPERIMENTAL_BRIDGE_RESTART_AND_EVIDENCE_PROJECTION",
       "head": "8bc214b8c6d5659f462baec50561171727817681",
-      "last_green": {
-        "m_e03": 37112417684,
-        "ci": 37112417667
+      "runs": {
+        "m_e03": 37187941780,
+        "ci": 37187941806,
+        "studio": 37187941851
       },
-      "studio_red": "legacy exact-attempt assertion did not include newly added evidence/assembly fields",
-      "repair": "assert stable core fields plus empty evidence/assembly"
+      "next": "application consumes canonical restart status"
     }
   }
 }
