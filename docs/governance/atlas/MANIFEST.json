@@ -533,6 +533,11 @@
       "sha256": "7d3fc46d1c78f6383736dce442e3df082242ec2049b663d12b44bf9ca7b45091"
     },
     {
+      "path": "portfolio/PORTFOLIO-REPAIR-WBS-PERT-2026-09-25.md",
+      "size_bytes": 10455,
+      "sha256": "cabbb696cae96d1fd637c674c7e03e0d02731329c9521e8d3004fb4e38fd54b5"
+    },
+    {
       "path": "portfolio/ROSTER.md",
       "size_bytes": 4072,
       "sha256": "f7e635e44fa7a5f69b06ab358a35f9bc54e27ba1c03ed28aba457adcef168091"
