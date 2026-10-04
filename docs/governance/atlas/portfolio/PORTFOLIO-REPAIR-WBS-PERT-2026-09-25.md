@@ -1,14 +1,15 @@
-> **Authored by Instinct (Koosha’s pilot assistant), not by the CLI agent fleet.**
-
 # Repository and portfolio repair plan: WBS / PERT
 
-**Planning baseline:** September 25, 2026. **Status:** proposal from a bounded read-only audit, not an execution receipt or approved release plan. **Owner:** Koosha Paridehpour. This document belongs in the PhenoRegistry governance atlas as a cross-repository planning record, not a product-specific `STATE.md` or a claim that the repositories have changed.
+> **Authored by Instinct (Koosha’s pilot assistant), not by the CLI agent fleet.**
+
+**Planning baseline:** September 25, 2026. **Status:** proposal from a bounded read-only audit, not an execution receipt or approved release plan. **Owner:** Koosha Paridehpour. **Review by:** December 24, 2026 (90 days after the September 25, 2026 baseline). This document belongs in the PhenoRegistry governance atlas as a cross-repository planning record, not a product-specific `STATE.md` or a claim that the repositories have changed.
 
 ## Decision frame
 
-- **26 work packages**, 102.8 expected engineering hours in total.
+- **26 work packages**, 102.8 expected engineering hours in total, computed as the sum of the unrounded PERT expected values (102.833 h); the rounded `Expected (h)` column in the table below sums to 103.1 h.
 - **Modeled critical path:** 0.1 -> 3.1 -> 3.3 -> 3.4 -> 3.5 -> 3.6 -> 6.1, 33.2 expected hours, assuming parallel workstreams, immediate reviews and no new work.
-- **Finish-to-start dependency:** each `After` value must complete before the package begins. Workstreams 1-5 can proceed in parallel after 0.1; 6.1 waits for 1.5, 2.4, 3.6 and 5.6. Hours are engineering effort, not elapsed calendar time or a promise.
+- **Concentration risk:** the longest sub-chain of that path (3.1 -> 3.3 -> 3.4 -> 3.5 -> 3.6) runs entirely through the PhenoLab review stream with no modeled float, and 6.1 is gated on 3.6, so a slip in that single private queue pushes the finish date directly; the model names no fallback, so start 3.1/3.2 evidence capture before the earlier streams close and run the 3.4 clean-install reproduction against its test triage in parallel.
+- **Finish-to-start dependency:** each `After` value must complete before the package begins. Workstreams 1-5 can proceed in parallel after 0.1, an assumption that requires concurrent capacity: separate reviewers and isolated environments, one per stream, rather than the single `Owner:` executing every package in sequence; with one serialized executor the 33.2-hour critical path does not hold. 6.1 waits for 1.5, 2.4, 3.6 and 5.6. Hours are engineering effort, not elapsed calendar time or a promise, and the `Earliest start-finish (h)` column is effort offset from a package's predecessors, not a wall-clock schedule.
 - **PERT formula:** expected hours = (optimistic + 4 x most likely + pessimistic) / 6. The O/M/P figures are provisional estimates. Delays from owner decisions, reviews, releases and newly found failures are not modeled.
 
 ## Public information boundary
@@ -26,7 +27,7 @@ PhenoRegistry is public. The PhenoLab stream below names only high-level review 
 | 1.4 | Fork install | Correct HeliosLite legacy command. Retire forge-dev → old forgecode installer; verify current fork install and migration note. | 1.1 | 1 / 2 / 3 | 2.0 | 4.2-6.2 |
 | 1.5 | Fork install | Smoke-test and publish fork instructions. Run all three first commands on clean targets; capture exact output, platform, and artifact provenance. | 1.2, 1.3, 1.4 | 2 / 4 / 8 | 4.3 | 6.3-10.7 |
 | 2.1 | Releases | Reconcile release truth matrix. Record tag, binary/package version, installer artifact, and lead README claim for each project. Decide whether to publish missing artifacts or qualify claims. | 0.1 | 2 / 3 / 5 | 3.2 | 2.0-5.2 |
-| 2.2 | Releases | Repair installer and version claims. ShareCLI v0.3.0 release vs tree 0.8.0 and Homebrew "when published"; BytePort v1.0.0 installers named 0.1.0; AgilePlus v1.1.0/21 releases vs v0.2.4; Melosviz v0.1.1 DMG named 0.1.0. | 2.1 | 2 / 4 / 7 | 4.2 | 5.2-9.3 |
+| 2.2 | Releases | Repair installer and version claims. ShareCLI v0.3.0 release vs tree 0.8.0 and Homebrew "when published"; BytePort v1.0.0 installers named 0.1.0; AgilePlus `README.md` claims "21 releases (v1.1.0)" vs `Cargo.toml` 0.2.4; Melosviz v0.1.1 DMG named 0.1.0. | 2.1 | 2 / 4 / 7 | 4.2 | 5.2-9.3 |
 | 2.3 | Releases | Qualify maturity and distribution. HeliosCLI v0.11.1 source-only; PhenoMLX tags without releases; WorldSphereMod beta runtime validation. Publish artifacts only if truly tested. | 2.1 | 3 / 6 / 10 | 6.2 | 5.2-11.3 |
 | 2.4 | Releases | Verify public install and release paths. Test each supported install path; check release links and label unverified platforms rather than implying support. | 2.2, 2.3 | 2 / 4 / 7 | 4.2 | 11.3-15.5 |
 | 3.1 | PhenoLab | Review private dashboard examples. Privately verify that published examples and credential handling are safe. Keep values and security findings out of public planning records. | 0.1 | 1 / 2 / 4 | 2.2 | 2.0-4.2 |
