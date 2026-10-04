@@ -48,6 +48,7 @@ Start with [START-HERE.md](START-HERE.md), [the revision notes](REVISION-1.1.md)
 | [operations/AGENT-EXECUTION.md](operations/AGENT-EXECUTION.md) | Editable policy, work plan or reference |
 | [operations/DELIVERY-AND-MEDIA.md](operations/DELIVERY-AND-MEDIA.md) | Editable policy, work plan or reference |
 | [operations/SECURITY-AND-PRESERVATION.md](operations/SECURITY-AND-PRESERVATION.md) | Editable policy, work plan or reference |
+| [portfolio/PORTFOLIO-REPAIR-WBS-PERT-2026-09-25.md](portfolio/PORTFOLIO-REPAIR-WBS-PERT-2026-09-25.md) | Editable policy, work plan or reference |
 | [portfolio/ROSTER.md](portfolio/ROSTER.md) | Editable policy, work plan or reference |
 | [portfolio/TAXONOMY.md](portfolio/TAXONOMY.md) | Editable policy, work plan or reference |
 | [products/Agentora-capability/DOSSIER.md](products/Agentora-capability/DOSSIER.md) | Editable policy, work plan or reference |
