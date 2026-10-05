@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6.0.0
 
       - name: Build artifact
         run: |
@@ -43,7 +43,7 @@ jobs:
           push-to-registry: false
 
       - name: Upload artifact
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd0de8ccd5686b70862 # v4.6.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v4.6.0
         with:
           name: ${{ github.event.inputs.version || github.ref_name }}-artifact
           path: dist/artifact.tar.gz
