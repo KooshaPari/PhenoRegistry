@@ -198,10 +198,9 @@
       "next": "K-E02a app-thread/mailbox bridge before server lifecycle"
     },
     "k_e02a": {
-      "status": "ALL_BACKSLASH_PHYSICAL_NEWLINES_ELIMINATED_REGRADING",
-      "head": "67a404a5ec8bf068e00f2cacaa94672d377da537",
-      "run": 37228749258,
-      "source_scan": "0 remaining backslash+physical-newline sequences in server.zig",
+      "status": "CHAR_LITERAL_NATIVE_INTROSPECTION_FORMAT_REPAIRED_REGRADING",
+      "head": "36566871102b5d04566a8a5aeab9c8d0988277bd",
+      "run": 37257243337,
       "mount": "blocked"
     },
     "windows_comparators": {
@@ -278,6 +277,16 @@
         "studio": 37187941851
       },
       "next": "application consumes canonical restart status"
+    },
+    "m_e03b": {
+      "status": "SCENE_RESTORATION_EXACT_ACCEPTANCE_HYDRATION_REGRADING",
+      "head": "64be289c9d848541cc140ad43832e72de04f5f7c",
+      "runs": {
+        "m_e03": 37257346382,
+        "studio": 37257346431,
+        "ci": 37257346475
+      },
+      "scope": "persisted scenes + assembly index→digest + accepted evidence drive fresh-app accepted state"
     }
   }
 }
