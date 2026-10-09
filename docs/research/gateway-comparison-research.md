@@ -6,6 +6,8 @@ Research only; nothing installed.
 ## Verdict
 Hermes Agent as the gateway/control plane. Keep Codex, JCode, KCode and Forge as workers it calls. Do not make a coding-agent fork the gateway.
 
+**Decision (his ruling, Oct 8):** Hermes is locked. OpenClaw is rejected on his preference and is no longer the fallback. He is comfortable owning or custom-writing adapters into Hermes where gaps exist; iMessage is the known gap.
+
 ## 1. Hermes: a real gateway, not just a CLI
 - One gateway process serves Telegram, Discord, Slack, WhatsApp, Signal, Email and CLI, with cross-platform conversation continuity (README).
 - Built-in cron: natural-language or cron schedules, delivery to any chat, and a no-agent script mode. Webhook routes can fire jobs on events like a PR comment. https://hermes-agent.nousresearch.com/docs/user-guide/features/cron
@@ -23,7 +25,7 @@ Hermes Agent as the gateway/control plane. Keep Codex, JCode, KCode and Forge as
 - Codex CLI: no channels, no cron, no persistent memory. Has `codex exec` (non-interactive, JSONL, resume), `codex mcp-server`, and `codex app-server` (stdio/WebSocket/Unix socket, bearer auth) for remote and long-lived sessions. Great worker/backend, not a control plane.
 - JCode: closest. Shared daemon/server, swarm of agents, embedding-graph memory, MCP config, and "Ambient Mode": an always-on self-scheduling agent that consolidates memory and does background work with email notifications. No chat-channel gateway or webhook intake found (README + ambient doc only; a deeper code check could change that). Ambient is single-agent and self-scheduled, not user cron. One main maintainer.
 - ForgeCode: coding agent with MCP support, ZSH plugin, one-shot CLI. No gateway features.
-- KCode: the owner's private fork of JCode; inherits the JCode assessment (not independently verified).
+- KCode: the owner's PUBLIC fork of JCode (https://github.com/KooshaPari/KCode); heavily extended swarm/TUI layer, no chat gateway. See the KCode divergence report (PR #617).
 - Cost of this path: writing and maintaining channel adapters, scheduler, webhook intake, pairing/auth and routing yourself, which is rebuilding Hermes. Sensible hybrid: JCode ambient as a worker or memory layer behind the gateway.
 
 ## 4. Setup path on the 5800X / 64GB / 3090 Ti + 1080 Ti (24/7)
@@ -31,7 +33,7 @@ Hermes Agent as the gateway/control plane. Keep Codex, JCode, KCode and Forge as
 - Models: cloud (ChatGPT Pro, existing MiniMax plan, OpenRouter, OmniRoute) as primary. Optionally point Hermes at a local OpenAI-compatible endpoint on the 3090 Ti (24GB, mid-size) for cheap cron jobs. The 1080 Ti is not useful for modern serving.
 - Workers: `hermes mcp add codex --preset codex`; wire JCode/KCode/Forge as MCP servers or shell tools via non-interactive CLIs. PhenoRegistry as shared ledger, PRs on branches.
 - Safety: keep the gateway off the public internet, Tailscale for remote access, never run with approvals off.
-- Fallback: if channel list or Codex-as-harness matters more than Python-based Hermes (iMessage, Teams), OpenClaw is the swap; pin a recent release and sandbox it. `hermes claw migrate` goes the other way, so switching costs little.
+- Fallback: none planned. He rejected OpenClaw; where Hermes lacks a channel (iMessage), he will own the adapter.
 
 ## Caveats
 - Hermes maturity is judged from README/docs, not source or runtime. Release cadence and Hermes security advisories were not checked; verify before exposing beyond his own chats.
