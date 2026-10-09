@@ -1,0 +1,20 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Resource",
+  "metadata": {
+    "name": "repo-helioslab",
+    "title": "HeliosLab",
+    "description": "Repository inventory record; does not assert product readiness or capability ownership.",
+    "annotations": {
+      "github.com/project-slug": "KooshaPari/HeliosLab",
+      "backstage.io/source-location": "url:https://github.com/KooshaPari/HeliosLab/",
+      "phenotype.dev/github-repository-id": "1167587447",
+      "phenotype.dev/default-branch": "main",
+      "phenotype.dev/archived": "false"
+    }
+  },
+  "spec": {
+    "type": "git-repository",
+    "owner": "group:default/phenotype-platform"
+  }
+}
