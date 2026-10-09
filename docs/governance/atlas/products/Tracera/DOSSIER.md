@@ -1,3 +1,23 @@
+> **v2.0 durable-memory recovery update (2026-09-29):** This dossier predates the current mature-first recovery program and remains useful historical planning evidence, but its staffing/seats and earlier comparator shortlist are not the current product contract. For conceptual recovery start with [GENESIS.md](GENESIS.md), then [INTERNAL-ARCHAEOLOGY.md](INTERNAL-ARCHAEOLOGY.md), [current Intent](../../../intent/Tracera.md), [Boundary](../../../boundary/Tracera.md), and the research passes under [research/](research/). Repo-local current contract/research lives under `spec/product/` on the active specification branch. The invalid quota-generated requirement catalog must not participate in grading.
+
+## Recovery paths
+
+**5 minutes:** Genesis → Intent → Boundary → current state/frontier.
+
+**30 minutes:** add Internal Archaeology, SOTA research Passes 1–5, runtime reachability Pass 7, ontology/effectivity Passes 8–10, and repo-local `RECOVERED_PRODUCT_INTENT.md`, `ONTOLOGY_IDENTITY_CONFIG_V0.md`, `VERTICAL_SLICE_CONTRACT.md`.
+
+**Deep reconstruction:** follow the source-coverage ledger, semantic findings/requirements, MACE doctrine, all research receipts/experiments, implementation map, ADRs and raw-intent provenance.
+
+### Current high-risk frontier
+
+Dependency-footprint soundness → suspect/invalidation propagation → real Rust two-product/two-capability witness → product persistence → mounted product API → mounted human projection → SWEE bridge → external work boundary → re-verification → MCP parity.
+
+### Human-recovery gaps
+
+This dossier is **not yet recovery-grade**. Raw high-value intent dumps and exact conversation provenance remain incompletely indexed; decision supersession is not fully normalized; implementation/UI archaeology remains incomplete; no fresh-human or fresh-agent recovery test has passed. These are blocking documentation defects.
+
+---
+
 > **v1.2 execution update:** one existing owner chat for this repository. Start with [current state](STATE.md), [next actions](NEXT-ACTIONS.md) and [the owner prompt](AGENT-PROMPT.md). The detailed planning material below is retained; historical staffing, identity and status assumptions are not current proof. Independent assurance remains a requirement, not a mandatory second permanent chat.
 
 # Tracera: atlas, simplification and comparative proof

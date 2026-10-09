@@ -1,0 +1,15 @@
+{
+  "product_id": "PRD-TRACERA",
+  "repository": "KooshaPari/Tracera",
+  "record_type": "specification_correction_not_runtime_grade",
+  "status": "invalidated_requires_source_backed_replacement",
+  "specification_pass_complete": false,
+  "accepted_contract": null,
+  "derived_requirement_count": null,
+  "grading_eligible": false,
+  "test_generation_ready": false,
+  "count_policy": "derived_only_no_target_floor_ceiling_or_range",
+  "repository_correction_commit": "fdfd4c5ff6ed20e2a7547d0c67e421facca7234b",
+  "repository_branch": "spec/mature-product-contract-v1",
+  "default_branch_merged": false
+}
