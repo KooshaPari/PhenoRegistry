@@ -6,11 +6,13 @@ Research only. No tool integration was tested hands-on; docs and repo review onl
 ## Decision lines (his rulings, Oct 8)
 - Gateway: Hermes Agent. OpenClaw is rejected on his preference (not a fallback). He is comfortable owning or custom-writing adapters into Hermes where gaps exist; iMessage is the known gap.
 - Paperclip = paperclipai/paperclip (confirmed by him).
-- Preferred layout: Paperclip as the org-level cockpit (goals, tasks, budgets; the Agslag direction), Hermes as the comms and cron gateway below it, coding agents as workers.
+- Preferred layout (updated 10:52 PM): Hermes is the top, the CEO / living device assistant gateway he talks to. Paperclip is the management view (org chart, goals, budgets; the Agslag direction), not above Hermes in the command chain. JCode and Codex are subagents and his parent chat surfaces.
+- OmniRoute is REJECTED (too buggy). Routing layer: cliproxyapi-plusplus (his fork) or another, else hand routing.
+- Model map: OpenCode Go = Step 5 free / MiMo 2.6; MiniMax plan = M3; default tiers: normal = GPT 6 Luna med, high = GPT 6.1 Sol med.
 
 ## 1. Paperclip (paperclipai/paperclip)
 Open-source (MIT) orchestration for teams of AI agents. Node.js server plus React UI with org charts, goals, tasks, budgets and governance. Tagline: "If OpenClaw is an employee, Paperclip is the company." Created 2026-03-02; recent release v2026.1005.0. Sources: https://github.com/paperclipai/paperclip , https://paperclip.ing
-Fit in the layered layout: org-level cockpit above Hermes. Adapters: built-in `hermes_local` plus Claude Code, Codex, Cursor, OpenCode, Gemini CLI (https://docs.paperclip.ing/reference/adapters/overview/).
+Fit: management view beside Hermes (org chart, goals, budgets), not in the command chain. Adapters: built-in `hermes_local` plus Claude Code, Codex, Cursor, OpenCode, Gemini CLI (https://docs.paperclip.ing/reference/adapters/overview/).
 Caveat: the `hermes_local` adapter is the rough edge. Open issues #4009 (heartbeat failures on WSL2) and #3833 (AGENTS.md not injected) point to rough handling. Two control planes can conflict, so keep a clear split: Paperclip owns goals, tasks and budgets; Hermes owns channels, cron and webhooks.
 
 ## 2. Other tools and their role
@@ -21,10 +23,10 @@ Caveat: the `hermes_local` adapter is the rough edge. Open issues #4009 (heartbe
 - JCode (1jehuang/jcode): Rust coding-agent harness, MIT, v0.91.0 Oct 6, one main maintainer. Worker or standalone; no verified Hermes integration. https://github.com/1jehuang/jcode
 - KCode (https://github.com/KooshaPari/KCode): his PUBLIC fork of JCode, 137 commits ahead and about 2.5k behind upstream; adds swarm TUI, manager/researcher modes and more. Still no chat gateway. See the KCode divergence report (PR #617).
 - ForgeCode (Apache-2.0, 300+ models, ZSH plugin; he has a fork): optional worker via CLI; overlaps the other coding agents. https://github.com/tailcallhq/forgecode
-- OmniRoute: KooshaPari/OmniRoute is a fork of diegosouzapw/OmniRoute; he publishes @kooshapari/omniroute on npm and has merged upstream PRs. He also maintains a cliproxyapi-plusplus fork. Role: standalone model-routing layer; point Hermes at it as a single OpenAI-compatible endpoint. https://github.com/KooshaPari/OmniRoute , https://github.com/diegosouzapw/OmniRoute , https://www.npmjs.com/package/@kooshapari/omniroute
+- OmniRoute (REJECTED by him as too buggy; do not use): KooshaPari/OmniRoute is a fork of diegosouzapw/OmniRoute; he publishes @kooshapari/omniroute on npm and has merged upstream PRs. He also maintains a cliproxyapi-plusplus fork. Replace with cliproxyapi-plusplus (his fork) or another proxy, else hand routing. https://github.com/KooshaPari/OmniRoute , https://github.com/diegosouzapw/OmniRoute , https://www.npmjs.com/package/@kooshapari/omniroute
 
 ## 3. Overlaps and caveats
 - Control plane: Paperclip (org level) above Hermes (comms and cron). Keep the split explicit.
-- Model routing: Hermes vs OmniRoute vs cliproxyapi. Cleanest: Hermes calls OmniRoute.
+- Model routing: OmniRoute is out. Hermes calls cliproxyapi-plusplus or another proxy, or routes by hand.
 - Worker redundancy: Claude Code, Codex, Cursor, JCode/KCode and ForgeCode fill the same slot.
 - Hermes and Paperclip are both months to a year old, fast-moving, with large issue backlogs. Hermes CLI delegation is PTY-driven; expect permission-prompt and session quirks.
