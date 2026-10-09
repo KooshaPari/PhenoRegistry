@@ -30,6 +30,7 @@ His rulings from Oct 8 (relayed via the Instinct agent). Decision lines, not res
 ## Host drive access
 - Grant-style shares, like IAM: scoped path (for example his downloads folder or a project dir), read or read-write, per agent/task, default deny, logged.
 - The orchestrator bind-mounts only the granted paths at container spawn.
+- Mount granularity: TOOL-scoped by default (ephemeral, exists for the single action). Only an explicit user "approve for this session" elevates a mount to session level, and only when relevant to the task. Nothing ambient or permanent by default.
 - Grants go through the same independent approval broker as other privileged actions. A drive share is just another resource type.
 
 ## Resource model
