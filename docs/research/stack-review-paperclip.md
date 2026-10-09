@@ -30,3 +30,11 @@ Caveat: the `hermes_local` adapter is the rough edge. Open issues #4009 (heartbe
 - Model routing: OmniRoute is out. Hermes calls cliproxyapi-plusplus or another proxy, or routes by hand.
 - Worker redundancy: Claude Code, Codex, Cursor, JCode/KCode and ForgeCode fill the same slot.
 - Hermes and Paperclip are both months to a year old, fast-moving, with large issue backlogs. Hermes CLI delegation is PTY-driven; expect permission-prompt and session quirks.
+
+## Layering and infra decisions (added Oct 8, 2026)
+Decision lines from him, applied after the first draft. Fuller write-ups are in PR #618 (docs/research/).
+- Workflow orchestration is a MUST and sits under the workers in the Hermes (top) / Paperclip (management view) layout. It is an open candidate slot: Temporal OSS primary, Hatchet alt, Kestra et al. compared in workflow-orchestrator-comparison.md.
+- Infra: one Postgres anchor, NATS (JetStream) as the agent event bus, MinIO for artifacts, Neo4j rejected for now.
+- Network: tailnet = machine-to-machine fabric; Cloudflare Access/Tunnel = identity edge for browser-reached clients; cloudflared runs inside the tailnet. Desktop first, laptop second.
+- Workers run containerized on both devices: one shared base image, per-task instances, destroyed on completion. Bare metal stays his end-user environment.
+- Shared base reference: his own "Research Agent Business Stack" analysis (shared-base-agent-corp.md).
