@@ -1,0 +1,13 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Group",
+  "metadata": {
+    "name": "phenotype-platform",
+    "title": "Phenotype Platform",
+    "description": "Repository catalog ownership for KooshaPari's Phenotype Platform."
+  },
+  "spec": {
+    "type": "team",
+    "children": []
+  }
+}
