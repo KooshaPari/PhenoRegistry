@@ -40,3 +40,11 @@ Hermes Agent as the gateway/control plane. Keep Codex, JCode, KCode and Forge as
 ## Caveats
 - Hermes maturity is judged from README/docs, not source or runtime. Release cadence and Hermes security advisories were not checked; verify before exposing beyond his own chats.
 - Repo star and issue counts were dropped because they could not be verified.
+
+## Layering and infra decisions (added Oct 8, 2026)
+Decision lines from him, applied after the first draft. Fuller write-ups are in PR #618 (docs/research/).
+- Workflow orchestration is a MUST and sits under the workers in the Hermes (top) / Paperclip (management view) layout. It is an open candidate slot: Temporal OSS primary, Hatchet alt, Kestra et al. compared in workflow-orchestrator-comparison.md.
+- Infra: one Postgres anchor, NATS (JetStream) as the agent event bus, MinIO for artifacts, Neo4j rejected for now.
+- Network: tailnet = machine-to-machine fabric; Cloudflare Access/Tunnel = identity edge for browser-reached clients; cloudflared runs inside the tailnet. Desktop first, laptop second.
+- Workers run containerized on both devices: one shared base image, per-task instances, destroyed on completion. Bare metal stays his end-user environment.
+- Shared base reference: his own "Research Agent Business Stack" analysis (shared-base-agent-corp.md).
