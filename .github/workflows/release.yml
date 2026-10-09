@@ -20,6 +20,7 @@ jobs:
         id: release
         with:
           release-type: rust
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           # Configure for workspace: release-please will manage versions
           # in Cargo.toml for each published crate.
 
