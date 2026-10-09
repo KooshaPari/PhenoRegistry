@@ -1,0 +1,67 @@
+{
+  "schema": "harness-recovery-diagnostic/v1",
+  "product": "KooshaPari/HeliosLite",
+  "source_revision": "536a25cac1dc21ac97bbc86c7e9af74bd5932780",
+  "source_blobs": {
+    "verification": "749619083402134b20582b0d08c9d0c583caeb84",
+    "task_executor": "d1d076a02264a5ef746b768cb2f59c2a757b3cf0",
+    "cli": "3f681ce9adcefe1af05335e7173356e5947dbfc5"
+  },
+  "scope": "decision-flow transcription plus Node child-process termination; not native product execution",
+  "script_sha256": "4d6b5dfe15f1fddb2a357d3df5dd9a11999a2749b112d64cb765dfb97d321abb",
+  "runtime": "v22.16.0",
+  "platform": "linux",
+  "timestamp": "2026-09-29T18:36:23.058Z",
+  "diagnostic_assertions": "passed",
+  "product_acceptance": "BLOCKED",
+  "native_product_tests": "NOT_RUN",
+  "cases": [
+    {
+      "id": "H-POS",
+      "observed": "passed",
+      "predicted": "passed",
+      "acceptable": true
+    },
+    {
+      "id": "H-NEG",
+      "observed": "validation_failed",
+      "predicted": "validation_failed",
+      "acceptable": true
+    },
+    {
+      "id": "H-EMPTY-CHECKS",
+      "observed": "passed",
+      "predicted": "passed",
+      "acceptable": false
+    },
+    {
+      "id": "H-MISSING-OUTPUT",
+      "observed": "passed",
+      "predicted": "passed",
+      "acceptable": false
+    },
+    {
+      "id": "H-TIMEOUT",
+      "observed": "passed",
+      "predicted": "passed",
+      "acceptable": false
+    },
+    {
+      "id": "H-CLI-EXIT",
+      "observed": 0,
+      "predicted": 0,
+      "acceptable": false
+    },
+    {
+      "id": "H-SIGNAL-AS-ZERO",
+      "observed": 0,
+      "predicted": 0,
+      "acceptable": false
+    }
+  ],
+  "termination": {
+    "code": null,
+    "signal": "SIGTERM",
+    "coerced": 0
+  }
+}

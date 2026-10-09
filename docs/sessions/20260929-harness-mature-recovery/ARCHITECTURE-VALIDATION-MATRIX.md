@@ -1,0 +1,22 @@
+# Architecture validation matrix — pass 1
+
+Date: 2026-09-30. Status: OPEN. Each row needs an experiment or source-backed disposition before architecture freeze.
+
+| Risk / hypothesis | HeliosLite | KCode | Falsifying experiment / evidence |
+|---|---|---|---|
+| Independent acceptance cannot false-green | Candidate #322 qualified 8/8 adversarial oracle tests; exact candidate only | Evidence harness itself caught zero-test false green; product identity test still pending | Remove/alter guard; witness must fail. Bind exact run/candidate |
+| Runtime identity binds actual serving process | CLI executable identity still needs explicit installed/runtime witness where daemonized surfaces apply | #14 `effe7dcb...` version/git/PID/exe SHA on main Ping; run 36686592906 native main-socket test 1/1 pass | Candidate primitive qualified; still test new client -> old daemon, wrong socket, copied labels and installed release digest mismatch |
+| Timeout/cancel kills descendants | #322 adds process-tree termination; Linux oracle covers timeout terminal state, descendant survival still needs direct fixture and Windows validation | Existing upstream/fork lifecycle substantial; exact process-tree semantics not yet mapped | Spawn grandchild that ignores TERM; cancel; prove no surviving effect/process |
+| Persistence survives restart without conflating effort | Dual SQLite/DBD surfaces unresolved | Session/server persistence substantial; durable effort remains external | Crash at write/effect boundaries; resume with new worker; verify no lost/duplicate accepted state |
+| Custom storage daemon is justified | forge_dbd is wired but opt-in/default OFF; direct path already WAL+30s busy timeout+background checkpointer; daemon has valuable Unavailable/Indeterminate certainty primitive | N/A/other server ownership | #326: matched daemon OFF/ON multi-process writes, lock/busy rate, p50/p95/p99, RSS, crash pre/post-send/post-commit, restart and operational burden |
+| Custom daemon hot path is justified | Zig forge_daemon performance experiment | shared server is core upstream architecture | Matched startup/dispatch latency/RSS/correctness with/without daemon, cold/warm |
+| Sandbox actually enforces policy | Linux Landlock feature-gated; Windows documented placeholder | Current tool permission/destructive gate differs | Adversarial file/network/process escape on each supported profile; disabled backend must report unsupported |
+| LLM guardian cannot authorize itself | forge_guardian risk layer exists | permission systems upstreamed | Deterministic authority must dominate LLM score; mutate LLM verdict and prove forbidden op stays denied |
+| External integrations do not clone authority | local forge_agileplus/forge_tracera raise duplication concern | no named integrations found | Thin adapter prototype versus embedded clone; external rejection must remain non-green |
+| POSIX-oriented Windows path is viable | pheno_shell/winterminal utilities exist, not Pine | upstream Windows support exists | Matched command/path/env/PTY/signal suite on clean Windows with native/Pine adapter; no WSL assumption |
+| Provider subprocess preserves semantics | Helios provider model inherited; KCode can invoke ForgeCode | ForgeCode/Claude CLI runtimes | Golden transcript/tool/cancel/resume cases versus direct provider; quantify transformations/loss |
+| Deep fork beats maintained upstream + overlay | 742-commit delta needs semantic reduction | 136 divergent commits vs 2320-behind current upstream control | Retained-patch ledger + matched user journeys + maintenance burden |
+
+Passing a unit test for a primitive does not close a row whose claim is end-to-end or platform-specific.
+| ForgeCode subprocess provider preserves supported machine semantics | N/A as cross-product source; Helios is the provider product/control | KCode mounted provider targets flags absent from current official ForgeCode; #16 fail-closed candidate | Official-current CLI must be rejected; compatible shim positive fixture; then golden history/system/tools/cancel/resume test before any RETAIN PATCH credit |
+| Runtime never mutates installed executable trust state implicitly | Helios release identity still requires side-by-side install/update qualification | Frozen KCode mutates macOS xattrs/signature at every startup; current upstream removed path; #18 candidate removes it | macOS native compile + source guard; later signed release install/launch/restart digest+signature witness |
