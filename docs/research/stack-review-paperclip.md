@@ -19,7 +19,7 @@ Caveat: the `hermes_local` adapter is the rough edge. Open issues #4009 (heartbe
 - Codex CLI (Rust, frequent releases, 0.161.0 Oct 7): worker via CLI. https://github.com/openai/codex/releases
 - Cursor: headless CLI (`-p`, `--force`) and MCP. Worker via CLI if wanted; the IDE stays standalone. https://cursor.com/docs/cli/headless
 - JCode (1jehuang/jcode): Rust coding-agent harness, MIT, v0.91.0 Oct 6, one main maintainer. Worker or standalone; no verified Hermes integration. https://github.com/1jehuang/jcode
-- KCode: his private fork of JCode; inherits the JCode assessment. Open question: how far has it diverged from JCode?
+- KCode (https://github.com/KooshaPari/KCode): his PUBLIC fork of JCode, 137 commits ahead and about 2.5k behind upstream; adds swarm TUI, manager/researcher modes and more. Still no chat gateway. See the KCode divergence report (PR #617).
 - ForgeCode (Apache-2.0, 300+ models, ZSH plugin; he has a fork): optional worker via CLI; overlaps the other coding agents. https://github.com/tailcallhq/forgecode
 - OmniRoute: KooshaPari/OmniRoute is a fork of diegosouzapw/OmniRoute; he publishes @kooshapari/omniroute on npm and has merged upstream PRs. He also maintains a cliproxyapi-plusplus fork. Role: standalone model-routing layer; point Hermes at it as a single OpenAI-compatible endpoint. https://github.com/KooshaPari/OmniRoute , https://github.com/diegosouzapw/OmniRoute , https://www.npmjs.com/package/@kooshapari/omniroute
 
@@ -28,6 +28,3 @@ Caveat: the `hermes_local` adapter is the rough edge. Open issues #4009 (heartbe
 - Model routing: Hermes vs OmniRoute vs cliproxyapi. Cleanest: Hermes calls OmniRoute.
 - Worker redundancy: Claude Code, Codex, Cursor, JCode/KCode and ForgeCode fill the same slot.
 - Hermes and Paperclip are both months to a year old, fast-moving, with large issue backlogs. Hermes CLI delegation is PTY-driven; expect permission-prompt and session quirks.
-
-## Open question
-- KCode: divergence from JCode.
