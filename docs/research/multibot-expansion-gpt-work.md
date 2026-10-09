@@ -213,3 +213,10 @@ Activate Research, then Assurance. Exit: malicious-source test and seeded-defect
 Add Promptfoo and Playwright. Exit: Pilot F and browser acceptance checks run reproducibly against exact artifact versions.
 Pilot Gemini; selectively test Claude. Exit: compare the same tasks on correctness, defects caught, total cost, and human intervention. Keep only measured advantages.
 Add retrieval/browser services only for demonstrated gaps. Langfuse and wider bot expansion follow a successful mixed-workload soak with enforced budget, concurrency, and kill-switch behavior.
+
+
+---
+
+## His ruling (voice note, Oct 9, 2026)
+
+Recorded by Instinct from his voice note (auto-transcript, some tool names garbled). Promptfoo: OK. Not wanted: Gemini CLI, MiniMax Code, Perplexity Search, and "Cloudflare" as transcribed (probably Claude Code). Wanted: JCode/KCode, Codex, Forge. This overrides the platform list above. The text above stays as ChatGPT Work input, not his decision.
