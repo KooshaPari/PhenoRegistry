@@ -1,0 +1,20 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Resource",
+  "metadata": {
+    "name": "repo-civis",
+    "title": "Civis",
+    "description": "Repository inventory record; does not assert product readiness or capability ownership.",
+    "annotations": {
+      "github.com/project-slug": "KooshaPari/Civis",
+      "backstage.io/source-location": "url:https://github.com/KooshaPari/Civis/",
+      "phenotype.dev/github-repository-id": "1164684442",
+      "phenotype.dev/default-branch": "main",
+      "phenotype.dev/archived": "false"
+    }
+  },
+  "spec": {
+    "type": "git-repository",
+    "owner": "group:default/phenotype-platform"
+  }
+}
