@@ -31,7 +31,7 @@ jobs:
       - name: Run criterion benchmarks
         run: |
           mkdir -p benchmark-results
-          cargo bench -- --output-format bencher | tee benchmark-results/criterion.txt
+          cargo bench | tee benchmark-results/criterion.txt
         continue-on-error: true
 
       - name: Save criterion HTML report
@@ -74,7 +74,7 @@ jobs:
           git stash
           git checkout origin/main
           mkdir -p baseline-results
-          cargo bench -- --output-format bencher | tee baseline-results/criterion.txt || true
+          cargo bench | tee baseline-results/criterion.txt || true
           git checkout -
           git stash pop || true
 
@@ -95,61 +95,66 @@ jobs:
           cat current-results/criterion.txt || echo "No PR results"
           echo ""
 
-          # Simple regression check: fail if any benchmark got >20% slower
+          # Simple regression check: fail if any benchmark got >20% slower.
           if [ -f baseline-results/criterion.txt ] && [ -f current-results/criterion.txt ]; then
-            python3 -c "
-          import re, sys
+            python3 <<'PY'
+          import re
+          import sys
 
           def parse_benchmarks(path):
               results = {}
+              patterns = [
+                  re.compile(r'^test\s+(\S+)\s+\.\.\.\s+bench:\s+([0-9,]+)\s+ns/iter'),
+                  re.compile(r'^(\S+)\s+([0-9]+)\s*(ns|µs|ms|s)$'),
+              ]
+              multipliers = {'ns': 1, 'µs': 1000, 'ms': 1000000, 's': 1000000000}
               try:
-                  with open(path) as f:
-                      for line in f:
-                          m = re.match(r'(\S+)\s+(\d+)\s*(ns|\u00b5s|ms|s)', line.strip())
-                          if m:
-                              name = m.group(1)
-                              val = int(m.group(2))
-                              unit = m.group(3)
-                              multipliers = {'ns': 1, '\u00b5s': 1000, 'ms': 1000000, 's': 1000000000}
-                              results[name] = val * multipliers[unit]
-              except Exception as e:
-                  print(f'Warning: could not parse {path}: {e}')
+                  with open(path, encoding='utf-8') as handle:
+                      for raw in handle:
+                          line = raw.strip()
+                          match = patterns[0].match(line)
+                          if match:
+                              results[match.group(1)] = int(match.group(2).replace(',', ''))
+                              continue
+                          match = patterns[1].match(line)
+                          if match:
+                              results[match.group(1)] = int(match.group(2)) * multipliers[match.group(3)]
+              except Exception as exc:
+                  print(f'Warning: could not parse {path}: {exc}')
               return results
 
           baseline = parse_benchmarks('baseline-results/criterion.txt')
           current = parse_benchmarks('current-results/criterion.txt')
 
           if not baseline or not current:
-              print('Could not parse benchmark results for comparison.')
+              print('Could not parse comparable benchmark results; no regression claim made.')
               sys.exit(0)
 
           regressions = []
           improvements = []
-          for name in current:
-              if name in baseline:
-                  ratio = current[name] / baseline[name]
-                  pct = (ratio - 1) * 100
-                  if pct > 20:
-                      regressions.append((name, pct))
-                  elif pct < -20:
-                      improvements.append((name, pct))
+          for name, current_value in current.items():
+              if name not in baseline or baseline[name] == 0:
+                  continue
+              pct = (current_value / baseline[name] - 1) * 100
+              if pct > 20:
+                  regressions.append((name, pct))
+              elif pct < -20:
+                  improvements.append((name, pct))
 
           if regressions:
-              print()
               print('Performance regressions detected (>20% slower):')
-              for name, pct in sorted(regressions, key=lambda x: -x[1]):
+              for name, pct in sorted(regressions, key=lambda item: -item[1]):
                   print(f'  {name}: +{pct:.1f}%')
               sys.exit(1)
 
           if improvements:
-              print()
               print('Performance improvements detected:')
-              for name, pct in sorted(improvements, key=lambda x: x[1]):
+              for name, pct in sorted(improvements, key=lambda item: item[1]):
                   print(f'  {name}: {pct:.1f}%')
 
-          print()
           print('No significant regressions detected.')
-          "
+          PY
+          fi
 
       - name: Comment on PR
         if: always()
