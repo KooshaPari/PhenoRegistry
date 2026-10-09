@@ -6,7 +6,9 @@ Research only; nothing installed.
 ## Verdict
 Hermes Agent as the gateway/control plane. Keep Codex, JCode, KCode and Forge as workers it calls. Do not make a coding-agent fork the gateway.
 
-**Decision (his ruling, Oct 8):** Hermes is locked. OpenClaw is rejected on his preference and is no longer the fallback. He is comfortable owning or custom-writing adapters into Hermes where gaps exist; iMessage is the known gap.
+**Decision (his ruling, Oct 8; updated 10:52 PM):** Hermes is the top, the CEO / living device assistant gateway; JCode and Codex are subagents and his parent chat surfaces; Paperclip is a management view, not above Hermes. OmniRoute is rejected as too buggy (use cliproxyapi-plusplus or another, else hand routing). Model map: OpenCode Go = Step 5 free / MiMo 2.6; MiniMax = M3; normal = GPT 6 Luna med, high = GPT 6.1 Sol med.
+
+**Earlier ruling:** Hermes is locked. OpenClaw is rejected on his preference and is no longer the fallback. He is comfortable owning or custom-writing adapters into Hermes where gaps exist; iMessage is the known gap.
 
 ## 1. Hermes: a real gateway, not just a CLI
 - One gateway process serves Telegram, Discord, Slack, WhatsApp, Signal, Email and CLI, with cross-platform conversation continuity (README).
