@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "program_id": "gaming-pair-20260929",
+  "date": "2026-09-29",
+  "cycle": "FIRST_EXECUTION_CYCLE",
+  "program_complete": false,
+  "no_third_product_started": true,
+  "merged_by_this_program": [],
+  "product_implementation_changes_by_this_program": [],
+  "products": [
+    {
+      "repository": "KooshaPari/Dino",
+      "product": "DINOForge",
+      "source_snapshot": "17119051e782b32615413049c1c3cd207f0b540e",
+      "specification_head_at_receipt": "d5a61c906e4a68064ddd2fa0709edeeefa2b289c",
+      "specification_branch": "spec/mature-recovery-20260929",
+      "draft_pr": "https://github.com/KooshaPari/Dino/pull/490",
+      "canonical_dossier": "docs/product-recovery/2026-09-29/",
+      "implementation_candidate_executed": null,
+      "native_validation": "NOT_RUN",
+      "design_gate": "INCOMPLETE"
+    },
+    {
+      "repository": "KooshaPari/Civis",
+      "product": "Civis",
+      "source_snapshot": "b3cd62a7394878cc64d024fbfcfd398b8bb88bf1",
+      "specification_head_at_receipt": "5b9d34d529ae5cc21acdd0ee90e2bdf0ba178b69",
+      "specification_branch": "spec/mature-recovery-20260929",
+      "draft_pr": "https://github.com/KooshaPari/Civis/pull/1567",
+      "canonical_dossier": "docs/product-recovery/2026-09-29/",
+      "implementation_candidate_executed": null,
+      "native_validation": "NOT_RUN_BY_THIS_PROGRAM",
+      "design_gate": "INCOMPLETE",
+      "concurrent_drift": {
+        "observed_main": "54d5758970249c8d1f24688ea45920b530e77299",
+        "ahead_of_snapshot_commits": 15,
+        "review_extent": "COMPARE_INVENTORY_AND_TARGETED_SAVE_CODE_AUDITS_ONLY",
+        "review_complete": false,
+        "detail": "docs/product-recovery/2026-09-29/DRIFT-RECEIPT.md",
+        "new_save_blob": "274a63c9e973ad9fc4e2a2c135ef1540052bad83",
+        "new_save_ranges": [[260,450],[590,790]],
+        "finding_update": "Newer source adds v5+ integrity-manifest verification. Metadata still selects the version path; legacy/downgrade classification and atomic commit remain open. Do not repeat original no-manifest source observation as a claim about the new tip.",
+        "imported_workspace_report": {"claimed_candidate_short_sha": "2253de28", "passed": 5731, "failed": 15, "ignored": 32, "perf_test_excluded": true, "evidence_class": "AUTHOR_REPORT_NOT_INDEPENDENTLY_REEXECUTED"},
+        "imported_save_report": {"passed": 39, "failed": 0, "ignored": 1, "guard_mutations_killed_reported": 5, "evidence_class": "AUTHOR_REPORT_RAW_RUNNER_AND_FULL_CANDIDATE_NOT_ACQUIRED"}
+      }
+    }
+  ],
+  "registry": {
+    "repository": "KooshaPari/PhenoRegistry",
+    "source_snapshot": "85d7cd00cf59c379c05b740e8130a85b0d5bd31b",
+    "research_branch": "research/gaming-pair-20260929",
+    "draft_pr": "https://github.com/KooshaPari/PhenoRegistry/pull/596",
+    "dossier": "docs/sessions/20260929-gaming-pair/",
+    "first_research_commit": "7c7c724ebcfd0fa353da6b090c36e66ddb474b03"
+  },
+  "dependency_identity": [{"consumer": "KooshaPari/Civis", "dependency": "KooshaPari/phenodocs", "path": "vendor/phenodocs", "commit": "35e0e90a19dfd93ce4e1a81210ade92088b2bbbc", "contents_inspected": false}],
+  "synthetic_experiment": {
+    "purpose": "EVIDENCE_PREDICATE_DESIGN_ONLY",
+    "code": "experiments/evidence_gate_experiment.py",
+    "raw_receipt": "experiments/experiment-receipt.json",
+    "python": "3.13.5",
+    "source_sha256": "70571917cc59c39eb99da4219bfa2777ee5248c2550237c8da61401b674e826d",
+    "source_git_blob": "842ca948d58ff7d4f839275ce0f701fc6510f3dc",
+    "committed_source_matches_locally_executed_source": true,
+    "cases": 50,
+    "expected_outcomes_matched": 50,
+    "admissible_cases": 2,
+    "rejected_negative_cases": 48,
+    "product_acceptance_credit": false,
+    "authentication_or_protected_policy_deployment_proven": false,
+    "independent_review": false
+  },
+  "source_denominators_closed": false,
+  "full_useful_history_exhausted": false,
+  "sota_complete": false,
+  "architecture_high_risk_experiments_complete": false,
+  "complete_mature_obligation_catalog_accepted": false,
+  "protected_catalog_exclusion_enforced": false,
+  "independent_fresh_final_review_complete": false,
+  "overall_completion_percentage": null,
+  "scope_and_engineering_deltas_separate": true
+}
