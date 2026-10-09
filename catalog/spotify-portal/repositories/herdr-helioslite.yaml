@@ -1,0 +1,20 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Resource",
+  "metadata": {
+    "name": "repo-herdr-helioslite",
+    "title": "herdr-helioslite",
+    "description": "Repository inventory record; does not assert product readiness or capability ownership.",
+    "annotations": {
+      "github.com/project-slug": "KooshaPari/herdr-helioslite",
+      "backstage.io/source-location": "url:https://github.com/KooshaPari/herdr-helioslite/",
+      "phenotype.dev/github-repository-id": "1377590630",
+      "phenotype.dev/default-branch": "main",
+      "phenotype.dev/archived": "true"
+    }
+  },
+  "spec": {
+    "type": "git-repository",
+    "owner": "group:default/phenotype-platform"
+  }
+}

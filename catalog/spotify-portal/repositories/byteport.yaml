@@ -1,0 +1,20 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Resource",
+  "metadata": {
+    "name": "repo-byteport",
+    "title": "BytePort",
+    "description": "Repository inventory record; does not assert product readiness or capability ownership.",
+    "annotations": {
+      "github.com/project-slug": "KooshaPari/BytePort",
+      "backstage.io/source-location": "url:https://github.com/KooshaPari/BytePort/",
+      "phenotype.dev/github-repository-id": "861430079",
+      "phenotype.dev/default-branch": "main",
+      "phenotype.dev/archived": "false"
+    }
+  },
+  "spec": {
+    "type": "git-repository",
+    "owner": "group:default/phenotype-platform"
+  }
+}

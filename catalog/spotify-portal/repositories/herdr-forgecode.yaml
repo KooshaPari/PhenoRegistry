@@ -1,0 +1,20 @@
+{
+  "apiVersion": "backstage.io/v1alpha1",
+  "kind": "Resource",
+  "metadata": {
+    "name": "repo-herdr-forgecode",
+    "title": "herdr-forgecode",
+    "description": "Repository inventory record; does not assert product readiness or capability ownership.",
+    "annotations": {
+      "github.com/project-slug": "KooshaPari/herdr-forgecode",
+      "backstage.io/source-location": "url:https://github.com/KooshaPari/herdr-forgecode/",
+      "phenotype.dev/github-repository-id": "1377590595",
+      "phenotype.dev/default-branch": "main",
+      "phenotype.dev/archived": "true"
+    }
+  },
+  "spec": {
+    "type": "git-repository",
+    "owner": "group:default/phenotype-platform"
+  }
+}
