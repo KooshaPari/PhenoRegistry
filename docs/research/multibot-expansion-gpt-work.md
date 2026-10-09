@@ -172,3 +172,44 @@ Browser Use
 Promptfoo Community	Free local/self-hosted evaluation features; advertised red-teaming allowance 10,000 probes/month. Model inference can still cost money. 
 Promptfoo
 	Suitable early addition; configure cloud-backed generation/grading 
+
+ deliberately
+Langfuse self-hosted	OSS core; some add-ons require licenses. Current architecture includes Postgres, ClickHouse, Redis/Valkey, object storage, and application processes. 
+Langfuse
+	Fits the desktop later; excessive additional machinery for the laptop-first pilot
+
+I would not buy another subscription yet. First use existing capacity, free bounded experiments, and local verification. Paid API/browser additions need a capped trial allocation.
+
+Risks
+
+Connected tools can contradict “no effect credentials.” A plugin-held OAuth token or privileged browser cookie is an effect capability even if the model never sees its bytes. Instructions cannot make a writable connector independently broker-enforced.
+
+Dots can bypass the settled execution path. Native background tasks are useful for research and drafts. Governed repository/infrastructure work must pass through your task ingress and Temporal.
+
+Memory separation is unproven. Dot notes are distinct from ChatGPT saved memory; changing saved-memory settings does not necessarily change existing Dot notes. Do not use memory settings as your access-control system. 
+ChatGPT Learn
+
+Three provider accounts multiply operations, not necessarily output. Each adds authentication, quota tracking, adapter behavior, retention questions, and incident handling. Require a demonstrated task-class advantage.
+
+Hardware remains the same bottleneck. Cloud inference avoids local model memory, but browsers, builds, tests, and tracing still consume host resources. Keep desktop execution primary and laptop concurrency conservative; do not count a new bot as a new compute slot.
+
+Grok exclusion must survive routing and delegation. Use an explicit model allowlist, not “automatic best model” selection. Muse/Grok inputs should come from a reviewed public-data export, not automated summaries of private tasks.
+
+Open questions
+
+These need measurement or account inspection; they do not block the role design.
+
+Does your desktop expose multiple Dots, and are their permissions/memories separately enforceable?
+Can the native GitHub/Cloudflare/Vercel connections enforce both read-only actions and your exact resource allowlist?
+Can your custom proposal-only plugin operate in Dot cloud tasks with the required authentication?
+What are your grandfathered MiniMax limits, overflow behavior, and current account concurrency?
+Can each CLI’s cancellation and authentication work inside your bounded supervisor without bypassing routing?
+Which Muse product do you mean? I have not assigned it capabilities, pricing, or privacy guarantees.
+What exact personal-plan Custom GPT retirement notice did you receive? The official source retrieved does not verify that scope.
+Short ordered plan
+Create Ops and the three Projects. Exit: approved sources visible; privileged writes and out-of-scope reads denied externally.
+Implement proposal-only ingress and brokered effects. Exit: duplicate submissions deduplicate; altered artifacts fail approval; native connectors cannot bypass execution.
+Activate Research, then Assurance. Exit: malicious-source test and seeded-defect test pass. Use separate Dots only if isolation is verified.
+Add Promptfoo and Playwright. Exit: Pilot F and browser acceptance checks run reproducibly against exact artifact versions.
+Pilot Gemini; selectively test Claude. Exit: compare the same tasks on correctness, defects caught, total cost, and human intervention. Keep only measured advantages.
+Add retrieval/browser services only for demonstrated gaps. Langfuse and wider bot expansion follow a successful mixed-workload soak with enforced budget, concurrency, and kill-switch behavior.
